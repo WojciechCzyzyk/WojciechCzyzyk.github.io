@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wojciech Czyżyk | Portfolio Architekta & Mentora</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --panel-bg: #161b22;
+            --accent-color: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --success-color: #238636;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--panel-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0 0;
+            font-weight: 500;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .intro-box {
+            background: linear-gradient(145deg, #1f242c, #161b22);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3rem;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        .filar {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .filar h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        .filar ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .filar li {
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            background-color: #21262d;
+            color: var(--text-muted);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .emocje-box {
+            border-left: 3px solid #bc8cff;
+            background-color: rgba(188, 140, 255, 0.05);
+            padding: 0.5rem 1rem;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #dbb7ff;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Wojciech Czyżyk</h1>
+        <p>Droga Architekta: Reaktywacja, Mentoring i Zespoły Hybrydowe 🚀</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-box">
+            <p><strong>O projekcie:</strong> To nie jest zwykłe, nudne portfolio. To żywy zapis transformacji inżyniera z ponad 10-letnim doświadczeniem w układach embedded (ARM), który po ciężkiej operacji kręgosłupa wrócił do gry, by stworzyć nowoczesny zespół hybrydowy <strong>(Człowiek-Człowiek-AI)</strong> i wprowadzić swojego 11-letniego syna Bartka w świat zaawansowanego IT.</p>
+        </div>
+
+        <h2>🛠 Moje Filary Kompetencji i Opowieść Deweloperska</h2>
+
+        <div class="filar">
+            <span class="badge">Filar 1</span>
+            <h3>Architektura Systemów Wbudowanych i Bezpieczeństwo</h3>
+            <ul>
+                <li><strong>Hardware-Enforced Safety:</strong> Świadome projektowanie eliminujące błędy software'owe (podwójne przekaźniki w sterowniku rolet fizycznie blokujące spięcie uzwojeń silnika).</li>
+                <li><strong>Optymalizacja energii:</strong> Implementacja sekwencera zadań FIFO, który ściął pik prądowy do 410mA, stabilizując logikę ESP32 na zasilaniu USB.</li>
+                <li><strong>Modelowanie stanu (Dead Reckoning):</strong> Zmiennoprzecinkowy mechanizm estymacji pozycji rolet bazujący na czasie wykonania pętli.</li>
+            </ul>
+        </div>
+
+        <div class="filar">
+            <span class="badge">Filar 2</span>
+            <h3>Inżynieria Oprogramowania i Czysty Kod</h3>
+            <ul>
+                <li><strong>Refaktoryzacja domeny:</strong> Całkowite odseparowanie konfiguracji sprzętowej od logiki wykonawczej (Designated Initializers).</li>
+                <li><strong>Zero-Blocking Execution:</strong> Asynchroniczny parser strumieni szeregowych zapobiegający zamrażaniu głównej pętli programu.</li>
+                <li><strong>Odporność sieciowa:</strong> Autorski menedżer Wi-Fi z automatycznym trybem Fallback Access Point.</li>
+            </ul>
+        </div>
+
+        <div class="filar">
+            <span class="badge">Filar 3</span>
+            <h3>Przywództwo Techniczne i Ekosystem Mentorski</h3>
+            <ul>
+                <li><strong>Onboarding Nowego Pokolenia:</strong> Pełnienie roli Technical Leadera dla 11-letniego syna Bartka. Przygotowanie czystego środowiska GitHuba, eliminacja barier konsoli tekstowej na rzecz narzędzi graficznych (GitHub Desktop) i przekucie teorii w sukces komercyjnej jakości.</li>
+                <li><strong>Scrum w mikrozespole:</strong> Organizacja pracy w elastycznych, godzinnych "sprintach" dostosowanych do regeneracji zdrowia, połączona z natychmiastowym dowożeniem działającego przyrostu (Increment).</li>
+            </ul>
+            <div class="emocje-box">
+                <strong>Duma Ojca & Mentora:</strong> Bartek odpalił swoją stronę w 200%! Kiedy miał problem z matematyką, rozbiliśmy algorytm dzielenia na klocki w Scratchu, tworząc interaktywny kalkulator. Chłopak ma potężny zastrzyk pewności siebie przed rówieśnikami i wymagającą nauczycielką.
+            </div>
+        </div>
+
+        <div class="filar">
+            <span class="badge">Filar 4</span>
+            <h3>Nowoczesne Metody Wytwarzania i Automatyzacja</h3>
+            <ul>
+                <li><strong>AI-Pair Programming:</strong> Praca w zaawansowanym paradygmacie z agentami AI. Zarządzanie kontekstem poprzez precyzyjne matryce pamięci (`AI_context.md`).</li>
+                <li><strong>Projektowanie Pętli Zwrotnych:</strong> Automatyzacja procesów sprawdzania stanu produkcji (skanery produkcyjne weryfikujące kod przed uruchomieniem sesji AI).</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Wojciech Czyżyk. Skompilowano we współpracy z AI-Pair Programmer.</p>
+    </footer>
+
+</body>
+</html>

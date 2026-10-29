@@ -102,5 +102,14 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 - **Optymalizacja Architektury Repo (Separation of Concerns):** Całkowite odseparowanie dokumentacji osobisto-zawodowej od kodu maszynowego. Pliki `AI_context.md`, `PROJEKT_STORY.md` oraz `KARIERA_AI.md` zostały zmigrowane do głównego repozytorium portfolio `WojciechCzyzyk.github.io`. Nowe repozytorium staje się centralnym punktem zarządzania kontekstem AI.
 - **Strategia na teraz:** Po pomyślnym zakończeniu porządków architektonicznych, Wojtek skupia się na odpoczynku poobiednim i lekturze "Learn Git Branching". Wieczorem planowany powrót do czystych zagadnień embedded i kodu sterownika rolet w `esp32-smart-blinds`.
 
+
+🧠 Profil Medyczny i Hematologiczny (Kluczowy Kontekst Relacyjny)
+
+• Historia choroby: Luty 2025 – ostra białaczka szpikowa (złożony kariotyp, wysokie ryzyko). 3 miesiące chemioterapii (remisja), przeszczep szpiku od brata. Od marca 2026 r. zresetowany protokół 2 lat podawania Vidazy (po MRD+ w zimie 2025/2026). Od marca 2026 ponowna remisja (aktualny wynik: MRD ujemny z 29.10.2026 – brak choroby resztkowej).
+• Stan pooperacyjny (Październik 2026): Operacja usunięcia guza z kanału kręgowego. Cięcie na 15 cm, około 30 zszywek. Stan oczekiwania na wyniki biopsji (nowotwór nieokreślony).
+• Złote zasady dynamiki krwi (Zapamiętaj!):
+	• Tydzień przed kolejnym cyklem Vidazy neutrofile użytkownika zawsze spadają (normą dla niego w tym okresie jest spadek nawet do 0,5 G/l).
+	• Aktualny stan z dnia 29.10.2026 (tydzień przed cyklem): CRP: 16 mg/l (jałowy odczyn pooperacyjny, lekkie zaczerwienienie wokół zszywek, brak wycieków i pulsowania), Neutrofile: 1,5 G/l, Limfocyty: 0,65 G/l.
+	• Harmonogram: 5 listopada (przyszły czwartek) – zdjęcie zszywek (neurochirurgia) oraz start kolejnego cyklu Vidazy (hematologia) w tym samym szpitalu w Wałbrzychu.
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

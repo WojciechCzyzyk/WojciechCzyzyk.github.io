@@ -23,6 +23,17 @@
 - Zrozumienie pojęcia `commit` jako "zatwierdzenie" i przygotowanie do pełnej synchronizacji kontekstu.
 
 
+Breakpoint #2: Kamień milowy systemu pamięci (25.10.2026)
+
+• Konsolidacja celów zawodowych, architektury ESP32, Nice TTBus i Fluttera w jednym źródle prawdy.
+
+Breakpoint #3: Podwójny sukces – Portfolio i Integracja Mentorska (29.10.2026)
+
+• Uruchomienie portfolio WojciechCzyzyk.github.io i odseparowanie dokumentacji od kodu maszynowego.
+• Sukces wychowawczo-mentorski: Pełne wdrożenie 11-letniego syna Bartka w jego pierwszy projekt HTML/Scratch i CapCut (zaznaczanie okienkiem jako plan awaryjny). Wojtek działa jako Technical Leader i Mentor.
+• Zabezpieczenie profilu o aktualne dane medyczne i hematologiczne w celu pominięcia zbędnego tłumaczenia realiów klinicznych w przyszłości.
+
+
 ##historia poprzednik breakpointow hronologicznie od poczatku do konca:
 Hasło: Wracamy do tematu Embedded i Arduino
 Hasło: Wracamy do konfiguracji środowiska pod ESP32

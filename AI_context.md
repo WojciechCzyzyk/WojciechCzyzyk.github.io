@@ -122,5 +122,17 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 	• Tydzień przed kolejnym cyklem Vidazy neutrofile użytkownika zawsze spadają (normą dla niego w tym okresie jest spadek nawet do 0,5 G/l).
 	• Aktualny stan z dnia 29.10.2026 (tydzień przed cyklem): CRP: 16 mg/l (jałowy odczyn pooperacyjny, lekkie zaczerwienienie wokół zszywek, brak wycieków i pulsowania), Neutrofile: 1,5 G/l, Limfocyty: 0,65 G/l.
 	• Harmonogram: 5 listopada (przyszły czwartek) – zdjęcie zszywek (neurochirurgia) oraz start kolejnego cyklu Vidazy (hematologia) w tym samym szpitalu w Wałbrzychu.
+
+	### 🔄 LOG ZDARZEŃ I AKTUALIZACJI KONTEKSTU (Tryb Append-Only)
+
+*Dopisywane na koniec sesji. Sekcja podlega cotygodniowemu refaktoryzowaniu i konsolidacji z głównymi rubrykami pliku.* 
+
+#### 📅 Wpis: 30.10.2026 (Stan po porannych badaniach i konsultacjach)
+
+* **Zarządzanie Pamięcią AI (Nowa Procedura):** Od dziś wszelkie aktualizacje, nowe sukcesy, kody czy zmiany stanu zdrowia są generowane przez AI w postaci surowego logu do doklejenia na samym dole pliku. Zapobiega to błędom i ułatwia szybkie wklejanie bez przeszukiwania struktury dokumentu. Refaktoryzacja i usuwanie duplikatów odbywa się raz na tydzień.
+* **Stan Zdrowia & Przełom Logistyczny:** Wojtek zmaga się z potężnym deficytem snu z powodu bólu pooperacyjnego (w nocy z 29 na 30 października przespane zaledwie 1.5h). Po porannej konsultacji z oddziałem neurochirurgii w Wałbrzychu podjęto decyzję o **przyspieszeniu zdjęcia 30 zszywek na poniedziałek (02.11) lub wtorek (03.11)**, co znacznie odciąży 15-centymetrowe cięcie i przyniesie fizyczną ulgę. Czwartkowy termin na hematologii (05.11) pozostaje aktualny na start cyklu Vidazy.
+* **Status Ran i Parametrów:** Brak jakichkolwiek wycieków z rany, obecne lekkie zaczerwienienie wokół zszywek (prawidłowy, jałowy odczyn pooperacyjny i reakcja na metal). Wyniki z 29.10: CRP 16 mg/l (w normie pooperacyjnej), Neutrofile 1.5 G/l (spodziewany spadek przedvidazowy), Limfocyty 0.65 G/l.
+* **Edukacja & Rozwój (Git Kurs):** Wojtek w trybie „Ultra Light” (pozycja leżąca, odcinanie myśli od bólu) pomyślnie rozpracował temat *Detached HEAD* oraz wkroczył w *Referencje Względne (Relative Refs)* w kursie GitA. Doskonale opanował mechanikę cofania się w historii za pomocą daszka (^ - krok po kroku) oraz windy/tyldy (~<liczba> - skok rakietowy).
+* **Status Mentora (Bartek):** Projekt YouTube/CapCut syna przechodzi w fazę „trawienia wiedzy”. Bartek dostał czas na konsumpcję sukcesu po opanowaniu cięcia fal audio i masowego animowania tekstu okienkiem. Wojtek monitoruje jego głód inżynierski i wkroczy do akcji, gdy młody zgłosi potrzebę kolejnego sprintu.
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -50,3 +50,26 @@ Cały system powstaje w nowoczesnym paradygmacie **AI-Pair Programming**. Wykorz
 
 * **Zarządzanie kontekstem:** Za pomocą dedykowanych matryc pamięci (AI_context.md), agent AI doskonale zna ograniczenia sprzętowe, historię decyzji oraz aktualny stan projektu.
 * **Pętle zwrotne:** Przed każdą sesją projektową stan kodu jest weryfikowany przez skanery automatyczne, co eliminuje halucynacje AI i gwarantuje, że generowane poprawki są idealnie dopasowane do fizycznego hardware'u.
+
+* ### 📼 RETRO INSPEKCJA: Jak zapach kalafonii ukształtował inżyniera
+
+### Rozdział 1: Pierwsze starcie z kwasem i markerem (Klasa 2 Technikum)
+
+Moja prawdziwa pasja do inżynierii cyfrowej eksplodowała w drugiej klasie technikum elektronicznego. Zachwycony przedmiotem *Technika Cyfrowa* – bramkami logicznymi, licznikami i rejestrami – postanowiłem natychmiast sprawdzić tę teorię w praktyce. Bez żadnych ułatwień, frameworków czy gotowych modułów. 
+
+Kupiłem w lokalnym sklepie elektronicznym garść podstawowych scalaków (bramki, liczniki, dekoder wyświetlacza siedmiosegmentowego, generator oparty o układ z kwarcem) oraz surowy laminat miedziowy i zestaw do trawienia. Schemat narodził się na zwykłej kartce papieru, a ścieżki na płytce odręcznie odrysowałem zwykłym flamastrem. Trawienie odbywało się w kuwecie z nadsiarczanem sodu, którą podgrzewałem i bezustannie ruszałem, żeby przyspieszyć proces. Ścieżki wyszły trochę koślawo, niektóre podtrawiły się i pękły, ale naprawiłem je mostkami z cyny. 
+
+Kiedy podłączyłem zasilanie i prosty stoper oparty na czystej logice cyfrowej ruszył, poczułem niesamowitą, czystą satysfakcję. Kwarc z czasem trochę się rozjeżdżał, ale układ działał. Do dziś leży gdzieś w moich rupieciach i czeka, aż pokażę go mojemu synowi Bartkowi, żeby zobaczył, jak budowało się komputery z pojedynczych bramek. 
+
+### Rozdział 2: Zagadka morderczego akumulatora (Rok Później)
+
+Bogatszy o tamto doświadczenie, rok później podjąłem się ambitniejszego projektu: budowy profesjonalnego zegara do pomiaru czasu w zawodach sportowych. Układ miał więcej funkcji, sygnały dźwiękowe i potężną matrycę wyświetlaczy LED. Z założenia miał pracować w terenie – albo z zasilacza sieciowego 12V, albo prosto z akumulatora samochodowego, bo na zawodach rzadko bywa gniazdko. 
+
+I wtedy zderzyłem się z technologicznym „duchem w maszynie”. Układ testowany w pokoju na zasilaczu sieciowym działał stabilnie przez długie godziny. Jednak po wyjeździe w teren i podpięciu pod sprawny akumulator 12V z samochodu, zegar po kilku minutach bezlitośnie gasł. Po odczekaniu chwili i ostygnięciu – znowu ruszał, po czym po czasie znowu się wyłączał. 
+
+**Rozwiązanie zagadki (Lekcja z fizyki półprzewodników i rezystancji wewnętrznej):**
+Pod maską układu siedział kultowy stabilizator liniowy LM7805, który zbijał napięcie zasilania do sztywnych 5V wymaganych przez logikę cyfrową. Kluczem do zrozumienia anomalii była... wada fabrycznego zasilacza sieciowego. Zasilacz miał niską wydajność prądową i wysoką rezystancję wewnętrzną. Pod obciążeniem prądożernych wyświetlaczy LED jego napięcie drastycznie „siadało” z 12V do optymalnych 8-9V. Stabilizator miał więc minimalną nadwyżkę napięcia (tzw. dropout voltage) – stabilizował 5V, a sam wydzielał minimalne ilości ciepła. 
+
+Akumulator samochodowy był jednak źródłem idealnym o niemal zerowej rezystancji wewnętrznej. Podpięcie zegara nie zrobiło na nim wrażenia i twardo trzymał ponad 12,6V. Stabilizator LM7805 został zmuszony do odłożenia na sobie w postaci czystego ciepła dwukrotnie większej mocy. Bez odpowiedniego odprowadzania ciepła struktura krzemowa błyskawicznie osiągała temperaturę krytyczną, co odpalało wewnętrzne zabezpieczenie termiczne (*Thermal Shutdown*). 
+
+Problem rozwiązałem wtedy po inżyniersku: dokręciłem potężny radiator i wentylator. Układ przetrwał zawody, a ta historia dała mi bezcenną intuicję dotyczącą bilansu energetycznego i fizyki prądu, która do dziś chroni moje projekty embedded przed przegrzaniem.

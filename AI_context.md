@@ -144,6 +144,8 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Zrozumienie Procedury Chirurgicznej:** Rozpracowano fizyczny mechanizm zamknięcia pola operacyjnego po hemilaminektomii na poziomie Th6-Th8. Wojtek zmapował proces braku sztucznego cementowania ubytku kostnego jako celowe działanie prewencyjne przeciw obrzękom rdzenia. Zrozumiano rolę ciasnego, warstwowego szycia mięśni przykręgosłupowych oraz naturalnej regeneracji poprzez tworzenie gęstej tkanki łącznej/bliznowatej, która przejmuje funkcję ochronną nad kanałem kręgowym w procesie rekonwalescencji.
 #### 📅 Wpis: 30.10.2026 (Sesja popołudniowa - Konsolidacja Wiedzy Operacyjnej)
 * **Zgodność z Protokołem Medycznym:** Wojtek potwierdził pełną korelację inżynierskiego opisu „otwartego okna kostnego” z lakonicznymi wyjaśnieniami neurochirurgów ze szpitala w Wałbrzychu. Pełne zrozumienie mechanizmu stabilności konstrukcji kręgosłupa oraz funkcji ochronnej mięśni przykręgosłupowych domknęło proces budowania spokoju psychicznego wokół fizjologii odczuwanego ucisku i bólu pooperacyjnego.
+#### 📅 Wpis: 30.10.2026 (Sesja popołudniowa - Zarządzanie Gorsetem)
+* **Ortopedia i Mobilność:** Wojtek potwierdził posiadanie i prawidłowe stosowanie dedykowanego gorsetu ortopedycznego (zamówionego w szpitalu). Przyjęto optymalną strategię: bezwzględne zakładanie gorsetu na wyjścia poza dom (ochrona przed niekontrolowanymi ruchami na świeżym powietrzu) oraz zdejmowanie go do pozycji leżącej (eliminacja wtórnego ucisku na 15-centymetrową ranę). W domu stosowany bezpieczny tryb mieszany (leżenie, krótkie siadanie/wstawanie bez przeciążeń).
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

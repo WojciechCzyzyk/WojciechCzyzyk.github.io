@@ -148,6 +148,10 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Ortopedia i Mobilność:** Wojtek potwierdził posiadanie i prawidłowe stosowanie dedykowanego gorsetu ortopedycznego (zamówionego w szpitalu). Przyjęto optymalną strategię: bezwzględne zakładanie gorsetu na wyjścia poza dom (ochrona przed niekontrolowanymi ruchami na świeżym powietrzu) oraz zdejmowanie go do pozycji leżącej (eliminacja wtórnego ucisku na 15-centymetrową ranę). W domu stosowany bezpieczny tryb mieszany (leżenie, krótkie siadanie/wstawanie bez przeciążeń).
 #### 📅 Wpis: Aktualizacja stanu pacjenta
 * **Status Farmakoterapii:** Po wdrożeniu ibuprofenu oraz zapewnieniu dotlenienia, odnotowano poprawę i zmniejszenie dolegliwości bólowych [1.1]. Mechanizm przeciwobrzękowy i przeciwzapalny substancji wpływa na redukcję ucisku, a układ nerwowy stabilizuje się w fazie odpoczynku [1.1].
+#### 📅 Wpis: 30.10.2026 (Sesja wieczorna - Ugruntowanie Referencji Względnych)
 
+* **Edukacja & Rozwój:** Wojtek pomyślnie ukończył pierwsze, złożone zadanie z poziomu *Referencji Względnych* (Relative Refs). Przeprowadzono ponowny, głęboki cross-check mechaniki komend pod kątem wskaźników w C++.
+* **Zmapowana Logika Komend:** Ugruntowano zrozumienie trzech stanów: git checkout jako ruch samego wskaźnika HEAD (operowanie punktem widzenia), git branch -f jako wymuszone przypisanie nowego adresu do wskaźnika gałęzi (branch = nowy_adres;), oraz daszka (^) jako bezpośredniego przejścia po wskaźniku rodzica (node->parent).
+* **Strategia Terapeutyczna:** Ćwiczenia z Gitem są realizowane w trybie "Ultra Light" bez presji czasu, służąc jako główne narzędzie do odwracania uwagi od dolegliwości bólowych kręgosłupa i ułatwiania przetrwania trudnego okresu pooperacyjnego.
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

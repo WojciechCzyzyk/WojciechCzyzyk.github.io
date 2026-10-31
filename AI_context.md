@@ -153,5 +153,10 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Edukacja & Rozwój:** Wojtek pomyślnie ukończył pierwsze, złożone zadanie z poziomu *Referencji Względnych* (Relative Refs). Przeprowadzono ponowny, głęboki cross-check mechaniki komend pod kątem wskaźników w C++.
 * **Zmapowana Logika Komend:** Ugruntowano zrozumienie trzech stanów: git checkout jako ruch samego wskaźnika HEAD (operowanie punktem widzenia), git branch -f jako wymuszone przypisanie nowego adresu do wskaźnika gałęzi (branch = nowy_adres;), oraz daszka (^) jako bezpośredniego przejścia po wskaźniku rodzica (node->parent).
 * **Strategia Terapeutyczna:** Ćwiczenia z Gitem są realizowane w trybie "Ultra Light" bez presji czasu, służąc jako główne narzędzie do odwracania uwagi od dolegliwości bólowych kręgosłupa i ułatwiania przetrwania trudnego okresu pooperacyjnego.
+* #### 📅 Wpis: 31.10.2026 (Sesja wieczorna - Debugowanie i sukces mobilnego index.html)
+* **Rozwiązanie problemów ze składnią:** Wspólnie z użytkownikiem zidentyfikowano i naprawiono klasyczne błędy składniowe w `index.html` (zamknięcie cudzysłowu stylu w obrazku Gemini, błędna nazwa klasy `section-kosmos` zamiast `section` oraz niedomknięty tag `h3` przy użyciu `h2`).
+* **Sukces integracji Scratch:** Pomyślnie osadzono działający projekt matematyczny Bartka z MIT Scratch poprzez tag `iframe` w pionowym układzie.
+* **Ugruntowanie branching strategy:** Mentor podjął decyzję o powrocie do stabilnej bazy kodu i ręcznym scalaniu linków. Ustalono żelazną zasadę: wszelkie kolejne rewolucje layoutu będą realizowane na dedykowanych gałęziach testowych (feature branches), chroniąc gałąź `main`.
+
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

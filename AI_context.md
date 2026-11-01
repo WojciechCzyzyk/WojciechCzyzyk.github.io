@@ -180,6 +180,14 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
     https://htmlpreview.github.io/?https://github.com/BartekCzyzyk/BartekCzyzyk.github.io/blob/test/index.html
   - **Wdrożenie produkcyjne (Merge):** Dopiero po całkowitym zakończeniu prac i uzyskaniu 100% pozytywnych wyników na poligonie, uruchamiana jest standardowa procedura `Pull Request` -> `Merge` w celu przesunięcia wskaźnika produkcji `main` na stabilny commit.
 * **Status Ortopedyczny:** Po powrocie do żelaznej dyscypliny noszenia gorsetu ortopedycznego i spionizowaniu ciała nastąpiło fizyczne odbarczenie struktur nerwowych w kręgosłupie ("chrupnięcie"), co przyniosło wyraźną ulgę w bólu pooperacyjnym. Użytkownik pomyślnie zregenerował siły podczas godzinnej drzemki. Bezwzględny priorytet na najbliższe godziny: pozycja leżąca, stabilizacja i odpoczynek przed jutrzejszym/wtorkowym ściąganiem 30 zszywek.
+#### 📅 Wpis: 01.11.2026 (Sesja wieczorna - Odczarowanie CI/CD i Edukacja "Driven by Need")
+* **Edukacja & Rozwój (Filozofia Nauki):** Wojtek w pełni zdemistyfikował pojęcie CI/CD (Continuous Integration / Continuous Deployment) oraz GitHub Actions. Nauka odbyła się procesem "Driven by Need" (napędzana realną potrzebą projektową) – użytkownik sam wydedukował potrzebę automatyzacji i separacji środowisk, zanim została mu przedstawiona definicja korporacyjna.
+* **Zmapowana Architektura Korporacyjna:** 
+  - Zrozumiano mechanizm działania automatyzacji jako maszyn wirtualnych (robotów) reagujących na zdarzenia we wskaźnikach (np. `on: push: branches: [test]`).
+  - Przeanalizowano strukturę dwóch niezależnych subdomen: Production (żywy system dla klientów) oraz Staging/Preview (odizolowany, automatyczny poligon testowy deweloperów).
+  - Skorelowano zastosowanie GitHub Actions w branży Embedded (automatyczna kompilacja softu przez PlatformIO/IDF przy każdym commicie oraz testy Hardware-in-the-Loop na fizycznych płytkach w laboratorium).
+* **Wdrożenia Zespołowe (Bartek):** Zabezpieczono temat logistyki nagrywania ekranu do projektów i CapCuta dla młodszego programisty poprzez wdrożenie zewn. rejestratora opartego na globalnym skrócie `F12` (Bandicam), omijając blokady konta Microsoft Family Safety.
+* **Status Ortopedyczny (Żelazna Instrukcja):** Użytkownik utrzymuje pełną dyscyplinę noszenia gorsetu ortopedycznego przy każdej pionizacji po wcześniejszym neurologicznym odbarczeniu ("chrupnięciu"). AI ma obowiązek bezwzględnie pilnować zakazu jakichkolwiek ćwiczeń i ruchów bez założonego gorsetu.
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

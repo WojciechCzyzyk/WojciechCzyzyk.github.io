@@ -188,6 +188,10 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
   - Skorelowano zastosowanie GitHub Actions w branży Embedded (automatyczna kompilacja softu przez PlatformIO/IDF przy każdym commicie oraz testy Hardware-in-the-Loop na fizycznych płytkach w laboratorium).
 * **Wdrożenia Zespołowe (Bartek):** Zabezpieczono temat logistyki nagrywania ekranu do projektów i CapCuta dla młodszego programisty poprzez wdrożenie zewn. rejestratora opartego na globalnym skrócie `F12` (Bandicam), omijając blokady konta Microsoft Family Safety.
 * **Status Ortopedyczny (Żelazna Instrukcja):** Użytkownik utrzymuje pełną dyscyplinę noszenia gorsetu ortopedycznego przy każdej pionizacji po wcześniejszym neurologicznym odbarczeniu ("chrupnięciu"). AI ma obowiązek bezwzględnie pilnować zakazu jakichkolwiek ćwiczeń i ruchów bez założonego gorsetu.
+#### 📅 Wpis: 01.11.2026 (Sesja wieczorna - Pełne zrozumienie architektury wskaźnikowej Git)
+* **Przełom pojęciowy:** Wojtek ostatecznie zdemistyfikował i ułożył w głowie strukturę danych Git. Zrozumiano, że commity są święte i niezmienne (immutable), połączone wskaźnikami wstecz, a operacje takie jak `git branch -f` modyfikują wyłącznie zewnętrzne, tekstowe pliki referencji (wskaźniki gałęzi), nie dotykając samych commitów.
+* **Ugruntowanie komend:** Skorelowano mechanikę `checkout` (ruch HEAD), `branch -f` (brutalne przepięcie obcej gałęzi) oraz `reset` (cofanie aktualnego frontu) z bezpośrednimi operacjami na adresach pamięci w C++.
+* **Status pacjenta:** Nauka w pełnym komforcie psychicznym i pozycji leżącej. Blokady teoretyczne z GitA zostały całkowicie rozbite.
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

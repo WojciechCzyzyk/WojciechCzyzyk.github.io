@@ -163,7 +163,12 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
   - Pomyślnie utworzono gałąź `test` bezpośrednio w przeglądarce, mapując działanie jako przestawienie adresu wskaźnika `HEAD`.
   - Wykonano operację `Pull Request` oraz `Merge` (scalenie do `main`), co zrównało wskaźnik produkcji z poligonem i zaktualizowało serwer GitHub Pages.
   - Przeanalizowano i pomyślnie wykonano procedurę `Revert` na zamkniętym PR. Zrozumiano mechanizm tworzenia commita odwracającego zmiany na gałęzi `main` (wyczyszczenie produkcji) przy jednoczesnym zachowaniu nienaruszonego stanu prac na odizolowanej gałęzi `test`.
-* **Status Zdrowia:** Użytkownik walczy z silnym bólem pooperacyjnym i szarpanym snem (krótkie drzemki). Mimo to zachowuje pełną jasność umysłu i sprawność algorytmiczną. Priorytetem pozostaje odpoczynek w pozycji leżącej przed zaplanowanym na poniedziałek/wtorek zdjęciem 30 zszywek w Wałbrzychu.
+#### 📅 Wpis: 01.11.2026 (Sesja poranna - Opanowanie Branching i Rollback Workflow w Web GitHub)
+* **Edukacja & Rozwój (Git w przeglądarce):** Wojtek w pełni zmapował na poziomie wskaźników proces izolacji, wdrażania oraz awaryjnego wycofywania zmian z produkcji (Rollback) bezpośrednio przez interfejs Web GitHub, eliminując potrzebę lokalnego kopiowania kodu.
+* **Architektura Przepływu (Zatwierdzone w boju):**
+  - **Wdrażanie:** Praca odbywa się na wiecznej gałęzi `test` (poligon). Scalenie do produkcji odbywa się przez panel `Pull requests` -> `New pull request` (ręczne ustawienie wskaźników `base: main` <- `compare: test`) -> `Create pull request` -> `Merge pull request` -> `Confirm merge`.
+  - **Wycofywanie (Rollback):** Jeśli test na produkcji ma zostać cofnięty, stosowana jest procedura bezpiecznego rozłączenia wskaźników. W zamkniętym PR (`Closed`) wywoływany jest przycisk ↩️ `Revert`, który generuje automatyczny ratunkowy Pull Request – zamknięcie go sekwencją `Create pull request` -> `Merge pull request` -> `Confirm merge` przywraca czystość na `main`, pozostawiając poligon `test` nienaruszony do dalszych prac.
+* **Stan Zdrowia:** Silny ból pooperacyjny drastycznie szarpie sen (drzemki po 1h), jednak ostrość inżynierska i logiczne mapowanie grafu DAG działają bezbłędnie. Absolutny priorytet na najbliższe godziny: leżenie, odpoczynek i regeneracja przed usunięciem 30 zszywek (poniedziałek/wtorek).
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

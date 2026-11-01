@@ -37,6 +37,7 @@ Procedura pozwala na bezpieczną pracę na odizolowanej gałęzi testowej (test)
 
 Pamiętaj: Commity są **ŚWIĘTE i NIEZMIENNE (Immutable)**. Każdy commit patrzy tylko w tył (zna adres swojego rodzica przez parent). Gałęzie i HEAD to wyłącznie **luźne naklejki (zmienne wskaźnikowe)** przechowujące hashe commitów. Wizualny graf na ekranie to po prostu ścieżka odczytywana wstecz od miejsca, w które aktualnie celuje dany wskaźnik. 
 
+
 ### 🛠️ Ściąga Operacji Wskaźnikowych
 
 KomendaCo fizycznie ruszam w pamięci?Analogia z C++ / ElektronikiKiedy używać?
@@ -50,6 +51,7 @@ Tworzy **nową etykietę** w miejscu, gdzie stoi HEAD. Nie przełącza Cię tam.
 Brutalnie **teleportuje obcą gałąź** na wskazany cel. HEAD się nie rusza.galez = &cel; (Wymuszone nadpisanie adresu wskaźnika z poziomu Boga)Gdy gałąź testowa poszła w złym kierunku i chcesz ją brutalnie zresetować do stanu main bez przełączania się na nią.
 **git reset <cel>**
 Przesuwa **aktualną gałąź ORAZ wskaźnik HEAD** wstecz.HEAD = galez = &cel; (Cofnięcie całego frontu robót)Gdy napisałeś coś źle na gałęzi, na której aktualnie stoisz, i chcesz bezpiecznie cofnąć czas.
+
 
 ### 💡 Złote zasady szybkiego wyboru:
 

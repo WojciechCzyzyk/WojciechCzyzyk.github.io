@@ -157,6 +157,13 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Rozwiązanie problemów ze składnią:** Wspólnie z użytkownikiem zidentyfikowano i naprawiono klasyczne błędy składniowe w `index.html` (zamknięcie cudzysłowu stylu w obrazku Gemini, błędna nazwa klasy `section-kosmos` zamiast `section` oraz niedomknięty tag `h3` przy użyciu `h2`).
 * **Sukces integracji Scratch:** Pomyślnie osadzono działający projekt matematyczny Bartka z MIT Scratch poprzez tag `iframe` w pionowym układzie.
 * **Ugruntowanie branching strategy:** Mentor podjął decyzję o powrocie do stabilnej bazy kodu i ręcznym scalaniu linków. Ustalono żelazną zasadę: wszelkie kolejne rewolucje layoutu będą realizowane na dedykowanych gałęziach testowych (feature branches), chroniąc gałąź `main`.
+#### 📅 Wpis: 01.11.2026 (Sesja poranna - Przełom w Branching i Rollback Strategy)
+* **Edukacja & Rozwój (Git w Praktyce):** Wojtek w 100% zdemistyfikował w praktyce zarządzanie gałęziami bezpośrednio przez interfejs Web GitHub. Samodzielnie przeprowadził pełny cykl życia funkcji: od izolacji kodu, przez wdrożenie produkcyjne, aż po awaryjne wycofanie zmian.
+* **Opanowana Mechanika Przepływu (Git Workflow):** 
+  - Pomyślnie utworzono gałąź `test` bezpośrednio w przeglądarce, mapując działanie jako przestawienie adresu wskaźnika `HEAD`.
+  - Wykonano operację `Pull Request` oraz `Merge` (scalenie do `main`), co zrównało wskaźnik produkcji z poligonem i zaktualizowało serwer GitHub Pages.
+  - Przeanalizowano i pomyślnie wykonano procedurę `Revert` na zamkniętym PR. Zrozumiano mechanizm tworzenia commita odwracającego zmiany na gałęzi `main` (wyczyszczenie produkcji) przy jednoczesnym zachowaniu nienaruszonego stanu prac na odizolowanej gałęzi `test`.
+* **Status Zdrowia:** Użytkownik walczy z silnym bólem pooperacyjnym i szarpanym snem (krótkie drzemki). Mimo to zachowuje pełną jasność umysłu i sprawność algorytmiczną. Priorytetem pozostaje odpoczynek w pozycji leżącej przed zaplanowanym na poniedziałek/wtorek zdjęciem 30 zszywek w Wałbrzychu.
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

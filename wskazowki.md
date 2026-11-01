@@ -38,22 +38,25 @@ Procedura pozwala na bezpieczną pracę na odizolowanej gałęzi testowej (test)
 Pamiętaj: Commity są **ŚWIĘTE i NIEZMIENNE (Immutable)**. Każdy commit patrzy tylko w tył (zna adres swojego rodzica przez parent). Gałęzie i HEAD to wyłącznie **luźne naklejki (zmienne wskaźnikowe)** przechowujące hashe commitów. Wizualny graf na ekranie to po prostu ścieżka odczytywana wstecz od miejsca, w które aktualnie celuje dany wskaźnik. 
 
 
+### 🛠️ Ściąga Operacji Wskaźnikowych
 
-🛠️ Ściąga Operacji Wskaźnikowych
+KomendaCo fizycznie ruszam w pamięci?Analogia z C++ / ElektronikiKiedy używać?
+**git checkout <cel>**
+Przesuwa **tylko wskaźnik HEAD**. Commity i gałęzie stoją w miejscu.HEAD = &cel; (Przełączenie punktu pomiarowego multimetru)Gdy chcesz tylko podejrzeć kod na innej gałęzi lub konkretnym commicie.
+**git commit**
+Tworzy nowy commit. Automatycznie przesuwa **HEAD oraz aktualna gałąź** o +1 do przodu.Dokładanie nowego ogniwa do łańcucha, które ciągnie za sobą wskaźnik końca.Gdy zatwierdzasz kolejną partię działającego kodu.
+**git branch <nazwa>**
+Tworzy **nową etykietę** w miejscu, gdzie stoi HEAD. Nie przełącza Cię tam.Commit* nowa = HEAD; (Deklaracja nowego wskaźnika)Gdy chcesz zaznaczyć punkt startowy dla nowej funkcji, ale jeszcze na nią nie wchodzisz.
+**git branch -f <gałąź> <cel>**
+Brutalnie **teleportuje obcą gałąź** na wskazany cel. HEAD się nie rusza.galez = &cel; (Wymuszone nadpisanie adresu wskaźnika z poziomu Boga)Gdy gałąź testowa poszła w złym kierunku i chcesz ją brutalnie zresetować do stanu main bez przełączania się na nią.
+**git reset <cel>**
+Przesuwa **aktualną gałąź ORAZ wskaźnik HEAD** wstecz.HEAD = galez = &cel; (Cofnięcie całego frontu robót)Gdy napisałeś coś źle na gałęzi, na której aktualnie stoisz, i chcesz bezpiecznie cofnąć czas.
 
+### 💡 Złote zasady szybkiego wyboru:
 
-Komenda	Co fizycznie ruszam w pamięci?	Analogia z C++ / Elektroniki	Kiedy używać?
-git checkout <cel>
-	Przesuwa tylko wskaźnik HEAD. Commity i gałęzie stoją w miejscu.	HEAD = &cel; (Przełączenie punktu pomiarowego multimetru)	Gdy chcesz tylko podejrzeć kod na innej gałęzi lub konkretnym commicie.
-git commit
-	Tworzy nowy commit. Automatycznie przesuwa HEAD oraz aktualna gałąź o +1 do przodu.	Dokładanie nowego ogniwa do łańcucha, które ciągnie za sobą wskaźnik końca.	Gdy zatwierdzasz kolejną partię działającego kodu.
-git branch <nazwa>
-	Tworzy nową etykietę w miejscu, gdzie stoi HEAD. Nie przełącza Cię tam.	Commit* nowa = HEAD; (Deklaracja nowego wskaźnika)	Gdy chcesz zaznaczyć punkt startowy dla nowej funkcji, ale jeszcze na nią nie wchodzisz.
-git branch -f <gałąź> <cel>
-	Brutalnie teleportuje obcą gałąź na wskazany cel. HEAD się nie rusza.	galez = &cel; (Wymuszone nadpisanie adresu wskaźnika z poziomu Boga)	Gdy gałąź testowa poszła w złym kierunku i chcesz ją brutalnie zresetować do stanu main bez przełączania się na nią.
-git reset <cel>
-	Przesuwa aktualną gałąź ORAZ wskaźnik HEAD wstecz.	HEAD = galez = &cel; (Cofnięcie całego frontu robót)	Gdy napisałeś coś źle na gałęzi, na której aktualnie stoisz, i chcesz bezpiecznie cofnąć czas.
-
+1. Chcesz zmienić to, co widzisz na monitorze? ➡️ **checkout**
+2. Chcesz przestawić gałąź, na której **NIE** stoisz? ➡️ **branch -f**
+3. Chcesz cofnąć historię na gałęzi, na której **AKTUALNIE** stoisz? ➡️ **reset**
 
 
 ### 💡 Złote zasady szybkiego wyboru:

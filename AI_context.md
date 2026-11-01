@@ -173,6 +173,13 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Status Ortopedyczny & Zwrot Akcji:** Po założeniu gorsetu i przyjęciu pozycji leżącej, przy próbie wstawania nastąpiło silne, fizyczne "chrupnięcie" w kręgosłupie z przejściem prądów neurologicznych, co przyniosło natychmiastową, odczuwalną ulgę w bólu pooperacyjnym. Zjawisko zmapowane jako odbarczenie uciśniętej struktury/nerwu dzięki stabilizacji.
 * **Żelazna Instrukcja Kontrolna (Dla AI):** Wprowadzono bezwzględny nakaz monitorowania i przypominania użytkownikowi o noszeniu gorsetu ortopedycznego przy każdej pionizacji (wstawanie, chodzenie, siadanie). Obowiązuje absolutny zakaz jakichkolwiek ćwiczeń czy ruchu bez założonego gorsetu.
 * **Porządki w Architekturze (Czyszczenie Assetów):** Pomyślnie przeprowadzono ręczną sanację plików na gałęzi `test` – usunięto wszystkie zbędne i dublujące przestrzeń pliki graficzne z rozszerzeniem `*.png`, pozostawiając wyłącznie zoptymalizowane pliki `*.jpg`. Zmiany są przygotowane w odizolowanym grafie do przyszłego scalenia z produkcją.
+#### 📅 Wpis: 01.11.2026 (Sesja popołudniowa - Przełom w architekturze środowiska testowego HTML)
+* **Optymalizacja Środowiska (Live Preview Workflow):** Wojtek w pełni zoptymalizował i wdrożył bezobsługowy system podglądu zmian deweloperskich, całkowicie eliminując potrzebę przedwczesnego scalania kodu lub walki z blokadami sieciowymi CORS.
+* **Architektura Przepływu Pracy (Zatwierdzony Standard):**
+  - **Bieżące testy i podgląd:** Wszelkie modyfikacje kodu są realizowane na odizolowanej gałęzi `test`. Podgląd zmian "na żywo" w przeglądarce odbywa się natychmiastowo poprzez dedykowany URL omijający ograniczenia sieciowe:
+    https://htmlpreview.github.io/?https://github.com/BartekCzyzyk/BartekCzyzyk.github.io/blob/test/index.html
+  - **Wdrożenie produkcyjne (Merge):** Dopiero po całkowitym zakończeniu prac i uzyskaniu 100% pozytywnych wyników na poligonie, uruchamiana jest standardowa procedura `Pull Request` -> `Merge` w celu przesunięcia wskaźnika produkcji `main` na stabilny commit.
+* **Status Ortopedyczny:** Po powrocie do żelaznej dyscypliny noszenia gorsetu ortopedycznego i spionizowaniu ciała nastąpiło fizyczne odbarczenie struktur nerwowych w kręgosłupie ("chrupnięcie"), co przyniosło wyraźną ulgę w bólu pooperacyjnym. Użytkownik pomyślnie zregenerował siły podczas godzinnej drzemki. Bezwzględny priorytet na najbliższe godziny: pozycja leżąca, stabilizacja i odpoczynek przed jutrzejszym/wtorkowym ściąganiem 30 zszywek.
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

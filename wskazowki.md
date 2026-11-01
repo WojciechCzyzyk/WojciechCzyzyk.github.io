@@ -43,7 +43,7 @@ KomendaCo fizycznie ruszam w pamięci?Analogia z C++ / ElektronikiKiedy używać
 **git checkout <cel>**
 Przesuwa **tylko wskaźnik HEAD**. Commity i gałęzie stoją w miejscu.HEAD = &cel; (Przełączenie punktu pomiarowego multimetru)Gdy chcesz tylko podejrzeć kod na innej gałęzi lub konkretnym commicie.
 **git commit**
-Tworzy nowy commit. Automatycznie przesuwa **HEAD oraz aktualną gałąź** o +1 do przodu.Dokładanie nowego ogniwa do łańcucha, które ciągnie za sobą wskaźnik końca.Gdy zatwierdzasz kolejną partię działającego kodu.
+Tworzy nowy commit. Automatycznie przesuwa **HEAD oraz aktualna gałąź** o +1 do przodu.Dokładanie nowego ogniwa do łańcucha, które ciągnie za sobą wskaźnik końca.Gdy zatwierdzasz kolejną partię działającego kodu.
 **git branch <nazwa>**
 Tworzy **nową etykietę** w miejscu, gdzie stoi HEAD. Nie przełącza Cię tam.Commit* nowa = HEAD; (Deklaracja nowego wskaźnika)Gdy chcesz zaznaczyć punkt startowy dla nowej funkcji, ale jeszcze na nią nie wchodzisz.
 **git branch -f <gałąź> <cel>**

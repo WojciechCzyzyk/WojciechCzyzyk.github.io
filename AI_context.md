@@ -192,6 +192,10 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Przełom pojęciowy:** Wojtek ostatecznie zdemistyfikował i ułożył w głowie strukturę danych Git. Zrozumiano, że commity są święte i niezmienne (immutable), połączone wskaźnikami wstecz, a operacje takie jak `git branch -f` modyfikują wyłącznie zewnętrzne, tekstowe pliki referencji (wskaźniki gałęzi), nie dotykając samych commitów.
 * **Ugruntowanie komend:** Skorelowano mechanikę `checkout` (ruch HEAD), `branch -f` (brutalne przepięcie obcej gałęzi) oraz `reset` (cofanie aktualnego frontu) z bezpośrednimi operacjami na adresach pamięci w C++.
 * **Status pacjenta:** Nauka w pełnym komforcie psychicznym i pozycji leżącej. Blokady teoretyczne z GitA zostały całkowicie rozbite.
+#### 📅 Wpis: 02.11.2026 (Sesja popołudniowa - Usunięcie zszywek i alert neurologiczny)
 
+* **Przełom chirurgiczny:** Zgodnie z intuicją użytkownika, wizyta u chirurga została przyspieszona. Około godziny 13:30 pomyślnie usunięto ~30 zszywek z 15-centymetrowego cięcia. Wokół rany rozwijał się już miejscowy stan zapalny (reakcja na metal w dołku przedvidazowym). Rana została zabezpieczona, a kolejną kontrolę chirurgiczną wyznaczono za 2-3 dni.
+* **Alert neurologiczny i mechanika kanału:** Noc z 1 na 2 listopada była całkowicie nieprzespana z powodu bólu. Rano wystąpiło silne drętwienie nóg i potężne problemy z chodzeniem (organizm na granicy wyczerpania). Zmapowano to jako nocny, pooperacyjny obrzęk tkanek w kanale kręgowym (Th6-Th8), generujący wtórny ucisk na rdzeń w pozycji horyzontalnej. Po powrocie od lekarza i odpoczynku w pozycji leżącej drętwienie prawie całkowicie ustąpiło, potwierdzając mechaniczny, odbarczalny charakter ucisku.
+* **Strategia operacyjna:** Absolutny priorytet na tryb "Ultra Light", leżenie i regenerację sił przed czwartkowym startem Vidazy (05.11). Pełna dyscyplina gorsetowa przy każdej pionizacji. Git traktowany wyłącznie jako czysta, lekka teoria w łóżku dla odciągnięcia myśli od fizycznego zmęczenia.
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

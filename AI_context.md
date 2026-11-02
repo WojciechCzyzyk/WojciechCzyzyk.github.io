@@ -197,5 +197,30 @@ Cel: Analiza konkretnego ogłoszenia o pracę z korporacji, „odczarowanie” w
 * **Przełom chirurgiczny:** Zgodnie z intuicją użytkownika, wizyta u chirurga została przyspieszona. Około godziny 13:30 pomyślnie usunięto ~30 zszywek z 15-centymetrowego cięcia. Wokół rany rozwijał się już miejscowy stan zapalny (reakcja na metal w dołku przedvidazowym). Rana została zabezpieczona, a kolejną kontrolę chirurgiczną wyznaczono za 2-3 dni.
 * **Alert neurologiczny i mechanika kanału:** Noc z 1 na 2 listopada była całkowicie nieprzespana z powodu bólu. Rano wystąpiło silne drętwienie nóg i potężne problemy z chodzeniem (organizm na granicy wyczerpania). Zmapowano to jako nocny, pooperacyjny obrzęk tkanek w kanale kręgowym (Th6-Th8), generujący wtórny ucisk na rdzeń w pozycji horyzontalnej. Po powrocie od lekarza i odpoczynku w pozycji leżącej drętwienie prawie całkowicie ustąpiło, potwierdzając mechaniczny, odbarczalny charakter ucisku.
 * **Strategia operacyjna:** Absolutny priorytet na tryb "Ultra Light", leżenie i regenerację sił przed czwartkowym startem Vidazy (05.11). Pełna dyscyplina gorsetowa przy każdej pionizacji. Git traktowany wyłącznie jako czysta, lekka teoria w łóżku dla odciągnięcia myśli od fizycznego zmęczenia.
+
+* # LOG: 2026-11-02 — Git Branching & Status Medyczny
+
+## 1. STATUS MEDYCZNY & REGENERACJA
+*   **Interwencja:** Przyspieszona wizyta i ściągnięcie 30 zszywek (reakcja na odczyn zapalny — decyzja w 100% trafiona).
+*   **Alert neurologiczny:** Poranny incydent ucisku (poziom Th6-Th8) pomyślnie rozładowany przez pionizację i powrót do odciążenia. Kanał kręgowy potrzebuje czasu na zejście obrzęku pooperacyjnego.
+*   **Tryb pracy:** ULTRA LIGHT. Pełny relaks w łóżku, gorset ortopedyczny przy każdym wstawaniu do pionu. Ładowanie baterii przed czwartkową Vidazą.
+
+## 2. GIT LEARNING (LOGIKA WSKAŹNIKOWA)
+Zaliczone zadania z zakresu modyfikacji i odwracania struktur grafu acyklicznego (DAG):
+
+*   **git reset [cel]**
+    *   *Mechanika:* Przepięcie wskaźnika gałęzi wstecz (`branch = branch->parent`).
+    *   *Zastosowanie:* Tylko lokalne podwórko (commity przed PUSH-em).
+*   **git revert [commit]**
+    *   *Mechanika:* Alokacja nowego węzła z „antymaterią” zmian (ruchy wskaźników wyłącznie w przód).
+    *   *Zastosowanie:* Bezpieczne odwracanie zmian na produkcji/serwerze.
+*   **git cherry-pick [C_x C_y ...]**
+    *   *Mechanika:* Kopiowanie zawartości wybranych commitów i aplikowanie ich jako zupełnie nowe węzły (`C_x'`) pod aktualny `HEAD` z przesunięciem wskaźnika gałęzi na koniec nowej serii.
+    *   *Zastosowanie:* Wybiórcze przenoszenie funkcjonalności między gałęziami bez śmieci.
+
+## 3. STATUS REPOZYTORIUM WIEDZY
+*   Poziom "Moving Work Around" w Learn Git Branching zaliczony czysto inżyniersko (opisy zignorowane na rzecz czystej analizy grafu wejście-wyjście).
+*   Kontekst w pełni zsynchronizowany.
+
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

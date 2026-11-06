@@ -327,6 +327,15 @@ Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako a
 * **Przełom w Zarządzaniu Energią (Budżet USB):** Zoptymalizowano system `BlindsSequencer`. Wprowadzono inżynierski mechanizm zwalniania blokady prądowej szafy już po 1000 ms (czas trwania fizycznego impulsu przekaźnika) poprzez nową metodę `stopPulse()`. Dzięki temu kaskadowe wywołanie "Otwórz wszystkie" załącza przekaźniki po kolei (w 8 sekund), eliminując piki prądowe i chroniąc zasilacz USB, podczas gdy całe odliczanie pozycji procentowej okien wykonuje się niezależnie i bezpiecznie w tle.
 * **Status Pacjenta & Działanie:** Zadanie wykonane w pełnym komforcie z pozycji leżącej. Głowa inżynierska w 100% zaangażowana w architekturę, co skutecznie zneutralizowało tło szpitalne. Pełna gotowość na kolejne kroki.
 
+#### 📅 Wpis: 06.11.2026 (Modyfikacja Procedury Audytu & Mapa Ścieżek Repozytorium)
+
+* **Żelazna Instrukcja Operacyjna dla AI:** Wprowadzono bezwzględny nakaz dołączania kompletnej listy aktualnych ścieżek plików (zarówno kodu źródłowego, jak i plików koncepcyjnych markdown) do każdego automatycznego podsumowania na koniec sesji. AI ma obowiązek śledzić te zasoby w kontekście repozytorium źródłowego `https://github.com/WojciechCzyzyk/esp32-smart-blinds`.
+* **Aktywne Ścieżki Projektowe (Status na dzień 06.11.2026):**
+  - Mózg logiczny (C++20): `BlindsManager.h` oraz `BlindsManager.cpp`
+  - Centralny orkiestrator (C++20): `BlindsSequencer.h` oraz `BlindsSequencer.cpp`
+  - Konfiguracja środowiska kompilacji: `platformio.ini`
+  - Dokumentacja logiczna: `logika_sterowania.md` oraz `funkcje_steruje_rolet.md`
+  - Archiwalne zasoby testowe (Układ odniesienia): `tests/BlindsController.h` oraz `tests/BlindsController.cpp`
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

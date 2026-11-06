@@ -350,6 +350,18 @@ Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako a
   - Archiwalne zasoby testowe (Układ odniesienia): `tests/BlindsController.h` oraz `tests/BlindsController.cpp`
 * **Status Dewelopera:** Cały komplet plików produkcyjnych został przygotowany i zsynchronizowany. Wojtek przechodzi w tryb spokojnego przeglądania kodu z pozycji leżącej. Pełen komfort psychiczny i regeneracja przed nadchodzącym tygodniem klinicznym.
 
+#### 📅 Wpis: 06.11.2026 (Koniec sesji wieczornej - Pełne scalenie architektury OOP i decyzja zakupowa)
+
+* **Status Architektury Kodu:** Kompletny, produkcyjny kod systemu (BlindsManager, BlindsSequencer, main.cpp) napisany w standardzie C++20 został pomyślnie wdrożony i zsynchronizowany bezpośrednio w repozytorium GitHub `esp32-smart-blinds`. System realizuje 1-sekundowy impuls przekaźników i kaskadowe zarządzanie budżetem prądowym USB (0mA w spoczynku cewek).
+* **Kompletna Mapa Ścieżek Projektowych (Do stałego monitorowania):**
+  - Mózg logiczny (C++20): `BlindsManager.h` oraz `BlindsManager.cpp`
+  - Centralny orkiestrator (C++20): `BlindsSequencer.h` oraz `BlindsSequencer.cpp`
+  - Główny plik uruchomieniowy: `src/main.cpp`
+  - Konfiguracja środowiska kompilacji: `platformio.ini`
+  - Dokumentacja logiczna: `logika_sterowania.md` oraz `funkcje_steruje_rolet.md`
+  - Archiwalne zasoby testowe (Układ odniesienia): `tests/BlindsController.h` oraz `tests/BlindsController.cpp`
+* **Status Logistyki Sprzętowej:** Zaakceptowano wybór laptopa Dell Latitude 7430 2w1 (Aluminium, i7-1265U, 32GB RAM, 512GB/1TB SSD, Windows 11 Pro). Wysłano zapytanie ofertowe do sprzedawcy na Allegro dotyczące weryfikacji czystości matrycy (brak bad pixeli) oraz wyceny modyfikacji dysku.
+* **Status Medyczny & Zwrot Akcji:** Oficjalne rozpoznanie histopatologiczne rany kręgosłupa: chłoniak (diagnoza wysoce korzystna, nowotwór wybitnie wrażliwy na leczenie systemowe). Paraliż neurologiczny po reoperacji odbarczającej ustąpił w 100%. Jutro (07.11) hematolog wdraża dedykowany plan leczenia. Tryb pacjenta: bezwzględnie leżący, pełna stabilizacja, stan psychiczny silny, nastawiony na walkę.
 
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

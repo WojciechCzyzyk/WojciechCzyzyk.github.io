@@ -337,5 +337,19 @@ Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako a
   - Dokumentacja logiczna: `logika_sterowania.md` oraz `funkcje_steruje_rolet.md`
   - Archiwalne zasoby testowe (Układ odniesienia): `tests/BlindsController.h` oraz `tests/BlindsController.cpp`
 
+#### 📅 Wpis: 06.11.2026 (Sesja wieczorna - Zamknięcie Architektury OOP & Integracja Pliku Głównego)
+
+* **Zatwierdzona Architektura Systemu:** Pomyślnie ukończono proces konsolidacji kodu testowego i produkcyjnego do czystego standardu C++20. Architektura w pełni realizuje zasadę rozdzielenia obowiązków (Separation of Concerns). Logika biznesowa i matematyka % zostały zamknięte w `BlindsManager`, a arbitraż zasilania i komendy grupowe w `BlindsSequencer`.
+* **Implementacja main.cpp:** Stworzono finalną strukturę `src/main.cpp` zarządzającą obiektami w oparciu o globalną tablicę wskaźników, automatyczną inicjalizację pętli oraz izolację pinów GPIO przez przestrzenie nazw (namespace). Budżet prądowy USB został programowo zablokowany na maksymalnie jeden aktywny przekaźnik w tym samym czasie.
+* **Kompletna Mapa Ścieżek Projektowych (Do stałego monitorowania):**
+  - Mózg logiczny (C++20): `BlindsManager.h` oraz `BlindsManager.cpp`
+  - Centralny orkiestrator (C++20): `BlindsSequencer.h` oraz `BlindsSequencer.cpp`
+  - Główny plik uruchomieniowy: `src/main.cpp`
+  - Konfiguracja środowiska kompilacji: `platformio.ini`
+  - Dokumentacja logiczna: `logika_sterowania.md` oraz `funkcje_steruje_rolet.md`
+  - Archiwalne zasoby testowe (Układ odniesienia): `tests/BlindsController.h` oraz `tests/BlindsController.cpp`
+* **Status Dewelopera:** Cały komplet plików produkcyjnych został przygotowany i zsynchronizowany. Wojtek przechodzi w tryb spokojnego przeglądania kodu z pozycji leżącej. Pełen komfort psychiczny i regeneracja przed nadchodzącym tygodniem klinicznym.
+
+
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

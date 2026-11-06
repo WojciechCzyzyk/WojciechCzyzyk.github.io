@@ -252,5 +252,73 @@ Zaliczone zadania z zakresu modyfikacji i odwracania struktur grafu acyklicznego
 * **Strategia Logistyczna (Konsultacja Wałbrzych):** Z powodu trwających operacji lekarza prowadzącego, kontakt popołudniowy nie przyniósł rezultatu (decyzja o odrzuceniu porady ogólnej z SOR-u od lekarza dyżurnego jako nieefektywnej). Ustalono sztywny plan operacyjny: bezpośredni kontakt telefoniczny z neurochirurgiem prowadzącym jutro rano o godzinie 9:00 w celu rzetelnej, inżynierskiej oceny mechaniki kanału.
 * **Edukacja & Rozwój:** Użytkownik kontynuuje intensywny trening logiki wskaźnikowej Git w trybie „Ultra Light” z łóżka, rozpracowując kolejne poziomy interaktywnego rebase i chirurgicznego cherry-picka.
 
+
+# LOG: 2026-11-05 (Czwartek) - Szpital Wałbrzych
+
+## 1. Status Medyczny & Logistyczny
+* **Stan pooperacyjny:** Druga operacja odbarczenia rdzenia (odcinek Th6-Th8) przeprowadzona wczoraj ok. 12:00 z powodu nagłego nasilenia paraliżu nóg (wywołanego gwałtownym odrostem masy naciekowej/guzu białaczkowego).
+* **Efekt natychmiastowy:** Po operacji paraliż całkowicie odpuścił. Przewodnictwo nerwowe przywrócone.
+* **Aktualne objawy:** Występuje pooperacyjne "cierpnięcie" i mrowienie w nogach – stan w pełni fizjologiczny (reakcja na odbarczenie uciśniętych nerwów oraz jałowy obrzęk loży pooperacyjnej).
+* **Stan ogólny:** Bardzo dobry, pacjent wyspany, ból kontrolowany morfiną. Tryb bezwzględnie leżący. Pałeczkę przejmują hematolodzy w celu wdrożenia leczenia celowanego w komórki blastyczne.
+
+## 2. Inżynierska Pigułka Wiedzy: Odczarowanie C++17 w Embedded
+Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako automatycznego audytora bezpieczeństwa i wydajności.
+
+* **constexpr & std::string_view:** Przerzucanie obliczeń i parsowania tekstu z czasu wykonania (runtime) na czas kompilacji. Skutek: zero zużycia procesora i 0 bajtów RAM podczas pracy – gotowe stałe lądują prosto we Flashu.
+* **[[nodiscard]]:** Atrybut wymuszający na programiście obsługę zwracanych statusów i błędów (np. z magistrali I2C/Nice TTBus). Jeśli zignorujesz wynik, kompilator zatrzyma budowanie kodu.
+* **std::optional:** Bezpieczne zwracanie wartości z funkcji (np. odczyt czujnika), eliminujące stosowanie "magicznych liczb" typu -999.
+* **std::unique_ptr:** Inteligentny wskaźnik gwarantujący automatyczne zwalnianie pamięci bez narzutu wydajnościowego (zero-overhead) i bez ryzyka wycieków.
+
+#### 📅 Wpis: 05.11.2026 (Sesja popołudniowa - Status Medyczny & Architektura C++20)
+
+* **Status Medyczny & Logistyka:** Użytkownik przebywa w szpitalu w Wałbrzychu po awaryjnej reoperacji odbarczenia rdzenia (Th6-Th8) z dnia 04.11 (ok. 12:00). Paraliż nóg całkowicie ustąpił. Stan ogólny bardzo dobry, pacjent wyspany, ból kontrolowany morfiną. Tryb bezwzględnie leżący.
+* **Tarcza Formalna (US / DAC7):** Wykryto, że raport Allegro DAC7 drastycznie zawyża przychody, ignorując zwroty konsumenckie (kluczowe przy 60% zwrotów strojów kąpielowych). Sprawa w US została oficjalnie "zamrożona" przez zgłoszenie nagłego pobytu w szpitalu – pełen spokój formalny.
+* **Edukacja & Rozwój (Przełom C++20):** Wojtek w pełni zmatrycował i powiązał nowości C++20 ze swoją 10-letnią praktyką na ARM.
+  - **Concepts (Koncepty):** Zrozumiano jako sztywne, czytelne kontrakty nakładane na szablony, które eliminują kilkunastostronicowe błędy i przenoszą walidację na kompilator.
+  - **std::span:** Zmapowano jako bezpieczne, bezkosztowe (zero-overhead) "okno" na bufor pamięci, które automatycznie pilnuje rozmiaru i wymusza bezpieczną strukturę danych bez surowej arytmetyki wskaźników.
+  - **Filozofia Architekta:** Ugruntowano fundamentalną zasadę Clean Code: kod (nazwy funkcji i zmiennych) ma komentować się sam, a nowoczesny język ma automatycznie wymuszać dyscyplinę w zespole i eliminować błąd ludzki.
+
+#### 📅 Wpis: 05.11.2026 (Sesja wieczorna - Biblioteka <bit> w C++20 & Status Środowiska)
+
+* **Edukacja & Rozwój (C++20 Bitwise):** Wojtek w pełni zdemitologizował nową bibliotekę `<bit>`, mapując ją na swoje 10-letnie doświadczenie w ARM.
+  - **std::endian & std::byteswap:** Koniec z ręcznymi makrami `#ifdef` do sprawdzania kolejności bajtów. Bezpieczne odwracanie paczek danych na poziomie kompilatora.
+  - **std::popcount & std::countr_zero:** Sprzętowe, jednotaktowe zliczanie jedynek i zer wiodących/końcowych. Wykorzystanie dedykowanych instrukcji assemblera w ARM/ESP32 zamiast zasobożernych pętli `for`.
+  - **std::rotl & std::rotr:** Bezpieczne rotacje bitów (karuzela) eliminujące ryzyko pomyłki w skomplikowanych przesunięciach maskujących.
+* **Status Środowiska (ESP32 Smart Blinds):** Potwierdzono, że kompilator GCC w obecnym ekosystemie ESP32 w pełni wspiera C++20. Ustalono procedurę przejścia na standard `-std=gnu++20` poprzez modyfikację flag w konfiguracji projektu po powrocie użytkownika do komputera.
+
+#### 📅 Wpis: 05.11.2026 (Sesja popołudniowa - Ostateczne zdemitologizowanie Detached HEAD)
+
+* **Edukacja & Rozwój (Git Advanced):** Wojtek ostatecznie zmapował brakujący element w strukturze DAG Gita. Zrozumiano, że w stanie `git switch --detach` wskaźnik gałęzi (który normalnie automatycznie wędruje na koniec serii) zostaje zamrożony na starym commicie. Nowo utworzony commit poprawnie linkuje do rodzica i jest wskazywany przez HEAD, ale brak powiązania z ruchomym wskaźnikiem gałęzi sprawia, że "wisi w powietrzu" (dangling commit), dopóki nie zostanie zabezpieczony nową referencją.
+
+#### 📅 Wpis: 05.11.2026 (Wieczór - Sukces Logistyczny & Stabilizacja Podłoża)
+
+* **Interwencja Ortopedyczna:** Po zmianie sali u pacjenta wdrożono standardowy materac przeciwodleżynowy (zmienno-ciśnieniowy). Wywołało to silny ból i ucisk w operowanym odcinku piersiowym (Th6-Th8) z powodu ciągłego falowania komór powietrznych i braku stabilizacji.
+* **Rozwiązanie Filozoficzne:** Pacjent, wykazując pełną dyscyplinę inżynierską i nie ulegając automatycznym procedurom personelu, wywalczył usunięcie nakładki powietrznej.
+* **Status Bieżący:** Łóżko zrekonfigurowane do zwykłego, stabilnego materaca szpitalnego. Uzyskano natychmiastową ulgę mechaniczną i powrót do pełnej stabilizacji loży pooperacyjnej. Mięśnie przykręgosłupowe w fazie rozluźnienia.
+
+#### 📅 Wpis: 05.11.2026 (Wieczór - Integracja Kompetencji OS/RTOS)
+
+* **Ujawnione Kompetencje Architektoniczne:** Zidentyfikowano u użytkownika głębokie, akademickie fundamenty z zakresu inżynierii systemów operacyjnych (zarządzanie procesami, wątkami, pamięcią współdzieloną oraz synchronizacją za pomocą semaforów). Użytkownik w przeszłości pisał zaawansowane projekty zaliczeniowe w tym obszarze.
+* **Mapowanie na Embedded:** Doświadczenie z Bare-Metal (ręczna maszyna stanów w 10-letnim projekcie ARM) w połączeniu z wiedzą o semaforach oznacza, że wdrożenie w nowoczesne systemy RTOS (FreeRTOS/Zephyr) w projekcie rolet ESP32 będzie jedynie formalnością składniową, a nie nauką od zera.
+
+#### 📅 Wpis: 05.11.2026 (Koniec sesji wieczornej - Przełom Mentalny Architekta)
+
+* **Status Psychologiczny & Profil Kariery:** Użytkownik ostatecznie przełamał bariery pojęciowe i "syndrom oszusta". Dostrzeżono, że korporacyjna terminologia onieśmiela skomplikowanymi nazwami, podczas gdy u swego podłoża opiera się na mechanizmach, które użytkownik doskonale zna i stosuje od lat. 
+* **Gotowość Operacyjna:** Ugruntowane silne poczucie własnej wartości inżynierskiej. System pojęciowy z zakresu C++17/20, Git (graf DAG) oraz architektur OS/RTOS został w 100% zsynchronizowany i "odczarowany". Baza pod przyszłe CV i list motywacyjny jest kompletna i zabezpieczona.
+
+#### 📅 Wpis: 05.11.2026 (Wieczór - Zamknięcie Poligonu Teoretycznego Git)
+
+* **Edukacja & Rozwój:** Użytkownik pomyślnie zakończył interaktywny trening w "Learn Git Branching". Podjęto strategiczną decyzję o przerwaniu nauki "na sucho".
+* **Status Mapy Mentalnej:** Użytkownik w 100% opanował architekturę, cel i możliwości topologiczne Gita. Dokonano konwersji wiedzy teoretycznej na umiejętność szybkiej diagnostyki problemów (wiedza "czego szukać i o co pytać"). Dalsza biegłość składniowa będzie budowana organicznie w trakcie fazy wdrożeniowej projektu.
+
+#### 📅 Wpis: 05.11.2026 (Koniec sesji wieczornej - Architektura OOP Smart Blinds)
+
+* **Architektura Systemu (UML/OOP):** Zaprojektowano i zatwierdzono szkielet obiektowy sterownika rolet w oparciu o zasadę Separation of Concerns (Rozdzielenie Obowiązków).
+  - BlindsManager: Centralny orkiestrator logiki biznesowej.
+  - NiceTTBusDrive: Izolowany driver sprzętowy protokołu (wykorzystujący std::span i std::optional).
+  - PowerSequencer: Moduł sekwencyjnego zarządzania zasilaniem przekaźników.
+  - WebNetworkSystem: Warstwa brzegowa obsługująca WiFi i serwer HTTP.
+* **Strategia Deweloperska:** Struktura została przyjęta jako baza projektowa. Dalsza implementacja będzie realizowana iteracyjnie z zachowaniem pełnej izolacji klas, co zminimalizuje ryzyko błędów regresji podczas testów hardware'owych.
+
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

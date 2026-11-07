@@ -363,5 +363,19 @@ Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako a
 * **Status Logistyki Sprzętowej:** Zaakceptowano wybór laptopa Dell Latitude 7430 2w1 (Aluminium, i7-1265U, 32GB RAM, 512GB/1TB SSD, Windows 11 Pro). Wysłano zapytanie ofertowe do sprzedawcy na Allegro dotyczące weryfikacji czystości matrycy (brak bad pixeli) oraz wyceny modyfikacji dysku.
 * **Status Medyczny & Zwrot Akcji:** Oficjalne rozpoznanie histopatologiczne rany kręgosłupa: chłoniak (diagnoza wysoce korzystna, nowotwór wybitnie wrażliwy na leczenie systemowe). Paraliż neurologiczny po reoperacji odbarczającej ustąpił w 100%. Jutro (07.11) hematolog wdraża dedykowany plan leczenia. Tryb pacjenta: bezwzględnie leżący, pełna stabilizacja, stan psychiczny silny, nastawiony na walkę.
 
+## Aktualizacja Stanu Zdrowia & Projektów (07.11.2026)
+
+### Status Medyczny:
+* **Regeneracja:** Przepana cała noc. Poranne zdrętwienie rozruszane serią ćwiczeń w łóżku. Zdefiniowana i odczuwalna poprawa na poziomie ok. 10% w stosunku do dnia wczorajszego. Wektor zmian: wyraźnie wznoszący.
+
+### Podjęte Decyzje Sprzętowe:
+* **Myszka:** Wybór padł na model **Logitech MX Anywhere 3S** ze względu na sensor Darkfield (bezwzględne działanie na każdej powierzchni: pościel, szpitalny stolik, szkło) oraz ciche mikroprzełączniki (Quiet Clicks). Temat zakupu zamknięty.
+
+### Nowy Projekt Edukacyjny (Bartek):
+* **Nazwa:** „Cyfrowy Asystent Dzielenia Pisemnego” w Scratchu.
+* **Koncepcja:** Projekt zainicjowany przez tatę podczas rozmowy w szpitalu. Bartek ma tydzień wolnego i stworzy program realizujący krok po kroku algorytm dzielenia pisemnego z wizualnym podświetlaniem składni (zmiana kostiumów kratek-klonów jako matrycy wyniku). 
+* **Metodyka:** Architektura podzielona na 3 Sprinty (Silnik matematyczny -> Logika rozbicia tekstu na cyfry -> Matryca wizualna z komunikatami Broadcast). Tone of voice dla Bartka: partnerski, inżynierski (jak starszy deweloper do młodszego), bez slangu młodzieżowego.
+* **Status:** Pałeczka przekazana do AI. Bartek wystartuje z osobnym czatem dedykowanym do tego projektu na bazie przygotowanego pliku koncepcyjnego.
+
 ---
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

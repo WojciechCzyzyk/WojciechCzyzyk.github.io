@@ -435,5 +435,11 @@ Ten projekt nie powstaje chaotycznie. Jako zespół **Mentor-Developer** (Wojcie
 * **Rozwiązanie Problemu Widoczności (Bugfix Wojtka):** Po zweryfikowaniu, że standardowa zmiana uprawnień na *Public* w *Danger Zone* nie wymusiła natychmiastowego renderowania tablicy na koncie dewelopera, użytkownik zidentyfikował i wdrożył alternatywną ścieżkę mapowania zasobów bezpośrednio z poziomu konta `BartekCzyzyk`. 
 * **Mechanika Wstrzyknięcia Zgłoszeń:** Wykorzystano zaawansowaną funkcję importu i linkowania elementów (*Import/Add items from repositories*) wewnątrz zakładki projektowej na koncie dewelopera, wskazując jako źródło nadrzędne repozytorium Architekta. Rozwiązanie to tworzy dynamiczne, dwukierunkowe powiązanie (wskaźnik referencyjny) do jednej, centralnej bazy zadań, zamiast tworzenia statycznej kopii. Ostateczna weryfikacja współbieżności zmian w czasie rzeczywistym została odłożona do fazy testów operacyjnych.
 
+#### 📅 Wpis: 08.11.2026 (Sesja wieczorna - Architektura Edukacyjna & Efekt Showcase)
+
+* **Sukces Topologii Współdzielonej:** Pomyślnie zmigrowano i zweryfikowano w boju nową strukturę uprawnień. Projekt stał się w pełni transparentny i tożsamy na obu kontach, pozwalając na płynne zarządzanie kartami Kanban i historią aktywności w ramach jednej sesji przeglądarki.
+* **Ewolucja Strategii Biznesowej:** Projekt „Asystenta Dzielenia Pisemnego” Bartka został oficjalnie podniesiony do rangi produkcyjnego Poligonu Doświadczalnego (Proof of Concept) dla Butikowej Akademii Natalki. Służy do mapowania barier wejścia i optymalizacji onboardingu dla dzieci w wieku 10–12 lat.
+* **Strategia Marketingowa (Showcase / Żywa Reklama):** Strona `bartekczyzyk.github.io` została zdefiniowana jako główny element weryfikacji efektów kształcenia dla klientów premium. Witryna syna, zawierająca osadzone technicznie projekty, powiązaną tablicę zadań oraz logikę inżynierską, będzie stanowiła realne Case Study – namacalny dowód dla rodziców, pokazujący poziom kompetencji, jaki dziecko zdobywa w trakcie całorocznego kursu APEX.
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

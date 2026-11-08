@@ -41,4 +41,30 @@ Bartek, Twój Tata bardzo mocno kibicuje temu projektowi i będzie obserwował T
 1. Otwórz Scratcha w przeglądarce i załóż nowy, czysty projekt.
 2. Skopiuj całą treść tego pliku i wklej mi ją w pierwszej wiadomości.
 3. Dopisz na samym dole: "Jestem gotowy. Zaczynamy Sprint 1. Podaj mi instrukcję układania klocków."
-Od tego momentu ruszamy z koksem. Rozpiszę Ci precyzyjnie, jakich klocków i zmiennych użyć w pierwszym etapie, aby Twój Robot zaczął poprawnie liczyć. Do dzieła, młody inżynierze!
+Od tego momentu ruszamy z koksem. Rozpiszę Ci precyzyjnie, jakich klocków i zmiennych użyć w pierwszym etapie, aby Twój Robot zaczął poprawnie liczyć. Do dzieła, młody inżynierze
+
+
+ 2. Projekt Kart Zadaniowych (Todo) na bazie 3 Sprintów
+
+Oto gotowa treść kart, które fizycznie wkleimy do kolumny Todo. Rozbiłem je metodologią inżynierską na niezależne warstwy:
+
+🏃‍♂️ SPRINT 1: Mózg Matematyczny (Silnik)
+
+• Karta #1: Inicjalizacja Zmiennych i Pobieranie Danych
+	• Opis: Stworzenie formularza (pytań) o Dzielną i Dzielnik. Zabezpieczenie zmiennych w pamięci Scratcha.
+• Karta #2: Silnik Matematyczny (Wyznaczanie Cyfr Wyniku)
+	• Opis: Logika matematyczna – jak wyciągać kolejne cyfry z dzielnej od lewej strony i przeprowadzać standardowe dzielenie z resztą.
+
+🏃‍♂️ SPRINT 2: Architektura Matrycy (Wizualizacja)
+
+• Karta #3: Generator Kratkowanego Arkusza (Klonowanie)
+	• Opis: Stworzenie systemu klonów ("duszka-kratki"), który na starcie programu automatycznie rysuje na ekranie czystą matrycę zeszytową (siatkę).
+• Karta #4: Wpisywanie Cyfr w Kratki (Adresacja Matrycy)
+	• Opis: Logika przesyłania wyliczonych cyfr do konkretnych współrzędnych (X, Y) na narysowanej siatce.
+
+🏃‍♂️ SPRINT 3: Interfejs i UX (Szlify Mentorskie)
+
+• Karta #5: System Podświetlania Składni (Krok po Kroku)
+	• Opis: Zmiana kostiumów kratek na żółty/zielony w trakcie liczenia, aby użytkownik widział, która cyfra jest teraz dzielona, a która to reszta.
+• Karta #6: Walidacja i Obsługa Zera (Edge Cases)
+	• Opis: Zabezpieczenie programu przed podaniem zera jako dzielnika (komunikat: „Pamiętaj cholero, nie dziel przez zero!” w wersji dostosowanej do szkoły).

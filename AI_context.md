@@ -430,4 +430,10 @@ Ten projekt nie powstaje chaotycznie. Jako zespół **Mentor-Developer** (Wojcie
 * **Matematyka Biznesowa:** Założono model abonamentowy (karnet na 4 wejścia/miesiąc) w kwocie **300 zł od dziecka**. Przy zerowych kosztach najmu (wykorzystanie przestrzeni domowej) jedna grupa generuje **1200–1500 zł przychodu miesięcznie** przy zaledwie 8 godzinach pracy Natalki w miesiącu. 
 * **Przewaga Rynkowa (USP):** Warsztaty pozycjonowane jako **"Profesjonalna Akademia Cyfrowej Inżynierii"**. Dzieciaki uczą się informatyki, wideo (CapCut) oraz matematyki przez pryzmat dorosłych narzędzi i metodologii (własne konta GitHub, praca na tablicach Kanban, zaliczanie sprintów, odrębne zgłoszenia *Issues* przypisywane przez Natalkę). Model przesłany Natalce wieczorem do spokojnego przetrawienia. Stanowi idealne narzędzie budowania jej niezależności zawodowej w elastycznych, domowych godzinach.
 
+#### 📅 Wpis: 08.11.2026 (Sesja wieczorna - Przełom w Topologii Widoczności Projektów)
+
+* **Rozwiązanie Problemu Widoczności (Bugfix Wojtka):** Po zweryfikowaniu, że standardowa zmiana uprawnień na *Public* w *Danger Zone* nie wymusiła natychmiastowego renderowania tablicy na koncie dewelopera, użytkownik zidentyfikował i wdrożył alternatywną ścieżkę mapowania zasobów bezpośrednio z poziomu konta `BartekCzyzyk`. 
+* **Mechanika Wstrzyknięcia Zgłoszeń:** Wykorzystano zaawansowaną funkcję importu i linkowania elementów (*Import/Add items from repositories*) wewnątrz zakładki projektowej na koncie dewelopera, wskazując jako źródło nadrzędne repozytorium Architekta. Rozwiązanie to tworzy dynamiczne, dwukierunkowe powiązanie (wskaźnik referencyjny) do jednej, centralnej bazy zadań, zamiast tworzenia statycznej kopii. Ostateczna weryfikacja współbieżności zmian w czasie rzeczywistym została odłożona do fazy testów operacyjnych.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

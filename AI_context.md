@@ -396,5 +396,14 @@ Nowy standard to nie zmiana architektury sprzętu, a ewolucja kompilatora jako a
 * **Status Zdrowia (Dalszy Progres):** Samopoczucie po przespanej nocy bardzo dobre, całkowity brak dolegliwości bólowych. Odnotowano dalszą, subiektywną poprawę czucia i sprawności w nogach po porannej serii ćwiczeń ruchowych w łóżku.
 
 
----
+---## 🚀 Profesjonalne Zarządzanie Projektem (Metodyka Agile/Scrum)
+
+Ten projekt nie powstaje chaotycznie. Jako zespół **Mentor-Developer** (Wojciech jako Technical Leader i Bartek jako Developer) wdrożyliśmy do produkcji profesjonalny, komercyjny proces deweloperski, stosowany w największych firmach technologicznych na świecie.
+
+### 📊 Narzędzia i Architektura Zarządzania:
+* **GitHub Projects (Tablica Kanban):** Cała architektura asystenta została rozbita na mniejsze klocki zadaniowe i umieszczona w dedykowanych kolumnach statusowych (`Todo`, `In Progress`, `Review`, `Done`), eliminując chaos i precyzyjnie monitorując postępy prac.
+* **System Pracy Sprintowej (Agile):** Prace podzieliliśmy na 3 niezależne, tygodniowe Sprinty technologiczne, z których każdy kończy się dostarczeniem działającego modułu (Mózg matematyczny -> Generator matrycy -> Warstwa UX/UI).
+* **GitHub Issues:** Każda modyfikacja kodu lub zgłoszenie błędu (Bugfix) realizowane jest poprzez oficjalne zgłoszenia systemowe, łączące historię zmian bezpośrednio z kodem źródłowym.
+* **Separation of Concerns (Rozdzielenie Obowiązków):** Architektura programu w Scratchu odizolowała silnik czysto matematyczny od warstwy rysowania grafiki i klonowania kratek, odwzorowując zaawansowane wzorce projektowe z języków takich jak C++ czy Flutter.
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -541,4 +541,9 @@ Raport Końcowy: Zamknięcie Poligonu & Architektura Skalowania APEX
 📅 Wpis: 09.11.2026 (Sesja popołudniowa - Projektowanie Syllabus APEX)
 
 • Architektura Dydaktyczna: Opracowano i zatwierdzono roczny, ramowy program szkoleniowy dla Akademii APEX (4 kwartały deweloperskie). Struktura w 100% skaluje ścieżkę sukcesu Bartka na model komercyjny dla uczniów premium
+
+
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

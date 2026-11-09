@@ -641,5 +641,27 @@ Wpis: 09.11.2026 (Sesja wieczorna - Zamknięcie Architektury Umów i Sub-Issues)
   * **§ 6 (Sprzęt & Narzędzia):** Wymóg własnego laptopa; zgoda na założenie konta GitHub (portfolio ucznia); wyłączenie odpowiedzialności Akademii za sprzęt [1.1].
   * **§ 7 (RODO & Wizerunek):** Zgoda na nieodpłatne publikowanie wizerunku i projektów uczniów w celach marketingowych (Showcase) z prawem do jej odwołania [1.1, 2.1].
 
+## 🚀 DARMOWA LEKCJA POKAZOWA: Zostań Twórcą Własnej Gry!
+
+Chcesz, aby Twoje dziecko przestało być tylko konsumentem gier, a stało się ich twórcą? Zapraszamy na widowiskowe, 60-minutowe warsztaty pokazowe, podczas których odwrócimy role. Bez nudnej teorii, bez wklepywania niezrozumiałych komend – czysta, inżynierska praktyka od pierwszej minuty!
+
+### 🎮 Co zbudujemy podczas lekcji?
+Napiszemy od zera i uruchomimy grę zręcznościowo-logiczną **„Łapacz Liczb”** w środowisku Scratch. 
+* Każde dziecko stworzy własnego bohatera, który musi łapać spadające z góry obiekty.
+* **Inżynierski twist:** Aby zdobyć punkty, robot musi łapać tylko liczby parzyste, a unikać nieparzystych (lub ułamków!). 
+* Na koniec zajęć dodamy ukryty „kod deweloperski” (Cheat Code), który pozwoli dzieciom oszukać własną grę i zaimponować rówieśnikom!
+
+### 🧠 Czego naprawdę nauczy się Twoje dziecko? (Perspektywa Rodzica)
+Pod pretekstem świetnej zabawy wciągniemy dzieci w świat prawdziwej informatyki i matematyki:
+1. **Algorytmika i pętle:** Zrozumieją, jak komputer podejmuje decyzje (instrukcje warunkowe `JEŻELI ... TO`).
+2. **Matematyka w praktyce:** Dziecko niemal podświadomie opanuje logiczne dzielenie i rozpoznawanie cech liczb, świetnie bawiąc się mechaniką gry.
+3. **Pewność siebie w świecie IT:** Każdy uczestnik wyjdzie z zajęć z działającym linkiem do własnej, autorskiej gry, którą będzie mógł uruchomić na telefonie rodzica lub pochwalić się w szkole!
+
+### 🎒 Informacje logistyczne:
+* **Dla kogo:** Uczniowie klas 4-6 szkoły podstawowej (nie wymagamy żadnego wcześniejszego doświadczenia!).
+* **Wymagania sprzętowe:** Własny laptop z ładowarką i dostępem do przeglądarki internetowej.
+* **Kameralne grupy:** Pracujemy w elitarnych grupach do 5 osób, dzięki czemu mentor poświęca maksimum uwagi każdemu młodemu inżynierowi.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

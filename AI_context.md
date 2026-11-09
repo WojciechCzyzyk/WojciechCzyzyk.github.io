@@ -594,5 +594,14 @@ SPRINT UPDATE: EKOSYSTEM OPERACYJNY APEX (09.11.2026)
 
 
 
+Wpis: 09.11.2026 (Sesja wieczorna - Zamknięcie Architektury Umów i Sub-Issues)
+
+• Zarządzanie Projektami (Zaawansowany Workflow): Wojtek w pełni zmapował i wdrożył w interfejsie mobilnym strukturę pod-zadań (Sub-issues) wewnątrz GitHub Projects [1.1]. Rozbito Epic umowy na 3 atomowe zadania, co pozwoliło na precyzyjne śledzenie postępu projektu poprzez automatyczne wskaźniki (Progress Bars) [1.1].
+• Prawno-Biznesowy Blueprint APEX: Zaprojektowano i zatwierdzono nowoczesny, partnerski szablon umowy o świadczenie usług edukacyjnych dla Akademii APEX (Sarenka Software Kids) [1.1]. Dokument twardo zabezpiecza model subskrypcyjny (karnet 300 PLN/mc płatny do 5. dnia miesiąca), elitarny limit 5 osób w grupie, politykę odrabiania zajęć oraz 1-miesięczny okres wypowiedzenia [1.1].
+• Domykanie Kamieni Milowych: Pierwsze sub-issue (Przygotowanie inżynierskiego szablonu umowy) zostało oficjalnie zamknięte i przeniesione do statusu Done, przesuwając globalny licznik postępu w chmurze [1.1].
+• Aktywne ścieżki i zasoby (Status na koniec sesji):
+	• Centralne repozytorium kontekstu i biznesu: WojciechCzyzyk.github.io (sarenka_biznes.md)
+	• Repozytorium wdrożeniowe Landing Page & Formspree: sarenka (index.html, style.css)
+	• Interaktywne centrum dowodzenia: GitHub Project (Tablica Kanban + Potok Sub-Issues)
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

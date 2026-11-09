@@ -551,4 +551,48 @@ Raport Końcowy: Zamknięcie Poligonu & Architektura Skalowania APEX
 
 
 
+
+Karta: [DECYZJA] Wdrożenie ActiveNow jako serca operacyjnego APEX
+
+• Status: Wybrane narzędzie (na bazie pozytywnych doświadczeń z sekcji pływackiej chłopaków).
+• Cel: Pełna automatyzacja zapisów, umów akceptowanych online i subskrypcji (karnetów).
+
+🛠️ Checklista konfiguracyjna (Do zrobienia):
+
+• Założenie nowej instancji szkoły: Utworzenie osobnego profilu dedykowanego Akademii APEX / Sarenka Software.
+• Konfiguracja struktury grup: Zdefiniowanie grup zajęciowych (np. max 5 osób, częstotliwość 1x w tygodniu, czas trwania 60/90 min).
+• Wstrzyknięcie szablonu umowy/regulaminu: Wgranie inżynierskich warunków współpracy APEX do modułu zgód – rodzic akceptuje umowę "ptaszkiem" (checkboxem) przy zapisie.
+• Integracja Bramki Płatności: Podpięcie Tpay lub PayU w celu uruchomienia automatycznych płatności (karnetów) i automatycznego generowania rachunków/faktur.
+• Wygenerowanie kodu formularza (Widget): Pobranie kodu HTML formularza zapisów z ActiveNow i przygotowanie go do wstrzyknięcia na Landing Page sarenka.
+
+
+
+SPRINT UPDATE: EKOSYSTEM OPERACYJNY APEX (09.11.2026)
+
+
+1. Inicjalizacja Narzędziowa
+
+• GitHub Project: Utworzono i podpięto interaktywną tablicę Kanban wewnątrz repozytorium Natalki (zsynchronizowana z profilem Git).
+• Architektura Tablicy: Układ kolumn oparty na strukturze: 📥 Inbox / Pomysły ➔ 📋 Todo / Do przygotowania ➔ 🏃 In Progress ➔ ✅ Done.
+
+2. Architektura Systemu Zapisów i Płatności (Core Operations)
+
+• Decyzja Technologiczna: Jako centralny system All-in-One wybrany został ActiveNow (sprawdzony operacyjnie w sekcji pływackiej chłopaków).
+• Finanse / Budżet: Model SaaS – wdrożenie oparte na najniższym pakiecie Plan Premium 50 (koszt 125 PLN netto/mc, próg do 50 aktywnych uczniów, 14 dni testowych). Amortyzacja kosztu przy pozyskaniu 1 ucznia.
+• Integracja Księgowa (Kluczowy Pivot): Odrzucono zewnętrzne narzędzia typu Fakturowania. Całość operacji finansowych pozostaje w obecnym stosie technologicznym Natalki – iFirma.
+• Przepływ Danych (Data Flow):
+	• Faza 1 (MVP): Manualny eksport zbiorczego raportu .csv/.xls z ActiveNow ➔ Seryjny import i księgowanie w iFirma (częstotliwość: 1x w miesiącu).
+	• Faza 2 (Skalowanie): Pełna automatyzacja API poprzez webhooki na platformie Make.com (Wpłata ActiveNow ➔ API iFirma ➔ Auto-wysyłka PDF do rodzica).
+
+🛠️ Najbliższe Akcje (Karty wdrożeniowe dodane do Backlogu):
+
+• Założenie instancji Akademii APEX na ActiveNow (uruchomienie 14 dni Trial).
+• Konfiguracja limitów grup (max 5 osób) i wgranie checkboxa akceptacji regulaminu/umowy.
+• Spięcie bramki płatności (Tpay/PayU) w ActiveNow pod automatyczne subskrypcje (karnet 300 PLN/mc).
+• Przygotowanie procedury importu plików rozliczeniowych do iFirma.
+
+
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -485,4 +485,10 @@ Raport Końcowy: Zamknięcie Poligonu & Architektura Skalowania APEX
 * **Strategia Motywacyjna (Onboarding Natalki):** Treść strony została zaprojektowana w sposób organiczny, kładąc nacisk na budowanie pewności siebie u Natalki i powolne rodzenie się biznesu w tle codzienne obowiązków. Strona integruje sekcje małych grup premium, zajęć szkolnych oraz bezpośredni odnośnik do portfolio Bartka (`bartekczyzyk.github.io`) jako namacalny dowód skuteczności metodyki.
 * **Status Logistyczny:** Kod przygotowany do copy-paste bezpośrednio przez telefon. Wojtek działa z łóżka w Wałbrzychu, idealnie przekuwając bezsenność w strategiczne narzędzia budowania niezależności zawodowej rodziny.
 
+#### 📅 Wpis: 09.11.2026 (Sesja poranna - Symulacja Finansowa i Kosztowa APEX)
+* **Model Finansowy:** Zdefiniowano pełną strukturę przychodów i kosztów operacyjnych dla Akademii APEX (Sarenka Software Kids). Przyjęto model mieszany: 5 grup domowych (25 dzieci) oraz 4 grupy szkolne B2B (40 dzieci) przy stawce 300 zł/miesięcznie za karnet.
+* **Optymalizacja Kosztów:** Zweryfikowano strukturę podatkową opartą na JDG (ryczałt 8,5% dla usług edukacyjnych) oraz preferencyjny ZUS. Uwzględniono bezpieczny, 15-procentowy budżet prowizyjny na najem sal komputerowych bezpośrednio w strukturach szkolnych.
+* **Wskaźniki KPI:** Biznes wykazuje gigantyczną rentowność na poziomie ~73%, generując od 11 300 zł do 14 500 zł czystego zysku netto "na rękę" przy zaledwie 16 godzinach pracy dydaktycznej tygodniowo. Dokumentacja została przygotowana do scalenia z plikiem sarenka_biznes.md.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

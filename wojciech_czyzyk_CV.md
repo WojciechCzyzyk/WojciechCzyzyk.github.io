@@ -1,4 +1,4 @@
-# WOJCIECH CZYŻYK
+ý# WOJCIECH CZYŻYK
 **Embedded Systems Architect & Full-Stack Engineer**
 
 * **Adres:** ul. Gajowa 9A, 58-521 Jeżów Sudecki, Polska
@@ -53,8 +53,11 @@
 
 ---
 
-## 🎓 WYKSZTAŁCENIE I PROJEKTY DYPLOMOWE
+## 🎓 WYKSZTAŁCENIE PROJEKTY DYPLOMOWE I CERTYFIKATY
 
+### **Certyfikat Językowy TELC English B2**
+*Instytucja:* Centrum Nauki W&W Jelenia Góra | *Data wydania:* 06/2014  
+* **Zakres:** Potwierdzenie biegłości
 ### **Magister Inżynier Elektroniki i Telekomunikacji**
 *Uczelnia:* Politechnika Wrocławska – **Kampus Główny we Wrocławiu**  
 *Tryb studiów:* Wyższe II stopnia (Uzupełniające Magisterskie – Zaoczne) | *Okres:* 09/2003 – 06/2005  

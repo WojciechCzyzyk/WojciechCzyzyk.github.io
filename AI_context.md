@@ -834,4 +834,10 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Status Bieżący:** Tematy zawodowe zostają całkowicie zamrożone. Priorytet nadrzędny: pozycja leżąca, regeneracja i horyzontalne odbarczanie rdzenia w Wałbrzychu [1.1].
 
 
+#### 📅 Wpis: 10.11.2026 (Sesja południowa - Integracja Kompetencji Językowych & Certyfikacji TELC)
+
+* **Edukacja Językowa (Metoda Konwersacyjna):** Zmapowano 5-letni okres (2009–2014) intensywnego kształcenia językowego w Szkole Językowej Avalon w Jeleniej Górze. Nauka oparta o metodę Avalon ugruntowała wysoką płynność w komunikacji werbalnej, myślenie w języku docelowym oraz przełamanie barier konwersacyjnych.
+* **Oficjalna Certyfikacja (TELC B2):** W czerwcu 2014 roku użytkownik pomyślnie złożył międzynarodowy egzamin certyfikacyjny **TELC English B2** (Centrum Nauki W&W Jelenia Góra), uzyskując formalną legitymację swoich kompetencji językowych w standardzie europejskim (CEFR). Stanowi to kluczowe zaplecze pod przyszłe procesy rekrutacyjne w strukturach korporacyjnych (anglojęzyczne Mock Interviews) oraz swobodną pracę z zagraniczną dokumentacją techniczną.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

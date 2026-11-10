@@ -731,5 +731,11 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Hardware Debugging & Integralność Sygnałów:** Wykazano wysokie umiejętności diagnostyczne z użyciem laboratoryjnego analizatora stanów logicznych. Użytkownik zidentyfikował i wyeliminował problemy zniekształceń sygnału (Jitter, nieliniowość zboczy prostokątnych z fotoodbiornika), implementując programowe filtry tolerancji czasowej (Time Windows), co zagwarantowało wysoką odporność na szumy i stabilność dekodowania.
 * **Architektura Hybrydowa (Separation of Concerns):** Zaprojektowano system w oparciu o podział technologiczny: krytyczna czasowo warstwa sprzętowa i parsująca zrealizowana w Assemblerze, natomiast warstwa prezentacji danych (obsługa menu i wyświetlacza) odizolowana do wyższego poziomu (BASIC), co precyzyjnie optymalizowało budżet wydajnościowy mikrokontrolera.
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Współbieżność i Bezpieczeństwo Baz Danych w Systemach Telekomunikacyjnych)
+
+* **Projektowanie pod Wysoki Ruch (High Concurrency & Scalability):** Rozbudowano dokumentację pracy magisterskiej (system Call Center oparty na Perl/MySQL) o zaawansowane mechanizmy kontroli współbieżności. Użytkownik zaimplementował architekturę odporną na piki ruchowe i wyścigi danych (Race Conditions), charakterystyczne dla systemów telekomunikacyjnych czasu rzeczywistego.
+* **Mechanizmy Transakcyjne i Blokady (ACID & Locking):** Wdrożono pełne zarządzanie transakcjami gwarantujące integralność danych oraz zaawansowane blokowanie struktur tabel (Table/Row Locking) podczas operacji zapisu. Zapobiegło to ryzyku zakleszczeń (Deadlocks) oraz uszkodzenia relacyjnych baz danych przy jednoczesnej obsłudze masowych połączeń głosowych VoiceXML.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

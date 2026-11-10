@@ -708,6 +708,12 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Doświadczenie z Logiką Cyfrową:** Praktyczna implementacja niskopoziomowych maszyn stanów (FSM) oraz obsługa synchronicznych interfejsów komunikacyjnych (np. obsługa protokołu klawiatury komputerowej) potwierdza umiejętność bezwzględnego panowania nad taktowaniem cyfrowym, eliminacją hazardów i projektowaniem dedykowanych struktur sprzętowych od zera. 
 * **Pozycjonowanie Rynkowe:** Umiejętność łączenia świata Bare-Metal ARM [1.1] z logiką programowalną FPGA stawia użytkownika na najwyższej półce inżynierów systemów wbudowanych, otwierając drzwi do projektowania systemów akceleracji sprzętowej, telekomunikacji oraz zaawansowanych projektów lotniczych (Aerospace).
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Integracja Sukcesu Magisterskiego & Systemów Głosowych Real-Time)
+
+* **Architektura Pracy Magisterskiej (Wyróżnienie i Sukces R&D):** Zmapowano i zintegrowano historyczny sukces inżynierski z 2005 roku – projekt oraz pełne wdrożenie produkcyjne interaktywnego systemu Call Center, nagrodzone oceną celującą i najwyższym wyróżnieniem na roku. 
+* ** Backend, Perl & Integracja Real-Time:** Użytkownik odpowiadał za kompletną architekturę backendową systemu. Zaprojektował i wdrożył relacyjną bazę danych MySQL oraz napisał zaawansowany silnik integracyjny w języku Perl, który w czasie rzeczywistym wiązał zapytania bazodanowe z protokołem głosowym VoiceXML oraz generował dynamiczny interfejs webowy (HTML).
+* **Wizjonerskie Podejście (Prekursor Voice-AI):** System realizował pełną głosową obsługę klienta (zamiast standardowego, tonowego wybierania klawiszami DTMF), co w 2005 roku stanowiło przełom technologiczny i innowację na poziomie systemów korporacyjnych. Potwierdza to wieloletnie, unikalne kompetencje użytkownika w obszarze systemów rozproszonych, parsowania danych i integracji protokołów telekomunikacyjnych.
+
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

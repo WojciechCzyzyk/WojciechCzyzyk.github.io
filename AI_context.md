@@ -664,4 +664,15 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Kameralna grupa:** Maksymalnie 5 osób na zajęciach dla pełnego komfortu dziecka.
 
 
+
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Demistyfikacja GitHub Projects & Architektura Lekcji)
+
+* **Edukacja & Rozwój (Zarządzanie Projektami):** Wojtek w pełni zmapował i wdrożył w praktyce zaawansowane funkcje tablic planistycznych w GitHub Projects. Opanowano fundamentalną różnicę pomiędzy luźnym szkicem koncepcyjnym na tablicy (`Draft`) a oficjalnym, globalnie wyszukiwalnym zgłoszeniem (`Issue`). Ugruntowano wiedzę o elastyczności systemu – każdy Draft może być w dowolnym momencie jednym kliknięciem przekształcony w pełnoprawne Issue z przypisaniem do wybranego repozytorium kodu.
+* **Optymalizacja Środowiska (Multiwidokowość i Filtry):** Rozbito blokady pojęciowe dotyczące organizacji przestrzeni roboczej. Zrozumiano, że widoki Kanban (Board) i Tabela (Table) współdzielą tę samą bazę danych (graf powiązań). Pomyślnie zaimplementowano równoległą architekturę zarządzania: gałąź widoku Kanban śledzi biznesowy, wieloetapowy proces zakładania szkoły, natomiast nowo utworzony za pomocą funkcji `New view` widok Tabeli zarządza masowo bazą danych programu nauczania.
+* **Techniki Masowego Filtrowania:** Zdebugowano rygorystyczne zachowanie domyślnych filtrów wyszukiwarki (`is:open`). Wdrożono optymalną, elastyczną komendę wyszukiwania tekstowego w tytule: `title:lekcja` (lub po prostu surowe wpisanie frazy `lekcja`), co pozwoliło skutecznie odizolować 31 wierszy lekcji od ogólnych kart organizacyjnych szkoły bez konieczności konfiguracji skomplikowanych metadanych. Zabezpieczono widok komendą **Save changes** w zakładce tabeli, trwale unifikując środowisko.
+* **Komercyjny Workflow Kopiowania (Excel-Style):** Opanowano mechanikę masowego wyciągania danych do schowka systemowego. Wykorzystano inżynierską arytmetykę zaznaczania blokowego w widoku Tabeli przy użyciu klawisza `Shift` (Kliknięcie rekordu początkowego -> Shift -> Kliknięcie rekordu końcowego -> `Ctrl+C`). Metoda ta umożliwia natychmiastowy zrzut czystego tekstu programu nauczania, linijka po linijce, bezpośrednio do zewnętrznych dokumentów lub komunikatorów.
+* **Syllabus / Pierwsze Wdrożenia:** Do bazy danych tabeli (jako Drafty) wprowadzono pierwsze dwie oficjalne, produkcyjne lekcje dla Akademii **Sarenka Software Kids**, idealnie łączące logikę tworzenia sieci z elementami organizacji Agile:
+  - *Lekcja 1:* "Moja pierwsza strona WWW" (Efekt WOW, publikacja wizytówki w chmurze GitHub).
+  - *Lekcja 2:* "Zadania domowe jako ToDo" (Wprowadzenie młodego dewelopera w dyscyplinę zarządzania zadaniami).
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

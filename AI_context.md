@@ -824,4 +824,14 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Kompetencje Analityczne i Growth Hacking:** Udokumentowano głęboką praktykę w pozycjonowaniu stron (SEO), konfiguracji i analityce zaawansowanych potoków ruchu użytkowników za pomocą **Google Analytics** oraz planowaniu i optymalizacji budżetów w kampaniach płatnych **Google AdWords (Ads)**. Kompetencje te stanowią silne zaplecze dla walidacji rynku i skalowania obecnych projektów edukacyjnych (Akademia APEX).
 
 
+#### 📅 Wpis: 10.11.2026 (Sesja południowa — Strategia Publikacji Profilu Zawodowego)
+
+* **Plan Operacyjny wdrożenia CV:** Zatwierdzono długofalowy plan weryfikacji rynkowej i odczarowania „syndromu oszusta” [1.1] poprzez asymetryczne uderzenie w dedykowane kanały rekrutacyjne w optymalnym, wybranym przez użytkownika momencie (po powrocie do domu i pełnej rekonwalescencji) [1.1].
+* **Kluczowe Kanały Dystrybucji:**
+  - **LinkedIn:** Konfiguracja profilu pod kątem filtracji algorytmicznej łowców głów (słowa kluczowe: *Embedded, Bare-Metal, RTOS, C++20*) [1.1].
+  - **Dedykowane portale IT (Just Join IT / No Fluff Jobs):** Umieszczenie profilu w celu bezpośredniego targetowania ofert z branży Automotive, Aerospace i systemów krytycznych Mission-Critical [1.1].
+  - **GitHub Pages Showcase:** Integracja spersonalizowanego pliku PDF z żywym, produkcyjnym kodem repozytorium `WojciechCzyzyk.github.io` [1.1].
+* **Status Bieżący:** Tematy zawodowe zostają całkowicie zamrożone. Priorytet nadrzędny: pozycja leżąca, regeneracja i horyzontalne odbarczanie rdzenia w Wałbrzychu [1.1].
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

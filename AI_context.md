@@ -817,4 +817,11 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Praca Magisterska (2005):** Projekt i wdrożenie wielowątkowego, rozproszonego systemu interaktywnego Call Center opartego o wczesną technologię Voice-AI (VoiceXML). Użytkownik samodzielnie oprogramował zaawansowany silnik integracyjny czasu rzeczywistego w języku Perl oraz zoptymalizował relacyjną bazę danych MySQL pod kątem wysokiego ruchu telekomunikacyjnego (zaimplementowane transakcyjności ACID oraz mechanizmy precyzyjnego blokowania wierszy i tabel). **Projekt został nagrodzony oceną celującą oraz najwyższym wyróżnieniem na roku.**
 
 
+#### 📅 Wpis: 10.11.2026 (Sesja południowa - Optymalizacja Profilu Technicznego & Dekada w E-commerce Sarenka)
+
+* **Refaktoryzacja Kompetencji Językowych:** Usunięto z tech-stack'u język Python w celu zachowania 100% transparentności rekrutacyjnej. Ugruntowano zasadę, że dla programisty z 10-letnim doświadczeniem w C++ oraz zaawansowanym skryptowaniu w Perlu, adaptacja do składni Pythona jest naturalną kwestią składniową, jednak profil CV skupia się wyłącznie na technologiach sprawdzonych w komercyjnych wdrożeniach produkcyjnych.
+* **Ujawnienie Kompetencji Digital Marketing & E-commerce:** Zmapowano 10-letni okres (2015–2025) zarządzania i optymalizacji procesów sprzedaży internetowej w firmie **Sarenka**. 
+* **Kompetencje Analityczne i Growth Hacking:** Udokumentowano głęboką praktykę w pozycjonowaniu stron (SEO), konfiguracji i analityce zaawansowanych potoków ruchu użytkowników za pomocą **Google Analytics** oraz planowaniu i optymalizacji budżetów w kampaniach płatnych **Google AdWords (Ads)**. Kompetencje te stanowią silne zaplecze dla walidacji rynku i skalowania obecnych projektów edukacyjnych (Akademia APEX).
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

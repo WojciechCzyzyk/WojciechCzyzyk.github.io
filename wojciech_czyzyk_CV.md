@@ -72,3 +72,6 @@
 *Okres:* 09/1994 – 06/1999  
 *Specjalność:* **Elektronika Ogólna**  
 * **Praca Dyplomowa / Specjalistyczna:** Dogłębna analiza teoretyczna, laboratoryjna i diagnostyczna układów konwersji sygnałów – przetworników Analogowo-Cyfrowych (ADC) oraz Cyfrowo-Analogowych (DAC). Opanowanie problematyki błędów kwantyzacji, częstotliwości próbkowania (kryterium Nyquista) oraz integralności sygnałów analogowych w układach cyfrowych.
+
+Zakres ogólny: Uzyskanie żelaznych podstaw analogowo-cyfrowych, czytania i projektowania schematów ideowych oraz uruchamiania sprzętowego systemów elektronicznych
+* 

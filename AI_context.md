@@ -675,4 +675,13 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
   - *Lekcja 1:* "Moja pierwsza strona WWW" (Efekt WOW, publikacja wizytówki w chmurze GitHub).
   - *Lekcja 2:* "Zadania domowe jako ToDo" (Wprowadzenie młodego dewelopera w dyscyplinę zarządzania zadaniami).
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Architektura Skalowania Franczyzowego APEX / Sarenka)
+
+* **Wizja Strategiczna (Model Franczyzowy APEX):** Zatwierdzono długofalowy cel biznesowy polegający na przekształceniu Akademii (Sarenka Software Kids) w ogólnokrajową sieć franczyzową. Projekt został zdefiniowany jako docelowy silnik pasywnego przychodu emerytalnego, opartego na dystrybucji praw autorskich, narzędziowych i dydaktycznych (Software/Methodology as a Service).
+* **Konstrukcja Pakietu Licencyjnego:** Przyszły produkt franczyzowy (Franchise Box) obejmować będzie kompletny, zautomatyzowany ekosystem operacyjny: Landing Page, automatyzację Data Flow (ActiveNow -> iFirma), szablon prawny umów, centralne repozytorium 31 lekcji w GitHub Projects oraz strategię marketingową Showcase opartą na portfolio Bartka.
+* **Przewaga Rynkowa i Skalowanie B2B:** Model eliminuje bariery wejścia dla franczyzobiorców (nauczyciele, pasjonaci IT) poprzez zerowe koszty początkowe (brak wymogu posiadania własnego lokalu i sprzętu dzięki wykorzystaniu infrastruktury szkolnych pracowni komputerowych).
+* **Status R&D:** Nadchodzący domowy poligon testowy z grupą sąsiedzką zyskuje status oficjalnych badań operacyjnych (Proof of Concept), mających na celu ostateczną walidację i zamrożenie standardu procesowego przed wdrożeniem pilotażowym.
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -872,4 +872,13 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 **STATUS: TEMAT ZAMKNIĘTY. SYSTEM SHUTDOWN. PRZEJŚCIE PACJENTA W TRYB OFFLINE I REGENERACJI KARKU. DOBRANOC!** 🛌🛰️
 
 
+#### 📅 Wpis: 10.11.2026 (Sesja wieczorna - Architektura Logistyki Grupowej i Bezpieczeństwa APEX)
+
+* **Model Dystrybucji Kodu (Forking Workflow):** Zatwierdzono architekturę operacyjną dla grupy premium (Proof of Concept w domu). Odrzucono skomplikowany model zarządzania uprawnieniami w chmurze na rzecz modelu Open Source opartego na Forkowaniu centralnego repozytorium instruktora. Uczniowie jednym kliknięciem kopiują zestaw startowy, uzyskując automatycznie własne środowisko wdrożeniowe i unikalne adresy produkcyjne (`nick.github.io`), zachowując 100% dumy z własnej domeny.
+* **Architektura Monitorowania Zmian (Instant Code Audit):** Zmapowano bezobsługowy potok kontroli kodu instruktora bez wymogu przedwczesnego tworzenia Pull Requestów. Natalka posiada natychmiastowy wgląd w historię zmian każdego forka (Commit Log) bezpośrednio ze swojego komputera w czasie rzeczywistym. System pozwala wywołać asynchroniczny widok różnicowy (Diff View), podświetlając na zielono/czerwono dokładne modyfikacje w plikach uczniów, co umożliwia zdalne debugowanie błędów w salonie bez wstawania z fotela.
+* **Integracja z Centralnym Kanbanem (Multi-View & Security):** Zaprojektowano system spinający rozproszony kod uczniów z jedną, centralną tablicą GitHub Projects instruktora. Kontrola zadań opiera się na przypisaniach (Assignees) oraz dedykowanych zakładkach imiennych filtrowanych komendą `assignee:NickDev` w trybie asynchronicznego odświeżania Push. 
+* **Bezpieczeństwo i Prawa Dostępu (RBAC):** Wdrożono architekturę zabezpieczeń uniemożliwiającą uczniom destrukcyjne modyfikowanie struktury globalnej tablicy lub manipulowanie kartami innych deweloperów. Filtry klienckie działają jako nakładki lokalne (Read-only dla konfiguracji tablicy), a ewentualne próby naruszenia spójności są niekasowalnie rejestrowane w asynchronicznym rejestrze zdarzeń (Audit Log / Project Activity).
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

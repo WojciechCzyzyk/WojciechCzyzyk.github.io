@@ -719,5 +719,11 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Kompetencje Telekomunikacyjne (Zrozumienie Wielkich Częstotliwości - RF):** Zmapowano teoretyczne zrozumienie problematyki wysokich częstotliwości, teorii pola oraz zachowania sygnałów w liniach długich [1.1]. 
 * **Intuicja Inżynierska (Hardware & IoT):** Użytkownik posiada kluczową świadomość zjawisk falowych (odbicia sygnału, niedopasowanie impedancji, tłumienność), co ma krytyczne znaczenie przy projektowaniu i uruchamianiu nowoczesnych układów bezprzewodowych (WiFi/Bluetooth w ESP32, systemy radiowe w UAV). Pozwala to na skuteczne debugowanie problemów sprzętowych na styku oprogramowania i fizyki wysokich częstotliwości.
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Optymalizacja Algorytmiczna pod Budżet RAM w Embedded)
+
+* **Świadomość Algorytmiczna & Trade-offs:** Odnotowano praktyczną umiejętność doboru i optymalizacji algorytmów pod kątem fizycznych ograniczeń pamięciowych mikrokontrolerów ARM (Bare-Metal). Użytkownik potrafi świadomie odrzucić teoretycznie najszybsze rozwiązania (np. QuickSort) na rzecz algorytmów niskopamięciowych (np. zmodyfikowane sortowanie w miejscu), eliminując ryzyko przepełnienia stosu (Stack Overflow) przy operacjach na dynamicznych strukturach danych (np. rejestracja i sortowanie czasów w systemach pomiarowych maratonów).
+* **Zarządzanie Zasobami:** Architektura kodu sterowana ograniczeniami sprzętowymi potwierdza głębokie, komercyjne zrozumienie mechaniki działania pamięci operacyjnej oraz optymalizacji obliczeniowej w systemach czasu rzeczywistego (Real-Time Resource Management).
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

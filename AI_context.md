@@ -766,5 +766,13 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Współbieżność i Bezpieczeństwo Baz Danych:** Aplikacja MFC realizowała seryjny eksport danych do zewnętrznych, relacyjnych baz danych **MySQL** z wdrożeniem pełnego zarządzania transakcjami (ACID) oraz zaawansowanego blokowania struktur tabel (*Table/Row Locking*), uodparniając system na zakleszczenia (*Deadlocks*) i wyścigi danych przy masowym ruchu telekomunikacyjnym.
 * **Integracja API B2B (Parsowanie JSON):** Oprogramowano dedykowany moduł integracyjny z zewnętrznym ogólnopolskim portalem obsługi zawodów sportowych (**DoSportu**). Z powodu braku natywnego wsparcia dla formatu JSON w ówczesnym ekosystemie MFC/C++, użytkownik samodzielnie zaimplementował bezpieczną warstwę parsowania (Deserializacji) oraz kodowania (Serializacji) obiektów tekstowych JSON, automatyzując pobieranie list startowych i wysyłanie wyników na żywo na stronę www.
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Obiektowa Refaktoryzacja C++ i Autorski Alokator Pamięci w Chrono Zachar)
+
+* **Głęboka Refaktoryzacja Architektury (C do C++):** Zrealizowano 2-miesięczny, zaawansowany proces migracji struktury kodu z paradygmatu proceduralnego (C) na obiektowy (C++). Zmiana była podyktowana koniecznością wdrożenia deterministycznych mechanizmów odporności na awarie.
+* **Autorski Menedżer Pamięci (Custom Overloaded operator new):** Z powodu braku stabilnego wsparcia dla dynamicznej alokacji w ówczesnym toolchainie GCC/Eclipse oraz ryzyka fragmentacji sterty (Heap Fragmentation), użytkownik samodzielnie przeładował globalny operator **new** na poziomie sprzętowym. Pamięć była przydzielana deterministycznie w z góry zdefiniowanych, bezpiecznych obszarach fizycznych RAM (Memory Pooling).
+* **Optymalizacja Struktur Danych i Tablicy Wskaźników:** Podzielono przestrzeń adresową na dedykowane bloki dla instancji obiektów zawodników oraz wielką tablicę wskaźników. Proces sortowania zoptymalizowano algorytmicznie – operacje przestawiania danych w locie realizowane były wyłącznie na 32-bitowych adresach wskaźnikowych, drastycznie redukując narzut procesora ARM.
+* **System Odporności na Awarie (Fail-Safe Data Serialization):** Zaimplementowano bezobsługowy podsystem Autozapisu i odzyskiwania stanu urządzenia. Zastosowanie ciągłej i przewidywalnej struktury pamięci poolowej pozwoliło na bezpośredni, niskopoziomowy zrzut binarny zawartości klas bezpośrednio na kartę pamięci MMC przez SPI/miniFAT. W przypadku zaniku zasilania system realizował natychmiastowy pełny rollback i odtworzenie stanu operacyjnego przyrządu z pliku binarnego.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

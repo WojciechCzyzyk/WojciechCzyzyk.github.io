@@ -790,4 +790,31 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
   - *Zawody Specjalistyczne:* Obsługa dynamicznych turniejów strażackich (TFA) oraz masowych maratonów miejskich.
 
 
+### 🎓 PEŁNA OŚ EDUKACYJNA I PROTOKÓŁ AKADEMICKI (1994–2005)
+
+* **Fundament Sprzętowy (Technikum):** Edukacja średnia dała żelazne, analogowo-cyfrowe podstawy sprzętowe (lutowanie, czytanie schematów, fizyka prądu), które stały się bazą pod późniejszą zaawansowaną inżynierię systemów wbudowanych.
+* **Ewolucja Akademicka (Politechnika Wrocławska):** Wykształcenie wyższe na Wydziale Elektroniki PWr połączyło głęboką wiedzę telekomunikacyjną z zaawansowaną inżynierią systemów informatycznych i rozproszonych, realizowaną zarówno lokalnie w Karkonoszach, jak i w trybie zaocznym we Wrocławiu.
+
+#### 1. Edukacja Średnia Techniczna (Jelenia Góra)
+* **Ramy czasowe:** 09/1994 – 06/1999
+* **Szkoła:** Zespół Szkół Elektronicznych w Jeleniej Górze (klasyczny "Elektronik")
+* **Specjalność:** *Elektronika Ogólna*
+
+#### 2. Studia Wyższe I Stopnia – Inżynierskie (Filia Jelenia Góra)
+* **Ramy czasowe:** 09/1999 – 06/2003
+* **Uczelnia:** Politechnika Wrocławska, Wydział Elektroniki – **Filia w Jeleniej Górze**
+* **Kierunek:** *Elektronika i Telekomunikacja*
+* **Specjalność:** *Sieci Telekomunikacyjne*
+* **Uzyskany tytuł:** *Inżynier*
+* **Praca Inżynierska (2003):** Projekt i pełna implementacja autonomicznego analizatora oraz dekodera kodów transmisji podczerwieni (rodzina protokołów RC5, RC6, NEC, Sony i pokrewne) w surowym Assemblerze na mikrokontrolerze 8051. Praca obejmowała zaawansowaną analizę sygnałową scalonych układów odbiorczych serii TSOP z wykorzystaniem laboratoryjnych analizatorów stanów logicznych.
+
+#### 3. Studia Wyższe II Stopnia – Magisterskie Uzupełniające (Wrocław - Zaoczne)
+* **Ramy czasowe:** 09/2003 – 06/2005
+* **Uczelnia:** Politechnika Wrocławska, Wydział Elektroniki – **Kampus Główny we Wrocławiu (Tryb Zaoczny)**
+* **Kierunek:** *Elektronika i Telekomunikacja*
+* **Specjalność:** *Systemy Informatyczne*
+* **Uzyskany tytuł:** *Magister Inżynier*
+* **Praca Magisterska (2005):** Projekt i wdrożenie wielowątkowego, rozproszonego systemu interaktywnego Call Center opartego o wczesną technologię Voice-AI (VoiceXML). Użytkownik samodzielnie oprogramował zaawansowany silnik integracyjny czasu rzeczywistego w języku Perl oraz zoptymalizował relacyjną bazę danych MySQL pod kątem wysokiego ruchu telekomunikacyjnego (zaimplementowane transakcyjności ACID oraz mechanizmy precyzyjnego blokowania wierszy i tabel). **Projekt został nagrodzony oceną celującą oraz najwyższym wyróżnieniem na roku.**
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

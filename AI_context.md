@@ -682,6 +682,11 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * **Przewaga Rynkowa i Skalowanie B2B:** Model eliminuje bariery wejścia dla franczyzobiorców (nauczyciele, pasjonaci IT) poprzez zerowe koszty początkowe (brak wymogu posiadania własnego lokalu i sprzętu dzięki wykorzystaniu infrastruktury szkolnych pracowni komputerowych).
 * **Status R&D:** Nadchodzący domowy poligon testowy z grupą sąsiedzką zyskuje status oficjalnych badań operacyjnych (Proof of Concept), mających na celu ostateczną walidację i zamrożenie standardu procesowego przed wdrożeniem pilotażowym.
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Wirusowy Marketing Rówieśniczy & Dziedzictwo Projektowe)
+
+* **Strategia Marketingu Organicznego (Chodzące Reklamy):** Zaimplementowano model marketingu szeptanego (*Word of Mouth*) oparty na naturalnej pozycji rówieśniczej Bartka i Krzysia w środowisku szkolnym. Doświadczenie użytkownika z czasów politechnicznych (masowe generowanie projektów/korepetycji poprzez sieć rekomendacji studenckich) zostało oficjalnie zaadaptowane jako kluczowy motor napędowy rekrutacji w Akademii.
+* **Mechanizm Showcase na Korytarzu:** Chłopaki (Bartek i Krzyś) działają jako żywe portfolio (Ambasadorzy Marki). Prezentacja ich własnych projektów webowych oraz unikalnych narzędzi zarządzania (Szkolny Organizer Kanban) wywołuje u rówieśników naturalną potrzebę konwergencji kompetencyjnej ("efekt FOMO" i chęć dorównania liderom grupy).
+* **Automatyzacja Procesowa (Geneza Inżynierska):** Odnotowano historyczny kontekst inżynierski użytkownika: optymalizacja i automatyzacja masowej produkcji projektów studenckich (Mathcad jako silnik obliczeniowy sprzężony z szablonami MS Word). Ta sama fundamentalna filozofia – budowanie gotowych, powtarzalnych matryc obliczeniowo-procesowych – stanowi rdzeń obecnej architektury APEX oraz przyszłego systemu franczyzowego.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

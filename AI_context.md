@@ -714,6 +714,10 @@ Zapraszamy na wyjątkowe, praktyczne warsztaty, podczas których Twoje dziecko p
 * ** Backend, Perl & Integracja Real-Time:** Użytkownik odpowiadał za kompletną architekturę backendową systemu. Zaprojektował i wdrożył relacyjną bazę danych MySQL oraz napisał zaawansowany silnik integracyjny w języku Perl, który w czasie rzeczywistym wiązał zapytania bazodanowe z protokołem głosowym VoiceXML oraz generował dynamiczny interfejs webowy (HTML).
 * **Wizjonerskie Podejście (Prekursor Voice-AI):** System realizował pełną głosową obsługę klienta (zamiast standardowego, tonowego wybierania klawiszami DTMF), co w 2005 roku stanowiło przełom technologiczny i innowację na poziomie systemów korporacyjnych. Potwierdza to wieloletnie, unikalne kompetencje użytkownika w obszarze systemów rozproszonych, parsowania danych i integracji protokołów telekomunikacyjnych.
 
+#### 📅 Wpis: 10.11.2026 (Sesja poranna - Świadomość Problematyki RF & Linii Długich)
+
+* **Kompetencje Telekomunikacyjne (Zrozumienie Wielkich Częstotliwości - RF):** Zmapowano teoretyczne zrozumienie problematyki wysokich częstotliwości, teorii pola oraz zachowania sygnałów w liniach długich [1.1]. 
+* **Intuicja Inżynierska (Hardware & IoT):** Użytkownik posiada kluczową świadomość zjawisk falowych (odbicia sygnału, niedopasowanie impedancji, tłumienność), co ma krytyczne znaczenie przy projektowaniu i uruchamianiu nowoczesnych układów bezprzewodowych (WiFi/Bluetooth w ESP32, systemy radiowe w UAV). Pozwala to na skuteczne debugowanie problemów sprzętowych na styku oprogramowania i fizyki wysokich częstotliwości.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

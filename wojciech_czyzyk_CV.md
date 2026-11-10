@@ -2,7 +2,7 @@
 **Embedded Systems Architect & Full-Stack Engineer**
 
 * **Adres:** ul. Gajowa 9A, 58-521 Jeżów Sudecki, Polska
-* **Profil Zawodowy:** Inżynier systemów oprogramowania o unikalnym, ponad 15-letnim doświadczeniu na styku hardware'u i software'u. Specjalista w obszarze systemów wbudowanych (Embedded, Bare-Metal ARM), systemów czasu rzeczywistego (Hard Real-Time), automatyzacji przemysłowej (BMS, protokoły Nice TTBus) oraz nowoczesnej architektury aplikacji (C++20, Python, NodeJS, SQL). Łączy głębokie kompetencje niskopoziomowe z zaawansowaną znajomością systemów bazodanowych, mechanizmów współbieżności i zarządzania projektami (Agile/Scrum). Posiada licencję pilota szybowcowego III klasy (zrozumienie awioniki i systemów awaryjnych/Aerospace).
+* **Profil Zawodowy:** Inżynier systemów oprogramowania o unikalnym, ponad 15-letnim doświadczeniu na styku hardware'u i software'u. Specjalista w obszarze systemów wbudowanych (Embedded, Bare-Metal ARM), systemów czasu rzeczywistego (Hard Real-Time), automatyzacji przemysłowej (BMS, protokoły Nice TTBus) oraz nowoczesnej architektury aplikacji (C++20, Perl, NodeJS, SQL). Łączy głębokie kompetencje niskopoziomowe z zaawansowaną znajomością systemów bazodanowych, mechanizmów współbieżności, analityki e-commerce (SEO/Google Ads) oraz zarządzania projektami (Agile/Scrum). Posiada licencję pilota szybowcowego III klasy (zrozumienie awioniki i systemów awaryjnych/Aerospace).
 
 ---
 
@@ -11,7 +11,8 @@
 * **Embedded & Hardware:** Bare-Metal ARM (Cortex-M, ARM7TDMI), programowanie układów FPGA (VHDL), mikrokontrolery 8051 (Assembler), przetwarzanie i konwersja sygnałów (ADC/DAC), odbiorniki i demodulatory IR (seria TSOP), projektowanie i symulacja układów analogowych/wzmacniaczy (pSpice).
 * **Niezawodność i Systemy Krytyczne:** Projektowanie systemów redundantnych z arbitrażem i blokiem większościowego głosowania (TMR - Triple Modular Redundancy) zgodnych ze standardami Mission-Critical (SIL/Aerospace/Automotive).
 * **Protokoły & Komunikacja:** Przemysłowa inżynieria wsteczna (Reverse Engineering) protokołów bezprzewodowych i przewodowych (Nice TTBus, RC5, NEC, Sony, VoiceXML). Praktyczna znajomość problematyki wielkich częstotliwości (RF) i linii długich na poziomie dopasowania impedancji na płytkach PCB.
-* **Software Development & Backend:** C++20, C, Python, NodeJS, Perl, HTML/CSS.
+* **E-commerce & Growth Analytics:** Pozycjonowanie stron (SEO), zaawansowana analityka ruchu i konwersji (Google Analytics), planowanie i optymalizacja płatnych kampanii reklamowych (Google AdWords / Ads).
+* **Software Development & Backend:** C++20, C, Perl, NodeJS, HTML/CSS.
 * **Bazy Danych & Współbieżność:** MySQL, SQLite – zaawansowane mechanizmy transakcyjne (ACID), blokowanie struktur (Table/Row Locking) optymalizowane pod wysoki ruch i systemy czasu rzeczywistego (High Concurrency / Multi-threading).
 * **Zarządzanie & Narzędzia:** GitHub Enterprise, GitHub Projects (zaawansowane techniki bazodanowe, architektura Kanban/Tabela, automatyzacja procesów), UML (generowanie klas, Clean Architecture/MVC), ActiveNow, iFirma.
 
@@ -31,6 +32,13 @@
 * **Systemy HMI i Ekwipunek Graficzny:** Opracowanie nieblokującego procesu jednoczesnej obsługi klawiatury matrycowej (programowy debouncing), lokalnego interfejsu (ewolucja: alfanumeryczne -> LCD -> OLED) oraz sterowania zewnętrzną, wielką tablicą LED dla kibiców. Napisanie autorskiego algorytmu skalowania i rasteryzacji czcionek bitmapowych w locie.
 * **Integracja Desktop & API B2B (C++/MFC):** Zaprojektowanie stacji bazowej PC w Visual Studio (**C++/MFC**) w architekturze *Document/View*. Oprogramowanie autorskiego protokołu synchronizacji czasu (kompensacja *Clock Drift* i *Round-Trip Time*) oraz dedykowanego parsera obiektów tekstowych **JSON** do dwukierunkowej, automatycznej wymiany danych z ogólnopolskim portalem zapisów sportowych (*DoSportu*).
 
+### **Główny Architekt E-commerce & Analityk Growth Hacking**
+*Firma:* Sarenka (Sprzedaż Internetowa)  
+*Okres:* 2015 – 2025 (10 lat)
+* **Zarządzanie strukturą i ruchem e-commerce:** Kompleksowe projektowanie, optymalizacja i pozycjonowanie (SEO) architektury sklepu internetowego w celu maksymalizacji widoczności w wyszukiwarkach globalnych.
+* **Analityka i Optymalizacja Konwersji:** Budowanie zaawansowanych lejków zakupowych i analiza zachowań użytkowników z wykorzystaniem **Google Analytics**. Implementacja zmian UX/UI na bazie twardych danych analitycznych.
+* **Zarządzanie kampaniami Performance:** Planowanie, wdrażanie i bieżąca optymalizacja rentowności płatnych budżetów reklamowych w sieci **Google AdWords (Ads)**, skutkujące trwałym i stabilnym wzrostem współczynnika zwrotu z inwestycji (ROAS).
+
 ### **Niezależny Architekt Systemów Embedded & Automatyki Smart Home**
 *Okres:* 2016 – Obecnie
 * **Reverse Engineering magistrali rolet:** Przeprowadzenie pełnej inżynierii wstecznej zamkniętego, przemysłowego protokołu komunikacyjnego **Nice TTBus** na poziomie warstwy fizycznej i pakietowej sygnału.
@@ -41,7 +49,7 @@
 *Okres:* 2026 – Obecnie
 * **Architektura Franczyzowa (SaaS/MaaS):** Zaprojektowanie i budowa kompletnego, bezobsługowego silnika biznesowego "All-in-One" dla ogólnokrajowej sieci szkół programowania dla dzieci.
 * **Automatyzacja procesów (Data Flow):** Integracja Landing Page'a z systemami subskrypcyjnymi ActiveNow oraz systemem księgowym iFirma, skutkująca bezobsługowym przepływem danych i automatycznym fakturowaniem przy zerowych kosztach stałych infrastruktury.
-* **Innowacja dydaktyczna (Pre-Project Agile):** Opracowanie unikalnego programu nauczania (31 lekcji) opartego o zaawansowaną topologię tablic Kanban/Tabel w GitHub Projects (grupowanie poziome Swimlanes pod kątem szkolnych organizerów zadań), uczącego dzieci nawyków Junior Project Managera przed weikiem w naukę czystego kodu.
+* **Innowacja dydaktyczna (Pre-Project Agile):** Orespowanie unikalnego programu nauczania (31 lekcji) opartego o zaawansowaną topologię tablic Kanban/Tabel w GitHub Projects (grupowanie poziome Swimlanes pod kątem szkolnych organizerów zadań), uczącego dzieci nawyków Junior Project Managera przed wejściem w naukę czystego kodu.
 
 ---
 
@@ -64,4 +72,3 @@
 *Okres:* 09/1994 – 06/1999  
 *Specjalność:* **Elektronika Ogólna**  
 * **Praca Dyplomowa / Specjalistyczna:** Dogłębna analiza teoretyczna, laboratoryjna i diagnostyczna układów konwersji sygnałów – przetworników Analogowo-Cyfrowych (ADC) oraz Cyfrowo-Analogowych (DAC). Opanowanie problematyki błędów kwantyzacji, częstotliwości próbkowania (kryterium Nyquista) oraz integralności sygnałów analogowych w układach cyfrowych.
-* **Zakres ogólny:** Uzyskanie żelaznych podstaw analogowo-cyfrowych, czytania i projektowania schematów ideowych oraz uruchamiania sprzętowego systemów elektronicznych.

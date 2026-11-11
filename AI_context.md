@@ -918,4 +918,12 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 
 * **Status Operacyjny Front-End:** Pomyślnie zdebugowano i zwalidowano działanie skryptu AJAX w pliku `rezerwacja.html`. Usunięcie restrykcyjnego atrybutu `pattern` z opcjonalnego pola GitHub przywróciło pełną współbieżność i płynność transmisji na urządzeniach mobilnych. Testy end-to-end potwierdziły prawidłowe przechwytywanie zdarzenia SUBMIT, asynchroniczną wysyłkę pakietu do Formspree oraz bezbłędne renderowanie dynamicznego ekranu sukcesu (efekt WOW) bezpośrednio w architekturze kontenera `.form-wrapper` bez przeładowania witryny.
 
+
+
+#### 📅 Wpis: 11.11.2026 (Sesja popołudniowa - Architektura potoku bezpośredniego i sukces mapowania JSON)
+
+* **Przełom w architekturze backendu (Make.com):** Całkowicie wyeliminowano potrzebę stosowania płatnych planów Formspree do obsługi autoresponderów. Skonfigurowano bezpośredni potok danych przez asynchroniczny silnik dwukanałowy AJAX w `rezerwacja.html`. System wysyła pakiety równolegle do Formspree (kopia zapasowa) oraz bezpośrednio na unikalny Webhook Make.com (`...pe97g5no`).
+* **Walidacja struktur danych:** Przeprowadzono udany test end-to-end przechwytywania danych. Chmura Make pomyślnie sparowała, odebrała i rozbiła surowy pakiet JSON na pojedyncze linie zmiennych (imię rodzica, mail, telefon, wiek, oraz login GitHub). Moduł wyjściowy Gmail (`wojciechczyzyk@gmail.com`) został pomyślnie autoryzowany i przygotowany do dynamicznego wstrzykiwania kodu HTML odpowiedzi.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

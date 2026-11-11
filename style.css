@@ -1,0 +1,89 @@
+<style>
+        :root { --bg: #0d1117; --card-bg: #161b22; --text: #c9d1d9; --neon: #238636; --neon-glow: #2ea043; }
+        body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; margin: 0; padding: 2rem 1rem; line-height: 1.6; }
+        .matrix-container { max-width: 800px; margin: 0 auto; }
+        header { border-bottom: 1px solid #30363d; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        h1 { color: #fff; margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+        .subtitle { color: var(--neon-glow); font-family: monospace; font-size: 1.1rem; margin: 0; }
+        .card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .btn-link { display: inline-block; background: #21262d; border: 1px solid #30363d; color: #58a6ff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
+        .btn-link:hover { background: #30363d; border-color: #8b949e; }
+        .tag { background: rgba(35, 134, 54, 0.15); color: #56d364; padding: 0.2rem 0.6rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600; font-family: monospace; }
+        .family-hub { border-left: 4px solid var(--neon); }
+   
+    .portfolio-footer {
+    background-color: #0d1117;
+    border-top: 1px solid #30363d;
+    padding: 30px 20px 15px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #c9d1d9;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-info h3 {
+    color: #56d364;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.location-tag {
+    color: #8b949e;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-link {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #56d364;
+}
+
+.backup-email {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+    border-top: 1px solid #21262d;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-contact {
+        align-items: center;
+    }
+}
+
+    
+    </style>

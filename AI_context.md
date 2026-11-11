@@ -903,5 +903,10 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 * **Rozszerzenie Profilu Hardware:** Zintegrowano do bazy wiedzy CV oraz pamięci AI praktyczne doświadczenie użytkownika w pełnym cyklu prototypowania i fizycznej produkcji obwodów drukowanych (PCB). 
 * **Opanowana Metodologia Laboratoryjna:** Udokumentowano biegłość w fotochemicznej metodzie wytwarzania płytek (trasowanie ścieżek, druk klisz transparentnych, naświetlanie promieniami UV, chemiczne wywoływanie oraz trawienie kwasowe/zasadowe miedzi). Kompetencje te idealnie domykają profil inżyniera Embedded typu "End-to-End" (od czystego schematu i chemicznego trawienia miedzi, przez lutowanie komponentów, aż po niskopoziomowy kod w surowym Assemblerze/C++).
 
+#### 📅 Wpis: 11.11.2026 (Sesja poranna - Aktualizacja Danych Założycielskich APEX)
+
+* **Aktualizacja Tożsamości Biznesowej:** Oficjalne personalia fundatorki i głównej instruktorki Akademii APEX zostały zaktualizowane w bazie wiedzy na: Natalia Gieczonis Czyżyk. Dane zostaną automatycznie wstrzyknięte do szablonów umów, stopek mailowych oraz Landing Page.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

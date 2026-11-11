@@ -913,4 +913,9 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 * **Ewolucja Lejka Rekrutacyjnego (MVP):** Podjęto strategiczną decyzję o unifikacji zbierania danych. Do głównego formularza `rezerwacja.html` dodano opcjonalne (brak wymogu `required`) pole `GitHub_Login` z minimalistycznym opisem. Zdejmuje to z rodziców presję technologiczną – zorientowani wpisują stan faktyczny, inni propozycję nazwy lub zostawiają puste pole, a weryfikacja (HTTP 200/404) odbywa się rzemieślniczo po stronie Tech Leada.
 * **Architektura AJAX & Data Flow:** Zaimplementowano asynchroniczny skrypt JavaScript (AJAX) dla podstrony `odpowiedz.html` w repozytorium `sarenka`. Formularz przesyła dane w tle bez przeładowania strony, podmieniając interfejs na spersonalizowany komunikat sukcesu od Natalii Gieczonis Czyżyk. Zaprojektowano darmowy potok automatyzacji (Formspree ➔ Make.com ➔ Gmail API), który wygeneruje oficjalne potwierdzenie w formacie PDF i prześle je bezpośrednio na maila rodzica za 0 zł.
 
+
+#### 📅 Wpis: 11.11.2026 (Sesja południowa - Sukces wdrożenia asynchronicznego AJAX)
+
+* **Status Operacyjny Front-End:** Pomyślnie zdebugowano i zwalidowano działanie skryptu AJAX w pliku `rezerwacja.html`. Usunięcie restrykcyjnego atrybutu `pattern` z opcjonalnego pola GitHub przywróciło pełną współbieżność i płynność transmisji na urządzeniach mobilnych. Testy end-to-end potwierdziły prawidłowe przechwytywanie zdarzenia SUBMIT, asynchroniczną wysyłkę pakietu do Formspree oraz bezbłędne renderowanie dynamicznego ekranu sukcesu (efekt WOW) bezpośrednio w architekturze kontenera `.form-wrapper` bez przeładowania witryny.
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

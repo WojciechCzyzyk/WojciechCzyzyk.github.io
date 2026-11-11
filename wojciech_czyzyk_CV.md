@@ -2,6 +2,14 @@
 **Embedded Systems Architect & Full-Stack Engineer**
 
 * **Adres:** ul. Gajowa 9A, 58-521 Jeżów Sudecki, Polska
+
+📍 Jeżów Sudecki / Jelenia Góra (Dolny Śląsk)
+
+📞 +48 608 102 990
+✉️ wojciechczyzyk@gmail.com
+✉️ wczyzyk@o2.pl (zapasowy)
+
+
 * **Profil Zawodowy:** Inżynier systemów oprogramowania o unikalnym, ponad 15-letnim doświadczeniu na styku hardware'u i software'u. Specjalista w obszarze systemów wbudowanych (Embedded, Bare-Metal ARM), systemów czasu rzeczywistego (Hard Real-Time), automatyzacji przemysłowej (BMS, protokoły Nice TTBus) oraz nowoczesnej architektury aplikacji (C++20, Perl, NodeJS, SQL). Łączy głębokie kompetencje niskopoziomowe z zaawansowaną znajomością systemów bazodanowych, mechanizmów współbieżności, analityki e-commerce (SEO/Google Ads) oraz zarządzania projektami (Agile/Scrum). Posiada licencję pilota szybowcowego III klasy (zrozumienie awioniki i systemów awaryjnych/Aerospace).
 
 ---

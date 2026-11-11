@@ -925,5 +925,72 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 * **Przełom w architekturze backendu (Make.com):** Całkowicie wyeliminowano potrzebę stosowania płatnych planów Formspree do obsługi autoresponderów. Skonfigurowano bezpośredni potok danych przez asynchroniczny silnik dwukanałowy AJAX w `rezerwacja.html`. System wysyła pakiety równolegle do Formspree (kopia zapasowa) oraz bezpośrednio na unikalny Webhook Make.com (`...pe97g5no`).
 * **Walidacja struktur danych:** Przeprowadzono udany test end-to-end przechwytywania danych. Chmura Make pomyślnie sparowała, odebrała i rozbiła surowy pakiet JSON na pojedyncze linie zmiennych (imię rodzica, mail, telefon, wiek, oraz login GitHub). Moduł wyjściowy Gmail (`wojciechczyzyk@gmail.com`) został pomyślnie autoryzowany i przygotowany do dynamicznego wstrzykiwania kodu HTML odpowiedzi.
 
+## 🛠️ INSTRUKCJA OPERACYJNA: Dokończenie Konfiguracji Gmail w Make.com
+
+Poniższa procedura opisuje kroki niezbędne do wykonania natychmiast po uruchomieniu nowej sesji deweloperskiej na komputerze, w celu aktywacji darmowego autorespondera dla Akademii APEX.
+
+### Krok 1: Otwarcie Okna Konfiguracji
+1. Zaloguj się na darmowe konto w **Make.com**.
+2. Otwórz swój zapisany scenariusz (graf z dwoma kółkami).
+3. Kliknij **dwukrotnie lewym przyciskiem myszy** na czerwoną ikonę modułu **Gmail (Send an email)**. Okno parametrów wyskoczy z powrotem.
+
+### Krok 2: Mapowanie Zmiennych JSON do Pól Gmail
+Kliknięcie w każde puste pole otworzy boczny panel z czarnymi kafelkami danych, które przechwyciliśmy w udanym teście. Przypisz je dokładnie według poniższego klucza:
+
+1. **Connection:** Upewnij się, że wybrany jest Twój zautoryzowany profil `wojciechczyzyk@gmail.com`.
+2. **To (Odbiorca):** Kliknij w to pole i wybierz z panelu czarny kafelek o nazwie **`email`**.
+3. **Subject (Temat):** Wpisz z klawiatury sztywną treść:
+   `Potwierdzenie zgłoszenia w Akademii APEX [Sarenka Software Kids]`
+4. **Content type:** Rozwiń listę i bezwzględnie przełącz na **`HTML`**.
+
+### Krok 3: Wstrzyknięcie Kodu i Powiązanie Kafelków
+W wielkim polu tekstowym **Content** wklej cały poniższy kod szablonu wiadomości.
+
+⚠️ **KLUCZOWA AKCJA:** Po wklejeniu kodu, odszukaj w tekście sekcje w nawiasach klamrowych `{{ ... }}`, wykasuj te nawiasy wraz z tekstem w środku i **wklikaj w te miejsca oryginalne, czarne kafelki zmiennych** z bocznego panelu Make.com:
+- Zastąp `{{Rodzic}}` kafelkiem ➔ **`Rodzic`**
+- Zastąp `{{Dziecko_Imie}}` kafelkiem ➔ **`Dziecko_Imie`**
+- Zastąp `{{Dziecko_Wiek}}` kafelkiem ➔ **`Dziecko_Wiek`**
+- Zastąp `{{GitHub_Login}}` kafelkiem ➔ **`GitHub_Login`**
+
+```html
+<div style="font-family: Arial, sans-serif; max-width: 600px; color: #1c1c1c; line-height: 1.6;">
+    <h2 style="color: #56D364; font-size: 1.5rem; border-bottom: 2px solid #56D364; padding-bottom: 10px;">
+        🛰️ POTWIERDZENIE REJESTRACJI PROFILU DEWELOPERA
+    </h2>
+    <p>Dzień dobry, <strong>{{Rodzic}}</strong>,</p>
+    <p>Potwierdzamy bezpieczne odebranie zgłoszenia rezerwacji wstępnej do <strong>Akademii Cyfrowej Inżynierii APEX (Sarenka Software Kids)</strong>. Cieszymy się, że wspólnie z nami wprowadzą Państwo dziecko w świat profesjonalnej logiki i architektury cyfrowej.</p>
+    <div style="background-color: #f6f8fa; border-left: 4px solid #56D364; padding: 15px; margin: 20px 0; border-radius: 4px;">
+        <strong style="display: block; margin-bottom: 5px; color: #0D1117;">📋 Dane autoryzacyjne wgrane do systemu:</strong>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li><strong>Młody deweloper:</strong> {{Dziecko_Imie}}</li>
+            <li><strong>Grupa wiekowa:</strong> {{Dziecko_Wiek}} lat</li>
+            <li><strong>Rejestrowany podpis (Login GitHub):</strong> {{GitHub_Login}}</li>
+        </ul>
+    </div>
+    <p>W Akademii APEX szanujemy każdą minutę zajęć naszych uczniów. Dbamy o to, aby pierwsze spotkanie było w 100% poświęcone pasjonującym eksperymentom logicznym i czystej praktyce, a nie biurokracji. Dlatego całe środowisko programistyczne przygotowujemy dla Państwa dziecka jeszcze przed wejściem na salę.</p>
+    <p>Dzięki temu, po zajęciu miejsca przy stanowisku laboratoryjnym, młody programista od pierwszej sekundy zobaczy efekty swojej pracy i poczuje dumę z własnoręcznie stworzonego projektu, uruchamiając swoją pierwszą, żywą stronę internetową w chmurze.</p>
+    <h3 style="color: #0D1117; font-size: 1.1rem; margin-top: 25px;">What's next? — Kolejne kroki organizacyjne:</h3>
+    <ol style="padding-left: 20px;">
+        <li><strong>Weryfikacja dostępności miejsc:</strong> Analizujemy aktualny podział na grupy wiekowe oraz dostępność wolnych slotów w naszym harmonogramie (maksymalnie 5 dzieci w grupie).</li>
+        <li><strong>Dostęp do systemu operacyjnego:</strong> W kolejnej wiadomości prześlemy Państwu dedykowany link do naszego panelu administracyjnego w systemie <em>ActiveNow</em>. Tam dokończymy formalności: od weryfikacji stałego terminu zajęć, przez bezpieczną akceptację regulaminu, aż po konfigurację automatycznych płatności abonamentowych.</li>
+    </ol>
+    <p style="margin-top: 30px; font-weight: bold;">Do zobaczenia na pokładzie!</p>
+    <p style="margin-top: 5px; line-height: 1.3;">
+        Z poważaniem,<br>
+        <span style="color: #56D364; font-weight: bold;">Natalia Gieczonis Czyżyk</span><br>
+        <span style="font-size: 0.9rem; color: #586069;">Founder & Lead Instructor<br>Akademia APEX / Sarenka Software Kids</span>
+    </p>
+</div>
+```
+
+### Krok 4: Uruchomienie Produkcyjne (Go-Live)
+1. Po wklejeniu i zmapowaniu kodu, kliknij niebieski przycisk **OK** na dole okna Gmaila.
+2. Na dolnym pasku narzędzi kliknij ikonę dyskietki **Save**, aby trwale zapisać cały scenariusz w chmurze.
+3. Przesuń wielki przełącznik w lewym dolnym rogu z pozycji **OFF** na **ON**.
+4. W oknie harmonogramu, które wyskoczy, wybierz opcję **Immediately** (Uruchamiaj natychmiast po napłynięciu danych).
+
+Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresponder) działa bezobsługowo w stanie Steady State.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

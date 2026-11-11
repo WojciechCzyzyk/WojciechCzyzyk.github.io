@@ -908,5 +908,9 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 * **Aktualizacja Tożsamości Biznesowej:** Oficjalne personalia fundatorki i głównej instruktorki Akademii APEX zostały zaktualizowane w bazie wiedzy na: Natalia Gieczonis Czyżyk. Dane zostaną automatycznie wstrzyknięte do szablonów umów, stopek mailowych oraz Landing Page.
 
 
+#### 📅 Wpis: 11.11.2026 (Sesja przedpołudniowa - Optymalizacja Formularza i Architektura AJAX/Make)
+
+* **Ewolucja Lejka Rekrutacyjnego (MVP):** Podjęto strategiczną decyzję o unifikacji zbierania danych. Do głównego formularza `rezerwacja.html` dodano opcjonalne (brak wymogu `required`) pole `GitHub_Login` z minimalistycznym opisem. Zdejmuje to z rodziców presję technologiczną – zorientowani wpisują stan faktyczny, inni propozycję nazwy lub zostawiają puste pole, a weryfikacja (HTTP 200/404) odbywa się rzemieślniczo po stronie Tech Leada.
+* **Architektura AJAX & Data Flow:** Zaimplementowano asynchroniczny skrypt JavaScript (AJAX) dla podstrony `odpowiedz.html` w repozytorium `sarenka`. Formularz przesyła dane w tle bez przeładowania strony, podmieniając interfejs na spersonalizowany komunikat sukcesu od Natalii Gieczonis Czyżyk. Zaprojektowano darmowy potok automatyzacji (Formspree ➔ Make.com ➔ Gmail API), który wygeneruje oficjalne potwierdzenie w formacie PDF i prześle je bezpośrednio na maila rodzica za 0 zł.
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

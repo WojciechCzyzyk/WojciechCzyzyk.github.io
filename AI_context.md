@@ -891,4 +891,7 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 * **Status Ścieżek Projektowych (Rozszerzenie):** Do globalnej mapy zasobów dodano pliki: `asystent_dzielenia.md` oraz `AI_context_junior.md` w repozytorium `BartekCzyzyk.github.io`. Pliki `rezerwacja.html` oraz `szkola.html` zostały pomyślnie scalone (Clean Merge) do gałęzi produkcyjnej `main` w repozytorium `sarenka` i działają stabilnie w chmurze GitHub Pages.
 
 
+* **Optymalizacja Procesu Onboardingu (Eliminacja Wąskich Gardeł):** Wprowadzono nową procedurę przedzajęciową dla uczniów. Proces rejestracji kont GitHub oraz rezerwacji unikalnych nazw użytkowników zostaje całkowicie przesunięty do etapu domowego (przed pierwszymi warsztatami). Rodzice wraz z dziećmi przesyłają wybraną nazwę i e-mail w formularzu zgłoszeniowym. Instruktor (Natalka) zakłada konta w chmurze, ustawia tymczasowe hasła zabezpieczające i wgrywa startowe pakiety plików. Dzięki temu eliminujemy biurokrację z przestrzeni laboratoryjnej, zyskując 100% czasu pierwszej lekcji na czystą edukację i natychmiastowy efekt "WOW".
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

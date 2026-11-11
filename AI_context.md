@@ -895,6 +895,7 @@ Zaprojektowano i zatwierdzono bezpieczną strukturę plików startowych dla uczn
 
 * **Konfiguracja Backend Formspree (Automatyczny Autoresponder):** Potwierdzono techniczną obsługę automatycznej wysyłki wiadomości powitalnej do nadawcy za pomocą wbudowanej wtyczki "Auto Response" w panelu Formspree. Warunkiem koniecznym do prawidłowego trasowania pakietu zwrotnego jest zachowanie sterylnej nazwy pola wejściowego `name="email"` w pliku formularza HTML, co zostało zapewnione w architekturze `rezerwacja.html`. System wysyła dedykowany komunikat tekstowy natychmiast po wykryciu poprawnego zdarzenia SUBMIT, zamykając automatyczną pętlę onboardingu bez udziału człowieka.
 
+* **Wdrożenie Telemetrii Ruchu (Analityka MVP Sarenka):** Zaimplementowano dedykowany monitor statystyk i geolokalizacji ruchu użytkowników oparty na silniku Flag Counter w pliku `index.html` w repozytorium `sarenka`. Widget został spersonalizowany pod kątem palety kolorów Dark Mode (tło hex `0D1117`, font `56D364`) i zamknięty w odizolowanym kontenerze sekcji `#analytics-monitor`. Pozwala to na bieżącą walidację organicznych wejść z wyszukiwarek (SEO) oraz kontrolę unikalnych odsłon przed uruchomieniem kampanii reklamowych.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

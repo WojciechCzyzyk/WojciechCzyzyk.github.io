@@ -64,17 +64,18 @@
 *Specjalność:* **Systemy Informatyczne**  
 * **Praca Magisterska (Wyróżnienie Rektorskie, Ocena Celująca):** *„Projekt i wdrożenie interaktywnego systemu Call Center czasu rzeczywistego”*. Zaprojektowanie i pełna implementacja systemu opartego o wczesną technologię Voice-AI (VoiceXML) z pełną głosową obsługą klienta. Budowa zaawansowanego silnika backendowego w języku Perl połączonego z relacyjną bazą danych MySQL. Wdrożenie transakcyjności (ACID) oraz precyzyjnych blokad tabel (*Table/Row Locking*) w celu uodpornienia systemu na zakleszczenia (*Deadlocks*) pod wysokim ruchem współbieżnym.
 
+
 ### **Inżynier Elektroniki i Telekomunikacji**
 *Uczelnia:* Politechnika Wrocławska – **Filia w Jeleniej Górze**  
 *Tryb studiów:* Wyższe I stopnia (Inżynierskie – Dzienne) | *Okres:* 09/1999 – 06/2003  
 *Specjalność:* **Sieci Telekomunikacyjne**  
-* **Praca Inżynierska:** *„Autonomiczny dekoder bezprzewodowych standardów transmisji podczerwieni”*. Projekt i pełna implementacja niskopoziomowego analizatora sygnałów IR (protokoły RC5, RC6, NEC, Sony) napisanego w surowym **Assemblerze** na mikrokontrolerze **8051**. Praca obejmowała sprzętowe debugowanie sygnałów z układów odbiorczych serii TSOP z wykorzystaniem analizatorów stanów logicznych w celu eliminacji jitteru falowego.
+* **Praca Inżynierska:** *„Autonomiczny dekoder bezprzewodowych standardów transmisji podczerwieni”*. Projekt i pełna implementacja niskopoziomowego analizatora sygnałów IR (protokoły RC5, RC6, NEC, Sony) napisanego w surowym **Assemblerze** na mikrokontrolerze **8051**. 
+* **Kompetencje Hardware (Rapid Prototyping):** Samodzielne zaprojektowanie struktury PCB dla urządzenia oraz realizacja pełnego, laboratoryjnego procesu produkcji obwodów drukowanych metodą fotochemiczną (przygotowanie klisz transparentnych, naświetlanie emulsji promieniami UV, chemiczne wywoływanie oraz precyzyjne trawienie miedzi). Praca obejmowała sprzętowe debugowanie sygnałów z układów odbiorczych serii TSOP z wykorzystaniem analizatorów stanów logicznych w celu eliminacji jitteru falowego.
 
 ### **Technik Elektronik**
 *Szkoła:* Zespół Szkół Elektronicznych w Jeleniej Górze  
 *Okres:* 09/1994 – 06/1999  
 *Specjalność:* **Elektronika Ogólna**  
 * **Praca Dyplomowa / Specjalistyczna:** Dogłębna analiza teoretyczna, laboratoryjna i diagnostyczna układów konwersji sygnałów – przetworników Analogowo-Cyfrowych (ADC) oraz Cyfrowo-Analogowych (DAC). Opanowanie problematyki błędów kwantyzacji, częstotliwości próbkowania (kryterium Nyquista) oraz integralności sygnałów analogowych w układach cyfrowych.
-
-Zakres ogólny: Uzyskanie żelaznych podstaw analogowo-cyfrowych, czytania i projektowania schematów ideowych oraz uruchamiania sprzętowego systemów elektronicznych
+* **Zakres ogólny:** Uzyskanie żelaznych podstaw analogowo-cyfrowych, praktyka w amatorskim i akademickim projektowaniu oraz produkcji płytek PCB (trawienie chemiczne), czytanie i projektowanie schematów ideowych oraz uruchamianie sprzętowe systemów elektronicznych.
 * 

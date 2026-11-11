@@ -12,14 +12,16 @@
         .tag { background: rgba(35, 134, 54, 0.15); color: #56d364; padding: 0.2rem 0.6rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600; font-family: monospace; }
         .family-hub { border-left: 4px solid var(--neon); }
    
-    .portfolio-footer {
-    background-color: #0d1117;
+    /* Zmiana w linii 17 dla lepszego kontrastu (opcjonalnie): */
+.portfolio-footer {
+    background-color: var(--card-bg); /* lub #161b22 - stopka elegancko odetnie się od tła body */
     border-top: 1px solid #30363d;
     padding: 30px 20px 15px 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     color: #c9d1d9;
     margin-top: 50px;
 }
+
 
 .footer-container {
     max-width: 1100px;

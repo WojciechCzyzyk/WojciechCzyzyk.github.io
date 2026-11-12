@@ -67,3 +67,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - *Poziom Junior (klasy 3–4):* 10 pytań zamkniętych na podstawie jednej strony z podręcznika + proste podpięcie gotowego linku na stronie.
   - *Poziom Pro (klasy 5–8):* Wielostronicowy materiał (np. cały dział z biologii/geografii), własna edycja tablicy pytań w kodzie JS oraz zarządzanie kilkoma modułami w hubie.
 
+
+* **Złota Reguła Dydaktyczna APEX (Instant Feedback):** Wdrożenie natychmiastowych, krótkich objaśnień pod każdym pytaniem w quizie okazało się kluczowym sukcesem edukacyjnym – dziecko nie zgaduje na ślepo, tylko od razu rozumie swój błąd i błyskawicznie przyswaja materiał (zatwierdzone jako obowiązkowy standard dla wszystkich aplikacji w Akademii APEX).
+

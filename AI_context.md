@@ -1147,5 +1147,6 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
 
 
+* **Dwukierunkowa Integracja Portfolio <-> LinkedIn:** Przygotowano i wdrożono przycisk kierujący bezpośrednio do profilu `https://linkedin.com` w sekcji *O mnie* pliku `index.html` (tuż pod odnośnikami do plików CV PDF), zamykając pełną pętlę wizerunkową.
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1091,4 +1091,22 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
   3. Zakup sprzętu i pojazdu zgodnie z kosztorysem oraz rozliczenie faktur w urzędzie (zwykle w ciągu 30–60 dni od otrzymania środków).
 
 
+#### 📅 Wpis: 12.11.2026 (Poranna checklista formalna - Dokumentacja PZON przed przeniesieniem na hematologię)
+
+* **Strategia Formalna (Uruchomienie zegara PZON):** Podjęto decyzję o pobraniu zaświadczenia lekarskiego o stanie zdrowia na druku PZON bezpośrednio od neurochirurga przy wypisie/przeniesieniu z oddziału neurochirurgicznego (bez czekania na zakończenie pobytu na hematologii). Pozwala to złożyć wniosek w Jeleniej Górze od razu i zaoszczędzić tygodnie oczekiwania, a kartę informacyjną z hematologii dosłać w późniejszym terminie jako uzupełnienie akt.
+* **Checklista Kluczowych Zapisów na Zaświadczeniu PZON (Dla Neurochirurga):**
+  1. **Rozpoznanie zasadnicze i współistniejące:** Stan po dwukrotnej operacji odbarczenia kanału kręgowego na odcinku **Th6–Th8** z powodu ucisku rdzenia przez masę naciekową (wynik histopatologiczny: chłoniak) oraz **ostra białaczka szpikowa (AML)** po allogenicznym przeszczepie szpiku w trakcie leczenia podtrzymującego.
+  2. **Ograniczenia funkcjonalne:** Przebyty niedowład kończyn dolnych przed reoperacją, utrzymujące się zaburzenia czucia (drętwienie/mrowienie) i osłabienie siły mięśniowej nóg, bezwzględny zakaz dźwigania i schylania się, wymóg stosowania gorsetu ortopedycznego oraz przewaga pozycji leżącej.
+  3. **Kluczowe rubryki na dole druku:**
+     - Możliwość osobistego przybycia na komisję: **„NIE”** (gwarancja rozpatrzenia wniosku zaocznie, bez konieczności transportu pacjenta).
+     - Konieczność stałej lub długotrwałej opieki/pomocy innej osoby: **„TAK”** (podstawa do znacznego stopnia niepełnosprawności).
+     - Znacznie ograniczona możliwość samodzielnego poruszania się: **„TAK”** (podstawa do karty parkingowej).
+* **Logistyka dla Natalki (Piątek):** Pobranie i wydrukowanie formularzy (Wniosek o wydanie orzeczenia + Zaświadczenie lekarskie o stanie zdrowia) z **PZON w Jeleniej Górze (al. Wojska Polskiego 18)** oraz złożenie kompletu dokumentów (wraz z kserokopiami kart informacyjnych ze szpitala) w nieprzekraczalnym terminie **30 dni** od daty wystawienia zaświadczenia przez lekarza.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

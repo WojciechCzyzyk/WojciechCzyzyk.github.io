@@ -1203,7 +1203,9 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Nowy Scenariusz Dydaktyczny APEX:** Opracowano **Pomysł #2** do pliku `pomysly_na_lekcje.md` (*„Od zdjęcia z podręcznika do własnej aplikacji quizowej – Data Flow & OCR”*), uczący dzieci kontroli jakości danych wejściowych oraz budowania własnego centrum aplikacji.
 * **Strategia Marketingowa APEX (Lead Magnet bez Kanibalizacji):** Przeanalizowano rynek aplikacji AI do quizów (Studera.ai, Tapnote, Quizgecko). Podjęto strategiczną decyzję o odrzuceniu budowy osobnego, płatnego SaaS-a na rzecz wykorzystania prostego generatora quizów ze zdjęcia jako darmowego magnesu na rodziców (Faza 2 marketingu). Zaprojektowano **potrójny filtr ochronny (Wędka APEX)** eliminujący ryzyko kanibalizacji kursu: limit **10 pytań**, blokada po **1 przejściu** (zapis w `localStorage`) oraz jasne CTA kierujące na warsztaty, gdzie uczeń sam buduje nielimitowaną wersję na 100 pytań na własnej domenie.
 
-
+### 📅 Wpis: 12.11.2026 (Sesja wieczorna - Inicjalizacja bazy formatów `pomysly_na_quiz.md`)
+* **Nowy Zasób Dydaktyczny:** Utworzono plik `pomysly_na_quiz.md` w centralnym repozytorium `WojciechCzyzyk.github.io`, katalogujący 5 lekkich formatów aplikacji edukacyjnych w czystym HTML/CSS/JS (Fiszki z lektorem Web Speech API, Ślepa mapa, Detektyw błędów, Oś czasu, Tryb Milionerzy) wraz z analizą za i przeciw.
+* 
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

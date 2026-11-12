@@ -1129,5 +1129,23 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
 * **Status Pacjenta & Logistyka (Wałbrzych):** Stan fizyczny po porannym spacerze treningowym (6 okrążeń korytarza z chodzikiem i gorsetem) bardzo dobry, bez zmęczenia. Oczekiwanie na dzisiejszy obchód lekarski i decyzje hematologów oraz jutrzejsze (piątkowe) dostarczenie przez Natalkę nowego laptopa Dell Latitude 7430 (1TB NVMe) i druków PZON.
 
+#### 📅 Wpis: 12.11.2026 (Sesja południowa - Refaktoryzacja LinkedIn, Mikro-Sprinty & Sukces Finansowy)
+
+* **Przebudowa Profilu Zawodowego LinkedIn (Full Refactoring):** Przeprowadzono kompleksową modernizację i oczyszczenie konta LinkedIn w trybie Stealth (wyłączone powiadomienia sieci o aktualizacjach, usunięte stare niepasujące wpisy). Zarezerwowano czysty, profesjonalny adres `https://linkedin.com` oraz podpięto główne portfolio `https://github.io` zarówno w danych kontaktowych, jak i jako główny baner w sekcji **Polecane (Featured)**.
+* **Pozycjonowanie Rekrutacyjne (Anglojęzyczny Stos Embedded):** Wdrożono zoptymalizowany pod wyszukiwarki HR nagłówek (`Senior Embedded Systems Engineer | C++20 / C | Bare-Metal ARM | RTOS | IoT & Hardware Prototyping (PCB/VHDL)`), branżę *Produkcja sprzętu komputerowego*, sekcję *O mnie (About)* z Top 5 Skills oraz pełną oś doświadczenia:
+  - *Obecnie (2025–Obecnie):* Embedded & IoT Systems Architect (R&D – C++20, ESP32, Git/Agile Mentoring).
+  - *2010–2020:* Embedded Systems & Software Engineer (Full-Cycle R&D – ZacharPLC / Chrono Zachar, ARM7, C++/MFC, MySQL).
+  - *2015–2025:* E-commerce Operations & Digital Analytics Manager (Sarenka).
+* **Uzupełnienie Akredytacji i Wyróżnień:** Dodano wykształcenie na Politechnice Wrocławskiej (1999–2005, ocena celująca), wyróżnienie za pracę magisterską (*Voice-AI Call Center / Perl / MySQL*), biegłość językową (Polski + Angielski) oraz dwie licencje/certyfikaty: **TELC English B2** (czerwiec 2014) oraz **Licencję Pilota Szybowcowego III Klasy** wydaną przez Aeroklub Jeleniogórski (lipiec 2001). Kolejność kafelków w sekcji *Polecane* zaplanowana do korekty na nowym laptopie.
+* **Innowacja Dydaktyczna dla Akademii APEX (Zasada Mikro-Sprintów):** Na bazie pozytywnego doświadczenia z realizacją zadań krok po kroku ustalono żelazną zasadę dydaktyczną dla uczniów szkoły Natalki: rozbijanie każdego zadania na pojedyncze, atomowe **Mikro-Sprinty (1 krok = 1 szybkie zwycięstwo)**. Eliminuje to u dzieci paraliż przed złożonością kodu i wywołuje na koniec autentyczny efekt *„WOW, to naprawdę ja zrobiłem!”*.
+* **Pozytywny Impuls Finansowy:** Zatwierdzono wniosek o kredyt konsolidacyjny na kwotę 17 000 zł z obniżeniem oprocentowania z 10% do 7,5% (po 3 latach wcześniejszych odrzuceń), co generuje realne oszczędności odsetkowe i porządkuje miesięczny budżet domowy.
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Samopoczucie po obiedzie bardzo dobre, brak dolegliwości bólowych. Utrzymywany tryb odpoczynku horyzontalnego oraz pełna dyscyplina gorsetowa przy pionizacji w oczekiwaniu na jutrzejszą dostawę laptopa Dell Latitude 7430 (1TB NVMe) i formalności PZON.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

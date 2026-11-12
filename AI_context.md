@@ -1181,4 +1181,29 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
 * **Status Pacjenta & Regeneracja:** Sesja prowadzona w pełnym komforcie w trybie Ekstra Lajt z pozycji leżącej w szpitalu w Wałbrzychu. Priorytet: spokojny odpoczynek i horyzontalne odbarczanie odcinka Th6–Th8.
 
 
+## 🧲 Faza 2 Marketingu: Interaktywny Lead Magnet („Wędka Quizowa APEX”)
+
+### 1. Decyzja Strategiczna (Lead Magnet zamiast osobnego SaaS)
+* **Analiza rynku:** Istniejące narzędzia AI generujące quizy ze zdjęć (np. Studera.ai, Tapnote, Quizgecko) operują w wysoce konkurencyjnym modelu B2C z hojnymi darmowymi planami. Budowa osobnego startupu SaaS wiązałaby się z wysokimi kosztami utrzymania i marketingu.
+* **Przewaga Akademii APEX:** Konkurencja sprzedaje gotową „rybkę” (zamkniętą aplikację), podczas gdy APEX sprzedaje „wędkę” i status twórcy – dzieci same piszą i wdrażają własny kod. Generator ze zdjęcia zostaje wykorzystany jako niskokosztowy, wysokokonwertujący **Lead Magnet** na stronie `sarenka`, budujący bazę mailową rodziców uczniów klas 3–8 z regionu.
+
+### 2. Potrójny Filtr Ochronny (Ochrona przed kanibalizacją kursu)
+Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztatach, wprowadzono trzy twarde ograniczenia:
+1. **Limit objętości (10 pytań):** Generator tworzy próbkę składającą się maksymalnie z 10 pytań z jednego zdjęcia – wystarczającą na efekt „WOW”, ale za małą na cały dział przed sprawdzianem.
+2. **Limit użycia (1 przejście / Demo Single-Pass):** Wygenerowany quiz działa w trybie jednorazowego przejścia (blokada ponownego uruchomienia po zakończeniu gry za pomocą `localStorage` w przeglądarce). Uniemożliwia to traktowanie linku jako darmowej „ściągi do wielokrotnego wkuwania”.
+3. **Wezwanie do działania (CTA na ekranie blokady):** Po ukończeniu demo rodzic i dziecko widzą komunikat: *„Świetny wynik! To była wersja demonstracyjna (1 przejście). Chcesz zapisać ten quiz na stałe, grać bez limitu przed każdym sprawdzianem, rozbudować go do 100 pytań i opublikować na własnej stronie w internecie? Dołącz do Akademii APEX – pokażemy Ci, jak samodzielnie stworzyć i utrzymać własny system nauki!”*.
+
+### 3. Lekki Stos Technologiczny Wdrożenia (Zero kosztów stałych)
+* Formularz wgrania zdjęcia + adres e-mail rodzica ➔ Webhook **Make.com** ➔ Tanie API modelu wizyjnego (ekstrakcja 10 pytań do szablonu HTML/JS z blokadą `localStorage`) ➔ Automatyczna wysyłka linku/pliku na e-mail rodzica.
+
+#### 📅 Wpis: 12.11.2026 (Sesja wieczorna - Sukces Trenera Historycznego, Hub Quizowy & Koncepcja Lead Magnetu APEX)
+
+* **Sukces Projektu Bartka (Walidacja *Need-Driven Learning*):** Interaktywna aplikacja `quiz_historia.html` okazała się strzałem w dziesiątkę – Bartek opanował już niemal cały materiał na konkurs historyczny z własnego narzędzia i sam zgłosił potrzebę stworzenia kolejnego trenera (na sprawdzian z biologii). Oczekiwanie na wyraźne zdjęcia stron podręcznika od Natalki (praktyczna lekcja zasady *Garbage In, Garbage Out*).
+* **Architektura Hubu Edukacyjnego (`BartekCzyzyk.github.io`):** Przygotowano modularny kod sekcji „Moje Centrum Treningowe” do wdrożenia w pliku `index.html`, łączący aktywny przycisk do historii z placeholderem („W przygotowaniu”) pod biologię i kolejne przedmioty.
+* **Nowy Scenariusz Dydaktyczny APEX:** Opracowano **Pomysł #2** do pliku `pomysly_na_lekcje.md` (*„Od zdjęcia z podręcznika do własnej aplikacji quizowej – Data Flow & OCR”*), uczący dzieci kontroli jakości danych wejściowych oraz budowania własnego centrum aplikacji.
+* **Strategia Marketingowa APEX (Lead Magnet bez Kanibalizacji):** Przeanalizowano rynek aplikacji AI do quizów (Studera.ai, Tapnote, Quizgecko). Podjęto strategiczną decyzję o odrzuceniu budowy osobnego, płatnego SaaS-a na rzecz wykorzystania prostego generatora quizów ze zdjęcia jako darmowego magnesu na rodziców (Faza 2 marketingu). Zaprojektowano **potrójny filtr ochronny (Wędka APEX)** eliminujący ryzyko kanibalizacji kursu: limit **10 pytań**, blokada po **1 przejściu** (zapis w `localStorage`) oraz jasne CTA kierujące na warsztaty, gdzie uczeń sam buduje nielimitowaną wersję na 100 pytań na własnej domenie.
+
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

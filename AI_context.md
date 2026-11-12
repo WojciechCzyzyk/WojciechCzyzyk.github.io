@@ -1009,6 +1009,25 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
 * **Status Pacjenta & Regeneracja:** Nocna sesja refleksyjna prowadzona w trybie "Ultra Light" w szpitalu w Wałbrzychu. Oczekiwanie na dzisiejsze poranne decyzje hematologów oraz dostawę nowego laptopa Dell Latitude 7430 (1TB NVMe). Priorytet na najbliższe godziny: sen i poziome odbarczanie odcinka Th6-Th8.
 
+#### 📅 Wpis: 12.11.2026 (Sesja nocna - Finalizacja CV, Strategia Franczyzowa & Finansowanie Dotacyjne APEX)
+
+* **Finalizacja Pliku CV (`CV.md`):** Zaktualizowano i podzielono na gotowe moduły dokument CV. Do sekcji *Embedded & Hardware* wkomponowano umiejętność tworzenia i czytania dokumentacji technicznej oraz rysunku technicznego (CAD / integracja ECAD–MCAD). Poprawiono drobne literówki i ujednolicono sekcję certyfikacji TELC English B2.
+* **Wizja Ekspansji Franczyzowej (Polska & Global):** Opracowano długofalową mapę drogową skalowania Akademii APEX po fazie pilotażowej (Proof of Concept w Jeleniej Górze):
+  - *Rynek Polski:* Dystrybucja gotowego „Franchise Boxa” (Landing Page + ActiveNow + iFirma + 31 lekcji w GitHub Projects + SOP) poprzez portale branżowe (Franchising.pl, WłasnyBiznes.pl, BiznesOferty.pl) oraz grupy nauczycielskie.
+  - *Ekspansja Zagraniczna (APEX Global / Doe Dev House):* Uniwersalny rdzeń technologiczny (GitHub, Scratch, Web) pozwala na łatwą lokalizację językową (wersja angielska i inne rynki zachodnie), podmianę bramek płatności na Stripe oraz dostosowanie zgód do lokalnych przepisów (np. COPPA w USA/UK).
+* **Nowy Wątek Strategiczny — Finansowanie Zewnętrzne i Dotacje (2026):** Zidentyfikowano w 100% legalną, spójną biznesowo ścieżkę pozyskania kapitału na start Akademii APEX (zakup mobilnej pracowni laptopów, sprzętu dydaktycznego oraz samochodu do dojazdów między szkołami w powiecie):
+  - *Krok 1 (Fundament Formalny — PZON Jelenia Góra):* Złożenie wniosku o wydanie orzeczenia o stopniu niepełnosprawności (niezależnie od postępowania rentowego w ZUS) na podstawie historii klinicznej (AML, przeszczep, operacje Th6-Th8). Wymagane zaświadczenie lekarskie na druku PZON (ważne 30 dni, do pobrania od lekarza tuż przed wypisem ze szpitala w Wałbrzychu) z opcją rozpatrzenia zaocznego.
+  - *Krok 2 (Ścieżki Dotacyjne — przed rejestracją CEIDG):*
+    1. **Dotacja PFRON:** Do ok. 55 400 zł (zobowiązanie 12 m-cy) lub do ok. 138 500 zł (zobowiązanie 24 m-ce) dla osoby zarejestrowanej w PUP jako bezrobotna lub poszukująca pracy niepozostająca w zatrudnieniu. Możliwość sfinansowania sprzętu IT oraz środka transportu przy odpowiednim uzasadnieniu logistycznym (przewóz pracowni między szkołami i ograniczenia po operacji kręgosłupa).
+    2. **Lokalna Grupa Działania (LGD Partnerstwo Ducha Gór — Jeżów Sudecki):** Premie unijne na start działalności gospodarczej na obszarach wiejskich (do 100 000 – 150 000 zł, wysoka punktacja za projekty cyfrowe/edukacyjne dla dzieci, akceptowany zakup pojazdu).
+    3. **Pożyczka BGK „Wsparcie w starcie”:** Do ok. 190 000 zł na 0,25% w skali roku z roczną karencją.
+  - *Żelazna Zasada Kolejności:* Zakaz rejestracji nowej firmy w CEIDG na Wojciecha przed złożeniem wniosku i podpisaniem umowy o dotację.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+* **Status Pacjenta & Regeneracja:** Zakończenie intensywnej nocnej burzy mózgów (godz. 05:00) w szpitalu w Wałbrzychu. Przejście w tryb odpoczynku i poziomego odbarczania kręgosłupa przed porannym obchodem oraz dzisiejszą dostawą nowego laptopa Dell Latitude 7430 (1TB NVMe).
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

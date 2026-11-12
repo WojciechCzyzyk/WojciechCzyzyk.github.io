@@ -1104,9 +1104,15 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
 * **Logistyka dla Natalki (Piątek):** Pobranie i wydrukowanie formularzy (Wniosek o wydanie orzeczenia + Zaświadczenie lekarskie o stanie zdrowia) z **PZON w Jeleniej Górze (al. Wojska Polskiego 18)** oraz złożenie kompletu dokumentów (wraz z kserokopiami kart informacyjnych ze szpitala) w nieprzekraczalnym terminie **30 dni** od daty wystawienia zaświadczenia przez lekarza.
 * **Aktywne ścieżki projektowe (Monitoring AI):**
   - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `index.html`)
-  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
-  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Embedded (C++20): `https://wojciechczyzyk.github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
+  - Repozytorium Akademii APEX: `https://wojciechczyzyk.github.com/sarenka` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+
+#### 📅 Wpis: 12.11.2026 (Poranny rozruch - Strategia Marketingowa „Tech English w Praktyce”)
+
+* **Nowy Wyróżnik Oferty Akademii APEX („Tech English w praktyce”):** Ustalono wprowadzenie elementu naturalnej immersji językowej do programu nauczania oraz komunikacji marketingowej na stronie `sarenka` (w kolejnym etapie rozwoju). Zajęcia prowadzone są w języku polskim (zero bariery wejścia), ale dzieci od pierwszej lekcji operują na oryginalnej, globalnej terminologii IT (GitHub: *commit, push, branch, issue*, HTML/CSS oraz angielskie prompty AI). Stanowi to silny argument sprzedażowy dla rodziców oraz naturalny most pod przyszłą ekspansję zagraniczną (APEX Global).
+* **Postęp Rehabilitacji (Oddział Neurochirurgii Wałbrzych):** Wykonano poranny marsz treningowy (6 okrążeń korytarza z chodzikiem i gorsetem) z bardzo dobrą tolerancją wysiłku, bez zmęczenia i z wyraźną poprawą wydolności krążeniowej. Powrót do pozycji horyzontalnej przed porannym obchodem lekarskim.
+
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

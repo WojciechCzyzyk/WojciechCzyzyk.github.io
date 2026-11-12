@@ -1113,6 +1113,21 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
 * **Nowy Wyróżnik Oferty Akademii APEX („Tech English w praktyce”):** Ustalono wprowadzenie elementu naturalnej immersji językowej do programu nauczania oraz komunikacji marketingowej na stronie `sarenka` (w kolejnym etapie rozwoju). Zajęcia prowadzone są w języku polskim (zero bariery wejścia), ale dzieci od pierwszej lekcji operują na oryginalnej, globalnej terminologii IT (GitHub: *commit, push, branch, issue*, HTML/CSS oraz angielskie prompty AI). Stanowi to silny argument sprzedażowy dla rodziców oraz naturalny most pod przyszłą ekspansję zagraniczną (APEX Global).
 * **Postęp Rehabilitacji (Oddział Neurochirurgii Wałbrzych):** Wykonano poranny marsz treningowy (6 okrążeń korytarza z chodzikiem i gorsetem) z bardzo dobrą tolerancją wysiłku, bez zmęczenia i z wyraźną poprawą wydolności krążeniowej. Powrót do pozycji horyzontalnej przed porannym obchodem lekarskim.
 
+#### 📅 Wpis: 12.11.2026 (Sesja poranna - Domknięcie Sprintów Konwersyjnych i SEO na Landing Page APEX)
+
+* **Wdrożenie Strategii „Tech English w Praktyce” (`sarenka/index.html`):** Wkomponowano motyw naturalnej immersji w techniczny język angielski w kluczowe sekcje strony (Hero, nowa karta w siatce głównych zalet oraz sekcja „Dlaczego APEX?”), budując przewagę edukacyjną bez tworzenia barier wejścia dla dzieci.
+* **Lokalizacja i Local SEO:** Uzupełniono komunikację geograficzną na witrynie (Jelenia Góra, Jeżów Sudecki, Powiat Karkonoski) w pasku Hero, karcie warsztatów szkolnych oraz stopce strony, celując w lokalne wyszukiwania rodziców i dyrektorów szkół.
+* **Sprinty Konwersyjne (Budowanie Zaufania):** Zaimplementowano w trybie mobilnym na smartfonie kompletny zestaw modułów podnoszących konwersję i zdejmujących obiekcje rodziców:
+  - *Gwarancja Bezpieczeństwa i Zero Ryzyka:* Kafelek pod cennikiem komunikujący pierwsze zajęcia bez zobowiązań oraz elastyczny, 1-miesięczny okres wypowiedzenia.
+  - *Rozwijane FAQ (HTML5 `<details>`):* 4 kluczowe pytania i odpowiedzi (brak wymogu wiedzy na starcie, wymagania sprzętowe, odrabianie nieobecności, poziom angielskiego) bez narzutu JS.
+  - *Sekcja Zaufania („Kto stoi za Akademią APEX?”):* Prezentacja założycielki i głównej instruktorki (Natalia Gieczonis Czyżyk) wspartej zapleczem merytorycznym Architekta Systemów IT z 15-letnim doświadczeniem.
+* **Optymalizacja Social Media (Meta-tagi & Open Graph):** Dodano w sekcji `<head>` tagi `description` oraz komplet protokołu Open Graph (`og:title`, `og:description`, `og:image`, `og:url`) pod estetyczne udostępnianie linków na lokalnych grupach Facebook i w Messengerze.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+* **Status Pacjenta & Logistyka (Wałbrzych):** Stan fizyczny po porannym spacerze treningowym (6 okrążeń korytarza z chodzikiem i gorsetem) bardzo dobry, bez zmęczenia. Oczekiwanie na dzisiejszy obchód lekarski i decyzje hematologów oraz jutrzejsze (piątkowe) dostarczenie przez Natalkę nowego laptopa Dell Latitude 7430 (1TB NVMe) i druków PZON.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

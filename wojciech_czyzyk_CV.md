@@ -1,4 +1,4 @@
-ý# WOJCIECH CZYŻYK
+# WOJCIECH CZYŻYK
 **Embedded Systems Architect & Full-Stack Engineer**
 
 * **Adres:** ul. Gajowa 9A, 58-521 Jeżów Sudecki, Polska
@@ -16,7 +16,7 @@
 
 ## 🛠️ KLUCZOWE KOMPETENCJE (TECH STACK)
 
-* **Embedded & Hardware:** Bare-Metal ARM (Cortex-M, ARM7TDMI), programowanie układów FPGA (VHDL), mikrokontrolery 8051 (Assembler), przetwarzanie i konwersja sygnałów (ADC/DAC), odbiorniki i demodulatory IR (seria TSOP), projektowanie i symulacja układów analogowych/wzmacniaczy (pSpice).
+* **Embedded & Hardware:** Bare-Metal ARM (Cortex-M, ARM7TDMI), programowanie układów FPGA (VHDL), mikrokontrolery 8051 (Assembler), przetwarzanie i konwersja sygnałów (ADC/DAC), odbiorniki i demodulatory IR (seria TSOP), projektowanie i symulacja układów analogowych/wzmacniaczy (pSpice), **tworzenie i czytanie dokumentacji technicznej oraz rysunku technicznego (CAD / integracja ECAD–MCAD)**.
 * **Niezawodność i Systemy Krytyczne:** Projektowanie systemów redundantnych z arbitrażem i blokiem większościowego głosowania (TMR - Triple Modular Redundancy) zgodnych ze standardami Mission-Critical (SIL/Aerospace/Automotive).
 * **Protokoły & Komunikacja:** Przemysłowa inżynieria wsteczna (Reverse Engineering) protokołów bezprzewodowych i przewodowych (Nice TTBus, RC5, NEC, Sony, VoiceXML). Praktyczna znajomość problematyki wielkich częstotliwości (RF) i linii długich na poziomie dopasowania impedancji na płytkach PCB.
 * **E-commerce & Growth Analytics:** Pozycjonowanie stron (SEO), zaawansowana analityka ruchu i konwersji (Google Analytics), planowanie i optymalizacja płatnych kampanii reklamowych (Google AdWords / Ads).
@@ -57,21 +57,21 @@
 *Okres:* 2026 – Obecnie
 * **Architektura Franczyzowa (SaaS/MaaS):** Zaprojektowanie i budowa kompletnego, bezobsługowego silnika biznesowego "All-in-One" dla ogólnokrajowej sieci szkół programowania dla dzieci.
 * **Automatyzacja procesów (Data Flow):** Integracja Landing Page'a z systemami subskrypcyjnymi ActiveNow oraz systemem księgowym iFirma, skutkująca bezobsługowym przepływem danych i automatycznym fakturowaniem przy zerowych kosztach stałych infrastruktury.
-* **Innowacja dydaktyczna (Pre-Project Agile):** Orespowanie unikalnego programu nauczania (31 lekcji) opartego o zaawansowaną topologię tablic Kanban/Tabel w GitHub Projects (grupowanie poziome Swimlanes pod kątem szkolnych organizerów zadań), uczącego dzieci nawyków Junior Project Managera przed wejściem w naukę czystego kodu.
+* **Innowacja dydaktyczna (Pre-Project Agile):** Opracowanie unikalnego programu nauczania (31 lekcji) opartego o zaawansowaną topologię tablic Kanban/Tabel w GitHub Projects (grupowanie poziome Swimlanes pod kątem szkolnych organizerów zadań), uczącego dzieci nawyków Junior Project Managera przed wejściem w naukę czystego kodu.
 
 ---
 
-## 🎓 WYKSZTAŁCENIE PROJEKTY DYPLOMOWE I CERTYFIKATY
+## 🎓 WYKSZTAŁCENIE, PROJEKTY DYPLOMOWE I CERTYFIKATY
 
 ### **Certyfikat Językowy TELC English B2**
 *Instytucja:* Centrum Nauki W&W Jelenia Góra | *Data wydania:* 06/2014  
-* **Zakres:** Potwierdzenie biegłości
+* **Zakres:** Potwierdzenie biegłości językowej na poziomie wyższym średniozaawansowanym (CEFR B2), swobodna komunikacja techniczna i biznesowa.
+
 ### **Magister Inżynier Elektroniki i Telekomunikacji**
 *Uczelnia:* Politechnika Wrocławska – **Kampus Główny we Wrocławiu**  
 *Tryb studiów:* Wyższe II stopnia (Uzupełniające Magisterskie – Zaoczne) | *Okres:* 09/2003 – 06/2005  
 *Specjalność:* **Systemy Informatyczne**  
 * **Praca Magisterska (Wyróżnienie Rektorskie, Ocena Celująca):** *„Projekt i wdrożenie interaktywnego systemu Call Center czasu rzeczywistego”*. Zaprojektowanie i pełna implementacja systemu opartego o wczesną technologię Voice-AI (VoiceXML) z pełną głosową obsługą klienta. Budowa zaawansowanego silnika backendowego w języku Perl połączonego z relacyjną bazą danych MySQL. Wdrożenie transakcyjności (ACID) oraz precyzyjnych blokad tabel (*Table/Row Locking*) w celu uodpornienia systemu na zakleszczenia (*Deadlocks*) pod wysokim ruchem współbieżnym.
-
 
 ### **Inżynier Elektroniki i Telekomunikacji**
 *Uczelnia:* Politechnika Wrocławska – **Filia w Jeleniej Górze**  
@@ -85,5 +85,5 @@
 *Okres:* 09/1994 – 06/1999  
 *Specjalność:* **Elektronika Ogólna**  
 * **Praca Dyplomowa / Specjalistyczna:** Dogłębna analiza teoretyczna, laboratoryjna i diagnostyczna układów konwersji sygnałów – przetworników Analogowo-Cyfrowych (ADC) oraz Cyfrowo-Analogowych (DAC). Opanowanie problematyki błędów kwantyzacji, częstotliwości próbkowania (kryterium Nyquista) oraz integralności sygnałów analogowych w układach cyfrowych.
-* **Zakres ogólny:** Uzyskanie żelaznych podstaw analogowo-cyfrowych, praktyka w amatorskim i akademickim projektowaniu oraz produkcji płytek PCB (trawienie chemiczne), czytanie i projektowanie schematów ideowych oraz uruchamianie sprzętowe systemów elektronicznych.
-* 
+* **Zakres ogólny:** Uzyskanie żelaznych podstaw analogowo-cyfrowych, praktyka w amatorskim i akademickim projektowaniu oraz produkcji płytek PCB (trawienie chemiczne), czytanie i tworzenie schematów ideowych oraz rysunku technicznego, a także uruchamianie sprzętowe systemów elektronicznych.
+

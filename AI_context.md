@@ -1153,4 +1153,18 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
 * **Aktualizacja Logistyki Rodzinnej i Sprzętowej (12.11.2026 - Popołudnie):** Zmiana planów na piątek (13.11) – Natalka udaje się z młodszym synem Krzysiem na jednodniowy pobyt diagnostyczny w szpitalu w Jeleniej Górze (specjalistyczny program badań kolana). W związku z tym fizyczne dostarczenie nowego laptopa Dell Latitude 7430 do Wałbrzycha oraz logistyka PZON zostają naturalnie przesunięte o kilka dni. Priorytet: diagnostyka Krzysia oraz spokojna regeneracja Wojtka w pozycji horyzontalnej.
 
 
+#### 📅 Wpis: 12.11.2026 (Sesja popołudniowa - Wprowadzenie we Fluttera, Trener Historyczny Bartka & Nowa Zasada Dydaktyczna APEX)
+
+* **Wprowadzenie we Fluttera i Dart (Tryb Ekstra Lajt):** Rozpoczęto koncepcyjne mapowanie ekosystemu Flutter/Dart na 10-letnie doświadczenie użytkownika w C++ i MFC. Zdemistyfikowano działanie widżetu `Slider` (zdarzenia `onChanged` vs `onChangeEnd` jako odpowiedniki komunikatów okienkowych oraz wskaźników na funkcje w ISR), mechanizm odświeżania ekranu `setState()` (analogia do `UpdateData(FALSE)` / wzorca Obserwator) oraz dyrektywę `import` i prywatność zmiennych przez podkreślnik `_`. Temat zaparkowany do momentu dostawy nowego laptopa Dell Latitude 7430.
+* **Optymalizacja Profilu LinkedIn:** Ustalono docelową kolejność wpisów wewnątrz sekcji profilu `://linkedin.com` (w tym układ kafelków w sekcji *Polecane*: `esp32-smart-blinds` ➔ `WojciechCzyzyk.github.io` ➔ `BartekCzyzyk.github.io`) do przeklikania przez Natalię na laptopie.
+* **Projekt Edukacyjny Bartka (Konkurs Historyczny SP2 Jelenia Góra):** W związku z wyborem Bartka na reprezentanta klasy w konkursie wiedzy o historii Polski (szkoła im. Bolesława Chrobrego), wygenerowano kompletny pakiet edukacyjny (28 kluczowych dat w 5 etapach + 3 konkursowe „haki” lokalne), plik `Historia_Polski_Konkurs_Bartek.pdf` do wydruku oraz samodzielną, interaktywną aplikację webową `quiz_historia.html` (wraz z kafelkiem-wizytówką do wklejenia na `BartekCzyzyk.github.io`).
+* **Nowa Procedura i Filozofia Dydaktyczna APEX (*Need-Driven Learning*):** Ustanowiono żelazną zasadę wyłapywania przez AI wszelkich pomysłów na lekcje rodzących się z codziennych szkolnych wyzwań Bartka i Krzysia. Zainicjowano dedykowany plik `pomysly_na_lekcje.md` w centralnym repozytorium jako inkubator autorskich scenariuszy warsztatowych dla Akademii APEX (pierwszy wpis: *Własny Interaktywny Trener Quizowy*).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`)
+* **Status Pacjenta & Regeneracja:** Sesja prowadzona w pełnym komforcie w trybie Ekstra Lajt z pozycji leżącej w szpitalu w Wałbrzychu. Priorytet: spokojny odpoczynek i horyzontalne odbarczanie odcinka Th6–Th8.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

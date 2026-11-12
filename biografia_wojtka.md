@@ -42,5 +42,15 @@ Pozostała nam tylko jedna droga: mozolny, kilkudziesięciokilometrowy szturm na
 Do bazy dotarliśmy o północy. Reszta ekipy CROTOS, która jechała prostą trasą, patrzyła na nas z niedowierzaniem – dla nich to był krótki, lekki etap. Gdy zobaczyliśmy nasz nocleg zaplanowany bezpośrednio na otwartym dachu stambulskiej kamienicy, nasz wewnętrzny system zgłosił przepełnienie bufora (overflow) [2.1]. Zrezygnowaliśmy. Wynajęliśmy pokój w najtańszym hostelu obok, gdzie przyszło nam spać w jednym pokoju z lokalnymi, mocno odurzonymi substancjami ludźmi, modląc się w nocy, by gość z łóżka obok dotrwał biologicznie do rana [2.1]...
 Ta wyprawa, kończąca się szalonymi zawodami w jeździe na autostop na dzikich odludziach Turcji aż do Antalyi, zajmuje mocne drugie miejsce w mojej historii. Bo pierwsze miejsce... należy do zupełnie innego commita.
 
+dodatkowe luzne wspomnienia:
+
+### 🛩️ Lotnicze „Grube Commity”: Aeroklub Jeleniogórski, Legendy Szybownictwa i Śrubokręt w Pracowni (2001–2002)
+
+* **Pierwszy Sezon i Licencja III Klasy (2001):** Szkolenie podstawowe za wyciągarką na klasycznych dwusterach **SZD-50 Puchacz** oraz **SZD-9 Bocian**, zwieńczone pierwszymi lotami samodzielnymi i zdobyciem licencji pilota szybowcowego III klasy.
+* **Nauczyciele z Pasją (Elektronika + Niebo):** Szkolenie pod okiem niezapomnianych instruktorów z Jeleniej Góry — **śp. Grzegorza Sochana** (mistrza akrobacji szybowcowej wykonującego pętle tuż po wyczepieniu z wyciągarki, a prywatnie nauczyciela pracowni elektronicznej, który uczył mnie m.in. analogowego przestrajania głowic UKF w radiach za pomocą śrubokręta i rdzeni cewek) oraz **śp. Krzysztofa Kaczmarka** (również elektronika i wzorowego lotnika, z którym realizowałem drugi etap szkolenia).
+* **Drugi Sezon – Hol za Samolotem i Jednomiejscowa „Foka”:** Przeszkolenie na starty za samolotem holującym i przesiadka z dwusterów na legendarną, wyczynową jednomiejscówkę **SZD-24 Foka**. Egzemplarz świeżo po remoncie w Aeroklubie dostał 30 godzin resursu do wylatania dla młodych, rokujących pilotów — niezapomniane godziny w smukłej, półleżącej kabinie w termice nad Kotliną Jeleniogórską i Karkonoszami.
+* **Plan na Przyszłość:** Powrót w powietrze po pełnej rekonwalescencji i wspólny start w szybownictwie z Bartkiem, gdy skończy 14 lat.
+
+
 [COMMIT_STATUS: Pamiętnik zamrożony do kolejnej sesji. Ciąg dalszy nastąpi...]
 

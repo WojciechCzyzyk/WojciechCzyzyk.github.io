@@ -997,5 +997,18 @@ Od tego momentu cały dwukanałowy system redundantny (Formspree + Make Autoresp
 * **Stan steady state infrastruktury:** Każde kliknięcie w formularzu na stronie `sarenka` generuje teraz natychmiastowe, współbieżne uderzenie: kopia bezpieczeństwa logu trafia do Formspree, a Make w ułamku sekundy automatycznie wypycha pięknie sformatowany, cyber-zielony list powitalny z konta Gmail bezpośrednio do skrzynki rodzica za 0 zł. 
 * **Breakpoint i Zamrożenie (Przerwa):** Wszystkie wątki deweloperskie i biznesowe zostały pomyślnie doprowadzone do terminalnego punktu sukcesu i zamrożone. System przechodzi w tryb offline.
 
+#### 📅 Wpis: 12.11.2026 (Sesja nocna - Konsolidacja Kompetencji Interdyscyplinarnych i Strategii CV)
+
+* **Ujawnione Kompetencje Inżynieryjne (Rysunek Techniczny & CAD):** Zidentyfikowano głębokie, praktyczne umiejętności z zakresu tworzenia i czytania dokumentacji technicznej (szkoła konstruktorska od ojca, realizacja profesjonalnych projektów technicznych na zlecenie). Kompetencja ta stanowi pomost na styku ECAD–MCAD (integracja elektroniki, PCB, obudów i mechaniki w projektach R&D, IoT oraz UAV) i jest rekomendowana jako zwięzłe hasło w sekcji umiejętności sprzętowych CV.
+* **Kontekst Fizyczny i Budowlany (20 lat praktyki):** Odnotowano 20-letnie doświadczenie budowlane oraz samodzielne wykończenie domu od stanu surowego zamkniętego (w tym pełna infrastruktura elektryczna i teletechniczna). Ustalono strategię rekrutacyjną: pominięcie tego wątku w głównym CV (ochrona czystego przekazu Embedded), a wykorzystanie go jako mocnego argumentu na rozmowie technicznej (Culture Fit, sprawczość inżynierska) oraz w sekcji portfolio `WojciechCzyzyk.github.io`.
+* **Strategia Wizualna CV (Zdjęcie):** Ustalono podejście dwutorowe – utrzymanie wersji ze zdjęciem (Smart Casual, spójne z LinkedIn/GitHub) na rynek polski/DACH oraz przygotowanie wersji bez fotografii pod ewentualne aplikacje do firm anglosaskich (USA/UK).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h/.cpp`, `BlindsSequencer.h/.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`)
+* **Status Pacjenta & Regeneracja:** Nocna sesja refleksyjna prowadzona w trybie "Ultra Light" w szpitalu w Wałbrzychu. Oczekiwanie na dzisiejsze poranne decyzje hematologów oraz dostawę nowego laptopa Dell Latitude 7430 (1TB NVMe). Priorytet na najbliższe godziny: sen i poziome odbarczanie odcinka Th6-Th8.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1281,4 +1281,23 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Aktualizacja Dokumentacji Dydaktycznej:** Dodano **Pomysł #4** (*„Kieszonkowy Komputer BBC micro:bit v2”*) do pliku `pomysly_na_lekcje.md`.
 
 
+#### 📅 Wpis: 13.11.2026 (Sesja południowa - Weryfikacja Cennikowa Sprzętu R&D & Decyzje Zakupowe APEX)
+
+* **Strategia Dotacyjna (Ekspres do Kawy):** Potwierdzono, że zakup ekspresu do kawy jest wykluczony z katalogu wydatków dotacji PFRON (wyposażenie socjalne). Podjęto decyzję o zachowaniu 100% czystości merytorycznej wniosku na 100 000 zł, a wymarzony ekspres dla Natalki zdefiniowano jako **Kamień Milowy #1** finansowany z bieżących wpływów po uruchomieniu pierwszej grupy pilotażowej (lub z nadwyżki ze sprzedaży obecnych aut).
+* **Weryfikacja Rynkowa Pozycji nr 3 (Projektor i Ekran):**
+  - Zwalidowano ofertę na projektor **BenQ MH560C** (DLP, natywne Full HD 1920x1080, **3800 ANSI lm**) w cenie ok. **1 800 zł brutto** (pełna FV 23%).
+  - Dobrano lekki, składany ekran przenośny na trójnogu (100", waga ok. 5,1 kg, długość w torbie ok. 100 cm – pełna ochrona kręgosłupa Th6–Th8 podczas transportu) za ok. **450 zł** + torba na projektor (~120 zł). W ramach budżetu 3 200 zł wygenerowano ok. **830 zł czystej rezerwy**.
+* **Weryfikacja Rynkowa i Rozbudowa Pozycji nr 5 (Pracownia R&D, Lutowanie BGA, Druk 3D Combo i 6x Dron UAV):**
+  - **Pomiary i Zasilanie:** Wybrano promocyjny pakiet oficjalnego dystrybutora **Oscyloskop 12-bit Rigol DHO804 + Programowalny zasilacz laboratoryjny Korad KKG305P (30V/5A)** w cenie **2 091 zł brutto** (oszczędność ok. 450 zł względem osobnego zakupu).
+  - **Stanowisko Lutownicze (SMD/BGA):** Wybrano stację 2w1 (kolba + Hot Air, np. **W.E.P. 992D+** / **Yihua 8786D-I**) z pochłaniaczem oparów z filtrem węglowym (BHP) oraz zestawem serwisowym do małych/średnich układów **BGA/QFN/TQFP** (grot minifala, topnik żelowy No-Clean, taśma kaptonowa, chwytak podciśnieniowy / pęseta ESD) – łączny koszt ok. **660 zł brutto**.
+  - **Druk 3D (Wersja Combo):** Oznaczono i zatwierdzono zakup drukarki **Bambu Lab P1S Combo (z automatycznym podajnikiem AMS na 4 kolory)** + pakiet filamentów (~2 400 zł brutto) – wygoda ładowania szpul od przodu bez schylania się oraz efekt „WOW” na warsztatach.
+  - **Mikrokontrolery:** 6 zestawów **BBC micro:bit v2 GO** (~590 zł brutto) + 6 zestawów Arduino/ESP32 i analizator stanów logicznych (~480 zł brutto).
+  - **Eskadra Dronów UAV (Wstępnie 6 szt.):** Ustalono wpisanie na etapie wniosku pełnych **6 programowalnych dronów edukacyjnych** (5 dla uczniów + 1 instruktorski, np. **WhalesBot Eagle 1003 / 3002 FPV** – następca wycofanego DJI Tello EDU, programowany w Scratchu i Pythonie) w celu zachowania spójności 1:1 ze stanowiskami (z możliwością ewentualnej redukcji liczby sztuk przed podpisaniem umowy).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

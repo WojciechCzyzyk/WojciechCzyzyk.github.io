@@ -1299,5 +1299,21 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 
+#### 📅 Wpis: 13.11.2026 (Sesja popołudniowa - Wirusowy Rozwój Portfolio Bartka & Modułowa Architektura Quizów SP2)
+
+* **Efekt Wirusowy na Korytarzu (Walidacja Rynkowa APEX):** Bartek rozpoczął udostępnianie swojego portfolio (`BartekCzyzyk.github.io`) rówieśnikom w klasie, co wywołało natychmiastowe zapotrzebowanie na nowy moduł – quiz o historii Szkoły Podstawowej nr 2 w Jeleniej Górze (z okazji jubileuszu 80-lecia szkoły: 1946–2026) oraz jej patronie Bolesławie Chrobrym.
+* **Architektura Modułowa & Separation of Concerns (4 Pliki):** Wdrożono profesjonalny podział aplikacji webowej na osobne komponenty w katalogu `quizy/historia/`:
+  - `quiz_sp2_chrobry.html` (czysty szkielet HTML z relatywnymi ścieżkami powrotu `../../index.html`)
+  - `quiz_sp2.css` (odizolowane style Dark Mode)
+  - `quiz_sp2_pytania.js` (baza 16 pytań z pułapką historyczną o Bolesławie Krzywoustym, gotowa do samodzielnej rozbudowy przez Bartka)
+  - `quiz_sp2_silnik.js` (uniwersalny silnik logiki gry i punktacji)
+* **Wdrożenie Produkcyjne & Materiały Drukowane:** Wygenerowano jednostronicowe kompendium PDF (`Kompendium_SP2_Chrobry_Bartek.pdf`) oraz zunifikowano styl kart na stronie głównej `BartekCzyzyk.github.io/index.html` (kontenery z ramką `#56D364` i przyciskami `class="button"`).
+* **Nowy Scenariusz Dydaktyczny APEX:** Opracowano **Pomysł #5** do pliku `pomysly_na_lekcje.md` (*„Aplikacja na zamówienie klienta – architektura modułowa i praca z wymaganiami”*).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Sesja zrealizowana w pełnym komforcie w trybie mobilnym z pozycji leżącej. Przejście w fazę poobiedniego odpoczynku i poziomego odbarczania odcinka Th6–Th8.
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

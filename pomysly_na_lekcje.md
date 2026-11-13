@@ -88,3 +88,13 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - Zrozumienie **architektury modułowej** – dlaczego dzielimy duży kod na 4 małe pliki (`index.html`, `style.css`, `pytania.js`, `silnik.js`), zamiast trzymać wszystko w jednym wielkim pliku.
   - Samodzielna rozbudowa aplikacji: uczeń dopisuje nowe pytania do tablicy w pliku `pytania.js` bez ryzyka zepsucia działania całej gry.
 * **Efekt WOW:** Uczeń publikuje gotową aplikację + PDF na swojej stronie i wysyła link klasie, stając się lokalnym liderem technologicznym.
+
+
+### 💡 Pomysł #6: „Mój cyfrowy ślad – dlaczego używamy Nicku i jak działa blokada Google `noindex`”
+* **Źródło inspiracji:** Projektowanie bezpiecznego modelu zgód i prywatności (Privacy by Design) dla niepełnoletnich uczniów w umowie Akademii APEX.
+* **Cel dydaktyczny:**
+  - Nauka podstaw cyberbezpieczeństwa i ochrony danych osobowych w sieci (dlaczego deweloperzy operują bezpiecznym pseudonimem/nickiem i awatarem zamiast podawać pełne dane adresowe).
+  - Zrozumienie różnicy między **stroną dostępną po linku** (dla znajomych i rodziny) a **stroną indeksowaną przez roboty wyszukiwarek** (publiczną dla całego świata).
+  - Praktyczna edycja sekcji `<head>` w pliku `index.html` – dodanie znacznika `<meta name="robots" content="noindex, nofollow">` jako cyfrowej tarczy chroniącej stronę przed botami.
+* **Efekt WOW:** Uczeń świadomie kontroluje widoczność swojego projektu w internecie, a rodzice zyskują 100% poczucie bezpieczeństwa i zaufania do metodyki Akademii.
+

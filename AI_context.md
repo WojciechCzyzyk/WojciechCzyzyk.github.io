@@ -1351,4 +1351,17 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie prac na smartfonie. Przejście w tryb odpoczynku i poziomego odbarczania odcinka Th6–Th8.
 
+#### 📅 Wpis: 13.11.2026 (Sesja wieczorna - Indeksacja Google Search Console, Sitemap & Polityka Prywatności Bartka)
+
+* **SEO & Indeksacja Google (Status: Zielony / Zweryfikowano):** Pomyślnie przeprowadzono weryfikację własności domeny `https://github.io` w **Google Search Console**, wygenerowano i przesłano mapę witryny `sitemap.xml` (obejmującą portfolio główne oraz kluczowe podstrony Akademii APEX w katalogu `/sarenka/`), a także wymuszono ręczną indeksację głównych adresów URL.
+* **Polityka Prywatności (Privacy by Design):** Potwierdzono świadome wyłączenie witryny syna (`BartekCzyzyk.github.io`) z indeksacji w wyszukiwarkach Google (blokada dla robotów) przy jednoczesnym wdrożeniu globalnej stopki atrybucyjnej na dole strony głównej. Rozwiązanie chroni prywatność 11-letniego dewelopera przed przypadkowym ruchem z zewnątrz, zachowując pełną dostępność aplikacji dla rówieśników po bezpośrednim linku.
+* **Postęp Rehabilitacji (Wałbrzych):** Zaliczono drugą serię marszową (łącznie **1000 kroków** w ciągu popołudnia w gorsecie ortopedycznym, całkowicie bez bólu i zmęczenia). Po treningu powrót do pozycji horyzontalnej bez gorsetu w celu odbarczenia odcinka Th6–Th8.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

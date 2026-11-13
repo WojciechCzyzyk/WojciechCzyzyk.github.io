@@ -81,3 +81,10 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Sprzęt:** 6x płytka BBC micro:bit v2 (5 dla uczniów + 1 instruktorska) + koszyki bateryjne i przewody USB.
 * **Koncepcja:** Bezpieczny start w świat elektroniki bez plątaniny przewodów. Wykorzystanie wbudowanych czujników (akcelerometr, kompas, czujnik temperatury, mikrofon, matryca LED 5x5) do budowy cyfrowej kostki do gry, krokomierza, alarmu wstrząsowego oraz bezprzewodowego komunikatora radiowego między stanowiskami uczniów.
 
+### 💡 Pomysł #5: „Aplikacja na zamówienie klienta – architektura modułowa i praca z wymaganiami”
+* **Źródło inspiracji:** Koledzy Bartka z klasy po zobaczeniu jego portfolio sami poprosili o stworzenie quizu z historii szkoły (SP2 w Jeleniej Górze) i Bolesława Chrobrego.
+* **Cel dydaktyczny:**
+  - Nauka zbierania wymagań od „klienta” (czego potrzebują koledzy z klasy przed konkursem).
+  - Zrozumienie **architektury modułowej** – dlaczego dzielimy duży kod na 4 małe pliki (`index.html`, `style.css`, `pytania.js`, `silnik.js`), zamiast trzymać wszystko w jednym wielkim pliku.
+  - Samodzielna rozbudowa aplikacji: uczeń dopisuje nowe pytania do tablicy w pliku `pytania.js` bez ryzyka zepsucia działania całej gry.
+* **Efekt WOW:** Uczeń publikuje gotową aplikację + PDF na swojej stronie i wysyła link klasie, stając się lokalnym liderem technologicznym.

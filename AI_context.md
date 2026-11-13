@@ -1213,5 +1213,26 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Dzień zakończony pomyślnie – po wieczornym spacerze (200 kroków) oraz udanej kąpieli. Przejście w tryb snu i poziomego odbarczania kręgosłupa (Th6–Th8).
 
 
+#### 📅 Wpis: 13.11.2026 (Sesja poranna - Wybór Ścieżki Dotacyjnej PFRON & Kosztorys Startowy APEX)
+
+* **Decyzja Strategiczna (Finansowanie Startu APEX):** Po analizie porównawczej wariantów dotacyjnych podjęto ostateczną decyzję o wyborze ścieżki **PFRON (przez PUP Jelenia Góra)** zamiast premii unijnej LGD na etap otwarcia firmy. Główne argumenty: **0 zł wkładu własnego**, szybki tryb decyzyjny oraz możliwość złożenia wniosku w świeżym naborze na początku roku (**styczeń–luty 2027**) po skompletowaniu orzeczenia PZON.
+* **Optymalizacja Budżetowa & Prace Adaptacyjne:** Zrezygnowano z finansowania z dotacji prac budowlano-wykończeniowych (płytki w 40-metrowym garażu w Domu w Jonatanach G2 oraz 100 m² kostki brukowej przed wejściem). Prace te użytkownik wykona samodzielnie po pełnej rekonwalescencji z bieżących przychodów Akademii, unikając zamrażania ok. 50 tys. zł wkładu własnego i przepłacania wykonawcom.
+* **Zatwierdzony Wstępny Kosztorys PFRON (Wariant 24 m-ce / ok. 138 500 zł):**
+  1. Samochód osobowy kombi/SUV (transport mobilnej pracowni do szkół + ograniczenia po operacji kręgosłupa): **~75 000 zł**
+  2. Mobilna pracownia IT (8 laptopów – 7 dla uczniów + 1 instruktorski): **~28 000 zł**
+  3. Monitor interaktywny 65"–75" na mobilnym statywie do sali w garażu: **~9 500 zł**
+  4. Ergonomiczne wyposażenie sali (6 modułowych biurek, 7 foteli ergonomicznych, szafa metalowa): **~10 000 zł**
+  5. Zestawy warsztatowe R&D / Embedded / Robotyka (ESP32, Arduino, stacja lutownicza, oscyloskop, drukarka 3D): **~10 000 zł**
+  6. Sprzęt Audio-Wideo do nagrywania lekcji + router 5G/Mesh Wi-Fi + UPS: **~6 000 zł**
+* **Dalsze Skalowanie (Faza 2):** Ewentualne wsparcie z **LGD Partnerstwo Ducha Gór** pozostawiono jako opcję na kolejny rok w ramach konkursów na *rozwój istniejącej działalności gospodarczej*.
+* **Porządki w Repozytorium Mentorskim (`BartekCzyzyk.github.io`):** Uporządkowano strukturę plików statycznych (migracja grafik strony głównej do dedykowanego katalogu `www` zgodnie z zasadą *Separation of Concerns*).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Dłuższy, regenerujący sen w nocy. Poranek rozpoczęty w dobrym nastroju i komforcie w pozycji leżącej przed śniadaniem i obchodem lekarskim.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

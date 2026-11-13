@@ -75,3 +75,9 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Sprzęt:** 2–3 programowalne mini-drony z osłonami śmigieł (np. DJI Tello EDU) + mata lądowiska i bramki slalomowe.
 * **Koncepcja:** Połączenie prawdziwej dyscypliny lotniczej (checklista przedstartowa, fizyka siły nośnej, orientacja przestrzenna X/Y/Z i Yaw) z pisaniem kodu sterującego autonomicznym lotem w sali. Dzieci uczą się matematyki i geometrii w 3D (kąty zewnętrzne wielokątów, obliczanie tras na zmiennych) oraz przetwarzania obrazu z kamery drona.
 * **Pełny rozkład 28 lekcji:** Zobacz dedykowany plik `syllabus_drony_uav.md`.
+
+### 💡 Pomysł #4: Kieszonkowy Komputer BBC micro:bit v2 (Most między Scratch'em a Elektroniką)
+* **Wiek / Poziom:** Klasy 3–6 (Microsoft MakeCode: klocki ➔ automatyczna konwersja na Python / JavaScript).
+* **Sprzęt:** 6x płytka BBC micro:bit v2 (5 dla uczniów + 1 instruktorska) + koszyki bateryjne i przewody USB.
+* **Koncepcja:** Bezpieczny start w świat elektroniki bez plątaniny przewodów. Wykorzystanie wbudowanych czujników (akcelerometr, kompas, czujnik temperatury, mikrofon, matryca LED 5x5) do budowy cyfrowej kostki do gry, krokomierza, alarmu wstrząsowego oraz bezprzewodowego komunikatora radiowego między stanowiskami uczniów.
+

@@ -1326,4 +1326,19 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Subtelny podpis w stopce aplikacji:** Każdy quiz zawiera dyskretną informację w stopce (np. *„Aplikacja stworzona przez [Imię] w Akademii APEX”* z linkiem do strony głównej), domykając ścieżkę konwersji dla zainteresowanych rodziców.
 
 
+#### 📅 Wpis: 13.11.2026 (Sesja popołudniowa - Zamknięcie Ekosystemu Linkowania & Rekord 500 Kroków)
+
+* **Pełna Integracja Wizerunkowa (Cross-Linking 3 Repozytoriów):** Zamknięto pełną pętlę powiązań między wszystkimi trzema projektami w chmurze GitHub Pages:
+  1. Dyskretna stopka atrybucyjna w aplikacji uczniowskiej (`BartekCzyzyk.github.io/quizy/historia/quiz_sp2_chrobry.html`) kierująca bezpośrednio do Akademii APEX.
+  2. Sekcja zaproszenia przy ankiecie na głównej stronie `BartekCzyzyk.github.io/index.html` budująca organiczny ruch z korytarza szkolnego.
+  3. Klikalny link w sekcji „Kto stoi za Akademią APEX?” (`sarenka/index.html`) kierujący do inżynierskiego portfolio założyciela (`WojciechCzyzyk.github.io`).
+* **Gotowość Dowodowa pod Wniosek PFRON:** Potwierdzono kompletną spójność dowodową ekosystemu (działające MVP witryny z syllabusem 31 lekcji, żywe Case Study ucznia, kosztorys 100 000 zł powiązany z ergonomią pooperacyjną oraz zabezpieczenie lokatą).
+* **Postęp Rehabilitacji (Wałbrzych):** Ustanowiono nowy rekord marszowy – **500 kroków szybkim tempem** po korytarzu oddziału w gorsecie ortopedycznym, całkowicie bez bólu i bez zadyszki. Po wysiłku powrót do bezpiecznej pozycji horyzontalnej (bez gorsetu) w celu odbarczenia odcinka Th6–Th8.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1402,6 +1402,31 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Sesja planowania sprzętowego zakończona w komforcie w pozycji leżącej. Pełna spójność kosztorysu PFRON v6 (równe 100 000 zł). Przejście w tryb odpoczynku i poziomego odbarczania odcinka Th6–Th8.
 
 
+#### 📅 Wpis: 13.11.2026 (Sesja wieczorna - Ostateczna Konsolidacja Kosztorysu PFRON v9: JBL Boombox 3, Poleasingowe Meble i 3 Monitory 27")
+
+* **Finalizacja Kosztorysu PFRON v9 (100 000 zł / 0 zł wkładu własnego):** Uzupełniono kosztorys inwestycyjny o mobilny system nagłośnienia prezentacyjnego (**JBL Boombox 3**) pod zajęcia multimedialne, pokazy lotów dronów UAV i prezentacje końcowe *Demo Day* (dla prestiżu i jakości dźwięku), dopuszczono zakup mebli i monitorów poleasingowych/używanych (Klasa A, pełna faktura VAT 23%) oraz rozszerzono pulę monitorów 27" IPS QHD do **3 sztuk** (dla Instruktora w domu, w pracowni oraz dla Młodszego Instruktora Bartka).
+* **Zaktualizowany Kosztorys PFRON v9 (Suma łączna: 100 000 zł brutto):**
+  1. **Duży samochód osobowy typu SUV (Segment D / MPV):** **60 000 zł** z dotacji (60%) + dopłata **15–20 tys. zł** ze sprzedaży obecnych aut ➔ łączny budżet: **75 000 – 80 000 zł** (np. Škoda Kodiaq, Peugeot 5008 II, VW Tiguan Allspace).
+  2. **Mobilna pracownia IT i Ergonomiczne Stanowiska Pracy (15 250 zł — nowe i poleasingowe Klasa A):**
+     - *6–7x Laptop ucznia 14" (poleasingowy Klasa A, FV 23%, Win 11 Pro, i5 11./12. gen., 16 GB RAM, 256–512 GB NVMe):* margines **1 300 zł/szt.** = **7 800 – 8 300 zł** *(opcje: Dell Latitude 5420 / 5430, HP EliteBook 840 G8, Lenovo ThinkPad T14 Gen 2)*.
+     - *2x Laptop instruktora 15,6" (poleasingowy Klasa A, FV 23%, Win 11 Pro, 32 GB RAM, 512 GB NVMe):* **~2 150 zł/szt.** = **4 300 zł** *(opcje: Dell Latitude 5520 / 5530, Lenovo ThinkPad T15 Gen 2)*.
+     - *3x Monitor poleasingowy 27" IPS QHD (2560×1440) z USB-C PD i PIVOT/HAS:* **~650 zł/szt.** = **1 950 zł** *(1 na biurko domowe + 1 do pracowni + 1 dla Bartka; opcje: Dell P2720DC / P2723DE, HP EliteDisplay E273q)*.
+     - *9x Cicha mysz bezprzewodowa Logitech Silent:* **~60 zł/szt.** = **540 zł** *(opcje: M220 Silent USB, M240 Silent Bluetooth, M330 Silent Plus)*.
+     - *2x Zewnętrzna cicha klawiatura:* **~560 zł** *(Logitech MX Keys S + Logitech Signature K650)* + *9x Etui ochronne i torba transportowa:* **400 zł**.
+  3. **Mobilny zestaw projekcyjny (2 400 zł):** Projektor Full HD 3800 ANSI lm (**BenQ MH560C**, ~1 800 zł) + lekki składany ekran na trójnogu 100" (~450 zł) + torba (~150 zł).
+  4. **Ergonomiczne Wyposażenie Sali 40 m² i Stacja Warsztatowa R&D (7 500 zł — nowe lub poleasingowe):**
+     - *6x Stół szkoleniowy składany 120×60 cm na stalowym stelażu:* **~650 zł/szt.** = **3 900 zł** *(opcje: stół składany na kółkach z uchylnym blatem Flip-Top np. Kinnarps/Rent4Place — zero dźwigania, lub Davo Meble / Mebway OGI_Q)*.
+     - *6x Proste krzesło szkoleniowe sztaplowane (bez kółek, układane w stos):* **~180 zł/szt.** = **1 080 zł** *(opcje: Nowy Styl ISO, Samba, krzesła z siatką Mesh)* + *1x Fotel ergonomiczny instruktora (lędźwie + podłokietniki 3D):* **900 zł**.
+     - *1x Stół warsztatowy R&D z szufladami i tablicą perforowaną nad blatem (120×60 / 150×60 cm):* **1 050 zł** + *1x Lampa warsztatowa LED na zacisk + mata ESD:* **270 zł** + *rynienki kablowe i listwy zasilające:* **300 zł**.
+  5. **Pracownia Embedded, Robotyki, Druku 3D i Dronów UAV (9 050 zł):** Drukarka 3D **Bambu Lab P1S Combo (AMS)** (~2 400 zł), zestaw **Oscyloskop Rigol DHO804 + Zasilacz Korad KKG305P** (2 091 zł), stacja lutownicza 2w1 z pochłaniaczem oparów i zestawem BGA/SMD (~660 zł), **6x BBC micro:bit v2 GO** (~590 zł), **6x zestaw Arduino/ESP32 + analizator 16-kan.** (~480 zł) oraz **3–6x dron WhalesBot Eagle** (~2 829 zł).
+  6. **Biuro Dydaktyczne, Mobilne Nagłośnienie JBL, Audio-Wideo, Sieć 5G i UPS (5 800 zł):** Mobilny system nagłośnienia prezentacyjnego **JBL Boombox 3** (~1 550 zł), kolorowa drukarka laserowa wielofunkcyjna, kamera 4K, mikrofon kierunkowy, oświetlenie LED, router 5G / Mesh Wi-Fi oraz UPS.
+* **Wygenerowane Dokumenty:** `Plan_Dotacyjny_PFRON_Kosztorys_APEX-v9.pdf`
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Sesja zakończona w pełnym komforcie w pozycji leżącej. Komplet dokumentów kosztorysowych (v9) i kontekstowych gotowy. Czas na zasłużony odpoczynek i poziome odbarczanie odcinka Th6–Th8.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

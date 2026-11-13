@@ -1316,4 +1316,14 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Sesja zrealizowana w pełnym komforcie w trybie mobilnym z pozycji leżącej. Przejście w fazę poobiedniego odpoczynku i poziomego odbarczania odcinka Th6–Th8.
 
+
+### 🔄 Wirusowa Pętla Produktowa („Perpetuum Mobile” Akademii APEX)
+* **Mechanizm wzrostu organicznego (Zero-CAC):** Uczniowie Akademii tworzą na własnych domenach (`nick.github.io`) interaktywne quizy i kompendia PDF pod bieżące klasówki w swoich szkołach, a następnie udostępniają linki na klasowych grupach rówieśniczych.
+* **Psychologia i Konwersja:**
+  - *Dla rówieśników:* Aplikacja rozwiązuje realny problem (łatwa i przyjemna powtórka przed sprawdzianem na telefonie) bez nachalnego marketingu.
+  - *Dla twórcy:* Buduje wysoki status lidera technologicznego w klasie i naturalną dumę z własnych kompetencji.
+  - *Dla rodziców:* Daje namacalny dowód efektywności kursu (dziecko tworzy użyteczne oprogramowanie zamiast tylko konsumować treści), co generuje organiczne polecenia i stały napływ nowych zapisów z kolejnych klas i szkół.
+* **Subtelny podpis w stopce aplikacji:** Każdy quiz zawiera dyskretną informację w stopce (np. *„Aplikacja stworzona przez [Imię] w Akademii APEX”* z linkiem do strony głównej), domykając ścieżkę konwersji dla zainteresowanych rodziców.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

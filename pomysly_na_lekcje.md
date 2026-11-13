@@ -70,3 +70,8 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 
 * **Złota Reguła Dydaktyczna APEX (Instant Feedback):** Wdrożenie natychmiastowych, krótkich objaśnień pod każdym pytaniem w quizie okazało się kluczowym sukcesem edukacyjnym – dziecko nie zgaduje na ślepo, tylko od razu rozumie swój błąd i błyskawicznie przyswaja materiał (zatwierdzone jako obowiązkowy standard dla wszystkich aplikacji w Akademii APEX).
 
+### 💡 Pomysł #3: Szkoła Pilotów i Programistów UAV (Programowanie Mini-Dronów)
+* **Wiek / Poziom:** Klasy 4–8 (poziom Junior: Scratch / DroneBlocks; poziom Pro: Python + `djitellopy`).
+* **Sprzęt:** 2–3 programowalne mini-drony z osłonami śmigieł (np. DJI Tello EDU) + mata lądowiska i bramki slalomowe.
+* **Koncepcja:** Połączenie prawdziwej dyscypliny lotniczej (checklista przedstartowa, fizyka siły nośnej, orientacja przestrzenna X/Y/Z i Yaw) z pisaniem kodu sterującego autonomicznym lotem w sali. Dzieci uczą się matematyki i geometrii w 3D (kąty zewnętrzne wielokątów, obliczanie tras na zmiennych) oraz przetwarzania obrazu z kamery drona.
+* **Pełny rozkład 28 lekcji:** Zobacz dedykowany plik `syllabus_drony_uav.md`.

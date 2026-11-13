@@ -1233,6 +1233,29 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Dłuższy, regenerujący sen w nocy. Poranek rozpoczęty w dobrym nastroju i komforcie w pozycji leżącej przed śniadaniem i obchodem lekarskim.
 
+#### 📅 Wpis: 13.11.2026 (Sesja poranna - Finalny Kosztorys PFRON 100 000 zł & Zabezpieczenie Lokatą)
+
+* **Decyzja Strategiczna (Finansowanie Startu APEX):** Po analizie porównawczej wariantów dotacyjnych podjęto ostateczną decyzję o wyborze ścieżki **PFRON (przez PUP Jelenia Góra)** zamiast premii unijnej LGD na etap otwarcia firmy. Główne argumenty: **0 zł wkładu własnego**, szybki tryb decyzyjny oraz możliwość złożenia wniosku w świeżym naborze na początku roku (**styczeń–luty 2027**) po skompletowaniu orzeczenia PZON.
+* **Weryfikacja Formalna & Zabezpieczenie Umowy (Zero Haczyków):**
+  - *Karencja CEIDG:* Dawna nieaktywna firma ze studiów została formalnie wykreślona z CEIDG ok. rok temu, więc w styczniu–lutym 2027 r. wymóg pełnych 12 miesięcy karencji zostanie spełniony z zapasem. Brak wcześniejszego korzystania z dotacji publicznych na start.
+  - *Zabezpieczenie Dotacji:* Zamiast angażowania 2–3 poręczycieli zewnętrznych, wybrano **blokadę środków na lokacie terminowej Mamy** (ok. 120% kwoty dotacji, czyli **120 000 zł** z posiadanych 150 000 zł – bez zrywania lokaty i z pozostawieniem Mamie **30 000 zł** w pełni wolnej rezerwy). Wiek właściciela lokaty (70+) nie stanowi przeszkody przy zabezpieczeniu majątkowym.
+* **Optymalizacja Budżetowa & Prace Adaptacyjne:** Zrezygnowano z finansowania z dotacji prac budowlano-wykończeniowych (płytki w 40-metrowym garażu z ogrzewaniem podłogowym w Domu w Jonatanach G2 oraz 100 m² kostki brukowej przed wejściem). Prace te użytkownik wykona samodzielnie po pełnej rekonwalescencji z bieżących przychodów Akademii, unikając zamrażania ok. 50 tys. zł wkładu własnego.
+* **Zatwierdzony Finalny Kosztorys PFRON (Równe 100 000 zł / zobowiązanie 24 m-ce):**
+  1. Samochód osobowy kombi/SUV *(udział z dotacji 55% + dopłata 15–20 tys. zł ze sprzedaży obecnych Peugeota i Citroena ➔ łączny budżet na auto: **70 000 – 75 000 zł**)*: **55 000 zł**
+  2. Mobilna pracownia IT (7 poleasingowych laptopów klasy biznes dla uczniów + 1 laptop instruktora + torby/myszki): **18 500 zł**
+  3. Monitor interaktywny 65" na mobilnym statywie do sali w garażu: **8 000 zł**
+  4. Ergonomiczne wyposażenie sali (6 modułowych biurek, 7 foteli ergonomicznych pod kręgosłup, szafa metalowa): **7 500 zł**
+  5. Zestawy warsztatowe R&D / Embedded / Robotyka (ESP32, Arduino, stacja lutownicza z pochłaniaczem, zasilacz laboratoryjny, drukarka 3D): **6 500 zł**
+  6. Sprzęt Audio-Wideo do nagrywania lekcji + router 5G/Mesh Wi-Fi + UPS: **4 500 zł**
+* **Dalsze Skalowanie (Faza 2):** Ewentualne wsparcie z **LGD Partnerstwo Ducha Gór** pozostawiono jako opcję na kolejny rok (2028) w ramach konkursów na *rozwój istniejącej działalności gospodarczej*.
+* **Porządki w Repozytorium Mentorskim (`BartekCzyzyk.github.io`):** Uporządkowano strukturę plików statycznych (migracja grafik strony głównej do dedykowanego katalogu `www` zgodnie z zasadą *Separation of Concerns*).
+* **Wygenerowane Dokumenty:** `Plan_Dotacyjny_PFRON_Kosztorys_APEX-v2.pdf`
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Dłuższy, regenerujący sen w nocy. Poranek rozpoczęty w dobrym nastroju i komforcie w pozycji leżącej przed śniadaniem i obchodem lekarskim.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

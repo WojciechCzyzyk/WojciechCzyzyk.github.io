@@ -1276,6 +1276,9 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quiz_historia.html`, `quiz_biologia.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Zaliczone 200 kroków na korytarzu przed śniadaniem z wyraźną poprawą chodu, wydrukowane wskazówki PZON dla lekarza w sekretariacie, zweryfikowane ścieżki `www/` u Bartka. Przejście w spokojny tryb pośniadaniowego odpoczynku i poziomego odbarczania Th6–Th8.
 
+#### 📅 Wpis: 13.11.2026 (Uzupełnienie Pracowni R&D - 6x BBC micro:bit v2)
+* **Aktualizacja Pozycji nr 5 Kosztorysu PFRON (9 800 zł):** W ramach budżetu pracowni Embedded/Robotyki uwzględniono zakup **6 zestawów BBC micro:bit v2** (5 dla uczniów + 1 instruktorski, koszt ok. 600 zł brutto w ramach istniejącej puli 9 800 zł) jako łagodny próg wejścia w elektronikę i konwersję bloków MakeCode na Python/JavaScript dla młodszych roczników (klasy 3–4).
+* **Aktualizacja Dokumentacji Dydaktycznej:** Dodano **Pomysł #4** (*„Kieszonkowy Komputer BBC micro:bit v2”*) do pliku `pomysly_na_lekcje.md`.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

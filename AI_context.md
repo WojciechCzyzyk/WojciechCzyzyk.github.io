@@ -1369,4 +1369,39 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Pacjenta:** Regeneracja w pozycji leżącej (bez gorsetu) po zaliczonym rekordzie 1000 kroków na oddziale w Wałbrzychu.
 
 
+#### 📅 Wpis: 13.11.2026 (Sesja wieczorna - Aktualizacja Kosztorysu PFRON v6: Ergonomia Th6–Th8, Stacja R&D i Mobilna Pracownia)
+
+* **Przegląd Rynkowy & Optymalizacja Kosztorysu PFRON (100 000 zł / 0 zł wkładu własnego):** Przeprowadzono kompleksowy przegląd ofert rynkowych (m.in. AMSO, Pofirmowe, `wwwdolservicepl`) oraz przeprojektowano strukturę wydatków pod kątem maksymalnej ochrony operowanego odcinka piersiowego kręgosłupa (**Th6–Th8**) i funkcjonalności 40-metrowej pracowni w garażu. Wprowadzono bezpieczne marginesy cenowe oraz katalog opcji sprzętowych do ostatecznego wyboru na etapie realizacji zakupów.
+* **Zaktualizowany Kosztorys PFRON v6 (Suma łączna: 100 000 zł brutto):**
+  1. **Duży samochód osobowy typu SUV (Segment D / MPV):** **60 000 zł** z dotacji (60%) + dopłata **15–20 tys. zł** ze sprzedaży obecnych aut ➔ łączny budżet na pojazd: **75 000 – 80 000 zł** (np. Škoda Kodiaq, Peugeot 5008 II, VW Tiguan Allspace).
+  2. **Mobilna pracownia IT + Ergonomiczne Stanowiska Pracy (16 400 zł):**
+     - *6–7x Laptop ucznia 14" (poleasingowy Klasa A, FV 23%, Win 11 Pro, i5 11./12. gen., 16 GB RAM, 256–512 GB NVMe):* założony bezpieczny budżet **1 300 zł/szt.** = **7 800 – 9 100 zł** *(opcje do wyboru: Dell Latitude 5420 / 5430, HP EliteBook 840 G8, Lenovo ThinkPad T14 Gen 2; bufor ilościowy pozwalający w razie potrzeby zredukować zakup z 7 do 6 szt. przy 5-osobowych grupach)*.
+     - *2x Laptop instruktora 15,6" (poleasingowy Klasa A, FV 23%, Win 11 Pro, 32 GB RAM, 512 GB NVMe):* **~2 150 zł/szt.** = **4 300 zł** *(opcje: Dell Latitude 5520 / 5530, Lenovo ThinkPad T15 Gen 2)*.
+     - *9x Cicha mysz bezprzewodowa Logitech Silent:* **~60 zł/szt.** = **540 zł** *(opcje do wyboru: Logitech M220 Silent USB, Logitech M240 Silent Bluetooth, Logitech M330 Silent Plus)*.
+     - *9x Etui ochronne na laptopy + torba transportowa:* **460 zł**.
+     - *2x Duży monitor 27" IPS QHD (2560×1440) z USB-C (Power Delivery 65–90W) i regulacją wysokości/PIVOT (1 na biurko domowe + 1 na biurko instruktora w pracowni):* **~1 100 zł/szt.** = **2 200 zł** *(opcje: Dell P2723DE / P2725DE, iiyama ProLite XUB2792QSN-B5)*.
+     - *2x Zewnętrzna cicha klawiatura bezprzewodowa (ochrona postawy przy pracy na monitorze):* **~600 zł łącznie** *(opcje: Logitech MX Keys S na biurko główne + Logitech Signature K650 do pracowni)*.
+  3. **Mobilny zestaw projekcyjny (2 400 zł – zoptymalizowany z 3 200 zł):**
+     - Projektor Full HD 3800 ANSI lm (**BenQ MH560C**, ~1 800 zł) + lekki składany ekran przenośny na trójnogu 100" (waga ok. 5,1 kg, ~450 zł) + torba transportowa (~150 zł).
+  4. **Ergonomiczne Wyposażenie Sali (40 m²) i Stacja Warsztatowa R&D (7 500 zł):**
+     - *6x Stół szkoleniowy składany 120×60 cm na stalowym stelażu:* **~650 zł/szt.** = **3 900 zł** *(opcje: stół składany na kółkach z uchylnym blatem Flip-Top – zero dźwigania dla kręgosłupa, lub klasyczny stół składany Davo Meble / Mebway OGI_Q)*.
+     - *6x Proste krzesło szkoleniowe sztaplowane (bez kółek, układane jedno na drugie):* **~180 zł/szt.** = **1 080 zł** *(opcje: Nowy Styl ISO, Nowy Styl Samba, krzesło z oparciem z siatki Mesh)*.
+     - *1x Fotel ergonomiczny instruktora (regulacja lędźwiowa + podłokietniki 3D + zagłówek):* **900 zł** *(opcje: Grospol Futura, Unique, IKEA Markus/Matchspel)*.
+     - *1x Stół warsztatowy R&D z szufladami i tablicą perforowaną nad blatem (120×60 lub 150×60 cm):* **1 050 zł** *(opcje: Küpper, Geko, Bass Polska, Malow – z górną półką nad tablicą)*.
+     - *1x Profesjonalna lampa warsztatowa LED na zacisk + mata ESD:* **270 zł** *(opcje: szeroka listwa kreślarska LED CRI>90 na długim ramieniu lub lampa-lupa szklana 5 dioptrii LED)*.
+     - *Rynienki kablowe pod stoły i listwy zasilające:* **300 zł**.
+  5. **Pracownia Embedded, Robotyki, Druku 3D i Dronów UAV (9 050 zł):**
+     - Drukarka 3D **Bambu Lab P1S Combo (z podajnikiem AMS)** + pakiet filamentów (~2 400 zł), zestaw promocyjny **Oscyloskop Rigol DHO804 + Zasilacz Korad KKG305P** (2 091 zł), stacja lutownicza 2w1 (kolba + Hot Air) z pochłaniaczem oparów i zestawem serwisowym BGA/SMD (~660 zł), **6x BBC micro:bit v2 GO** (~590 zł), **6x zestaw Arduino/ESP32 + analizator stanów logicznych 16-kan.** (~480 zł) oraz eskadra programowalnych dronów edukacyjnych **WhalesBot Eagle** (3–6 szt. w zależności od finalnej ceny pakietu, ~2 829 zł).
+  6. **Biuro Dydaktyczne, Audio-Wideo, Sieć 5G i Zasilanie (UPS) (4 650 zł):**
+     - Kolorowa drukarka laserowa wielofunkcyjna, kamera 4K, mikrofon kierunkowy, oświetlenie LED, router 5G / Mesh Wi-Fi oraz zasilacz awaryjny UPS.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Sesja planowania sprzętowego zakończona w komforcie w pozycji leżącej. Pełna spójność kosztorysu PFRON v6 (równe 100 000 zł). Przejście w tryb odpoczynku i poziomego odbarczania odcinka Th6–Th8.
+
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

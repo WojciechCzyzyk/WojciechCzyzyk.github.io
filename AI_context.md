@@ -1362,6 +1362,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 
+#### 📅 Wpis: 13.11.2026 (Zamknięcie sesji wieczornej - Finalizacja Umowy RODO & Przygotowanie do Przeglądu Sprzętu)
+
+* **Aktualizacja Umowy APEX (§ 1 – § 7):** Wdrożono zaktualizowaną treść umowy o świadczenie usług edukacyjnych, uwzględniającą przelewy tradycyjne (ActiveNow), zasadę *Privacy by Default* (pseudonimy GitHub, tryb `noindex`) oraz 3 niezależne checkboxy zgód pod wymogi RODO.
+* **Następny krok (Nowa sesja):** Przegląd i konfiguracja stanowiska sprzętowego (laptop Dell Latitude 7430 2w1 z dyskiem 1TB NVMe oraz myszka Logitech MX Anywhere 3S).
+* **Status Pacjenta:** Regeneracja w pozycji leżącej (bez gorsetu) po zaliczonym rekordzie 1000 kroków na oddziale w Wałbrzychu.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

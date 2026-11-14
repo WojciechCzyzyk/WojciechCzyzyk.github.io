@@ -1499,5 +1499,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   2. `Listy_Intencyjne_APEX_PFRON.pdf` (2 gotowe do podpisu wzory deklaracji współpracy dla dyrekcji SP2 im. Bolesława Chrobrego oraz Zespołu Szkół Elektronicznych w Jeleniej Górze).
   3. `Deklaracja_Zainteresowania_Rodzica_APEX.pdf` (jednostronicowy formularz deklaracji klienta indywidualnego z klauzulą braku zobowiązań i zgodą RODO).
 * **Zasada Priorytetu Budżetowego:** Utrwalono wytyczną, że wyposażenie pracowni, sprzęt IT/R&D i oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie auta (ewentualne przesunięcia odejmowane są z Pozycji nr 1 — 60 000 zł).
-* 
+
+
+#### 📅 Wpis: 14.11.2026 (Dodatek na koniec sesji nocnej - Nowy temat na kolejną sesję: Ubezpieczenie kredytu hipotecznego)
+
+* **Nowy Wątek Prawno-Finansowy (Priorytet na jutro):** Analiza odmowy wypłaty świadczenia z tytułu ubezpieczenia do kredytu na dom. Ubezpieczyciel powołuje się na kontrowersyjny zapis umowny dotyczący faktu wykonywania pracy w okresie zachorowania, mimo że sama jednostka chorobowa jest objęta ochroną ubezpieczeniową.
+* **Kierunek Analizy:** Weryfikacja OWU i pisma odmownego pod kątem klauzul abuzywnych (art. 385¹ KC), sprzeczności wyłączenia z głównym celem umowy oraz przygotowanie twardej reklamacji do ubezpieczyciela / wniosku o interwencję Rzecznika Finansowego.
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

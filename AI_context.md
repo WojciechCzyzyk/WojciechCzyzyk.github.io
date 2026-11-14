@@ -1628,4 +1628,8 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Status Mapy Mentalnej („0 errors, 0 warnings”):** Cały ekosystem Akademii APEX (model dydaktyczny przetestowany na Bartku, sukcesja ról z Natalią i Lilą, logistyka zakupu Peugeota 5008 z hakiem i relingami przez zaprzyjaźniony warsztat/komis, harmonogram dotacji PFRON 100 000 zł oraz baza pod doradztwo AI) osiągnął stan pełnej spójności architektonicznej. System gotowy do przejścia z fazy projektowania w etap egzekucji.
 
+  * **Nowy Zasób Dokumentacyjny (`zasady_lekcji_probnych.md`):** Utworzono dedykowany poradnik operacyjny dla Akademii APEX regulujący elastyczne zarządzanie lekcjami próbnymi w zależności od popytu (od darmowych grup startowych, przez model „wolnego krzesła” i „pierwszych zajęć bez ryzyka”, aż po opłatę rezerwacyjną 30–40 zł zaliczaną na poczet pierwszego karnetu).
+
+* **Standard Zarządzania SOP (Transfer z Medycyny):** Ustanowiono zasadę spisywania wszystkich kluczowych procesów Akademii APEX w formie prostych procedur operacyjnych (SOP — na wzór procedur medycznych/Sanepidu), stanowiących gotową bazę wiedzy dla Natalii, przyszłych instruktorów (Lili) oraz przyszłego podręcznika franczyzowego `[Klocek B2B / Doradztwo AI]`.
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

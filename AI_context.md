@@ -1601,4 +1601,10 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Pacjenta:** Odpoczynek w pozycji horyzontalnej w Wałbrzychu (odbarczanie Th6–Th8), pełen spokój i klarowny plan działania.
 
 
+#### 📅 Wpis: 14.11.2026 (Uzupełnienie Kosztorysu PFRON v11 - Metalowa Szafa Magazynowa do Pracowni)
+
+* **Korekta Ergonomiczno-Logistyczna Sali (40 m²):** Do Pozycji nr 4 kosztorysu PFRON (*Ergonomiczne wyposażenie sali i stacja warsztatowa R&D*) dodano **wysoką, zamykaną na klucz metalową szafę warsztatowo-biurową** (ok. 185×90×45 cm, regulowane półki o wysokim udźwigu, koszt ok. **950 zł brutto**, opcjonalnie poleasingowa) przeznaczoną do bezpiecznego przechowywania mobilnej pracowni laptopów, dronów UAV, filamentów do druku 3D oraz zestawów R&D.
+* **Przesunięcie Budżetowe (Zasada Priorytetu Pracowni):** Łączna kwota wniosku PFRON pozostaje bez zmian (**100 000 zł brutto**). Kwotę **950 zł** przesunięto bezpośrednio z Pozycji nr 1 (*Samochód osobowy SUV/MPV*: korekta z 60 000 zł na **59 050 zł**, z zachowaniem pokrycia różnicy ze sprzedaży obecnych pojazdów).
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

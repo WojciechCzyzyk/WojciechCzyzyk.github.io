@@ -1606,5 +1606,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Korekta Ergonomiczno-Logistyczna Sali (40 m²):** Do Pozycji nr 4 kosztorysu PFRON (*Ergonomiczne wyposażenie sali i stacja warsztatowa R&D*) dodano **wysoką, zamykaną na klucz metalową szafę warsztatowo-biurową** (ok. 185×90×45 cm, regulowane półki o wysokim udźwigu, koszt ok. **950 zł brutto**, opcjonalnie poleasingowa) przeznaczoną do bezpiecznego przechowywania mobilnej pracowni laptopów, dronów UAV, filamentów do druku 3D oraz zestawów R&D.
 * **Przesunięcie Budżetowe (Zasada Priorytetu Pracowni):** Łączna kwota wniosku PFRON pozostaje bez zmian (**100 000 zł brutto**). Kwotę **950 zł** przesunięto bezpośrednio z Pozycji nr 1 (*Samochód osobowy SUV/MPV*: korekta z 60 000 zł na **59 050 zł**, z zachowaniem pokrycia różnicy ze sprzedaży obecnych pojazdów).
 
+#### 📅 Wpis: 14.11.2026 (Doprecyzowanie Specyfikacji Pojazdu PFRON - Hak Holowniczy i Relingi Dachowe)
+
+* **Wymagane Wyposażenie Pojazdu (Pozycja nr 1 Kosztorysu PFRON):** Do specyfikacji technicznej samochodu osobowego (SUV/MPV — Peugeot 5008 II / Citroën C5 Aircross / VW Touran II) dodano wymóg posiadania **haka holowniczego** oraz **relingów dachowych**.
+* **Uzasadnienie Formalne i Operacyjne:** Wyposażenie niezbędne do transportu wielkogabarytowego zaplecza dydaktycznego (składane stoły szkoleniowe, krzesła sztaplowane, ekran projekcyjny na trójnogu) za pomocą przyczepki transportowej lub bagażnika dachowego podczas warsztatów wyjazdowych w świetlicach wiejskich, pikników naukowych oraz eventów edukacyjnych bez własnej infrastruktury meblowej.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

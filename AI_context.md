@@ -1463,5 +1463,6 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Wzór Umowy Poufności (`umowa_NDA_APEX.md`):** Przygotowano gotowy, 1-stronicowy szablon umowy o zachowaniu poufności (NDA) zabezpieczający oboje współtwórców (**Natalia Gieczonis Czyżyk** i **Wojciech Czyżyk**), Syllabus 31 lekcji, metodykę, szablony kodu oraz kalkulacje *Franchise Box* karą umowną w wysokości **30 000 zł** za każde naruszenie (okres ochrony: 5 lat). Plik włączony do centralnego repozytorium `WojciechCzyzyk.github.io` jako `umowa_NDA_APEX.md`.
 
+* **Status Prawny Materiałów Wspomaganych AI:** Ugruntowano zasadę traktowania modeli LLM jako narzędzia wykonawczego (analogicznie do kompilatora/CAD) – twórczy wkład człowieka (architektura, parametry biznesowe, redakcja i integracja w całość) nadaje materiałom status utworu, a kompletny pakiet know-how (*Franchise Box*, pełny Syllabus) jest w 100% chroniony kontraktowo przez **NDA** oraz tajemnicę przedsiębiorstwa (docelowo przeniesienie wrażliwych materiałów franczyzowych do prywatnego repozytorium GitHub).
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

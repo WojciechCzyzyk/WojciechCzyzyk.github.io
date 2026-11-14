@@ -1635,5 +1635,12 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Centralny Rejestr Procedur (`procedury_APEX.md`):** Utworzono główny indeks procedur operacyjnych SOP dla Akademii APEX w architekturze „krótkie streszczenie + link do pliku szczegółowego” (z podpiętym na start dokumentem `zasady_lekcji_probnych.md`). Wzorzec oznaczono jako `[Klocek B2B / Doradztwo AI]` do wykorzystania przy wdrażaniu dokumentacji procesowej u klientów biznesowych.
 
+#### 📅 Wpis: 14.11.2026 (Sesja wieczorna - Kolejne 500 kroków bez chodzika & Odbiór Della Latitude 7430)
+
+* **Postęp Rehabilitacji (Wałbrzych):** Zaliczono kolejną serię **500 kroków** samodzielnego marszu wyłącznie z asekuracją poręczy (bez chodzika), w gorsecie ortopedycznym i bez dolegliwości bólowych. Po wysiłku powrót do pozycji horyzontalnej (odbarczanie Th6–Th8).
+* **Status Sprzętu (Centrum Dowodzenia):** Natalia odebrała z Paczkomatu laptop **Dell Latitude 7430 2w1 (32 GB RAM, 1 TB NVMe)**. Stan wizualny potwierdzony jako niemal fabryczny, z idealnie czystą matrycą dotykową bez żadnych rys. Stanowisko (laptop + mysz Logitech MX Anywhere 3S) gotowe do konfiguracji środowiska deweloperskiego.
+
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

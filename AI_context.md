@@ -1547,4 +1547,10 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Automatyzacja AI (Zero narzutu dla instruktora):** Raport nie jest pisany „z głowy” – powstaje w kilka sekund na podstawie realnej historii zmian (*commit log / diff*) w repozytorium GitHub ucznia. Sztuczna inteligencja analizuje kod napisany przez dziecko na lekcji i przygotowuje dla rodzica zrozumiałe, wspierające podsumowanie, które instruktor jedynie weryfikuje i wysyła przez ActiveNow.
 
 
+### 💡 Przewaga Technologiczna i Elastyczność Programowa (Niezależny Model Autorski)
+* **Brak ograniczeń franczyzowych:** W przeciwieństwie do sieciowych szkół programowania, które muszą realizować sztywne, narzucone z centrali scenariusze oparte wyłącznie na grach, Akademia APEX działa w oparciu o autorski, elastyczny program. Pozwala to na bieżąco wplatać w zajęcia programowalne drony UAV, druk 3D (Bambu Lab), mikroelektronikę (BBC micro:bit, Arduino/ESP32) oraz bieżące projekty szkolne uczniów.
+* **Innowacyjny System Raportowania Postępów (GitHub + AI):** Akademia wdraża autorski system automatycznej analizy postępów ucznia. Na podstawie rzeczywistej historii zmian w repozytorium kodu dziecka (GitHub Commit Log), narzędzia AI wspierają instruktora w generowaniu po każdych zajęciach spersonalizowanej informacji zwrotnej dla rodzica (pochwała za konkretny efekt + wskazówka rozwojowa + link do działającego projektu).
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1465,4 +1465,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Status Prawny Materiałów Wspomaganych AI:** Ugruntowano zasadę traktowania modeli LLM jako narzędzia wykonawczego (analogicznie do kompilatora/CAD) – twórczy wkład człowieka (architektura, parametry biznesowe, redakcja i integracja w całość) nadaje materiałom status utworu, a kompletny pakiet know-how (*Franchise Box*, pełny Syllabus) jest w 100% chroniony kontraktowo przez **NDA** oraz tajemnicę przedsiębiorstwa (docelowo przeniesienie wrażliwych materiałów franczyzowych do prywatnego repozytorium GitHub).
 
+* **Transfer Kompetencji Architekta Systemowego (ZacharPLC ➔ Akademia APEX):** Użytkownik świadomie zaobserwował bezpośredni transfer 10-letniego doświadczenia z budowy złożonego, wieloplikowego systemu Embedded ARM7 (Chrono Zachar) na projektowanie architektury biznesowej. Nawyk ciągłej refaktoryzacji w locie (*Separation of Concerns*), modularności pod skalowanie oraz wyprzedzającego wyłapywania wąskich gardeł (*Race Conditions* w logistyce, prawie IP i ergonomii pooperacyjnej Th6–Th8) potwierdza pełne kompetencje **System Architecta** i ostatecznie zamyka temat „syndromu oszusta”.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

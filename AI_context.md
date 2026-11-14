@@ -1553,5 +1553,8 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Autorski system monitorowania postępów edukacyjnych (AI Code Mentor):** W ramach działalności Akademii wdrożone zostanie autorskie rozwiązanie informatyczne integrujące repozytoria kodu uczniów (GitHub) z algorytmami sztucznej inteligencji. Po każdych zajęciach system automatycznie analizuje postępy pracy konkretnego dziecka w oparciu o historię jego wcześniejszych projektów, wyświetlając uczniowi bieżącą informację zwrotną na jego stronie internetowej oraz generując dla rodziców spersonalizowany raport edukacyjny wraz z linkiem do efektów pracy. Rozwiązanie to wyróżnia Akademię na tle tradycyjnych szkół franczyzowych, zapewniając pełną indywidualizację nauczania oraz wymierne zaangażowanie uczniów i rodziców.
 
+* **Autorski system monitorowania postępów edukacyjnych (AI Code Mentor):** W ramach działalności Akademii wdrożone zostanie autorskie rozwiązanie informatyczne integrujące repozytoria kodu uczniów (GitHub) z algorytmami sztucznej inteligencji. Po każdych zajęciach system automatycznie analizuje postępy pracy konkretnego dziecka w oparciu o historię jego wcześniejszych projektów, wyświetlając uczniowi bieżącą informację zwrotną na jego stronie internetowej oraz generując dla rodziców spersonalizowany raport edukacyjny wraz z linkiem do efektów pracy. Rozwiązanie to wyróżnia Akademię na tle tradycyjnych szkół franczyzowych, zapewniając pełną indywidualizację nauczania oraz wymierne zaangażowanie uczniów i rodziców.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1468,4 +1468,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Transfer Kompetencji Architekta Systemowego (ZacharPLC ➔ Akademia APEX):** Użytkownik świadomie zaobserwował bezpośredni transfer 10-letniego doświadczenia z budowy złożonego, wieloplikowego systemu Embedded ARM7 (Chrono Zachar) na projektowanie architektury biznesowej. Nawyk ciągłej refaktoryzacji w locie (*Separation of Concerns*), modularności pod skalowanie oraz wyprzedzającego wyłapywania wąskich gardeł (*Race Conditions* w logistyce, prawie IP i ergonomii pooperacyjnej Th6–Th8) potwierdza pełne kompetencje **System Architecta** i ostatecznie zamyka temat „syndromu oszusta”.
 
 
+* **Zasada Priorytetu Budżetowego PFRON (Wytyczna z 14.11.2026):** Wyposażenie pracowni, sprzęt IT, R&D oraz oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie pojazdu. W przypadku konieczności zwiększenia budżetu na sprzęt, środki są przesuwane bezpośrednio z Pozycji nr 1 (Samochód osobowy — obecnie 60 000 zł), a różnica w cenie auta pokrywana jest ze sprzedaży obecnych pojazdów użytkownika.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

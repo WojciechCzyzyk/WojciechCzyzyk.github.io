@@ -1644,4 +1644,12 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Sukces Formalny na Obchodzie (PZON):** Lekarz prowadzący podczas wieczornego obchodu potwierdził dołączenie przygotowanej przez użytkownika gotowej tabeli/projektu zaświadczenia PZON bezpośrednio do dokumentacji medycznej pacjenta, co gwarantuje kompletność i precyzję zapisów przy wypisie.
 
 
+#### 📅 Wpis: 14.11.2026 (Sesja wieczorna — Analiza Rynkowa Peugeot 5008 II & Onboarding Mentalny Natalii)
+
+* **Przegląd Rynkowy Pojazdu PFRON (Peugeot 5008 II Diesel 1.5 / 1.6 BlueHDi):** Zweryfikowano aktualne widełki cenowe na portalach ogłoszeniowych (Otomoto, OLX, sieci dealerskie) dla budżetu **75 000 – 80 000 zł** (59 050 zł z dotacji PFRON + dopłata ze sprzedaży obecnych aut). Wytypowano docelowy przedział zakupowy: **roczniki 2020–2021 (wersje po liftingu, silnik 1.5 BlueHDi 130 KM)** w cenach **68 000 – 82 000 zł** (w tym konkretne oferty na fakturę VAT marża oraz sztuki z fotelami z funkcją masażu). Wygenerowano jednostronicową ściągawkę porównawczą `Sciagawka_Cenowa_Peugeot_5008_PFRON.pdf` z checklistą techniczną dla warsztatu męża Lili (weryfikacja łańcucha rozrządu 7 mm vs 8 mm, układ AdBlue, hak holowniczy + relingi dachowe).
+* **Podział Ról przy Zakupie Auta:** Zatwierdzono model współpracy — Wojtek filtruje ogłoszenia i sprawdza parametry techniczno-formalne („karta oferty” z plusami i minusami), a **Natalia** dokonuje fizycznych oględzin, jazdy próbnej i finalnego wyboru pod kątem ergonomii.
+* **Wyłapany Problem & Strategia Wdrożenia Natalii (Onboarding Instruktora):** Odnotowano obecny dystans i brak wiary Natalii w powodzenie projektu Akademii APEX, wynikający z dwóch czynników: bieżącego obciążenia psychicznego chorobą i hospitalizacją męża oraz fałszywego przekonania, że do prowadzenia zajęć IT potrzebna jest zaawansowana matematyka i skomplikowane programowanie. Zmapowano jej kluczowy zasób charakteru (ogromna wytrwałość i determinacja w osiąganiu trudnych celów bez odpuszczania) oraz ustalono strategię bezpresyjnego przełamania bariery: zdjęcie z niej ciężaru formalności PFRON/kosztorysów i przeprowadzenie po powrocie do domu 15-minutowej, bezstresowej próby generalnej Lekcji #1 przy kawie (opartej na gotowych szablonach, logice na poziomie 6–7 klasy i wsparciu AI). Wygenerowano przewodnik `Pierwsze_15_minut_Natalia_APEX.pdf`.
+* **
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1632,4 +1632,8 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Standard Zarządzania SOP (Transfer z Medycyny):** Ustanowiono zasadę spisywania wszystkich kluczowych procesów Akademii APEX w formie prostych procedur operacyjnych (SOP — na wzór procedur medycznych/Sanepidu), stanowiących gotową bazę wiedzy dla Natalii, przyszłych instruktorów (Lili) oraz przyszłego podręcznika franczyzowego `[Klocek B2B / Doradztwo AI]`.
 
+
+* **Centralny Rejestr Procedur (`procedury_APEX.md`):** Utworzono główny indeks procedur operacyjnych SOP dla Akademii APEX w architekturze „krótkie streszczenie + link do pliku szczegółowego” (z podpiętym na start dokumentem `zasady_lekcji_probnych.md`). Wzorzec oznaczono jako `[Klocek B2B / Doradztwo AI]` do wykorzystania przy wdrażaniu dokumentacji procesowej u klientów biznesowych.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1471,4 +1471,17 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Zasada Priorytetu Budżetowego PFRON (Wytyczna z 14.11.2026):** Wyposażenie pracowni, sprzęt IT, R&D oraz oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie pojazdu. W przypadku konieczności zwiększenia budżetu na sprzęt, środki są przesuwane bezpośrednio z Pozycji nr 1 (Samochód osobowy — obecnie 60 000 zł), a różnica w cenie auta pokrywana jest ze sprzedaży obecnych pojazdów użytkownika.
 
 
+#### 📅 Wpis: 14.11.2026 (Sesja nocna - Kompletna Dokumentacja Wdrożeniowa PFRON v10)
+
+* **Wygenerowane Dokumenty PDF:** Utworzono finalny dokument kosztorysowy **`Plan_Dotacyjny_PFRON_Kosztorys_APEX-v10.pdf`** (obejmujący 7 pozycji na łączną kwotę 100 000 zł brutto z włączonym zewnętrznym szyldem LED za 1 000 zł oraz instrukcją rozliczania faktur i przesunięć budżetowych w PUP).
+* **Uzasadnienie Wniosku PFRON:** Opracowano pełny projekt uzasadnienia ogólnego i szczegółowego (pozycje 1–7), wiążący mobilno-stacjonarny model Akademii APEX z ergonomią i ochroną operowanego odcinka kręgosłupa **Th6–Th8** (wysokie siedzisko i bagażnik SUV/MPV, monitory 27" z regulacją wysokości, fotel ergonomiczny, pochłaniacz oparów lutowniczych).
+* **Zasada Priorytetu Budżetowego:** Utrwalono wytyczną, że wyposażenie pracowni ma pierwszeństwo przed udziałem dotacji w zakupie auta (ewentualne korekty cenowe sprzętu odejmowane są z Pozycji nr 1 — 60 000 zł).
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `umowa_NDA_APEX.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Wszystkie dokumenty dotacyjne i formalne gotowe. Przejście pacjenta w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

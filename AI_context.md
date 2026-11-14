@@ -1461,6 +1461,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Stosowanie umów o poufności (**NDA**) z karami umownymi przed udostępnieniem pełnego pakietu *Franchise Box* potencjalnym partnerom.
   - Rejestracja słowno-graficznego znaku towarowego w Urzędzie Patentowym RP (klasa 41) po uruchomieniu pierwszych grup pilotażowych.
 
+* **Wzór Umowy Poufności (`umowa_NDA_APEX.md`):** Przygotowano gotowy, 1-stronicowy szablon umowy o zachowaniu poufności (NDA) zabezpieczający oboje współtwórców (**Natalia Gieczonis Czyżyk** i **Wojciech Czyżyk**), Syllabus 31 lekcji, metodykę, szablony kodu oraz kalkulacje *Franchise Box* karą umowną w wysokości **30 000 zł** za każde naruszenie (okres ochrony: 5 lat). Plik włączony do centralnego repozytorium `WojciechCzyzyk.github.io` jako `umowa_NDA_APEX.md`.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

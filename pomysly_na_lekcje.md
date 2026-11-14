@@ -107,3 +107,22 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   2. **Dla rodzica (raport po zajęciach):** Zrozumiałe podsumowanie oparte na wzorcu *Feedback Sandwich* (konkretna pochwała za efekt + życzliwa wskazówka rozwojowa + bezpośredni link do działającego projektu).
 
 
+### 🤖 Autorski System „APEX AI Code Mentor” (Pełna Architektura & Grywalizacja)
+
+#### 1. Filary Systemu (Zamknięta Pętla Edukacyjna)
+* **Własny Awatar Ucznia (`avatar_base`):** Na 1–2. zajęciach dziecko projektuje z AI swojego spersonalizowanego bohatera, który staje się jego cyfrową wizytówką i głównym bohaterem kroniki sukcesów.
+* **Pamięć i Profilowanie Ucznia (`mentor_log.json`):** Każde repozytorium ucznia (`nick.github.io`) posiada plik logów przechowujący historię: datę, temat, wynik mikro-quizu, wcześniejsze pochwały oraz wskazówki rozwojowe. AI czyta tę historię przed oceną, dzięki czemu nie generuje powtarzalnych szablonów, lecz prowadzi indywidualny, długofalowy mentoring.
+* **Okienko Postępu na Żywo na Stronie Ucznia (Grywalizacja):** Na osobistej witrynie dziecka znajduje się kafelek **„🤖 Status od AI Mentora”**, który kilkanaście sekund po zapisaniu kodu wyświetla pochwałę, następną wskazówkę techniczną oraz najnowszą ilustrację z jego awatarem.
+* **5-Minutowy Mikro-Quiz na Koniec Zajęć:** Każde warsztaty kończą się krótkim, interaktywnym testem wiedzy z danego dnia. Wynik wpada automatycznie do logu ucznia jako twarde potwierdzenie opanowania materiału.
+* **Podwójny Wyzwalacz Automatyzacji (GitHub Actions + LLM/Image API):**
+  1. *Zwykły `Commit / Push` podczas lekcji:* Robot analizuje kod (`git diff`) + historię `mentor_log.json` i w 15 sekund aktualizuje tekstowy komentarz w okienku na stronie ucznia (niski koszt, brak spamu graficznego).
+  2. *Wyzwalacz `FINAŁ` na koniec zajęć:* Odpala pełny pakiet: zapisuje wynik mikro-quizu do `mentor_log.json`, generuje spersonalizowaną grafikę z udziałem `avatar_base` ucznia w scence z dzisiejszego tematu oraz przygotowuje raport dla odbierającego rodzica według wzorca *Feedback Sandwich* (**1. Konkretna pochwała + 2. Życzliwa wskazówka rozwojowa + 3. Wynik quizu + 4. Link do projektu + 5. Grafika z awatarem**).
+
+#### 2. Plan Wdrożenia w 4 Mikro-Sprintach (Poligon Testowy: `BartekCzyzyk.github.io`)
+* **Sprint 1 (Front-End UI):** Dodanie na stronie ucznia kafelka **„🤖 Status od AI Mentora”** wczytującego dane dynamicznie z pliku `status_ai.json` oraz najnowszą grafikę sukcesu.
+* **Sprint 2 (Struktura Pamięci):** Utworzenie pliku `mentor_log.json` przechowującego historię lekcji, wyniki mikro-quizów oraz dotychczasowe wskazówki AI.
+* **Sprint 3 (Silnik GitHub Actions + AI):** Stworzenie workflow `.github/workflows/ai_mentor.yml` (z bezpiecznikiem `if: github.actor != 'github-actions[bot]'` zapobiegającym pętlom oraz kluczami API w `GitHub Secrets`), obsługującego tryb zwykły (tekst) i tryb `FINAŁ` (tekst + generowanie scenki z `avatar_base`).
+* **Sprint 4 (Strumień dla Rodzica):** Przekazanie wygenerowanego podsumowania dnia dla rodzica (przez webhook Make.com / e-mail instruktora) do szybkiej akceptacji i wysyłki w ActiveNow.
+
+
+

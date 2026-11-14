@@ -1590,6 +1590,15 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 
+#### 📅 Wpis: 14.11.2026 (Sesja popołudniowa - Hierarchia Priorytetów & Zasada "Przy Okazji")
+
+* **Ustalona Hierarchia Priorytetów (Ochrona przed rozproszeniem):**
+  1. **Tu i teraz (Priorytet Główny):** Pełna regeneracja kręgosłupa (Th6–Th8), domknięcie formalności (PZON, wniosek dotacyjny PFRON) oraz uruchomienie i skalowanie **Akademii APEX (Sarenka Software Kids)** z Natalką.
+  2. **Zbierane „przy okazji” (Baza pod Doradztwo AI/IT dla MŚP):** Zakaz szukania nowych tematów na siłę. Wszelkie sprawdzone w boju nowinki i automatyzacje wypracowane podczas budowy Akademii APEX (tanie/darmowe hostingi WWW, lokalne SEO, potoki danych Make.com + Gmail API, szablony AI Copilotów) są na bieżąco katalogowane przez AI jako gotowe „klocki produktowe” pod przyszłą działalność doradczo-wdrożeniową dla małych firm.
+  3. **Niedaleka przyszłość (Po rozkręceniu biznesów):** Zakup jednej z 4 wolnych działek sąsiadujących z posesją pod Górą Szybowcową w Jeżowie Sudeckim pod budowę parterówki (90–100 m²) lub małych domków turystycznych przy wsparciu sprawdzonego sąsiada i jego ekip budowlanych.
+  4. **Daleki horyzont (Opcja otwarta):** Dewelopment projektów OZE (fotowoltaika / energetyka wiatrowa w Górach Kaczawskich przy liniach SN/WN) jako luźny kierunek na późniejsze lata.
+* **Instrukcja operacyjna dla AI:** Podczas bieżącej pracy nad Akademią APEX i projektami domowymi wyłapuj i oznaczaj uniwersalne rozwiązania (tagiem `[Klocek B2B / Doradztwo AI]`), które można bezpośrednio przenieść do oferty dla klientów biznesowych, nie odrywając użytkownika od głównego celu.
+* **Status Pacjenta:** Odpoczynek w pozycji horyzontalnej w Wałbrzychu (odbarczanie Th6–Th8), pełen spokój i klarowny plan działania.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

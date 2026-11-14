@@ -1483,5 +1483,14 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Wszystkie dokumenty dotacyjne i formalne gotowe. Przejście pacjenta w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej.
 
+### 📅 Wpis: 14.11.2026 (Zamknięcie sesji nocnej - Master-Pakiet PFRON v10 i Kapitał Relacyjny)
+
+* **Kamień Milowy (100% Bazy Merytorycznej PFRON):** Wygenerowano kompletny dokument scalający **`Master_Pakiet_Wniosku_PFRON_APEX-v10.pdf`**, zawierający Kosztorys Inwestycyjny v10 (100 000 zł brutto z zewnętrznym szyldem LED), ściągawkę z zasad rozliczania faktur w PUP, pełne uzasadnienie merytoryczno-ergonomiczne (ochrona kręgosłupa Th6–Th8) oraz szkic biznesplanu (PKD 85.59.B, próg rentowności na poziomie 10 uczniów).
+* **Strategiczny Kapitał Relacyjny pod Listy Intencyjne PFRON:** Zidentyfikowano dwie kluczowe ścieżki pozyskania niezobowiązujących deklaracji współpracy zwiększających punktację wniosku w PUP Jelenia Góra (do zebrania tuż przed naborem w 2027 r.):
+  1. **Szkoła Podstawowa nr 2 w Jeleniej Górze (SP2):** Bezpośredni dostęp do dyrekcji poprzez wychowawcę Bartka (prawą rękę dyrektor), wzmocniony widocznymi sukcesami Bartka jako wizytówki technologicznej szkoły (aplikacje webowe na konkurs 80-lecia SP2).
+  2. **Zespół Szkół Elektronicznych w Jeleniej Górze („Elektronik”):** Absolwencki sentyment oraz bezpośredni kontakt przez sąsiadkę pracującą w sekretariacie szkoły — baza pod deklarację współpracy w obszarze warsztatów elektroniki, Embedded i robotyki.
+* **Status Gotowości Formalnej:** Część koncepcyjna i finansowa pod dotację PFRON jest w pełni zamknięta. Dalsze kroki (przepisanie na oficjalny druk PUP Jelenia Góra, podpięcie orzeczenia PZON, listów intencyjnych oraz blokady środków na lokacie 120 000 zł) zostaną zrealizowane po ogłoszeniu naboru na początku 2027 roku.
+* 
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1452,5 +1452,15 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Strategia Formalna:** We wniosku o dotację PFRON utrzymany zostanie ogólny opis funkcjonalny pojazdu (bez narzucania konkretnej marki), co zapewni pełną swobodę wyboru najlepszego egzemplarza na etapie realizacji zakupów.
 *
 
+#### 📅 Wpis: 14.11.2026 (Sesja nocna - Strategia Ochrony Własności Intelektualnej APEX)
+
+* **Ochrona Prawna i Własność Intelektualna (IP):** Przeanalizowano i zatwierdzono bezkosztową strategię ochrony praw autorskich dla Akademii Cyfrowej Inżynierii APEX (Sarenka Software Kids). Rozgraniczono ochronę samej koncepcji biznesowej od prawnej ochrony konkretnego utworu (Ustawa o prawie autorskim i prawach pokrewnych) obejmującej Syllabus 31 lekcji, autorską metodykę, szablony piaskownicy oraz kod źródłowy witryn.
+* **Wdrożenie Klauzuli Copyright (`sarenka/index.html`):** W stopce głównej witryny Akademii wdrożono notę o prawach autorskich zabezpieczającą współautorstwo **Natalii Gieczonis Czyżyk** oraz **Wojciecha Czyżyka** wraz z zakazem kopiowania i powielania materiałów bez pisemnej zgody.
+* **Plan Dalszego Zabezpieczenia (Po walidacji rynkowej):**
+  - Wykorzystanie historii commitów GitHub (kryptograficzne hashe SHA + znaczniki czasu) jako dowodu pierwszeństwa autorstwa.
+  - Stosowanie umów o poufności (**NDA**) z karami umownymi przed udostępnieniem pełnego pakietu *Franchise Box* potencjalnym partnerom.
+  - Rejestracja słowno-graficznego znaku towarowego w Urzędzie Patentowym RP (klasa 41) po uruchomieniu pierwszych grup pilotażowych.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

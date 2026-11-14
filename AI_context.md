@@ -1542,4 +1542,9 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Wygenerowane Dokumenty:** `Sciezka_Roszczenia_Cardif_APEX.pdf` (jednostronicowy przewodnik po etapach eskalacji: Reklamacja 10–15% ➔ Rzecznik Finansowy 35–45% ➔ Sąd Rejonowy w Jeleniej Górze 75–85% + Plan B, zawierający procedurę ePUAP, tryb posiedzenia niejawnego/rozprawy zdalnej oraz zasady cesji z bankiem) [0.1.13, 0.1.14, cite: 1].
 * *
 
+### 🏁 Stały Rytuał Zakończenia Każdej Lekcji: Indywidualny Raport Mentorski (Git + AI)
+* **Wzorzec dydaktyczny:** Każde zajęcia kończą się wysłaniem rodzicom krótkiej, spersonalizowanej informacji zwrotnej opartej na modelu: **1. Konkretna pochwała (co się udało) + 2. Wskazówka rozwojowa (co warto dopracować) + 3. Link do żywego efektu pracy**.
+* **Automatyzacja AI (Zero narzutu dla instruktora):** Raport nie jest pisany „z głowy” – powstaje w kilka sekund na podstawie realnej historii zmian (*commit log / diff*) w repozytorium GitHub ucznia. Sztuczna inteligencja analizuje kod napisany przez dziecko na lekcji i przygotowuje dla rodzica zrozumiałe, wspierające podsumowanie, które instruktor jedynie weryfikuje i wysyła przez ActiveNow.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1506,4 +1506,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Nowy Wątek Prawno-Finansowy (Priorytet na jutro):** Analiza odmowy wypłaty świadczenia z tytułu ubezpieczenia do kredytu na dom. Ubezpieczyciel powołuje się na kontrowersyjny zapis umowny dotyczący faktu wykonywania pracy w okresie zachorowania, mimo że sama jednostka chorobowa jest objęta ochroną ubezpieczeniową.
 * **Kierunek Analizy:** Weryfikacja OWU i pisma odmownego pod kątem klauzul abuzywnych (art. 385¹ KC), sprzeczności wyłączenia z głównym celem umowy oraz przygotowanie twardej reklamacji do ubezpieczyciela / wniosku o interwencję Rzecznika Finansowego.
 
+#### 📅 Wpis: 14.11.2026 (Sesja poranna - Rozruch rehabilitacyjny & Przygotowanie do audytu ubezpieczenia kredytu)
+
+* **Postęp Rehabilitacji (Wałbrzych):** Zaliczony intensywny poranny trening na korytarzu oddziału (400 kroków szybkiego joggingu, 50 wspięć na palcach, marsz z wysokim unoszeniem kolan) w gorsecie ortopedycznym, z bardzo dobrą tolerancją wysiłku. Po treningu powrót do pozycji horyzontalnej (odbarczenie odcinka Th6–Th8).
+* **Audyt Ubezpieczenia Kredytu Hipotecznego (Stan w toku):** Użytkownik skompletował pełną dokumentację w formacie PDF (umowa/OWU, wniosek o wypłatę świadczenia, korespondencja z zapytaniem ubezpieczyciela o wykonywanie pracy oraz decyzja odmowna). Równolegle posiadana polisa dodatkowa od operatora komórkowego (pobyt w szpitalu 400 zł/dzień – wariant powypadkowy) zostaje na razie odłożona na bok jako temat poboczny.
+* **Instrukcja dla AI na start nowej sesji (Firefox):** System oczekuje na załadowanie przez użytkownika plików PDF dotyczących **ubezpieczenia kredytu hipotecznego** oraz krótkie objaśnienie kontekstu. Zadanie AI: szczegółowa analiza OWU i decyzji odmownej, weryfikacja zapisów o wykonywaniu pracy pod kątem klauzul abuzywnych (art. 385¹ KC) oraz przygotowanie skutecznej reklamacji.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

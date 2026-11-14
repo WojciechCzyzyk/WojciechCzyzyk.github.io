@@ -1570,4 +1570,26 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - **PUNKT WZNOWIENIA NASTĘPNEJ SESJI:** Ponieważ w SP 2 odbywają się równolegle dwa konkursy (szkolny o SP 2 oraz historyczny), Wojtek wgra w nowym wątku czysty plik `konkurs_sp2.jpg` (wersja z 5 imionami), aby jednorazowo dopisać dwa brakujące imiona na skrajnych chłopcach obok drużyny: **IGOR** (na chłopcu w brązowej bluzie z pucharem po lewej od Weroniki) oraz **JULEK** (na chłopcu obok Stasia po prawej od Stasia), a następnie zaktualizować listę 7 imion w sekcji dopingowej.
 * **
 
+#### 📅 Wpis: 14.11.2026 (Sesja poranno-południowa – Rekord 1000 kroków, Indeksacja Google, Analiza Konkurencji, Pełna Architektura „APEX AI Code Mentor”, Pałac Sobieszów & Sekcja Dopingowa SP 2 Klasa 5B)
+
+* **Postęp Rehabilitacji (Wałbrzych):** Nowy rekord poranny – zaliczone ok. **1000 kroków** joggingu/marszu przed godziną 8:00 rano w gorsecie ortopedycznym, z bardzo dobrą stabilnością i bez bólu. Po wysiłku odpoczynek w pozycji leżącej (odbarczanie Th6–Th8).
+* **Indeksacja Google & Status Dostawy Sprzętu:** Potwierdzono operatorem `site:` obecność obu witryn (`wojciechczyzyk.github.io` oraz `/sarenka/`) w globalnym indeksie Google. Laptop **Dell Latitude 7430 2w1 (1TB NVMe)** dotarł rano do centrum logistycznego (Jelenia Góra) – oczekiwanie na doręczenie do Paczkomatu InPost.
+* **Analiza Konkurencji & Marketing Lokalny (Zapisane w `sarenka_biznes.md`):**
+  - Zbadano lokalny oddział **Gigantów Programowania** w Jeleniej Górze (al. Wojska Polskiego 18A/2, od 299 zł/mc, grupy ~8 osób, niska saturacja rynku, sztywne umowy i rotacja kadry).
+  - Pozyskano strategiczny kontakt przez tatę Igora (informatyka z klasy 5B, który bardzo wysoko ocenił stronę i quizy Bartka) do **Centrum Przyrodniczo-Edukacyjnego KPN – Pałac Sobieszów**: dystrybucja ulotek APEX z kodem QR + przygotowanie darmowego **Quizu Przyrodniczo-Technologicznego KPN** z wizytówką Akademii APEX na ekranie wyniku.
+* **Zaprojektowany System Dydaktyczny „APEX AI Code Mentor” (Zapisany w `pomysly_na_lekcje.md`):**
+  - Pełna pętla: Własny awatar ucznia (`avatar_base`) + historia postępów (`mentor_log.json`) + kafelek na żywo na stronie ucznia + 5-minutowy mikro-quiz na koniec lekcji + automatyczny raport dla rodzica (*Feedback Sandwich*: pochwała + wskazówka + wynik quizu + link + wygenerowana przez AI scenka z awatarem ucznia na hasło `FINAŁ`).
+* **Wdrożenie Dopingowe na Stronie Bartka (`BartekCzyzyk.github.io` – Klasa 5B SP 2):**
+  - Wyizolowano awatar Bartka (`avatar_base`) i wygenerowano 3 dedykowane ilustracje do folderu `quizy/historia/`: `nauka_do_konkursu_historia.jpg` (Bartek przy biurku), `konkurs_sp2.jpg` (5-osobowa drużyna Bartka na podium: **Weronika, Zuzia, Bartek, Marysia, Staś**) oraz `konkurs_igor_julek.jpg` (2-osobowa drużyna na podium: **Igor i Julek**).
+  - Przygotowano gotowy kod HTML/CSS sekcji dopingowej dla obu drużyn klasy 5B do wklejenia w `quizy/historia/quiz_sp2_chrobry.html` (nad quizem).
+* **🎯 PUNKT WZNOWIENIA NASTĘPNEJ SESJI (PO PRZERWIE):**
+  - Wracamy bezpośrednio do budowy systemu **„APEX AI Code Mentor”** (opis w `pomysly_na_lekcje.md`) według 4 mikro-sprintów na poligonie `BartekCzyzyk.github.io` – zaczynamy od **Sprintu 1 (kod HTML/CSS/JS kafelka „🤖 Status od AI Mentora” na stronę główną Bartka oraz struktura pliku `status_ai.json`)** i **Sprintu 2 (schemat pamięci `mentor_log.json`)**.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `umowa_NDA_APEX.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `agile-style.css`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`, katalog `www/`)
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1513,4 +1513,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Instrukcja dla AI na start nowej sesji (Firefox):** System oczekuje na załadowanie przez użytkownika plików PDF dotyczących **ubezpieczenia kredytu hipotecznego** oraz krótkie objaśnienie kontekstu. Zadanie AI: szczegółowa analiza OWU i decyzji odmownej, weryfikacja zapisów o wykonywaniu pracy pod kątem klauzul abuzywnych (art. 385¹ KC) oraz przygotowanie skutecznej reklamacji.
 
 
+#### 📅 Wpis: 14.11.2026 (Sesja poranna - Audyt Ubezpieczenia Kredytu BNP Paribas Cardif & Projekt Reklamacji)
+
+* **Audyt Dokumentacji Ubezpieczeniowej (Polisa nr H10R19-11208742 / Sprawa nr 11054060):** Przeanalizowano Polisę, OWU `BGŻBNPP/HIPOTEKACPI_3_2.1/2018`, Kartę Produktu oraz decyzję odmowną Towarzystwa Ubezpieczeń na Życie Cardif Polska S.A. z dnia 11.03.2025 r.
+* **Mechanizm Odmowy & Potencjał Roszczenia:** Ubezpieczyciel odrzucił roszczenie z tytułu zdiagnozowanej w lutym 2025 r. ostrej białaczki szpikowej (AML — wprost objętej ochroną w art. 1 ust. 21 lit. a OWU), powołując się na tzw. „wymienność ryzyk” w Pakiecie 1 (art. 2 ust. 2 OWU), zgodnie z którą zatrudnienie na umowę o pracę wyłącza ochronę na wypadek poważnego zachorowania na rzecz ryzyka utraty pracy. Stawka sporu wynosi **4,5 Raty Kredytu** (połowa z limitu 9 rat przy 2 ubezpieczonych kredytobiorcach, maksymalnie **27 000 PLN** na spłatę kapitału w BNP Paribas) plus ustawowe odsetki za opóźnienie.
+* **Strategia Prawna & Przygotowane Pismo:** Opracowano gotowy tekst reklamacji na adres `reklamacje@cardif.pl`, oparty na zarzucie niedozwolonego postanowienia umownego / klauzuli abuzywnej (**art. 385¹ § 1 KC**), pozorności ochrony mimo wcześniejszej oceny ankiety medycznej (zgoda z 08.04.2019 r.) oraz naruszeniu obowiązków informacyjnych przy dystrybucji produktu (*misselling*). Termin odpowiedzi ubezpieczyciela wynosi **30 dni** (do 14.12.2026 r.), a po ewentualnej odmowie sprawa zostanie skierowana do **Rzecznika Finansowego**.
+* *
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

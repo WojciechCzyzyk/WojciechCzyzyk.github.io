@@ -1611,6 +1611,16 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Wymagane Wyposażenie Pojazdu (Pozycja nr 1 Kosztorysu PFRON):** Do specyfikacji technicznej samochodu osobowego (SUV/MPV — Peugeot 5008 II / Citroën C5 Aircross / VW Touran II) dodano wymóg posiadania **haka holowniczego** oraz **relingów dachowych**.
 * **Uzasadnienie Formalne i Operacyjne:** Wyposażenie niezbędne do transportu wielkogabarytowego zaplecza dydaktycznego (składane stoły szkoleniowe, krzesła sztaplowane, ekran projekcyjny na trójnogu) za pomocą przyczepki transportowej lub bagażnika dachowego podczas warsztatów wyjazdowych w świetlicach wiejskich, pikników naukowych oraz eventów edukacyjnych bez własnej infrastruktury meblowej.
 
+#### 📅 Wpis: 14.11.2026 (Sesja popołudniowa - Model Sukcesji Zespołu APEX, Logistyka Zakupu Auta & Zasady PFRON)
 
+* **Architektura Ról i Sukcesja w Akademii APEX:** Ustalono docelowy podział kompetencji zgodny z profilem „Odkrywcy/Architekta” użytkownika. Wojtek uruchamia pierwsze grupy i opracowuje nowe moduły R&D (drony, druk 3D, elektronika), po czym przekazuje bieżące prowadzenie zajęć **Natalii** (Główna Instruktorka), **Bartkowi** (Junior Mentor) oraz sprawdzonej przyjaciółce rodziny (**Lili** – docelowo jako wsparcie dydaktyczne), uwalniając własny czas na rozwój innowacji oraz doradztwo AI/IT dla firm.
+* **Strategia Pozyskania Pojazdu (Peugeot 5008 II):** Zidentyfikowano zaufane źródło zakupu auta (mąż Lili – warsztat samochodowy, model sprowadzania, pełnego serwisu i sprzedaży po okresie użytkowania ok. 20–30% poniżej ceny rynkowej). Zakup zostanie zrealizowany przez zaprzyjaźniony komis na **fakturę VAT marża** (w pełni akceptowaną w PFRON przy rozliczeniu brutto), z wyprzedzeniem czasowym ok. 1,5–2 m-ce przed wypłatą środków.
+* **Zasady Wypłaty i Rozliczenia PFRON (PUP Jelenia Góra):** Środki wypłacane są **z góry** na konto wnioskodawcy po podpisaniu umowy i ustanowieniu zabezpieczenia. Standardowy termin na dokonanie zakupów (po wpływie środków i rejestracji CEIDG) oraz złożenie rozliczenia (faktury + potwierdzenia przelewów) wynosi **30 dni od dnia otrzymania dotacji**.
+
+
+#### 📅 Wpis: 14.11.2026 (Popołudniowy przełom rehabilitacyjny - Chodzenie bez chodzika)
+
+* **Kamień Milowy Mobilności (Wałbrzych):** Użytkownik rozpoczął samodzielne chodzenie na korytarzu oddziału bez chodzika (z asekuracją poręczy), odczuwając wyraźny powrót stabilności, siły i kontroli mięśniowej w kończynach dolnych (chodzik przestaje być potrzebny).
+* **Reżim Bezpieczeństwa:** Bezwzględne utrzymanie dyscypliny gorsetu ortopedycznego przy każdej pionizacji oraz przeplatanie krótkich serii marszowych odpoczynkiem w pozycji horyzontalnej (odbarczanie Th6–Th8).
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

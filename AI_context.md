@@ -1443,4 +1443,14 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Wszystkie tematy kosztorysowe (`Plan_Dotacyjny_PFRON_Kosztorys_APEX-v9.pdf`) oraz formalne na jutrzejszy poranek domknięte na 100%. Przejście w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla pełnej regeneracji odcinka Th6–Th8.
 
 
+#### 📅 Wpis: 14.11.2026 (Sesja nocna - Selekcja pojazdów do kosztorysu PFRON APEX)
+
+* **Kandydaci do Kosztorysu PFRON (Pozycja nr 1 — Samochód osobowy SUV/MPV, budżet łączny 75 000 – 80 000 zł):** Zawężono wstępny wybór do modeli spełniających wymogi ergonomii operowanego odcinka kręgosłupa (**Th6–Th8**), niskiego spalania (oszczędne jednostki wysokoprężne 1.5 / 1.6 BlueHDi, skrzynia manualna lub automatyczna) oraz modułowego wnętrza z **3 niezależnymi fotelami w drugim rzędzie** (zamiast dzielonej kanapy, pod foteliki dziecięce i szybki załadunek mobilnej pracowni IT):
+  1. **Peugeot 5008 II** (faworyt pod kątem przestrzeni bagażowej >700 l i estetyki, naturalny następca obecnego Peugeota 308 SW).
+  2. **Citroën C5 Aircross** (bliźniak konstrukcyjny z zawieszeniem *Progressive Hydraulic Cushions* izolującym wstrząsy od kręgosłupa).
+  3. **Volkswagen Touran II** (opcja rezerwowa z segmentu MPV).
+* **Strategia Formalna:** We wniosku o dotację PFRON utrzymany zostanie ogólny opis funkcjonalny pojazdu (bez narzucania konkretnej marki), co zapewni pełną swobodę wyboru najlepszego egzemplarza na etapie realizacji zakupów.
+*
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

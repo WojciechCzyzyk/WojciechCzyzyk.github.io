@@ -1492,5 +1492,12 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Status Gotowości Formalnej:** Część koncepcyjna i finansowa pod dotację PFRON jest w pełni zamknięta. Dalsze kroki (przepisanie na oficjalny druk PUP Jelenia Góra, podpięcie orzeczenia PZON, listów intencyjnych oraz blokady środków na lokacie 120 000 zł) zostaną zrealizowane po ogłoszeniu naboru na początku 2027 roku.
 * 
 
+# 📅 Wpis: 14.11.2026 (Finał sesji nocnej - Kompletna Teczka Aplikacyjna PFRON APEX)
 
+* **Kamień Milowy (100% Gotowości Dokumentacyjnej PFRON):** Domknięto całą bazę dokumentów przygotowawczych pod wniosek o dotację PFRON w PUP Jelenia Góra (nabór 2027). Wygenerowano komplet plików gotowych do druku:
+  1. `Master_Pakiet_Wniosku_PFRON_APEX-v10.pdf` (Kosztorys v10 na 100 000 zł brutto z zewnętrznym szyldem LED 1 000 zł + ściągawka rozliczeniowa PUP + uzasadnienie merytoryczno-ergonomiczne Th6–Th8 + szkic biznesplanu PKD 85.59.B).
+  2. `Listy_Intencyjne_APEX_PFRON.pdf` (2 gotowe do podpisu wzory deklaracji współpracy dla dyrekcji SP2 im. Bolesława Chrobrego oraz Zespołu Szkół Elektronicznych w Jeleniej Górze).
+  3. `Deklaracja_Zainteresowania_Rodzica_APEX.pdf` (jednostronicowy formularz deklaracji klienta indywidualnego z klauzulą braku zobowiązań i zgodą RODO).
+* **Zasada Priorytetu Budżetowego:** Utrwalono wytyczną, że wyposażenie pracowni, sprzęt IT/R&D i oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie auta (ewentualne przesunięcia odejmowane są z Pozycji nr 1 — 60 000 zł).
+* 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

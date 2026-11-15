@@ -1700,6 +1700,13 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Nowa Linia Produktowa B2B („AI Executive Observer / Poranny Brief Szefa”) zapisana w `sarenka_biznes.md`:** Skatalogowano jako `[Klocek B2B / Doradztwo AI #2]` pomysł komercjalizacji silnika *APEX AI Code Mentor* dla sektora MŚP (3 warianty: *Poranny Brief Szefa*, *AI Audytor Obsługi Klienta* oraz *AI Asystent Procedur SOP*). System będzie rozwijany i testowany najpierw na żywo w ramach operacji Akademii APEX.
 
+### 🎯 Kompleksowy Pakiet Wdrożeniowy B2B: „Porządek w Firmie: Tablica Kanban + AI Brief Szefa”
+
+* **Architektura rozwiązania (Single Source of Truth):**
+  1. **Wdrożenie Tablicy Kanban (4 kolumny: Zlecone ➔ W trakcie ➔ Do sprawdzenia ➔ Zrobione):** Szef przydziela zadania konkretnym pracownikom (`Assignees`) z poziomu telefonu lub komputera, eliminując chaos karteczek, SMS-ów i ustnych ustaleń.
+  2. **Kolektor Zdarzeń (Make.com / GitHub Actions):** System w tle zlicza przesunięcia kart, czas realizacji zleceń, wpłaty/faktury oraz zapytania ofertowe ze strony WWW.
+  3. **Analiza AI (LLM z pamięcią historii):** Codziennie o 18:00 model AI analizuje postępy na tablicy i wysyła właścicielowi zwięzły raport: *co zostało zamknięte, gdzie powstało wąskie gardło, które zadania wiszą po terminie oraz jakie wnioski/anomalie wynikają z danych*. Rano o 7:30 pracownicy otrzymują automatyczne podsumowanie swoich priorytetów na dany dzień.
+* **Przewaga sprzedażowa:** Rozwiązanie w 100% oparte na sprawdzonym w boju modelu operacyjnym Akademii APEX – zero drogich licencji korporacyjnych, szybkie wdrożenie w 1–2 dni oraz wysoka marża doradcza.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

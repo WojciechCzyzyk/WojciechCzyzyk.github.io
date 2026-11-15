@@ -1698,4 +1698,8 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Zajawka Laboratorium R&D na Stronie Szkoły (`sarenka/index.html`):** Przygotowano blok HTML sekcji `#laboratorium-rd` (3 karty: *Eskadra Dronów UAV*, *Projektowanie CAD i Druk 3D*, *Elektronika i Czujniki*) do wstawienia pomiędzy rocznym Syllabusem a sekcją Cennika jako bezpieczna zapowiedź kolejnych etapów rozwoju Akademii oraz dowód spójności pod wniosek PFRON.
 * 
 
+* **Nowa Linia Produktowa B2B („AI Executive Observer / Poranny Brief Szefa”) zapisana w `sarenka_biznes.md`:** Skatalogowano jako `[Klocek B2B / Doradztwo AI #2]` pomysł komercjalizacji silnika *APEX AI Code Mentor* dla sektora MŚP (3 warianty: *Poranny Brief Szefa*, *AI Audytor Obsługi Klienta* oraz *AI Asystent Procedur SOP*). System będzie rozwijany i testowany najpierw na żywo w ramach operacji Akademii APEX.
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

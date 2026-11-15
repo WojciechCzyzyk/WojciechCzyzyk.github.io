@@ -1819,5 +1819,8 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Wieczorna sesja konfiguracyjna na nowym laptopie Dell Latitude 7430 zakończona pełnym sukcesem. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka Th6–Th8.
 
+* **Poprawka Zabezpieczająca Potok Make.com (Edge Case Fix):** Wyłapano i usunięto błąd walidacji `BundleValidationError (Missing value of required parameter 'to')` przy pustych/niepełnych wywołaniach bez pola `typ_formularza` i bez adresu e-mail. Na górnej ścieżce (`1st: Zapisy na zajecia`) dołożono drugi warunek logiczny (`Add AND rule`: `{{1.email}}` `Exists`), dzięki czemu Router odrzuca puste pakiety bez dezaktywacji scenariusza. Wyłączono również uciążliwe rozszerzenie sprawdzania pisowni w przeglądarce Firefox na nowym laptopie.
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

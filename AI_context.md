@@ -1773,5 +1773,12 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`)
 
 
+#### 📅 Wpis: 15.11.2026 (Sesja przedpołudniowa - Doprecyzowanie Specyfikacji IT PFRON & Zapytanie Ofertowe RFQ)
 
+* **Aktualizacja Specyfikacji Sprzętu IT (Kosztorys PFRON APEX):** Po porannym spacerze na świeżym powietrzu doprecyzowano parametry koszyka IT i wygenerowano dokument porównawczy `Zapytanie_Ofertowe_IT_PFRON_APEX.pdf` (łączna wartość bazowa pakietu: **19 750 – 24 650 zł brutto**, FV 23%) do wysłania sprawdzonemu dostawcy poleasingowego Della:
+  - *Laptopy uczniowskie (6–7 szt.):* 14" FHD IPS, i5 (11./12. gen.), 16 GB RAM, 256/512 GB NVMe, Win 11 Pro — wykreślono wymóg podświetlanej klawiatury w celu poszerzenia dostępności i optymalizacji ceny.
+  - *Laptopy instruktorskie (2 szt.):* Zróżnicowanie przekątnych — **1× 15,6"** (Latitude 5520/5530 lub Precision 3561/3571) oraz **1× 17"** (Precision 7750/7760) pod CAD/3D i montaż (oba 32 GB RAM, 512 GB NVMe, Win 11 Pro).
+  - *Monitory ergonomiczne (3 szt.):* Podział na **1× duży monitor szerokokątny zakrzywiony (Ultrawide Curved 34" UWQHD 3440×1440)** z USB-C PD dla założyciela oraz **2× mniejszy 24" IPS** z regulacją wysokości (HAS) dopasowany m.in. pod skos poddasza u Bartka.
+  - *Urządzenia dodatkowe w zapytaniu pakietowym:* 1× kolorowa laserowa drukarka wielofunkcyjna A4 (Wi-Fi/duplex), 1× projektor Full HD min. 3800 ANSI lm (BenQ MH560C), 1× drukarka 3D **Bambu Lab P1S Combo (z AMS)**, 1× zasilacz awaryjny **UPS** oraz akcesoria stanowiskowe (9× cicha mysz, 2× cicha klawiatura, 9× etui).
+* 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

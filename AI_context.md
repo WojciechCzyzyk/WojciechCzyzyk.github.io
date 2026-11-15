@@ -1725,6 +1725,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`)
 
+* **Strategia Wejścia na Rynek (Go-To-Market dla B2B):** Wdrożenie pakietu *„Kanban + AI Executive Observer”* rozpoczyna się od własnej Akademii APEX (etap *dogfooding*), a następnie w pierwszej kolejności kierowane jest do lokalnych placówek edukacyjnych (szkoły podstawowe, średnie, szkoły językowe i sportowe), gdzie niski budżet wyklucza drogie systemy korporacyjne, a bezpośrednie relacje z dyrekcją gwarantują szybkie wdrożenia referencyjne przed wyjściem do szerszego sektora MŚP.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

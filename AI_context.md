@@ -1671,4 +1671,21 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Dokumentacja formalna PZON (15.11.2026 - 04:23):** Wygenerowano kompletny, w 100% wypełniony danymi osobowymi, adresowymi i kontaktowymi 1-stronicowy wniosek `Wniosek_PZON_Wojciech_Czyzyk-v3.pdf` do PZON w Jeleniej Górze (obejmujący cele PFRON, kartę parkingową, konieczność opieki oraz wniosek o posiedzenie w trybie zaocznym) do wydrukowania przez Natalię i podpisania podczas dzisiejszej wizyty w Wałbrzychu.
 
 
+#### 📅 Wpis: 15.11.2026 (Sesja poranna - Rozbudowa Eskadry Dronów UAV 5+1+1, Czujniki R&D & Kosztorys PFRON v15)
+
+* **Rozbudowa Kosztorysu PFRON do Wersji v15 (`Master_Pakiet_Wniosku_PFRON_APEX-v15.pdf`):** Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (*Pracownia Embedded, Robotyki, Druku 3D i Eskadra Dronów UAV*) z 9 050 zł do **13 470 zł** (przesunięcie 4 420 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do **54 630 zł**, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: **100 000 zł**).
+* **Zatwierdzona Struktura Eskadry UAV (5+1+1 = 7 sztuk, budżet 7 250 zł):**
+  - *1× Flagowa platforma R&D / patrolowa (górna półka, 3 800 zł):* Z modułem wizyjnym / kamerą HD oraz wyjściami sterującymi do montażu drukowanych w 3D mechanizmów ładunkowych (chwytak / zwalniak).
+  - *1× Jednostka szkoleniowa z ESP32 i wizją (średnia półka, 1 600 zł):* Klasy DJI RoboMaster TT do lotów wewnątrz sali i nawigacji po znacznikach ArUco.
+  - *5× Mini-dron edukacyjny (flota treningowa 1:1 dla całej grupy, 1 850 zł).*
+* **Katalog Czujników i Modułów Rozszerzających UAV (Pozycja nr 5):** Dalmierze laserowe **ToF VL53L1X**, czujniki ultradźwiękowe **HC-SR04**, sensory środowiskowe **BME280 / PMS5003**, moduły wizyjne **ESP32-CAM / OpenMV**, adresowalne paski **LED WS2812B**, mikroserwa **SG90**, elektromagnesy oraz dodatkowe pakiety zasilające.
+* **Nowe Scenariusze Dydaktyczne & Rozwój R&D (`pomysly_na_lekcje.md` — Pomysł #6):** Zapisano 6 autorskich misji warsztatowych (w tym flagowy projekt **„Latający Szachista”** z elektromagnesem na lince i silnikiem Stockfish, autonomiczny patrol posiadłości, latająca stacja smogowa, unikanie przeszkód ToF, nocna misja ratunkowa GOPR oraz zrzut kapsuły na spadochronie). Budowa tych projektów stanowi jednocześnie praktyczny poligon R&D użytkownika (MAVLink, PX4/ArduPilot, fuzja sensorów, wizja komputerowa) wzmacniający profil zawodowy Embedded/Aerospace.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `umowa_NDA_APEX.md`, `procedury_APEX.md`, `zasady_lekcji_probnych.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`)
+
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

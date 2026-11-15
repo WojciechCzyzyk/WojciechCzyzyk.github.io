@@ -1727,5 +1727,11 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Strategia Wejścia na Rynek (Go-To-Market dla B2B):** Wdrożenie pakietu *„Kanban + AI Executive Observer”* rozpoczyna się od własnej Akademii APEX (etap *dogfooding*), a następnie w pierwszej kolejności kierowane jest do lokalnych placówek edukacyjnych (szkoły podstawowe, średnie, szkoły językowe i sportowe), gdzie niski budżet wyklucza drogie systemy korporacyjne, a bezpośrednie relacje z dyrekcją gwarantują szybkie wdrożenia referencyjne przed wyjściem do szerszego sektora MŚP.
 
+* **Koncepcja Produktowa B2B Hardware + AI (`sarenka_biznes.md` — `[Klocek B2B #3]`):** Zapisano architekturę strefowego systemu lokalizacji i bezpieczeństwa dla szkół i świetlic **„Inteligentny Kampus RFID + AI”** (węzły UHF RFID + ESP32 z kalibracją RSSI na wzór ZacharPLC + silnik powiadomień i alertów AI dla nauczycieli i rodziców), zaparkowaną do realizacji po starcie Akademii APEX.
+
+* **Aktualizacja Kosztorysu PFRON do Wersji v16 (`Master_Pakiet_Wniosku_PFRON_APEX-v16.pdf`):** Dodano profesjonalny **zestaw deweloperski UHF RFID (865–868 MHz) z antenami i pakietem 50–100 tagów/breloków** do Pozycji nr 5 (wzrost Pozycji nr 5 z 13 470 zł do **14 670 zł**, przesunięcie 1 200 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do **53 430 zł**; suma wniosku bez zmian: **100 000 zł**).
+* **Filozofia Marketingowa i Dydaktyczna „Inżynieria w Biznesie od Pierwszego Dnia”:** Zatwierdzono model rozwijania i testowania komercyjnych projektów R&D (RFID + ESP32, AI Executive Observer) bezpośrednio podczas warsztatów z uczniami w pracowni jako potężny wyróżnik reklamowy Akademii APEX (praca na prawdziwych problemach biznesowych zamiast sztucznych ćwiczeń).
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -124,5 +124,35 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Sprint 3 (Silnik GitHub Actions + AI):** Stworzenie workflow `.github/workflows/ai_mentor.yml` (z bezpiecznikiem `if: github.actor != 'github-actions[bot]'` zapobiegającym pętlom oraz kluczami API w `GitHub Secrets`), obsługującego tryb zwykły (tekst) i tryb `FINAŁ` (tekst + generowanie scenki z `avatar_base`).
 * **Sprint 4 (Strumień dla Rodzica):** Przekazanie wygenerowanego podsumowania dnia dla rodzica (przez webhook Make.com / e-mail instruktora) do szybkiej akceptacji i wysyłki w ActiveNow.
 
+---
+
+## 💡 Pomysł #6: Laboratorium UAV — Autonomiczne Drony, Czujniki i „Latający Szachista” (Ścieżka Zaawansowana / R&D)
+
+* **Źródło inspiracji:** Projektowanie pracowni R&D w ramach kosztorysu PFRON v15 (Eskadra UAV 5+1+1) oraz połączenie lotniczego doświadczenia założyciela z drukiem 3D (Bambu Lab P1S) i elektroniką (ESP32 / micro:bit).
+* **Grupa docelowa:** Starsze grupy (klasy 5–8) oraz projekty semestralne / pokazy na Dni Otwarte.
+* **Wykorzystywany sprzęt z pracowni:** 5× mini-dron treningowy, 1× dron średni z kamerą i modułem ESP32 (klasy RoboMaster TT), 1× flagowa platforma UAV z kamerą HD i otwartym SDK, drukarka 3D Bambu Lab P1S, dalmierze laserowe ToF VL53L1X, czujniki HC-SR04, sensory środowiskowe BME280/PMS5003, paski LED WS2812B, mikroserwa SG90 i elektromagnesy.
+
+### 🎯 Katalog 6 Misji Warsztatowych (Mikro-Sprinty):
+
+1. **„Latający Szachista” (Projekt Flagowy / Demo Day):**
+   * *Cel:* Autonomiczny dron rozgrywający partię szachów na dużej szachownicy podłogowej (1,6 × 1,6 m).
+   * *Mechanika:* Kamera dolna rozpoznaje znaczniki ArUco w rogach planszy, silnik szachowy w Pythonie (Stockfish) wylicza ruch, a dron opuszcza na cienkiej lince lekki elektromagnes sterowany z ESP32, podnosząc pionki z neodymowym magnesem i przenosząc je na docelowe pole bez podmuchu śmigieł tuż nad planszą.
+2. **Autonomiczny Patrol Posiadłości (Computer Vision):**
+   * *Cel:* Zaprogramowanie trasy oblotu posesji po współrzędnych lub punktach orientacyjnych z podglądem na żywo w Pythonie/OpenCV.
+   * *Mechanika:* Detekcja otwartej bramy lub obecności osoby w strefie i automatyczna wysyłka zrzutu ekranu z powiadomieniem.
+3. **Latająca Stacja Pogodowa i Smogowa (Telemetria Środowiskowa):**
+   * *Cel:* Zbadanie pionowego profilu czystości powietrza nad działką (przy ziemi, na 15 m i 30 m wysokości).
+   * *Mechanika:* Moduł ESP32 z czujnikami **BME280** (ciśnienie, temperatura, wilgotność) oraz **PMS5003** (pyły zawieszone PM2.5/PM10) zapisuje pomiary na karcie SD, a dzieci rysują wykresy zmian z wysokością.
+4. **Latający Radar — Unikanie Przeszkód (*Collision Avoidance*):**
+   * *Cel:* Napisanie algorytmu autonomicznego zwiadowcy, który sam wyhamuje i ominie ścianę w korytarzu.
+   * *Mechanika:* Wykorzystanie dalmierzy laserowych **ToF VL53L1X** lub ultradźwiękowych **HC-SR04** podpiętych po I2C/GPIO do kontrolera lotu.
+5. **Nocna Misja Ratunkowa GOPR (Wizja + Sygnalizacja):**
+   * *Cel:* Odnalezienie zaginionego „turysty” (znacznika w terenie) i oznaczenie jego pozycji dla ekipy ratunkowej.
+   * *Mechanika:* Po wykryciu celu w kamerze dron zawisa nad nim, uruchamia stroboskop na adresowalnym pasku **LED WS2812B** i nadaje sygnał dźwiękowy buzzerem.
+6. **Zrzut Kapsuły Humanitarnej (CAD + Druk 3D + Serwo):**
+   * *Cel:* Precyzyjny zrzut ładunku na spadochronie w wyznaczoną strefę zrzutu.
+   * *Mechanika:* Uczniowie projektują w Tinkercadzie i drukują na **Bambu Lab P1S** mechanizm zwalniający na mikroserwie **SG90** oraz kapsułę amortyzującą.
+
+* **Wartość dla portfolio prowadzącego (R&D):** Rozwój własnych kompetencji w zakresie protokołu **MAVLink**, autopilotów **PX4 / ArduPilot**, fuzji sensorów oraz wizji komputerowej w Pythonie.
 
 

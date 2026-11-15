@@ -1821,6 +1821,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Poprawka Zabezpieczająca Potok Make.com (Edge Case Fix):** Wyłapano i usunięto błąd walidacji `BundleValidationError (Missing value of required parameter 'to')` przy pustych/niepełnych wywołaniach bez pola `typ_formularza` i bez adresu e-mail. Na górnej ścieżce (`1st: Zapisy na zajecia`) dołożono drugi warunek logiczny (`Add AND rule`: `{{1.email}}` `Exists`), dzięki czemu Router odrzuca puste pakiety bez dezaktywacji scenariusza. Wyłączono również uciążliwe rozszerzenie sprawdzania pisowni w przeglądarce Firefox na nowym laptopie.
 
+* **Formalności Skarbowe (e-Urząd Skarbowy):** Złożono elektroniczne pełnomocnictwo szczególne **PPS-1EU** (zwolnione z opłaty skarbowej dla małżonka) ustanawiające Wojciecha Czyżyka pełnomocnikiem Natalii Gieczonis Czyżyk w sprawie wyjaśnień dotyczących raportu Allegro DAC7 przed Urzędem Skarbowym w Jeleniej Górze.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

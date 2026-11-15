@@ -1732,6 +1732,7 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 * **Aktualizacja Kosztorysu PFRON do Wersji v16 (`Master_Pakiet_Wniosku_PFRON_APEX-v16.pdf`):** Dodano profesjonalny **zestaw deweloperski UHF RFID (865–868 MHz) z antenami i pakietem 50–100 tagów/breloków** do Pozycji nr 5 (wzrost Pozycji nr 5 z 13 470 zł do **14 670 zł**, przesunięcie 1 200 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do **53 430 zł**; suma wniosku bez zmian: **100 000 zł**).
 * **Filozofia Marketingowa i Dydaktyczna „Inżynieria w Biznesie od Pierwszego Dnia”:** Zatwierdzono model rozwijania i testowania komercyjnych projektów R&D (RFID + ESP32, AI Executive Observer) bezpośrednio podczas warsztatów z uczniami w pracowni jako potężny wyróżnik reklamowy Akademii APEX (praca na prawdziwych problemach biznesowych zamiast sztucznych ćwiczeń).
 
+* **Aktualizacja Motta Szkoły (`sarenka/index.html`):** Wdrożono pozycjonowanie komunikacyjne (*„Inżynieria stosowana w biznesie od pierwszego dnia”*) w sekcji Hero oraz w bloku „Dlaczego APEX?”.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

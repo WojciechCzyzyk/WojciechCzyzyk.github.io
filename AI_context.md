@@ -1734,5 +1734,21 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Aktualizacja Motta Szkoły (`sarenka/index.html`):** Wdrożono pozycjonowanie komunikacyjne (*„Inżynieria stosowana w biznesie od pierwszego dnia”*) w sekcji Hero oraz w bloku „Dlaczego APEX?”.
 
+#### 📅 Wpis: 15.11.2026 (Sesja poranna - Eskadra UAV 5+1+1, Kosztorys PFRON v16, Inteligentny Kampus RFID + AI & Samouczący się Doradca B2B)
+
+* **Finalny Kosztorys PFRON v16 (`Master_Pakiet_Wniosku_PFRON_APEX-v16.pdf`):** Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (*Pracownia Embedded, Robotyki, Druku 3D, Eskadra UAV & Zestaw UHF RFID*) do **14 670 zł** (przesunięcia łącznie 5 620 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do **53 430 zł**, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: **100 000 zł**).
+* **Zatwierdzony Sprzęt R&D w Pozycji nr 5:**
+  - *Eskadra Dronów UAV (5+1+1 = 7 sztuk, budżet 7 250 zł):* 1× flagowa platforma R&D z modułem wizyjnym/kamerą HD i wyjściami pod drukowane w 3D mechanizmy ładunkowe (3 800 zł), 1× jednostka szkoleniowa z ESP32 i wizją klasy RoboMaster TT (1 600 zł), 5× mini-dron treningowy 1:1 dla grupy (1 850 zł).
+  - *Czujniki i moduły rozszerzające:* dalmierze laserowe **ToF VL53L1X**, czujniki **HC-SR04**, sensory środowiskowe **BME280 / PMS5003**, moduły wizyjne **ESP32-CAM / OpenMV**, paski **LED WS2812B**, mikroserwa **SG90**, elektromagnesy i pakiety zasilające.
+  - *Zestaw deweloperski UHF RFID (865–868 MHz, 1 200 zł):* czytnik z regulacją mocy i odczytem RSSI, anteny panelowe oraz pakiet 50–100 pasywnych tagów/breloków do integracji z ESP32.
+* **Nowe Scenariusze Dydaktyczne & Rozwój R&D (`pomysly_na_lekcje.md` — Pomysł #6):** Zapisano 6 misji UAV (w tym flagowy projekt **„Latający Szachista”** z elektromagnesem na lince i silnikiem Stockfish, autonomiczny patrol posiadłości, latająca stacja smogowa, unikanie przeszkód ToF, nocna misja ratunkowa GOPR oraz zrzut kapsuły na spadochronie), wzmacniających jednocześnie profil zawodowy użytkownika (**MAVLink, PX4/ArduPilot, fuzja sensorów, OpenCV**).
+* **Aktualizacja Witryn Produkcyjnych:**
+  - *Portfolio (`WojciechCzyzyk.github.io/index.html`):* Wdrożono na produkcji kafelek **„AI Code Mentor & Executive Observer”** z odnośnikiem do żywego poligonu `bartekczyzyk.github.io`.
+  - *Strona Szkoły (`sarenka/index.html`):* Zaktualizowano motto szkoły w Hero i sekcji „Dlaczego APEX?” (*„Inżynieria stosowana w biznesie od pierwszego dnia”*) oraz przygotowano sekcję `#laboratorium-rd` (3 karty: *Eskadra Dronów UAV*, *Projektowanie CAD i Druk 3D*, *Elektronika i Czujniki*).
+* **Ewolucja Produktów B2B w `sarenka_biznes.md` (Testowane wewnątrz Akademii APEX):**
+  - *`[Klocek B2B #2]` — „Porządek w Firmie: Tablica Kanban + AI Executive Observer (Samouczący się Doradca Szefa)”:* Połączenie 4-kolumnowej tablicy Kanban (szef przydziela zadania pracownikom) z kolektorem zdarzeń i agentem AI, który nie tylko codziennie raportuje postępy (brief o 18:00 + przypomnienia dla zespołu o 7:30), ale także **analizuje trendy historyczne i aktywnie podpowiada szefowi optymalizacje procesów oraz programu** (start komercjalizacji od placówek oświatowych po przetestowaniu w APEX).
+  - *`[Klocek B2B #3]` — „Inteligentny Kampus i Świetlica RFID + AI”:* Strefowy system bezpieczeństwa i lokalizacji uczniów w całym budynku szkoły (węzły UHF RFID + ESP32 z kalibracją RSSI na wzór ZacharPLC + pasywne tagi w plecakach + powiadomienia dla rodziców, listy ewakuacyjne i alerty anomalii AI), rozwijany i testowany najpierw w pracowni z udziałem uczniów.
+* *
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

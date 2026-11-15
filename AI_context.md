@@ -1780,5 +1780,15 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
   - *Laptopy instruktorskie (2 szt.):* Zróżnicowanie przekątnych — **1× 15,6"** (Latitude 5520/5530 lub Precision 3561/3571) oraz **1× 17"** (Precision 7750/7760) pod CAD/3D i montaż (oba 32 GB RAM, 512 GB NVMe, Win 11 Pro).
   - *Monitory ergonomiczne (3 szt.):* Podział na **1× duży monitor szerokokątny zakrzywiony (Ultrawide Curved 34" UWQHD 3440×1440)** z USB-C PD dla założyciela oraz **2× mniejszy 24" IPS** z regulacją wysokości (HAS) dopasowany m.in. pod skos poddasza u Bartka.
   - *Urządzenia dodatkowe w zapytaniu pakietowym:* 1× kolorowa laserowa drukarka wielofunkcyjna A4 (Wi-Fi/duplex), 1× projektor Full HD min. 3800 ANSI lm (BenQ MH560C), 1× drukarka 3D **Bambu Lab P1S Combo (z AMS)**, 1× zasilacz awaryjny **UPS** oraz akcesoria stanowiskowe (9× cicha mysz, 2× cicha klawiatura, 9× etui).
-* 
+
+#### 📅 Wpis: 15.11.2026 (Sesja południowa - UAT na oddziale, Kody PKD 2025 & Fail-Safe umowy PFRON)
+
+* **Walidacja Rynkowa UAT (Szpital Wałbrzych):** Rozpoczęto testy użyteczności witryny Akademii APEX (`WojciechCzyzyk.github.io/sarenka/`) na docelowej grupie odbiorców (personel medyczny szukający zajęć dla dzieci). Zaprojektowano krótki, 15-sekundowy formularz opinii oparty na przyciskach radio i checkboxach (integracja przez istniejący Webhook Make.com z użyciem Routera i filtra `email -> Exists / Does not exist`).
+* **Struktura Kodów PKD 2025 dla JDG (Szkoła + Usługi IT):** Zdefiniowano docelowy zestaw kodów do wpisu w CEIDG (po podpisaniu umowy o dotację PFRON):
+  - *PKD główne (Edukacja):* **85.59.D** – *Pozostałe pozaszkolne formy edukacji, gdzie indziej niesklasyfikowane* (odpowiednik dawnego 85.59.B w klasyfikacji PKD 2025).
+  - *PKD dodatkowe (Usługi IT i doradztwo):* **62.20.B** (doradztwo w zakresie informatyki i zarządzanie urządzeniami informatycznymi), **62.10.B** (pozostała działalność w zakresie programowania) oraz **62.90.Z** (pozostała działalność usługowa w zakresie technologii informatycznych i komputerowych).
+* **Zabezpieczenie Przychodów B2B (Obsługa IT Gabinetu Medycznego):** Potwierdzono pełną legalność i opłacalność fakturowania stałej opieki informatycznej i administracji systemami NFZ/eWUŚ/P1/KSeF dla gabinetu stomatologicznego Mamy (ryczałt rynkowy na podstawie prostej umowy B2B, zwolnienie podmiotowe z VAT, płatność przelewem firmowym) jako stabilnego filaru przychodów firmy w biznesplanie PFRON.
+* **Analiza Ryzyk Zdrowotnych (Fail-Safe Umowy PFRON):** Zweryfikowano ochronę prawną beneficjenta i poręczyciela (lokata Mamy 120 000 zł): okres L4 wlicza się do wymaganego okresu prowadzenia firmy, hospitalizacja uprawnia do wniosku o zawieszenie/przerwę bez zwrotu środków, a w razie trwałej niezdolności do pracy lub zdarzenia losowego urząd odstępuje od dochodzenia zwrotu i w 100% zwalnia blokadę lokaty.
+
+
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

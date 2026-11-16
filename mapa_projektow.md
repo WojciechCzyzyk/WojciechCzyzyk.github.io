@@ -29,7 +29,7 @@
 ---
 
 ## 2. Repozytorium Embedded C++20 (Sterownik Rolet)
-* **Repozytorium:** `https://github.com`
+* **Repozytorium:** `https://raw.githubusercontent.com/WojciechCzyzyk/esp32-smart-blinds/refs/heads/main/`
 * **Pliki w repozytorium:**
   - `src/main.cpp` — główny plik uruchomieniowy ESP32
   - `BlindsManager.h` / `BlindsManager.cpp` — logika biznesowa i matematyka pozycji % (C++20)
@@ -41,8 +41,8 @@
 ---
 
 ## 3. Repozytorium Akademii Cyfrowej Inżynierii APEX (Sarenka Software Kids)
-* **Repozytorium:** `https://github.com`
-* **Strona WWW:** `https://github.iosarenka/`
+* **Repozytorium:** `https://raw.githubusercontent.com/WojciechCzyzyk/sarenka/refs/heads/main/`
+* **Strona WWW:** `wojciechczyzyk.github.io/sarenka/`
 * **Pliki w repozytorium:**
   - `index.html` — główny Landing Page szkoły (Syllabus, FAQ, UAT, SEO)
   - `style.css` — odseparowany arkusz stylów Dark Mode / RWD
@@ -54,8 +54,8 @@
 ---
 
 ## 4. Repozytorium Mentorskie i Poligon Edukacyjny (Bartek)
-* **Repozytorium:** `https://github.com`
-* **Strona WWW:** `https://github.io`
+* **Repozytorium:** `https://raw.githubusercontent.com/BartekCzyzyk/BartekCzyzyk.github.io/refs/heads/main/`
+* **Strona WWW:** `https://bartekczyzyk.github.io/`
 * **Pliki w repozytorium:**
   - `index.html` — strona główna portfolio i centrum treningowego (z blokadą `noindex`)
   - `www/agile-style.css` — arkusz stylów witryny
@@ -76,6 +76,7 @@
 ---
 
 ## 5. Repozytorium Pilotażowe B2B: Smart School RFID + AI
-* **Repozytorium:** `https://github.com`
+* **Repozytorium:** `https://raw.githubusercontent.com/WojciechCzyzyk/smart-school-ai/refs/heads/main/`
+* **Strona WWW:** `wojciechczyzyk.github.io/smart-school-ai/`
 * **Pliki w repozytorium:**
   - `index.html` — interaktywna prezentacja kokpitu świetlicy (Drag & Drop, strefy UHF RFID / NFC, radiowęzeł TTS, alerty AI) oraz powiązane moduły CSS/JS

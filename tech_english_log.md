@@ -23,3 +23,21 @@
   - `propagation delay` / `latency` — opóźnienie propagacji / latencja (pisownia)
   - `calculate and compensate for` — obliczyć i skompensować
   - `Does that make sense?` — naturalne zamknięcie wyjaśnienia technicznego (zamiast *Is it clear for you?*)
+
+---
+
+### Sesja #2 (16.11.2026) — UHF RFID Zone Isolation & RSSI Filtering (Smart School / Chrono Zachar)
+* **Wynik KPI słownictwa:** 4 / 5 pojęć (**80%** — zaliczone: `transmit power`, `to filter out`, `RSSI threshold`, `hysteresis`; do utrwalenia: `false positives`).
+* **Zwrot doprecyzowujący pytanie rekrutera (Bonus):**
+  > *"Just to clarify the requirement—are you asking how I filter out **foreign tags** outside our database, or how I prevent reading **our own tags** when someone just walks past the room in the hallway?"*
+* **Pytanie rekrutacyjne:** *"In a UHF RFID system, how do you prevent a reader inside a room from accidentally detecting tags carried by people walking past in the hallway?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"To prevent **false positives** from the hallway, I combine hardware and software techniques. First, I lower the reader's **transmit power** and calibrate the **RSSI threshold** by measuring the signal at the physical edge of the room. Second, in software, I **filter out** tags that are already active in an adjacent zone, or compare readings from two antennas to pick the **stronger signal**. Finally, I apply **hysteresis** to the RSSI thresholds so a tag near the boundary doesn't bounce back and forth between states. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `Just to clarify the requirement...` — Żeby doprecyzować wymaganie...
+  - `foreign tags` / `unregistered tags` — obce / niezarejestrowane tagi (zamiast *alien tags*)
+  - `false positives` — fałszywe odczyty (wykrycia spoza strefy)
+  - `adjacent zone` — sąsiednia strefa
+  - `stronger signal` — silniejszy sygnał (zamiast *more signal*)
+  - `apply hysteresis` — zastosować histerezę (np. różny próg RSSI dla wejścia i wyjścia)
+  - `bounce back and forth` — przeskakiwać w tę i z powrotem (migotanie stanu na granicy)

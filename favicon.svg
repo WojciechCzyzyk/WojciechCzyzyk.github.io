@@ -1,17 +1,19 @@
-<svg xmlns="http://w3.org" viewBox="0 0 64 64">
-  <!-- Tło w stylu Dark Mode GitHub -->
-  <rect width="64" height="64" rx="14" fill="#0D1117"/>
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#56D364" stroke-width="3"/>
+<svg xmlns="http://w3.org" width="64" height="64" viewBox="0 0 64 64">
+  <!-- 100% nieprzezroczyste ciemne tło na całą powierzchnię -->
+  <rect x="0" y="0" width="64" height="64" fill="#05070A"/>
   
-  <!-- Piny układu scalonego (góra i dół) -->
-  <line x1="20" y1="2" x2="20" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
-  <line x1="32" y1="2" x2="32" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
-  <line x1="44" y1="2" x2="44" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <!-- Gruba neonowa ramka układu -->
+  <rect x="4" y="4" width="56" height="56" rx="10" fill="#0D1117" stroke="#39FF14" stroke-width="5"/>
   
-  <line x1="20" y1="55" x2="20" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
-  <line x1="32" y1="55" x2="32" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
-  <line x1="44" y1="55" x2="44" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <!-- Grube piny u góry i u dołu (czytelne w 16x16 px) -->
+  <rect x="17" y="4" width="6" height="10" fill="#39FF14"/>
+  <rect x="29" y="4" width="6" height="10" fill="#39FF14"/>
+  <rect x="41" y="4" width="6" height="10" fill="#39FF14"/>
 
-  <!-- Inicjały WC w środku chipu -->
-  <text x="32" y="39" font-family="monospace, sans-serif" font-weight="bold" font-size="22" fill="#56D364" text-anchor="middle">WC</text>
+  <rect x="17" y="50" width="6" height="10" fill="#39FF14"/>
+  <rect x="29" y="50" width="6" height="10" fill="#39FF14"/>
+  <rect x="41" y="50" width="6" height="10" fill="#39FF14"/>
+
+  <!-- Duże, pogrubione litery WC -->
+  <text x="32" y="40" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="23" fill="#39FF14" text-anchor="middle">WC</text>
 </svg>

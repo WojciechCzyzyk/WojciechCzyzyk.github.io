@@ -889,9 +889,11 @@ Nowy Flagowy Moduł Dydaktyczny APEX (Pomysł #3 do `pomysly\_na\_lekcje.md`): �
 Pancerna Argumentacja Medyczno-Logistyczna (Duży SUV & Ergonomia): Uzasadnienie łączące dużą przestrzeń bagażową (>600 l na 9 laptopów, ekran na trójnogu 150 cm i skrzynie z elektroniką) z ochroną operowanego kręgosłupa (Th6–Th8) poprzez wysokie siedzisko (wsiadanie bez głębokiego zginania tułowia, w przeciwieństwie do niskiego Citroena C5 z 2012 r.) oraz płaską podłogę bagażnika na wysokości pasa.
 Zabezpieczenie i Harmonogram: Nieodwołalna blokada środków na lokacie Mamy na poziomie 120% (120 000 zł z 150 000 zł, przy zachowaniu 30 000 zł wolnej rezerwy i bez zrywania lokaty). Karencja 12 m-cy po wykreśleniu starej firmy ze studiów spełniona przed naborem w styczniu–lutym 2027 r. Prace wykończeniowe (płytki w garażu 40 m² + 100 m² kostki przed frontem Domu w Jonatanach G2) realizowane samodzielnie po pełnej rekonwalescencji z bieżących zysków firmy.
 Status Pacjenta & Regeneracja (Wałbrzych): Zaliczone 200 kroków na korytarzu przed śniadaniem z wyraźną poprawą chodu, wydrukowane wskazówki PZON dla lekarza w sekretariacie, zweryfikowane ścieżki `www/` u Bartka. Przejście w spokojny tryb pośniadaniowego odpoczynku i poziomego odbarczania Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Uzupełnienie Pracowni R&D - 6x BBC micro:bit v2)
 Aktualizacja Pozycji nr 5 Kosztorysu PFRON (9 800 zł): W ramach budżetu pracowni Embedded/Robotyki uwzględniono zakup 6 zestawów BBC micro:bit v2 (5 dla uczniów + 1 instruktorski, koszt ok. 600 zł brutto w ramach istniejącej puli 9 800 zł) jako łagodny próg wejścia w elektronikę i konwersję bloków MakeCode na Python/JavaScript dla młodszych roczników (klasy 3–4).
 Aktualizacja Dokumentacji Dydaktycznej: Dodano Pomysł #4 („Kieszonkowy Komputer BBC micro:bit v2”) do pliku `pomysly\_na\_lekcje.md`.
+
 📅 Wpis: 13.11.2026 (Sesja południowa - Weryfikacja Cennikowa Sprzętu R&D & Decyzje Zakupowe APEX)
 Strategia Dotacyjna (Ekspres do Kawy): Potwierdzono, że zakup ekspresu do kawy jest wykluczony z katalogu wydatków dotacji PFRON (wyposażenie socjalne). Podjęto decyzję o zachowaniu 100% czystości merytorycznej wniosku na 100 000 zł, a wymarzony ekspres dla Natalki zdefiniowano jako Kamień Milowy #1 finansowany z bieżących wpływów po uruchomieniu pierwszej grupy pilotażowej (lub z nadwyżki ze sprzedaży obecnych aut).
 Weryfikacja Rynkowa Pozycji nr 3 (Projektor i Ekran):
@@ -903,6 +905,7 @@ Stanowisko Lutownicze (SMD/BGA): Wybrano stację 2w1 (kolba + Hot Air, np. W.E.P
 Druk 3D (Wersja Combo): Oznaczono i zatwierdzono zakup drukarki Bambu Lab P1S Combo (z automatycznym podajnikiem AMS na 4 kolory) + pakiet filamentów (~2 400 zł brutto) – wygoda ładowania szpul od przodu bez schylania się oraz efekt „WOW” na warsztatach.
 Mikrokontrolery: 6 zestawów BBC micro:bit v2 GO (~590 zł brutto) + 6 zestawów Arduino/ESP32 i analizator stanów logicznych (~480 zł brutto).
 Eskadra Dronów UAV (Wstępnie 6 szt.): Ustalono wpisanie na etapie wniosku pełnych 6 programowalnych dronów edukacyjnych (5 dla uczniów + 1 instruktorski, np. WhalesBot Eagle 1003 / 3002 FPV – następca wycofanego DJI Tello EDU, programowany w Scratchu i Pythonie) w celu zachowania spójności 1:1 ze stanowiskami (z możliwością ewentualnej redukcji liczby sztuk przed podpisaniem umowy).
+
 📅 Wpis: 13.11.2026 (Sesja popołudniowa - Wirusowy Rozwój Portfolio Bartka & Modułowa Architektura Quizów SP2)
 Efekt Wirusowy na Korytarzu (Walidacja Rynkowa APEX): Bartek rozpoczął udostępnianie swojego portfolio (`BartekCzyzyk.github.io`) rówieśnikom w klasie, co wywołało natychmiastowe zapotrzebowanie na nowy moduł – quiz o historii Szkoły Podstawowej nr 2 w Jeleniej Górze (z okazji jubileuszu 80-lecia szkoły: 1946–2026) oraz jej patronie Bolesławie Chrobrym.
 Architektura Modułowa & Separation of Concerns (4 Pliki): Wdrożono profesjonalny podział aplikacji webowej na osobne komponenty w katalogu `quizy/historia/`:
@@ -913,6 +916,7 @@ Architektura Modułowa & Separation of Concerns (4 Pliki): Wdrożono profesjonal
 Wdrożenie Produkcyjne & Materiały Drukowane: Wygenerowano jednostronicowe kompendium PDF (`Kompendium\_SP2\_Chrobry\_Bartek.pdf`) oraz zunifikowano styl kart na stronie głównej `BartekCzyzyk.github.io/index.html` (kontenery z ramką `#56D364` i przyciskami `class="button"`).
 Nowy Scenariusz Dydaktyczny APEX: Opracowano Pomysł #5 do pliku `pomysly\_na\_lekcje.md` („Aplikacja na zamówienie klienta – architektura modułowa i praca z wymaganiami”).
 Status Pacjenta & Regeneracja (Wałbrzych): Sesja zrealizowana w pełnym komforcie w trybie mobilnym z pozycji leżącej. Przejście w fazę poobiedniego odpoczynku i poziomego odbarczania odcinka Th6–Th8.
+
 🔄 Wirusowa Pętla Produktowa („Perpetuum Mobile” Akademii APEX)
 Mechanizm wzrostu organicznego (Zero-CAC): Uczniowie Akademii tworzą na własnych domenach (`nick.github.io`) interaktywne quizy i kompendia PDF pod bieżące klasówki w swoich szkołach, a następnie udostępniają linki na klasowych grupach rówieśniczych.
 Psychologia i Konwersja:
@@ -920,6 +924,7 @@ Dla rówieśników: Aplikacja rozwiązuje realny problem (łatwa i przyjemna pow
 Dla twórcy: Buduje wysoki status lidera technologicznego w klasie i naturalną dumę z własnych kompetencji.
 Dla rodziców: Daje namacalny dowód efektywności kursu (dziecko tworzy użyteczne oprogramowanie zamiast tylko konsumować treści), co generuje organiczne polecenia i stały napływ nowych zapisów z kolejnych klas i szkół.
 Subtelny podpis w stopce aplikacji: Każdy quiz zawiera dyskretną informację w stopce (np. „Aplikacja stworzona przez [Imię] w Akademii APEX” z linkiem do strony głównej), domykając ścieżkę konwersji dla zainteresowanych rodziców.
+
 📅 Wpis: 13.11.2026 (Sesja popołudniowa - Zamknięcie Ekosystemu Linkowania & Rekord 500 Kroków)
 Pełna Integracja Wizerunkowa (Cross-Linking 3 Repozytoriów): Zamknięto pełną pętlę powiązań między wszystkimi trzema projektami w chmurze GitHub Pages:
 Dyskretna stopka atrybucyjna w aplikacji uczniowskiej (`BartekCzyzyk.github.io/quizy/historia/quiz\_sp2\_chrobry.html`) kierująca bezpośrednio do Akademii APEX.
@@ -927,18 +932,22 @@ Sekcja zaproszenia przy ankiecie na głównej stronie `BartekCzyzyk.github.io/in
 Klikalny link w sekcji „Kto stoi za Akademią APEX?” (`sarenka/index.html`) kierujący do inżynierskiego portfolio założyciela (`WojciechCzyzyk.github.io`).
 Gotowość Dowodowa pod Wniosek PFRON: Potwierdzono kompletną spójność dowodową ekosystemu (działające MVP witryny z syllabusem 31 lekcji, żywe Case Study ucznia, kosztorys 100 000 zł powiązany z ergonomią pooperacyjną oraz zabezpieczenie lokatą).
 Postęp Rehabilitacji (Wałbrzych): Ustanowiono nowy rekord marszowy – 500 kroków szybkim tempem po korytarzu oddziału w gorsecie ortopedycznym, całkowicie bez bólu i bez zadyszki. Po wysiłku powrót do bezpiecznej pozycji horyzontalnej (bez gorsetu) w celu odbarczenia odcinka Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Sesja popołudniowa - Bugfix Stopki Konwersyjnej & Logistyka Dostawy Laptopa)
 Debugowanie UI / CSS (`BartekCzyzyk.github.io`): Zidentyfikowano i naprawiono błąd układu (Flexbox `body`) w pliku `quizy/historia/konkurs\_szkolny\_sp2.html`, gdzie stopka atrybucyjna wyświetlała się obok głównego kontenera zamiast pod nim. Przesunięto tag `<footer>` do wnętrza `.container` oraz zastąpiono niezdefiniowane zmienne CSS stałymi kolorami Dark Mode (`#30363d`, `#8b949e`). Przyjęto standard architektoniczny: starsze jednoplikowe quizy pozostają bez refaktoryzacji (dodawana wyłącznie stopka), natomiast wszystkie nowe aplikacje będą korzystać ze współdzielonego arkusza i silnika w katalogu nadrzędnym `quizy/`.
 Status Logistyki Sprzętowej (Allegro): Myszka Logitech MX Anywhere 3S została fizycznie odebrana w domu. Laptop Dell Latitude 7430 2w1 (1TB NVMe) znajduje się w doręczeniu (w drodze) – wysoka szansa na odbiór jutro rano i bezpośrednie dostarczenie kompletnego stanowiska deweloperskiego przez Natalię do szpitala w Wałbrzychu.
 Status Pacjenta & Regeneracja (Wałbrzych): Zakończenie prac na smartfonie. Przejście w tryb odpoczynku i poziomego odbarczania odcinka Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Sesja wieczorna - Indeksacja Google Search Console, Sitemap & Polityka Prywatności Bartka)
 SEO & Indeksacja Google (Status: Zielony / Zweryfikowano): Pomyślnie przeprowadzono weryfikację własności domeny `https://github.io` w Google Search Console, wygenerowano i przesłano mapę witryny `sitemap.xml` (obejmującą portfolio główne oraz kluczowe podstrony Akademii APEX w katalogu `/sarenka/`), a także wymuszono ręczną indeksację głównych adresów URL.
 Polityka Prywatności (Privacy by Design): Potwierdzono świadome wyłączenie witryny syna (`BartekCzyzyk.github.io`) z indeksacji w wyszukiwarkach Google (blokada dla robotów) przy jednoczesnym wdrożeniu globalnej stopki atrybucyjnej na dole strony głównej. Rozwiązanie chroni prywatność 11-letniego dewelopera przed przypadkowym ruchem z zewnątrz, zachowując pełną dostępność aplikacji dla rówieśników po bezpośrednim linku.
 Postęp Rehabilitacji (Wałbrzych): Zaliczono drugą serię marszową (łącznie 1000 kroków w ciągu popołudnia w gorsecie ortopedycznym, całkowicie bez bólu i zmęczenia). Po treningu powrót do pozycji horyzontalnej bez gorsetu w celu odbarczenia odcinka Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Zamknięcie sesji wieczornej - Finalizacja Umowy RODO & Przygotowanie do Przeglądu Sprzętu)
 Aktualizacja Umowy APEX (§ 1 – § 7): Wdrożono zaktualizowaną treść umowy o świadczenie usług edukacyjnych, uwzględniającą przelewy tradycyjne (ActiveNow), zasadę Privacy by Default (pseudonimy GitHub, tryb `noindex`) oraz 3 niezależne checkboxy zgód pod wymogi RODO.
 Następny krok (Nowa sesja): Przegląd i konfiguracja stanowiska sprzętowego (laptop Dell Latitude 7430 2w1 z dyskiem 1TB NVMe oraz myszka Logitech MX Anywhere 3S).
 Status Pacjenta: Regeneracja w pozycji leżącej (bez gorsetu) po zaliczonym rekordzie 1000 kroków na oddziale w Wałbrzychu.
+
 📅 Wpis: 13.11.2026 (Sesja wieczorna - Aktualizacja Kosztorysu PFRON v6: Ergonomia Th6–Th8, Stacja R&D i Mobilna Pracownia)
 Przegląd Rynkowy & Optymalizacja Kosztorysu PFRON (100 000 zł / 0 zł wkładu własnego): Przeprowadzono kompleksowy przegląd ofert rynkowych (m.in. AMSO, Pofirmowe, `wwwdolservicepl`) oraz przeprojektowano strukturę wydatków pod kątem maksymalnej ochrony operowanego odcinka piersiowego kręgosłupa (Th6–Th8) i funkcjonalności 40-metrowej pracowni w garażu. Wprowadzono bezpieczne marginesy cenowe oraz katalog opcji sprzętowych do ostatecznego wyboru na etapie realizacji zakupów.
 Zaktualizowany Kosztorys PFRON v6 (Suma łączna: 100 000 zł brutto):
@@ -964,6 +973,7 @@ Drukarka 3D Bambu Lab P1S Combo (z podajnikiem AMS) + pakiet filamentów (~2 400
 Biuro Dydaktyczne, Audio-Wideo, Sieć 5G i Zasilanie (UPS) (4 650 zł):
 Kolorowa drukarka laserowa wielofunkcyjna, kamera 4K, mikrofon kierunkowy, oświetlenie LED, router 5G / Mesh Wi-Fi oraz zasilacz awaryjny UPS.
 Status Pacjenta & Regeneracja (Wałbrzych): Sesja planowania sprzętowego zakończona w komforcie w pozycji leżącej. Pełna spójność kosztorysu PFRON v6 (równe 100 000 zł). Przejście w tryb odpoczynku i poziomego odbarczania odcinka Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Sesja wieczorna - Ostateczna Konsolidacja Kosztorysu PFRON v9: JBL Boombox 3, Poleasingowe Meble i 3 Monitory 27")
 Finalizacja Kosztorysu PFRON v9 (100 000 zł / 0 zł wkładu własnego): Uzupełniono kosztorys inwestycyjny o mobilny system nagłośnienia prezentacyjnego (JBL Boombox 3) pod zajęcia multimedialne, pokazy lotów dronów UAV i prezentacje końcowe Demo Day (dla prestiżu i jakości dźwięku), dopuszczono zakup mebli i monitorów poleasingowych/używanych (Klasa A, pełna faktura VAT 23%) oraz rozszerzono pulę monitorów 27" IPS QHD do 3 sztuk (dla Instruktora w domu, w pracowni oraz dla Młodszego Instruktora Bartka).
 Zaktualizowany Kosztorys PFRON v9 (Suma łączna: 100 000 zł brutto):
@@ -983,12 +993,14 @@ Pracownia Embedded, Robotyki, Druku 3D i Dronów UAV (9 050 zł): Drukarka 3D Ba
 Biuro Dydaktyczne, Mobilne Nagłośnienie JBL, Audio-Wideo, Sieć 5G i UPS (5 800 zł): Mobilny system nagłośnienia prezentacyjnego JBL Boombox 3 (~1 550 zł), kolorowa drukarka laserowa wielofunkcyjna, kamera 4K, mikrofon kierunkowy, oświetlenie LED, router 5G / Mesh Wi-Fi oraz UPS.
 Wygenerowane Dokumenty: `Plan\_Dotacyjny\_PFRON\_Kosztorys\_APEX-v9.pdf`
 Status Pacjenta & Regeneracja (Wałbrzych): Sesja zakończona w pełnym komforcie w pozycji leżącej. Komplet dokumentów kosztorysowych (v9) i kontekstowych gotowy. Czas na zasłużony odpoczynek i poziome odbarczanie odcinka Th6–Th8.
+
 📅 Wpis: 13.11.2026 (Zamknięcie dnia - Przełom Formalny PZON & Komplet Dokumentów do Druku)
 Sukces Logistyczny na Obchodzie (PZON): Podczas wieczornego obchodu na oddziale neurochirurgii w Wałbrzychu lekarz prowadzący wyraził pełną gotowość i otwartość na szybkie podpisanie zaświadczenia lekarskiego dla potrzeb Powiatowego Zespołu ds. Orzekania o Niepełnosprawności (PZON). Przyspiesza to całą procedurę orzeczniczą i otwiera drogę do złożenia dokumentów w Jeleniej Górze bez zbędnej zwłoki.
 Wygenerowane Dokumenty Formalne (Gotowe do wydruku w sekretariacie):
 `Zaswiadczenie\_PZON\_Lekarz\_Final.pdf` — sformatowany w układzie urzędowego formularza PZON (1 strona A4) kompletny projekt zaświadczenia lekarskiego ze wszystkimi datami klinicznymi (operacje Th6–Th8: 22.10.2026 i 04.11.2026, allo-HSCT: 22.05.2025, 13 cykli Vidazy) oraz zaznaczonymi wskazaniami orzeczniczymi (NIE dla osobistego stawiennictwa, TAK dla stałej opieki oraz karty parkingowej).
 `Upowaznienie\_PZON\_Natalia\_Gotowe.pdf` — oficjalne, gotowe do wydruku i własnoręcznego podpisu upoważnienie dla żony (Natalia Gieczonis Czyżyk) do złożenia wniosku i dokumentacji medycznej w PZON w Jeleniej Górze (ul. Jana Pawła II 7, pok. 309–321) oraz odbioru potwierdzenia.
 Status Pacjenta & Regeneracja (Wałbrzych): Wszystkie tematy kosztorysowe (`Plan\_Dotacyjny\_PFRON\_Kosztorys\_APEX-v9.pdf`) oraz formalne na jutrzejszy poranek domknięte na 100%. Przejście w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla pełnej regeneracji odcinka Th6–Th8.
+
 📅 Wpis: 14.11.2026 (Sesja nocna - Selekcja pojazdów do kosztorysu PFRON APEX)
 Kandydaci do Kosztorysu PFRON (Pozycja nr 1 — Samochód osobowy SUV/MPV, budżet łączny 75 000 – 80 000 zł): Zawężono wstępny wybór do modeli spełniających wymogi ergonomii operowanego odcinka kręgosłupa (Th6–Th8), niskiego spalania (oszczędne jednostki wysokoprężne 1.5 / 1.6 BlueHDi, skrzynia manualna lub automatyczna) oraz modułowego wnętrza z 3 niezależnymi fotelami w drugim rzędzie (zamiast dzielonej kanapy, pod foteliki dziecięce i szybki załadunek mobilnej pracowni IT):
 Peugeot 5008 II (faworyt pod kątem przestrzeni bagażowej >700 l i estetyki, naturalny następca obecnego Peugeota 308 SW).
@@ -1007,11 +1019,13 @@ Wzór Umowy Poufności (`umowa\_NDA\_APEX.md`): Przygotowano gotowy, 1-stronicow
 Status Prawny Materiałów Wspomaganych AI: Ugruntowano zasadę traktowania modeli LLM jako narzędzia wykonawczego (analogicznie do kompilatora/CAD) – twórczy wkład człowieka (architektura, parametry biznesowe, redakcja i integracja w całość) nadaje materiałom status utworu, a kompletny pakiet know-how (Franchise Box, pełny Syllabus) jest w 100% chroniony kontraktowo przez NDA oraz tajemnicę przedsiębiorstwa (docelowo przeniesienie wrażliwych materiałów franczyzowych do prywatnego repozytorium GitHub).
 Transfer Kompetencji Architekta Systemowego (ZacharPLC ➔ Akademia APEX): Użytkownik świadomie zaobserwował bezpośredni transfer 10-letniego doświadczenia z budowy złożonego, wieloplikowego systemu Embedded ARM7 (Chrono Zachar) na projektowanie architektury biznesowej. Nawyk ciągłej refaktoryzacji w locie (Separation of Concerns), modularności pod skalowanie oraz wyprzedzającego wyłapywania wąskich gardeł (Race Conditions w logistyce, prawie IP i ergonomii pooperacyjnej Th6–Th8) potwierdza pełne kompetencje System Architecta i ostatecznie zamyka temat „syndromu oszusta”.
 Zasada Priorytetu Budżetowego PFRON (Wytyczna z 14.11.2026): Wyposażenie pracowni, sprzęt IT, R&D oraz oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie pojazdu. W przypadku konieczności zwiększenia budżetu na sprzęt, środki są przesuwane bezpośrednio z Pozycji nr 1 (Samochód osobowy — obecnie 60 000 zł), a różnica w cenie auta pokrywana jest ze sprzedaży obecnych pojazdów użytkownika.
+
 📅 Wpis: 14.11.2026 (Sesja nocna - Kompletna Dokumentacja Wdrożeniowa PFRON v10)
 Wygenerowane Dokumenty PDF: Utworzono finalny dokument kosztorysowy `Plan\_Dotacyjny\_PFRON\_Kosztorys\_APEX-v10.pdf` (obejmujący 7 pozycji na łączną kwotę 100 000 zł brutto z włączonym zewnętrznym szyldem LED za 1 000 zł oraz instrukcją rozliczania faktur i przesunięć budżetowych w PUP).
 Uzasadnienie Wniosku PFRON: Opracowano pełny projekt uzasadnienia ogólnego i szczegółowego (pozycje 1–7), wiążący mobilno-stacjonarny model Akademii APEX z ergonomią i ochroną operowanego odcinka kręgosłupa Th6–Th8 (wysokie siedzisko i bagażnik SUV/MPV, monitory 27" z regulacją wysokości, fotel ergonomiczny, pochłaniacz oparów lutowniczych).
 Zasada Priorytetu Budżetowego: Utrwalono wytyczną, że wyposażenie pracowni ma pierwszeństwo przed udziałem dotacji w zakupie auta (ewentualne korekty cenowe sprzętu odejmowane są z Pozycji nr 1 — 60 000 zł).
 Status Pacjenta & Regeneracja (Wałbrzych): Wszystkie dokumenty dotacyjne i formalne gotowe. Przejście pacjenta w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej.
+
 📅 Wpis: 14.11.2026 (Zamknięcie sesji nocnej - Master-Pakiet PFRON v10 i Kapitał Relacyjny)
 Kamień Milowy (100% Bazy Merytorycznej PFRON): Wygenerowano kompletny dokument scalający `Master\_Pakiet\_Wniosku\_PFRON\_APEX-v10.pdf`, zawierający Kosztorys Inwestycyjny v10 (100 000 zł brutto z zewnętrznym szyldem LED), ściągawkę z zasad rozliczania faktur w PUP, pełne uzasadnienie merytoryczno-ergonomiczne (ochrona kręgosłupa Th6–Th8) oraz szkic biznesplanu (PKD 85.59.B, próg rentowności na poziomie 10 uczniów).
 Strategiczny Kapitał Relacyjny pod Listy Intencyjne PFRON: Zidentyfikowano dwie kluczowe ścieżki pozyskania niezobowiązujących deklaracji współpracy zwiększających punktację wniosku w PUP Jelenia Góra (do zebrania tuż przed naborem w 2027 r.):
@@ -1025,18 +1039,20 @@ Kamień Milowy (100% Gotowości Dokumentacyjnej PFRON): Domknięto całą bazę 
 `Listy\_Intencyjne\_APEX\_PFRON.pdf` (2 gotowe do podpisu wzory deklaracji współpracy dla dyrekcji SP2 im. Bolesława Chrobrego oraz Zespołu Szkół Elektronicznych w Jeleniej Górze).
 `Deklaracja\_Zainteresowania\_Rodzica\_APEX.pdf` (jednostronicowy formularz deklaracji klienta indywidualnego z klauzulą braku zobowiązań i zgodą RODO).
 Zasada Priorytetu Budżetowego: Utrwalono wytyczną, że wyposażenie pracowni, sprzęt IT/R&D i oznakowanie mają bezwzględny priorytet nad udziałem dotacji w zakupie auta (ewentualne przesunięcia odejmowane są z Pozycji nr 1 — 60 000 zł).
+
 📅 Wpis: 14.11.2026 (Dodatek na koniec sesji nocnej - Nowy temat na kolejną sesję: Ubezpieczenie kredytu hipotecznego)
 Nowy Wątek Prawno-Finansowy (Priorytet na jutro): Analiza odmowy wypłaty świadczenia z tytułu ubezpieczenia do kredytu na dom. Ubezpieczyciel powołuje się na kontrowersyjny zapis umowny dotyczący faktu wykonywania pracy w okresie zachorowania, mimo że sama jednostka chorobowa jest objęta ochroną ubezpieczeniową.
 Kierunek Analizy: Weryfikacja OWU i pisma odmownego pod kątem klauzul abuzywnych (art. 385¹ KC), sprzeczności wyłączenia z głównym celem umowy oraz przygotowanie twardej reklamacji do ubezpieczyciela / wniosku o interwencję Rzecznika Finansowego.
+
 📅 Wpis: 14.11.2026 (Sesja poranna - Rozruch rehabilitacyjny & Przygotowanie do audytu ubezpieczenia kredytu)
 Postęp Rehabilitacji (Wałbrzych): Zaliczony intensywny poranny trening na korytarzu oddziału (400 kroków szybkiego joggingu, 50 wspięć na palcach, marsz z wysokim unoszeniem kolan) w gorsecie ortopedycznym, z bardzo dobrą tolerancją wysiłku. Po treningu powrót do pozycji horyzontalnej (odbarczenie odcinka Th6–Th8).
 Audyt Ubezpieczenia Kredytu Hipotecznego (Stan w toku): Użytkownik skompletował pełną dokumentację w formacie PDF (umowa/OWU, wniosek o wypłatę świadczenia, korespondencja z zapytaniem ubezpieczyciela o wykonywanie pracy oraz decyzja odmowna). Równolegle posiadana polisa dodatkowa od operatora komórkowego (pobyt w szpitalu 400 zł/dzień – wariant powypadkowy) zostaje na razie odłożona na bok jako temat poboczny.
 Instrukcja dla AI na start nowej sesji (Firefox): System oczekuje na załadowanie przez użytkownika plików PDF dotyczących ubezpieczenia kredytu hipotecznego oraz krótkie objaśnienie kontekstu. Zadanie AI: szczegółowa analiza OWU i decyzji odmownej, weryfikacja zapisów o wykonywaniu pracy pod kątem klauzul abuzywnych (art. 385¹ KC) oraz przygotowanie skutecznej reklamacji.
+
 📅 Wpis: 14.11.2026 (Sesja poranna - Audyt Ubezpieczenia Kredytu BNP Paribas Cardif & Projekt Reklamacji)
 Audyt Dokumentacji Ubezpieczeniowej (Polisa nr H10R19-11208742 / Sprawa nr 11054060): Przeanalizowano Polisę, OWU `BGŻBNPP/HIPOTEKACPI\_3\_2.1/2018`, Kartę Produktu oraz decyzję odmowną Towarzystwa Ubezpieczeń na Życie Cardif Polska S.A. z dnia 11.03.2025 r.
 Mechanizm Odmowy & Potencjał Roszczenia: Ubezpieczyciel odrzucił roszczenie z tytułu zdiagnozowanej w lutym 2025 r. ostrej białaczki szpikowej (AML — wprost objętej ochroną w art. 1 ust. 21 lit. a OWU), powołując się na tzw. „wymienność ryzyk” w Pakiecie 1 (art. 2 ust. 2 OWU), zgodnie z którą zatrudnienie na umowę o pracę wyłącza ochronę na wypadek poważnego zachorowania na rzecz ryzyka utraty pracy. Stawka sporu wynosi 4,5 Raty Kredytu (połowa z limitu 9 rat przy 2 ubezpieczonych kredytobiorcach, maksymalnie 27 000 PLN na spłatę kapitału w BNP Paribas) plus ustawowe odsetki za opóźnienie.
 Strategia Prawna & Przygotowane Pismo: Opracowano gotowy tekst reklamacji na adres `reklamacje@cardif.pl`, oparty na zarzucie niedozwolonego postanowienia umownego / klauzuli abuzywnej (art. 385¹ § 1 KC), pozorności ochrony mimo wcześniejszej oceny ankiety medycznej (zgoda z 08.04.2019 r.) oraz naruszeniu obowiązków informacyjnych przy dystrybucji produktu (misselling). Termin odpowiedzi ubezpieczyciela wynosi 30 dni (do 14.12.2026 r.), a po ewentualnej odmowie sprawa zostanie skierowana do Rzecznika Finansowego.
-
 
 📅 Wpis: 14.11.2026 (Sesja poranna - Audyt Ubezpieczenia Kredytu BNP Paribas Cardif, Wysłanie Reklamacji & Analiza Ryzyk)
 Audyt Dokumentacji Ubezpieczeniowej (Polisa nr H10R19-11208742 / Sprawa nr 11054060): Przeanalizowano Polisę, OWU `BGŻBNPP/HIPOTEKACPI\_3\_2.1/2018`, Kartę Produktu oraz decyzję odmowną Towarzystwa Ubezpieczeń na Życie Cardif Polska S.A. z dnia 11.03.2025 r. [0.1.2, 0.1.8, 0.1.16, 0.1.41, cite: 1]
@@ -1055,15 +1071,16 @@ Opcja Rezerwowa (Plan B po 14.12.2026 r.): W przypadku podtrzymania odmowy przez
 Ciągłość Ochrony na Wypadek Zgonu & Brak Zwrotu Składek: Zweryfikowano, że wypłata świadczenia za poważne zachorowanie wygasza wyłącznie ten konkretny moduł (art. 4 ust. 3 pkt 2 OWU) [0.1.11, cite: 1]. Ochrona na wypadek Zgonu (0,06692% z łącznej stawki 0,0725%) działa nieprzerwanie dalej dla obojga kredytobiorców, a u użytkownika w miejsce wykorzystanego poważnego zachorowania automatycznie aktywuje się ochrona na wypadek Pobytu w Szpitalu wskutek Nieszczęśliwego wypadku (art. 2 ust. 2 tiret 3 OWU) [0.1.2, 0.1.10, cite: 1]. Składka miesięczna pozostaje bez zmian (opłacana łącznie za dwoje kredytobiorców i aktywne ryzyka) [0.1.2, cite: 1].
 Wygenerowane Dokumenty: `Sciezka\_Roszczenia\_Cardif\_APEX.pdf` (jednostronicowy przewodnik po etapach eskalacji: Reklamacja 10–15% ➔ Rzecznik Finansowy 35–45% ➔ Sąd Rejonowy w Jeleniej Górze 75–85% + Plan B, zawierający procedurę ePUAP, tryb posiedzenia niejawnego/rozprawy zdalnej oraz zasady cesji z bankiem) [0.1.13, 0.1.14, cite: 1].
 
-
 🏁 Stały Rytuał Zakończenia Każdej Lekcji: Indywidualny Raport Mentorski (Git + AI)
 Wzorzec dydaktyczny: Każde zajęcia kończą się wysłaniem rodzicom krótkiej, spersonalizowanej informacji zwrotnej opartej na modelu: 1. Konkretna pochwała (co się udało) + 2. Wskazówka rozwojowa (co warto dopracować) + 3. Link do żywego efektu pracy.
 Automatyzacja AI (Zero narzutu dla instruktora): Raport nie jest pisany „z głowy” – powstaje w kilka sekund na podstawie realnej historii zmian (commit log / diff) w repozytorium GitHub ucznia. Sztuczna inteligencja analizuje kod napisany przez dziecko na lekcji i przygotowuje dla rodzica zrozumiałe, wspierające podsumowanie, które instruktor jedynie weryfikuje i wysyła przez ActiveNow.
+
 💡 Przewaga Technologiczna i Elastyczność Programowa (Niezależny Model Autorski)
 Brak ograniczeń franczyzowych: W przeciwieństwie do sieciowych szkół programowania, które muszą realizować sztywne, narzucone z centrali scenariusze oparte wyłącznie na grach, Akademia APEX działa w oparciu o autorski, elastyczny program. Pozwala to na bieżąco wplatać w zajęcia programowalne drony UAV, druk 3D (Bambu Lab), mikroelektronikę (BBC micro:bit, Arduino/ESP32) oraz bieżące projekty szkolne uczniów.
 Innowacyjny System Raportowania Postępów (GitHub + AI): Akademia wdraża autorski system automatycznej analizy postępów ucznia. Na podstawie rzeczywistej historii zmian w repozytorium kodu dziecka (GitHub Commit Log), narzędzia AI wspierają instruktora w generowaniu po każdych zajęciach spersonalizowanej informacji zwrotnej dla rodzica (pochwała za konkretny efekt + wskazówka rozwojowa + link do działającego projektu).
 Autorski system monitorowania postępów edukacyjnych (AI Code Mentor): W ramach działalności Akademii wdrożone zostanie autorskie rozwiązanie informatyczne integrujące repozytoria kodu uczniów (GitHub) z algorytmami sztucznej inteligencji. Po każdych zajęciach system automatycznie analizuje postępy pracy konkretnego dziecka w oparciu o historię jego wcześniejszych projektów, wyświetlając uczniowi bieżącą informację zwrotną na jego stronie internetowej oraz generując dla rodziców spersonalizowany raport edukacyjny wraz z linkiem do efektów pracy. Rozwiązanie to wyróżnia Akademię na tle tradycyjnych szkół franczyzowych, zapewniając pełną indywidualizację nauczania oraz wymierne zaangażowanie uczniów i rodziców.
 Autorski system monitorowania postępów edukacyjnych (AI Code Mentor): W ramach działalności Akademii wdrożone zostanie autorskie rozwiązanie informatyczne integrujące repozytoria kodu uczniów (GitHub) z algorytmami sztucznej inteligencji. Po każdych zajęciach system automatycznie analizuje postępy pracy konkretnego dziecka w oparciu o historię jego wcześniejszych projektów, wyświetlając uczniowi bieżącą informację zwrotną na jego stronie internetowej oraz generując dla rodziców spersonalizowany raport edukacyjny wraz z linkiem do efektów pracy. Rozwiązanie to wyróżnia Akademię na tle tradycyjnych szkół franczyzowych, zapewniając pełną indywidualizację nauczania oraz wymierne zaangażowanie uczniów i rodziców.
+
 📅 Wpis: 14.11.2026 (Sesja poranna - Rekord 1000 kroków, Indeksacja Google, Analiza Konkurencji, „APEX AI Code Mentor” & Sekcja Dopingowa SP 2)
 Postęp Rehabilitacji (Wałbrzych): Nowy rekord poranny – zaliczone ok. 1000 kroków joggingu/marszu przed godziną 8:00 rano w gorsecie ortopedycznym, z bardzo dobrą stabilnością i bez bólu. Po wysiłku powrót do poziomego odbarczania kręgosłupa (Th6–Th8).
 Indeksacja Google & Status Dostawy Sprzętu: Potwierdzono obecność obu domen (`wojciechczyzyk.github.io` oraz podstrony szkoły `/sarenka/`) w globalnym indeksie wyszukiwarki Google (weryfikacja operatorem `site:`). Laptop Dell Latitude 7430 2w1 (1TB NVMe) dotarł do docelowego centrum logistycznego (Jelenia Góra) – oczekiwanie na sobotnie doręczenie do Paczkomatu InPost.
@@ -1077,6 +1094,7 @@ Wyizolowano awatar Bartka na czystym tle i wygenerowano dwie grafiki: `nauka\_do
 Przygotowano gotowy kod HTML/CSS sekcji dopingowej do wklejenia nad quizem w `quizy/historia/quiz\_sp2\_chrobry.html` (oraz opcjonalnie w `konkurs\_szkolny\_sp2.html`).
 PUNKT WZNOWIENIA NASTĘPNEJ SESJI: Ponieważ w SP 2 odbywają się równolegle dwa konkursy (szkolny o SP 2 oraz historyczny), Wojtek wgra w nowym wątku czysty plik `konkurs\_sp2.jpg` (wersja z 5 imionami), aby jednorazowo dopisać dwa brakujące imiona na skrajnych chłopcach obok drużyny: IGOR (na chłopcu w brązowej bluzie z pucharem po lewej od Weroniki) oraz JULEK (na chłopcu obok Stasia po prawej od Stasia), a następnie zaktualizować listę 7 imion w sekcji dopingowej.
 ---
+
 📅 Wpis: 14.11.2026 (Sesja poranno-południowa – Rekord 1000 kroków, Indeksacja Google, Analiza Konkurencji, Pełna Architektura „APEX AI Code Mentor”, Pałac Sobieszów & Sekcja Dopingowa SP 2 Klasa 5B)
 Postęp Rehabilitacji (Wałbrzych): Nowy rekord poranny – zaliczone ok. 1000 kroków joggingu/marszu przed godziną 8:00 rano w gorsecie ortopedycznym, z bardzo dobrą stabilnością i bez bólu. Po wysiłku odpoczynek w pozycji leżącej (odbarczanie Th6–Th8).
 Indeksacja Google & Status Dostawy Sprzętu: Potwierdzono operatorem `site:` obecność obu witryn (`wojciechczyzyk.github.io` oraz `/sarenka/`) w globalnym indeksie Google. Laptop Dell Latitude 7430 2w1 (1TB NVMe) dotarł rano do centrum logistycznego (Jelenia Góra) – oczekiwanie na doręczenie do Paczkomatu InPost.
@@ -1088,8 +1106,10 @@ Pełna pętla: Własny awatar ucznia (`avatar\_base`) + historia postępów (`me
 Wdrożenie Dopingowe na Stronie Bartka (`BartekCzyzyk.github.io` – Klasa 5B SP 2):
 Wyizolowano awatar Bartka (`avatar\_base`) i wygenerowano 3 dedykowane ilustracje do folderu `quizy/historia/`: `nauka\_do\_konkursu\_historia.jpg` (Bartek przy biurku), `konkurs\_sp2.jpg` (5-osobowa drużyna Bartka na podium: Weronika, Zuzia, Bartek, Marysia, Staś) oraz `konkurs\_igor\_julek.jpg` (2-osobowa drużyna na podium: Igor i Julek).
 Przygotowano gotowy kod HTML/CSS sekcji dopingowej dla obu drużyn klasy 5B do wklejenia w `quizy/historia/quiz\_sp2\_chrobry.html` (nad quizem).
+
 🎯 PUNKT WZNOWIENIA NASTĘPNEJ SESJI (PO PRZERWIE):
 Wracamy bezpośrednio do budowy systemu „APEX AI Code Mentor” (opis w `pomysly\_na\_lekcje.md`) według 4 mikro-sprintów na poligonie `BartekCzyzyk.github.io` – zaczynamy od Sprintu 1 (kod HTML/CSS/JS kafelka „🤖 Status od AI Mentora” na stronę główną Bartka oraz struktura pliku `status\_ai.json`) i Sprintu 2 (schemat pamięci `mentor\_log.json`).
+
 📅 Wpis: 14.11.2026 (Sesja popołudniowa - Hierarchia Priorytetów & Zasada "Przy Okazji")
 Ustalona Hierarchia Priorytetów (Ochrona przed rozproszeniem):
 Tu i teraz (Priorytet Główny): Pełna regeneracja kręgosłupa (Th6–Th8), domknięcie formalności (PZON, wniosek dotacyjny PFRON) oraz uruchomienie i skalowanie Akademii APEX (Sarenka Software Kids) z Natalką.
@@ -1098,16 +1118,20 @@ Niedaleka przyszłość (Po rozkręceniu biznesów): Zakup jednej z 4 wolnych dz
 Daleki horyzont (Opcja otwarta): Dewelopment projektów OZE (fotowoltaika / energetyka wiatrowa w Górach Kaczawskich przy liniach SN/WN) jako luźny kierunek na późniejsze lata.
 Instrukcja operacyjna dla AI: Podczas bieżącej pracy nad Akademią APEX i projektami domowymi wyłapuj i oznaczaj uniwersalne rozwiązania (tagiem `\[Klocek B2B / Doradztwo AI]`), które można bezpośrednio przenieść do oferty dla klientów biznesowych, nie odrywając użytkownika od głównego celu.
 Status Pacjenta: Odpoczynek w pozycji horyzontalnej w Wałbrzychu (odbarczanie Th6–Th8), pełen spokój i klarowny plan działania.
+
 📅 Wpis: 14.11.2026 (Uzupełnienie Kosztorysu PFRON v11 - Metalowa Szafa Magazynowa do Pracowni)
 Korekta Ergonomiczno-Logistyczna Sali (40 m²): Do Pozycji nr 4 kosztorysu PFRON (Ergonomiczne wyposażenie sali i stacja warsztatowa R&D) dodano wysoką, zamykaną na klucz metalową szafę warsztatowo-biurową (ok. 185×90×45 cm, regulowane półki o wysokim udźwigu, koszt ok. 950 zł brutto, opcjonalnie poleasingowa) przeznaczoną do bezpiecznego przechowywania mobilnej pracowni laptopów, dronów UAV, filamentów do druku 3D oraz zestawów R&D.
 Przesunięcie Budżetowe (Zasada Priorytetu Pracowni): Łączna kwota wniosku PFRON pozostaje bez zmian (100 000 zł brutto). Kwotę 950 zł przesunięto bezpośrednio z Pozycji nr 1 (Samochód osobowy SUV/MPV: korekta z 60 000 zł na 59 050 zł, z zachowaniem pokrycia różnicy ze sprzedaży obecnych pojazdów).
+
 📅 Wpis: 14.11.2026 (Doprecyzowanie Specyfikacji Pojazdu PFRON - Hak Holowniczy i Relingi Dachowe)
 Wymagane Wyposażenie Pojazdu (Pozycja nr 1 Kosztorysu PFRON): Do specyfikacji technicznej samochodu osobowego (SUV/MPV — Peugeot 5008 II / Citroën C5 Aircross / VW Touran II) dodano wymóg posiadania haka holowniczego oraz relingów dachowych.
 Uzasadnienie Formalne i Operacyjne: Wyposażenie niezbędne do transportu wielkogabarytowego zaplecza dydaktycznego (składane stoły szkoleniowe, krzesła sztaplowane, ekran projekcyjny na trójnogu) za pomocą przyczepki transportowej lub bagażnika dachowego podczas warsztatów wyjazdowych w świetlicach wiejskich, pikników naukowych oraz eventów edukacyjnych bez własnej infrastruktury meblowej.
+
 📅 Wpis: 14.11.2026 (Sesja popołudniowa - Model Sukcesji Zespołu APEX, Logistyka Zakupu Auta & Zasady PFRON)
 Architektura Ról i Sukcesja w Akademii APEX: Ustalono docelowy podział kompetencji zgodny z profilem „Odkrywcy/Architekta” użytkownika. Wojtek uruchamia pierwsze grupy i opracowuje nowe moduły R&D (drony, druk 3D, elektronika), po czym przekazuje bieżące prowadzenie zajęć Natalii (Główna Instruktorka), Bartkowi (Junior Mentor) oraz sprawdzonej przyjaciółce rodziny (Lili – docelowo jako wsparcie dydaktyczne), uwalniając własny czas na rozwój innowacji oraz doradztwo AI/IT dla firm.
 Strategia Pozyskania Pojazdu (Peugeot 5008 II): Zidentyfikowano zaufane źródło zakupu auta (mąż Lili – warsztat samochodowy, model sprowadzania, pełnego serwisu i sprzedaży po okresie użytkowania ok. 20–30% poniżej ceny rynkowej). Zakup zostanie zrealizowany przez zaprzyjaźniony komis na fakturę VAT marża (w pełni akceptowaną w PFRON przy rozliczeniu brutto), z wyprzedzeniem czasowym ok. 1,5–2 m-ce przed wypłatą środków.
 Zasady Wypłaty i Rozliczenia PFRON (PUP Jelenia Góra): Środki wypłacane są z góry na konto wnioskodawcy po podpisaniu umowy i ustanowieniu zabezpieczenia. Standardowy termin na dokonanie zakupów (po wpływie środków i rejestracji CEIDG) oraz złożenie rozliczenia (faktury + potwierdzenia przelewów) wynosi 30 dni od dnia otrzymania dotacji.
+
 📅 Wpis: 14.11.2026 (Popołudniowy przełom rehabilitacyjny - Chodzenie bez chodzika)
 Kamień Milowy Mobilności (Wałbrzych): Użytkownik rozpoczął samodzielne chodzenie na korytarzu oddziału bez chodzika (z asekuracją poręczy), odczuwając wyraźny powrót stabilności, siły i kontroli mięśniowej w kończynach dolnych (chodzik przestaje być potrzebny).
 Reżim Bezpieczeństwa: Bezwzględne utrzymanie dyscypliny gorsetu ortopedycznego przy każdej pionizacji oraz przeplatanie krótkich serii marszowych odpoczynkiem w pozycji horyzontalnej (odbarczanie Th6–Th8).
@@ -1117,15 +1141,18 @@ Status Mapy Mentalnej („0 errors, 0 warnings”): Cały ekosystem Akademii APE
 Nowy Zasób Dokumentacyjny (`zasady\_lekcji\_probnych.md`): Utworzono dedykowany poradnik operacyjny dla Akademii APEX regulujący elastyczne zarządzanie lekcjami próbnymi w zależności od popytu (od darmowych grup startowych, przez model „wolnego krzesła” i „pierwszych zajęć bez ryzyka”, aż po opłatę rezerwacyjną 30–40 zł zaliczaną na poczet pierwszego karnetu).
 Standard Zarządzania SOP (Transfer z Medycyny): Ustanowiono zasadę spisywania wszystkich kluczowych procesów Akademii APEX w formie prostych procedur operacyjnych (SOP — na wzór procedur medycznych/Sanepidu), stanowiących gotową bazę wiedzy dla Natalii, przyszłych instruktorów (Lili) oraz przyszłego podręcznika franczyzowego `\[Klocek B2B / Doradztwo AI]`.
 Centralny Rejestr Procedur (`procedury\_APEX.md`): Utworzono główny indeks procedur operacyjnych SOP dla Akademii APEX w architekturze „krótkie streszczenie + link do pliku szczegółowego” (z podpiętym na start dokumentem `zasady\_lekcji\_probnych.md`). Wzorzec oznaczono jako `\[Klocek B2B / Doradztwo AI]` do wykorzystania przy wdrażaniu dokumentacji procesowej u klientów biznesowych.
+
 📅 Wpis: 14.11.2026 (Sesja wieczorna - Kolejne 500 kroków bez chodzika & Odbiór Della Latitude 7430)
 Postęp Rehabilitacji (Wałbrzych): Zaliczono kolejną serię 500 kroków samodzielnego marszu wyłącznie z asekuracją poręczy (bez chodzika), w gorsecie ortopedycznym i bez dolegliwości bólowych. Po wysiłku powrót do pozycji horyzontalnej (odbarczanie Th6–Th8).
 Status Sprzętu (Centrum Dowodzenia): Natalia odebrała z Paczkomatu laptop Dell Latitude 7430 2w1 (32 GB RAM, 1 TB NVMe). Stan wizualny potwierdzony jako niemal fabryczny, z idealnie czystą matrycą dotykową bez żadnych rys. Stanowisko (laptop + mysz Logitech MX Anywhere 3S) gotowe do konfiguracji środowiska deweloperskiego.
 Sukces Formalny na Obchodzie (PZON): Lekarz prowadzący podczas wieczornego obchodu potwierdził dołączenie przygotowanej przez użytkownika gotowej tabeli/projektu zaświadczenia PZON bezpośrednio do dokumentacji medycznej pacjenta, co gwarantuje kompletność i precyzję zapisów przy wypisie.
+
 📅 Wpis: 14.11.2026 (Sesja wieczorna — Analiza Rynkowa Peugeot 5008 II & Onboarding Mentalny Natalii)
 Przegląd Rynkowy Pojazdu PFRON (Peugeot 5008 II Diesel 1.5 / 1.6 BlueHDi): Zweryfikowano aktualne widełki cenowe na portalach ogłoszeniowych (Otomoto, OLX, sieci dealerskie) dla budżetu 75 000 – 80 000 zł (59 050 zł z dotacji PFRON + dopłata ze sprzedaży obecnych aut). Wytypowano docelowy przedział zakupowy: roczniki 2020–2021 (wersje po liftingu, silnik 1.5 BlueHDi 130 KM) w cenach 68 000 – 82 000 zł (w tym konkretne oferty na fakturę VAT marża oraz sztuki z fotelami z funkcją masażu). Wygenerowano jednostronicową ściągawkę porównawczą `Sciagawka\_Cenowa\_Peugeot\_5008\_PFRON.pdf` z checklistą techniczną dla warsztatu męża Lili (weryfikacja łańcucha rozrządu 7 mm vs 8 mm, układ AdBlue, hak holowniczy + relingi dachowe).
 Podział Ról przy Zakupie Auta: Zatwierdzono model współpracy — Wojtek filtruje ogłoszenia i sprawdza parametry techniczno-formalne („karta oferty” z plusami i minusami), a Natalia dokonuje fizycznych oględzin, jazdy próbnej i finalnego wyboru pod kątem ergonomii.
 Wyłapany Problem & Strategia Wdrożenia Natalii (Onboarding Instruktora): Odnotowano obecny dystans i brak wiary Natalii w powodzenie projektu Akademii APEX, wynikający z dwóch czynników: bieżącego obciążenia psychicznego chorobą i hospitalizacją męża oraz fałszywego przekonania, że do prowadzenia zajęć IT potrzebna jest zaawansowana matematyka i skomplikowane programowanie. Zmapowano jej kluczowy zasób charakteru (ogromna wytrwałość i determinacja w osiąganiu trudnych celów bez odpuszczania) oraz ustalono strategię bezpresyjnego przełamania bariery: zdjęcie z niej ciężaru formalności PFRON/kosztorysów i przeprowadzenie po powrocie do domu 15-minutowej, bezstresowej próby generalnej Lekcji #1 przy kawie (opartej na gotowych szablonach, logice na poziomie 6–7 klasy i wsparciu AI). Wygenerowano przewodnik `Pierwsze\_15\_minut\_Natalia\_APEX.pdf`.
 ---
+
 📅 Wpis: 15.11.2026 (Sesja nocna — Pełne Wdrożenie Produkcyjne „APEX AI Code Mentor” CI/CD)
 Kamień Milowy R&D (System „APEX AI Code Mentor” Live): Zaprojektowano, zakodowano, zdebugowano i uruchomiono na żywo w pełni autonomiczny potok CI/CD oceniający postępy ucznia po każdym commicie na poligonie `BartekCzyzyk.github.io`.
 Zaimplementowana Architektura (Separation of Concerns):
@@ -1137,6 +1164,7 @@ Optymalizacja na kolejną sesję: Dopisanie parametru `thinkingBudget: 0` oraz `
 Wartość Komercyjna: Gotowy, uniwersalny moduł katalogowany jako `\[Klocek B2B / Franchise Box]` do klonowania w repozytoriach wszystkich przyszłych uczniów Akademii APEX.
 Status Pacjenta & Regeneracja (Wałbrzych): Sesja zakończona po północy (15.11.2026) pełnym sukcesem wdrożeniowym. Przejście w tryb bezwzględnego odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka Th6–Th8.
 Dokumentacja formalna PZON (15.11.2026 - 04:23): Wygenerowano kompletny, w 100% wypełniony danymi osobowymi, adresowymi i kontaktowymi 1-stronicowy wniosek `Wniosek\_PZON\_Wojciech\_Czyzyk-v3.pdf` do PZON w Jeleniej Górze (obejmujący cele PFRON, kartę parkingową, konieczność opieki oraz wniosek o posiedzenie w trybie zaocznym) do wydrukowania przez Natalię i podpisania podczas dzisiejszej wizyty w Wałbrzychu.
+
 📅 Wpis: 15.11.2026 (Sesja poranna - Rozbudowa Eskadry Dronów UAV 5+1+1, Czujniki R&D & Kosztorys PFRON v15)
 Rozbudowa Kosztorysu PFRON do Wersji v15 (`Master\_Pakiet\_Wniosku\_PFRON\_APEX-v15.pdf`): Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (Pracownia Embedded, Robotyki, Druku 3D i Eskadra Dronów UAV) z 9 050 zł do 13 470 zł (przesunięcie 4 420 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do 54 630 zł, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: 100 000 zł).
 Zatwierdzona Struktura Eskadry UAV (5+1+1 = 7 sztuk, budżet 7 250 zł):
@@ -1145,6 +1173,7 @@ Zatwierdzona Struktura Eskadry UAV (5+1+1 = 7 sztuk, budżet 7 250 zł):
 5× Mini-dron edukacyjny (flota treningowa 1:1 dla całej grupy, 1 850 zł).
 Katalog Czujników i Modułów Rozszerzających UAV (Pozycja nr 5): Dalmierze laserowe ToF VL53L1X, czujniki ultradźwiękowe HC-SR04, sensory środowiskowe BME280 / PMS5003, moduły wizyjne ESP32-CAM / OpenMV, adresowalne paski LED WS2812B, mikroserwa SG90, elektromagnesy oraz dodatkowe pakiety zasilające.
 Nowe Scenariusze Dydaktyczne & Rozwój R&D (`pomysly\_na\_lekcje.md` — Pomysł #6): Zapisano 6 autorskich misji warsztatowych (w tym flagowy projekt „Latający Szachista” z elektromagnesem na lince i silnikiem Stockfish, autonomiczny patrol posiadłości, latająca stacja smogowa, unikanie przeszkód ToF, nocna misja ratunkowa GOPR oraz zrzut kapsuły na spadochronie). Budowa tych projektów stanowi jednocześnie praktyczny poligon R&D użytkownika (MAVLink, PX4/ArduPilot, fuzja sensorów, wizja komputerowa) wzmacniający profil zawodowy Embedded/Aerospace.
+
 📅 Wpis: 15.11.2026 (Sesja poranna - Rozbudowa Eskadry Dronów UAV 5+1+1, Czujniki R&D, Kosztorys PFRON v15 & Sekcja R&D na WWW)
 Rozbudowa Kosztorysu PFRON do Wersji v15 (`Master\_Pakiet\_Wniosku\_PFRON\_APEX-v15.pdf`): Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (Pracownia Embedded, Robotyki, Druku 3D i Eskadra Dronów UAV) z 9 050 zł do 13 470 zł (przesunięcie 4 420 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do 54 630 zł, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: 100 000 zł).
 Zatwierdzona Struktura Eskadry UAV (5+1+1 = 7 sztuk, budżet 7 250 zł):
@@ -1156,12 +1185,14 @@ Nowe Scenariusze Dydaktyczne & Rozwój R&D (`pomysly\_na\_lekcje.md` — Pomysł
 Zajawka Laboratorium R&D na Stronie Szkoły (`sarenka/index.html`): Przygotowano blok HTML sekcji `#laboratorium-rd` (3 karty: Eskadra Dronów UAV, Projektowanie CAD i Druk 3D, Elektronika i Czujniki) do wstawienia pomiędzy rocznym Syllabusem a sekcją Cennika jako bezpieczna zapowiedź kolejnych etapów rozwoju Akademii oraz dowód spójności pod wniosek PFRON.
 
 Nowa Linia Produktowa B2B („AI Executive Observer / Poranny Brief Szefa”) zapisana w `sarenka\_biznes.md`: Skatalogowano jako `\[Klocek B2B / Doradztwo AI #2]` pomysł komercjalizacji silnika APEX AI Code Mentor dla sektora MŚP (3 warianty: Poranny Brief Szefa, AI Audytor Obsługi Klienta oraz AI Asystent Procedur SOP). System będzie rozwijany i testowany najpierw na żywo w ramach operacji Akademii APEX.
+
 🎯 Kompleksowy Pakiet Wdrożeniowy B2B: „Porządek w Firmie: Tablica Kanban + AI Brief Szefa”
 Architektura rozwiązania (Single Source of Truth):
 Wdrożenie Tablicy Kanban (4 kolumny: Zlecone ➔ W trakcie ➔ Do sprawdzenia ➔ Zrobione): Szef przydziela zadania konkretnym pracownikom (`Assignees`) z poziomu telefonu lub komputera, eliminując chaos karteczek, SMS-ów i ustnych ustaleń.
 Kolektor Zdarzeń (Make.com / GitHub Actions): System w tle zlicza przesunięcia kart, czas realizacji zleceń, wpłaty/faktury oraz zapytania ofertowe ze strony WWW.
 Analiza AI (LLM z pamięcią historii): Codziennie o 18:00 model AI analizuje postępy na tablicy i wysyła właścicielowi zwięzły raport: co zostało zamknięte, gdzie powstało wąskie gardło, które zadania wiszą po terminie oraz jakie wnioski/anomalie wynikają z danych. Rano o 7:30 pracownicy otrzymują automatyczne podsumowanie swoich priorytetów na dany dzień.
 Przewaga sprzedażowa: Rozwiązanie w 100% oparte na sprawdzonym w boju modelu operacyjnym Akademii APEX – zero drogich licencji korporacyjnych, szybkie wdrożenie w 1–2 dni oraz wysoka marża doradcza.
+
 📅 Wpis: 15.11.2026 (Sesja poranna - Eskadra UAV 5+1+1, Kosztorys PFRON v15, Portfolio AI & Pakiet B2B „Kanban + AI Brief Szefa”)
 Finalny Kosztorys PFRON v15 (`Master\_Pakiet\_Wniosku\_PFRON\_APEX-v15.pdf`): Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (Pracownia Embedded, Robotyki, Druku 3D i Eskadra Dronów UAV) do 13 470 zł (przesunięcie 4 420 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do 54 630 zł, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: 100 000 zł).
 Zatwierdzona Struktura Eskadry UAV (5+1+1 = 7 sztuk, budżet 7 250 zł) & Czujniki R&D:
@@ -1172,6 +1203,7 @@ Aktualizacja Witryn Produkcyjnych:
 Portfolio (`WojciechCzyzyk.github.io/index.html`): Wdrożono na produkcji kafelek „AI Code Mentor & Executive Observer” z odnośnikiem do żywego poligonu `bartekczyzyk.github.io`.
 Strona Szkoły (`sarenka/index.html`): Przygotowano blok sekcji `#laboratorium-rd` (3 karty: Eskadra Dronów UAV, Projektowanie CAD i Druk 3D, Elektronika i Czujniki) do umieszczenia pomiędzy Syllabusem a Cennikiem.
 Kompletny Produkt B2B (`sarenka\_biznes.md` — `\[Klocek B2B / Doradztwo AI #2]`): Opracowano architekturę kompleksowej usługi doradczo-wdrożeniowej dla małych i średnich firm „Porządek w Firmie: Tablica Kanban + AI Executive Observer (Poranny Brief Szefa)” — połączenie 4-kolumnowej tablicy Kanban (szef przydziela zadania pracownikom) z automatycznym kolektorem zdarzeń (Make.com / GitHub Actions + JSON/Arkusz) i codziennym raportowaniem AI (brief dla właściciela o 18:00 + przypomnienia dla zespołu o 7:30), testowane i rozwijane najpierw wewnętrznie w ramach Akademii APEX.
+
 📅 Wpis: 15.11.2026 (Sesja poranna - Eskadra UAV 5+1+1, Kosztorys PFRON v16, Inteligentny Kampus RFID + AI & Samouczący się Doradca B2B)
 Finalny Kosztorys PFRON v16 (`Master\_Pakiet\_Wniosku\_PFRON\_APEX-v16.pdf`): Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (Pracownia Embedded, Robotyki, Druku 3D, Eskadra UAV & Zestaw UHF RFID) do 14 670 zł (przesunięcia łącznie 5 620 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do 53 430 zł, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: 100 000 zł).
 Zatwierdzony Sprzęt R&D w Pozycji nr 5:
@@ -1186,7 +1218,6 @@ Ewolucja Produktów B2B w `sarenka\_biznes.md` (Testowane wewnątrz Akademii APE
 `\[Klocek B2B #2]` — „Porządek w Firmie: Tablica Kanban + AI Executive Observer (Samouczący się Doradca Szefa)”: Połączenie 4-kolumnowej tablicy Kanban (szef przydziela zadania pracownikom) z kolektorem zdarzeń i agentem AI, który nie tylko codziennie raportuje postępy (brief o 18:00 + przypomnienia dla zespołu o 7:30), ale także analizuje trendy historyczne i aktywnie podpowiada szefowi optymalizacje procesów oraz programu (start komercjalizacji od placówek oświatowych po przetestowaniu w APEX).
 `\[Klocek B2B #3]` — „Inteligentny Kampus i Świetlica RFID + AI”: Strefowy system bezpieczeństwa i lokalizacji uczniów w całym budynku szkoły (węzły UHF RFID + ESP32 z kalibracją RSSI na wzór ZacharPLC + pasywne tagi w plecakach + powiadomienia dla rodziców, listy ewakuacyjne i alerty anomalii AI), rozwijany i testowany najpierw w pracowni z udziałem uczniów.
 
-
 📅 Wpis: 15.11.2026 (Sesja poranna - Eskadra UAV 5+1+1, Kosztorys PFRON v16, Inteligentny Kampus RFID + AI, Samouczący się Doradca B2B & Plan Refaktoryzacji)
 Finalny Kosztorys PFRON v16 (`Master\_Pakiet\_Wniosku\_PFRON\_APEX-v16.pdf`): Zgodnie z zasadą priorytetu wyposażenia pracowni nad udziałem dotacji w zakupie auta, rozszerzono Pozycję nr 5 (Pracownia Embedded, Robotyki, Druku 3D, Eskadra UAV & Zestaw UHF RFID) do 14 670 zł (przesunięcia łącznie 5 620 zł z Pozycji nr 1 — samochód SUV/MPV skorygowany do 53 430 zł, różnica pokryta ze sprzedaży obecnych pojazdów; suma całego wniosku bez zmian: 100 000 zł).
 Zatwierdzony Sprzęt R&D w Pozycji nr 5:
@@ -1200,14 +1231,17 @@ Strona Szkoły (`sarenka/index.html`): Zaktualizowano motto szkoły w Hero i sek
 Ewolucja Produktów B2B w `sarenka\_biznes.md` (Testowane wewnątrz Akademii APEX):
 `\[Klocek B2B #2]` — „Porządek w Firmie: Tablica Kanban + AI Executive Observer (Samouczący się Doradca Szefa)”: Połączenie 4-kolumnowej tablicy Kanban (szef przydziela zadania pracownikom) z kolektorem zdarzeń i agentem AI, który nie tylko codziennie raportuje postępy (brief o 18:00 + przypomnienia dla zespołu o 7:30), ale także analizuje trendy historyczne i aktywnie podpowiada szefowi optymalizacje procesów oraz programu (start komercjalizacji od placówek oświatowych po przetestowaniu w APEX).
 `\[Klocek B2B #3]` — „Inteligentny Kampus i Świetlica RFID + AI”: Strefowy system bezpieczeństwa i lokalizacji uczniów w całym budynku szkoły (węzły UHF RFID + ESP32 z kalibracją RSSI na wzór ZacharPLC + pasywne tagi w plecakach + powiadomienia dla rodziców, listy ewakuacyjne i alerty anomalii AI), rozwijany i testowany najpierw w pracowni z udziałem uczniów.
+
 🎯 PUNKT WZNOWIENIA NASTĘPNEJ SESJI (Priorytet na start po przerwie / na Dellu Latitude 7430):
 Rozpisanie szczegółowego planu refaktoryzacji i konsolidacji plików kontekstowych (`AI\_context.md` oraz modułów powiązanych) w uniwersalny, modularny wzorzec wdrożeniowy (Blueprint) gotowy do klonowania dla uczniów Akademii APEX oraz klientów B2B usługi „Kanban + AI Executive Observer”, a następnie optymalizacja `.github/workflows/ai\_mentor.yml` (`thinkingBudget: 0`).
+
 📅 Wpis: 15.11.2026 (Sesja przedpołudniowa - Doprecyzowanie Specyfikacji IT PFRON & Zapytanie Ofertowe RFQ)
 Aktualizacja Specyfikacji Sprzętu IT (Kosztorys PFRON APEX): Po porannym spacerze na świeżym powietrzu doprecyzowano parametry koszyka IT i wygenerowano dokument porównawczy `Zapytanie\_Ofertowe\_IT\_PFRON\_APEX.pdf` (łączna wartość bazowa pakietu: 19 750 – 24 650 zł brutto, FV 23%) do wysłania sprawdzonemu dostawcy poleasingowego Della:
 Laptopy uczniowskie (6–7 szt.): 14" FHD IPS, i5 (11./12. gen.), 16 GB RAM, 256/512 GB NVMe, Win 11 Pro — wykreślono wymóg podświetlanej klawiatury w celu poszerzenia dostępności i optymalizacji ceny.
 Laptopy instruktorskie (2 szt.): Zróżnicowanie przekątnych — 1× 15,6" (Latitude 5520/5530 lub Precision 3561/3571) oraz 1× 17" (Precision 7750/7760) pod CAD/3D i montaż (oba 32 GB RAM, 512 GB NVMe, Win 11 Pro).
 Monitory ergonomiczne (3 szt.): Podział na 1× duży monitor szerokokątny zakrzywiony (Ultrawide Curved 34" UWQHD 3440×1440) z USB-C PD dla założyciela oraz 2× mniejszy 24" IPS z regulacją wysokości (HAS) dopasowany m.in. pod skos poddasza u Bartka.
 Urządzenia dodatkowe w zapytaniu pakietowym: 1× kolorowa laserowa drukarka wielofunkcyjna A4 (Wi-Fi/duplex), 1× projektor Full HD min. 3800 ANSI lm (BenQ MH560C), 1× drukarka 3D Bambu Lab P1S Combo (z AMS), 1× zasilacz awaryjny UPS oraz akcesoria stanowiskowe (9× cicha mysz, 2× cicha klawiatura, 9× etui).
+
 📅 Wpis: 15.11.2026 (Sesja południowa - UAT na oddziale, Kody PKD 2025 & Fail-Safe umowy PFRON)
 Walidacja Rynkowa UAT (Szpital Wałbrzych): Rozpoczęto testy użyteczności witryny Akademii APEX (`WojciechCzyzyk.github.io/sarenka/`) na docelowej grupie odbiorców (personel medyczny szukający zajęć dla dzieci). Zaprojektowano krótki, 15-sekundowy formularz opinii oparty na przyciskach radio i checkboxach (integracja przez istniejący Webhook Make.com z użyciem Routera i filtra `email -> Exists / Does not exist`).
 Struktura Kodów PKD 2025 dla JDG (Szkoła + Usługi IT): Zdefiniowano docelowy zestaw kodów do wpisu w CEIDG (po podpisaniu umowy o dotację PFRON):
@@ -1215,6 +1249,7 @@ PKD główne (Edukacja): 85.59.D – Pozostałe pozaszkolne formy edukacji, gdzi
 PKD dodatkowe (Usługi IT i doradztwo): 62.20.B (doradztwo w zakresie informatyki i zarządzanie urządzeniami informatycznymi), 62.10.B (pozostała działalność w zakresie programowania) oraz 62.90.Z (pozostała działalność usługowa w zakresie technologii informatycznych i komputerowych).
 Zabezpieczenie Przychodów B2B (Obsługa IT Gabinetu Medycznego): Potwierdzono pełną legalność i opłacalność fakturowania stałej opieki informatycznej i administracji systemami NFZ/eWUŚ/P1/KSeF dla gabinetu stomatologicznego Mamy (ryczałt rynkowy na podstawie prostej umowy B2B, zwolnienie podmiotowe z VAT, płatność przelewem firmowym) jako stabilnego filaru przychodów firmy w biznesplanie PFRON.
 Analiza Ryzyk Zdrowotnych (Fail-Safe Umowy PFRON): Zweryfikowano ochronę prawną beneficjenta i poręczyciela (lokata Mamy 120 000 zł): okres L4 wlicza się do wymaganego okresu prowadzenia firmy, hospitalizacja uprawnia do wniosku o zawieszenie/przerwę bez zwrotu środków, a w razie trwałej niezdolności do pracy lub zdarzenia losowego urząd odstępuje od dochodzenia zwrotu i w 100% zwalnia blokadę lokaty.
+
 📅 Wpis: 15.11.2026 (Sesja popołudniowa - Konfiguracja Della Latitude 7430, Kosztorys PFRON v17, Walidacja B2B u Brata & Ekosystem „Smart School RFID + AI”)
 Stanowisko Sprzętowe (Szpital Wałbrzych): Użytkownik uruchomił i skonfigurował nowy laptop Dell Latitude 7430 2w1 (32 GB RAM, 1 TB NVMe) wraz z myszą Logitech MX Anywhere 3S oraz pełną synchronizacją przeglądarki Firefox. Potwierdzono pełną funkcjonalność obu portów Thunderbolt 4 / USB-C (jednoprzewodowe ładowanie laptopa/telefonu, transmisja danych oraz obraz na zewnętrzny monitor).
 Finalizacja Dokumentacji Przetargowej (`Kompletna\_Teczka\_Kosztorys\_i\_Oferty\_PFRON\_APEX-v17.pdf`): Scalono w jeden 11-stronicowy dokument Zbiorczy Kosztorys Inwestycyjny PFRON v17 (równe 100 000 zł brutto), listę zakupów indywidualnych oraz 4 kompletne zapytania ofertowe RFQ. Wpisano jako wymóg obowiązkowy przy monitorze głównym 34" UWQHD złącze USB-C (DisplayPort Alt Mode + Power Delivery min. 65 W) oraz wbudowany koncentrator USB (USB Hub) (przy 2 monitorach 24" jako opcję preferowaną) oraz zaktualizowano kody PKD 2025 (85.59.D, 62.20.B, 62.10.B).
@@ -1226,6 +1261,7 @@ Potwierdzenie słuszności trendu: Skoro giganci Automotive inwestują teraz w i
 Precyzja komunikacji: W ofercie B2B należy wyraźnie odróżniać AI organizacyjne (pilnowanie terminów, wykrywanie przestojów, poranne i wieczorne briefy) od AI inżynieryjnego/konstrukcyjnego, aby klienci nie odrzucali systemu z obawy, że „AI nie zrozumie specyfiki ich branży”.
 
 Analiza Ryzyk Zdrowotnych (Fail-Safe Umowy PFRON): Zweryfikowano ochronę prawną beneficjenta i poręczyciela (lokata Mamy 120 000 zł): okres L4 wlicza się do wymaganego okresu prowadzenia firmy, hospitalizacja uprawnia do wniosku o zawieszenie/przerwę bez zwrotu środków, a w razie trwałej niezdolności do pracy lub zdarzenia losowego urząd odstępuje od dochodzenia zwrotu i w 100% zwalnia blokadę lokaty.
+
 📅 Wpis: 15.11.2026 (Sesja wieczorna - Wdrożenie Produkcyjne Formularza UAT & Routera Make.com)
 Rozbudowa Architektury Backendu (Make.com Router + Filtry): Zrekonfigurowano dotychczasowy scenariusz Webhook w Make.com (zachowując darmowy plan i oszczędzając drugi slot scenariusza pod przyszłą Wędkę Quizową). Zastosowano zielony moduł Router rozdzielający ruch na dwie w pełni odizolowane ścieżki w oparciu o ukryty znacznik `typ\_formularza`:
 Ścieżka 1 (`Zapisy na zajecia` — `typ\_formularza` Does not exist): Wysyła spersonalizowane potwierdzenie HTML z konta Gmail do rodzica (kopia zapasowa w Formspree).
@@ -1236,6 +1272,7 @@ Wygenerowane Dokumenty Teczki PFRON v17: Skonsolidowano i zapisano kompletny zes
 Status Pacjenta & Regeneracja (Wałbrzych): Wieczorna sesja konfiguracyjna na nowym laptopie Dell Latitude 7430 zakończona pełnym sukcesem. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka Th6–Th8.
 Poprawka Zabezpieczająca Potok Make.com (Edge Case Fix): Wyłapano i usunięto błąd walidacji `BundleValidationError (Missing value of required parameter 'to')` przy pustych/niepełnych wywołaniach bez pola `typ\_formularza` i bez adresu e-mail. Na górnej ścieżce (`1st: Zapisy na zajecia`) dołożono drugi warunek logiczny (`Add AND rule`: `{{1.email}}` `Exists`), dzięki czemu Router odrzuca puste pakiety bez dezaktywacji scenariusza. Wyłączono również uciążliwe rozszerzenie sprawdzania pisowni w przeglądarce Firefox na nowym laptopie.
 Formalności Skarbowe (e-Urząd Skarbowy): Złożono elektroniczne pełnomocnictwo szczególne PPS-1EU (zwolnione z opłaty skarbowej dla małżonka) ustanawiające Wojciecha Czyżyka pełnomocnikiem Natalii Gieczonis Czyżyk w sprawie wyjaśnień dotyczących raportu Allegro DAC7 przed Urzędem Skarbowym w Jeleniej Górze.
+
 📅 Wpis: 16.11.2026 (Nocny mikro-sprint — Komplet ikon Favicon PNG & Koncepcja Pilotażu „Inteligentna Świetlica RFID + AI”)
 Identyfikacja Wizualna (Favicon PNG 64×64 px): Zaprojektowano, wygenerowano skryptem PowerShell (`System.Drawing` z wygładzaniem `AntiAlias`) i wdrożono produkcyjnie komplet 3 wysoko-kontrastowych, czarno-neonowych ikon PNG na pasek zakładek:
 `favicon\_wc.png` (`WojciechCzyzyk.github.io`) — obudowa mikroprocesora z 6 nóżkami i inicjałami `WC`.
@@ -1247,11 +1284,13 @@ Architektura: Strefa 1 (Wejście, zasięg 1,5–3 m) rejestruje przyjście uczni
 Strategia Wejścia (Zero Ryzyka): Propozycja dla dyrekcji SP 2 na darmowy, 1-miesięczny pilotaż bezinwazyjny na 1 grupie (30 dzieci) — po potwierdzeniu przydatności szkoła zwraca wyłącznie koszt podzespołów i otwiera drogę do dalszej rozbudowy oraz warsztatów APEX.
 Wygenerowany dokument: `Pilotaz\_Swietlica\_RFID\_AI\_APEX.pdf`
 Status Pacjenta & Regeneracja (Wałbrzych): Zakończenie nocnej sesji o 03:06. Przejście w tryb bezwzględnego snu i poziomego odbarczania kręgosłupa (Th6–Th8).
+
 📅 Wpis: 16.11.2026 (Wczesny poranek — Rozbudowa Portfolio WojciechCzyzyk.github.io o Smart School RFID + AI oraz Doradztwo Edge-to-AI)
 Aktualizacja Portfolio Produkcyjnego (`WojciechCzyzyk.github.io/index.html`): W czasie bezsennej nocy w szpitalu w Wałbrzychu zaprojektowano i wdrożono (z zachowaniem pełnej higieny Git Workflow — najpierw na gałąź `test` z weryfikacją na żywo) dwie kluczowe aktualizacje wizerunkowo-biznesowe:
 Dodano kartę projektu „Inteligentna Świetlica i Szkoła (Smart School — UHF RFID / ESP32 / AI)”, łączącą 10-letnie doświadczenie użytkownika w systemach identyfikacji radiowej czasu rzeczywistego (Chrono Zachar) z nowoczesnym nadzorem i analityką AI w placówkach oświatowych.
 Dodano dedykowaną sekcję ofertową „Doradztwo IT: Od Sprzętu (Embedded) po Systemy AI”, pozycjonującą użytkownika jako architekta rozwiązań Edge-to-Cloud (integracja mikrokontrolerów/RFID + automatyzacja LLM + szybkie MVP) z bezpośrednim przyciskiem kontaktowym do profilu LinkedIn.
 Status Pacjenta & Regeneracja (Wałbrzych): Zakończenie nocnej sesji o 04:22. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla pełnej regeneracji odcinka Th6–Th8.
+
 📅 Wpis: 16.11.2026 (Wczesny poranek — Rozbudowa Portfolio WojciechCzyzyk.github.io, Kierunek Skalowania Zespołu & Nowy Rytuał Tech English)
 Aktualizacja Portfolio Produkcyjnego (`WojciechCzyzyk.github.io/index.html`): W czasie bezsennej nocy w szpitalu w Wałbrzychu zaprojektowano i wdrożono (z zachowaniem pełnej higieny Git Workflow — najpierw na gałąź `test` z weryfikacją na żywo) dwie kluczowe aktualizacje wizerunkowo-biznesowe:
 Dodano kartę projektu „Inteligentna Świetlica i Szkoła (Smart School — UHF RFID / ESP32 / AI)”, łączącą 10-letnie doświadczenie użytkownika w systemach identyfikacji radiowej czasu rzeczywistego (Chrono Zachar) z nowoczesnym nadzorem i analityką AI w placówkach oświatowych.
@@ -1271,9 +1310,11 @@ Układ interfejsu panoramicznego (Monitor):
 Górny pas: Panel Zagrożeń (czerwony alert + lista incydentów przy wyjściu dziecka bez zgody poza szkołę), Biurko Świetlicy NFC, formularz szybkiego dodawania uczniów (1 linia: imię i wyróżnik + przełączniki świetlica/zgoda + opcjonalny e-mail rodzica) oraz przycisk wywoływania głosowego przez radiowęzeł (TTS / Web Speech API: „Bartek Czyżyk proszony do wyjścia”).
 Środkowy pas: 5 stref szkoły z obsługą przeciągania (Drag & Drop): Wejście/Szatnia, Świetlica, Korytarz/Sale, Podwórko, Poza Szkołą (z gotową pulą startową uczniów Zero-Click Demo + opcją wyczyszczenia).
 Dolny pas: Telemetria zdarzeń na żywo, status powiadomień e-mail dla rodziców (integracja Make.com) oraz generator podsumowania dnia AI.
+
 🏆 Kamień Milowy Szybkości Wdrożenia (16.11.2026 — „Od Koncepcji do Działającego Systemu w Kilka Godzin”)
 Przełom Produktywności (AI-Assisted System Architecture): Zaprojektowanie i wdrożenie produkcyjne modularnego, 12-plikowego systemu Smart School AI (wraz z tablicą Kanban, podziałem na warstwy CSS/JS, syntezatorem mowy TTS i silnikiem alertów) w trakcie jednego przedpołudnia ze szpitalnego łóżka w Wałbrzychu.
 Wniosek Inżynierski: Połączenie 15 lat doświadczenia w architekturze systemowej z nowoczesnymi narzędziami AI skraca czas budowy pełnego prototypu MVP z tygodni do kilku godzin, przy zachowaniu pełnej czystości kodu (Separation of Concerns) i kontroli nad każdym modułem.
+
 📅 Podsumowanie Sesji — 16 listopada 2026
 1. Osiągnięcia Edukacyjne (Bartek — SP nr 2 w Jeleniej Górze, Klasa 5)
 Matematyka: 24/24 pkt (100%, ocena celująca `6`) ze sprawdzianu z dzielenia pisemnego i obliczeń kalendarzowych — pełne zastosowanie nawyków inżynierskich ze Scratcha (sprawdzenie dzielenia mnożeniem odwrotnym, zapis zadań na zmiennych).
@@ -1303,17 +1344,14 @@ Wszystko (46 pytań)
 4. Status Projektów Rodzinnych i Biznesowych
 Akademia APEX (Sarenka Software Kids): Tymczasowa anonimizacja danych personalnych instruktora w publicznym repozytorium w celu zachowania komfortu współpracy i pełnej zgodności RODO na etapie MVP.
 Ergonomia: Zakończenie prac wdrożeniowych i odpoczynek dla odcinka piersiowego kręgosłupa (`Th6–Th8`).
+
 📅 Wpis: 16.11.2026 (Wieczór — Optymalizacja Watchdoga i szybkości działania APEX AI Code Mentor)
 Poprawka CI/CD (`.github/workflows/ai\_mentor.yml` w `BartekCzyzyk.github.io`): Wprowadzono potrójne zabezpieczenie przed zawieszaniem się procesu analizy w chmurze oraz skrócono czas reakcji robota do kilkunastu sekund:
 Dodano `timeout-minutes: 2` na poziomie zadania GitHub Actions (twardy Watchdog).
 Wyłączono tryb głębokiego myślenia modelu (`"thinkingConfig": {"thinkingBudget": 0}`) w wywołaniu Gemini API.
 Ustawiono limit czasu połączenia sieciowego `timeout=30` w `urllib.request.urlopen` wraz z obsługą wyjątków połączenia.
-📅 Wpis: 16.11.2026 (Wieczór — System „Tech English Trainer” & Strategia Edge-to-AI)
-Nowy Zasób Rozwojowy (`tech\_english\_log.md`): Zainicjowano osobny plik treningowy w centralnym repozytorium `WojciechCzyzyk.github.io` (Separation of Concerns), pełniący funkcję pętli zwrotnej (Spaced Repetition) pod anglojęzyczne rozmowy techniczne oraz przyszły moduł dydaktyczny Akademii APEX:
-Zasada KPI (min. 80% trafień): Przy każdym codziennym pytaniu rekrutacyjnym AI podpowiada 4–5 kluczowych pojęć, a użytkownik ma obowiązek użyć w odpowiedzi minimum 80% z nich, po czym następuje szybki Code Review językowy i aktualizacja listy Do utrwalenia.
-Integracja z Silnikiem Quizów: Co kilka sesji zebrany materiał zostanie przekształcony w interaktywny test na silniku JS z poligonu Bartka.
-Kierunek Strategiczny („Edge-to-AI” / AI Copilots): Zdefiniowano główną przewagę rynkową na 2026+ r. jako połączenie twardego Embedded (C++20, mikrokontrolery, czujniki, UHF RFID) z chmurą i agentami AI (Copilots, CI/CD, automatyzacja procesów). Podejście oparte na utrzymaniu roli Architekta Systemu przy wykorzystaniu AI jako mnożnika wydajności w projektach B2B (Smart School, AI Executive Observer) i przyszłej ścieżce zawodowej.
-Status Pacjenta & Regeneracja (Wałbrzych): Zakończenie sesji wieczornej o 20:54. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
+
+
 📅 Wpis: 16.11.2026 (Wieczór — System „Tech English Trainer”, Strategia Edge-to-AI & Wydzielenie `mapa\_projektow.md`)
 Nowy Zasób Rozwojowy (`tech\_english\_log.md`): Zainicjowano osobny plik treningowy w centralnym repozytorium `WojciechCzyzyk.github.io` (Separation of Concerns), pełniący funkcję pętli zwrotnej (Spaced Repetition) pod anglojęzyczne rozmowy techniczne oraz przyszły moduł dydaktyczny Akademii APEX:
 Zasada KPI (min. 80% trafień): Przy każdym codziennym pytaniu rekrutacyjnym AI podpowiada 4–5 kluczowych pojęć, a użytkownik ma obowiązek użyć w odpowiedzi minimum 80% z nich, po czym następuje szybki Code Review językowy i aktualizacja listy Do utrwalenia.

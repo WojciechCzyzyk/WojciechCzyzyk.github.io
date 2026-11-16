@@ -1921,5 +1921,14 @@ Ustandaryzowano i zmodularyzowano wspólny silnik quizów (Single Responsibility
 * **Akademia APEX (Sarenka Software Kids):** Tymczasowa anonimizacja danych personalnych instruktora w publicznym repozytorium w celu zachowania komfortu współpracy i pełnej zgodności RODO na etapie MVP.
 * **Ergonomia:** Zakończenie prac wdrożeniowych i odpoczynek dla odcinka piersiowego kręgosłupa (`Th6–Th8`).
 
+#### 📅 Wpis: 16.11.2026 (Wieczór — Optymalizacja Watchdoga i szybkości działania APEX AI Code Mentor)
+
+* **Poprawka CI/CD (`.github/workflows/ai_mentor.yml` w `BartekCzyzyk.github.io`):** Wprowadzono potrójne zabezpieczenie przed zawieszaniem się procesu analizy w chmurze oraz skrócono czas reakcji robota do kilkunastu sekund:
+  - Dodano `timeout-minutes: 2` na poziomie zadania GitHub Actions (twardy Watchdog).
+  - Wyłączono tryb głębokiego myślenia modelu (`"thinkingConfig": {"thinkingBudget": 0}`) w wywołaniu Gemini API.
+  - Ustawiono limit czasu połączenia sieciowego `timeout=30` w `urllib.request.urlopen` wraz z obsługą wyjątków połączenia.
+
+
+
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -1823,5 +1823,22 @@ Aby darmowy generator budował apetyt, ale nie zastępował udziału w warsztata
 
 * **Formalności Skarbowe (e-Urząd Skarbowy):** Złożono elektroniczne pełnomocnictwo szczególne **PPS-1EU** (zwolnione z opłaty skarbowej dla małżonka) ustanawiające Wojciecha Czyżyka pełnomocnikiem Natalii Gieczonis Czyżyk w sprawie wyjaśnień dotyczących raportu Allegro DAC7 przed Urzędem Skarbowym w Jeleniej Górze.
 
+#### 📅 Wpis: 16.11.2026 (Nocny mikro-sprint — Komplet ikon Favicon PNG & Koncepcja Pilotażu „Inteligentna Świetlica RFID + AI”)
+
+* **Identyfikacja Wizualna (Favicon PNG 64×64 px):** Zaprojektowano, wygenerowano skryptem PowerShell (`System.Drawing` z wygładzaniem `AntiAlias`) i wdrożono produkcyjnie komplet 3 wysoko-kontrastowych, czarno-neonowych ikon PNG na pasek zakładek:
+  - `favicon_wc.png` (`WojciechCzyzyk.github.io`) — obudowa mikroprocesora z 6 nóżkami i inicjałami `WC`.
+  - `favicon_sarenka.png` (`sarenka`) — geometryczna główka sarenki z uszami i nawiasami kodu `< >` zamiast poroża.
+  - `favicon_bartek.png` (`BartekCzyzyk.github.io`) — inicjały `BC` z symbolem przycisku Play (nawiązanie do YouTube i CapCut).
+* **Koncepcja Wdrożenia Pilotażowego B2B (`[Klocek B2B #3]` — „Inteligentna Świetlica & Wejście Szkoły RFID + AI”):**
+  - **Kosztorys Minimum (MVH — 2 strefy: Wejście Główne + Świetlica dla 30–50 uczniów):** Łączny koszt podzespołów **950 – 1 400 zł brutto** (2× czytnik UHF RFID 865–868 MHz z regulacją mocy TX i odczytem RSSI + anteny panelowe [w tym 1 zestaw z puli R&D PFRON 1 200 zł], 2× ESP32-S3 w obudowach z drukarki 3D Bambu Lab, 50–100× pasywny brelok UHF do plecaka, opcjonalnie czytnik NFC 13,56 MHz do autoryzacji rodzica przy odbiorze; warstwa chmurowa i dashboard WWW za 0 zł).
+  - **Architektura:** Strefa 1 (Wejście, zasięg 1,5–3 m) rejestruje przyjście ucznia do szkoły; Strefa 2 (Drzwi świetlicy, obniżona moc TX do 1–1,5 m) aktualizuje na żywo cyfrową listę obecności na tablecie wychowawcy; agent AI generuje wieczorny raport obłożenia świetlicy dla dyrekcji.
+  - **Strategia Wejścia (Zero Ryzyka):** Propozycja dla dyrekcji SP 2 na darmowy, 1-miesięczny pilotaż bezinwazyjny na 1 grupie (30 dzieci) — po potwierdzeniu przydatności szkoła zwraca wyłącznie koszt podzespołów i otwiera drogę do dalszej rozbudowy oraz warsztatów APEX.
+  - **Wygenerowany dokument:** `Pilotaz_Swietlica_RFID_AI_APEX.pdf`
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com/WojciechCzyzyk/WojciechCzyzyk.github.io` (`AI_context.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `umowa_NDA_APEX.md`, `procedury_APEX.md`, `zasady_lekcji_probnych.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `favicon_wc.png`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com/WojciechCzyzyk/esp32-smart-blinds` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com/WojciechCzyzyk/sarenka` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`, `favicon_sarenka.png`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com/BartekCzyzyk/BartekCzyzyk.github.io` (`index.html`, `www/agile-style.css`, `favicon_bartek.png`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/historia/konkurs_szkolny_sp2.html`, `quizy/historia/quiz_sp2_chrobry.html`, `quizy/historia/quiz_sp2.css`, `quizy/historia/quiz_sp2_pytania.js`, `quizy/historia/quiz_sp2_silnik.js`, `quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf`, `quizy/historia/nauka_do_konkursu_historia.jpg`, `quizy/historia/konkurs_sp2.jpg`, `quizy/historia/konkurs_igor_julek.jpg`, `quizy/biologia/test_z_bud_komorek.html`, `quizy/biologia/komorki_obrazki.html`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie nocnej sesji o 03:06. Przejście w tryb bezwzględnego snu i poziomego odbarczania kręgosłupa (Th6–Th8).
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

@@ -5,8 +5,8 @@
 ---
 
 ## 1. Centralne Repozytorium Kontekstu i Portfolio
-* **Repozytorium:** `https://github.com`
-* **Strona WWW:** `https://github.io`
+* **Repozytorium:** `https://raw.githubusercontent.com/WojciechCzyzyk/WojciechCzyzyk.github.io/refs/heads/main/`
+* **Strona WWW:** `https://wojciechczyzyk.github.io`
 * **Pliki w repozytorium:**
   - `AI_context.md` — główna pamięć operacyjna i logi postępów
   - `mapa_projektow.md` — bieżący rejestr wszystkich plików w ekosystemie

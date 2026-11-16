@@ -1,7 +1,7 @@
 # AI Context & Developer Profile
 
 ## 🗺️ Rejestr Plików i Repozytoriów (Single Source of Truth)
-* **Bieżąca mapa wszystkich plików w ekosystemie:** `https://githubusercontent.com`
+* **Bieżąca mapa wszystkich plików w ekosystemie:** `[https://githubusercontent.com](https://raw.githubusercontent.com/WojciechCzyzyk/WojciechCzyzyk.github.io/refs/heads/main/mapa_projektow.md)`
 * **Zasada dla AI:** Nie powielaj pełnej listy ścieżek plików w kolejnych wpisach logu. W podsumowaniach na koniec sesji odnotowuj wyłącznie nowo utworzone, przeniesione lub usunięte pliki, aby zaktualizować `mapa_projektow.md`.
 
 

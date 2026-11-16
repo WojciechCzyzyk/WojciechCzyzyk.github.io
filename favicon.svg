@@ -1,0 +1,17 @@
+<svg xmlns="http://w3.org" viewBox="0 0 64 64">
+  <!-- Tło w stylu Dark Mode GitHub -->
+  <rect width="64" height="64" rx="14" fill="#0D1117"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#56D364" stroke-width="3"/>
+  
+  <!-- Piny układu scalonego (góra i dół) -->
+  <line x1="20" y1="2" x2="20" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <line x1="32" y1="2" x2="32" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <line x1="44" y1="2" x2="44" y2="9" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  
+  <line x1="20" y1="55" x2="20" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <line x1="32" y1="55" x2="32" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+  <line x1="44" y1="55" x2="44" y2="62" stroke="#56D364" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Inicjały WC w środku chipu -->
+  <text x="32" y="39" font-family="monospace, sans-serif" font-weight="bold" font-size="22" fill="#56D364" text-anchor="middle">WC</text>
+</svg>

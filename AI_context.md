@@ -1928,6 +1928,18 @@ Ustandaryzowano i zmodularyzowano wspólny silnik quizów (Single Responsibility
   - Wyłączono tryb głębokiego myślenia modelu (`"thinkingConfig": {"thinkingBudget": 0}`) w wywołaniu Gemini API.
   - Ustawiono limit czasu połączenia sieciowego `timeout=30` w `urllib.request.urlopen` wraz z obsługą wyjątków połączenia.
 
+#### 📅 Wpis: 16.11.2026 (Wieczór — System „Tech English Trainer” & Strategia Edge-to-AI)
+
+* **Nowy Zasób Rozwojowy (`tech_english_log.md`):** Zainicjowano osobny plik treningowy w centralnym repozytorium `WojciechCzyzyk.github.io` (Separation of Concerns), pełniący funkcję pętli zwrotnej (*Spaced Repetition*) pod anglojęzyczne rozmowy techniczne oraz przyszły moduł dydaktyczny Akademii APEX:
+  - **Zasada KPI (min. 80% trafień):** Przy każdym codziennym pytaniu rekrutacyjnym AI podpowiada 4–5 kluczowych pojęć, a użytkownik ma obowiązek użyć w odpowiedzi minimum 80% z nich, po czym następuje szybki Code Review językowy i aktualizacja listy *Do utrwalenia*.
+  - **Integracja z Silnikiem Quizów:** Co kilka sesji zebrany materiał zostanie przekształcony w interaktywny test na silniku JS z poligonu Bartka.
+* **Kierunek Strategiczny („Edge-to-AI” / AI Copilots):** Zdefiniowano główną przewagę rynkową na 2026+ r. jako połączenie twardego **Embedded (C++20, mikrokontrolery, czujniki, UHF RFID)** z **chmurą i agentami AI (Copilots, CI/CD, automatyzacja procesów)**. Podejście oparte na utrzymaniu roli *Architekta Systemu* przy wykorzystaniu AI jako mnożnika wydajności w projektach B2B (*Smart School*, *AI Executive Observer*) i przyszłej ścieżce zawodowej.
+* **Aktywne ścieżki projektowe (Monitoring AI):**
+  - Centralne repozytorium kontekstu i portfolio: `https://github.com` (`AI_context.md`, `tech_english_log.md`, `KARIERA_AI.md`, `PROJEKT_STORY.md`, `sarenka_biznes.md`, `BIOGRAFIA_WOJTKA.md`, `CV.md`, `PZON_wskazowki_lekarz.md`, `umowa_NDA_APEX.md`, `procedury_APEX.md`, `zasady_lekcji_probnych.md`, `pomysly_na_lekcje.md`, `pomysly_na_quiz.md`, `sitemap.xml`, `favicon_wc.png`, `index.html`)
+  - Repozytorium Embedded (C++20): `https://github.com` (`BlindsManager.h`, `BlindsManager.cpp`, `BlindsSequencer.h`, `BlindsSequencer.cpp`, `src/main.cpp`, `platformio.ini`, `logika_sterowania.md`, `funkcje_steruje_rolet.md`, `tests/BlindsController.h`, `tests/BlindsController.cpp`)
+  - Repozytorium Akademii APEX: `https://github.com` (`index.html`, `style.css`, `rezerwacja.html`, `szkola.html`, `odpowiedz.html`, `favicon_sarenka.png`)
+  - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `favicon_bartek.png`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/...`)
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie sesji wieczornej o 20:54. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
 
 

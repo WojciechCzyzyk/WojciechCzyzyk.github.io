@@ -155,4 +155,12 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 
 * **Wartość dla portfolio prowadzącego (R&D):** Rozwój własnych kompetencji w zakresie protokołu **MAVLink**, autopilotów **PX4 / ArduPilot**, fuzji sensorów oraz wizji komputerowej w Pythonie.
 
+### 🏆 Standard Produktowy APEX: 3-Warstwowy Format Interaktywnego Quizu („Wizytówka Misji + Fajerwerk Reakcji + Mikro-Wyjaśnienie”)
+
+* **Koncepcja (Wyróżnik rynkowy Akademii APEX):** Odejście od nudnych, formularzowych testów na rzecz autorskiego, grywalizowanego trenera wiedzy, który bawi, angażuje emocjonalnie i od razu tłumaczy materiał w locie.
+* **Architektura (Wspólny Silnik `quizy/quiz_silnik.js` + `quizy/quiz_style.css`):** Oddzielenie warstwy logiki i wyglądu (umieszczonych centralnie w katalogu `quizy/`) od lokalnych baz pytań i grafik w podfolderach przedmiotowych (`quizy/geografia/`, `quizy/biologia/`, `quizy/historia/`).
+* **Trzy obowiązkowe warstwy każdego nowego quizu:**
+  1. **Wizytówka Misji (Nagłówek powitalny pod `<header>`):** Dedykowana ilustracja awatara ucznia w scenerii danego przedmiotu (np. z globusem, mapą i kompasem) + 2–3 zdania motywującego wstępu od twórcy oraz jasno określony cel misji.
+  2. **Fajerwerk Reakcji Awatara (Natychmiastowa informacja zwrotna po kliknięciu):** Wyświetlanie spersonalizowanego awatara reagującego na wynik — radosny awatar z fajerwerkami i gratulacjami przy poprawnej odpowiedzi (`bartek_brawo.png`) lub żartobliwie grożący palcem przy błędzie (`bartek_uwaga.png`), z zabezpieczeniem `onerror` we wspólnym silniku.
+  3. **Szybkie Wyjaśnienie Nauczycielskie (Dół karty odpowiedzi):** Zachowanie stałego bloku `explanation` pod każdym pytaniem — zwięzłego, przyjaznego objaśnienia przyczyny („dlaczego tak jest”), które utrwala wiedzę bez bezmyślnego wkuwania na pamięć.
 

@@ -1947,6 +1947,14 @@ Ustandaryzowano i zmodularyzowano wspólny silnik quizów (Single Responsibility
   - Repozytorium Mentorskie (Bartek): `https://github.com` (`index.html`, `www/agile-style.css`, `favicon_bartek.png`, `mentor/status_ai.json`, `mentor/mentor_log.json`, `mentor/mentor.css`, `mentor/mentor.js`, `.github/workflows/ai_mentor.yml`, `asystent_dzielenia.md`, `AI_context_junior.md`, `quizy/...`)
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie sesji wieczornej o 20:54. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
+#### 📅 Wpis: 16.11.2026 (Wieczór — System „Tech English Trainer”, Strategia Edge-to-AI & Wydzielenie `mapa_projektow.md`)
+
+* **Nowy Zasób Rozwojowy (`tech_english_log.md`):** Zainicjowano osobny plik treningowy w centralnym repozytorium `WojciechCzyzyk.github.io` (*Separation of Concerns*), pełniący funkcję pętli zwrotnej (*Spaced Repetition*) pod anglojęzyczne rozmowy techniczne oraz przyszły moduł dydaktyczny Akademii APEX:
+  - **Zasada KPI (min. 80% trafień):** Przy każdym codziennym pytaniu rekrutacyjnym AI podpowiada 4–5 kluczowych pojęć, a użytkownik ma obowiązek użyć w odpowiedzi minimum 80% z nich, po czym następuje szybki Code Review językowy i aktualizacja listy *Do utrwalenia*.
+  - **Integracja z Silnikiem Quizów:** Co kilka sesji zebrany materiał zostanie przekształcony w interaktywny test na silniku JS z poligonu Bartka.
+* **Kierunek Strategiczny („Edge-to-AI” / AI Copilots):** Zdefiniowano główną przewagę rynkową na 2026+ r. jako połączenie twardego **Embedded (C++20, mikrokontrolery, czujniki, UHF RFID)** z **chmurą i agentami AI (Copilots, CI/CD, automatyzacja procesów)**. Podejście oparte na utrzymaniu roli *Architekta Systemu* przy wykorzystaniu AI jako mnożnika wydajności w projektach B2B (*Smart School*, *AI Executive Observer*) i przyszłej ścieżce zawodowej.
+* **Higiena Architektury Dokumentacji (`mapa_projektow.md`):** Wydzielono pełny rejestr plików wszystkich 5 repozytoriów do osobnego pliku `mapa_projektow.md` (podpiętego wskaźnikiem na samej górze `AI_context.md`), eliminując duplikację ścieżek w logach sesji.
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie sesji wieczornej o 21:00. Przejście w tryb odpoczynku nocnego w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
 
 *Instrukcja dla AI: Przeczytaj ten plik na początku każdej nowej sesji, aby załadować pełny kontekst projektu, celów oraz stylu pracy dewelopera.*

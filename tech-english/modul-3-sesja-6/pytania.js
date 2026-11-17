@@ -1,0 +1,34 @@
+const quizData = [
+  {
+    question: "1. What does 'separation of concerns' mean in software architecture?",
+    options: [
+      "Storing HTML, CSS, JavaScript, and data inside one single large file",
+      "Dividing an application into distinct sections (styling, logic, data) so each handles a specific responsibility",
+      "Deleting old GitHub repositories every week",
+      "Running the database on a separate physical continent"
+    ],
+    correct: 1,
+    explanation: "'Separation of concerns' (rozdział odpowiedzialności) oznacza podział projektu na osobne, wyspecjalizowane warstwy (np. style.css, silnik.js, pytania.js), dzięki czemu zmiana wyglądu nie psuje logiki."
+  },
+  {
+    question: "2. How does a shared engine file ('silnik.js') eliminate 'code duplication'?",
+    options: [
+      "By compressing all images into black-and-white thumbnails",
+      "Multiple quiz modules reuse the exact same logic file instead of copying and pasting it into every folder",
+      "By blocking users from viewing the source code",
+      "By automatically translating JavaScript into C++"
+    ],
+    correct: 1,
+    explanation: "Wspólny plik 'silnik.js' eliminuje 'code duplication' (powielanie kodu) — zamiast kopiować tę samą logikę do 10 folderów, wszystkie moduły korzystają z jednego pliku."
+  },
+  {
+    question: "3. Why does a modular folder structure improve 'scalability'?",
+    options: [
+      "It makes the monitor screen physically wider",
+      "You can easily add new quiz modules or features without rewriting or breaking existing code",
+      "It removes the need for a web browser",
+      "It slows down page loading speed on mobile phones"
+    ],
+    correct: 1,
+    explanation: "'Scalability' (skalowalność) w tym kontekście oznacza łatwość dokładania kolejnych modułów (np. modul-4, modul-5) bez ryzyka uszkodzenia już działających części."
+  },

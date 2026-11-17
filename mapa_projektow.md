@@ -19,6 +19,8 @@
   - `sarenka_biznes.md` — strategia biznesowa, finansowa i B2B Akademii APEX
   - `pomysly_na_lekcje.md` — bank autorskich scenariuszy warsztatowych APEX
   - `pomysly_na_quiz.md` — katalog formatów aplikacji edukacyjnych
+  - `apex_copilot_biznes.md` — strategia wdrożeń B2B, przewagi i metodyka APEX AI Copilot (oddzielona od edukacji)
+
 * **Podkatalog `docs/` (Dokumenty ofertowe, CV, formalne i załączniki WWW):**
   - `docs/wojciech_czyzyk_CV.md` — modułowe CV inżynierskie
   - `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf` — jednostronicowa ulotka ofertowa autorskich systemów APEX AI Copilot i Edge-to-AI

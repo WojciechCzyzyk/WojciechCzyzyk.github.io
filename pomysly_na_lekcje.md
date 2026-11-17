@@ -169,3 +169,11 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Cel:** Nie prowadzimy lekcji języka angielskiego, lecz oswajamy uczniów z globalną terminologią IT przy okazji praktycznego działania w kodzie i narzędziach (zero wkuwania słówek, zero bariery wejścia — zajęcia odbywają się po polsku).
 * **Mechanizm („Język Doliny Krzemowej”):** Instruktor wprowadza maksymalnie 1–2 angielskie pojęcia na lekcję i używa ich naturalnie w kontekście wykonywanego zadania (np. *Commit, Push, Branch, Merge, Bugfix, Deploy, Sprint, Kanban, Backlog, Clean Code, Single Source of Truth*).
 * **Efekt uboczny (Marketing Szeptany):** Dzieci chętnie przenoszą profesjonalnie brzmiące hasła na szkolne korytarze i do rozmów przy obiedzie, co buduje u nich dumę młodego inżyniera, a rodzicom daje natychmiastowy dowód wysokiej jakości warsztatów.
+
+## 🗂️ Filar Dydaktyczny i Marketingowy: „Cyfrowy Porządek i Architektura Informacji”
+
+* **Obietnica dla rodzica (Bonus życiowy):** Uczymy dziecko nie tylko pisania kodu, ale też **zarządzania wiedzą i porządkowania informacji** (*Information Architecture* & *Single Source of Truth*). Koniec z chaosem na Pulpicie, zgubionymi plikami i nerwowym szukaniem notatek przed klasówką.
+* **Jak ćwiczymy to na warsztatach:**
+  - **Czysta struktura katalogów:** Od pierwszej lekcji oddzielamy kod, wygląd i dane w osobnych plikach (*Separation of Concerns*), stosując przejrzyste nazewnictwo.
+  - **Własna baza wiedzy i log postępów:** Uczeń prowadzi uporządkowany dziennik swoich projektów oraz buduje tematyczne repozytoria (np. osobne katalogi pod historię, biologię, matematykę), z których błyskawicznie korzysta przed sprawdzianem.
+* **Wartość długofalowa:** Nawyk układania informacji w logiczne struktury obniża stres szkolny, uczy samodzielności i stanowi fundament pracy nowoczesnego inżyniera oraz menedżera.

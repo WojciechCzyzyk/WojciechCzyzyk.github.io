@@ -41,20 +41,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Kurs dla każdego profilu ucznia:** Idealny zarówno dla ścisłowców, jak i humanistów potrzebujących lepszych ocen z historii czy języków.
 * **Wirusowy marketing w klasie:** Uczeń wrzuca link do swojego quizu na grupę klasową przed sprawdzianem — cała klasa uczy się z aplikacji stworzonej w Akademii APEX.
 
-
-## 📸 Pomysł #2: Od zdjęcia z podręcznika do własnej aplikacji quizowej (Data Flow & OCR)
-* **Źródło inspiracji:** Bartek po sukcesie z trenerem historycznym sam poprosił o stworzenie kolejnego quizu – tym razem na sprawdzian z biologii. Zamiast ręcznego przepisywania definicji, przetestowaliśmy potok przetwarzania zdjęć z podręcznika na gotową aplikację.
-* **Cel dydaktyczny:** Zrozumienie pełnego przepływu danych w systemach IT (*Input ➔ Processing ➔ Output*), nauka kontroli jakości danych wejściowych oraz budowanie skalowalnego „Centrum Treningowego” na własnej stronie WWW.
-* **Przebieg lekcji (Mikro-Sprinty):**
-  1. **Akwizycja i Kontrola Jakości Danych (QA):** Uczeń robi zdjęcia stron z podręcznika lub zeszytu. *Lekcja inżynierska:* zasada **Garbage In, Garbage Out (GIGO)** – jeśli zdjęcie jest ucięte lub nieostre, system (AI) wygeneruje błędne pytania. Uczeń uczy się weryfikować jakość surowych danych przed wrzuceniem ich do procesu.
-  2. **Ekstrakcja i Parsowanie (OCR + AI):** Wrzucenie czystych zdjęć do asystenta AI z odpowiednim promptem, aby wyciągnął kluczowe pojęcia, definicje oraz podpisy ze schematów i zamienił je w ustrukturyzowaną bazę pytań.
-  3. **Wdrożenie Produkcyjne:** Zapisanie wygenerowanego kodu jako nowego pliku (np. `quiz_biologia.html`) w repozytorium GitHub.
-  4. **Rozbudowa Hubu Edukacyjnego (`index.html`):** Dodanie nowego kafelka do sekcji „Moje Centrum Treningowe” na stronie głównej ucznia oraz przygotowanie placeholdera („W przygotowaniu”) na kolejny przedmiot.
-* **Profilowanie trudności:**
-  - *Poziom Junior (klasy 3–4):* 10 pytań zamkniętych na podstawie jednej strony z podręcznika + proste podpięcie gotowego linku na stronie.
-  - *Poziom Pro (klasy 5–8):* Wielostronicowy materiał (np. cały dział z biologii/geografii), własna edycja tablicy pytań w kodzie JS oraz zarządzanie kilkoma modułami w hubie.
-
-
 ## 📸 Pomysł #2: Od zdjęcia z podręcznika do własnej aplikacji quizowej (Data Flow & OCR)
 * **Źródło inspiracji:** Bartek po sukcesie z trenerem historycznym sam poprosił o stworzenie kolejnego quizu – tym razem na sprawdzian z biologii. Zamiast ręcznego przepisywania definicji, przetestowaliśmy potok przetwarzania zdjęć z podręcznika na gotową aplikację.
 * **Cel dydaktyczny:** Zrozumienie pełnego przepływu danych w systemach IT (*Input ➔ Processing ➔ Output*), nauka kontroli jakości danych wejściowych oraz budowanie skalowalnego „Centrum Treningowego” na własnej stronie WWW.
@@ -97,15 +83,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - Zrozumienie różnicy między **stroną dostępną po linku** (dla znajomych i rodziny) a **stroną indeksowaną przez roboty wyszukiwarek** (publiczną dla całego świata).
   - Praktyczna edycja sekcji `<head>` w pliku `index.html` – dodanie znacznika `<meta name="robots" content="noindex, nofollow">` jako cyfrowej tarczy chroniącej stronę przed botami.
 * **Efekt WOW:** Uczeń świadomie kontroluje widoczność swojego projektu w internecie, a rodzice zyskują 100% poczucie bezpieczeństwa i zaufania do metodyki Akademii.
-
-### 🤖 Autorski System „APEX AI Code Mentor” (Automatyczne Code Review & Grywalizacja)
-* **Koncepcja systemu:** Własny silnik dydaktyczny oparty na automatyzacji **GitHub Actions** oraz modelach językowych (LLM), który analizuje rzeczywisty kod pisany przez ucznia po każdym zatwierdzeniu zmian (`Commit / Push`) i prowadzi jego indywidualną historię rozwoju.
-* **Pamięć i profilowanie postępów (`mentor_log`):** System przechowuje historię wcześniejszych wpisów i postępów konkretnego dziecka. Dzięki temu AI nie generuje powtarzalnych szablonów, lecz odnosi się do realnej ścieżki ucznia (np. docenia wyeliminowanie błędów z poprzednich zajęć i proponuje kolejne wyzwanie dopasowane do jego tempa).
-* **Okienko postępu na żywo na stronie ucznia (Grywalizacja):** Na osobistej witrynie każdego dziecka (`nick.github.io`) znajduje się dedykowany widget **„Status od AI Mentora”**, który kilkanaście sekund po zapisaniu kodu wyświetla spersonalizowaną pochwałę oraz kolejną wskazówkę techniczną. Wyzwala to zdrową rywalizację, dumę z własnych rozwiązań i natychmiastową informację zwrotną na sali.
-* **Podwójny strumień wyjściowy (Uczeń + Rodzic):** Z jednej analizy kodu (`git diff` + historia logów) system generuje dwa osobne komunikaty:
-  1. **Dla ucznia (na stronę WWW):** Krótki, motywujący feedback techniczny w stylu partnerskiego mentora.
-  2. **Dla rodzica (raport po zajęciach):** Zrozumiałe podsumowanie oparte na wzorcu *Feedback Sandwich* (konkretna pochwała za efekt + życzliwa wskazówka rozwojowa + bezpośredni link do działającego projektu).
-
 
 ### 🤖 Autorski System „APEX AI Code Mentor” (Pełna Architektura & Grywalizacja)
 

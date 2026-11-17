@@ -98,3 +98,10 @@ To jest genialny kierunek na rozwój firmy Natalki do poziomu poważnego gracza 
   2. **Bezpieczne paczki kodu (Max 3 elementy):** Gotowe bloki do podania uczniom krok po kroku, wykluczające błędy składniowe i chaos.
   3. **Słowniczek „Smaczków Inżynierskich”:** Konkretne hasła do wplecenia w odpowiednim momencie lekcji (*Kaizen*, *Poka-Yoke*, *Veni, vidi, vici*, *Shift-Left*), które budują atmosferę wielkiej inżynierii.
 * **Rezultat biznesowy i edukacyjny:** Nauczyciel nigdy nie improwizuje „co powiedzieć”, 11-letni Bartek może z dumą współprowadzić warsztaty dla młodszych kolegów, a cała szkoła posiada w 100% skalowalny produkt gotowy pod model franczyzowy (pozostaje jedynie wpięcie kolejnych tematów lekcji w ten gotowy szablon).
+
+
+### 🤝 Kanał Rozwoju i Finansowania: Warsztaty Duetowe „Rodzic + Dziecko” (Granty Miejskie / JBO / NGO)
+* **Model współpracy B2G / NGO:** Nawiązanie partnerstwa z lokalnymi stowarzyszeniami (np. *Mama w mieście Jelenia Góra*), domami kultury (JCK) oraz projektami z **Jeleniogórskiego Budżetu Obywatelskiego (JBO)**. Miasta i fundacje dysponują budżetami na bezpłatne warsztaty dla rodzin, ale szukają nowoczesnych prowadzących z obszaru nowych technologii i AI.
+* **Format flagowy: „Rodzic + Nastolatek (11–14 lat): Zbudujcie Razem Aplikację z AI (Instrukcja LEGO)”:**
+  - **Cel:** Zamiast konfliktu o czas przed ekranem, rodzic i dziecko tworzą 2-osobowy zespół projektowy (10 par na salę, 2 godziny warsztatu) i wspólnie składają działającą aplikację lub asystenta nauki.
+  - **Korzyść biznesowa dla Akademii APEX:** Pewne wynagrodzenie za warsztat finansowane z grantu miejskiego + naturalna promocja pełnych kursów semestralnych wśród 10 zaangażowanych rodzin na każdym spotkaniu.

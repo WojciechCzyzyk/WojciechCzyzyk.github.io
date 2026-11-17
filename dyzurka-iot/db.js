@@ -2,9 +2,9 @@
 const FIREBASE_URL = "https://apex-dyzurka-demo-default-rtdb.europe-west1.firebasedatabase.app";
 
 const USERS = {
-  "lekarz":  { pin: "5678", name: "Lek. Piotr N.", role: "lekarz", label: "Lekarz Dyżurny" },
-  "dyzurka": { pin: "1234", name: "Piel. Anna K.", role: "pielegniarka", label: "Pielęgniarka" },
-  "opiekun": { pin: "3333", name: "Opiekun Janusz B.", role: "opiekun", label: "Opiekun Medyczny" }
+  "lekarz":  { pin: "1111", name: "Admin", role: "lekarz", label: "Lekarz Dyżurny" },
+  "dyzurka": { pin: "2222", name: "Admin", role: "pielegniarka", label: "Pielęgniarka" },
+  "opiekun": { pin: "3333", name: "Admin", role: "opiekun", label: "Opiekun Medyczny" }
 };
 
 // Definicja sal: standard = liczba stałych łóżek, max = maksymalny limit z dostawką

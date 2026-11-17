@@ -80,8 +80,8 @@ function renderRooms() {
     const cards = pats.length ? pats.map(p => {
       const v = getLatestVitals(p);
       return `
-        <div class="bed-card ${getStatusClass(v)}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" onclick="openPatientModal('${p.id}')" style="cursor:${canDrag ? "grab" : "pointer"};">
-          <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+            <div class="bed-card ${getStatusClass(v)}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" ondragend="onDragEnd()" ondblclick="openPatientModal('${p.id}')" title="Kliknij 2x, aby otworzyć pełną kartę | Przeciągnij, aby zmienić salę" style="cursor:${canDrag ? "grab" : "pointer"};">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
             <strong style="color:var(--accent);">${p.bed} • ${p.name}</strong>
             <span style="font-size:0.72rem; color:var(--muted);">${p.qr}</span>
           </div>

@@ -24,12 +24,20 @@
   - `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf` — jednostronicowa ulotka ofertowa autorskich systemów APEX AI Copilot i Edge-to-AI
   - `docs/PZON_wskazowki_lekarz.md` — wytyczne do zaświadczenia lekarskiego PZON
   - `docs/sarenka/umowa_NDA_APEX.md` — wzór umowy o zachowaniu poufności (NDA)
-* **Podkatalog `inne/` (Materiały uzupełniające, startowe i biograficzne):**
+* **Podkatalog `inne/` (Materiały uzupełniające, techniczne i biograficzne):**
   - `inne/ai_start.md` — podręczny link startowy do inicjalizacji sesji AI
   - `inne/biografia_wojtka.md` — oś życiowa i osiągnięcia (szybownictwo, rajdy rowerowe)
-  - `inne/kariera_ai.md` — strategia rekrutacyjna i profil kompetencji
-  - `inne/projekt_story.md` — historia projektów i wdrożeń
+  - `inne/projekt-story-smart-blinds.md` — historia powstania i architektura sterownika rolet ESP32
+  - `inne/strategia-rozwoju-zawodowego.md` — strategia rekrutacyjna i profil kompetencji
   - `inne/syllabus_drony_uav.md` — szczegółowy program i koncepcje modułu dronowego UAV
+  - `inne/wifi_dom.md` — dokumentacja architektury sieci domowej
+  - `inne/wskazowki-github.md` — robocze notatki i wytyczne dotyczące GitHuba
+* **Podkatalog `inne/bartek/` (Archiwalne i robocze materiały rozwojowe Bartka):**
+  - `inne/bartek/projekt-bartka-dzielenie-pisemne.md` — koncepcja i logika projektu asystenta dzielenia pisemnego w Scratchu
+  - `inne/bartek/dziel_bartek.md` — robocze notatki algorytmiczne do dzielenia pisemnego
+  - `inne/bartek/historia_Polski.md` — materiały źródłowe do quizów historycznych
+  - `inne/bartek/bartek-tmp.html` — roboczy szablon HTML poligonu
+
 
 
 ---

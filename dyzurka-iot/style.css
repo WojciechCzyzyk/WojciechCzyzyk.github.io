@@ -92,64 +92,80 @@ body {
   align-items: center;
 }
 
-/* Sekcje Sal */
+/* Sekcje Sal (Układ pionowych kolumn obok siebie jak w Smart School) */
+#rooms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
 .room-section {
-  background: rgba(30, 41, 59, 0.45);
+  background: rgba(30, 41, 59, 0.55);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px;
-  margin-bottom: 14px;
+  border-radius: 10px;
+  padding: 9px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-section.room-full {
+  border-color: rgba(245, 158, 11, 0.5);
 }
 
 .room-header {
   font-weight: 800;
   color: #e2e8f0;
-  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  align-items: center;
+  font-size: 0.85rem;
 }
 
 .beds-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .bed-card {
   background: var(--card);
   border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 12px;
-  cursor: pointer;
-  transition: transform 0.15s;
+  border-radius: 8px;
+  padding: 8px;
+  transition: transform 0.12s;
+  font-size: 0.82rem;
 }
 .bed-card:hover { transform: translateY(-2px); }
 .bed-card.status-ok { border-color: var(--green); }
 .bed-card.status-warn { border-color: var(--amber); }
-.bed-card.status-alert { border-color: var(--red); background: rgba(239, 68, 68, 0.12); }
-.bed-card.selected { box-shadow: 0 0 0 2px var(--accent); }
+.bed-card.status-alert { border-color: var(--red); background: rgba(239, 68, 68, 0.14); }
 
 .vitals-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin: 8px 0;
+  gap: 4px;
+  margin: 6px 0;
   text-align: center;
 }
-.vital-item { background: #0b1120; padding: 6px 4px; border-radius: 6px; border: 1px solid var(--border); }
-.vital-num { font-weight: 800; font-size: 0.95rem; }
-.vital-lbl { font-size: 0.7rem; color: var(--muted); }
+.vital-item { background: #0b1120; padding: 4px 2px; border-radius: 5px; border: 1px solid var(--border); }
+.vital-num { font-weight: 800; font-size: 0.8rem; }
+.vital-lbl { font-size: 0.62rem; color: var(--muted); }
 
 .note-box {
   background: #0b1120;
   border-left: 3px solid var(--accent);
-  padding: 6px 8px;
-  font-size: 0.8rem;
+  padding: 4px 6px;
+  font-size: 0.72rem;
   color: #cbd5e1;
   border-radius: 4px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
+
 
 /* Formularze i Log aktywności */
 input, select {

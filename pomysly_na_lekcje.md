@@ -177,3 +177,14 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - **Czysta struktura katalogów:** Od pierwszej lekcji oddzielamy kod, wygląd i dane w osobnych plikach (*Separation of Concerns*), stosując przejrzyste nazewnictwo.
   - **Własna baza wiedzy i log postępów:** Uczeń prowadzi uporządkowany dziennik swoich projektów oraz buduje tematyczne repozytoria (np. osobne katalogi pod historię, biologię, matematykę), z których błyskawicznie korzysta przed sprawdzianem.
 * **Wartość długofalowa:** Nawyk układania informacji w logiczne struktury obniża stres szkolny, uczy samodzielności i stanowi fundament pracy nowoczesnego inżyniera oraz menedżera.
+
+## 🧱 Żelazny Standard Prowadzenia Lekcji: „Instrukcja LEGO & Kaizen” (Micro-Steps)
+
+* **Cel (Zero Chaosu w 45–60 min):** Uczeń na jednych zajęciach buduje od zera działającą aplikację (np. quiz, kalkulator, grę), nie marnując czasu na szukanie opcji w interfejsie i nie gubiąc się w dużym kodzie.
+* **5 Żelaznych Zasad „Instrukcji LEGO”:**
+  1. **Tablica Kanban jako „Plansza Gry”:** Na starcie lekcji uczeń zakłada 3–4 krótkie karty zadań (`Do zrobienia` ➔ `W trakcie` ➔ `Gotowe`). Po każdym małym kroku fizycznie przesuwa kartę w prawo, czując natychmiastowy postęp.
+  2. **1 Klocek = 1 Plik = 1 Commit:** Nigdy nie tworzymy kilku plików naraz. Krok po kroku: najpierw `style.css` (wygląd), potem `index.html` (szkielet), następnie `silnik.js` (logika), a na końcu `pytania.js` (dane).
+  3. **Bezpieczne Porcje Kodu (Max 3 elementy na wklejenie):** Duże tablice danych (np. 10 pytań) dzielimy na małe paczki po 3 obiekty. Eliminuje to błędy składniowe (brakujące nawiasy/przecinki) i przyspiesza wklejanie.
+  4. **Podlinkowane Skróty na Wierzchu (*Zero Searching*):** Materiały lekcyjne zawierają bezpośrednie linki do odpowiednich katalogów i narzędzi, aby uczeń nie tracił czasu na przeklikiwanie menu.
+  5. **Retrospektywa Kaizen na Koniec Lekcji:** Po testach aplikacji wspólnie z dziećmi wyłapujemy, co sprawiło trudność, i zapisujemy krótką zasadę (*Poka-Yoke*), aby w kolejnym projekcie błąd się nie powtórzył.
+

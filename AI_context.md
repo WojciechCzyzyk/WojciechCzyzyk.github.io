@@ -1368,6 +1368,13 @@ Status Pacjenta
 * **Nowy Zasób Prezentacyjny (`Karta_Koncepcyjna_Systemy_AI_Copilot.pdf`):** Wygenerowano jednostronicową kartę-ulotkę podsumowującą ideę ekosystemu (porównanie architektoniczne, 3 filary: *AI Code Mentor*, *AI Executive Observer*, *Smart School RFID + AI* oraz 30-sekundowy *Elevator Pitch*). *(Po zapisaniu pliku w repozytorium `WojciechCzyzyk.github.io` należy dopisać go do `mapa_projektow.md`).*
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie nocnej sesji o 04:09. Przejście w tryb odpoczynku w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
+#### 📅 Wpis: 17.11.2026 (Wczesny poranek — Konsolidacja Architektury Lekkich Systemów AI Copilot & Karta Koncepcyjna PDF v2)
+
+* **Analiza Porównawcza Architektury AI (Context Engineering vs Korporacyjne Kombajny):** Przeprowadzono syntezę przewag lekkich, kuratorowanych systemów kontekstowych nad ciężkimi platformami Enterprise (na bazie realnych obserwacji z sektora Tier-1 Automotive / Dräxlmaier):
+  - **Trzy główne przewagi rynkowe:** (1) **Szybkość wdrożenia** (od pomysłu do działającego MVP w godziny/dni zamiast miesięcy), (2) **Natychmiastowa adaptacja do zmian** (modyfikacja logiki, raportów i wyzwalaczy w 5 minut pod ewoluujące wymagania klienta, brak *Vendor Lock-in*) oraz (3) **Bezkonkurencyjna cena / TCO** (wykorzystanie darmowych i niskokosztowych narzędzi chmurowych zamiast drogich licencji od stanowiska).
+  - **Eliminacja Context Pollution & Integracja Edge-to-AI:** Świadome zarządzanie czystą pamięcią (`Single Source of Truth` w plikach `.md`/`.json`) oraz bezpośrednie spięcie ze światem fizycznym (ESP32, UHF RFID, czujniki).
+* **Nowy Zasób Prezentacyjny (`Karta_Koncepcyjna_Systemy_AI_Copilot-v2.pdf`):** Wygenerowano zaktualizowaną, jednostronicową kartę-ulotkę z wyodrębnionymi trzema przewagami konkurencyjnymi, tabelą porównawczą, trzema filarami (*AI Code Mentor*, *AI Executive Observer*, *Smart School RFID + AI*) oraz 30-sekundowym *Elevator Pitch*.
+* **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie nocnej sesji o 04:14. Przejście w tryb odpoczynku w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
 
 

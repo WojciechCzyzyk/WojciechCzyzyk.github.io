@@ -365,6 +365,49 @@ async function removeStaffMember(key) {
   renderStaffList();
   renderLogs();
 }
+function openRoundsModal() {
+  if (currentUser.role !== "lekarz") return;
+  const docSel = document.getElementById("rounds-doctor-select");
+  const doctors = Object.values(wardState.users || USERS).filter(u => u.role === "lekarz");
+  docSel.innerHTML = doctors.map(d => `<option value="${d.name}" ${d.name === currentUser.name ? "selected" : ""}>👨‍⚕️ ${d.name}</option>`).join("");
+
+  const listBox = document.getElementById("rounds-patients-list");
+  listBox.innerHTML = wardState.patients.map(p => {
+    const m = p.history.filter(h => h.type === "pomiar");
+    const v = m.length ? m[m.length - 1] : null;
+    const vitalsTxt = v ? `RR: ${v.sys}/${v.dia} | Puls: ${v.pulse} | Temp: ${v.temp}°C` : "Brak pomiarów";
+    return `
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 220px 1fr auto; gap:10px; align-items:center;">
+        <div>
+          <strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br>
+          <span style="font-weight:700;">${p.name}</span><br>
+          <span style="font-size:0.75rem; color:var(--muted);">${vitalsTxt}</span>
+        </div>
+        <div>
+          <label style="font-size:0.75rem;">Leki, uwagi i zalecenia po obchodzie:</label>
+          <input id="round-meds-${p.id}" value="${(p.medications || "").replace(/"/g, "&quot;")}" placeholder="Wpisz ordynację leków i uwagi...">
+        </div>
+        <button class="btn btn-green btn-sm" style="margin-top:16px;" onclick="saveRoundNote('${p.id}')">💾 Zapisz</button>
+      </div>`;
+  }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
+
+  document.getElementById("rounds-modal").classList.remove("hidden");
+}
+
+async function saveRoundNote(patId) {
+  const pat = wardState.patients.find(p => p.id === patId);
+  if (!pat) return;
+  const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
+  const newMeds = document.getElementById(`round-meds-${patId}`).value.trim();
+
+  pat.medications = newMeds;
+  pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
+  wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });
+
+  await WardDB.save(wardState);
+  renderLogs();
+  alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);
+}
 
 
 setInterval(() => { if (currentUser && !isDragging) refreshBoard(); }, 4000);

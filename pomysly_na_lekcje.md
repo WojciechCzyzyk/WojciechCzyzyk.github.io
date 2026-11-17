@@ -195,20 +195,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **3. Kulturowe Smaczki Inżynierskie zamiast Suchego Kodu:** W trakcie rozwiązywania problemów wplatamy autentyczne pojęcia ze świata wielkiej inżynierii i przemysłu — japońskie *Kaizen* (ciągłe doskonalenie), *Poka-Yoke* (zapobieganie błędom u źródła) czy łacińskie *Veni, vidi, vici*. Dzieci uwielbiają te hasła i z dumą chwalą się nimi po zajęciach.
 
 
-* **6. Runda Bonusowa: „Niespodzianka AI na Koniec Lekcji” (*Variable Reward*):**
-  - **Mechanizm:** Gdy uczeń poprawnie ukończy wszystkie główne kroki zadania i przesunie ostatnią kartę na tablicy Kanban do kolumny `Gotowe`, w ostatnich 5–10 minutach zajęć AI generuje dla niego **indywidualny mini-bonus** sprofilowany pod jego zainteresowania (np. dodanie licznika combo, ukrytego *Easter Egga*, dźwięku zwycięstwa czy trybu rzutów karnych).
-  - **Efekt psychologiczny i grupowy:** Dziecko pilnuje jakości swojego kodu, żeby odblokować niespodziankę, a na koniec lekcji w sali powstaje twórczy, pozytywny szum (*„Zobacz co mi AI wymyślił, masz to samo?!”*), który naturalnie integruje grupę i sprawia, że uczniowie nie mogą doczekać się kolejnych zajęć.
-* **Krok 3 (15 min) — Klocek Mózgu i Danych (`app.js`) + Wybór Własnego Tematu:**
-  - Uczniowie przesuwają Kartę 3 na `W trakcie`.
-  - **Wolny wybór tematu (Indywidualizacja):** Instruktor pokazuje przykładowe tematy z listy (*Matematyka klasa 3*, *Ortografia bez błędów*, *Najlepsi piłkarze*, *Tajemnice kosmosu*, *Mistrz Minecrafta*) lub zachęca do wymyślenia własnego. Dzięki temu każdy uczeń w sali buduje zupełnie inny test!
-  - Uczniowie wklejają wygenerowaną przez swojego Copilota **bezpieczną paczkę max 3 pytań** z wybranego tematu i testują aplikację w przeglądarce.
-  - **Smaczek inżynierski:** Po pierwszym udanym uruchomieniu cała sala przybija piątkę z hasłem *Veni, vidi, vici* (*Przybyłem, zobaczyłem, zwyciężyłem!*), a na koniec zajęć dzieci wymieniają się miejscami i rozwiązują nawzajem swoje autorskie quizy.
-
-
-   - * **Krok 5 (Finał — 10 min) — Własna Mini-Strona „O Mnie i Moich Pasjach” + Grafika Tematyczna:**
-  - Na koniec zajęć AI generuje spersonalizowaną sekcję wstępną dopasowaną do pasji ucznia (np. *„Cześć! Jestem Krzyś, uwielbiam piłkę nożną i Minecrafta — sprawdź, czy zdasz mój autorski test!”*) oraz dedykowany obrazek tematyczny (np. piłkarski lub kosmiczny).
-  - Uczeń wkleja ten blok na górę swojej strony (`index.html`), dzięki czemu **wychodzi z lekcji pokazowej z własną, działającą mini-stroną internetową (wizytówka + grafika + autorski quiz)**, którą od razu otwiera na telefonie rodziców po wyjściu z sali.
- 
   - ### 🧱 Karta Scenariusza Lekcji Pokazowej (60 min): „Moja Pierwsza Mini-Strona i Quiz z AI”
 *Wersja w standardzie „Instrukcja LEGO” dla Instruktora oraz Młodego Asystenta (11-letniego Bartka) — odpowiednia zarówno dla grupy dzieci (10–14 lat), jak i duetów „Rodzic + Dziecko”:*
 

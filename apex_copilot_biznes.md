@@ -31,3 +31,16 @@
 ## 3. Materiały Ofertowe i Poligon R&D
 * **Karta Koncepcyjna PDF (1 strona):** `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf`
 * **Żywy Poligon Doradczy i Procedury:** `https://github.com/WojciechCzyzyk/WojciechCzyzyk.github.io/tree/main/docs`
+
+* 6. **Etap 6: Przegląd Powdrożeniowy po 1 Miesiącu (*Post-Implementation Tuning*):** Po ok. 30 dniach realnej pracy, gdy pracownicy oswoją się już z narzędziem i wyłapią nowe potrzeby, wracamy do firmy na indywidualną sesję szlifującą — doprecyzowujemy prompty, dokładamy brakujące procedury i eliminujemy drobne tarcia.
+
+---
+
+## 4. Model Wyceny i Sprzedaży B2B (Niski Próg Wejścia + Subskrypcja)
+
+*Strategia zaprojektowana pod małe i średnie firmy (MŚP), eliminująca strach przed dużym wydatkiem na start:*
+
+* **Krok 1 — Prezentacja i Warsztat Odkrywczy (0 zł lub symboliczna opłata):** Pokazujemy działanie systemu na żywym przykładzie i zbieramy problemy zespołu. Klient niczym nie ryzykuje, a od razu widzi konkretną wartość dla swojego biznesu.
+* **Krok 2 — Wdrożenie Startowe (Przystępna opłata jednorazowa):** Zbudowanie wspólnego rdzenia firmy (*Core Context*), dopasowanie profili stanowiskowych, testy z pracownikami oraz przegląd szlifujący po 1 miesiącu. Cena wyraźnie niższa niż roczne korporacyjne licencje per stanowisko.
+* **Krok 3 — Opieka i Rozwój w Modelu Subskrypcyjnym (Opcjonalny abonament miesięczny):** Dla firm, które chcą na bieżąco rozbudowywać system o nowe działy, automatyzacje (webhooki/API) i regularne sesje optymalizacyjne *Kaizen* (klient zachowuje pełną własność swoich plików kontekstowych, zero *vendor lock-in*).
+

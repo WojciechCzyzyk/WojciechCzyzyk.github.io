@@ -318,4 +318,50 @@ async function resetDemoData() {
   await refreshBoard();
 }
 
+function openStaffModal() {
+  if (currentUser.role === "opiekun") return;
+  renderStaffList();
+  document.getElementById("staff-modal").classList.remove("hidden");
+}
+
+function renderStaffList() {
+  const box = document.getElementById("staff-list-box");
+  const usersMap = wardState.users || {};
+  box.innerHTML = Object.entries(usersMap).map(([key, u]) => `
+    <div class="log-item" style="display:flex; justify-content:space-between; align-items:center;">
+      <div><strong>${u.name}</strong> • <span style="color:var(--accent);">${u.label}</span> <span style="color:var(--muted); font-size:0.78rem;">(PIN: ${u.pin})</span></div>
+      ${["lekarz", "dyzurka", "opiekun"].includes(key) ? `<span style="font-size:0.75rem; color:var(--muted);">Konto bazowe</span>` : `<button class="btn btn-sm btn-red" onclick="removeStaffMember('${key}')">Usuń</button>`}
+    </div>`).join("");
+}
+
+async function addStaffMember() {
+  const name = document.getElementById("staff-name").value.trim();
+  const role = document.getElementById("staff-role").value;
+  const pin = document.getElementById("staff-pin").value.trim();
+  if (!name || pin.length < 4) return alert("Wpisz imię/tytuł oraz 4-cyfrowy kod PIN!");
+
+  const roleLabels = { lekarz: "Lekarz Dyżurny", pielegniarka: "Pielęgniarka", opiekun: "Opiekun Medyczny" };
+  const key = `staff_${Date.now()}`;
+  if (!wardState.users) wardState.users = { ...USERS };
+  wardState.users[key] = { pin, name, role, label: roleLabels[role] };
+
+  wardState.logs.unshift({ time: nowStamp(), text: `👥 ${currentUser.name} dodał pracownika: ${name} (${roleLabels[role]}).`, alert: false });
+  await WardDB.save(wardState);
+  document.getElementById("staff-name").value = "";
+  document.getElementById("staff-pin").value = "";
+  renderStaffList();
+  renderLogs();
+}
+
+async function removeStaffMember(key) {
+  if (!confirm("Usunąć to konto pracownika?")) return;
+  const removed = wardState.users[key];
+  delete wardState.users[key];
+  wardState.logs.unshift({ time: nowStamp(), text: `👥 ${currentUser.name} usunął konto: ${removed ? removed.name : key}.`, alert: false });
+  await WardDB.save(wardState);
+  renderStaffList();
+  renderLogs();
+}
+
+
 setInterval(() => { if (currentUser && !isDragging) refreshBoard(); }, 4000);

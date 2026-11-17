@@ -110,3 +110,13 @@ To jest genialny kierunek na rozwój firmy Natalki do poziomu poważnego gracza 
 
   - **Płatna Lekcja Pokazowa (Zero Kosztów Pozyskania Klienta):** Rodzina otrzymuje pełnowartościowe, bezpłatne warsztaty próbne, a Akademia APEX ma od razu opłacony czas instruktorów i sprzętu z budżetu grantowego — zamieniając koszt marketingu w bezpośredni przychód.
 
+Pozyskiwanie klientów i zleceń będzie oparte na trzech niskokosztowych, wzajemnie uzupełniających się kanałach sprzedaży, gwarantujących stabilność przychodów od pierwszych miesięcy działalności:
+
+1. Współpraca ze stowarzyszeniami, domami kultury i samorządem (B2G / NGO – „Płatne lekcje pokazowe”):
+Realizacja tematycznych warsztatów edukacyjno-technologicznych (m.in. programowanie i loty dronów, robotyka, warsztaty duetowe „Rodzic + Dziecko”) finansowanych ze środków publicznych, grantów miejskich oraz Budżetu Obywatelskiego we współpracy z lokalnymi organizacjami pozarządowymi i placówkami kultury w powiecie karkonoskim i Jeleniej Górze. Model ten zapewnia bezpośrednie wynagrodzenie za przeprowadzenie warsztatów, a jednocześnie pełni rolę bezpłatnej lekcji pokazowej dla uczestników, generując naturalny napływ uczniów na regularne kursy semestralne bez ponoszenia kosztów płatnej reklamy.
+
+2. Lokalne partnerstwa edukacyjne i marketing rekomendacji (Klienci indywidualni B2C):
+Organizacja zajęć pokazowych oraz warsztatów z wykorzystaniem autorskiej metodyki modułowej („Instrukcja LEGO”) w lokalnych szkołach, świetlicach i placówkach na terenie gminy Jeżów Sudecki i okolic, wsparta własną stroną internetową z systemem zapisów online.
+
+3. Bezpośrednie doradztwo i wdrożenia AI dla lokalnych firm (B2B):
+Pozyskiwanie zleceń wśród małych i średnich przedsiębiorstw (MŚP) z regionu poprzez bezpłatne lub niskokosztowe warsztaty diagnostyczne i prezentacje na żywo (wdrażanie lekkich systemów kontekstowych AI Copilot usprawniających obieg zadań, raportowanie i automatyzację procesów biurowych oraz terenowych).

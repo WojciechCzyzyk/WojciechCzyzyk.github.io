@@ -66,6 +66,7 @@ const DEFAULT_PATIENTS = [
 const WardDB = {
   getDefaultData() {
     return {
+      users: { ...USERS },
       rooms: DEFAULT_ROOMS,
       patients: DEFAULT_PATIENTS,
       logs: [
@@ -81,6 +82,7 @@ const WardDB = {
         const res = await fetch(`${FIREBASE_URL}/wardData.json`);
         const data = await res.json();
         if (data && !data.error) {
+          const users = data.users && Object.keys(data.users).length > 0 ? data.users : { ...USERS };
           const rooms = data.rooms ? Object.values(data.rooms) : DEFAULT_ROOMS;
           const patients = data.patients ? Object.values(data.patients).map(p => ({
             ...p,
@@ -88,7 +90,7 @@ const WardDB = {
           })) : [];
           const logs = data.logs ? Object.values(data.logs) : [];
           if (rooms.length > 0 && patients.length > 0) {
-            return { rooms, patients, logs };
+            return { users, rooms, patients, logs };
           }
         }
       } catch (e) {

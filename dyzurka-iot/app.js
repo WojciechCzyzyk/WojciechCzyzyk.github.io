@@ -1,7 +1,8 @@
 let currentUser = null;
 let wardState = null;
 let activePatientId = null;
-let chartInstance = null;
+let draggedPatientId = null;
+let isDragging = false;
 
 function nowStamp() {
   const d = new Date();
@@ -16,7 +17,6 @@ async function login() {
   if (!user || user.pin !== pin) return alert("Błędny kod PIN!");
 
   currentUser = user;
-  sessionStorage.setItem("ward_user", uKey);
   document.getElementById("login-screen").classList.add("hidden");
   document.getElementById("ward-screen").classList.remove("hidden");
   document.getElementById("current-user-badge").textContent = `${user.name} (${user.label})`;
@@ -24,10 +24,7 @@ async function login() {
   await refreshBoard();
 }
 
-function logout() {
-  sessionStorage.removeItem("ward_user");
-  location.reload();
-}
+function logout() { location.reload(); }
 
 async function refreshBoard() {
   wardState = await WardDB.load();
@@ -38,66 +35,84 @@ async function refreshBoard() {
     if (sel) sel.innerHTML = wardState.rooms.map(r => `<option value="${r}">${r}</option>`).join("");
   });
 }
-function getLatestVitals(pat) {
-  const m = pat.history.filter(h => h.type === "pomiar");
-  return m.length ? m[m.length - 1] : null;
-}
 
-function getStatusClass(v) {
-  if (!v) return "";
-  if (v.temp >= 38.0 || v.sys >= 150 || v.dia >= 95 || v.pulse >= 100) return "status-alert";
-  if (v.temp >= 37.3 || v.sys >= 138 || v.dia >= 88) return "status-warn";
-  return "status-ok";
+function canAcceptPatient(room) {
+  const cfg = ROOM_CONFIG[room] || { standard: 3, max: 4 };
+  const count = wardState.patients.filter(p => p.room === room).length;
+  return count < cfg.max;
 }
-
-let draggedPatientId = null;
 
 function onDragStart(ev, patId) {
   if (currentUser.role === "opiekun") return ev.preventDefault();
+  isDragging = true;
   draggedPatientId = patId;
+  ev.dataTransfer.setData("text/plain", patId);
 }
+
+function onDragEnd() { setTimeout(() => { isDragging = false; }, 120); }
 
 async function onDropRoom(ev, targetRoom) {
   ev.preventDefault();
-  if (!draggedPatientId || currentUser.role === "opiekun") return;
-  const pat = wardState.patients.find(p => p.id === draggedPatientId);
+  const patId = draggedPatientId || ev.dataTransfer.getData("text/plain");
   draggedPatientId = null;
+  setTimeout(() => { isDragging = false; }, 120);
+  if (!patId || currentUser.role === "opiekun") return;
+
+  const pat = wardState.patients.find(p => p.id === patId);
   if (!pat || pat.room === targetRoom) return;
 
+  if (!canAcceptPatient(targetRoom)) {
+    const cfg = ROOM_CONFIG[targetRoom];
+    return alert(`⛔ Blokada miejsc (Poka-Yoke): ${targetRoom} ma maksymalny limit ${cfg.max} łóżek!`);
+  }
+
   const oldLoc = `${pat.room} / ${pat.bed}`;
+  const newCount = wardState.patients.filter(p => p.room === targetRoom).length + 1;
+  const cfg = ROOM_CONFIG[targetRoom] || { standard: 3, max: 4 };
   pat.room = targetRoom;
-  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeciągnięto z ${oldLoc} do ${targetRoom}.` });
-  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} z ${oldLoc} do ${targetRoom}.`, alert: false });
+  pat.bed = newCount > cfg.standard ? `Dostawka ${newCount}` : `Łóżko ${newCount}`;
+  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeciągnięto z ${oldLoc} do ${targetRoom} (${pat.bed}).` });
+  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} do ${targetRoom} (${pat.bed}).`, alert: false });
   await WardDB.save(wardState);
   await refreshBoard();
 }
 
 function renderRooms() {
   const canDrag = currentUser.role !== "opiekun";
-  const container = document.getElementById("rooms-container");
-  container.innerHTML = wardState.rooms.map(room => {
+  document.getElementById("rooms-container").innerHTML = wardState.rooms.map(room => {
+    const cfg = ROOM_CONFIG[room] || { standard: 3, max: 4 };
     const pats = wardState.patients.filter(p => p.room === room);
-    const cards = pats.length ? pats.map(p => {
-      const v = getLatestVitals(p);
+    const isFull = pats.length >= cfg.max;
+    const isExtra = pats.length > cfg.standard;
+
+    const cards = pats.map(p => {
+      const m = p.history.filter(h => h.type === "pomiar");
+      const v = m.length ? m[m.length - 1] : null;
+      const st = !v ? "" : (v.temp >= 38 || v.sys >= 150 || v.dia >= 95 || v.pulse >= 100) ? "status-alert" : (v.temp >= 37.3 || v.sys >= 138) ? "status-warn" : "status-ok";
       return `
-            <div class="bed-card ${getStatusClass(v)}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" ondragend="onDragEnd()" ondblclick="openPatientModal('${p.id}')" title="Kliknij 2x, aby otworzyć pełną kartę | Przeciągnij, aby zmienić salę" style="cursor:${canDrag ? "grab" : "pointer"};">
-            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <div class="bed-card ${st}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" ondragend="onDragEnd()" ondblclick="openPatientModal('${p.id}')" title="2x klik: Karta pacjenta | Przeciągnij: zmień salę" style="cursor:${canDrag ? "grab" : "pointer"};">
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
             <strong style="color:var(--accent);">${p.bed} • ${p.name}</strong>
-            <span style="font-size:0.72rem; color:var(--muted);">${p.qr}</span>
           </div>
           ${v ? `<div class="vitals-grid">
             <div class="vital-item"><div class="vital-num">${v.sys}/${v.dia}</div><div class="vital-lbl">RR</div></div>
             <div class="vital-item"><div class="vital-num">${v.pulse}</div><div class="vital-lbl">Puls</div></div>
-            <div class="vital-item"><div class="vital-num">${v.temp}°C</div><div class="vital-lbl">Temp</div></div>
-          </div>` : `<div style="font-size:0.8rem; color:var(--muted);">Brak pomiarów</div>`}
+            <div class="vital-item"><div class="vital-num">${v.temp}°</div><div class="vital-lbl">Temp</div></div>
+          </div>` : `<div style="font-size:0.75rem; color:var(--muted);">Brak pomiarów</div>`}
           ${p.alertNote ? `<div class="note-box">${p.alertNote}</div>` : ""}
         </div>`;
-    }).join("") : `<div style="font-size:0.82rem; color:var(--muted); padding:8px;">Wolne łóżka (upusć pacjenta tutaj)</div>`;
-    return `<div class="room-section" ondragover="event.preventDefault()" ondrop="onDropRoom(event, '${room}')"><div class="room-header"><span>🚪 ${room}</span><span>Pacjentów: ${pats.length}</span></div><div class="beds-row">${cards}</div></div>`;
+    }).join("") || `<div style="font-size:0.75rem; color:var(--muted); padding:6px;">Wolne (${cfg.standard}-os.)</div>`;
+
+    return `
+      <div class="room-section ${isFull ? "room-full" : ""}" ondragover="event.preventDefault()" ondrop="onDropRoom(event, '${room}')">
+        <div class="room-header">
+          <span>🚪 ${room.replace("Sala ", "")}</span>
+          <span style="font-size:0.72rem; color:${isFull ? "var(--amber)" : "var(--muted)"};">${pats.length}/${cfg.standard}${isExtra ? " +dost." : ""}</span>
+        </div>
+        <div class="beds-row">${cards}</div>
+      </div>`;
   }).join("");
 }
-
-
 function renderLogs() {
   document.getElementById("logs-container").innerHTML = wardState.logs.map(l =>
     `<div class="log-item ${l.alert ? "alert" : ""}"><div class="log-time">${l.time}</div><div>${l.text}</div></div>`
@@ -109,16 +124,24 @@ function toggleAdmitForm() { document.getElementById("admit-form").classList.tog
 async function admitPatient() {
   const name = document.getElementById("new-name").value.trim();
   const room = document.getElementById("new-room").value;
-  const bed = document.getElementById("new-bed").value.trim() || "Łóżko 1";
   const alertNote = document.getElementById("new-alert").value.trim();
   if (!name) return alert("Wpisz inicjały pacjenta!");
+  if (!canAcceptPatient(room)) {
+    const cfg = ROOM_CONFIG[room];
+    return alert(`⛔ Blokada miejsc (Poka-Yoke): ${room} ma maksymalny limit ${cfg.max} łóżek!`);
+  }
+  const cfg = ROOM_CONFIG[room] || { standard: 3, max: 4 };
+  const count = wardState.patients.filter(p => p.room === room).length + 1;
+  const bed = document.getElementById("new-bed").value.trim() || (count > cfg.standard ? `Dostawka ${count}` : `Łóżko ${count}`);
   const num = Math.floor(100 + Math.random() * 900);
-  wardState.patients.push({ id: `PAT-${num}`, qr: `QR-${room.replace(/\s+/g, "")}-${num}`, name, room, bed, alertNote, medications: "Oczekuje na zlecenie", history: [] });
+
+  wardState.patients.push({ id: `PAT-${num}`, qr: `QR-${room.replace(/\s+/g, "")}-${num}`, name, room, bed, alertNote, medications: "Oczekuje na zlecenie lekarskie", history: [] });
   wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przyjął ${name} (${room} / ${bed}).`, alert: false });
   await WardDB.save(wardState);
   document.getElementById("new-name").value = "";
   await refreshBoard();
 }
+
 function openPatientModal(patId) {
   activePatientId = patId;
   const pat = wardState.patients.find(p => p.id === patId);
@@ -170,6 +193,10 @@ async function logCareAction(txt) {
 async function transferPatient() {
   const pat = wardState.patients.find(p => p.id === activePatientId);
   const nr = document.getElementById("transfer-room").value;
+  if (pat.room !== nr && !canAcceptPatient(nr)) {
+    const cfg = ROOM_CONFIG[nr];
+    return alert(`⛔ Blokada miejsc (Poka-Yoke): ${nr} ma maksymalny limit ${cfg.max} łóżek!`);
+  }
   const nb = document.getElementById("transfer-bed").value.trim() || "Łóżko 1";
   const old = `${pat.room} / ${pat.bed}`;
   pat.room = nr; pat.bed = nb;
@@ -197,8 +224,7 @@ function renderChart(pat) {
     canvas.outerHTML = `<div id="vitalsChart" style="color:var(--muted); padding:12px;">Brak pomiarów do wykreślenia.</div>`;
     return;
   }
-  const w = 760, h = 160, pad = 35;
-  const maxVal = 180, minVal = 40;
+  const w = 760, h = 160, pad = 35, maxVal = 180, minVal = 40;
   const xStep = pts.length > 1 ? (w - pad * 2) / (pts.length - 1) : 0;
   const getY = val => h - pad - ((Math.min(maxVal, Math.max(minVal, val)) - minVal) / (maxVal - minVal)) * (h - pad * 2);
 
@@ -220,14 +246,14 @@ function renderChart(pat) {
       <polyline fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="3" points="${pulsePts}"/>
       ${dots}${labels}
     </svg>
-    <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">🔴 Ciśnienie Skurczowe (SYS) &nbsp;|&nbsp; 🔵 Ciśnienie Rozkurczowe (DIA) &nbsp;|&nbsp; 🟢 Puls (bpm) &nbsp;|&nbsp; Przerywana linia: próg 140 mmHg</div>`;
+    <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">🔴 SYS (mmHg) &nbsp;|&nbsp; 🔵 DIA (mmHg) &nbsp;|&nbsp; 🟢 Puls (bpm) &nbsp;|&nbsp; Linia: próg 140 mmHg</div>`;
 }
-
 
 function generateShiftReport() {
   const lines = [`=== 🤖 RAPORT ZMIANY AI (${nowStamp()}) ===`, `Autor: ${currentUser.name}\n`];
   wardState.patients.forEach(p => {
-    const v = getLatestVitals(p);
+    const m = p.history.filter(h => h.type === "pomiar");
+    const v = m.length ? m[m.length - 1] : null;
     const st = v ? `RR ${v.sys}/${v.dia}, Puls ${v.pulse}, Temp ${v.temp}°C (${v.date}, ${v.author})` : "Brak pomiarów";
     const warn = (v && (v.temp >= 38 || v.sys >= 150)) ? " ⚠️ PILNA UWAGA LEKARZA!" : " ✅ Stabilny";
     lines.push(`• ${p.room} / ${p.bed} — ${p.name}:${warn}\n  Pomiar: ${st}\n  Leki: ${p.medications || "brak"}\n`);
@@ -238,8 +264,8 @@ function generateShiftReport() {
 
 async function resetDemoData() {
   if (!confirm("Przywrócić dane startowe?")) return;
-  localStorage.removeItem("apex_ward_db_v2");
+  localStorage.removeItem("apex_ward_db_v3");
   await refreshBoard();
 }
 
-setInterval(() => { if (currentUser) refreshBoard(); }, 4000);
+setInterval(() => { if (currentUser && !isDragging) refreshBoard(); }, 4000);

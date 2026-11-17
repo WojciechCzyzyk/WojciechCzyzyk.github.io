@@ -105,3 +105,8 @@ To jest genialny kierunek na rozwój firmy Natalki do poziomu poważnego gracza 
 * **Format flagowy: „Rodzic + Nastolatek (11–14 lat): Zbudujcie Razem Aplikację z AI (Instrukcja LEGO)”:**
   - **Cel:** Zamiast konfliktu o czas przed ekranem, rodzic i dziecko tworzą 2-osobowy zespół projektowy (10 par na salę, 2 godziny warsztatu) i wspólnie składają działającą aplikację lub asystenta nauki.
   - **Korzyść biznesowa dla Akademii APEX:** Pewne wynagrodzenie za warsztat finansowane z grantu miejskiego + naturalna promocja pełnych kursów semestralnych wśród 10 zaangażowanych rodzin na każdym spotkaniu.
+ 
+  -   - **Magnes frekwencyjny (Drony + AI / Robotyka):** Połączenie lotów i programowania dronów z asystentem AI w formule „Rodzic + Dziecko” to temat o gigantycznej atrakcyjności — stowarzyszenia lokalne i domy kultury zyskują pewny hit do wniosków o dofinansowanie miejskie (JBO), a Akademia APEX buduje rozpoznawalność w całym regionie bez kosztów płatnej reklamy.
+
+  - **Płatna Lekcja Pokazowa (Zero Kosztów Pozyskania Klienta):** Rodzina otrzymuje pełnowartościowe, bezpłatne warsztaty próbne, a Akademia APEX ma od razu opłacony czas instruktorów i sprzętu z budżetu grantowego — zamieniając koszt marketingu w bezpośredni przychód.
+

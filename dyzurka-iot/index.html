@@ -36,8 +36,9 @@
         <span style="font-size:0.8rem; color:var(--muted);">Kliknij w łóżko pacjenta, aby otworzyć pełną kartę, wykresy i zlecenia</span>
       </div>
 
-      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+    <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
         <span class="user-badge" id="current-user-badge">Zalogowano</span>
+        <button id="btn-rounds-modal" class="btn hidden" style="background:#8b5cf6; color:#fff;" onclick="openRoundsModal()">🩺 Obchód Lekarski</button>
         <button id="btn-staff-modal" class="btn btn-outline" onclick="openStaffModal()">👥 Personel</button>
         <button class="btn btn-green" onclick="generateShiftReport()">🤖 Raport Zmiany AI</button>
         <a href="telefon.html" target="_blank" class="btn btn-outline">📱 Widok Telefonu (QR)</a>

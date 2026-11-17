@@ -42,6 +42,15 @@ function canAcceptPatient(room) {
   return count < cfg.max;
 }
 
+function renumberBeds(room) {
+  const cfg = ROOM_CONFIG[room] || { standard: 3, max: 4 };
+  const roomPats = wardState.patients.filter(p => p.room === room);
+  roomPats.forEach((p, idx) => {
+    const pos = idx + 1;
+    p.bed = pos > cfg.standard ? `Dostawka ${pos}` : `Łóżko ${pos}`;
+  });
+}
+
 function onDragStart(ev, patId) {
   if (currentUser.role === "opiekun") return ev.preventDefault();
   isDragging = true;
@@ -51,28 +60,49 @@ function onDragStart(ev, patId) {
 
 function onDragEnd() { setTimeout(() => { isDragging = false; }, 120); }
 
-async function onDropRoom(ev, targetRoom) {
+async function onDropTarget(ev, targetRoom, targetPatId = null) {
   ev.preventDefault();
+  ev.stopPropagation();
   const patId = draggedPatientId || ev.dataTransfer.getData("text/plain");
   draggedPatientId = null;
   setTimeout(() => { isDragging = false; }, 120);
-  if (!patId || currentUser.role === "opiekun") return;
+  if (!patId || currentUser.role === "opiekun" || patId === targetPatId) return;
 
   const pat = wardState.patients.find(p => p.id === patId);
-  if (!pat || pat.room === targetRoom) return;
+  if (!pat) return;
 
-  if (!canAcceptPatient(targetRoom)) {
+  const oldRoom = pat.room;
+  const oldLoc = `${pat.room} / ${pat.bed}`;
+
+  if (oldRoom !== targetRoom && !canAcceptPatient(targetRoom)) {
     const cfg = ROOM_CONFIG[targetRoom];
     return alert(`⛔ Blokada miejsc (Poka-Yoke): ${targetRoom} ma maksymalny limit ${cfg.max} łóżek!`);
   }
 
-  const oldLoc = `${pat.room} / ${pat.bed}`;
-  const newCount = wardState.patients.filter(p => p.room === targetRoom).length + 1;
-  const cfg = ROOM_CONFIG[targetRoom] || { standard: 3, max: 4 };
+  // Wyciągamy pacjenta z obecnej pozycji i wstawiamy w docelowe miejsce
+  wardState.patients = wardState.patients.filter(p => p.id !== patId);
   pat.room = targetRoom;
-  pat.bed = newCount > cfg.standard ? `Dostawka ${newCount}` : `Łóżko ${newCount}`;
-  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeciągnięto z ${oldLoc} do ${targetRoom} (${pat.bed}).` });
-  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} do ${targetRoom} (${pat.bed}).`, alert: false });
+
+  if (targetPatId) {
+    const targetIdx = wardState.patients.findIndex(p => p.id === targetPatId);
+    if (targetIdx !== -1) {
+      wardState.patients.splice(targetIdx, 0, pat);
+    } else {
+      wardState.patients.push(pat);
+    }
+  } else {
+    wardState.patients.push(pat);
+  }
+
+  renumberBeds(oldRoom);
+  if (oldRoom !== targetRoom) renumberBeds(targetRoom);
+
+  const actionMsg = oldRoom === targetRoom
+    ? `${currentUser.name} zamienił kolejność łóżek w ${targetRoom} (${pat.name} ➔ ${pat.bed}).`
+    : `${currentUser.name} przeniósł ${pat.name} z ${oldLoc} do ${targetRoom} (${pat.bed}).`;
+
+  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 ${actionMsg}` });
+  wardState.logs.unshift({ time: nowStamp(), text: actionMsg, alert: false });
   await WardDB.save(wardState);
   await refreshBoard();
 }
@@ -90,7 +120,7 @@ function renderRooms() {
       const v = m.length ? m[m.length - 1] : null;
       const st = !v ? "" : (v.temp >= 38 || v.sys >= 150 || v.dia >= 95 || v.pulse >= 100) ? "status-alert" : (v.temp >= 37.3 || v.sys >= 138) ? "status-warn" : "status-ok";
       return `
-        <div class="bed-card ${st}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" ondragend="onDragEnd()" ondblclick="openPatientModal('${p.id}')" title="2x klik: Karta pacjenta | Przeciągnij: zmień salę" style="cursor:${canDrag ? "grab" : "pointer"};">
+        <div class="bed-card ${st}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" ondragend="onDragEnd()" ondragover="event.preventDefault()" ondrop="onDropTarget(event, '${room}', '${p.id}')" ondblclick="openPatientModal('${p.id}')" title="2x klik: Karta | Przeciągnij na pacjenta lub salę: zmień łóżko" style="cursor:${canDrag ? "grab" : "pointer"};">
           <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
             <strong style="color:var(--accent);">${p.bed} • ${p.name}</strong>
           </div>
@@ -104,7 +134,7 @@ function renderRooms() {
     }).join("") || `<div style="font-size:0.75rem; color:var(--muted); padding:6px;">Wolne (${cfg.standard}-os.)</div>`;
 
     return `
-      <div class="room-section ${isFull ? "room-full" : ""}" ondragover="event.preventDefault()" ondrop="onDropRoom(event, '${room}')">
+      <div class="room-section ${isFull ? "room-full" : ""}" ondragover="event.preventDefault()" ondrop="onDropTarget(event, '${room}', null)">
         <div class="room-header">
           <span>🚪 ${room.replace("Sala ", "")}</span>
           <span style="font-size:0.72rem; color:${isFull ? "var(--amber)" : "var(--muted)"};">${pats.length}/${cfg.standard}${isExtra ? " +dost." : ""}</span>
@@ -113,6 +143,7 @@ function renderRooms() {
       </div>`;
   }).join("");
 }
+
 function renderLogs() {
   document.getElementById("logs-container").innerHTML = wardState.logs.map(l =>
     `<div class="log-item ${l.alert ? "alert" : ""}"><div class="log-time">${l.time}</div><div>${l.text}</div></div>`

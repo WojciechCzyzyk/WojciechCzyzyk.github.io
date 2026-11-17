@@ -47,6 +47,9 @@
   - `tech-english/modul-1-sesje-1-4/pytania.js` — baza 10 pytań z obszarów ARM7, UHF RFID, Context Engineering i ESP32
   - `tech-english/modul-2-sesja-5/index.html` — widok drugiego quizu (Sesja #5: Event-Driven & Webhooks)
   - `tech-english/modul-2-sesja-5/pytania.js` — baza 6 pytań z obszaru architektury zdarzeniowej i pamięci JSON
+  - `tech-english/modul-3-sesja-6/index.html` — widok trzeciego quizu (Sesja #6: Modular Architecture & Separation of Concerns)
+  - `tech-english/modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
+
 
 
 

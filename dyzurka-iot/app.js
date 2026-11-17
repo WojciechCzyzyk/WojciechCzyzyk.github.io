@@ -180,17 +180,26 @@ async function admitPatient() {
     const cfg = ROOM_CONFIG[room];
     return alert(`⛔ Blokada miejsc (Poka-Yoke): ${room} ma maksymalny limit ${cfg.max} łóżek!`);
   }
-  const cfg = ROOM_CONFIG[room] || { standard: 3, max: 4 };
-  const count = wardState.patients.filter(p => p.room === room).length + 1;
-  const bed = document.getElementById("new-bed").value.trim() || (count > cfg.standard ? `Dostawka ${count}` : `Łóżko ${count}`);
   const num = Math.floor(100 + Math.random() * 900);
-
-  wardState.patients.push({ id: `PAT-${num}`, qr: `QR-${room.replace(/\s+/g, "")}-${num}`, name, room, bed, alertNote, medications: "Oczekuje na zlecenie lekarskie", history: [] });
-  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przyjął ${name} (${room} / ${bed}).`, alert: false });
+  wardState.patients.push({
+    id: `PAT-${num}`,
+    qr: `QR-${room.replace(/\s+/g, "")}-${num}`,
+    name,
+    room,
+    bed: "Łóżko 1",
+    alertNote,
+    medications: "Oczekuje na zlecenie lekarskie",
+    history: []
+  });
+  renumberBeds(room);
+  const addedPat = wardState.patients[wardState.patients.length - 1];
+  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przyjął ${name} (${room} / ${addedPat.bed}).`, alert: false });
   await WardDB.save(wardState);
   document.getElementById("new-name").value = "";
+  document.getElementById("new-alert").value = "";
   await refreshBoard();
 }
+
 
 function openPatientModal(patId) {
   activePatientId = patId;

@@ -77,3 +77,17 @@
   - `to stagger the startup` / `staggered startup` — rozłożyć rozruch w czasie / sekwencyjny rozruch
   - `prevent voltage drops` — zapobiegać spadkom napięcia
   - `taking into account...` — biorąc pod uwagę...
+
+---
+
+### Sesja #5 (17.11.2026) — Event-Driven Pipelines, Webhooks & Persistent Context (Make.com / JSON)
+* **Wynik KPI słownictwa:** 5 / 5 pojęć (**100%** — zaliczone wszystkie: `overhead`, `persistent memory`, `polling`, `webhook`, `event-driven architecture` + pełny zestaw łączników `First of all`, `Moreover`, `As a result`, `Finally`).
+* **Pytanie architektoniczne:** *"Why do you use an event-driven architecture with webhooks and lightweight JSON files instead of polling APIs continuously or deploying a heavy SQL database?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"First of all, I want to reduce infrastructure **overhead** and keep the architecture simple—for lightweight workflows, you don't need a heavy **SQL database**. Moreover, using a single JSON file as **persistent memory** eliminates unnecessary complexity and maintenance costs. Instead of wasting resources on continuous **polling**, we rely on **webhooks** and platforms like Make.com. Finally, their built-in **event-driven architecture** handles queuing and retries out of the box, giving us reliable data delivery. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `SQL database` — baza danych SQL (zamiast *SQL base*)
+  - `out of the box` — od razu po wyjęciu z pudełka / wbudowane standardowo
+  - `queuing and retries` — kolejkowanie i ponawianie prób (w razie błędu sieci)
+  - `maintenance costs` — koszty utrzymania
+  - `reliable data delivery` — niezawodne dostarczanie danych

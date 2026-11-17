@@ -240,6 +240,7 @@ async function transferPatient() {
 
 async function dischargePatient() {
   const pat = wardState.patients.find(p => p.id === activePatientId);
+  renumberBeds(pat.room);
   if (!confirm(`Wypisać pacjenta ${pat.name}?`)) return;
   wardState.patients = wardState.patients.filter(p => p.id !== activePatientId);
   wardState.logs.unshift({ time: nowStamp(), text: `🚪 ${currentUser.name} wypisał ${pat.name}.`, alert: false });

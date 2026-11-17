@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Ward Board — Tablica Dyżurki | APEX Edge-to-AI</title>
+  <link rel="icon" type="image/png" href="../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+  <!-- 1. EKRAN LOGOWANIA (Security by Design) -->
+  <div id="login-screen" class="login-box">
+    <h2 style="margin-top:0; color:var(--accent);">🏥 Smart Ward Board</h2>
+    <p style="font-size:0.88rem; color:var(--muted);">Zaloguj się, aby uzyskać dostęp do tablicy oddziału (wersja demonstracyjna RODO-safe).</p>
+    <div style="margin-bottom:12px;">
+      <label>Wybierz profil testowy (lub wpisz login):</label>
+      <select id="login-user">
+        <option value="dyzurka">dyzurka — Piel. Anna K. (Pielęgniarka)</option>
+        <option value="lekarz">lekarz — Lek. Piotr N. (Lekarz Dyżurny)</option>
+        <option value="opiekun">opiekun — Opiekun Janusz B. (Opiekun)</option>
+      </select>
+    </div>
+    <div style="margin-bottom:16px;">
+      <label>Kod PIN (demo: 1234 pielęgniarka | 5678 lekarz | 3333 opiekun):</label>
+      <input type="password" id="login-pin" value="1234" placeholder="Wpisz PIN...">
+    </div>
+    <button class="btn" style="width:100%; justify-content:center;" onclick="login()">🔐 Zaloguj do Dyżurki</button>
+  </div>
+
+  <!-- 2. GŁÓWNY EKRAN DYŻURKI -->
+  <div id="ward-screen" class="container hidden">
+    <div class="top-bar">
+      <div>
+        <h1>🏥 Smart Ward Board — Kokpit Oddziału</h1>
+        <span style="font-size:0.8rem; color:var(--muted);">Kliknij w łóżko pacjenta, aby otworzyć pełną kartę, wykresy i zlecenia</span>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <span class="user-badge" id="current-user-badge">Zalogowano</span>
+        <button class="btn btn-green" onclick="generateShiftReport()">🤖 Raport Zmiany AI</button>
+        <a href="telefon.html" target="_blank" class="btn btn-outline">📱 Widok Telefonu (QR)</a>
+        <button class="btn btn-outline" onclick="logout()">🔒 Wyloguj</button>
+      </div>
+    </div>
+
+    <!-- Szybkie przyjęcie pacjenta (widoczne dla Pielęgniarki i Lekarza) -->
+    <div id="admit-panel" class="panel">
+      <div class="panel-title">
+        <span>➕ Szybkie Przyjęcie Pacjenta na Oddział</span>
+        <button class="btn btn-sm btn-outline" onclick="toggleAdmitForm()">Rozwiń / Zwiń</button>
+      </div>
+      <div id="admit-form" class="hidden" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:10px;">
+        <div><label>Inicjały / Wiek (RODO-safe)</label><input id="new-name" placeholder="np. Jan N. (58 l.)"></div>
+        <div><label>Sala</label><select id="new-room"></select></div>
+        <div><label>Łóżko</label><input id="new-bed" value="Łóżko 1"></div>
+        <div><label>Uwaga / Zalecenie ruchowe</label><input id="new-alert" placeholder="np. Gorset przy wstawaniu"></div>
+        <div style="display:flex; align-items:flex-end;"><button class="btn" style="width:100%; justify-content:center;" onclick="admitPatient()">Zapisz na tablicę</button></div>
+      </div>
+    </div>
+
+    <!-- Główny układ: Lewa kolumna (Sale) | Prawa kolumna (Ostatnia aktywność) -->
+    <div class="ward-layout">
+      <div id="rooms-container"></div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <span>📋 Ostatnia aktywność</span>
+          <button class="btn btn-sm btn-outline" onclick="resetDemoData()" title="Przywróć dane startowe">🔄 Reset</button>
+        </div>
+        <div id="logs-container" class="log-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL: PEŁNA KARTA PACJENTA (po kliknięciu w kafelek łóżka) -->
+  <div id="patient-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:100; overflow-y:auto; padding:16px;">
+    <div style="max-width:860px; margin:20px auto; background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:16px;">
+        <div>
+          <h2 id="modal-pat-name" style="margin:0; color:var(--accent);">Pacjent</h2>
+          <span id="modal-pat-loc" style="font-size:0.85rem; color:var(--muted);">Sala • Łóżko • Kod QR</span>
+        </div>
+        <button class="btn btn-outline" onclick="closeModal()">✖ Zamknij kartę</button>
+      </div>
+
+      <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:var(--accent); font-weight:700;">💊 Zlecenia Lekarskie / Ordynacja Leków (edycja wyłącznie dla Lekarza):</label>
+        <div style="display:flex; gap:8px; margin-top:6px;">
+          <input id="modal-meds-input" placeholder="Brak zleceń lekarskich...">
+          <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>
+        </div>
+      </div>
+
+      <!-- Szybkie akcje dla Opiekuna Medycznego -->
+      <div id="caregiver-actions" class="hidden" style="background:rgba(16,185,129,0.1); border:1px solid var(--green); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:var(--green); font-weight:700;">🤝 Szybki wpis Opiekuna Medycznego (1 kliknięcie):</label>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Pomoc przy zmianie pozycji / toalecie')">🛏️ Zmiana pozycji / toaleta</button>
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Spacer kontrolny w gorsecie po korytarzu')">🚶 Spacer w gorsecie</button>
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Posiłek podany i zjedzony')">🍽️ Posiłek / nawodnienie</button>
+        </div>
+      </div>
+
+      <!-- Wykres trendu z ostatnich dni -->
+      <div style="background:#0b1120; border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <div style="font-size:0.85rem; color:var(--muted); margin-bottom:6px;">📈 Wykres trendu ciśnienia (SYS/DIA) i pulsu z ostatnich dni:</div>
+        <canvas id="vitalsChart" height="110"></canvas>
+      </div>
+
+      <!-- Przenoszenie pacjenta między salami + Wypis -->
+      <div id="transfer-box" style="display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; background:var(--card); padding:12px; border-radius:10px; margin-bottom:16px;">
+        <div style="flex:1; min-width:140px;"><label>Przenieś do sali:</label><select id="transfer-room"></select></div>
+        <div style="flex:1; min-width:120px;"><label>Nowe łóżko:</label><input id="transfer-bed" value="Łóżko 1"></div>
+        <button class="btn" onclick="transferPatient()">🔄 Przenieś pacjenta</button>
+        <button class="btn btn-red" onclick="dischargePatient()">🚪 Wypisz z oddziału</button>
+      </div>
+
+      <!-- Pełna historia pomiarów i komentarzy z podpisem KTO / KIEDY -->
+      <h4 style="margin:0 0 8px 0; color:var(--accent);">🕒 Historia pomiarów, zleceń i komentarzy AI:</h4>
+      <div id="modal-history-list" style="max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:6px;"></div>
+    </div>
+  </div>
+
+  <!-- 4. MODAL: RAPORT ZMIANY / LEKARSKI AI -->
+  <div id="report-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:110; padding:16px;">
+    <div style="max-width:680px; margin:40px auto; background:var(--panel); border:1px solid var(--accent); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3 style="margin:0; color:var(--accent);">🤖 Raport Zmiany / Lekarski AI</h3>
+        <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
+      </div>
+      <div id="report-content" style="background:#0b1120; padding:14px; border-radius:10px; font-size:0.9rem; white-space:pre-line; border:1px solid var(--border);"></div>
+    </div>
+  </div>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

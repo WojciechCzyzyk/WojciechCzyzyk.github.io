@@ -36,6 +36,9 @@ async function login() {
   document.getElementById("admit-panel").classList.toggle("hidden", user.role === "opiekun");
   const staffBtn = document.getElementById("btn-staff-modal");
   if (staffBtn) staffBtn.classList.toggle("hidden", user.role === "opiekun");
+  const roundsBtn = document.getElementById("btn-rounds-modal");
+  if (roundsBtn) roundsBtn.classList.toggle("hidden", user.role !== "lekarz");
+
   await refreshBoard();
 }
 

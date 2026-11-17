@@ -192,4 +192,11 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - Na koniec zajęć AI generuje spersonalizowany opis pasji ucznia (np. *„Cześć! Jestem Krzyś, uwielbiam piłkę nożną — sprawdź, czy zdasz mój autorski test!”*) oraz dedykowany obrazek tematyczny.
   - Uczeń wkleja ten blok na górę swojej strony, dzięki czemu **wychodzi z lekcji pokazowej z własną, działającą mini-stroną internetową (wizytówka + grafika + autorski quiz)**, którą od razu otwiera na telefonie rodziców po wyjściu z sali.
 
+### 🛫 „Pulpit Kontroli Lotów” Instruktora & Model Pracy Wieży Kontroli
+
+* **Adaptacyjne Menu Nawigacji LEGO na Ekranie Ucznia:** Pod każdym krokiem lekcji uczeń ma przyciski samopomocy (`[ ⬅️ Krok w górę ]`, `[ 🔄 Reset kroku ]`, `[ ➡️ Krok w dół ]`, `[ 🆘 Pomoc ]`), które pozwalają samodzielnie wyjść z błędu bez przerywania lekcji.
+* **Pulpit Kontroli Lotów (Live Dashboard Instruktora):** Nauczyciel widzi na swoim ekranie kafelki wszystkich uczniów w sali na żywo (aktualny krok na tablicy Kanban, licznik użyć `Reset / Pomoc` oraz alerty od AI: *„Kuba utknął 2 razy na Kroku 3 — podejdź i wyjaśnij”*).
+* **Zero Stresu Wejścia dla Nowego Instruktora (Model Wieża Kontroli + Asystent):**
+  - Prowadzący (np. Natalka) nie musi na starcie być programistą — siedzi za pulpitem, dba o dobrą atmosferę, obserwuje „radar” postępów i uczy się kodu stopniowo poprzez nadzór.
+  - Gdy na ekranie zapali się żółta lampka przy jednym ze stolików, instruktor kieruje tam **Młodego Asystenta (11-letniego Bartka)** lub drugiego trenera, eliminując bieganie po sali i stres przed pytaniami technicznymi.
 

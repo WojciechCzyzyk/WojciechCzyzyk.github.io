@@ -1,5 +1,5 @@
 // === UNIWERSALNY ADAPTER BAZY DANYCH (dyzurka-iot/db.js) ===
-const FIREBASE_URL = "";
+const FIREBASE_URL = "https://apex-dyzurka-demo-default-rtdb.europe-west1.firebasedatabase.app";
 
 const USERS = {
   "lekarz":  { pin: "5678", name: "Lek. Piotr N.", role: "lekarz", label: "Lekarz Dyżurny" },

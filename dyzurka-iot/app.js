@@ -167,22 +167,38 @@ async function dischargePatient() {
 }
 
 function renderChart(pat) {
-  const ctx = document.getElementById("vitalsChart").getContext("2d");
-  if (chartInstance) chartInstance.destroy();
+  const canvas = document.getElementById("vitalsChart");
   const pts = pat.history.filter(h => h.type === "pomiar");
-  chartInstance = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: pts.map(p => p.date),
-      datasets: [
-        { label: "SYS (mmHg)", data: pts.map(p => p.sys), borderColor: "#ef4444", tension: 0.3 },
-        { label: "DIA (mmHg)", data: pts.map(p => p.dia), borderColor: "#38bdf8", tension: 0.3 },
-        { label: "Puls (bpm)", data: pts.map(p => p.pulse), borderColor: "#10b981", tension: 0.3 }
-      ]
-    },
-    options: { responsive: true, plugins: { legend: { labels: { color: "#cbd5e1" } } }, scales: { x: { ticks: { color: "#94a3b8" } }, y: { ticks: { color: "#94a3b8" } } } }
-  });
+  if (!pts.length) {
+    canvas.outerHTML = `<div id="vitalsChart" style="color:var(--muted); padding:12px;">Brak pomiarów do wykreślenia.</div>`;
+    return;
+  }
+  const w = 760, h = 160, pad = 35;
+  const maxVal = 180, minVal = 40;
+  const xStep = pts.length > 1 ? (w - pad * 2) / (pts.length - 1) : 0;
+  const getY = val => h - pad - ((Math.min(maxVal, Math.max(minVal, val)) - minVal) / (maxVal - minVal)) * (h - pad * 2);
+
+  const sysPts = pts.map((p, i) => `${pad + i * xStep},${getY(p.sys)}`).join(" ");
+  const diaPts = pts.map((p, i) => `${pad + i * xStep},${getY(p.dia)}`).join(" ");
+  const pulsePts = pts.map((p, i) => `${pad + i * xStep},${getY(p.pulse)}`).join(" ");
+
+  const labels = pts.map((p, i) => `<text x="${pad + i * xStep}" y="${h - 8}" fill="#94a3b8" font-size="10" text-anchor="middle">${p.date}</text>`).join("");
+  const dots = pts.map((p, i) => `
+    <circle cx="${pad + i * xStep}" cy="${getY(p.sys)}" r="4" fill="#ef4444"/><text x="${pad + i * xStep}" y="${getY(p.sys) - 7}" fill="#ef4444" font-size="10" text-anchor="middle">${p.sys}</text>
+    <circle cx="${pad + i * xStep}" cy="${getY(p.dia)}" r="4" fill="#38bdf8"/><text x="${pad + i * xStep}" y="${getY(p.dia) + 14}" fill="#38bdf8" font-size="10" text-anchor="middle">${p.dia}</text>
+  `).join("");
+
+  canvas.outerHTML = `
+    <svg id="vitalsChart" viewBox="0 0 ${w} ${h}" style="width:100%; height:auto; display:block;">
+      <line x1="${pad}" y1="${getY(140)}" x2="${w - pad}" y2="${getY(140)}" stroke="#ef4444" stroke-dasharray="4" stroke-opacity="0.4"/>
+      <polyline fill="none" stroke="#ef4444" stroke-width="2.5" points="${sysPts}"/>
+      <polyline fill="none" stroke="#38bdf8" stroke-width="2.5" points="${diaPts}"/>
+      <polyline fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="3" points="${pulsePts}"/>
+      ${dots}${labels}
+    </svg>
+    <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">🔴 Ciśnienie Skurczowe (SYS) &nbsp;|&nbsp; 🔵 Ciśnienie Rozkurczowe (DIA) &nbsp;|&nbsp; 🟢 Puls (bpm) &nbsp;|&nbsp; Przerywana linia: próg 140 mmHg</div>`;
 }
+
 
 function generateShiftReport() {
   const lines = [`=== 🤖 RAPORT ZMIANY AI (${nowStamp()}) ===`, `Autor: ${currentUser.name}\n`];

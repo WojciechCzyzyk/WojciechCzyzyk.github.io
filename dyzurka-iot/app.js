@@ -50,14 +50,37 @@ function getStatusClass(v) {
   return "status-ok";
 }
 
+let draggedPatientId = null;
+
+function onDragStart(ev, patId) {
+  if (currentUser.role === "opiekun") return ev.preventDefault();
+  draggedPatientId = patId;
+}
+
+async function onDropRoom(ev, targetRoom) {
+  ev.preventDefault();
+  if (!draggedPatientId || currentUser.role === "opiekun") return;
+  const pat = wardState.patients.find(p => p.id === draggedPatientId);
+  draggedPatientId = null;
+  if (!pat || pat.room === targetRoom) return;
+
+  const oldLoc = `${pat.room} / ${pat.bed}`;
+  pat.room = targetRoom;
+  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeciągnięto z ${oldLoc} do ${targetRoom}.` });
+  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} z ${oldLoc} do ${targetRoom}.`, alert: false });
+  await WardDB.save(wardState);
+  await refreshBoard();
+}
+
 function renderRooms() {
+  const canDrag = currentUser.role !== "opiekun";
   const container = document.getElementById("rooms-container");
   container.innerHTML = wardState.rooms.map(room => {
     const pats = wardState.patients.filter(p => p.room === room);
     const cards = pats.length ? pats.map(p => {
       const v = getLatestVitals(p);
       return `
-        <div class="bed-card ${getStatusClass(v)}" onclick="openPatientModal('${p.id}')">
+        <div class="bed-card ${getStatusClass(v)}" draggable="${canDrag}" ondragstart="onDragStart(event, '${p.id}')" onclick="openPatientModal('${p.id}')" style="cursor:${canDrag ? "grab" : "pointer"};">
           <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
             <strong style="color:var(--accent);">${p.bed} • ${p.name}</strong>
             <span style="font-size:0.72rem; color:var(--muted);">${p.qr}</span>
@@ -69,10 +92,11 @@ function renderRooms() {
           </div>` : `<div style="font-size:0.8rem; color:var(--muted);">Brak pomiarów</div>`}
           ${p.alertNote ? `<div class="note-box">${p.alertNote}</div>` : ""}
         </div>`;
-    }).join("") : `<div style="font-size:0.82rem; color:var(--muted);">Wolne łóżka</div>`;
-    return `<div class="room-section"><div class="room-header"><span>🚪 ${room}</span><span>Pacjentów: ${pats.length}</span></div><div class="beds-row">${cards}</div></div>`;
+    }).join("") : `<div style="font-size:0.82rem; color:var(--muted); padding:8px;">Wolne łóżka (upusć pacjenta tutaj)</div>`;
+    return `<div class="room-section" ondragover="event.preventDefault()" ondrop="onDropRoom(event, '${room}')"><div class="room-header"><span>🚪 ${room}</span><span>Pacjentów: ${pats.length}</span></div><div class="beds-row">${cards}</div></div>`;
   }).join("");
 }
+
 
 function renderLogs() {
   document.getElementById("logs-container").innerHTML = wardState.logs.map(l =>

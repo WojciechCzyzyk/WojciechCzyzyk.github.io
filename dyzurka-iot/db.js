@@ -101,18 +101,31 @@ const WardDB = {
     return initial;
   },
 
-  async save(data) {
-    localStorage.setItem("apex_ward_db_v3", JSON.stringify(data));
+  async load() {
     if (FIREBASE_URL) {
       try {
-        await fetch(`${FIREBASE_URL}/wardData.json`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+        const res = await fetch(`${FIREBASE_URL}/wardData.json`);
+        const data = await res.json();
+        if (data && !data.error) {
+          const rooms = data.rooms ? Object.values(data.rooms) : DEFAULT_ROOMS;
+          const patients = data.patients ? Object.values(data.patients).map(p => ({
+            ...p,
+            history: p.history ? Object.values(p.history) : []
+          })) : [];
+          const logs = data.logs ? Object.values(data.logs) : [];
+          if (rooms.length > 0 && patients.length > 0) {
+            return { rooms, patients, logs };
+          }
+        }
       } catch (e) {
-        console.warn("Nie udało się zapisać do Firebase:", e);
+        console.warn("Błąd połączenia z Firebase:", e);
       }
     }
-  }
+    const initial = this.getDefaultData();
+    await this.save(initial);
+    return initial;
+  },
+
+
+  
 };

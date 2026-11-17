@@ -198,3 +198,7 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **6. Runda Bonusowa: „Niespodzianka AI na Koniec Lekcji” (*Variable Reward*):**
   - **Mechanizm:** Gdy uczeń poprawnie ukończy wszystkie główne kroki zadania i przesunie ostatnią kartę na tablicy Kanban do kolumny `Gotowe`, w ostatnich 5–10 minutach zajęć AI generuje dla niego **indywidualny mini-bonus** sprofilowany pod jego zainteresowania (np. dodanie licznika combo, ukrytego *Easter Egga*, dźwięku zwycięstwa czy trybu rzutów karnych).
   - **Efekt psychologiczny i grupowy:** Dziecko pilnuje jakości swojego kodu, żeby odblokować niespodziankę, a na koniec lekcji w sali powstaje twórczy, pozytywny szum (*„Zobacz co mi AI wymyślił, masz to samo?!”*), który naturalnie integruje grupę i sprawia, że uczniowie nie mogą doczekać się kolejnych zajęć.
+  - * **Krok 5 (Finał — 10 min) — Własna Mini-Strona „O Mnie i Moich Pasjach” + Grafika Tematyczna:**
+  - Na koniec zajęć AI generuje spersonalizowaną sekcję wstępną dopasowaną do pasji ucznia (np. *„Cześć! Jestem Krzyś, uwielbiam piłkę nożną i Minecrafta — sprawdź, czy zdasz mój autorski test!”*) oraz dedykowany obrazek tematyczny (np. piłkarski lub kosmiczny).
+  - Uczeń wkleja ten blok na górę swojej strony (`index.html`), dzięki czemu **wychodzi z lekcji pokazowej z własną, działającą mini-stroną internetową (wizytówka + grafika + autorski quiz)**, którą od razu otwiera na telefonie rodziców po wyjściu z sali.
+

@@ -164,3 +164,8 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   2. **Fajerwerk Reakcji Awatara (Natychmiastowa informacja zwrotna po kliknięciu):** Wyświetlanie spersonalizowanego awatara reagującego na wynik — radosny awatar z fajerwerkami i gratulacjami przy poprawnej odpowiedzi (`bartek_brawo.png`) lub żartobliwie grożący palcem przy błędzie (`bartek_uwaga.png`), z zabezpieczeniem `onerror` we wspólnym silniku.
   3. **Szybkie Wyjaśnienie Nauczycielskie (Dół karty odpowiedzi):** Zachowanie stałego bloku `explanation` pod każdym pytaniem — zwięzłego, przyjaznego objaśnienia przyczyny („dlaczego tak jest”), które utrwala wiedzę bez bezmyślnego wkuwania na pamięć.
 
+## 🇬🇧 Żelazna Zasada Dydaktyczna: „Tech English przez Osmozę” (Contextual Immersion)
+
+* **Cel:** Nie prowadzimy lekcji języka angielskiego, lecz oswajamy uczniów z globalną terminologią IT przy okazji praktycznego działania w kodzie i narzędziach (zero wkuwania słówek, zero bariery wejścia — zajęcia odbywają się po polsku).
+* **Mechanizm („Język Doliny Krzemowej”):** Instruktor wprowadza maksymalnie 1–2 angielskie pojęcia na lekcję i używa ich naturalnie w kontekście wykonywanego zadania (np. *Commit, Push, Branch, Merge, Bugfix, Deploy, Sprint, Kanban, Backlog, Clean Code, Single Source of Truth*).
+* **Efekt uboczny (Marketing Szeptany):** Dzieci chętnie przenoszą profesjonalnie brzmiące hasła na szkolne korytarze i do rozmów przy obiedzie, co buduje u nich dumę młodego inżyniera, a rodzicom daje natychmiastowy dowód wysokiej jakości warsztatów.

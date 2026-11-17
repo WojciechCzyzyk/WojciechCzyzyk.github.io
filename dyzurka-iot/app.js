@@ -256,11 +256,14 @@ async function transferPatient() {
     const cfg = ROOM_CONFIG[nr];
     return alert(`⛔ Blokada miejsc (Poka-Yoke): ${nr} ma maksymalny limit ${cfg.max} łóżek!`);
   }
-  const nb = document.getElementById("transfer-bed").value.trim() || "Łóżko 1";
+  const oldRoom = pat.room;
   const old = `${pat.room} / ${pat.bed}`;
-  pat.room = nr; pat.bed = nb;
-  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeniesiono z ${old} do ${nr} / ${nb}.` });
-  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} do ${nr} / ${nb}.`, alert: false });
+  pat.room = nr;
+  renumberBeds(oldRoom);
+  if (oldRoom !== nr) renumberBeds(nr);
+
+  pat.history.push({ date: nowStamp(), type: "ruch", author: currentUser.name, comment: `🔄 Przeniesiono z ${old} do ${nr} / ${pat.bed}.` });
+  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} przeniósł ${pat.name} do ${nr} / ${pat.bed}.`, alert: false });
   await WardDB.save(wardState);
   closeModal();
   await refreshBoard();

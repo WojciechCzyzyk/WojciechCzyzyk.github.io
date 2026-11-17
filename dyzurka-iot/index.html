@@ -35,12 +35,16 @@
         <h1>🏥 Smart Ward Board — Kokpit Oddziału</h1>
         <span style="font-size:0.8rem; color:var(--muted);">Kliknij w łóżko pacjenta, aby otworzyć pełną kartę, wykresy i zlecenia</span>
       </div>
+
       <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
         <span class="user-badge" id="current-user-badge">Zalogowano</span>
+        <button id="btn-staff-modal" class="btn btn-outline" onclick="openStaffModal()">👥 Personel</button>
         <button class="btn btn-green" onclick="generateShiftReport()">🤖 Raport Zmiany AI</button>
         <a href="telefon.html" target="_blank" class="btn btn-outline">📱 Widok Telefonu (QR)</a>
         <button class="btn btn-outline" onclick="logout()">🔒 Wyloguj</button>
       </div>
+
+      
     </div>
 
     <!-- Szybkie przyjęcie pacjenta (widoczne dla Pielęgniarki i Lekarza) -->

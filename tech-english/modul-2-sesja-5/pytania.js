@@ -32,3 +32,39 @@ const quizData = [
     correct: 1,
     explanation: "Lekki plik JSON jako 'persistent memory' (trwała pamięć między uruchomieniami) zachowuje historię postępów przy zerowym narzucie ('overhead') utrzymania serwera bazodanowego."
   },
+
+    {
+    question: "4. What happens when 10 students push code at the exact same second to a Make.com webhook?",
+    options: [
+      "9 requests are lost permanently",
+      "The webhook queue buffers the events (FIFO) and processes them sequentially without data loss",
+      "The server shuts down for maintenance",
+      "All 10 students receive the exact same answer"
+    ],
+    correct: 1,
+    explanation: "Kolejka webhooków ('queuing') działa jak bufor FIFO po przerwaniu sprzętowym — układa wszystkie zdarzenia w poczekalni i przetwarza je po kolei bez gubienia danych."
+  },
+  {
+    question: "5. What does 'out of the box' mean when describing an event-driven platform?",
+    options: [
+      "You have to write all networking protocols from scratch in C",
+      "Key features like queuing, retries, and HTTP acknowledgments work immediately without extra setup",
+      "The software only runs on Raspberry Pi hardware",
+      "It requires buying an external SQL server license"
+    ],
+    correct: 1,
+    explanation: "'Out of the box' oznacza funkcjonalność gotową od razu po wyjęciu z pudełka — np. automatyczne kolejkowanie i ponawianie prób ('queuing and retries') w razie błędu sieci."
+  },
+  {
+    question: "6. Which phrase best describes 'zbędne obciążenie zasobów, kosztów lub infrastruktury'?",
+    options: [
+      "Rapid adaptation",
+      "Infrastructure overhead",
+      "Hardware abstraction",
+      "Inrush current"
+    ],
+    correct: 1,
+    explanation: "'Infrastructure overhead' to zbędny narzut zasobów, czasu i kosztów utrzymania ciężkich systemów tam, gdzie wystarczy lekkie rozwiązanie."
+  }
+];
+

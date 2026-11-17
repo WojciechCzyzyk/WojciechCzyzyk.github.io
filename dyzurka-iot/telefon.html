@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Nurse QR — Skaner i Pomiary | APEX IoT</title>
+  <link rel="icon" type="image/png" href="../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile-container">
+    <!-- Ekran logowania mobilnego -->
+    <div id="mob-login" class="panel" style="margin-top:20px;">
+      <h2 style="margin-top:0; color:var(--accent);">📱 Mobile Nurse QR</h2>
+      <p style="font-size:0.85rem; color:var(--muted);">Zaloguj się, aby skanować opaski pacjentów i wysyłać pomiary na tablicę dyżurki.</p>
+      <div style="margin-bottom:10px;">
+        <label>Profil pracownika:</label>
+        <select id="mob-user">
+          <option value="dyzurka">Piel. Anna K. (PIN: 1234)</option>
+          <option value="lekarz">Lek. Piotr N. (PIN: 5678)</option>
+          <option value="opiekun">Opiekun Janusz B. (PIN: 3333)</option>
+        </select>
+      </div>
+      <div style="margin-bottom:14px;">
+        <label>Kod PIN:</label>
+        <input type="password" id="mob-pin" value="1234">
+      </div>
+      <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
+    </div>
+
+    <!-- Główny ekran pomiarów na telefonie -->
+    <div id="mob-app" class="hidden">
+      <div class="top-bar">
+        <div>
+          <h1 style="font-size:1.1rem;">📱 Skaner Opaski QR</h1>
+          <span id="mob-badge" style="font-size:0.78rem; color:var(--accent);">Pracownik</span>
+        </div>
+        <a href="index.html" class="btn btn-sm btn-outline">🖥️ Tablica</a>
+      </div>
+
+      <div class="panel">
+        <label>1. Zeskanuj kod QR opaski lub wybierz pacjenta:</label>
+        <div style="display:flex; gap:8px; margin-bottom:10px;">
+          <select id="mob-patient" onchange="updateSelectedInfo()"></select>
+          <button class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR</button>
+        </div>
+        <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
+
+        <label>2. Parametry z ciśnieniomierza i termometru:</label>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
+          <div><label>Ciśnienie Górne (SYS)</label><input type="number" id="in-sys" value="125"></div>
+          <div><label>Ciśnienie Dolne (DIA)</label><input type="number" id="in-dia" value="80"></div>
+          <div><label>Puls (bpm)</label><input type="number" id="in-pulse" value="74"></div>
+          <div><label>Temperatura (°C)</label><input type="number" step="0.1" id="in-temp" value="36.7"></div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <label>3. Dodatkowy komentarz pielęgniarski (opcjonalnie):</label>
+          <input id="in-comment" placeholder="np. Po podaniu leków, stan stabilny...">
+        </div>
+
+        <button class="btn btn-green" style="width:100%; justify-content:center; padding:12px; font-size:1rem;" onclick="sendVitals()">📡 Wyślij Pomiar na Tablicę</button>
+        <div id="ai-feedback-banner" class="hidden note-box" style="margin-top:12px; border-left-color:var(--green);"></div>
+      </div>
+    </div>
+  </div>
+  <script src="db.js"></script>
+  <script>
+    let mobUser = null;
+    let mobState = null;
+
+    function nowStamp() {
+      const d = new Date();
+      const pad = n => String(n).padStart(2, "0");
+      return `${pad(d.getDate())}.${pad(d.getMonth() + 1)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    }
+
+    async function mobLogin() {
+      const uKey = document.getElementById("mob-user").value;
+      const pin = document.getElementById("mob-pin").value.trim();
+      const user = USERS[uKey];
+      if (!user || user.pin !== pin) return alert("Błędny PIN!");
+      mobUser = user;
+      document.getElementById("mob-login").classList.add("hidden");
+      document.getElementById("mob-app").classList.remove("hidden");
+      document.getElementById("mob-badge").textContent = `${user.name} (${user.label})`;
+      await loadPatientsList();
+    }
+
+    async function loadPatientsList() {
+      mobState = await WardDB.load();
+      const sel = document.getElementById("mob-patient");
+      sel.innerHTML = mobState.patients.map(p => `<option value="${p.id}">${p.room} / ${p.bed} — ${p.name} [${p.qr}]</option>`).join("");
+      updateSelectedInfo();
+    }
+
+    function updateSelectedInfo() {
+      const id = document.getElementById("mob-patient").value;
+      const pat = mobState.patients.find(p => p.id === id);
+      if (!pat) return;
+      document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
+    }
+
+    function simulateQrScan() {
+      const sel = document.getElementById("mob-patient");
+      if (sel.options.length > 1) {
+        sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+        updateSelectedInfo();
+      }
+      alert("📷 Zeskanowano opaskę QR pacjenta! Przypisano stanowisko.");
+    }
+
+    function analyzeTrendWithAI(pat, sys, dia, pulse, temp) {
+      const prevList = pat.history.filter(h => h.type === "pomiar");
+      const prev = prevList.length ? prevList[prevList.length - 1] : null;
+      const alerts = [];
+
+      if (temp >= 38.0) alerts.push(`Gorączka ${temp}°C (przekroczony próg 38.0°C)`);
+      if (sys >= 150 || dia >= 95) alerts.push(`Podwyższone ciśnienie ${sys}/${dia} mmHg`);
+      if (pulse >= 100) alerts.push(`Tachykardia — puls ${pulse} bpm`);
+
+      if (prev) {
+        const diffSys = sys - prev.sys;
+        const diffTemp = +(temp - prev.temp).toFixed(1);
+        if (diffSys >= 15) alerts.push(`Nagły wzrost RR skurczowego o +${diffSys} mmHg względem poprzedniego pomiaru`);
+        if (diffTemp >= 0.5) alerts.push(`Gwałtowny wzrost temperatury o +${diffTemp}°C`);
+      }
+
+      if (alerts.length > 0) {
+        return { isAlert: true, text: `⚠️ AI Alert: ${alerts.join(" | ")} — zalecana konsultacja lekarska.` };
+      }
+      return { isAlert: false, text: `✅ AI: Parametry stabilne i zgodne z trendem pacjenta.` };
+    }
+
+    async function sendVitals() {
+      const id = document.getElementById("mob-patient").value;
+      const pat = mobState.patients.find(p => p.id === id);
+      const sys = parseInt(document.getElementById("in-sys").value, 10);
+      const dia = parseInt(document.getElementById("in-dia").value, 10);
+      const pulse = parseInt(document.getElementById("in-pulse").value, 10);
+      const temp = parseFloat(document.getElementById("in-temp").value);
+      const userComment = document.getElementById("in-comment").value.trim();
+
+      const aiAnalysis = analyzeTrendWithAI(pat, sys, dia, pulse, temp);
+      const fullComment = userComment ? `${userComment} | ${aiAnalysis.text}` : aiAnalysis.text;
+      const stamp = nowStamp();
+
+      pat.history.push({ date: stamp, type: "pomiar", sys, dia, pulse, temp, author: mobUser.name, comment: fullComment });
+      mobState.logs.unshift({
+        time: stamp,
+        text: `${mobUser.name} zapisała pomiar dla ${pat.name} (${pat.room}/${pat.bed}): RR ${sys}/${dia}, Temp ${temp}°C. ${aiAnalysis.isAlert ? aiAnalysis.text : ""}`,
+        alert: aiAnalysis.isAlert
+      });
+
+      await WardDB.save(mobState);
+      const banner = document.getElementById("ai-feedback-banner");
+      banner.classList.remove("hidden");
+      banner.style.borderLeftColor = aiAnalysis.isAlert ? "var(--red)" : "var(--green)";
+      banner.innerHTML = `<strong>📡 Wysłano na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
+      document.getElementById("in-comment").value = "";
+    }
+  </script>
+</body>
+</html>

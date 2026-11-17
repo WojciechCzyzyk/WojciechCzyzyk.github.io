@@ -1389,3 +1389,42 @@ Status Pacjenta
 * **Status Pacjenta (Wałbrzych):** Wykonano poranny spacer (500 kroków w gorsecie). Zauważono odczucie sztywności/wypchania powłok brzusznych przy chodzeniu (charakterystyczne dla poziomu `Th6–Th8` + gorset), przy zachowanym regularnym pasażu jelitowym — do zgłoszenia na obchodzie lekarskim.
 
 
+---
+
+#### 📅 Wpis: 17.11.2026 (Cały dzień — Pełne Podsumowanie Architektury, Szkoleń, B2B, ZUS & Start Poligonu `dyzurka-iot/`)
+
+1. **Żelazne Procedury & Metodyka Pracy (Poka-Yoke / Instrukcja LEGO):**
+   - **1 plik na wiadomość + limit danych (max 3 obiekty / ~1 400 znaków):** Każdą wieloplikową budowę dzielimy na małe klocki po 1 pliku na turę, a tablice danych na paczki max 3 elementów.
+   - **Standard „Instrukcja LEGO” w `pomysly_na_lekcje.md`:** Dopisano kompletny scenariusz 60-minutowej lekcji pokazowej („Moja Pierwsza Mini-Strona i Quiz z AI” z wolnym wyborem tematu, rundą bonusową AI i własną wizytówką + grafiką na wyjście), rolę **Młodego Asystenta (11-letniego Bartka)** oraz koncepcję **Pulpitu Kontroli Lotów Instruktora** (model Wieży Kontroli: Natalka za pulpitem + Bartek jako wsparcie w sali + przyciski samopomocy `Krok w górę / Reset / Pomoc`).
+   - **Strategia Edukacyjna (`sarenka_biznes.md`):** Dodano model **„Płatnych Lekcji Pokazowych”** we współpracy ze stowarzyszeniami lokalnymi (np. *Mama w mieście Jelenia Góra*) i grantami miejskimi (JBO) w formule duetów *Rodzic + Dziecko (11–14 lat)* (drony + AI).
+
+2. **Strategia B2B `APEX AI Copilot` (`apex_copilot_biznes.md` & PDF Ofertowy):**
+   - Wydzielono dedykowany plik `apex_copilot_biznes.md` z 6-etapową metodyką wdrożenia (w tym audytem powdrożeniowym po 1 miesiącu), 3-stopniowym modelem wyceny (0 zł prezentacja ➔ niska opłata wdrożeniowa ➔ lekka subskrypcja) oraz gotowym **Case Study dla branży budowlanej (50+ pracowników terenowych)** wypracowanym po rozmowie z emerytowanym prezesem spółek budowlanych.
+   - Wygenerowano połączoną jednostronicową kartę ofertową `Karta_Koncepcyjna_Systemy_AI_Copilot-v2.pdf` do podmiany w folderze `docs/`.
+
+3. **Poligon `tech-english/` (3 Moduły Live + Sesje #5 i #6 na 100% KPI):**
+   - Wdrożono i przetestowano na żywo 3 pełne moduły w `tech-english/` (`modul-1-sesje-1-4/`, `modul-2-sesja-5/`, `modul-3-sesja-6/`), zaliczając **Sesję #5** (Event-Driven, Webhooks, JSON) oraz **Sesję #6** (Modular Architecture & Separation of Concerns) z wynikiem **100% KPI**.
+
+4. **Dokumentacja Opiekuńcza ZUS (JDG żony) & Kontekst Zdrowotny (Wałbrzych):**
+   - Wygenerowano dwa gotowe, wypełnione danymi rodzinnymi (Natalia Gieczonis-Czyżyk, ul. Gajowa 9A, 58-521 Jeżów Sudecki, córka Aleksandra ur. 18.10.2022 r.) zaświadczenia szpitalne do ZUS: za okres `22.10–27.10.2026` oraz hospitalizację od `04.11.2026` (z miejscem na datę wypisu).
+   - Potwierdzono właściwość **PZON w Jeleniej Górze** (Al. Jana Pawła II 7) dla mieszkańców Jeżowa Sudeckiego.
+   - Stan pacjenta: po spacerach w gorsecie po oddziale, odpoczynek na płasko bez gorsetu (`Th6–Th8` odciążony).
+
+5. **AKTUALNY SPRINT W TOKU — Poligon Eksperymentalny `dyzurka-iot/` (Smart Ward Board + Telefon QR):**
+   - **Cel:** Lekki, bezpieczny prototyp tablicy oddziałowej na laptop/tablet połączony z aplikacją mobilną na telefon dla personelu pielęgniarskiego w Wałbrzychu (prezentacja na jutro rano).
+   - **Założenia architektoniczne:**
+     * Ekran logowania i role (`dyzurka` / `marek` / `lekarz` z PIN-em) + ślad audytowy (*kto i kiedy* wpisał pomiar/komentarz).
+     * **Czysty widok sal i łóżek** (`Sala 1`–`Sala 4`, `Sala Pooperacyjna`): na kafelku łóżka wyłącznie kluczowe parametry (`Ciśnienie`, `Puls`, `Temp` + krótki alert), a po kliknięciu w łóżko otwiera się pełne okno **Karty Pacjenta** (wykres trendów z ostatnich dni w *Chart.js*, historia pomiarów i komentarzy, przenoszenie pacjenta między salami oraz wypis).
+     * Prawy panel **„Ostatnia aktywność na oddziale”**.
+     * Uniwersalny adapter bazy danych `db.js` (działa od razu lokalnie w `localStorage`, z możliwością przełączenia 1 linijką na chmurę `Firebase Realtime Database` dla synchronizacji na żywo Telefon ↔ Laptop).
+   - **Status plików `dyzurka-iot/` (Postęp 2 / 5 klocków):**
+     * `[GOTOWE do zapisu]` Klocek 1: `dyzurka-iot/style.css`
+     * `[GOTOWE do zapisu]` Klocek 2: `dyzurka-iot/db.js`
+     * `[NASTĘPNY KROK w nowej sesji]` Klocek 3: `dyzurka-iot/index.html` (Tablica Dyżurki + modal Karty Pacjenta z wykresem)
+     * `[DO ZROBIENIA]` Klocek 4: `dyzurka-iot/app.js` (logika tablicy, alerty norm, przenoszenie między salami, wykres)
+         * **3 Poziomy Uprawnień (RBAC) & Ślad Audytowy:**
+       - `Lekarz` (`lekarz` / PIN `5678`): pełny podgląd + **wyłączne prawo edycji pola „Zlecenia lekarskie / Leki”** oraz generowanie zbiorczego **Raportu Lekarskiego AI**.
+       - `Pielęgniarka` (`dyzurka` / PIN `1234`): podgląd zleceń lekarskich (bez prawa ich edycji), przyjęcia/przenosiny pacjentów, pełne pomiary (`Ciśnienie`, `Puls`, `Temp`), potwierdzenie podania leku i komentarze z podpisem kto/kiedy.
+       - `Opiekun medyczny` (`opiekun` / PIN `3333`): szybkie odznaczanie czynności opiekuńczych i pielęgnacyjnych (np. zmiana pozycji, spacer w gorsecie, posiłek) z automatycznym wpisem godziny i autora do historii pacjenta.
+     * **Automatyczna Analiza Trendów AI:** Po każdym pomiarze system porównuje wynik z poprzednimi wpisami pacjenta i sam dopisuje komentarz ostrzegawczy (np. *„⚠️ Nagły wzrost ciśnienia skurczowego o +18 mmHg”*).
+

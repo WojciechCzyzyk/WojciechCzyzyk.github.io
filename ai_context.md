@@ -1376,5 +1376,16 @@ Status Pacjenta
 * **Nowy Zasób Prezentacyjny (`Karta_Koncepcyjna_Systemy_AI_Copilot-v2.pdf`):** Wygenerowano zaktualizowaną, jednostronicową kartę-ulotkę z wyodrębnionymi trzema przewagami konkurencyjnymi, tabelą porównawczą, trzema filarami (*AI Code Mentor*, *AI Executive Observer*, *Smart School RFID + AI*) oraz 30-sekundowym *Elevator Pitch*.
 * **Status Pacjenta & Regeneracja (Wałbrzych):** Zakończenie nocnej sesji o 04:14. Przejście w tryb odpoczynku w pozycji horyzontalnej (bez gorsetu) dla regeneracji odcinka `Th6–Th8`.
 
+#### 📅 Wpis: 17.11.2026 (Przedpołudnie — Porządki Repo, Analiza ZUS Opiekuńczy, Moduł Tech English Live & Reguły LEGO/Kaizen)
+
+* **ŻELAZNA PROCEDURA GENEROWANIA KODU (Poka-Yoke / Micro-Sprints):**
+  - **1 plik na raz:** Przy tworzeniu lub edycji wielu plików generujemy zawsze **wyłącznie jeden plik na jedną wiadomość**, czekając na potwierdzenie (`ok` / `dalej`) lub zgłoszenie poprawki przed przejściem do kolejnego.
+  - **Bezpieczny limit długości paczek danych:** Duże tablice danych (np. `pytania.js`) dzielimy automatycznie na porcje po **maksymalnie 3 elementy (~1 300–1 500 znaków)**, aby uniknąć obcięcia odpowiedzi i błędów kopiowania.
+* **Porządki w Repozytorium Głównym (`WojciechCzyzyk.github.io`):**
+  - Uporządkowano katalog główny do czystego rdzenia (zmiana `AI_context.md` ➔ `ai_context.md` w standardzie *lowercase*), przeniesiono materiały uzupełniające do `inne/` oraz `inne/bartek/`, a dokumenty ofertowe i CV do `docs/`.
+  - Dodano kafelek **Tech English Live Trainer** na `index.html` (z wzmianką o wspólnym treningu z synami) oraz wdrożono pełny, modularny poligon `tech-english/` (`index.html`, `style.css`, `silnik.js`, `modul-1-sesje-1-4/`). Zaliczono **Sesję #3** (80% KPI), **Sesję #4** (100% KPI) oraz test UAT Modułu #1 wynikiem **10/10 (100%)**.
+* **Analiza Świadczeń Rodzinnych (ZUS JDG żony) & Wygenerowany PDF:**
+  - Zweryfikowano prawo żony (JDG z dobrowolną składką chorobową na „Małym ZUS-ie”) do zasiłku opiekuńczego z tytułu hospitalizacji małżonka przy opiece nad 4-letnią Olą (brak karencji, możliwość rozliczenia wstecz do 6 miesięcy z wyłączeniem 1 dnia wysyłkowego w tygodniu, korzyść łączna ok. 44,39 zł/dzień = ok. 1 154 zł przy 26 dniach opieki). Wygenerowano poradnik `Poradnik_Zasilek_Opiekunczy_ZUS_JDG-v2.pdf`.
+* **Status Pacjenta (Wałbrzych):** Wykonano poranny spacer (500 kroków w gorsecie). Zauważono odczucie sztywności/wypchania powłok brzusznych przy chodzeniu (charakterystyczne dla poziomu `Th6–Th8` + gorset), przy zachowanym regularnym pasażu jelitowym — do zgłoszenia na obchodzie lekarskim.
 
 

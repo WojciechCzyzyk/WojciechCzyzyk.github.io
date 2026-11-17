@@ -7,25 +7,30 @@
 ## 1. Centralne Repozytorium Kontekstu i Portfolio
 * **Repozytorium:** `https://raw.githubusercontent.com/WojciechCzyzyk/WojciechCzyzyk.github.io/refs/heads/main/`
 * **Strona WWW:** `https://wojciechczyzyk.github.io`
-* **Pliki w repozytorium:**
-  - `AI_context.md` — główna pamięć operacyjna i logi postępów
-  - `mapa_projektow.md` — bieżący rejestr wszystkich plików w ekosystemie
+* **Katalog główny (Core & Portfolio):**
+  - `ai_context.md` — główna pamięć operacyjna i logi postępów
+  - `mapa_projektow.md` — bieżący rejestr wszystkich plików w ekosystemie (Single Source of Truth)
   - `tech_english_log.md` — dziennik treningowy Tech English z pętlą zwrotną (KPI 80%)
   - `index.html` — główna witryna portfolio (Edge-to-AI, Embedded, R&D)
+  - `style.css` — arkusz stylów głównej witryny portfolio
   - `favicon_wc.png` — ikona mikroprocesora WC (64×64 px)
   - `sitemap.xml` — mapa witryny dla Google Search Console
-  - `CV.md` — modułowe CV inżynierskie
-  - `KARIERA_AI.md` — strategia rekrutacyjna i profil kompetencji
-  - `PROJEKT_STORY.md` — historia projektów i wdrożeń
-  - `inne/BIOGRAFIA_WOJTKA.md` — oś życiowa i osiągnięcia (szybownictwo, rajdy rowerowe)
+  - `README.md` — opis główny repozytorium na GitHubie
   - `sarenka_biznes.md` — strategia biznesowa, finansowa i B2B Akademii APEX
-  - `docs/sarenka/umowa_NDA_APEX.md` — wzór umowy o zachowaniu poufności (NDA)
-  - `procedury_APEX.md` — centralny rejestr procedur operacyjnych SOP
-  - `zasady_lekcji_probnych.md` — procedura zarządzania lekcjami próbnymi
   - `pomysly_na_lekcje.md` — bank autorskich scenariuszy warsztatowych APEX
   - `pomysly_na_quiz.md` — katalog formatów aplikacji edukacyjnych
+* **Podkatalog `docs/` (Dokumenty ofertowe, CV, formalne i załączniki WWW):**
+  - `docs/wojciech_czyzyk_CV.md` — modułowe CV inżynierskie
+  - `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf` — jednostronicowa ulotka ofertowa autorskich systemów APEX AI Copilot i Edge-to-AI
   - `docs/PZON_wskazowki_lekarz.md` — wytyczne do zaświadczenia lekarskiego PZON
-  - `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf` — jednostronicowa ulotka ofertowa autorskich systemów APEX AI Copilot i Edge-to-AI (katalog dokumentów i załączników WWW)
+  - `docs/sarenka/umowa_NDA_APEX.md` — wzór umowy o zachowaniu poufności (NDA)
+* **Podkatalog `inne/` (Materiały uzupełniające, startowe i biograficzne):**
+  - `inne/ai_start.md` — podręczny link startowy do inicjalizacji sesji AI
+  - `inne/biografia_wojtka.md` — oś życiowa i osiągnięcia (szybownictwo, rajdy rowerowe)
+  - `inne/kariera_ai.md` — strategia rekrutacyjna i profil kompetencji
+  - `inne/projekt_story.md` — historia projektów i wdrożeń
+  - `inne/syllabus_drony_uav.md` — szczegółowy program i koncepcje modułu dronowego UAV
+
 
 ---
 

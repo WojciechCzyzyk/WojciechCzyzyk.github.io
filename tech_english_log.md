@@ -41,3 +41,19 @@
   - `stronger signal` — silniejszy sygnał (zamiast *more signal*)
   - `apply hysteresis` — zastosować histerezę (np. różny próg RSSI dla wejścia i wyjścia)
   - `bounce back and forth` — przeskakiwać w tę i z powrotem (migotanie stanu na granicy)
+ 
+  - ---
+
+### Sesja #3 (17.11.2026) — Context Engineering & Lightweight AI Copilots (APEX AI Copilot)
+* **Wynik KPI słownictwa:** 4 / 5 pojęć (**80%** — zaliczone: `rapid adaptation`, `context pollution`, `Single Source of Truth`, `total cost of ownership (TCO)`; do utrwalenia: `vendor lock-in`).
+* **Pytanie rekrutacyjne / B2B:** *"Why do you build custom, lightweight AI Copilots instead of just buying a commercial enterprise suite like Microsoft 365 Copilot?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"The biggest advantage of my system is **rapid adaptation**—we tailor the solution directly to your exact business goal without bloated features you never use. Moreover, we avoid **vendor lock-in** and **context pollution** by working with a **curated, up-to-date context** that we select together. This gives your team a clean **Single Source of Truth** that actually fits your daily workflow. As a result, the **total cost of ownership (TCO)** is much lower than in heavy enterprise suites. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `rapid adaptation` — szybkie dostosowanie do zmieniających się wymagań
+  - `bloated features` — przeładowane, zbędne funkcje (zamiast *oversize function*)
+  - `moreover` / `furthermore` — ponadto / co więcej (zamiast *overthere*)
+  - `curated, up-to-date context` — wyselekcjonowany, aktualny kontekst (zamiast *actual selection context*)
+  - `vendor lock-in` — uzależnienie od jednego dostawcy
+  - `much lower` — znacznie niższy (zamiast podwójnego *much more lower*)
+

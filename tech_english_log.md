@@ -91,3 +91,17 @@
   - `queuing and retries` — kolejkowanie i ponawianie prób (w razie błędu sieci)
   - `maintenance costs` — koszty utrzymania
   - `reliable data delivery` — niezawodne dostarczanie danych
+ 
+  - ---
+
+### Sesja #6 (17.11.2026) — Modular Architecture & Separation of Concerns (`tech-english/`)
+* **Wynik KPI słownictwa:** 5 / 5 pojęć (**100%** — zaliczone wszystkie: `maintainability`, `scalability`, `separation of concerns`, `code duplication`, `single source of truth` + pełny szkielet `First of all`, `Moreover`, `As a result`, `Does that make sense?`).
+* **Pytanie architektoniczne:** *"Why do you split your web application into separate CSS, engine JS, and modular data folders instead of putting everything into one single HTML file?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"First of all, the most important things are **maintainability** and **scalability**—you can add new modules in a relatively easy way. Moreover, thanks to **separation of concerns**, you completely eliminate **code duplication** across the project. As a result, you always preserve a **single source of truth** in each file for your styling and core logic. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `new features / modules` — nowe funkcjonalności / moduły (zamiast *similar function*)
+  - `eliminate code duplication` — wyeliminować powielanie kodu
+  - `in each file` — w każdym pliku (po *each* zawsze liczba pojedyncza)
+  - `preserve a single source of truth` — zachować jedno źródło prawdy
+

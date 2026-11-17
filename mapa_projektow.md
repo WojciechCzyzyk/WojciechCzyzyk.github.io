@@ -37,6 +37,13 @@
   - `inne/bartek/dziel_bartek.md` — robocze notatki algorytmiczne do dzielenia pisemnego
   - `inne/bartek/historia_Polski.md` — materiały źródłowe do quizów historycznych
   - `inne/bartek/bartek-tmp.html` — roboczy szablon HTML poligonu
+* * **Podkatalog `tech-english/` (Interaktywny Poligon Tech English & R&D):**
+  - `tech-english/index.html` — główny Hub poligonu z opisem metody KPI 80% i kartami modułów
+  - `tech-english/style.css` — wspólny arkusz stylów dla Huba i podmodułów quizów
+  - `tech-english/silnik.js` — uniwersalny silnik testów z wyjaśnieniami inżynierskimi
+  - `tech-english/modul-1-sesje-1-4/index.html` — widok pierwszego quizu (Sesje #1–#4)
+  - `tech-english/modul-1-sesje-1-4/pytania.js` — baza 10 pytań z obszarów ARM7, UHF RFID, Context Engineering i ESP32
+
 
 
 

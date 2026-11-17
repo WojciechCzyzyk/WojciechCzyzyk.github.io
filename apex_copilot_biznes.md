@@ -60,3 +60,6 @@
   3. **Zakończenie prac (`In Progress` ➔ `Done`):** Po wykonaniu zadania pracownik przesuwa kartę na **`Done`**.
 * **Natychmiastowy Podgląd i Raporty AI dla Szefa i Biura:**
   - Zamiast wykonywać 50 telefonów dziennie, prezes i sekretarka w każdej sekundzie widzą na żywo całą tablicę oraz generują **1 kliknięciem raport AI** pokazujący: kto nad czym pracuje, które zadania są zamknięte oraz **gdzie wisi nierozwiązany problem z brakiem materiałów** wymagający pilnej reakcji.
+ 
+  - * **Moduł „Wieża Kontroli” (Live Dashboard Zespołu):** Ten sam mechanizm nadzoru na żywo działa w firmach MŚP — menedżer lub sekretarka widzi na jednym ekranie kafelki wszystkich pracowników (etap zlecenia, czas realizacji oraz żółte/czerwone alerty AI o blokadach), dzięki czemu interweniuje wyłącznie tam, gdzie pojawia się zator, zamiast obdzwaniać całą załogę.
+

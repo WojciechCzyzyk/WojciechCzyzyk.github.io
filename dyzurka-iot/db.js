@@ -64,15 +64,8 @@ const DEFAULT_PATIENTS = [
 ];
 
 const WardDB = {
-  async load() {
-    if (FIREBASE_URL) {
-      const res = await fetch(`${FIREBASE_URL}/wardData.json`);
-      const data = await res.json();
-      if (data && data.patients) return data;
-    }
-    const raw = localStorage.getItem("apex_ward_db_v3");
-    if (raw) return JSON.parse(raw);
-    const initial = {
+  getDefaultData() {
+    return {
       rooms: DEFAULT_ROOMS,
       patients: DEFAULT_PATIENTS,
       logs: [
@@ -80,6 +73,30 @@ const WardDB = {
         { time: "17.11 17:45", text: "Piel. Anna K. zapisała pomiar dla Tomasz W. (Sala 405).", alert: false }
       ]
     };
+  },
+
+  async load() {
+    if (FIREBASE_URL) {
+      try {
+        const res = await fetch(`${FIREBASE_URL}/wardData.json`);
+        const data = await res.json();
+        if (data && Array.isArray(data.patients) && Array.isArray(data.rooms)) {
+          return data;
+        }
+        if (data && data.error) {
+          console.warn("Firebase błąd uprawnień:", data.error);
+        } else {
+          const initial = this.getDefaultData();
+          await this.save(initial);
+          return initial;
+        }
+      } catch (e) {
+        console.warn("Błąd połączenia z Firebase, przełączam na tryb lokalny:", e);
+      }
+    }
+    const raw = localStorage.getItem("apex_ward_db_v3");
+    if (raw) return JSON.parse(raw);
+    const initial = this.getDefaultData();
     await this.save(initial);
     return initial;
   },
@@ -87,11 +104,15 @@ const WardDB = {
   async save(data) {
     localStorage.setItem("apex_ward_db_v3", JSON.stringify(data));
     if (FIREBASE_URL) {
-      await fetch(`${FIREBASE_URL}/wardData.json`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+      try {
+        await fetch(`${FIREBASE_URL}/wardData.json`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+      } catch (e) {
+        console.warn("Nie udało się zapisać do Firebase:", e);
+      }
     }
   }
 };

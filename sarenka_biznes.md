@@ -75,3 +75,12 @@ To jest genialny kierunek na rozwój firmy Natalki do poziomu poważnego gracza 
 ### 4. Ścieżka Wdrożenia R&D (Zero Ryzyka, Synergia z Akademią APEX)
 * **Etap 1 (Poligon własny):** Zestaw deweloperski **UHF RFID (865–868 MHz) + ESP32** jest już ujęty w kosztorysie PFRON v17 (Pozycja nr 5). Prototyp bramek strefowych i powiadomień powstanie w pracowni APEX razem z uczniami (*„Inżynieria stosowana w biznesie od pierwszego dnia”*).
 * **Etap 2 (Pilotaż referencyjny):** Wykorzystanie bezpośrednich relacji w lokalnych szkołach (m.in. SP 2 w Jeleniej Górze) do przeprowadzenia pierwszego wdrożenia pokazowego.
+
+* ## 🗂️ Filar Dydaktyczny i Marketingowy: „Cyfrowy Porządek i Architektura Informacji”
+
+* **Obietnica dla rodzica (Bonus życiowy):** Uczymy dziecko nie tylko pisania kodu, ale też **zarządzania wiedzą i porządkowania informacji** (*Information Architecture* & *Single Source of Truth*). Koniec z chaosem na Pulpicie, zgubionymi plikami i nerwowym szukaniem notatek przed klasówką.
+* **Jak ćwiczymy to na warsztatach:**
+  - **Czysta struktura katalogów:** Od pierwszej lekcji oddzielamy kod, wygląd i dane w osobnych plikach (*Separation of Concerns*), stosując przejrzyste nazewnictwo.
+  - **Własna baza wiedzy i log postępów:** Uczeń prowadzi uporządkowany dziennik swoich projektów oraz buduje tematyczne repozytoria (np. osobne katalogi pod historię, biologię, matematykę), z których błyskawicznie korzysta przed sprawdzianem.
+* **Wartość długofalowa:** Nawyk układania informacji w logiczne struktury obniża stres szkolny, uczy samodzielności i stanowi fundament pracy nowoczesnego inżyniera oraz menedżera.
+

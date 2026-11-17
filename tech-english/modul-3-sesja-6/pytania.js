@@ -32,3 +32,38 @@ const quizData = [
     correct: 1,
     explanation: "'Scalability' (skalowalność) w tym kontekście oznacza łatwość dokładania kolejnych modułów (np. modul-4, modul-5) bez ryzyka uszkodzenia już działających części."
   },
+    {
+    question: "4. What is the key benefit of keeping a 'single source of truth' for CSS styles?",
+    options: [
+      "Every module can have a completely broken layout",
+      "Changing a color or font in one central 'style.css' file immediately updates all modules consistently",
+      "It prevents students from using dark mode",
+      "It automatically deletes unused HTML tags"
+    ],
+    correct: 1,
+    explanation: "'Single source of truth' (jedno źródło prawdy) oznacza, że zmiana stylu w jednym centralnym pliku 'style.css' natychmiast aktualizuje wygląd całej aplikacji we wszystkich podkatalogach."
+  },
+  {
+    question: "5. How does good 'maintainability' save time for a software architect?",
+    options: [
+      "The code never needs to be tested",
+      "Clean, modular files are easy to read, debug, and update months later without hunting through thousands of lines",
+      "It eliminates the need for version control like Git",
+      "It forces all developers to use the same computer"
+    ],
+    correct: 1,
+    explanation: "'Maintainability' (łatwość utrzymania) sprawia, że dzięki czystym, małym plikom łatwo znaleźć błąd i wprowadzić poprawkę po miesiącach bez przekopywania się przez tysiące linii kodu."
+  },
+  {
+    question: "6. Which phrase means 'rozdział odpowiedzialności' in clean software design?",
+    options: [
+      "Context pollution",
+      "Separation of concerns",
+      "Vendor lock-in",
+      "Inrush current"
+    ],
+    correct: 1,
+    explanation: "'Separation of concerns' to fundament czystej architektury — każdy plik odpowiada wyłącznie za jedno konkretne zadanie."
+  }
+];
+

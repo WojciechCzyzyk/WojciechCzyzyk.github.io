@@ -240,14 +240,16 @@ async function transferPatient() {
 
 async function dischargePatient() {
   const pat = wardState.patients.find(p => p.id === activePatientId);
-  renumberBeds(pat.room);
   if (!confirm(`Wypisać pacjenta ${pat.name}?`)) return;
+  const oldRoom = pat.room;
   wardState.patients = wardState.patients.filter(p => p.id !== activePatientId);
+  renumberBeds(oldRoom);
   wardState.logs.unshift({ time: nowStamp(), text: `🚪 ${currentUser.name} wypisał ${pat.name}.`, alert: false });
   await WardDB.save(wardState);
   closeModal();
   await refreshBoard();
 }
+
 
 function renderChart(pat) {
   const canvas = document.getElementById("vitalsChart");

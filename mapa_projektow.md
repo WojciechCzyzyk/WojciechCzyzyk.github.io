@@ -25,6 +25,7 @@
   - `pomysly_na_lekcje.md` — bank autorskich scenariuszy warsztatowych APEX
   - `pomysly_na_quiz.md` — katalog formatów aplikacji edukacyjnych
   - `PZON_wskazowki_lekarz.md` — wytyczne do zaświadczenia lekarskiego PZON
+  - `docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf` — jednostronicowa ulotka ofertowa autorskich systemów APEX AI Copilot i Edge-to-AI (katalog dokumentów i załączników WWW)
 
 ---
 

@@ -7,8 +7,15 @@
 2. **Wymóg 80% trafień (KPI):** W swojej odpowiedzi masz obowiązek użyć w praktyce **minimum 80% podpowiadanych słów/zwrotów** (np. min. 4 z 5). AI na początku oceny podaje dokładny wynik procentowy użycia słownika.
 3. **Code Review & Wersja „Pro”:** Krótka korekta naturalności i pisowni + gotowa, wygładzona odpowiedź na rozmowę techniczną.
 4. **Powtórki krzyżowe:** AI monitoruje sekcję *Do utrwalenia* i za kilka sesji wraca do tematu, zadając pytanie z innej strony (parafraza), aby sprawdzić opanowanie zwrotów w boju.
+-------------------------------------------------
+## 🧭 Stały Szkielet Wypowiedzi (Signposting Language)
+*Używaj tych 4 łączników jako rusztowania każdej odpowiedzi, żeby zyskać czas na dobór słownictwa technicznego:*
+1. **Start (Wprowadzenie):** `First of all, ...` / `To begin with, ...` / `Just to clarify the requirement...` *(Żeby doprecyzować wymaganie...)*
+2. **Rozwinięcie (Dodanie argumentu):** `Moreover, ...` / `Furthermore, ...` / `What is more, ...` *(Ponadto / Co więcej...)*
+3. **Skutek / Przyczyna:** `Therefore, ...` / `As a result, ...` *(Dlatego / W rezultacie...)*
+4. **Podsumowanie i zamknięcie:** `In the end, ...` / `Finally, ...` / `Does that make sense?` *(Czy to brzmi jasno / logicznie?)*
 
----
+---------------------------------------------------
 
 ## 📚 Zalogowane Sesje Treningowe
 

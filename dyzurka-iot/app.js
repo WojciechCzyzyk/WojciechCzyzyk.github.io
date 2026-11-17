@@ -10,10 +10,23 @@ function nowStamp() {
   return `${pad(d.getDate())}.${pad(d.getMonth() + 1)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
 
+async function initLoginList() {
+  wardState = await WardDB.load();
+  const sel = document.getElementById("login-user");
+  if (!sel || !wardState.users) return;
+  sel.innerHTML = Object.entries(wardState.users)
+    .map(([key, u]) => `<option value="${key}">${u.name} (${u.label})</option>`)
+    .join("");
+}
+
+window.addEventListener("DOMContentLoaded", initLoginList);
+
 async function login() {
+  if (!wardState) wardState = await WardDB.load();
   const uKey = document.getElementById("login-user").value;
   const pin = document.getElementById("login-pin").value.trim();
-  const user = USERS[uKey];
+  const usersMap = wardState.users || USERS;
+  const user = usersMap[uKey];
   if (!user || user.pin !== pin) return alert("Błędny kod PIN!");
 
   currentUser = user;
@@ -21,8 +34,11 @@ async function login() {
   document.getElementById("ward-screen").classList.remove("hidden");
   document.getElementById("current-user-badge").textContent = `${user.name} (${user.label})`;
   document.getElementById("admit-panel").classList.toggle("hidden", user.role === "opiekun");
+  const staffBtn = document.getElementById("btn-staff-modal");
+  if (staffBtn) staffBtn.classList.toggle("hidden", user.role === "opiekun");
   await refreshBoard();
 }
+
 
 function logout() { location.reload(); }
 

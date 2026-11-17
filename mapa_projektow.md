@@ -17,9 +17,9 @@
   - `CV.md` — modułowe CV inżynierskie
   - `KARIERA_AI.md` — strategia rekrutacyjna i profil kompetencji
   - `PROJEKT_STORY.md` — historia projektów i wdrożeń
-  - `BIOGRAFIA_WOJTKA.md` — oś życiowa i osiągnięcia (szybownictwo, rajdy rowerowe)
+  - `inne/BIOGRAFIA_WOJTKA.md` — oś życiowa i osiągnięcia (szybownictwo, rajdy rowerowe)
   - `sarenka_biznes.md` — strategia biznesowa, finansowa i B2B Akademii APEX
-  - `umowa_NDA_APEX.md` — wzór umowy o zachowaniu poufności (NDA)
+  - `docs/sarenka/umowa_NDA_APEX.md` — wzór umowy o zachowaniu poufności (NDA)
   - `procedury_APEX.md` — centralny rejestr procedur operacyjnych SOP
   - `zasady_lekcji_probnych.md` — procedura zarządzania lekcjami próbnymi
   - `pomysly_na_lekcje.md` — bank autorskich scenariuszy warsztatowych APEX

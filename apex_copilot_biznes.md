@@ -45,3 +45,18 @@
 * **Krok 3 — Opieka i Rozwój w Modelu Subskrypcyjnym (Opcjonalny abonament miesięczny):** Dla firm, które chcą na bieżąco rozbudowywać system o nowe działy, automatyzacje (webhooki/API) i regularne sesje optymalizacyjne *Kaizen* (klient zachowuje pełną własność swoich plików kontekstowych, zero *vendor lock-in*).
 
 * **Żywa Ewolucja w Locie vs. Korporacyjny Beton:** W dużych organizacjach wdraża się sztywne, zamknięte systemy, w których dostosowanie zachowania AI pod potrzeby jednego działu wymaga miesięcy biurokracji i zgód IT — dlatego takie wdrożenia sypią się z założenia. W **APEX AI Copilot** pracownik i konsultant modyfikują reguły w locie podczas jednej sesji roboczej: zauważasz tarcie ➔ dopisujesz jedną linijkę do pliku kontekstu ➔ od następnej sekundy system działa dokładnie tak, jak potrzebujesz.
+
+
+---
+
+## 5. Gotowy Scenariusz Branżowy (Case Study): Firmy Budowlane i Ekipy Terenowe (Skala: 50+ Pracowników)
+
+*Podręcznikowe zastosowanie wypracowane podczas konsultacji z prezesem spółek budowlanych:*
+
+* **Główny ból branży:** Przy 50 rozproszonych pracownikach i kilku budowach jednocześnie szef i sekretarka tracą godziny na obdzwanianie ekip („na jakim jesteście etapie?”), zamówienia materiałów giną w SMS-ach, a przestoje wychodzą na jaw za późno.
+* **Prosty Cykl Pracy Pracownika na Telefonie (Zero Szkolenia IT):**
+  1. **Odbiór zlecenia (`To Do` ➔ `In Progress`):** Pracownik lub brygadzista dostaje przypisane zadanie na tablicy i w momencie rozpoczęcia prac przesuwa kartę na **`In Progress`**.
+  2. **Zgłoszenie blokady / braku materiału:** Jeśli brakuje towaru lub sprzętu, 1 kliknięciem oznacza problem — zgłoszenie natychmiast ląduje na tablicy sekretarki/zaopatrzeniowca, która zamawia towar i po dostawie odznacza realizację (zielone światło dla ekipy).
+  3. **Zakończenie prac (`In Progress` ➔ `Done`):** Po wykonaniu zadania pracownik przesuwa kartę na **`Done`**.
+* **Natychmiastowy Podgląd i Raporty AI dla Szefa i Biura:**
+  - Zamiast wykonywać 50 telefonów dziennie, prezes i sekretarka w każdej sekundzie widzą na żywo całą tablicę oraz generują **1 kliknięciem raport AI** pokazujący: kto nad czym pracuje, które zadania są zamknięte oraz **gdzie wisi nierozwiązany problem z brakiem materiałów** wymagający pilnej reakcji.

@@ -64,3 +64,16 @@
   - `vendor lock-in` — uzależnienie od jednego dostawcy
   - `much lower` — znacznie niższy (zamiast podwójnego *much more lower*)
 
+---
+
+### Sesja #4 (17.11.2026) — Hardware Abstraction, Power Budget & Relay Arbitration (ESP32 C++20)
+* **Wynik KPI słownictwa:** 5 / 5 pojęć (**100%** — zaliczone wszystkie: `inrush current`, `power budget`, `hardware abstraction`, `staggered startup`, `state machine` + wzorcowe użycie łączników `First of all`, `Furthermore`, `Moreover`, `As a result`).
+* **Pytanie rekrutacyjne:** *"In your ESP32 smart blinds controller, how do you prevent multiple motors from starting at the exact same millisecond and overloading a limited USB power budget?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"First of all, I calculate the total power consumption of the controller electronics and the motors, taking into account their **inrush current**. Furthermore, I check how much power the USB source can safely supply to define my **power budget**. To stay within this limit, I implemented **hardware abstraction** via a dedicated sequencer class to **stagger the startup** of each blind. Moreover, I built a software **state machine** to manage the exact movement of every motor. As a result, I have full control over the system's power consumption and prevent voltage drops. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `calculate power consumption` — obliczyć pobór mocy (zamiast *count consumption*)
+  - `supply power to a device` — dostarczyć zasilanie do urządzenia (zamiast *distribute to a tool*)
+  - `to stagger the startup` / `staggered startup` — rozłożyć rozruch w czasie / sekwencyjny rozruch
+  - `prevent voltage drops` — zapobiegać spadkom napięcia
+  - `taking into account...` — biorąc pod uwagę...

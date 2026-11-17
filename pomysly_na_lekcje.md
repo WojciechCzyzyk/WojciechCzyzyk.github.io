@@ -13,11 +13,6 @@
   3. **Wdrożenie i Showcase:** Publikacja pliku (np. `quiz_historia.html`) na własnej stronie `nick.github.io` i udostępnienie linku rówieśnikom z klasy do wspólnego treningu.
 * **Wartość dla rodzica i ucznia:** Dziecko uczy się materiału dwukrotnie (najpierw tworząc bazę pytań, a potem testując aplikację), zyskuje dumę z własnego narzędzia i staje się liderem technologicznym w klasie.
 
-# 💡 BANK POMYSŁÓW NA LEKCJE & KURS „MAM 5 ZE SPRAWDZIANÓW!” — AKADEMIA APEX
-
-*Zbiór autorskich scenariuszy i architektura nowego kursu rocznego opartego na filozofii **Need-Driven Learning** (nauka IT poprzez rozwiązywanie realnych, bieżących wyzwań szkolnych uczniów).*
-
----
 
 ## 🏆 NOWY KONCEPT KURSU ROCZNEGO: „Mam 5 ze sprawdzianów! — Cyfrowy Warsztat Ucznia”
 
@@ -109,7 +104,7 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Grupa docelowa:** Starsze grupy (klasy 5–8) oraz projekty semestralne / pokazy na Dni Otwarte.
 * **Wykorzystywany sprzęt z pracowni:** 5× mini-dron treningowy, 1× dron średni z kamerą i modułem ESP32 (klasy RoboMaster TT), 1× flagowa platforma UAV z kamerą HD i otwartym SDK, drukarka 3D Bambu Lab P1S, dalmierze laserowe ToF VL53L1X, czujniki HC-SR04, sensory środowiskowe BME280/PMS5003, paski LED WS2812B, mikroserwa SG90 i elektromagnesy.
 
-### 🎯 Katalog 6 Misji Warsztatowych (Mikro-Sprinty):
+### 🎯 Katalog 7 Misji Warsztatowych (Mikro-Sprinty):
 
 1. **„Latający Szachista” (Projekt Flagowy / Demo Day):**
    * *Cel:* Autonomiczny dron rozgrywający partię szachów na dużej szachownicy podłogowej (1,6 × 1,6 m).

@@ -119,7 +119,7 @@ const WardDB = {
     }
   },
   
-  async trackVisit(action, userName = "Gość (ekran logowania)") {
+   async trackVisit(action, userName = "Gość (ekran logowania)") {
     try {
       const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
       const payload = {
@@ -129,13 +129,14 @@ const WardDB = {
         device: isMobile ? "Telefon" : "Komputer",
         screen: `${window.screen.width}x${window.screen.height}`
       };
-      await fetch(FIREBASE_URL.replace("wardData.json", "auditLogins.json"), {
+      await fetch(`${FIREBASE_URL}/auditLogins.json`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
     } catch (e) {}
   }
+
 
 };
 

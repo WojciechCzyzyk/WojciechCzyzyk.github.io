@@ -524,6 +524,8 @@ async function saveRoundNote(patId) {
   wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });
 
   addTaskToPatient(pat, newMeds, docName);
+  learnNewProcedure(newMeds);
+  
   await WardDB.save(wardState);
   renderLogs();
   alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);
@@ -608,12 +610,19 @@ async function addCustomTask(patId, fromBoard = false) {
   if (!txt) return;
   const pat = wardState.patients.find(p => p.id === patId);
   addTaskToPatient(pat, txt, currentUser.name);
+
+  const learned = learnNewProcedure(txt);
+  if (learned) {
+    wardState.logs.unshift({ time: nowStamp(), text: `🧠 Słownik AI: Zapamiętano nowy szablon „${learned}” na liście szybkiego wyboru.`, alert: false });
+  }
+
   wardState.logs.unshift({ time: nowStamp(), text: `📌 ${currentUser.name} dodał zadanie dla ${pat.name}: ${txt}`, alert: false });
   await WardDB.save(wardState);
   renderLogs();
   if (fromBoard) openTasksModal();
   else openPatientModal(patId);
 }
+
 
 function renderPatientTasksInModal(pat) {
   const box = document.getElementById("modal-tasks-box");
@@ -634,8 +643,9 @@ function renderPatientTasksInModal(pat) {
   box.innerHTML = `
     <label style="color:#fbbf24; font-weight:700; margin-bottom:8px;">📌 Zadania i Zlecenia Pacjenta (kliknij kafelek, aby przełączyć status):</label>
     <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:8px;">${itemsHtml}</div>
+    ${buildProcedureSelectHtml("new-task-" + pat.id)}
     <div style="display:flex; gap:6px;">
-      <input id="new-task-${pat.id}" placeholder="Dopisz szybkie zadanie (np. Pobranie krwi rano)...">
+      <input id="new-task-${pat.id}" placeholder="Dopisz dawkę lub nowe zadanie...">
       <button class="btn btn-sm" onclick="addCustomTask('${pat.id}', false)">➕ Dodaj</button>
     </div>`;
 }
@@ -662,8 +672,9 @@ function openTasksModal() {
         </div>
         <div>
           ${pills}
+          ${buildProcedureSelectHtml("new-task-" + p.id)}
           <div style="display:flex; gap:6px; margin-top:6px;">
-            <input id="new-task-${p.id}" placeholder="Nowe zadanie dla pacjenta..." style="padding:6px 8px; font-size:0.82rem;">
+            <input id="new-task-${p.id}" placeholder="Dopisz dawkę lub nowe zadanie..." style="padding:6px 8px; font-size:0.82rem;">
             <button class="btn btn-sm" onclick="addCustomTask('${p.id}', true)">➕ Dodaj</button>
           </div>
         </div>
@@ -673,8 +684,83 @@ function openTasksModal() {
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
 
+
+
+const BASE_PROCEDURES = [
+  "💧 Kroplówka NaCl 0.9%",
+  "💧 Kroplówka PWE",
+  "💊 Paracetamol",
+  "💊 Pyralgina",
+  "💉 Założenie / wymiana wenflonu",
+  "🩹 Pielęgnacja portu / wkłucia",
+  "🩸 Pobranie krwi (morfologia / CRP)",
+  "🌡️ Kontrola temp. i RR",
+  "⚖️ Bilans płynów (dobowy)"
+];
+
+function getProceduresList() {
+  if (!Array.isArray(wardState.procedures) || wardState.procedures.length === 0) {
+    wardState.procedures = [...BASE_PROCEDURES];
+  }
+  return wardState.procedures;
+}
+
+function extractBaseProcedureName(rawText) {
+  let base = rawText
+    .replace(/^[\p{Emoji}\s]+/gu, "")
+    .replace(/\(.*?\)/g, "")
+    .replace(/\b\d+([.,]\d+)?\s*(mg|g|ml|mcg|ug|j\.m\.|jm|%|x\d+|raz|razy|h|godz|dni)\b/gi, "")
+    .replace(/\b(i\.v\.|iv|p\.o\.|po|s\.c\.|sc|i\.m\.|im|rano|wieczorem|w południe|doraźnie|na noc|co \d+h)\b/gi, "")
+    .replace(/[,;+\-/]+/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  const words = base.split(" ").filter(w => w.length > 1 && !/^\d+$/.test(w));
+  return words.slice(0, 3).join(" ").trim();
+}
+
+function learnNewProcedure(text) {
+  const clean = text.trim();
+  if (!clean || clean.length < 3 || clean.startsWith("Oczekuje")) return null;
+  const baseName = extractBaseProcedureName(clean);
+  if (!baseName || baseName.length < 3) return null;
+
+  const list = getProceduresList();
+  const exists = list.some(item => {
+    const existingBase = extractBaseProcedureName(item).toLowerCase();
+    return existingBase === baseName.toLowerCase() || existingBase.includes(baseName.toLowerCase());
+  });
+
+  if (!exists) {
+    const formattedEntry = `💊 ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}`;
+    list.unshift(formattedEntry);
+    return formattedEntry;
+  }
+  return null;
+}
+
+function insertProcedureToInput(selectEl, inputId) {
+  const val = selectEl.value;
+  if (!val) return;
+  const inp = document.getElementById(inputId);
+  if (!inp) return;
+  inp.value = inp.value.trim() ? `${inp.value.trim()}, ${val}` : `${val} `;
+  inp.focus();
+  selectEl.selectedIndex = 0;
+}
+
+function buildProcedureSelectHtml(inputId) {
+  const opts = getProceduresList().map(p => `<option value="${p.replace(/"/g, "&quot;")}">${p}</option>`).join("");
+  return `
+    <select onchange="insertProcedureToInput(this, '${inputId}')" style="margin-bottom:6px; border-color:var(--accent); font-size:0.82rem;">
+      <option value="">⚡ Wybierz gotowy zabieg / lek z listy...</option>
+      ${opts}
+    </select>`;
+}
+
+
 setInterval(() => {
   if (currentUser && !isDragging && Object.keys(taskTimers).length === 0) {
     refreshBoard();
   }
 }, 4000);
+

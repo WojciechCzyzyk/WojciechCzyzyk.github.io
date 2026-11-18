@@ -91,9 +91,12 @@ const WardDB = {
             tasks: p.tasks ? Object.values(p.tasks) : []
           })) : [];
           const logs = data.logs ? Object.values(data.logs) : [];
+          
+          const procedures = data.procedures ? Object.values(data.procedures) : null;
           if (rooms.length > 0 && patients.length > 0) {
-            return { users, rooms, patients, logs };
+            return { users, rooms, patients, logs, procedures };
           }
+          
         }
       } catch (e) {
         console.warn("Błąd połączenia z Firebase:", e);

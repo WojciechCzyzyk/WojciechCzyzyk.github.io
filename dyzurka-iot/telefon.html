@@ -6,6 +6,7 @@
   <title>Mobile Nurse QR — Skaner i Pomiary | APEX IoT</title>
   <link rel="icon" type="image/png" href="../favicon_wc.png">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
   <div class="mobile-container">
@@ -47,6 +48,18 @@
           <select id="mob-patient" onchange="updateSelectedInfo()"></select>
           <button class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR</button>
         </div>
+        
+        <!-- Szybkie wprowadzanie bezdotykowe: Głos + Zdjęcie ekranu miernika -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
+          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
+          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0;">
+            📸 Zrób zdjęcie ekranu
+            <input type="file" accept="image/*" capture="environment" style="display:none;" onchange="scanDeviceScreen(this)">
+          </label>
+        </div>
+        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:10px; border-left-color:#8b5cf6;"></div>
+
+        
         <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
 
         <label>2. Parametry z ciśnieniomierza i termometru:</label>
@@ -182,9 +195,172 @@
       banner.innerHTML = `<strong>📡 Wysłano na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
       document.getElementById("in-comment").value = "";
     }
-    window.addEventListener("DOMContentLoaded", initMobLogin);
+    function showSmartStatus(html, color = "#8b5cf6") {
+      const box = document.getElementById("smart-input-status");
+      if (!box) return;
+      box.classList.remove("hidden");
+      box.style.borderLeftColor = color;
+      box.innerHTML = html;
+    }
+
+    function matchPatientFromSpeech(text) {
+      const lower = text.toLowerCase();
+      const roomMatch = lower.match(/(?:sala|sali|pokój)\s*(\d{3})/) || lower.match(/\b(404|405|406|407|408|413|414)\b/);
+      const roomNum = roomMatch ? roomMatch[1] : null;
+
+      let bestPat = null;
+      for (const p of mobState.patients) {
+        const cleanName = p.name.replace(/\(.*?\)/g, "").trim().toLowerCase(); // np. "tomasz w."
+        const parts = cleanName.split(/\s+/);
+        const firstName = parts[0] || "";
+        const lastInit = (parts[1] || "").replace(".", "");
+        const patRoomNum = (p.room.match(/\d{3}/) || [])[0];
+
+        // 1. Dopasowanie Imię + Numer Sali (np. "Tomasz sala 405")
+        if (firstName && roomNum && lower.includes(firstName) && patRoomNum === roomNum) {
+          return p;
+        }
+        // 2. Dopasowanie Imię + Litera nazwiska (np. "Tomasz W")
+        if (firstName && lastInit && new RegExp(`\\b${firstName}\\s+${lastInit}\\b`, "i").test(lower)) {
+          bestPat = p;
+        }
+        // 3. Samo imię lub sam numer sali jako rezerwa
+        if (!bestPat && firstName && new RegExp(`\\b${firstName}\\b`, "i").test(lower)) {
+          bestPat = p;
+        }
+        if (!bestPat && roomNum && patRoomNum === roomNum) {
+          bestPat = p;
+        }
+      }
+      return bestPat;
+    }
+
+    function parseVoiceCommand(transcript) {
+      const text = transcript.trim();
+      const lower = text.toLowerCase();
+      const summary = [];
+
+      // 1. Dopasowanie pacjenta
+      const pat = matchPatientFromSpeech(text);
+      if (pat) {
+        document.getElementById("mob-patient").value = pat.id;
+        updateSelectedInfo();
+        summary.push(`👤 Pacjent: <strong>${pat.name} (${pat.room})</strong>`);
+      }
+
+      // 2. Ciśnienie (np. "ciśnienie 125 na 80" lub "125/80")
+      const bpMatch = lower.match(/(?:ciśnienie\s*)?(\d{2,3})\s*(?:na|\/|-)\s*(\d{2,3})/);
+      if (bpMatch) {
+        let v1 = parseInt(bpMatch[1], 10);
+        let v2 = parseInt(bpMatch[2], 10);
+        if (v1 < v2) [v1, v2] = [v2, v1];
+        document.getElementById("in-sys").value = v1;
+        document.getElementById("in-dia").value = v2;
+        summary.push(`💓 RR: <strong>${v1}/${v2}</strong>`);
+      }
+
+      // 3. Puls (np. "puls 74" lub "tętno 82")
+      const pulseMatch = lower.match(/(?:puls|tętno)\s*(\d{2,3})/);
+      if (pulseMatch) {
+        document.getElementById("in-pulse").value = parseInt(pulseMatch[1], 10);
+        summary.push(`📈 Puls: <strong>${pulseMatch[1]}</strong>`);
+      }
+
+      // 4. Temperatura (np. "temperatura 37,8" lub "38.2 stopnia")
+      const tempMatch = lower.match(/(?:temperatura|temp\.?)\s*(\d{2})[.,](\d)/) || lower.match(/\b(3[5-9]|4[0-2])[.,](\d)\b/);
+      if (tempMatch) {
+        const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
+        document.getElementById("in-temp").value = tempVal;
+        summary.push(`🌡️ Temp: <strong>${tempVal}°C</strong>`);
+      }
+
+      // 5. Zabieg / podany lek (wszystko po słowach kluczowych lub cały komunikat jako notatka)
+      const actionMatch = text.match(/(?:podano|kroplówka|lek|zabieg|uwaga|komentarz)\s+(.+)/i);
+      const commentTxt = actionMatch ? `🎙️ Podano/Zabieg: ${actionMatch[1]}` : `🎙️ Wpis głosowy: "${text}"`;
+      document.getElementById("in-comment").value = commentTxt;
+      summary.push(`📝 Notatka: <strong>${commentTxt}</strong>`);
+
+      showSmartStatus(`<strong>🎙️ Rozpoznano mowę:</strong> „${text}”<br>${summary.join(" • ")}`, "#8b5cf6");
+    }
+
+    function startVoiceDictation() {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) return alert("Twoja przeglądarka nie obsługuje rozpoznawania mowy. Użyj Chrome na Androidzie lub Safari na iOS.");
+
+      const rec = new SpeechRec();
+      rec.lang = "pl-PL";
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+
+      const btn = document.getElementById("btn-voice-input");
+      btn.textContent = "🔴 Słucham... Mów teraz!";
+      showSmartStatus("🎙️ <strong>Słucham...</strong> Powiedz np.: <em>„Tomasz sala 405, ciśnienie 125 na 80, puls 74, podano Solu-Medrol 125 mg”</em>", "#ef4444");
+
+      rec.onresult = (ev) => {
+        const transcript = ev.results[0][0].transcript;
+        parseVoiceCommand(transcript);
+      };
+      rec.onerror = (ev) => {
+        showSmartStatus(`⚠️ Błąd mikrofonu: ${ev.error}. Sprawdź uprawnienia przeglądarki.`, "#ef4444");
+      };
+      rec.onend = () => {
+        btn.textContent = "🎙️ Dyktuj wpis";
+      };
+      rec.start();
+    }
+
+        async function scanDeviceScreen(input) {
+      const file = input.files && input.files[0];
+      if (!file) return;
+
+      showSmartStatus("📸 <strong>Analizuję zdjęcie wyświetlacza (OCR)...</strong> To potrwa 2–3 sekundy.", "#0284c7");
+
+      try {
+        const result = await Tesseract.recognize(file, "eng", {
+          tessedit_char_whitelist: "0123456789.,/"
+        });
+        const raw = result.data.text || "";
+        // Szukamy najpierw temperatury z kropką lub przecinkiem (np. 36.7 lub 38,4)
+        const tempMatch = raw.match(/\b(3[4-9]|4[0-2])[.,](\d)\b/);
+        // Wyciągamy wszystkie liczby całkowite 2- lub 3-cyfrowe z ekranu (od góry do dołu)
+        const cleanNoDecimals = raw.replace(/\b(3[4-9]|4[0-2])[.,]\d\b/g, " ");
+        const nums = (cleanNoDecimals.match(/\b\d{2,3}\b/g) || [])
+          .map(n => parseInt(n, 10))
+          .filter(n => n >= 35 && n <= 260);
+
+        if (nums.length >= 2) {
+          // Ekran ciśnieniomierza: pierwsza para to SYS > DIA, trzecia liczba to Puls
+          let sys = nums[0];
+          let dia = nums[1];
+          if (sys < dia) [sys, dia] = [dia, sys];
+          const pulse = nums[2] || null;
+
+          document.getElementById("in-sys").value = sys;
+          document.getElementById("in-dia").value = dia;
+          if (pulse) document.getElementById("in-pulse").value = pulse;
+
+          const prevComment = document.getElementById("in-comment").value.trim();
+          const ocrNote = `📸 Odczyt OCR z aparatu: RR ${sys}/${dia}${pulse ? `, Puls ${pulse}` : ""}`;
+          document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
+
+          showSmartStatus(`✅ <strong>Odczytano ciśnieniomierz:</strong> Górne <strong>${sys}</strong> • Dolne <strong>${dia}</strong>${pulse ? ` • Puls <strong>${pulse}</strong>` : ""}`, "#10b981");
+        } else if (tempMatch) {
+          // Ekran termometru: pojedyncza wartość temperatury
+          const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
+          document.getElementById("in-temp").value = tempVal;
+          showSmartStatus(`✅ <strong>Odczytano termometr:</strong> Temperatura <strong>${tempVal}°C</strong>`, "#10b981");
+        } else {
+          showSmartStatus(`⚠️ Nie udało się jednoznacznie odczytać cyfr (wykryto: „${raw.trim() || "brak"}”). Zrób wyraźniejsze zbliżenie na sam wyświetlacz LCD.`, "#f59e0b");
+        }
+      } catch (err) {
+        showSmartStatus(`⚠️ Błąd analizy obrazu: ${err.message}`, "#ef4444");
+      } finally {
+        input.value = "";
+      }
+    }
 
     
+    window.addEventListener("DOMContentLoaded", initMobLogin);
   </script>
 </body>
 </html>

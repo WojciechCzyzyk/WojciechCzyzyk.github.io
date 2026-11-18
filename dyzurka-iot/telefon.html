@@ -362,7 +362,7 @@ async function scanDeviceScreen(input) {
     const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
 
     const host = ["generativelanguage", "googleapis", "com"].join(".");
-    const path = "/v1beta/models/gemini-2.5-flash:generateContent?key=";
+    const path = "/v1beta/models/gemini-3.8-flash:generateContent?key=";
     const endpoint = `https://${host}${path}${encodeURIComponent(apiKey)}`;
 
     const controller = new AbortController();

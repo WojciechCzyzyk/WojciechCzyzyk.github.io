@@ -44,9 +44,14 @@
         </div>
       </div>
 
+<!------------------------------------------------------->
       <div class="panel">
+        <!-- 0. Karta zaleceń wybranego pacjenta na samej górze -->
+        <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
+
+        <!-- 1. Środek ekranu: Wybór pacjenta i skan QR -->
         <label>1. Zeskanuj kod QR opaski lub wybierz pacjenta:</label>
-        <div style="display:flex; gap:8px; margin-bottom:10px;">
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
           <select id="mob-patient" onchange="updateSelectedInfo()"></select>
           <button type="button" class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR (Test)</button>
         </div>
@@ -56,26 +61,23 @@
           <div style="position:absolute; bottom:6px; left:0; right:0; text-align:center; font-size:0.75rem; color:#34d399; font-weight:700; text-shadow:0 1px 3px #000;">🎯 Nakieruj kamerę na kod QR opaski...</div>
         </div>
 
-  
-        <!-- Szybkie wprowadzanie bezdotykowe: Głos + Zdjęcie ekranu miernika -->
+        <!-- 2. Środek ekranu: Bezdotykowe AI (Głos + Zdjęcie) -->
+        <div style="background:rgba(139,92,246,0.08); border:1px solid rgba(139,92,246,0.3); border-radius:8px; padding:7px 10px; margin-bottom:8px; font-size:0.72rem; line-height:1.4; color:var(--muted);">
+          <strong style="color:#c4b5fd;">💡 Jak dyktować (3 schematy):</strong><br>
+          1️⃣ <em>„Tomasz sala 405, ciśnienie 125 na 80, puls 74”</em><br>
+          2️⃣ <em>„Temperatura 37 przecinek 8”</em> &nbsp;|&nbsp; 3️⃣ <em>„Podano lek / kroplówka...”</em>
+        </div>
+
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
-          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
-          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0;">
-            📸 Zrób zdjęcie ekranu
+          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center; font-size:0.84rem; padding:10px 8px;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
+          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0; font-size:0.80rem; padding:10px 8px; text-align:center;">
+            📸 Zrób zdjęcie<br><span style="font-size:0.68rem; font-weight:400; opacity:0.9;">(Ciśnieniomierz / Termometr)</span>
             <input type="file" accept="image/*" capture="environment" style="display:none;" onchange="scanDeviceScreen(this)">
           </label>
         </div>
-        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:10px; border-left-color:#8b5cf6;"></div>
-       
-        <div style="margin-bottom:10px; display:flex; gap:6px; align-items:center;">
-          <input type="text" id="gemini-api-key" placeholder="Klucz Google AI Studio (AQ.Ab8... / AIza...)" style="font-size:0.78rem; padding:6px 8px;" onchange="localStorage.setItem('apex_gemini_key', this.value.trim())">
-          <button type="button" class="btn btn-sm btn-outline" onclick="saveGeminiKey()">🔑 Zapisz klucz AI</button>
-        </div>
+        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:12px; border-left-color:#8b5cf6;"></div>
 
-
-        
-        <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
-
+        <!-- 3. Pola odczytu i wysyłka -->
         <label>2. Parametry z ciśnieniomierza i termometru:</label>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
           <div><label>Ciśnienie Górne (SYS)</label><input type="number" id="in-sys" value="125"></div>
@@ -92,6 +94,9 @@
         <button class="btn btn-green" style="width:100%; justify-content:center; padding:12px; font-size:1rem;" onclick="sendVitals()">📡 Wyślij Pomiar na Tablicę</button>
         <div id="ai-feedback-banner" class="hidden note-box" style="margin-top:12px; border-left-color:var(--green);"></div>
       </div>
+
+ <!------------------------------------------------------->     
+      
     </div>
   </div>
   <script src="db.js?v=10"></script>

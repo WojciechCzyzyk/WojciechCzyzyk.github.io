@@ -105,3 +105,17 @@
   - `in each file` — w każdym pliku (po *each* zawsze liczba pojedyncza)
   - `preserve a single source of truth` — zachować jedno źródło prawdy
 
+## Sesja: Fast Front-End Overlay & Audit Trail (18.11.2026)
+* **Kontekst projektowy:** Architektura systemów operacyjnych klasy *Sidecar App* (`dyzurka-iot/` — Smart Ward Board).
+* **Kluczowe pojęcia (6):**
+  * **Front-end Overlay (Sidecar App)** — lekka nakładka operacyjna działająca obok ciężkiego systemu głównego.
+  * **Legacy System** — stary, ciężki i mało elastyczny system informatyczny używany od lat w organizacji.
+  * **Audit Trail** — pełny, niepodważalny ślad audytowy (kto, co i kiedy wykonał).
+  * **Feature Bloat** — przeładowanie programu zbędnymi funkcjami, które spowalniają pracę.
+  * **Zero-Training UI** — interfejs niewymagający szkoleń, intuicyjny od pierwszego użycia.
+  * **Batch Export** — zbiorczy eksport danych (np. raport przekazania zmiany jednym kliknięciem).
+* **Zestaw pytań powtórkowych (do wykonania później):**
+  1. What do we call a lightweight operational layer deployed next to an old hospital or enterprise system without replacing it? *(Odp.: Front-end Overlay / Sidecar App)*
+  2. Which term describes an unchangeable, timestamped record showing who performed a specific action and when? *(Odp.: Audit Trail)*
+  3. What is the industry term for excessive, unused menus and functions that slow down daily user workflows? *(Odp.: Feature Bloat)*
+  4. How do you describe an interface that requires no formal staff training to use from day one? *(Odp.: Zero-Training UI)*

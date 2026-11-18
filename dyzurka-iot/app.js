@@ -417,6 +417,17 @@ function printShiftReport() {
   win.print();
 }
 
+async function copyReportToHIS() {
+  const box = document.getElementById("report-content");
+  if (!box) return;
+  const plainText = box.innerText.replace(/\n{3,}/g, "\n\n").trim();
+  try {
+    await navigator.clipboard.writeText(plainText);
+    alert("✅ Skopiowano czysty raport do schowka! Możesz go teraz wkleić (Ctrl + V) bezpośrednio do głównego systemu HIS.");
+  } catch (e) {
+    alert("Zaznacz tekst w oknie raportu i wciśnij Ctrl + C.");
+  }
+}
 
 function printShiftReport() {
   const content = document.getElementById("report-content").innerHTML;
@@ -504,6 +515,7 @@ function openRoundsModal() {
         </div>
         <div>
           <label style="font-size:0.75rem;">Leki, uwagi i zalecenia po obchodzie:</label>
+          ${buildProcedureSelectHtml("round-meds-" + p.id)}
           <input id="round-meds-${p.id}" value="${(p.medications || "").replace(/"/g, "&quot;")}" placeholder="Wpisz ordynację leków i uwagi...">
         </div>
         <button class="btn btn-green btn-sm" style="margin-top:16px;" onclick="saveRoundNote('${p.id}')">💾 Zapisz</button>

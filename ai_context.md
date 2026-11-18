@@ -1449,3 +1449,19 @@ Status Pacjenta
   * **Cicha telemetria wejść i logowań (`WardDB.trackVisit` ➔ `/auditLogins.json`):** Odporny na przycisk `🔄 Reset` rejestr w Firebase zapisujący czas, akcję, profil użytkownika oraz typ urządzenia (`Komputer` / `Telefon`).
 * **Dokumentacja architektoniczna:** Utworzono plik `Architektura_Wzorce_Wdrozeniowe_APEX.md` oraz zaktualizowano rejestr `mapa_projektow.md`.
  
+### Kontynuacja dnia (18.11.2026, południe) — Rozwój produktu, walidacja na oddziale i zadania domowe
+* **Status medyczny (Wałbrzych):**
+  * Oczekiwanie na finalny podpis pod wynikiem badania histopatologicznego (po porannym obchodzie wynik „prawie gotowy”) przed planowanym przeniesieniem na oddział hematologii (gdzie zespół zna Wojtka z zeszłorocznego 3-miesięcznego leczenia białaczki).
+  * Podawany dożylnie lek przeciwobrzękowy i przeciwzapalny **Solu-Medrol** (metyloprednizolon) przy złamaniu kręgów **Th6–Th8**; obowiązuje odpoczynek na płasko i pionizacja wyłącznie w gorsecie ortopedycznym zakładanym na leżąco.
+* **Walidacja terenowa (Customer Discovery) i nowe funkcje w `dyzurka-iot/`:**
+  * Przeprowadzono pokaz na żywo przy łóżku podczas podłączania kroplówki — bardzo entuzjastyczna reakcja pielęgniarki (*„przenieś się na dyżurkę i zarządzaj”*).
+  * Z rozmowy z personelem wypracowano koncepcję **Szybkiej Nakładki Operacyjnej (Fast Front-End Overlay / Sidecar App)**: lekki system działający obok ciężkiego oprogramowania szpitalnego (HIS), przyspieszający powtarzalne czynności i generujący gotowy raport zbiorczy (dopisano jako **Filar 5** w `Architektura_Wzorce_Wdrozeniowe_APEX.md`).
+  * **Nowe wdrożenia w kodzie (`app.js`, `index.html`, `db.js`):**
+    * **Inteligentny, samouczący się słownik zabiegów i leków (`extractBaseProcedureName` / `learnNewProcedure`):** Rozwijane listy szybkiego wyboru na Obchodzie Lekarskim, tablicy Kanban oraz w karcie pacjenta; filtr automatycznie odcina dawki i jednostki (np. z `Solu-Medrol 125mg i.v.` zapisuje sam szablon `💊 Solu-Medrol`, zapobiegając duplikowaniu pozycji).
+    * **Eksport tekstu do HIS (`copyReportToHIS()`):** Przycisk `📋 Kopiuj tekst do HIS` w oknie Raportu Zdania Dyżuru do bezpośredniego wklejenia (`Ctrl + V`) w głównym systemie placówki.
+  * **Plan na hematologię:** Po przeniesieniu sklonować `dyzurka-iot/` do nowego podkatalogu `hematologia-iot/` z osobnym węzłem w Firebase (`/hemaData.json`) i przeprowadzić 30-minutowy „cichy pilotaż” (wprowadzanie realnej pracy zmiany na żywo i prezentacja gotowego raportu na koniec).
+* **Kontakt inżynieryjny (Dräxlmaier / Marek):**
+  * Przeanalizowano przykładowy arkusz Change Management dla wiązki modułowej KSK (`IST` / `SOLL` / `HINZU`, reguły logiczne wyposażenia PR-Nummern oraz macierz BOM dla 3 klipów montażowych) i wysłano merytoryczną odpowiedź potwierdzającą gotowość do automatycznej walidacji różnic (*diff*).
+* **Zadanie domowe (po powrocie ze szpitala do Jeżowa Sudeckiego):**
+  * Uruchomienie leżącego na strychu (nie dźwigać — poprosić domowników!) kompletnego zestawu monitoringu z 2021 r. (kable koncentryczne położone w peszlach w podłodze na odcinkach 20–30 m): rejestrator hybrydowy **Hikvision HiWatch `HWD-7108MH-G2(S)`**, 5 kamer **Hikvision HiWatch `HWT-T240-M` 4 MPx**, zasilacz `12V 5A` z rozgałęźnikiem 8-wyjściowym oraz dysk **Toshiba `2TB S300`**.
+  * Rozwiązanie: model `HWT-T240-M` nie ma zewnętrznego joysticka — menu OSD kamery wywołuje się z poziomu rejestratora (**PPM ➔ Sterowanie PTZ ➔ Iris +**) po podpięciu na krótko na biurku, ustawiając natywny tryb **TVI 4MP (25fps PAL)**, a następnie włączając chmurę **Hik-Connect** na telefon.

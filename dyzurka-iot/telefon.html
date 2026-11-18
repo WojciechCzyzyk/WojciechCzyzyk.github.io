@@ -502,6 +502,7 @@ function saveGeminiKey() {
       const note = `🤖 [Vision AI] Odczyt z ekranu: ${summary.map(s => s.replace(/<[^>]+>/g, "")).join(", ")}`;
       document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${note}` : note;
       showSmartStatus(`✅ <strong>[v3.9 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
+      setApiKeyBorder("ok");
     } else {
       showSmartStatus("⚠️ <strong>[v3.9 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
     }

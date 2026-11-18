@@ -32,3 +32,9 @@
 ## 4. Integracja Sprzętowa IoT i Rynek Docelowy
 * **Otwarte standardy pomiarowe:** Wykorzystanie protokołu **Web Bluetooth API (BLE GATT)** do bezpośredniego odczytu danych z certyfikowanych ciśnieniomierzy, termometrów i pulsoksymetrów bez ręcznego przepisywania wyników.
 * **Najszybszy rynek wejścia (Beachhead Market):** Prywatne kliniki weterynaryjne (szpitaliki dla zwierząt), ośrodki rehabilitacji oraz domy opieki (ZOL) — placówki z krótką ścieżką decyzyjną i niską barierą wdrożeniową.
+
+
+## 5. Model Szybkiej Nakładki Operacyjnej (Fast Front-End Overlay / Sidecar App)
+* **Współistnienie zamiast kosztownej wymiany:** W średnich i dużych organizacjach (szpitale z systemami HIS, firmy z systemami ERP) wymiana głównego oprogramowania bywa zablokowana przez wieloletnie umowy, rozliczenia lub działy IT. W takich miejscach wdrażamy aplikację jako **niezależną, lekką warstwę operacyjną** stojącą obok systemu głównego.
+* **Błyskawiczna rejestracja w biegu:** Pracownicy na pierwszej linii (przy łóżku pacjenta, na hali, na obchodzie) nie męczą się z przeklikiwaniem kilkunastu zakładek ciężkiego systemu — rejestrują powtarzalne czynności jednym kliknięciem na telefonie lub tablecie.
+* **Zbiorczy eksport do systemu głównego:** Na koniec zmiany lub etapu pracy nakładka generuje gotowe, czyste podsumowanie (wydruk A4, tekst gotowy do wklejenia przez `Ctrl + V` lub plik CSV/API), dzięki czemu przeniesienie danych do głównego systemu zajmuje kilkanaście sekund zamiast kilkudziesięciu minut.

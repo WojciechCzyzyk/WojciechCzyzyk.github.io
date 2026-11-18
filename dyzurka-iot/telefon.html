@@ -379,6 +379,7 @@ function saveGeminiKey() {
   const val = document.getElementById("gemini-api-key").value.trim();
   localStorage.setItem("apex_gemini_key", val);
   showSmartStatus(val ? "✅ <strong>Zapisano klucz Vision AI</strong> w pamięci tego telefonu!" : "ℹ️ Wyczyszczono klucz Vision AI.", "#10b981");
+  setApiKeyBorder(val ? "ok" : "neutral");
 }
 
     function setApiKeyBorder(status) {

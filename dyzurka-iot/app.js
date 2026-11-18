@@ -320,30 +320,41 @@ function renderChart(pat) {
     <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">🔴 SYS (mmHg) &nbsp;|&nbsp; 🔵 DIA (mmHg) &nbsp;|&nbsp; 🟢 Puls (bpm) &nbsp;|&nbsp; Linia: próg 140 mmHg</div>`;
 }
 
-function fillReportSelectors() {
+let selectedShiftTeam = new Set();
+
+function renderReportTeamChips() {
+  const box = document.getElementById("rep-team-chips");
+  if (!box) return;
+  if (selectedShiftTeam.size === 0 && currentUser) selectedShiftTeam.add(currentUser.name);
+
   const allUsers = Object.values(wardState.users || USERS);
-  const fill = (id, roleFilter) => {
-    const sel = document.getElementById(id);
-    if (!sel || sel.options.length > 0) return;
-    const list = allUsers.filter(u => u.role === roleFilter);
-    sel.innerHTML = `<option value="— brak —">— brak —</option>` +
-      list.map(u => `<option value="${u.name}" ${u.name === currentUser.name ? "selected" : ""}>${u.name}</option>`).join("");
-  };
-  fill("rep-nurse", "pielegniarka");
-  fill("rep-doctor", "lekarz");
-  fill("rep-care", "opiekun");
+  box.innerHTML = allUsers.map(u => {
+    const active = selectedShiftTeam.has(u.name);
+    return `
+      <button type="button" onclick="toggleShiftMember('${u.name.replace(/'/g, "\\'")}')"
+        style="cursor:pointer; padding:5px 10px; border-radius:999px; font-size:0.78rem; font-weight:700; border:1px solid ${active ? "var(--green)" : "var(--border)"}; background:${active ? "rgba(16,185,129,0.2)" : "var(--panel)"}; color:${active ? "#34d399" : "var(--muted)"};">
+        ${active ? "✓ " : "+ "}${u.name} (${u.label})
+      </button>`;
+  }).join("");
+}
+
+function toggleShiftMember(name) {
+  if (selectedShiftTeam.has(name)) selectedShiftTeam.delete(name);
+  else selectedShiftTeam.add(name);
+  generateShiftReport();
 }
 
 function generateShiftReport() {
-  fillReportSelectors();
-  const nurse = document.getElementById("rep-nurse")?.value || currentUser.name;
-  const doc = document.getElementById("rep-doctor")?.value || "—";
-  const care = document.getElementById("rep-care")?.value || "—";
+  renderReportTeamChips();
+  const teamList = selectedShiftTeam.size ? [...selectedShiftTeam].join(", ") : currentUser.name;
 
   const headerHtml = `
     <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;">
       <strong style="font-size:1.05rem; color:var(--accent);">📋 RAPORT ZDANIA DYŻURU — PRZEKAZANIE ZMIANY (${nowStamp()})</strong><br>
-      <span style="color:var(--muted);">Pielęgniarka: <strong>${nurse}</strong> | Lekarz: <strong>${doc}</strong> | Opiekun: <strong>${care}</strong> | Pacjentów: <strong>${wardState.patients.length}</strong></span>
+      <div style="margin-top:4px; font-size:0.85rem;">
+        <span>Osoba zdająca i drukująca raport: <strong style="color:var(--green);">${currentUser.name}</strong></span><br>
+        <span>Skład zespołu kończącego zmianę: <strong>${teamList}</strong> • Liczba pacjentów: <strong>${wardState.patients.length}</strong></span>
+      </div>
     </div>`;
 
   const cardsHtml = wardState.patients.map(p => {
@@ -385,6 +396,7 @@ function generateShiftReport() {
   document.getElementById("report-content").innerHTML = headerHtml + cardsHtml;
   document.getElementById("report-modal").classList.remove("hidden");
 }
+
 
 function printShiftReport() {
   const content = document.getElementById("report-content").innerHTML;

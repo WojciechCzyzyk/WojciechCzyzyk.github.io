@@ -771,8 +771,12 @@ function buildProcedureSelectHtml(inputId) {
 
 
 setInterval(() => {
-  if (currentUser && !isDragging && Object.keys(taskTimers).length === 0) {
+  const anyModalOpen = ["patient-modal", "report-modal", "staff-modal", "rounds-modal", "tasks-modal"]
+    .some(id => !document.getElementById(id)?.classList.contains("hidden"));
+  const admitOpen = !document.getElementById("admit-form")?.classList.contains("hidden");
+  if (currentUser && !isDragging && !anyModalOpen && !admitOpen && Object.keys(taskTimers).length === 0) {
     refreshBoard();
   }
 }, 4000);
+
 

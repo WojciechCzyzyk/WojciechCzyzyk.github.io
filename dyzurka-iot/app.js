@@ -417,6 +417,7 @@ async function saveRoundNote(patId) {
   pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
   wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });
 
+  addTaskToPatient(pat, newMeds, docName);
   await WardDB.save(wardState);
   renderLogs();
   alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);

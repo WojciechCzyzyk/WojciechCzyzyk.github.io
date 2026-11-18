@@ -79,6 +79,9 @@
     }
 
     async function initMobLogin() {
+      
+      WardDB.trackVisit("Otwarcie skanera QR (Telefon)");
+      
       mobState = await WardDB.load();
       const sel = document.getElementById("mob-user");
       if (!sel || !mobState.users) return;

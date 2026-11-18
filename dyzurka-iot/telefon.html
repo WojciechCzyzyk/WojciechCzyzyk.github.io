@@ -313,32 +313,28 @@ function preprocessImageForOCR(file) {
   return new Promise((resolve) => {
     const img = new Image();
     img.onload = () => {
-      const isPortrait = img.height > img.width;
+      // Wycinamy środkowy obszar zdjęcia (eliminuje paski ekranu / ramki obudowy)
+      const cropX = Math.round(img.width * 0.1);
+      const cropY = Math.round(img.height * 0.25);
+      const cropW = Math.round(img.width * 0.8);
+      const cropH = Math.round(img.height * 0.5);
+
       const targetWidth = 640;
-      const rawW = isPortrait ? img.height : img.width;
-      const rawH = isPortrait ? img.width : img.height;
-      const scale = targetWidth / rawW;
+      const scale = targetWidth / cropW;
 
       const canvas = document.createElement("canvas");
       canvas.width = targetWidth;
-      canvas.height = Math.round(rawH * scale);
+      canvas.height = Math.round(cropH * scale);
 
       const ctx = canvas.getContext("2d");
-      if (isPortrait) {
-        ctx.translate(0, canvas.height);
-        ctx.rotate(-Math.PI / 2);
-        ctx.drawImage(img, 0, 0, canvas.height, canvas.width);
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-      } else {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      }
+      ctx.drawImage(img, cropX, cropY, cropW, cropH, 0, 0, canvas.width, canvas.height);
 
       const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imgData.data;
 
       for (let i = 0; i < data.length; i += 4) {
         const gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
-        const bin = gray > 135 ? 255 : 0;
+        const bin = gray > 150 ? 255 : 0;
         data[i] = bin;
         data[i + 1] = bin;
         data[i + 2] = bin;
@@ -350,6 +346,7 @@ function preprocessImageForOCR(file) {
     img.src = URL.createObjectURL(file);
   });
 }
+
 
 async function scanDeviceScreen(input) {
   const file = input.files && input.files[0];

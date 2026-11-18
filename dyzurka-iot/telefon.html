@@ -333,13 +333,12 @@
       const sep = "(?:\\s*[.,]\\s*|\\s+przecinek\\s+|\\s+i\\s+)";
       const tempMatch = lower.match(new RegExp(`(?:temperatura|temp\\.?)\\s*(\\d{2})${sep}(\\d)`))
                      || lower.match(new RegExp(`\\b(3[5-9]|4[0-2])${sep}(\\d)\\b`));
-      if (tempMatch) {
-        const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
+       if (tempMatch) {
+        const tempVal = `${tempMatch.at(1)}.${tempMatch.at(2)}`;
         document.getElementById("in-temp").value = tempVal;
         summary.push(`🌡️ Temp: <strong>${tempVal}°C</strong>`);
       }
-
-
+      
       // 5. Zabieg / podany lek (wszystko po słowach kluczowych lub cały komunikat jako notatka)
       const actionMatch = text.match(/(?:podano|kroplówka|lek|zabieg|uwaga|komentarz)\s+(.+)/i);
       const commentTxt = actionMatch ? `🎙️ Podano/Zabieg: ${actionMatch[1]}` : `🎙️ Wpis głosowy: "${text}"`;

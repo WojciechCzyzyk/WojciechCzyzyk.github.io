@@ -608,12 +608,19 @@ async function addCustomTask(patId, fromBoard = false) {
   if (!txt) return;
   const pat = wardState.patients.find(p => p.id === patId);
   addTaskToPatient(pat, txt, currentUser.name);
+
+  const learned = learnNewProcedure(txt);
+  if (learned) {
+    wardState.logs.unshift({ time: nowStamp(), text: `🧠 Słownik AI: Zapamiętano nowy szablon „${learned}” na liście szybkiego wyboru.`, alert: false });
+  }
+
   wardState.logs.unshift({ time: nowStamp(), text: `📌 ${currentUser.name} dodał zadanie dla ${pat.name}: ${txt}`, alert: false });
   await WardDB.save(wardState);
   renderLogs();
   if (fromBoard) openTasksModal();
   else openPatientModal(patId);
 }
+
 
 function renderPatientTasksInModal(pat) {
   const box = document.getElementById("modal-tasks-box");

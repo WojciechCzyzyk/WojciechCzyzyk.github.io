@@ -40,16 +40,22 @@
   - `inne/bartek/historia_Polski.md` — materiały źródłowe do quizów historycznych
   - `inne/bartek/bartek-tmp.html` — roboczy szablon HTML poligonu
 * * **Podkatalog `tech-english/` (Interaktywny Poligon Tech English & R&D):**
-  - `tech-english/index.html` — główny Hub poligonu z opisem metody KPI 80% i kartami modułów
-  - `tech-english/style.css` — wspólny arkusz stylów dla Huba i podmodułów quizów
-  - `tech-english/silnik.js` — uniwersalny silnik testów z wyjaśnieniami inżynierskimi
-  - `tech-english/modul-1-sesje-1-4/index.html` — widok pierwszego quizu (Sesje #1–#4)
-  - `tech-english/modul-1-sesje-1-4/pytania.js` — baza 10 pytań z obszarów ARM7, UHF RFID, Context Engineering i ESP32
-  - `tech-english/modul-2-sesja-5/index.html` — widok drugiego quizu (Sesja #5: Event-Driven & Webhooks)
-  - `tech-english/modul-2-sesja-5/pytania.js` — baza 6 pytań z obszaru architektury zdarzeniowej i pamięci JSON
-  - `tech-english/modul-3-sesja-6/index.html` — widok trzeciego quizu (Sesja #6: Modular Architecture & Separation of Concerns)
-  - `tech-english/modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
+  - `index.html` — główny Hub poligonu z opisem metody KPI 80% i kartami modułów
+  - `tstyle.css` — wspólny arkusz stylów dla Huba i podmodułów quizów
+  - `silnik.js` — uniwersalny silnik testów z wyjaśnieniami inżynierskimi
+  - `modul-1-sesje-1-4/index.html` — widok pierwszego quizu (Sesje #1–#4)
+  - `modul-1-sesje-1-4/pytania.js` — baza 10 pytań z obszarów ARM7, UHF RFID, Context Engineering i ESP32
+  - `modul-2-sesja-5/index.html` — widok drugiego quizu (Sesja #5: Event-Driven & Webhooks)
+  - `modul-2-sesja-5/pytania.js` — baza 6 pytań z obszaru architektury zdarzeniowej i pamięci JSON
+  - `modul-3-sesja-6/index.html` — widok trzeciego quizu (Sesja #6: Modular Architecture & Separation of Concerns)
+  - `modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
 
+* **Podkatalog `dyzurka-iot/` (System Smart Ward Board & Mobile QR — Kokpit Oddziału):**
+  - `index.html` — główny kokpit dyżurki (tablica sal 404–408 i 413–414, obchód lekarski, tablica zadań Kanban, zarządzanie personelem i raport zmiany AI)
+  - `telefon.html` — lekki widok mobilny dla personelu (skaner opasek QR pacjentów + rejestracja pomiarów przy łóżku)
+  - `app.js` — logika biznesowa, Drag & Drop z blokadami Poka-Yoke, silnik Kanban z 5-sekundowym buforem zapisu i wykresy trendów SVG
+  - `db.js` — uniwersalny adapter warstwy danych (Firebase Realtime Database REST API + fallback `localStorage`)
+  - `style.css` — wysokokontrastowy arkusz stylów klinicznych (Dark Mode / RWD)
 
 
 
@@ -101,6 +107,8 @@
   - `quizy/historia/nauka_do_konkursu_historia.jpg` / `konkurs_sp2.jpg` / `konkurs_igor_julek.jpg` — grafiki awatarów i drużyn klasy 5B
   - `quizy/biologia/test_z_bud_komorek.html` / `komorki_obrazki.html` — aplikacje treningowe z biologii
   - `quizy/geografia/test_geografia.html` / `geografia_pytania.js` + 6 grafik `geo_*.jpg` — modułowy trener geografii Polski
+  - `quizy/biologia/test_z_bud_komorek.html` / `komorki_obrazki.html` / `bata_rysuje_bilogia.jpg` — aplikacje treningowe i grafika wizytówki z biologii
+
 
 ---
 

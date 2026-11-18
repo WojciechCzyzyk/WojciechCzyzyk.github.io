@@ -142,13 +142,12 @@
           <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
         </div>
       </div>
-
-      <!-- Wybór osób zdających dyżur (Pielęgniarka / Lekarz / Opiekun) -->
-      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px; margin-bottom:12px; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:8px;">
-        <div><label style="font-size:0.75rem;">Zdająca Pielęgniarka:</label><select id="rep-nurse" onchange="generateShiftReport()"></select></div>
-        <div><label style="font-size:0.75rem;">Lekarz Dyżurny:</label><select id="rep-doctor" onchange="generateShiftReport()"></select></div>
-        <div><label style="font-size:0.75rem;">Opiekun Medyczny:</label><select id="rep-care" onchange="generateShiftReport()"></select></div>
+      <!-- Osoba zdająca + klikalny skład zespołu kończącego zmianę -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px; margin-bottom:12px;">
+        <div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">Kliknij osoby kończące ten dyżur, aby dopisać je do raportu:</div>
+        <div id="rep-team-chips" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
       </div>
+
 
       <div id="report-content" style="background:#0b1120; padding:16px; border-radius:10px; font-size:0.88rem; line-height:1.5; border:1px solid var(--border); max-height:64vh; overflow-y:auto;"></div>
     </div>

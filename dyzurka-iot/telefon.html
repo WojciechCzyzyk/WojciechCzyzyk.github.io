@@ -378,7 +378,7 @@ function saveGeminiKey() {
       showSmartStatus(`📡 <strong>[v3.9 Vision AI] Analizuję przez ${modelName}...</strong>`, "#0284c7");
       const endpoint = `https://${host}/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 12000);
+      const timeoutId = setTimeout(() => controller.abort(), 4500);
 
       try {
         const res = await fetch(endpoint, {

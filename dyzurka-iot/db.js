@@ -84,9 +84,11 @@ const WardDB = {
         if (data && !data.error) {
           const users = data.users && Object.keys(data.users).length > 0 ? data.users : { ...USERS };
           const rooms = data.rooms ? Object.values(data.rooms) : DEFAULT_ROOMS;
+          
           const patients = data.patients ? Object.values(data.patients).map(p => ({
             ...p,
-            history: p.history ? Object.values(p.history) : []
+            history: p.history ? Object.values(p.history) : [],
+            tasks: p.tasks ? Object.values(p.tasks) : []
           })) : [];
           const logs = data.logs ? Object.values(data.logs) : [];
           if (rooms.length > 0 && patients.length > 0) {

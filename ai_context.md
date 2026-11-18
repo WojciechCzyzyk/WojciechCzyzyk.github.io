@@ -1465,3 +1465,34 @@ Status Pacjenta
 * **Zadanie domowe (po powrocie ze szpitala do Jeżowa Sudeckiego):**
   * Uruchomienie leżącego na strychu (nie dźwigać — poprosić domowników!) kompletnego zestawu monitoringu z 2021 r. (kable koncentryczne położone w peszlach w podłodze na odcinkach 20–30 m): rejestrator hybrydowy **Hikvision HiWatch `HWD-7108MH-G2(S)`**, 5 kamer **Hikvision HiWatch `HWT-T240-M` 4 MPx**, zasilacz `12V 5A` z rozgałęźnikiem 8-wyjściowym oraz dysk **Toshiba `2TB S300`**.
   * Rozwiązanie: model `HWT-T240-M` nie ma zewnętrznego joysticka — menu OSD kamery wywołuje się z poziomu rejestratora (**PPM ➔ Sterowanie PTZ ➔ Iris +**) po podpięciu na krótko na biurku, ustawiając natywny tryb **TVI 4MP (25fps PAL)**, a następnie włączając chmurę **Hik-Connect** na telefon.
+ 
+  * # 🧠 AI CONTEXT — WOJCIECH CZYŻYK (STAN NA: 18.11.2026)
+
+## 1. Aktywny Projekt: Smart Ward Board (`/dyzurka-iot/`)
+* **Status:** Wersja produkcyjna demonstracyjna (`[v4.0]`), w pełni przetestowana w warunkach szpitalnych.
+* **Stack technologiczny:** Vanilla JS (ES2023+), HTML5, CSS3, Firebase Realtime Database (`REST API`), Google Gemini Vision API (`gemini-3-flash-preview` + Auto-Fallback), `jsQR` + `BarcodeDetector`, `Web Speech API`.
+* **Kluczowe mechanizmy:**
+  * **RODO-safe (*Privacy by Design*):** Brak danych osobowych i PESEL-u; wyłącznie inicjały pacjenta, numer sali/łóżka oraz kod QR łóżka (`QR-SalaXXX-NNN`).
+  * **Integralność danych wieloosobowych:** Wzorzec *Read-Modify-Write* w `telefon.html` (`await WardDB.load()` przed zapisem), blokada nadpisywania bazy pustą tablicą w `db.js`, odizolowany log odwiedzin (`auditLogins.json`) oraz bezpieczny *polling* tablicy co `4000 ms`.
+  * **Multimodalny terminal mobilny (`telefon.html`):**
+    * *Vision AI:* Skalowanie zdjęć przez `FileReader` + `<canvas>` (`640 px`), timeout `9000 ms` (`AbortController`), pętla modeli (`gemini-3-flash-preview` ➔ `gemini-3.8-flash` ➔ `gemini-4-hydrogen`). Odczytuje ekrany ciśnieniomierzy/termometrów pod skosem oraz odręczne pismo w zeszycie.
+    * *Klucz API:* Przechowywany wyłącznie w `localStorage` urządzenia (`apex_gemini_key`) na ekranie logowania z wizualną diagnostyką ramki (zielona/czerwona).
+    * *Skaner QR na żywo:* Dwutorowy odczyt z tylnej kamery (`BarcodeDetector` dla Chrome + `jsQR` dla Firefox/Safari) z limitem `10s`.
+    * *Dyktowanie głosowe:* Rozpoznawanie mowy (`pl-PL`) w Chrome/Safari (pacjent, sala, ciśnienie `SYS/DIA`, puls, temperatura z obsługą „przecinek” i „i”, leki).
+  * **Tablica Dyżurki (`index.html` + `app.js`):** Role (`lekarz` PIN `1111`, `dyzurka` PIN `2222`, `opiekun` PIN `3333`), *Drag & Drop* łóżek z blokadą *Poka-Yoke*, druk plakietek QR łóżka A6 (`://qrserver.com`), tablica Kanban z opóźnionym zapisem zbiorczym, samouczący się słownik procedur AI oraz raport zmiany do HIS.
+
+## 2. Zadania techniczne na kolejne sesje
+* **Bezpieczeństwo API:** Wygenerować nowy prywatny klucz w Google AI Studio (`://google.com`) i usunąć klucz użyty w testach z 18.11.
+* **Rozwój komercyjny (B2B / PFRON):** Wykorzystać moduł `Vision AI + Voice + Kanban` jako bazę pod wdrożenia dla gabinetów medycznych, klinik weterynaryjnych oraz utrzymania ruchu w przemyśle.
+
+## 3. Kontekst zdrowotny i logistyczny (Wałbrzych ➔ Wrocław)
+* **Diagnoza i zalecenia:** Hospitalizacja w Wałbrzychu; złamanie kręgosłupa **Th6–Th8** (odciążenie na płasko, gorset ortopedyczny przy pionizacji, założone wkłucie centralne szyjne).
+* **Ustalenia hematologiczne (18.11 wieczorem):** Szczegółowy wynik histopatologiczny w toku; rokowania dobre, szeroki wybór terapii z dużą szansą na **leczenie ambulatoryjne** (tryb dzienny bez ciągłego pobytu na oddziale).
+* **Planowane badanie PET we Wrocławiu — priorytet transportu:**
+  1. *Karetka szpitalna „tam i z powrotem”* (priorytet: pełna pozycja leżąca dla Th6–Th8, zachowanie wkłucia centralnego, brak ryzyka infekcji).
+  2. *Wyjazd z Natalką tego samego dnia* (plan B: wypis rano / przyjęcie po południu w gorsecie).
+  3. *Powrót do domu na 2–3 dni* (unikamy ze względu na konieczność usunięcia wkłucia centralnego i ryzyko infekcji od dzieci).
+
+## 4. Rodzina i edukacja
+* **Bartek (Klasa 5):** Trening przed konkursem *Alfik Matematyczny* — wynik **17/20 (85%)** na zestawie konkursowym PDF; błędne zadania omówione.
+

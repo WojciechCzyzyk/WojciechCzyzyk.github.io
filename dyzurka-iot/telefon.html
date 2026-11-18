@@ -26,8 +26,18 @@
         <label>Kod PIN (demo: 2222 pielęgniarka | 1111 lekarz | 3333 opiekun):</label>
         <input type="password" id="mob-pin" value="2222" placeholder="Wpisz PIN...">
       </div>
-      <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
+            <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
+
+      <div style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border);">
+        <label style="font-size:0.76rem; color:var(--muted);">🔑 Klucz Vision AI (Google AI Studio — zapisywany lokalnie w telefonie):</label>
+        <div style="display:flex; gap:6px; align-items:center; margin-top:4px;">
+          <input type="text" id="gemini-api-key" placeholder="Wklej klucz AQ.Ab8... / AIza..." style="font-size:0.78rem; padding:6px 8px;" onchange="localStorage.setItem('apex_gemini_key', this.value.trim())">
+          <button type="button" class="btn btn-sm btn-outline" onclick="saveGeminiKey()">💾 Zapisz</button>
+        </div>
+        <div id="key-login-status" style="font-size:0.74rem; color:#10b981; margin-top:4px;"></div>
+      </div>
     </div>
+
 
     <!-- Główny ekran pomiarów na telefonie -->
     <div id="mob-app" class="hidden">

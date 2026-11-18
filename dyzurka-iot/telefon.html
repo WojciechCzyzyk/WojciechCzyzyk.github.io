@@ -354,7 +354,9 @@ async function scanDeviceScreen(input) {
 
     const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
 
-    const res = await fetch(`https://googleapis.com{encodeURIComponent(apiKey)}`, {
+    const endpoint = "https://" + "://googleapis.com" + encodeURIComponent(apiKey);
+    const res = await fetch(endpoint, {
+      
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -75,7 +75,7 @@
         <div style="background:rgba(139,92,246,0.08); border:1px solid rgba(139,92,246,0.3); border-radius:8px; padding:7px 10px; margin-bottom:8px; font-size:0.72rem; line-height:1.4; color:var(--muted);">
           <strong style="color:#c4b5fd;">💡 Jak dyktować (3 schematy):</strong><br>
           1️⃣ <em>„Tomasz sala 405, ciśnienie 125 na 80, puls 74”</em><br>
-          2️⃣ <em>„Temperatura 37 przecinek 8”</em> &nbsp;|&nbsp; 3️⃣ <em>„Podano lek / kroplówka...”</em>
+          2️⃣ <em>„Temperatura 37,8”</em> &nbsp;|&nbsp; 3️⃣ <em>„Podano lek / kroplówka...”</em>
         </div>
 
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
@@ -328,13 +328,17 @@
         summary.push(`📈 Puls: <strong>${pulseMatch[1]}</strong>`);
       }
 
-      // 4. Temperatura (np. "temperatura 37,8" lub "38.2 stopnia")
-      const tempMatch = lower.match(/(?:temperatura|temp\.?)\s*(\d{2})[.,](\d)/) || lower.match(/\b(3[5-9]|4[0-2])[.,](\d)\b/);
+     
+      // 4. Temperatura (np. "temperatura 37,8", "37 przecinek 8", "37 i 8")
+      const sep = "(?:\\s*[.,]\\s*|\\s+przecinek\\s+|\\s+i\\s+)";
+      const tempMatch = lower.match(new RegExp(`(?:temperatura|temp\\.?)\\s*(\\d{2})${sep}(\\d)`))
+                     || lower.match(new RegExp(`\\b(3[5-9]|4[0-2])${sep}(\\d)\\b`));
       if (tempMatch) {
         const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
         document.getElementById("in-temp").value = tempVal;
         summary.push(`🌡️ Temp: <strong>${tempVal}°C</strong>`);
       }
+
 
       // 5. Zabieg / podany lek (wszystko po słowach kluczowych lub cały komunikat jako notatka)
       const actionMatch = text.match(/(?:podano|kroplówka|lek|zabieg|uwaga|komentarz)\s+(.+)/i);

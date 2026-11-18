@@ -321,17 +321,67 @@ function renderChart(pat) {
 }
 
 function generateShiftReport() {
-  const lines = [`=== 🤖 RAPORT ZMIANY AI (${nowStamp()}) ===`, `Autor: ${currentUser.name}\n`];
-  wardState.patients.forEach(p => {
+  const headerHtml = `
+    <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;">
+      <strong style="font-size:1.05rem; color:var(--accent);">📋 RAPORT PIELĘGNIARSKI — PRZEKAZANIE ZMIANY (${nowStamp()})</strong><br>
+      <span style="color:var(--muted);">Osoba zdająca dyżur: <strong>${currentUser.name}</strong> • Liczba pacjentów na oddziale: <strong>${wardState.patients.length}</strong></span>
+    </div>`;
+
+  const cardsHtml = wardState.patients.map(p => {
     const m = p.history.filter(h => h.type === "pomiar");
     const v = m.length ? m[m.length - 1] : null;
-    const st = v ? `RR ${v.sys}/${v.dia}, Puls ${v.pulse}, Temp ${v.temp}°C (${v.date}, ${v.author})` : "Brak pomiarów";
-    const warn = (v && (v.temp >= 38 || v.sys >= 150)) ? " ⚠️ PILNA UWAGA LEKARZA!" : " ✅ Stabilny";
-    lines.push(`• ${p.room} / ${p.bed} — ${p.name}:${warn}\n  Pomiar: ${st}\n  Leki: ${p.medications || "brak"}\n`);
-  });
-  document.getElementById("report-content").textContent = lines.join("\n");
+    const isAlert = v && (v.temp >= 38 || v.sys >= 150 || v.dia >= 95);
+    const vitalsStr = v ? `RR ${v.sys}/${v.dia} mmHg | Puls ${v.pulse} bpm | Temp ${v.temp}°C (${v.date})` : "Brak pomiarów na dyżurze";
+
+    const tasks = ensureTasks(p);
+    const doneTasks = tasks.filter(t => t.status === "done").map(t => `<li>🟢 ${t.text} <span style="color:var(--muted);">(${t.updatedBy || "wykonano"})</span></li>`);
+    const careEvents = p.history.filter(h => h.type === "opieka" || h.type === "ruch").slice(-3).map(h => `<li>${h.comment} <span style="color:var(--muted);">(${h.date}, ${h.author})</span></li>`);
+    const doneHtml = [...doneTasks, ...careEvents].join("") || `<li style="color:var(--muted);">Brak odnotowanych zabiegów na tym dyżurze</li>`;
+
+    const todoTasks = tasks.filter(t => t.status !== "done").map(t => {
+      const tag = t.status === "progress" ? "🟡 W trakcie" : "🔴 Do zrobienia";
+      return `<li><strong>${tag}:</strong> ${t.text}</li>`;
+    }).join("") || `<li style="color:var(--muted);">Wszystkie bieżące zlecenia wykonane</li>`;
+
+    return `
+      <div style="background:var(--card); border:1px solid ${isAlert ? "var(--red)" : "var(--border)"}; border-radius:10px; padding:12px; margin-bottom:12px; page-break-inside:avoid;">
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:6px; margin-bottom:8px;">
+          <strong style="color:var(--accent); font-size:0.98rem;">${p.room} • ${p.bed} — ${p.name}</strong>
+          <span style="font-weight:700; color:${isAlert ? "var(--red)" : "var(--green)"};">${isAlert ? "⚠️ PILNA OBSERWACJA" : "✅ Stan stabilny"}</span>
+        </div>
+        <div style="font-size:0.82rem; margin-bottom:8px;"><strong>Ostatnie parametry:</strong> ${vitalsStr} ${p.alertNote ? `| <span style="color:#fbbf24;">⚠️ ${p.alertNote}</span>` : ""}</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+          <div>
+            <strong style="color:var(--green); font-size:0.82rem;">✅ CO ZROBIONO NA DYŻURZE:</strong>
+            <ul style="margin:4px 0 0 16px; padding:0; font-size:0.8rem;">${doneHtml}</ul>
+          </div>
+          <div>
+            <strong style="color:#fbbf24; font-size:0.82rem;">📌 DO ZROBIENIA (DLA KOLEJNEJ ZMIANY):</strong>
+            <ul style="margin:4px 0 0 16px; padding:0; font-size:0.8rem;">${todoTasks}</ul>
+          </div>
+        </div>
+      </div>`;
+  }).join("");
+
+  document.getElementById("report-content").innerHTML = headerHtml + cardsHtml;
   document.getElementById("report-modal").classList.remove("hidden");
 }
+
+function printShiftReport() {
+  const content = document.getElementById("report-content").innerHTML;
+  const win = window.open("", "_blank", "width=850,height=900");
+  win.document.write(`
+    <html><head><title>Raport Zdania Dyżuru — Smart Ward Board</title>
+    <style>
+      body { font-family: Arial, sans-serif; color: #0f172a; padding: 20px; }
+      div { border-color: #cbd5e1 !important; background: #fff !important; color: #0f172a !important; }
+      strong { color: #0f172a !important; }
+    </style></head><body>${content}</body></html>`);
+  win.document.close();
+  win.focus();
+  win.print();
+}
+
 
 async function resetDemoData() {
   if (!confirm("Przywrócić dane startowe?")) return;

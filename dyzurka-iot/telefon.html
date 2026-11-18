@@ -101,7 +101,8 @@
       if (!user || user.pin !== pin) return alert("Błędny kod PIN!");
 
       mobUser = user;
-      WardDB.trackVisit("Logowanie do Skanera QR", user.name ({user.label}));
+      WardDB.trackVisit("Logowanie do Skanera QR", `${user.name} (${user.label})`);
+
       
       document.getElementById("mob-login").classList.add("hidden");
       document.getElementById("mob-app").classList.remove("hidden");

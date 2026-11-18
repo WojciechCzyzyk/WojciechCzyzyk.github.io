@@ -13,11 +13,6 @@
   3. **Wdrożenie i Showcase:** Publikacja pliku (np. `quiz_historia.html`) na własnej stronie `nick.github.io` i udostępnienie linku rówieśnikom z klasy do wspólnego treningu.
 * **Wartość dla rodzica i ucznia:** Dziecko uczy się materiału dwukrotnie (najpierw tworząc bazę pytań, a potem testując aplikację), zyskuje dumę z własnego narzędzia i staje się liderem technologicznym w klasie.
 
-# 💡 BANK POMYSŁÓW NA LEKCJE & KURS „MAM 5 ZE SPRAWDZIANÓW!” — AKADEMIA APEX
-
-*Zbiór autorskich scenariuszy i architektura nowego kursu rocznego opartego na filozofii **Need-Driven Learning** (nauka IT poprzez rozwiązywanie realnych, bieżących wyzwań szkolnych uczniów).*
-
----
 
 ## 🏆 NOWY KONCEPT KURSU ROCZNEGO: „Mam 5 ze sprawdzianów! — Cyfrowy Warsztat Ucznia”
 
@@ -40,20 +35,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Mierzalny efekt w dzienniku (Librus/Vulcan):** Rodzic widzi realną poprawę ocen i samodzielność dziecka bez ślęczenia nad książkami pod przymusem.
 * **Kurs dla każdego profilu ucznia:** Idealny zarówno dla ścisłowców, jak i humanistów potrzebujących lepszych ocen z historii czy języków.
 * **Wirusowy marketing w klasie:** Uczeń wrzuca link do swojego quizu na grupę klasową przed sprawdzianem — cała klasa uczy się z aplikacji stworzonej w Akademii APEX.
-
-
-## 📸 Pomysł #2: Od zdjęcia z podręcznika do własnej aplikacji quizowej (Data Flow & OCR)
-* **Źródło inspiracji:** Bartek po sukcesie z trenerem historycznym sam poprosił o stworzenie kolejnego quizu – tym razem na sprawdzian z biologii. Zamiast ręcznego przepisywania definicji, przetestowaliśmy potok przetwarzania zdjęć z podręcznika na gotową aplikację.
-* **Cel dydaktyczny:** Zrozumienie pełnego przepływu danych w systemach IT (*Input ➔ Processing ➔ Output*), nauka kontroli jakości danych wejściowych oraz budowanie skalowalnego „Centrum Treningowego” na własnej stronie WWW.
-* **Przebieg lekcji (Mikro-Sprinty):**
-  1. **Akwizycja i Kontrola Jakości Danych (QA):** Uczeń robi zdjęcia stron z podręcznika lub zeszytu. *Lekcja inżynierska:* zasada **Garbage In, Garbage Out (GIGO)** – jeśli zdjęcie jest ucięte lub nieostre, system (AI) wygeneruje błędne pytania. Uczeń uczy się weryfikować jakość surowych danych przed wrzuceniem ich do procesu.
-  2. **Ekstrakcja i Parsowanie (OCR + AI):** Wrzucenie czystych zdjęć do asystenta AI z odpowiednim promptem, aby wyciągnął kluczowe pojęcia, definicje oraz podpisy ze schematów i zamienił je w ustrukturyzowaną bazę pytań.
-  3. **Wdrożenie Produkcyjne:** Zapisanie wygenerowanego kodu jako nowego pliku (np. `quiz_biologia.html`) w repozytorium GitHub.
-  4. **Rozbudowa Hubu Edukacyjnego (`index.html`):** Dodanie nowego kafelka do sekcji „Moje Centrum Treningowe” na stronie głównej ucznia oraz przygotowanie placeholdera („W przygotowaniu”) na kolejny przedmiot.
-* **Profilowanie trudności:**
-  - *Poziom Junior (klasy 3–4):* 10 pytań zamkniętych na podstawie jednej strony z podręcznika + proste podpięcie gotowego linku na stronie.
-  - *Poziom Pro (klasy 5–8):* Wielostronicowy materiał (np. cały dział z biologii/geografii), własna edycja tablicy pytań w kodzie JS oraz zarządzanie kilkoma modułami w hubie.
-
 
 ## 📸 Pomysł #2: Od zdjęcia z podręcznika do własnej aplikacji quizowej (Data Flow & OCR)
 * **Źródło inspiracji:** Bartek po sukcesie z trenerem historycznym sam poprosił o stworzenie kolejnego quizu – tym razem na sprawdzian z biologii. Zamiast ręcznego przepisywania definicji, przetestowaliśmy potok przetwarzania zdjęć z podręcznika na gotową aplikację.
@@ -98,15 +79,6 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - Praktyczna edycja sekcji `<head>` w pliku `index.html` – dodanie znacznika `<meta name="robots" content="noindex, nofollow">` jako cyfrowej tarczy chroniącej stronę przed botami.
 * **Efekt WOW:** Uczeń świadomie kontroluje widoczność swojego projektu w internecie, a rodzice zyskują 100% poczucie bezpieczeństwa i zaufania do metodyki Akademii.
 
-### 🤖 Autorski System „APEX AI Code Mentor” (Automatyczne Code Review & Grywalizacja)
-* **Koncepcja systemu:** Własny silnik dydaktyczny oparty na automatyzacji **GitHub Actions** oraz modelach językowych (LLM), który analizuje rzeczywisty kod pisany przez ucznia po każdym zatwierdzeniu zmian (`Commit / Push`) i prowadzi jego indywidualną historię rozwoju.
-* **Pamięć i profilowanie postępów (`mentor_log`):** System przechowuje historię wcześniejszych wpisów i postępów konkretnego dziecka. Dzięki temu AI nie generuje powtarzalnych szablonów, lecz odnosi się do realnej ścieżki ucznia (np. docenia wyeliminowanie błędów z poprzednich zajęć i proponuje kolejne wyzwanie dopasowane do jego tempa).
-* **Okienko postępu na żywo na stronie ucznia (Grywalizacja):** Na osobistej witrynie każdego dziecka (`nick.github.io`) znajduje się dedykowany widget **„Status od AI Mentora”**, który kilkanaście sekund po zapisaniu kodu wyświetla spersonalizowaną pochwałę oraz kolejną wskazówkę techniczną. Wyzwala to zdrową rywalizację, dumę z własnych rozwiązań i natychmiastową informację zwrotną na sali.
-* **Podwójny strumień wyjściowy (Uczeń + Rodzic):** Z jednej analizy kodu (`git diff` + historia logów) system generuje dwa osobne komunikaty:
-  1. **Dla ucznia (na stronę WWW):** Krótki, motywujący feedback techniczny w stylu partnerskiego mentora.
-  2. **Dla rodzica (raport po zajęciach):** Zrozumiałe podsumowanie oparte na wzorcu *Feedback Sandwich* (konkretna pochwała za efekt + życzliwa wskazówka rozwojowa + bezpośredni link do działającego projektu).
-
-
 ### 🤖 Autorski System „APEX AI Code Mentor” (Pełna Architektura & Grywalizacja)
 
 #### 1. Filary Systemu (Zamknięta Pętla Edukacyjna)
@@ -132,7 +104,7 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 * **Grupa docelowa:** Starsze grupy (klasy 5–8) oraz projekty semestralne / pokazy na Dni Otwarte.
 * **Wykorzystywany sprzęt z pracowni:** 5× mini-dron treningowy, 1× dron średni z kamerą i modułem ESP32 (klasy RoboMaster TT), 1× flagowa platforma UAV z kamerą HD i otwartym SDK, drukarka 3D Bambu Lab P1S, dalmierze laserowe ToF VL53L1X, czujniki HC-SR04, sensory środowiskowe BME280/PMS5003, paski LED WS2812B, mikroserwa SG90 i elektromagnesy.
 
-### 🎯 Katalog 6 Misji Warsztatowych (Mikro-Sprinty):
+### 🎯 Katalog 7 Misji Warsztatowych (Mikro-Sprinty):
 
 1. **„Latający Szachista” (Projekt Flagowy / Demo Day):**
    * *Cel:* Autonomiczny dron rozgrywający partię szachów na dużej szachownicy podłogowej (1,6 × 1,6 m).
@@ -155,4 +127,76 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
 
 * **Wartość dla portfolio prowadzącego (R&D):** Rozwój własnych kompetencji w zakresie protokołu **MAVLink**, autopilotów **PX4 / ArduPilot**, fuzji sensorów oraz wizji komputerowej w Pythonie.
 
+### 🏆 Standard Produktowy APEX: 3-Warstwowy Format Interaktywnego Quizu („Wizytówka Misji + Fajerwerk Reakcji + Mikro-Wyjaśnienie”)
+
+* **Koncepcja (Wyróżnik rynkowy Akademii APEX):** Odejście od nudnych, formularzowych testów na rzecz autorskiego, grywalizowanego trenera wiedzy, który bawi, angażuje emocjonalnie i od razu tłumaczy materiał w locie.
+* **Architektura (Wspólny Silnik `quizy/quiz_silnik.js` + `quizy/quiz_style.css`):** Oddzielenie warstwy logiki i wyglądu (umieszczonych centralnie w katalogu `quizy/`) od lokalnych baz pytań i grafik w podfolderach przedmiotowych (`quizy/geografia/`, `quizy/biologia/`, `quizy/historia/`).
+* **Trzy obowiązkowe warstwy każdego nowego quizu:**
+  1. **Wizytówka Misji (Nagłówek powitalny pod `<header>`):** Dedykowana ilustracja awatara ucznia w scenerii danego przedmiotu (np. z globusem, mapą i kompasem) + 2–3 zdania motywującego wstępu od twórcy oraz jasno określony cel misji.
+  2. **Fajerwerk Reakcji Awatara (Natychmiastowa informacja zwrotna po kliknięciu):** Wyświetlanie spersonalizowanego awatara reagującego na wynik — radosny awatar z fajerwerkami i gratulacjami przy poprawnej odpowiedzi (`bartek_brawo.png`) lub żartobliwie grożący palcem przy błędzie (`bartek_uwaga.png`), z zabezpieczeniem `onerror` we wspólnym silniku.
+  3. **Szybkie Wyjaśnienie Nauczycielskie (Dół karty odpowiedzi):** Zachowanie stałego bloku `explanation` pod każdym pytaniem — zwięzłego, przyjaznego objaśnienia przyczyny („dlaczego tak jest”), które utrwala wiedzę bez bezmyślnego wkuwania na pamięć.
+
+## 🇬🇧 Żelazna Zasada Dydaktyczna: „Tech English przez Osmozę” (Contextual Immersion)
+
+* **Cel:** Nie prowadzimy lekcji języka angielskiego, lecz oswajamy uczniów z globalną terminologią IT przy okazji praktycznego działania w kodzie i narzędziach (zero wkuwania słówek, zero bariery wejścia — zajęcia odbywają się po polsku).
+* **Mechanizm („Język Doliny Krzemowej”):** Instruktor wprowadza maksymalnie 1–2 angielskie pojęcia na lekcję i używa ich naturalnie w kontekście wykonywanego zadania (np. *Commit, Push, Branch, Merge, Bugfix, Deploy, Sprint, Kanban, Backlog, Clean Code, Single Source of Truth*).
+* **Efekt uboczny (Marketing Szeptany):** Dzieci chętnie przenoszą profesjonalnie brzmiące hasła na szkolne korytarze i do rozmów przy obiedzie, co buduje u nich dumę młodego inżyniera, a rodzicom daje natychmiastowy dowód wysokiej jakości warsztatów.
+
+## 🗂️ Filar Dydaktyczny i Marketingowy: „Cyfrowy Porządek i Architektura Informacji”
+
+* **Obietnica dla rodzica (Bonus życiowy):** Uczymy dziecko nie tylko pisania kodu, ale też **zarządzania wiedzą i porządkowania informacji** (*Information Architecture* & *Single Source of Truth*). Koniec z chaosem na Pulpicie, zgubionymi plikami i nerwowym szukaniem notatek przed klasówką.
+* **Jak ćwiczymy to na warsztatach:**
+  - **Czysta struktura katalogów:** Od pierwszej lekcji oddzielamy kod, wygląd i dane w osobnych plikach (*Separation of Concerns*), stosując przejrzyste nazewnictwo.
+  - **Własna baza wiedzy i log postępów:** Uczeń prowadzi uporządkowany dziennik swoich projektów oraz buduje tematyczne repozytoria (np. osobne katalogi pod historię, biologię, matematykę), z których błyskawicznie korzysta przed sprawdzianem.
+* **Wartość długofalowa:** Nawyk układania informacji w logiczne struktury obniża stres szkolny, uczy samodzielności i stanowi fundament pracy nowoczesnego inżyniera oraz menedżera.
+
+## 🧱 Żelazny Standard Prowadzenia Lekcji: „Instrukcja LEGO & Kaizen” (Micro-Steps)
+
+* **Cel (Zero Chaosu w 45–60 min):** Uczeń na jednych zajęciach buduje od zera działającą aplikację (np. quiz, kalkulator, grę), nie marnując czasu na szukanie opcji w interfejsie i nie gubiąc się w dużym kodzie.
+* **5 Żelaznych Zasad „Instrukcji LEGO”:**
+  1. **Tablica Kanban jako „Plansza Gry”:** Na starcie lekcji uczeń zakłada 3–4 krótkie karty zadań (`Do zrobienia` ➔ `W trakcie` ➔ `Gotowe`). Po każdym małym kroku fizycznie przesuwa kartę w prawo, czując natychmiastowy postęp.
+  2. **1 Klocek = 1 Plik = 1 Commit:** Nigdy nie tworzymy kilku plików naraz. Krok po kroku: najpierw `style.css` (wygląd), potem `index.html` (szkielet), następnie `silnik.js` (logika), a na końcu `pytania.js` (dane).
+  3. **Bezpieczne Porcje Kodu (Max 3 elementy na wklejenie):** Duże tablice danych (np. 10 pytań) dzielimy na małe paczki po 3 obiekty. Eliminuje to błędy składniowe (brakujące nawiasy/przecinki) i przyspiesza wklejanie.
+  4. **Podlinkowane Skróty na Wierzchu (*Zero Searching*):** Materiały lekcyjne zawierają bezpośrednie linki do odpowiednich katalogów i narzędzi, aby uczeń nie tracił czasu na przeklikiwanie menu.
+  5. **Retrospektywa Kaizen na Koniec Lekcji:** Po testach aplikacji wspólnie z dziećmi wyłapujemy, co sprawiło trudność, i zapisujemy krótką zasadę (*Poka-Yoke*), aby w kolejnym projekcie błąd się nie powtórzył.
+
+### 🌟 Autorskie Wyróżniki Metodyczne Akademii APEX (Wypracowane na Poligonie R&D)
+
+* **1. Zaprogramowany Copilot vs. „Surowy Czat w Domu”:** Rodzic często myśli: *„Włączę dziecku ChatGPT lub Gemini w domu i będzie to samo”*. Surowy model bez naszych autorskich reguł (*Behavioral Guardrails*) zasypuje dziecko ścianą tekstu i tworzy chaos (*Information Overload*). Nasz system jest zaprogramowany tak, by podawać wiedzę jak **instrukcję LEGO** — jeden mały klocek na raz, z bezpiecznymi paczkami kodu (max 3 elementy) i bezpośrednimi linkami pod ręką.
+* **2. AI jako Osobisty „Mentor-Kumpel” i Poczucie Przynależności:** Wolne, nieprzeładowane tempo pracy sprawia, że uczeń na bieżąco zgłasza własne poprawki i personalizuje swojego asystenta (np. *„tłumacz mi na przykładach z Robloxa / Scratcha”*, *„wplataj słówka z hiszpańskiego”*). Dziecko traktuje swój plik kontekstu jak osobistego kumpla, do którego chętnie wraca na kolejne zajęcia, aby pochwalić się piątką ze sprawdzianu i budować swoje portfolio.
+* **3. Kulturowe Smaczki Inżynierskie zamiast Suchego Kodu:** W trakcie rozwiązywania problemów wplatamy autentyczne pojęcia ze świata wielkiej inżynierii i przemysłu — japońskie *Kaizen* (ciągłe doskonalenie), *Poka-Yoke* (zapobieganie błędom u źródła) czy łacińskie *Veni, vidi, vici*. Dzieci uwielbiają te hasła i z dumą chwalą się nimi po zajęciach.
+
+
+  - ### 🧱 Karta Scenariusza Lekcji Pokazowej (60 min): „Moja Pierwsza Mini-Strona i Quiz z AI”
+*Wersja w standardzie „Instrukcja LEGO” dla Instruktora oraz Młodego Asystenta (11-letniego Bartka) — odpowiednia zarówno dla grupy dzieci (10–14 lat), jak i duetów „Rodzic + Dziecko”:*
+
+* **1. Przygotowanie „Planszy Gry” (Tablica Kanban — 5 min):**
+  - Na start instruktor lub Bartek ustawia na tablicy 3 kolumny (`Do zrobienia` ➔ `W trakcie` ➔ `Gotowe`) z **5 kartami zadań**: `Klocek Wyglądu`, `Klocek Szkieletu`, `Klocek Mózgu i Danych`, `Runda Bonusowa AI` oraz `Moja Wizytówka i Grafika`.
+
+* **2. Klocek Wyglądu (`style.css` — 8 min):**
+  - Uczniowie przesuwają Kartę 1 na `W trakcie`. Wklejają gotowy styl ciemnego motywu kosmicznego, zmieniając tylko swój ulubiony kolor przycisku, i przesuwają kartę na `Gotowe`.
+
+* **3. Klocek Szkieletu (`index.html` — 8 min):**
+  - Uczniowie przesuwają Kartę 2 na `W trakcie` i wklejają szkielet strony.
+  - **Smaczek inżynierski:** Wprowadzamy japońskie pojęcie *Poka-Yoke* (zabezpieczenie przed pomyłką u źródła — dlatego pilnujemy dokładnych nazw plików).
+
+* **4. Klocek Mózgu i Danych (`app.js` + Wolny Wybór Tematu — 15 min):**
+  - Uczniowie przesuwają Kartę 3 na `W trakcie` i wybierają temat swojego testu z listy inspiracji (*Matematyka klasa 3*, *Ortografia bez błędów*, *Najlepsi piłkarze*, *Tajemnice kosmosu*, *Mistrz Minecrafta*) lub wymyślają własny.
+  - Wklejają wygenerowaną przez Copilota **bezpieczną paczkę max 3 pytań** i testują quiz w przeglądarce.
+  - **Smaczek inżynierski:** Po pierwszym udanym uruchomieniu sala przybija piątkę z hasłem *Veni, vidi, vici*, a po szybkiej poprawce *Kaizen* uczniowie rozwiązują nawzajem swoje autorskie quizy.
+
+* **5. Runda Bonusowa: „Niespodzianka AI” (10 min):**
+  - Po odhaczeniu Karty 3 Copilot proponuje każdemu dziecku **inną niespodziankę** dopasowaną do jego pasji (np. licznik punktów *Combo*, ukryty *Easter Egg* dla hakera, dźwięk zwycięstwa). W sali powstaje twórczy szum (*„Zobacz co mi AI wymyślił, masz to samo?!”*).
+
+* **6. Finał: Spersonalizowana Wizytówka „O Mnie” + Grafika Tematyczna (10 min):**
+  - Na koniec zajęć AI generuje spersonalizowany opis pasji ucznia (np. *„Cześć! Jestem Krzyś, uwielbiam piłkę nożną — sprawdź, czy zdasz mój autorski test!”*) oraz dedykowany obrazek tematyczny.
+  - Uczeń wkleja ten blok na górę swojej strony, dzięki czemu **wychodzi z lekcji pokazowej z własną, działającą mini-stroną internetową (wizytówka + grafika + autorski quiz)**, którą od razu otwiera na telefonie rodziców po wyjściu z sali.
+
+### 🛫 „Pulpit Kontroli Lotów” Instruktora & Model Pracy Wieży Kontroli
+
+* **Adaptacyjne Menu Nawigacji LEGO na Ekranie Ucznia:** Pod każdym krokiem lekcji uczeń ma przyciski samopomocy (`[ ⬅️ Krok w górę ]`, `[ 🔄 Reset kroku ]`, `[ ➡️ Krok w dół ]`, `[ 🆘 Pomoc ]`), które pozwalają samodzielnie wyjść z błędu bez przerywania lekcji.
+* **Pulpit Kontroli Lotów (Live Dashboard Instruktora):** Nauczyciel widzi na swoim ekranie kafelki wszystkich uczniów w sali na żywo (aktualny krok na tablicy Kanban, licznik użyć `Reset / Pomoc` oraz alerty od AI: *„Kuba utknął 2 razy na Kroku 3 — podejdź i wyjaśnij”*).
+* **Zero Stresu Wejścia dla Nowego Instruktora (Model Wieża Kontroli + Asystent):**
+  - Prowadzący (np. Natalka) nie musi na starcie być programistą — siedzi za pulpitem, dba o dobrą atmosferę, obserwuje „radar” postępów i uczy się kodu stopniowo poprzez nadzór.
+  - Gdy na ekranie zapali się żółta lampka przy jednym ze stolików, instruktor kieruje tam **Młodego Asystenta (11-letniego Bartka)** lub drugiego trenera, eliminując bieganie po sali i stres przed pytaniami technicznymi.
 

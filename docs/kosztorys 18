@@ -1,0 +1,41 @@
+# ZBIORCZY KOSZTORYS INWESTYCYJNY PFRON — AKADEMIA APEX (v18)
+**Akademia Cyfrowej Inżynierii APEX (Sarenka Software Kids)** | Wnioskodawca: Wojciech Czyżyk | Data: 16.11.2026 | Wkład własny: 0 zł
+**Łączna wartość wnioskowanej dotacji PFRON:** 100 000 zł brutto (PUP Jelenia Góra, zobowiązanie 24 m-ce) | Zabezpieczenie: blokada środków na lokacie terminowej (120 000 zł) | Kody PKD 2025: 85.59.D (główny), 62.20.B / 62.10.B / 62.90.Z (dodatkowe).
+
+| Lp. | Kategoria / Pozycja i kluczowa specyfikacja | Ilość | Budżet PFRON | Suma kategorii |
+| :--- | :--- | :---: | :---: | :---: |
+| **1.** | **TRANSPORT I LOGISTYKA MOBILNEJ PRACOWNI** | — | — | **52 230 zł** |
+| 1.1 | Samochód osobowy typu SUV / MPV (np. Peugeot 5008 II, Citroën C5 Aircross, VW Touran II; 1.5/1.6 BlueHDi, 3 niezależne fotele w 2. rzędzie, hak holowniczy + relingi dachowe — ochrona kręgosłupa Th6–Th8; dopłata własna ze sprzedaży obecnych aut ➔ łączny budżet 70–75 tys. zł) | 1 szt. | 52 230 zł | — |
+| **2.** | **MOBILNA PRACOWNIA IT I ERGONOMICZNE STANOWISKA PRACY** | — | — | **17 200 zł** |
+| 2.1 | Laptopy uczniowskie 14" (Klasa A, FV 23%) — Dell Latitude 5420/5430 (lub ThinkPad T14 / EliteBook 840), FHD IPS, i5 11./12. gen., 16 GB RAM, 256–512 GB NVMe, Win 11 Pro | 6–7 szt. | 8 150 zł | — |
+| 2.2a | Laptop instruktorski 15,6" (Klasa A) — Latitude 5520/5530 lub Precision 3561/3571, i5/i7, 32 GB RAM, 512 GB NVMe, Win 11 Pro | 1 szt. | 2 050 zł | — |
+| 2.2b | Laptop instruktorski warsztatowy 17" (Klasa A) — Dell Precision 7750/7760, i7, 32 GB RAM, 512 GB NVMe, Win 11 Pro (CAD/3D/wideo) | 1 szt. | 2 500 zł | — |
+| 2.3a | Monitor główny szerokokątny 34" UWQHD (3440×1440) Curved — wymóg obowiązkowy: złącze USB-C (DisplayPort Alt Mode + Power Delivery min. 65 W) oraz wbudowany koncentrator USB (USB Hub) | 1 szt. | 1 300 zł | — |
+| 2.3b | Monitory biurowe 24" IPS — wymóg obowiązkowy: regulacja wysokości (HAS/PIVOT); opcja preferowana: USB-C PD + USB Hub | 2 szt. | 900 zł | — |
+| 2.4 | Akcesoria stanowiskowe — 9× cicha mysz bezprzewodowa (Logitech Silent), 2× cicha klawiatura (MX Keys S / K650), 9× etui ochronne na laptopy | 1 kpl. | 1 500 zł | — |
+| 2.5 | Rezerwa korekcyjna IT (na dopłatę do pełnych 7 laptopów 14" lub modeli monitorów z USB-C) | — | 800 zł | — |
+| **3.** | **MOBILNY ZESTAW PREZENTACYJNY** | — | — | **2 400 zł** |
+| 3.1 | Projektor multimedialny Full HD min. 3800 ANSI lm (np. BenQ MH560C) | 1 szt. | 1 800 zł | — |
+| 3.2 | Lekki ekran projekcyjny na trójnogu 100" 16:9 + torba (waga ok. 5 kg, dł. 100 cm) | 1 kpl. | 600 zł | — |
+| **4.** | **ERGONOMICZNE WYPOSAŻENIE SALI (40 m²) I STACJA WARSZTATOWA R&D** | — | — | **8 450 zł** |
+| 4.1 | Stoły szkoleniowe składane 120×60 cm (stalowy stelaż lub mobilne na kółkach Flip-Top) | 6 szt. | 3 900 zł | — |
+| 4.2 | Krzesła szkoleniowe sztaplowane (bez kółek, układane w stos — np. Nowy Styl ISO / Samba) | 6 szt. | 1 080 zł | — |
+| 4.3 | Fotel ergonomiczny instruktora (podparcie lędźwiowe, podłokietniki 3D, zagłówek — ochrona Th6–Th8) | 1 szt. | 900 zł | — |
+| 4.4 | Stół warsztatowy R&D (120×60 / 150×60 cm, szuflady pod blatem, tablica perforowana i półka górna) | 1 szt. | 1 050 zł | — |
+| 4.5 | Metalowa szafa magazynowa zamykana na klucz (ok. 185×90×45 cm, regulowane półki) | 1 szt. | 950 zł | — |
+| 4.6 | Dodatki stanowiskowe — lampa kreślarska LED CRI>90 + mata ESD (270 zł) oraz rynienki kablowe i listwy (300 zł) | 1 kpl. | 570 zł | — |
+| **5.** | **PRACOWNIA EMBEDDED, ROBOTYKI, DRUKU 3D, ESKADRA UAV, RFID I STANOWISKA R&D** | — | — | **15 870 zł** |
+| 5.1 | Drukarka 3D Bambu Lab P1S Combo (z podajnikiem wielokolorowym AMS) + pakiet filamentów | 1 kpl. | 2 400 zł | — |
+| 5.2 | Aparatura pomiarowa i lutownicza R&D — Oscyloskop Rigol DHO804 + Zasilacz Korad KKG305P (2 091 zł) + Analizator stanów logicznych 16-kan. (300 zł) + Stacja lutownicza 2w1 z pochłaniaczem oparów i zestawem BGA/SMD (660 zł) | 1 kpl. | 3 051 zł | — |
+| 5.3 | Mikrokontrolery i czujniki R&D — 6× BBC micro:bit v2 GO (590 zł) + 6× zestaw Arduino Uno + ESP32 (550 zł) + czujniki ToF VL53L1X, HC-SR04, BME280, PMS5003, ESP32-CAM, LED WS2812B, serwa SG90, elektromagnesy (629 zł) | 1 kpl. | 1 769 zł | — |
+| 5.4 | Zestaw deweloperski UHF RFID (865–868 MHz) — czytnik z regulacją mocy i odczytem RSSI, antena panelowa + 50–100 tagów UHF (+ opcjonalnie moduły NFC 13,56 MHz) | 1 kpl. | 1 200 zł | — |
+| 5.5 | Eskadra programowalnych dronów UAV (układ 5+1+1 = 7 szt.) — 1× flagowa platforma R&D/patrolowa (3 100 zł) + 1× jednostka szkoleniowo-wizyjna klasy WhalesBot Eagle 3002 FPV / RoboMaster TT (1 900 zł) + 5× mini-dron edukacyjny (2 250 zł) | 7 szt. | 7 250 zł | — |
+| 5.6 | **Precyzyjna piła ukośnica z posuwem, laserem i odciągiem pyłu** — do wykonywania drewnianych stanowisk eksperymentalnych neutralnych dla fal radiowych RF (bramki pomiarowe UHF RFID), torów i lądowisk UAV oraz makiet dydaktycznych (ochrona kręgosłupa Th6–Th8) | 1 szt. | **1 200 zł** | — |
+| **6.** | **BIURO DYDAKTYCZNE, AUDIO-WIDEO, ŁĄCZNOŚĆ 5G I ZASILANIE (UPS)** | — | — | **5 850 zł** |
+| 6.1 | Kolorowa laserowa drukarka wielofunkcyjna A4 (Wi-Fi, duplex) | 1 szt. | 1 350 zł | — |
+| 6.2 | Mobilny system nagłośnienia prezentacyjnego JBL Boombox 3 | 1 szt. | 1 550 zł | — |
+| 6.3 | Zestaw Audio-Wideo do nagrywania lekcji (kamera 4K + mikrofon kierunkowy + oświetlenie LED) | 1 kpl. | 1 450 zł | — |
+| 6.4 | Router mobilny 5G / system Mesh Wi-Fi (1 100 zł) + Zasilacz awaryjny UPS 700–950VA (400 zł) | 1 kpl. | 1 500 zł | — |
+| **7.** | **OZNAKOWANIE ZEWNĘTRZNE SIEDZIBY** | — | — | **1 000 zł** |
+| 7.1 | Zewnętrzny szyld reklamowy LED (kaseton / litery 3D przed wejściem do pracowni Akademii APEX) | 1 szt. | 1 000 zł | — |
+| | **ŁĄCZNA WARTOŚĆ KOSZTORYSU INWESTYCYJNEGO PFRON (BRUTTO):** | — | — | **100 000 zł** |

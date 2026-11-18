@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moduł #1: Hardware, RFID & AI | Tech English</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="quiz-container-narrow">
+    <div class="top-bar">
+      <a href="../index.html" class="back-link">← Wróć do listy modułów Tech English</a>
+    </div>
+
+    <div class="quiz-box" id="quiz-container">
+      <div class="progress" id="progress-text">Pytanie 1 / 10</div>
+      <div class="question-text" id="question-text">Ładowanie pytania...</div>
+      <div class="options" id="options-container"></div>
+      <div class="feedback" id="feedback-box"></div>
+      <button class="next-btn" id="next-btn" onclick="nextQuestion()">Następne pytanie →</button>
+    </div>
+
+    <div class="quiz-box result-box" id="result-container">
+      <h2>Wynik Modułu #1 (Sesje #1–#4)</h2>
+      <div class="result-score" id="final-score">0 / 10 (0%)</div>
+      <p id="final-comment"></p>
+      <div style="margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="next-btn" style="display:inline-block;" onclick="location.reload()">🔄 Powtórz Quiz</button>
+        <a href="../index.html" class="next-btn" style="display:inline-block; text-decoration:none; background:#10b981;">← Lista Modułów</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="pytania.js"></script>
+  <script src="../silnik.js"></script>
+</body>
+</html>

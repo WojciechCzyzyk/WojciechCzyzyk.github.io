@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Ward Board — Tablica Dyżurki | APEX Edge-to-AI</title>
+  <link rel="icon" type="image/png" href="../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. EKRAN LOGOWANIA (Security by Design) -->
+  <div id="login-screen" class="login-box">
+    <h2 style="margin-top:0; color:var(--accent);">🏥 Smart Ward Board</h2>
+    <p style="font-size:0.88rem; color:var(--muted);">Zaloguj się, aby uzyskać dostęp do tablicy oddziału (wersja demonstracyjna RODO-safe).</p>
+    <div style="margin-bottom:12px;">
+      <label>Wybierz profil testowy (lub wpisz login):</label>
+      <select id="login-user">
+        <option value="dyzurka">dyzurka — Piel. Anna K. (Pielęgniarka)</option>
+        <option value="lekarz">lekarz — Lek. Piotr N. (Lekarz Dyżurny)</option>
+        <option value="opiekun">opiekun — Opiekun Janusz B. (Opiekun)</option>
+      </select>
+    </div>
+   <div style="margin-bottom:16px;">
+      <label>Kod PIN (demo: 1111 lekarz | 2222 pielęgniarka | 3333 opiekun):</label>
+      <input type="password" id="login-pin" value="2222" placeholder="Wpisz PIN...">
+    </div>
+    <button class="btn" style="width:100%; justify-content:center;" onclick="login()">🔐 Zaloguj do Dyżurki</button>
+  </div>
+
+  <!-- 2. GŁÓWNY EKRAN DYŻURKI -->
+  <div id="ward-screen" class="container hidden">
+    <div class="top-bar">
+      <div>
+        <h1>🏥 Smart Ward Board — Kokpit Oddziału</h1>
+        <span style="font-size:0.8rem; color:var(--muted);">Kliknij w łóżko pacjenta, aby otworzyć pełną kartę, wykresy i zlecenia</span>
+      </div>
+
+       <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <span class="user-badge" id="current-user-badge">Zalogowano</span>
+        <button id="btn-rounds-modal" class="btn hidden" style="background:#8b5cf6; color:#fff;" onclick="openRoundsModal()">🩺 Obchód Lekarski</button>
+        <button id="btn-tasks-modal" class="btn" style="background:#f59e0b; color:#0b1120;" onclick="openTasksModal()">📋 Zadania (Kanban)</button>
+        <button id="btn-staff-modal" class="btn btn-outline" onclick="openStaffModal()">👥 Personel</button>
+        <button class="btn btn-green" onclick="generateShiftReport()">🤖 Raport Zmiany AI</button>
+        <a href="telefon.html" target="_blank" class="btn btn-outline">📱 Widok Telefonu (QR)</a>
+        <button class="btn btn-outline" onclick="logout()">🔒 Wyloguj</button>
+      </div>
+
+
+      
+    </div>
+
+    <!-- Szybkie przyjęcie pacjenta (widoczne dla Pielęgniarki i Lekarza) -->
+    <div id="admit-panel" class="panel">
+      <div class="panel-title">
+        <span>➕ Szybkie Przyjęcie Pacjenta na Oddział</span>
+        <button class="btn btn-sm btn-outline" onclick="toggleAdmitForm()">Rozwiń / Zwiń</button>
+      </div>
+      <div id="admit-form" class="hidden" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:10px;">
+        <div><label>Inicjały / Wiek (RODO-safe)</label><input id="new-name" placeholder="np. Jan N. (58 l.)"></div>
+        <div><label>Sala</label><select id="new-room"></select></div>
+        <div><label>Łóżko</label><input id="new-bed" value="Łóżko 1"></div>
+        <div><label>Uwaga / Zalecenie ruchowe</label><input id="new-alert" placeholder="np. Gorset przy wstawaniu"></div>
+        <div style="display:flex; align-items:flex-end;"><button class="btn" style="width:100%; justify-content:center;" onclick="admitPatient()">Zapisz na tablicę</button></div>
+      </div>
+    </div>
+
+    <!-- Główny układ: Lewa kolumna (Sale) | Prawa kolumna (Ostatnia aktywność) -->
+    <div class="ward-layout">
+      <div id="rooms-container"></div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <span>📋 Ostatnia aktywność</span>
+          <button class="btn btn-sm btn-outline" onclick="resetDemoData()" title="Przywróć dane startowe">🔄 Reset</button>
+        </div>
+        <div id="logs-container" class="log-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL: PEŁNA KARTA PACJENTA (po kliknięciu w kafelek łóżka) -->
+  <div id="patient-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:100; overflow-y:auto; padding:16px;">
+    <div style="max-width:860px; margin:20px auto; background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:16px;">
+        <div>
+          <h2 id="modal-pat-name" style="margin:0; color:var(--accent);">Pacjent</h2>
+          <span id="modal-pat-loc" style="font-size:0.85rem; color:var(--muted);">Sala • Łóżko • Kod QR</span>
+        </div>
+        <button class="btn btn-outline" onclick="closeModal()">✖ Zamknij kartę</button>
+      </div>
+
+      <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:var(--accent); font-weight:700;">💊 Zlecenia Lekarskie / Ordynacja Leków (edycja wyłącznie dla Lekarza):</label>
+        <div style="display:flex; gap:8px; margin-top:6px;">
+          <input id="modal-meds-input" placeholder="Brak zleceń lekarskich...">
+          <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>
+        </div>
+      </div>
+
+      <!-- Szybkie akcje dla Opiekuna Medycznego -->
+      <div id="caregiver-actions" class="hidden" style="background:rgba(16,185,129,0.1); border:1px solid var(--green); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:var(--green); font-weight:700;">🤝 Szybki wpis Opiekuna Medycznego (1 kliknięcie):</label>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Pomoc przy zmianie pozycji / toalecie')">🛏️ Zmiana pozycji / toaleta</button>
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Spacer kontrolny w gorsecie po korytarzu')">🚶 Spacer w gorsecie</button>
+          <button class="btn btn-sm btn-green" onclick="logCareAction('Posiłek podany i zjedzony')">🍽️ Posiłek / nawodnienie</button>
+        </div>
+      </div>
+
+      <!-- Lista zadań Kanban tego pacjenta -->
+      <div id="modal-tasks-box" style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;"></div>
+
+      <!-- Wykres trendu z ostatnich dni -->
+      <div style="background:#0b1120; border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <div style="font-size:0.85rem; color:var(--muted); margin-bottom:6px;">📈 Wykres trendu ciśnienia (SYS/DIA) i pulsu z ostatnich dni:</div>
+        <canvas id="vitalsChart" height="110"></canvas>
+      </div>
+
+      <!-- Przenoszenie pacjenta między salami + Wypis -->
+      <div id="transfer-box" style="display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; background:var(--card); padding:12px; border-radius:10px; margin-bottom:16px;">
+        <div style="flex:1; min-width:140px;"><label>Przenieś do sali:</label><select id="transfer-room"></select></div>
+        <div style="flex:1; min-width:120px;"><label>Nowe łóżko:</label><input id="transfer-bed" value="Łóżko 1"></div>
+        <button class="btn" onclick="transferPatient()">🔄 Przenieś pacjenta</button>
+        <button class="btn btn-red" onclick="dischargePatient()">🚪 Wypisz z oddziału</button>
+      </div>
+
+      <!-- Pełna historia pomiarów i komentarzy z podpisem KTO / KIEDY -->
+      <h4 style="margin:0 0 8px 0; color:var(--accent);">🕒 Historia pomiarów, zleceń i komentarzy AI:</h4>
+      <div id="modal-history-list" style="max-height:220px; overflow-y:auto; display:flex; flex-direction:column; gap:6px;"></div>
+    </div>
+  </div>
+
+  <!-- 4. MODAL: RAPORT ZMIANY / PRZEKAZANIE DYŻURU -->
+  <div id="report-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:110; overflow-y:auto; padding:16px;">
+    <div style="max-width:820px; margin:20px auto; background:var(--panel); border:2px solid var(--green); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+        <h3 style="margin:0; color:var(--green);">🤖 Raport Zdania Dyżuru — Podgląd przed wydrukiem</h3>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-sm" onclick="printShiftReport()">🖨️ Drukuj kartę A4</button>
+          <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
+        </div>
+      </div>
+      <!-- Osoba zdająca + klikalny skład zespołu kończącego zmianę -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px; margin-bottom:12px;">
+        <div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">Kliknij osoby kończące ten dyżur, aby dopisać je do raportu:</div>
+        <div id="rep-team-chips" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
+      </div>
+
+
+      <div id="report-content" style="background:#0b1120; padding:16px; border-radius:10px; font-size:0.88rem; line-height:1.5; border:1px solid var(--border); max-height:64vh; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+
+  <!-- 5. MODAL: ZARZĄDZANIE PERSONELEM (Lekarze, Pielęgniarki, Opiekunowie) -->
+  <div id="staff-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:115; overflow-y:auto; padding:16px;">
+    <div style="max-width:660px; margin:30px auto; background:var(--panel); border:1px solid var(--accent); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;">
+        <h3 style="margin:0; color:var(--accent);">👥 Zarządzanie Personelem Oddziału</h3>
+        <button class="btn btn-sm btn-outline" onclick="document.getElementById('staff-modal').classList.add('hidden')">✖ Zamknij</button>
+      </div>
+
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:var(--accent); font-weight:700; margin-bottom:8px;">➕ Dodaj nowego pracownika:</label>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:8px;">
+          <div><label>Tytuł i Imię (np. Piel. Kasia M.)</label><input id="staff-name" placeholder="np. Piel. Kasia M."></div>
+          <div>
+            <label>Uprawnienia (Rola)</label>
+            <select id="staff-role">
+              <option value="pielegniarka">Pielęgniarka / Pielęgniarz</option>
+              <option value="lekarz">Lekarz Dyżurny</option>
+              <option value="opiekun">Opiekun Medyczny</option>
+            </select>
+          </div>
+          <div><label>4-cyfrowy PIN</label><input id="staff-pin" maxlength="4" placeholder="np. 4444"></div>
+          <div style="display:flex; align-items:flex-end;"><button class="btn btn-green" style="width:100%; justify-content:center;" onclick="addStaffMember()">Zapisz</button></div>
+        </div>
+      </div>
+
+      <h4 style="margin:0 0 8px 0; color:var(--muted);">Lista aktywnego personelu w chmurze:</h4>
+      <div id="staff-list-box" style="display:flex; flex-direction:column; gap:6px; max-height:260px; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+   <!-- 6. MODAL: OBCHÓD LEKARSKI (Zbiorczy wpis zleceń i leków) -->
+  <div id="rounds-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:120; overflow-y:auto; padding:16px;">
+    <div style="max-width:920px; margin:20px auto; background:var(--panel); border:2px solid #8b5cf6; border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+        <div>
+          <h3 style="margin:0; color:#a78bfa;">🩺 Obchód Lekarski — Zbiorcze Zlecenia i Leki</h3>
+          <span style="font-size:0.8rem; color:var(--muted);">Wybierz lekarza prowadzącego i wpisz ordynację bezpośrednio przy pacjentach</span>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <select id="rounds-doctor-select" style="width:auto; min-width:190px; border-color:#8b5cf6;"></select>
+          <button class="btn btn-sm btn-outline" onclick="document.getElementById('rounds-modal').classList.add('hidden')">✖ Zamknij</button>
+        </div>
+      </div>
+
+      <div id="rounds-patients-list" style="display:flex; flex-direction:column; gap:10px; max-height:68vh; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+    <!-- 7. MODAL: LISTA ZADAŃ PIELĘGNIARSKICH (KANBAN) -->
+  <div id="tasks-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:125; overflow-y:auto; padding:16px;">
+    <div style="max-width:960px; margin:20px auto; background:var(--panel); border:2px solid #f59e0b; border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+        <div>
+          <h3 style="margin:0; color:#fbbf24;">📋 Tablica Zadań i Zleceń (Kanban Dyżurki)</h3>
+          <span style="font-size:0.8rem; color:var(--muted);">Kliknij zadanie, aby zmienić status: 🔴 Do zrobienia ➔ 🟡 W przygotowaniu ➔ 🟢 Zrobione</span>
+        </div>
+        <button class="btn btn-sm btn-outline" onclick="closeTasksModal()">✖ Zamknij</button>
+        
+      </div>
+      <div id="tasks-board-list" style="display:flex; flex-direction:column; gap:10px; max-height:70vh; overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <script src="db.js?v=10"></script>
+  <script src="app.js?v=10"></script>
+</body>
+</html>
+
+

@@ -571,4 +571,8 @@ function openTasksModal() {
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
 
-setInterval(() => { if (currentUser && !isDragging) refreshBoard(); }, 4000);
+setInterval(() => {
+  if (currentUser && !isDragging && Object.keys(taskTimers).length === 0) {
+    refreshBoard();
+  }
+}, 4000);

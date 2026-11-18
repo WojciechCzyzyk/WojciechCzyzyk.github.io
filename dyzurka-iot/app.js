@@ -451,14 +451,16 @@ function getTaskBadge(status) {
 
 const taskTimers = {};
 
-function flushTaskTimers() {
-  Object.values(taskTimers).forEach(t => t.flushNow());
+async function flushTaskTimers() {
+  const pending = Object.values(taskTimers).map(t => t.flushNow());
+  await Promise.all(pending);
 }
 
-function closeTasksModal() {
-  flushTaskTimers();
+async function closeTasksModal() {
+  await flushTaskTimers();
   document.getElementById("tasks-modal").classList.add("hidden");
 }
+
 
 function cycleTaskStatus(patId, taskId, fromBoard = false) {
   if (currentUser.role === "opiekun") return alert("Brak uprawnień do zmiany statusu zleceń lekarskich.");

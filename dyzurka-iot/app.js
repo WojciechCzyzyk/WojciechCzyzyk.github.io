@@ -494,10 +494,9 @@ function cycleTaskStatus(patId, taskId, fromBoard = false) {
 
   taskTimers[timerKey] = {
     id: setTimeout(commitChange, 5000),
-    flushNow: () => {
-      clearTimeout(taskTimers[timerKey].id);
-      commitChange();
-    }
+    
+flushNow: async () => { clearTimeout(taskTimers[timerKey].id); await commitChange(); }
+
   };
 }
 

@@ -171,36 +171,98 @@
       document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
     }
 
-    async function simulateQrScan() {
+        async function simulateQrScan() {
       const box = document.getElementById("qr-camera-box");
       const video = document.getElementById("qr-video");
       const sel = document.getElementById("mob-patient");
 
-      const finishDemoScan = (stream = null) => {
-        if (stream) stream.getTracks().forEach(t => t.stop());
+      let activeStream = null;
+      let scanLoopId = null;
+      let fallbackTimer = null;
+
+      const stopCamera = () => {
+        if (scanLoopId) cancelAnimationFrame(scanLoopId);
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+        if (activeStream) activeStream.getTracks().forEach(t => t.stop());
         if (box) box.classList.add("hidden");
-        if (sel && sel.options.length > 1) {
-          sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+      };
+
+      const onQrDetected = (rawCode) => {
+        stopCamera();
+        const code = (rawCode || "").trim();
+        const matched = mobState.patients.find(p => p.qr.toLowerCase() === code.toLowerCase());
+        if (matched) {
+          sel.value = matched.id;
           updateSelectedInfo();
+          showSmartStatus(`✅ <strong>Zeskanowano kod QR:</strong> <code>${matched.qr}</code> ➔ Wybrano pacjenta: <strong>${matched.name} (${matched.room} / ${matched.bed})</strong>`, "#10b981");
+        } else {
+          showSmartStatus(`⚠️ <strong>Odczytano kod QR:</strong> <code>${code}</code>, ale nie przypisano go do żadnego pacjenta na tym oddziale.`, "#f59e0b");
         }
-        const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
-        showSmartStatus(`ℹ️ <strong>Funkcja testowa (Skaner QR):</strong> Odczyt kodów QR z opasek pacjentów jest obecnie w fazie testowej i nie jest jeszcze w pełni wspierany produkcyjnie.<br><em>(Tryb demo: automatycznie przełączono na: <strong>${patName}</strong>)</em>`, "#f59e0b");
       };
 
       if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia && box && video) {
         try {
-          const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
-          video.srcObject = stream;
+          activeStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+          video.srcObject = activeStream;
+          await video.play();
           box.classList.remove("hidden");
-          showSmartStatus("📷 <strong>Skaner QR (wersja testowa):</strong> Trwa odczyt opaski pacjenta...", "#10b981");
-          setTimeout(() => finishDemoScan(stream), 7000);
+          showSmartStatus("📷 <strong>Skaner QR aktywny:</strong> Nakieruj kamerę na wydrukowaną plakietkę QR łóżka...", "#0284c7");
+
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d", { willReadFrequently: true });
+          const nativeDetector = ("BarcodeDetector" in window) ? new BarcodeDetector({ formats: ["qr_code"] }) : null;
+
+          const scanFrame = async () => {
+            if (!activeStream) return;
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+              if (nativeDetector) {
+                try {
+                  const codes = await nativeDetector.detect(video);
+                  if (codes.length > 0 && codes.at(0).rawValue) {
+                    return onQrDetected(codes.at(0).rawValue);
+                  }
+                } catch (e) {}
+              }
+              if (typeof jsQR === "function") {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const qr = jsQR(imgData.data, imgData.width, imgData.height, { inversionAttempts: "dontInvert" });
+                if (qr && qr.data) {
+                  return onQrDetected(qr.data);
+                }
+              }
+            }
+            scanLoopId = requestAnimationFrame(scanFrame);
+          };
+
+          scanLoopId = requestAnimationFrame(scanFrame);
+
+          // Gdyby w ciągu 10 sekund nie wykryto żadnego kodu QR, wyłączamy kamerę i przełączamy testowo
+          fallbackTimer = setTimeout(() => {
+            stopCamera();
+            if (sel && sel.options.length > 1) {
+              sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+              updateSelectedInfo();
+            }
+            const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
+            showSmartStatus(`ℹ️ <strong>Nie wykryto plakietki QR w kadrze (10s):</strong> Przełączono testowo na kolejnego pacjenta: <strong>${patName}</strong>`, "#f59e0b");
+          }, 10000);
           return;
         } catch (e) {
-          // Brak zgody lub brak kamery - przechodzimy do trybu symulacji
+          // Brak kamery lub odmowa dostępu - przejście do trybu testowego
         }
       }
-      finishDemoScan(null);
+
+      if (sel && sel.options.length > 1) {
+        sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+        updateSelectedInfo();
+      }
+      const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
+      showSmartStatus(`ℹ️ <strong>Tryb bez kamery:</strong> Przełączono testowo na: <strong>${patName}</strong>`, "#f59e0b");
     }
+
 
 
     

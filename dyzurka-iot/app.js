@@ -320,11 +320,30 @@ function renderChart(pat) {
     <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">🔴 SYS (mmHg) &nbsp;|&nbsp; 🔵 DIA (mmHg) &nbsp;|&nbsp; 🟢 Puls (bpm) &nbsp;|&nbsp; Linia: próg 140 mmHg</div>`;
 }
 
+function fillReportSelectors() {
+  const allUsers = Object.values(wardState.users || USERS);
+  const fill = (id, roleFilter) => {
+    const sel = document.getElementById(id);
+    if (!sel || sel.options.length > 0) return;
+    const list = allUsers.filter(u => u.role === roleFilter);
+    sel.innerHTML = `<option value="— brak —">— brak —</option>` +
+      list.map(u => `<option value="${u.name}" ${u.name === currentUser.name ? "selected" : ""}>${u.name}</option>`).join("");
+  };
+  fill("rep-nurse", "pielegniarka");
+  fill("rep-doctor", "lekarz");
+  fill("rep-care", "opiekun");
+}
+
 function generateShiftReport() {
+  fillReportSelectors();
+  const nurse = document.getElementById("rep-nurse")?.value || currentUser.name;
+  const doc = document.getElementById("rep-doctor")?.value || "—";
+  const care = document.getElementById("rep-care")?.value || "—";
+
   const headerHtml = `
     <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;">
-      <strong style="font-size:1.05rem; color:var(--accent);">📋 RAPORT PIELĘGNIARSKI — PRZEKAZANIE ZMIANY (${nowStamp()})</strong><br>
-      <span style="color:var(--muted);">Osoba zdająca dyżur: <strong>${currentUser.name}</strong> • Liczba pacjentów na oddziale: <strong>${wardState.patients.length}</strong></span>
+      <strong style="font-size:1.05rem; color:var(--accent);">📋 RAPORT ZDANIA DYŻURU — PRZEKAZANIE ZMIANY (${nowStamp()})</strong><br>
+      <span style="color:var(--muted);">Pielęgniarka: <strong>${nurse}</strong> | Lekarz: <strong>${doc}</strong> | Opiekun: <strong>${care}</strong> | Pacjentów: <strong>${wardState.patients.length}</strong></span>
     </div>`;
 
   const cardsHtml = wardState.patients.map(p => {
@@ -366,6 +385,22 @@ function generateShiftReport() {
   document.getElementById("report-content").innerHTML = headerHtml + cardsHtml;
   document.getElementById("report-modal").classList.remove("hidden");
 }
+
+function printShiftReport() {
+  const content = document.getElementById("report-content").innerHTML;
+  const win = window.open("", "_blank", "width=850,height=900");
+  win.document.write(`
+    <html><head><title>Raport Zdania Dyżuru — Smart Ward Board</title>
+    <style>
+      body { font-family: Arial, sans-serif; color: #0f172a; padding: 20px; }
+      div { border-color: #cbd5e1 !important; background: #fff !important; color: #0f172a !important; }
+      strong { color: #0f172a !important; }
+    </style></head><body>${content}</body></html>`);
+  win.document.close();
+  win.focus();
+  win.print();
+}
+
 
 function printShiftReport() {
   const content = document.getElementById("report-content").innerHTML;

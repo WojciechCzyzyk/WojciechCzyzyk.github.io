@@ -634,11 +634,13 @@ function renderPatientTasksInModal(pat) {
   box.innerHTML = `
     <label style="color:#fbbf24; font-weight:700; margin-bottom:8px;">📌 Zadania i Zlecenia Pacjenta (kliknij kafelek, aby przełączyć status):</label>
     <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:8px;">${itemsHtml}</div>
+    ${buildProcedureSelectHtml("new-task-" + pat.id)}
     <div style="display:flex; gap:6px;">
-      <input id="new-task-${pat.id}" placeholder="Dopisz szybkie zadanie (np. Pobranie krwi rano)...">
+      <input id="new-task-${pat.id}" placeholder="Dopisz dawkę lub nowe zadanie...">
       <button class="btn btn-sm" onclick="addCustomTask('${pat.id}', false)">➕ Dodaj</button>
     </div>`;
 }
+
 
 function openTasksModal() {
   const listBox = document.getElementById("tasks-board-list");

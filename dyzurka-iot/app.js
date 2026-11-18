@@ -446,10 +446,12 @@ function printShiftReport() {
 
 
 async function resetDemoData() {
-  if (!confirm("Przywrócić dane startowe?")) return;
+  if (!confirm("Przywrócić dane startowe w całej bazie?")) return;
   localStorage.removeItem("apex_ward_db_v3");
+  await WardDB.save(WardDB.getDefaultData());
   await refreshBoard();
 }
+
 
 function openStaffModal() {
   if (currentUser.role === "opiekun") return;

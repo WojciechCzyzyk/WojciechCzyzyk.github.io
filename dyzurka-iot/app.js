@@ -449,7 +449,18 @@ function getTaskBadge(status) {
   return { label: "🔴 Do zrobienia", bg: "rgba(239,68,68,0.2)", border: "#ef4444", color: "#f87171" };
 }
 
-async function cycleTaskStatus(patId, taskId, fromBoard = false) {
+const taskTimers = {};
+
+function flushTaskTimers() {
+  Object.values(taskTimers).forEach(t => t.flushNow());
+}
+
+function closeTasksModal() {
+  flushTaskTimers();
+  document.getElementById("tasks-modal").classList.add("hidden");
+}
+
+function cycleTaskStatus(patId, taskId, fromBoard = false) {
   if (currentUser.role === "opiekun") return alert("Brak uprawnień do zmiany statusu zleceń lekarskich.");
   const pat = wardState.patients.find(p => p.id === patId);
   if (!pat) return;
@@ -460,16 +471,34 @@ async function cycleTaskStatus(patId, taskId, fromBoard = false) {
   task.status = nextMap[task.status] || "todo";
   task.updatedBy = `${currentUser.name} (${nowStamp()})`;
 
-  const stInfo = getTaskBadge(task.status);
-  const msg = `📋 Zadanie [${task.text}] ➔ ${stInfo.label}`;
-  pat.history.push({ date: nowStamp(), type: "zlecenie", author: currentUser.name, comment: msg });
-  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} (${pat.room} / ${pat.name}): ${msg}`, alert: false });
-
-  await WardDB.save(wardState);
-  renderLogs();
   if (fromBoard) openTasksModal();
   else openPatientModal(patId);
+
+  const timerKey = `${patId}_${taskId}`;
+  if (taskTimers[timerKey]) clearTimeout(taskTimers[timerKey].id);
+
+  const commitChange = async () => {
+    delete taskTimers[timerKey];
+    const stInfo = getTaskBadge(task.status);
+    const msg = `📋 Zadanie [${task.text}] ➔ ${stInfo.label}`;
+    pat.history.push({ date: nowStamp(), type: "zlecenie", author: currentUser.name, comment: msg });
+    wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} (${pat.room} / ${pat.name}): ${msg}`, alert: false });
+    await WardDB.save(wardState);
+    renderLogs();
+    if (!document.getElementById("patient-modal").classList.contains("hidden") && activePatientId === patId) {
+      openPatientModal(patId);
+    }
+  };
+
+  taskTimers[timerKey] = {
+    id: setTimeout(commitChange, 5000),
+    flushNow: () => {
+      clearTimeout(taskTimers[timerKey].id);
+      commitChange();
+    }
+  };
 }
+
 
 async function addCustomTask(patId, fromBoard = false) {
   const input = document.getElementById(`new-task-${patId}`);

@@ -171,8 +171,11 @@
     }
 
     async function sendVitals() {
+
+      mobState = await WardDB.load();
       const id = document.getElementById("mob-patient").value;
       const pat = mobState.patients.find(p => p.id === id);
+      if (!pat) return alert("Nie znaleziono pacjenta w aktualnej bazie!");
       const sys = parseInt(document.getElementById("in-sys").value, 10);
       const dia = parseInt(document.getElementById("in-dia").value, 10);
       const pulse = parseInt(document.getElementById("in-pulse").value, 10);

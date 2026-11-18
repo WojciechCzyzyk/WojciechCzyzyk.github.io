@@ -132,16 +132,20 @@
     </div>
   </div>
 
-  <!-- 4. MODAL: RAPORT ZMIANY / LEKARSKI AI -->
-  <div id="report-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:110; padding:16px;">
-    <div style="max-width:680px; margin:40px auto; background:var(--panel); border:1px solid var(--accent); border-radius:14px; padding:20px;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <h3 style="margin:0; color:var(--accent);">🤖 Raport Zmiany / Lekarski AI</h3>
-        <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
+  <!-- 4. MODAL: RAPORT ZMIANY / PRZEKAZANIE DYŻURU -->
+  <div id="report-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:110; overflow-y:auto; padding:16px;">
+    <div style="max-width:780px; margin:20px auto; background:var(--panel); border:2px solid var(--green); border-radius:14px; padding:20px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+        <h3 style="margin:0; color:var(--green);">🤖 Raport Zdania Dyżuru (Przekazanie Zmiany)</h3>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-sm" onclick="printShiftReport()">🖨️ Drukuj kartę A4</button>
+          <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
+        </div>
       </div>
-      <div id="report-content" style="background:#0b1120; padding:14px; border-radius:10px; font-size:0.9rem; white-space:pre-line; border:1px solid var(--border);"></div>
+      <div id="report-content" style="background:#0b1120; padding:16px; border-radius:10px; font-size:0.88rem; line-height:1.5; border:1px solid var(--border); max-height:70vh; overflow-y:auto;"></div>
     </div>
   </div>
+
   <!-- 5. MODAL: ZARZĄDZANIE PERSONELEM (Lekarze, Pielęgniarki, Opiekunowie) -->
   <div id="staff-modal" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:115; overflow-y:auto; padding:16px;">
     <div style="max-width:660px; margin:30px auto; background:var(--panel); border:1px solid var(--accent); border-radius:14px; padding:20px;">

@@ -137,10 +137,13 @@
     <div style="max-width:820px; margin:20px auto; background:var(--panel); border:2px solid var(--green); border-radius:14px; padding:20px;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
         <h3 style="margin:0; color:var(--green);">🤖 Raport Zdania Dyżuru — Podgląd przed wydrukiem</h3>
+       
         <div style="display:flex; gap:8px;">
+          <button class="btn btn-sm btn-green" onclick="copyReportToHIS()">📋 Kopiuj tekst do HIS</button>
           <button class="btn btn-sm" onclick="printShiftReport()">🖨️ Drukuj kartę A4</button>
           <button class="btn btn-sm btn-outline" onclick="document.getElementById('report-modal').classList.add('hidden')">✖ Zamknij</button>
         </div>
+        
       </div>
       <!-- Osoba zdająca + klikalny skład zespołu kończącego zmianę -->
       <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:10px; margin-bottom:12px;">

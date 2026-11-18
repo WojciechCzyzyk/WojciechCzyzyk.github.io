@@ -324,7 +324,6 @@ function saveGeminiKey() {
   localStorage.setItem("apex_gemini_key", val);
   showSmartStatus(val ? "✅ <strong>Zapisano klucz Vision AI</strong> w pamięci tego telefonu!" : "ℹ️ Wyczyszczono klucz Vision AI.", "#10b981");
 }
-
 async function scanDeviceScreen(input) {
   const file = input.files ? input.files.item(0) : null;
   if (!file) return;
@@ -332,35 +331,46 @@ async function scanDeviceScreen(input) {
   const apiKey = (document.getElementById("gemini-api-key")?.value || localStorage.getItem("apex_gemini_key") || "").trim();
   if (!apiKey) {
     input.value = "";
-    return showSmartStatus("⚠️ <strong>Brak klucza Vision AI:</strong> Wklej darmowy klucz z <em>://google.com</em> w pole powyżej.", "#f59e0b");
+    return showSmartStatus("⚠️ <strong>Brak klucza Vision AI:</strong> Wklej klucz z Google AI Studio w pole powyżej.", "#f59e0b");
   }
 
-  showSmartStatus("🤖 <strong>[v3.0 Vision AI] Analizuję ekran miernika przez Gemini...</strong>", "#0284c7");
+  showSmartStatus("🤖 <strong>[v3.1 Vision AI] Przygotowuję zdjęcie (1/2)...</strong>", "#0284c7");
 
   try {
-    const base64Data = await new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => {
-        const maxSide = 640;
-        const ratio = Math.min(1, maxSide / Math.max(img.width, img.height));
-        const canvas = document.createElement("canvas");
-        canvas.width = Math.round(img.width * ratio);
-        canvas.height = Math.round(img.height * ratio);
-        canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
-        resolve(canvas.toDataURL("image/jpeg", 0.85).split(",").at(1));
+    const base64Data = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Nie udało się odczytać pliku zdjęcia z aparatu."));
+      reader.onload = (ev) => {
+        const img = new Image();
+        img.onerror = () => reject(new Error("Uszkodzony format obrazu."));
+        img.onload = () => {
+          const maxSide = 640;
+          const ratio = Math.min(1, maxSide / Math.max(img.width, img.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.round(img.width * ratio);
+          canvas.height = Math.round(img.height * ratio);
+          canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL("image/jpeg", 0.85).split(",").at(1));
+        };
+        img.src = ev.target.result;
       };
-      img.src = URL.createObjectURL(file);
+      reader.readAsDataURL(file);
     });
+
+    showSmartStatus("📡 <strong>[v3.1 Vision AI] Wysyłam do Gemini (2/2)...</strong>", "#0284c7");
 
     const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
 
     const host = ["generativelanguage", "googleapis", "com"].join(".");
     const path = "/v1beta/models/gemini-2.5-flash:generateContent?key=";
     const endpoint = `https://${host}${path}${encodeURIComponent(apiKey)}`;
-    
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
+
     const res = await fetch(endpoint, {
-      
       method: "POST",
+      signal: controller.signal,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{
@@ -371,6 +381,7 @@ async function scanDeviceScreen(input) {
         }]
       })
     });
+    clearTimeout(timeoutId);
 
     const json = await res.json();
     if (json.error) throw new Error(json.error.message);
@@ -401,16 +412,18 @@ async function scanDeviceScreen(input) {
       const prevComment = document.getElementById("in-comment").value.trim();
       const note = `🤖 [Vision AI] Odczyt z ekranu: ${summary.map(s => s.replace(/<[^>]+>/g, "")).join(", ")}`;
       document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${note}` : note;
-      showSmartStatus(`✅ <strong>[v3.0 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
+      showSmartStatus(`✅ <strong>[v3.1 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
     } else {
-      showSmartStatus("⚠️ <strong>[v3.0 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
+      showSmartStatus("⚠️ <strong>[v3.1 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
     }
   } catch (err) {
-    showSmartStatus(`⚠️ <strong>[v3.0 Vision AI]</strong> Błąd: ${err.message}`, "#ef4444");
+    const msg = err.name === "AbortError" ? "Przekroczono czas oczekiwania (12s) — sprawdź zasięg internetu." : err.message;
+    showSmartStatus(`⚠️ <strong>[v3.1 Vision AI]</strong> Błąd: ${msg}`, "#ef4444");
   } finally {
     input.value = "";
   }
 }
+
 
 
 

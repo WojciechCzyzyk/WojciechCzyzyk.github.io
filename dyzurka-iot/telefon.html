@@ -48,6 +48,18 @@
           <select id="mob-patient" onchange="updateSelectedInfo()"></select>
           <button class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR</button>
         </div>
+        
+        <!-- Szybkie wprowadzanie bezdotykowe: Głos + Zdjęcie ekranu miernika -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
+          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
+          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0;">
+            📸 Zrób zdjęcie ekranu
+            <input type="file" accept="image/*" capture="environment" style="display:none;" onchange="scanDeviceScreen(this)">
+          </label>
+        </div>
+        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:10px; border-left-color:#8b5cf6;"></div>
+
+        
         <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
 
         <label>2. Parametry z ciśnieniomierza i termometru:</label>

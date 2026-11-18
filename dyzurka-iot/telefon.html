@@ -507,6 +507,7 @@ function saveGeminiKey() {
       showSmartStatus("⚠️ <strong>[v3.9 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
     }
   } catch (err) {
+    setApiKeyBorder("error");
     showSmartStatus(`⚠️ <strong>[v3.9 Vision AI]</strong> Błąd: ${err.message}`, "#ef4444");
   } finally {
     input.value = "";

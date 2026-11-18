@@ -381,6 +381,21 @@ function saveGeminiKey() {
   showSmartStatus(val ? "✅ <strong>Zapisano klucz Vision AI</strong> w pamięci tego telefonu!" : "ℹ️ Wyczyszczono klucz Vision AI.", "#10b981");
 }
 
+    function setApiKeyBorder(status) {
+  const inp = document.getElementById("gemini-api-key");
+  if (!inp) return;
+  if (status === "error") {
+    inp.style.borderColor = "#ef4444";
+    inp.style.boxShadow = "0 0 0 2px rgba(239,68,68,0.35)";
+  } else if (status === "ok") {
+    inp.style.borderColor = "#10b981";
+    inp.style.boxShadow = "0 0 0 2px rgba(16,185,129,0.25)";
+  } else {
+    inp.style.borderColor = "";
+    inp.style.boxShadow = "";
+  }
+}
+
 
     async function scanDeviceScreen(input) {
   const file = input.files ? input.files.item(0) : null;

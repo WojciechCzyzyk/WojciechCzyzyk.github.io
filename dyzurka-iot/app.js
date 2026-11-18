@@ -781,4 +781,35 @@ setInterval(() => {
   }
 }, 4000);
 
+function printBedQrBadge() {
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+  const qrImgUrl = `https://qrserver.com{encodeURIComponent(pat.qr)}`;
+  const win = window.open("", "_blank", "width=520,height=680");
+  win.document.write(`
+    <html><head><title>Plakietka QR Łóżka — ${pat.name}</title>
+    <style>
+      body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 95vh; margin: 0; background: #fff; color: #0f172a; }
+      .badge { border: 3px solid #0f172a; border-radius: 16px; padding: 28px 32px; text-align: center; width: 340px; }
+      .loc { font-size: 22px; font-weight: 800; color: #0284c7; margin-bottom: 6px; }
+      .name { font-size: 26px; font-weight: 900; margin-bottom: 16px; }
+      .qr { margin: 12px auto; border: 1px solid #cbd5e1; padding: 10px; border-radius: 12px; display: inline-block; }
+      .code { font-family: monospace; font-size: 15px; font-weight: 700; letter-spacing: 1px; margin-top: 8px; }
+      .note { margin-top: 14px; padding: 8px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; font-size: 13px; font-weight: 700; }
+      .foot { margin-top: 16px; font-size: 11px; color: #64748b; }
+    </style></head><body>
+      <div class="badge">
+        <div class="loc">${pat.room} • ${pat.bed}</div>
+        <div class="name">${pat.name}</div>
+        <div class="qr"><img src="${qrImgUrl}" width="200" height="200" alt="QR"></div>
+        <div class="code">${pat.qr}</div>
+        ${pat.alertNote ? `<div class="note">⚠️ ${pat.alertNote}</div>` : ""}
+        <div class="foot">Smart Ward Board • APEX Edge-to-AI (RODO-safe)</div>
+      </div>
+      <script>window.onload = () => { setTimeout(() => window.print(), 350); };<\/script>
+    </body></html>`);
+  win.document.close();
+}
+
+
 

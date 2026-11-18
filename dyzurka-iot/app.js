@@ -424,5 +424,118 @@ async function saveRoundNote(patId) {
   alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);
 }
 
+function ensureTasks(pat) {
+  if (!Array.isArray(pat.tasks)) {
+    pat.tasks = pat.medications && !pat.medications.startsWith("Oczekuje")
+      ? [{ id: `TSK-${pat.id}-0`, text: pat.medications, status: "todo", author: "Lekarz", updatedBy: "" }]
+      : [];
+  }
+  return pat.tasks;
+}
+
+function addTaskToPatient(pat, text, author) {
+  if (!text) return;
+  const tasks = ensureTasks(pat);
+  tasks.unshift({ id: `TSK-${Date.now()}`, text, status: "todo", author, updatedBy: "" });
+}
+
+function getTaskBadge(status) {
+  if (status === "done") return { label: "🟢 Zrobione", bg: "rgba(16,185,129,0.2)", border: "#10b981", color: "#34d399" };
+  if (status === "progress") return { label: "🟡 W przygotowaniu", bg: "rgba(245,158,11,0.2)", border: "#f59e0b", color: "#fbbf24" };
+  return { label: "🔴 Do zrobienia", bg: "rgba(239,68,68,0.2)", border: "#ef4444", color: "#f87171" };
+}
+
+async function cycleTaskStatus(patId, taskId, fromBoard = false) {
+  if (currentUser.role === "opiekun") return alert("Brak uprawnień do zmiany statusu zleceń lekarskich.");
+  const pat = wardState.patients.find(p => p.id === patId);
+  if (!pat) return;
+  const task = ensureTasks(pat).find(t => t.id === taskId);
+  if (!task) return;
+
+  const nextMap = { todo: "progress", progress: "done", done: "todo" };
+  task.status = nextMap[task.status] || "todo";
+  task.updatedBy = `${currentUser.name} (${nowStamp()})`;
+
+  const stInfo = getTaskBadge(task.status);
+  const msg = `📋 Zadanie [${task.text}] ➔ ${stInfo.label}`;
+  pat.history.push({ date: nowStamp(), type: "zlecenie", author: currentUser.name, comment: msg });
+  wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} (${pat.room} / ${pat.name}): ${msg}`, alert: false });
+
+  await WardDB.save(wardState);
+  renderLogs();
+  if (fromBoard) openTasksModal();
+  else openPatientModal(patId);
+}
+
+async function addCustomTask(patId, fromBoard = false) {
+  const input = document.getElementById(`new-task-${patId}`);
+  const txt = input ? input.value.trim() : "";
+  if (!txt) return;
+  const pat = wardState.patients.find(p => p.id === patId);
+  addTaskToPatient(pat, txt, currentUser.name);
+  wardState.logs.unshift({ time: nowStamp(), text: `📌 ${currentUser.name} dodał zadanie dla ${pat.name}: ${txt}`, alert: false });
+  await WardDB.save(wardState);
+  renderLogs();
+  if (fromBoard) openTasksModal();
+  else openPatientModal(patId);
+}
+
+function renderPatientTasksInModal(pat) {
+  const box = document.getElementById("modal-tasks-box");
+  if (!box) return;
+  const tasks = ensureTasks(pat);
+  const itemsHtml = tasks.map(t => {
+    const b = getTaskBadge(t.status);
+    return `
+      <div onclick="cycleTaskStatus('${pat.id}', '${t.id}', false)" title="Kliknij, aby zmienić status Kanban" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px;">
+        <div>
+          <strong style="color:#f8fafc; font-size:0.86rem;">${t.text}</strong>
+          <div style="font-size:0.72rem; color:var(--muted);">Zlecił: ${t.author}${t.updatedBy ? ` • Zmiana: ${t.updatedBy}` : ""}</div>
+        </div>
+        <span style="color:${b.color}; font-weight:800; font-size:0.78rem; white-space:nowrap;">${b.label}</span>
+      </div>`;
+  }).join("") || `<div style="font-size:0.8rem; color:var(--muted);">Brak przypisanych zadań.</div>`;
+
+  box.innerHTML = `
+    <label style="color:#fbbf24; font-weight:700; margin-bottom:8px;">📌 Zadania i Zlecenia Pacjenta (kliknij kafelek, aby przełączyć status):</label>
+    <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:8px;">${itemsHtml}</div>
+    <div style="display:flex; gap:6px;">
+      <input id="new-task-${pat.id}" placeholder="Dopisz szybkie zadanie (np. Pobranie krwi rano)...">
+      <button class="btn btn-sm" onclick="addCustomTask('${pat.id}', false)">➕ Dodaj</button>
+    </div>`;
+}
+
+function openTasksModal() {
+  const listBox = document.getElementById("tasks-board-list");
+  listBox.innerHTML = wardState.patients.map(p => {
+    const tasks = ensureTasks(p);
+    const pills = tasks.map(t => {
+      const b = getTaskBadge(t.status);
+      return `
+        <div onclick="cycleTaskStatus('${p.id}', '${t.id}', true)" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:6px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:5px;">
+          <span style="font-size:0.84rem; color:#f8fafc;">${t.text}</span>
+          <span style="color:${b.color}; font-weight:800; font-size:0.75rem; white-space:nowrap;">${b.label}</span>
+        </div>`;
+    }).join("") || `<div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">Brak aktywnych zadań</div>`;
+
+    return `
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 200px 1fr; gap:12px; align-items:start;">
+        <div>
+          <strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br>
+          <span style="font-weight:700;">${p.name}</span><br>
+          <span style="font-size:0.74rem; color:var(--muted);">${p.alertNote || ""}</span>
+        </div>
+        <div>
+          ${pills}
+          <div style="display:flex; gap:6px; margin-top:6px;">
+            <input id="new-task-${p.id}" placeholder="Nowe zadanie dla pacjenta..." style="padding:6px 8px; font-size:0.82rem;">
+            <button class="btn btn-sm" onclick="addCustomTask('${p.id}', true)">➕ Dodaj</button>
+          </div>
+        </div>
+      </div>`;
+  }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
+
+  document.getElementById("tasks-modal").classList.remove("hidden");
+}
 
 setInterval(() => { if (currentUser && !isDragging) refreshBoard(); }, 4000);

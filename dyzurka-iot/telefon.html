@@ -178,7 +178,7 @@
           video.srcObject = stream;
           box.classList.remove("hidden");
           showSmartStatus("📷 <strong>Skaner QR (wersja testowa):</strong> Trwa odczyt opaski pacjenta...", "#10b981");
-          setTimeout(() => finishDemoScan(stream), 2200);
+          setTimeout(() => finishDemoScan(stream), 7000);
           return;
         } catch (e) {
           // Brak zgody lub brak kamery - przechodzimy do trybu symulacji

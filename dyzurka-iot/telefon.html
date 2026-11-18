@@ -324,7 +324,9 @@ function saveGeminiKey() {
   localStorage.setItem("apex_gemini_key", val);
   showSmartStatus(val ? "✅ <strong>Zapisano klucz Vision AI</strong> w pamięci tego telefonu!" : "ℹ️ Wyczyszczono klucz Vision AI.", "#10b981");
 }
-async function scanDeviceScreen(input) {
+
+
+    async function scanDeviceScreen(input) {
   const file = input.files ? input.files.item(0) : null;
   if (!file) return;
 
@@ -334,7 +336,7 @@ async function scanDeviceScreen(input) {
     return showSmartStatus("⚠️ <strong>Brak klucza Vision AI:</strong> Wklej klucz z Google AI Studio w pole powyżej.", "#f59e0b");
   }
 
-  showSmartStatus("🤖 <strong>[v3.1 Vision AI] Przygotowuję zdjęcie (1/2)...</strong>", "#0284c7");
+  showSmartStatus("🤖 <strong>[v3.9 Vision AI] Przygotowuję zdjęcie (1/2)...</strong>", "#0284c7");
 
   try {
     const base64Data = await new Promise((resolve, reject) => {
@@ -357,34 +359,47 @@ async function scanDeviceScreen(input) {
       reader.readAsDataURL(file);
     });
 
-    showSmartStatus("📡 <strong>[v3.1 Vision AI] Wysyłam do Gemini (2/2)...</strong>", "#0284c7");
-
     const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
 
     const host = ["generativelanguage", "googleapis", "com"].join(".");
-    const path = "/v1beta/models/gemini-3.8-flash:generateContent?key=";
-    const endpoint = `https://${host}${path}${encodeURIComponent(apiKey)}`;
+    const modelsToTry = ["gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-3.1-flash"];
+    let json = null;
+    let lastError = "Brak odpowiedzi z serwera AI.";
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 12000);
+    for (const modelName of modelsToTry) {
+      showSmartStatus(`📡 <strong>[v3.9 Vision AI] Analizuję przez ${modelName}...</strong>`, "#0284c7");
+      const endpoint = `https://${host}/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 12000);
 
-    const res = await fetch(endpoint, {
-      method: "POST",
-      signal: controller.signal,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{
-          parts: [
-            { text: prompt },
-            { inlineData: { mimeType: "image/jpeg", data: base64Data } }
-          ]
-        }]
-      })
-    });
-    clearTimeout(timeoutId);
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          signal: controller.signal,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { text: prompt },
+                { inlineData: { mimeType: "image/jpeg", data: base64Data } }
+              ]
+            }]
+          })
+        });
+        clearTimeout(timeoutId);
+        const data = await res.json();
+        if (!data.error) {
+          json = data;
+          break;
+        }
+        lastError = data.error.message;
+      } catch (e) {
+        clearTimeout(timeoutId);
+        lastError = e.name === "AbortError" ? "Timeout 12s" : e.message;
+      }
+    }
 
-    const json = await res.json();
-    if (json.error) throw new Error(json.error.message);
+    if (!json) throw new Error(lastError);
 
     const rawText = json.candidates?.at(0)?.content?.parts?.at(0)?.text || "";
     const cleanJson = rawText.replace(/```json|```/g, "").trim();
@@ -412,17 +427,17 @@ async function scanDeviceScreen(input) {
       const prevComment = document.getElementById("in-comment").value.trim();
       const note = `🤖 [Vision AI] Odczyt z ekranu: ${summary.map(s => s.replace(/<[^>]+>/g, "")).join(", ")}`;
       document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${note}` : note;
-      showSmartStatus(`✅ <strong>[v3.1 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
+      showSmartStatus(`✅ <strong>[v3.9 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
     } else {
-      showSmartStatus("⚠️ <strong>[v3.1 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
+      showSmartStatus("⚠️ <strong>[v3.9 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
     }
   } catch (err) {
-    const msg = err.name === "AbortError" ? "Przekroczono czas oczekiwania (12s) — sprawdź zasięg internetu." : err.message;
-    showSmartStatus(`⚠️ <strong>[v3.1 Vision AI]</strong> Błąd: ${msg}`, "#ef4444");
+    showSmartStatus(`⚠️ <strong>[v3.9 Vision AI]</strong> Błąd: ${err.message}`, "#ef4444");
   } finally {
     input.value = "";
   }
 }
+
 
 
 

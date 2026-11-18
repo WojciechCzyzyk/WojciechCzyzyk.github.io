@@ -11,6 +11,7 @@ function nowStamp() {
 }
 
 async function initLoginList() {
+  WardDB.trackVisit("Otwarcie strony logowania (Tablica)");
   wardState = await WardDB.load();
   const sel = document.getElementById("login-user");
   if (!sel || !wardState.users) return;

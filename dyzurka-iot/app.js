@@ -417,6 +417,17 @@ function printShiftReport() {
   win.print();
 }
 
+async function copyReportToHIS() {
+  const box = document.getElementById("report-content");
+  if (!box) return;
+  const plainText = box.innerText.replace(/\n{3,}/g, "\n\n").trim();
+  try {
+    await navigator.clipboard.writeText(plainText);
+    alert("✅ Skopiowano czysty raport do schowka! Możesz go teraz wkleić (Ctrl + V) bezpośrednio do głównego systemu HIS.");
+  } catch (e) {
+    alert("Zaznacz tekst w oknie raportu i wciśnij Ctrl + C.");
+  }
+}
 
 function printShiftReport() {
   const content = document.getElementById("report-content").innerHTML;

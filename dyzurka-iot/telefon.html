@@ -16,14 +16,14 @@
       <div style="margin-bottom:10px;">
         <label>Profil pracownika:</label>
         <select id="mob-user">
-          <option value="dyzurka">Piel. Anna K. (PIN: 1234)</option>
-          <option value="lekarz">Lek. Piotr N. (PIN: 5678)</option>
-          <option value="opiekun">Opiekun Janusz B. (PIN: 3333)</option>
+          <option value="dyzurka">Piel. Anna K. (Pielęgniarka)</option>
+          <option value="lekarz">Lek. Piotr N. (Lekarz Dyżurny)</option>
+          <option value="opiekun">Opiekun Janusz B. (Opiekun)</option>
         </select>
       </div>
       <div style="margin-bottom:14px;">
-        <label>Kod PIN:</label>
-        <input type="password" id="mob-pin" value="1234">
+        <label>Kod PIN (demo: 2222 pielęgniarka | 1111 lekarz | 3333 opiekun):</label>
+        <input type="password" id="mob-pin" value="2222" placeholder="Wpisz PIN...">
       </div>
       <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
     </div>
@@ -35,7 +35,10 @@
           <h1 style="font-size:1.1rem;">📱 Skaner Opaski QR</h1>
           <span id="mob-badge" style="font-size:0.78rem; color:var(--accent);">Pracownik</span>
         </div>
-        <a href="index.html" class="btn btn-sm btn-outline">🖥️ Tablica</a>
+        <div style="display:flex; gap:6px;">
+          <a href="index.html" class="btn btn-sm btn-outline">🖥️ Tablica</a>
+          <button class="btn btn-sm btn-outline" onclick="location.reload()">🔒 Wyloguj</button>
+        </div>
       </div>
 
       <div class="panel">
@@ -64,7 +67,7 @@
       </div>
     </div>
   </div>
-  <script src="db.js"></script>
+  <script src="db.js?v=10"></script>
   <script>
     let mobUser = null;
     let mobState = null;
@@ -75,11 +78,25 @@
       return `${pad(d.getDate())}.${pad(d.getMonth() + 1)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
     }
 
+    async function initMobLogin() {
+      mobState = await WardDB.load();
+      const sel = document.getElementById("mob-user");
+      if (!sel || !mobState.users) return;
+      sel.innerHTML = Object.entries(mobState.users)
+        .map(([key, u]) => `<option value="${key}">${u.name} (${u.label})</option>`)
+        .join("");
+    }
+
+    window.addEventListener("DOMContentLoaded", initMobLogin);
+
     async function mobLogin() {
+      if (!mobState) mobState = await WardDB.load();
       const uKey = document.getElementById("mob-user").value;
       const pin = document.getElementById("mob-pin").value.trim();
-      const user = USERS[uKey];
-      if (!user || user.pin !== pin) return alert("Błędny PIN!");
+      const usersMap = mobState.users || USERS;
+      const user = usersMap[uKey];
+      if (!user || user.pin !== pin) return alert("Błędny kod PIN!");
+
       mobUser = user;
       document.getElementById("mob-login").classList.add("hidden");
       document.getElementById("mob-app").classList.remove("hidden");

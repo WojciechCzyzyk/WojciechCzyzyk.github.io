@@ -198,14 +198,15 @@
           <h3 style="margin:0; color:#fbbf24;">📋 Tablica Zadań i Zleceń (Kanban Dyżurki)</h3>
           <span style="font-size:0.8rem; color:var(--muted);">Kliknij zadanie, aby zmienić status: 🔴 Do zrobienia ➔ 🟡 W przygotowaniu ➔ 🟢 Zrobione</span>
         </div>
-        <button class="btn btn-sm btn-outline" onclick="document.getElementById('tasks-modal').classList.add('hidden')">✖ Zamknij</button>
+        <button class="btn btn-sm btn-outline" onclick="closeTasksModal()">✖ Zamknij</button>
+        
       </div>
       <div id="tasks-board-list" style="display:flex; flex-direction:column; gap:10px; max-height:70vh; overflow-y:auto;"></div>
     </div>
   </div>
 
-  <script src="db.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="db.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>
 

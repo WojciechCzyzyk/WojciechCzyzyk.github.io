@@ -504,6 +504,7 @@ function openRoundsModal() {
         </div>
         <div>
           <label style="font-size:0.75rem;">Leki, uwagi i zalecenia po obchodzie:</label>
+          ${buildProcedureSelectHtml("round-meds-" + p.id)}
           <input id="round-meds-${p.id}" value="${(p.medications || "").replace(/"/g, "&quot;")}" placeholder="Wpisz ordynację leków i uwagi...">
         </div>
         <button class="btn btn-green btn-sm" style="margin-top:16px;" onclick="saveRoundNote('${p.id}')">💾 Zapisz</button>

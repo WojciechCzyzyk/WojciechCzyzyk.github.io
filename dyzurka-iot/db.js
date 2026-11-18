@@ -108,6 +108,10 @@ const WardDB = {
   },
 
   async save(data) {
+    if (!data || !Array.isArray(data.patients) || data.patients.length === 0) {
+      console.warn("Zablokowano próbę nadpisania bazy pustą listą pacjentów.");
+      return;
+    }
     localStorage.setItem("apex_ward_db_v3", JSON.stringify(data));
     if (FIREBASE_URL) {
       try {
@@ -121,6 +125,7 @@ const WardDB = {
       }
     }
   },
+
   
    async trackVisit(action, userName = "Gość (ekran logowania)") {
     try {

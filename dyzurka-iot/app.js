@@ -223,6 +223,7 @@ function openPatientModal(patId) {
       ${h.comment ? `<div>${h.comment}</div>` : ""}
     </div>`).join("") || `<div style="color:var(--muted);">Brak zapisów.</div>`;
 
+  renderPatientTasksInModal(pat);
   renderChart(pat);
   document.getElementById("patient-modal").classList.remove("hidden");
 }

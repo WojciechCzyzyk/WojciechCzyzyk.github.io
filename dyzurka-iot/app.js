@@ -228,7 +228,11 @@ function openPatientModal(patId) {
   document.getElementById("patient-modal").classList.remove("hidden");
 }
 
-function closeModal() { document.getElementById("patient-modal").classList.add("hidden"); }
+function closeModal() {
+  flushTaskTimers();
+  document.getElementById("patient-modal").classList.add("hidden");
+}
+
 
 async function saveMedications() {
   if (currentUser.role !== "lekarz") return;

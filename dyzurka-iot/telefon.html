@@ -62,9 +62,10 @@
         <div id="smart-input-status" class="hidden note-box" style="margin-bottom:10px; border-left-color:#8b5cf6;"></div>
        
         <div style="margin-bottom:10px; display:flex; gap:6px; align-items:center;">
-          <input type="password" id="gemini-api-key" placeholder="Klucz Google AI Studio (AIza...)" style="font-size:0.78rem; padding:6px 8px;" onchange="localStorage.setItem('apex_gemini_key', this.value.trim())">
+          <input type="text" id="gemini-api-key" placeholder="Klucz Google AI Studio (AQ.Ab8... / AIza...)" style="font-size:0.78rem; padding:6px 8px;" onchange="localStorage.setItem('apex_gemini_key', this.value.trim())">
           <button type="button" class="btn btn-sm btn-outline" onclick="saveGeminiKey()">🔑 Zapisz klucz AI</button>
         </div>
+
 
         
         <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>

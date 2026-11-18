@@ -368,7 +368,8 @@ function saveGeminiKey() {
     const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
 
     const host = ["generativelanguage", "googleapis", "com"].join(".");
-    const modelsToTry = ["gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-3.1-flash"];
+    const modelsToTry = ["gemini-3.8-flash", "gemini-4-hydrogen", "gemini-3-flash-preview"];
+
     let json = null;
     let lastError = "Brak odpowiedzi z serwera AI.";
 

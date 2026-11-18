@@ -343,11 +343,10 @@ async function scanDeviceScreen(input) {
   const file = input.files ? input.files.item(0) : null;
   if (!file) return;
 
-  showSmartStatus("📸 <strong>[v2.5] Przetwarzam obraz termometru...</strong>", "#0284c7");
+  showSmartStatus("📸 <strong>[v2.6] Analizuję zdjęcie termometru...</strong>", "#0284c7");
 
   try {
-    const processedDataUrl = await preprocessImageForOCR(file);
-    const result = await Tesseract.recognize(processedDataUrl, "eng", {
+    const result = await Tesseract.recognize(file, "eng", {
       tessedit_char_whitelist: "0123456789.,"
     });
 
@@ -362,18 +361,19 @@ async function scanDeviceScreen(input) {
     if (tempVal) {
       document.getElementById("in-temp").value = tempVal;
       const prevComment = document.getElementById("in-comment").value.trim();
-      const ocrNote = `📸 [v2.5] Odczyt OCR termometru: ${tempVal}°C`;
+      const ocrNote = `📸 [v2.6] Odczyt OCR termometru: ${tempVal}°C`;
       document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
-      showSmartStatus(`✅ <strong>[v2.5] Odczytano temperaturę:</strong> ${tempVal}°C (surowy odczyt: „${raw}”)`, "#10b981");
+      showSmartStatus(`✅ <strong>[v2.6] Odczytano temperaturę:</strong> ${tempVal}°C (surowy odczyt: „${raw}”)`, "#10b981");
     } else {
-      showSmartStatus(`⚠️ <strong>[v2.5]</strong> Nie rozpoznano temperatury. Surowy odczyt OCR: „${raw || "brak"}”.`, "#f59e0b");
+      showSmartStatus(`⚠️ <strong>[v2.6]</strong> Nie rozpoznano temperatury. Surowy odczyt OCR: „${raw || "brak"}”.`, "#f59e0b");
     }
   } catch (err) {
-    showSmartStatus(`⚠️ <strong>[v2.5]</strong> Błąd OCR: ${err.message}`, "#ef4444");
+    showSmartStatus(`⚠️ <strong>[v2.6]</strong> Błąd OCR: ${err.message}`, "#ef4444");
   } finally {
     input.value = "";
   }
 }
+
 
 
 

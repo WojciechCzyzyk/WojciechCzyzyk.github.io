@@ -100,7 +100,12 @@
     }
 
     async function initMobLogin() {
+
+      const savedKey = localStorage.getItem("apex_gemini_key") || "";
+      const keyInp = document.getElementById("gemini-api-key");
       
+      if (keyInp && savedKey) keyInp.value = savedKey;
+
       WardDB.trackVisit("Otwarcie skanera QR (Telefon)");
       
       mobState = await WardDB.load();

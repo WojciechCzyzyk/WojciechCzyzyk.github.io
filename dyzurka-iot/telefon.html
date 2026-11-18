@@ -309,55 +309,45 @@
       rec.start();
     }
 
-        async function scanDeviceScreen(input) {
-      const file = input.files && input.files[0];
-      if (!file) return;
+       async function scanDeviceScreen(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
 
-      showSmartStatus("📸 <strong>Analizuję zdjęcie wyświetlacza (OCR)...</strong> To potrwa 2–3 sekundy.", "#0284c7");
+  showSmartStatus("📸 <strong>Przetwarzam obraz termometru...</strong>", "#0284c7");
 
-      try {
-        const result = await Tesseract.recognize(file, "eng", {
-          tessedit_char_whitelist: "0123456789.,/"
-        });
-        const raw = result.data.text || "";
-        // Szukamy najpierw temperatury z kropką lub przecinkiem (np. 36.7 lub 38,4)
-        const tempMatch = raw.match(/\b(3[4-9]|4[0-2])[.,](\d)\b/);
-        // Wyciągamy wszystkie liczby całkowite 2- lub 3-cyfrowe z ekranu (od góry do dołu)
-        const cleanNoDecimals = raw.replace(/\b(3[4-9]|4[0-2])[.,]\d\b/g, " ");
-        const nums = (cleanNoDecimals.match(/\b\d{2,3}\b/g) || [])
-          .map(n => parseInt(n, 10))
-          .filter(n => n >= 35 && n <= 260);
+  try {
+    const processedDataUrl = await preprocessImageForOCR(file);
+    const result = await Tesseract.recognize(processedDataUrl, "eng", {
+      tessedit_char_whitelist: "0123456789.,"
+    });
 
-        if (nums.length >= 2) {
-          // Ekran ciśnieniomierza: pierwsza para to SYS > DIA, trzecia liczba to Puls
-          let sys = nums[0];
-          let dia = nums[1];
-          if (sys < dia) [sys, dia] = [dia, sys];
-          const pulse = nums[2] || null;
+    const raw = (result.data.text || "").replace(/\s+/g, "");
+    let tempVal = null;
 
-          document.getElementById("in-sys").value = sys;
-          document.getElementById("in-dia").value = dia;
-          if (pulse) document.getElementById("in-pulse").value = pulse;
+    const dotMatch = raw.match(/(3[4-9]|4[0-2])[.,](\d)/);
+    const noDotMatch = raw.match(/(3[4-9]|4[0-2])(\d)/);
 
-          const prevComment = document.getElementById("in-comment").value.trim();
-          const ocrNote = `📸 Odczyt OCR z aparatu: RR ${sys}/${dia}${pulse ? `, Puls ${pulse}` : ""}`;
-          document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
-
-          showSmartStatus(`✅ <strong>Odczytano ciśnieniomierz:</strong> Górne <strong>${sys}</strong> • Dolne <strong>${dia}</strong>${pulse ? ` • Puls <strong>${pulse}</strong>` : ""}`, "#10b981");
-        } else if (tempMatch) {
-          // Ekran termometru: pojedyncza wartość temperatury
-          const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
-          document.getElementById("in-temp").value = tempVal;
-          showSmartStatus(`✅ <strong>Odczytano termometr:</strong> Temperatura <strong>${tempVal}°C</strong>`, "#10b981");
-        } else {
-          showSmartStatus(`⚠️ Nie udało się jednoznacznie odczytać cyfr (wykryto: „${raw.trim() || "brak"}”). Zrób wyraźniejsze zbliżenie na sam wyświetlacz LCD.`, "#f59e0b");
-        }
-      } catch (err) {
-        showSmartStatus(`⚠️ Błąd analizy obrazu: ${err.message}`, "#ef4444");
-      } finally {
-        input.value = "";
-      }
+    if (dotMatch) {
+      tempVal = `${dotMatch[1]}.${dotMatch[2]}`;
+    } else if (noDotMatch) {
+      tempVal = `${noDotMatch[1]}.${noDotMatch[2]}`;
     }
+
+    if (tempVal) {
+      document.getElementById("in-temp").value = tempVal;
+      const prevComment = document.getElementById("in-comment").value.trim();
+      const ocrNote = `📸 Odczyt OCR termometru: ${tempVal}°C`;
+      document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
+      showSmartStatus(`✅ <strong>Odczytano temperaturę:</strong> ${tempVal}°C (surowy tekst: „${raw}”)`, "#10b981");
+    } else {
+      showSmartStatus(`⚠️ Nie rozpoznano temperatury. Surowy odczyt OCR: „${raw || "brak"}”. Zrób wyraźniejsze zbliżenie.`, "#f59e0b");
+    }
+  } catch (err) {
+    showSmartStatus(`⚠️ Błąd OCR: ${err.message}`, "#ef4444");
+  } finally {
+    input.value = "";
+  }
+}
 
     
     window.addEventListener("DOMContentLoaded", initMobLogin);

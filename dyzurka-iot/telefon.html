@@ -195,6 +195,121 @@
       banner.innerHTML = `<strong>📡 Wysłano na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
       document.getElementById("in-comment").value = "";
     }
+    function showSmartStatus(html, color = "#8b5cf6") {
+      const box = document.getElementById("smart-input-status");
+      if (!box) return;
+      box.classList.remove("hidden");
+      box.style.borderLeftColor = color;
+      box.innerHTML = html;
+    }
+
+    function matchPatientFromSpeech(text) {
+      const lower = text.toLowerCase();
+      const roomMatch = lower.match(/(?:sala|sali|pokój)\s*(\d{3})/) || lower.match(/\b(404|405|406|407|408|413|414)\b/);
+      const roomNum = roomMatch ? roomMatch[1] : null;
+
+      let bestPat = null;
+      for (const p of mobState.patients) {
+        const cleanName = p.name.replace(/\(.*?\)/g, "").trim().toLowerCase(); // np. "tomasz w."
+        const parts = cleanName.split(/\s+/);
+        const firstName = parts[0] || "";
+        const lastInit = (parts[1] || "").replace(".", "");
+        const patRoomNum = (p.room.match(/\d{3}/) || [])[0];
+
+        // 1. Dopasowanie Imię + Numer Sali (np. "Tomasz sala 405")
+        if (firstName && roomNum && lower.includes(firstName) && patRoomNum === roomNum) {
+          return p;
+        }
+        // 2. Dopasowanie Imię + Litera nazwiska (np. "Tomasz W")
+        if (firstName && lastInit && new RegExp(`\\b${firstName}\\s+${lastInit}\\b`, "i").test(lower)) {
+          bestPat = p;
+        }
+        // 3. Samo imię lub sam numer sali jako rezerwa
+        if (!bestPat && firstName && new RegExp(`\\b${firstName}\\b`, "i").test(lower)) {
+          bestPat = p;
+        }
+        if (!bestPat && roomNum && patRoomNum === roomNum) {
+          bestPat = p;
+        }
+      }
+      return bestPat;
+    }
+
+    function parseVoiceCommand(transcript) {
+      const text = transcript.trim();
+      const lower = text.toLowerCase();
+      const summary = [];
+
+      // 1. Dopasowanie pacjenta
+      const pat = matchPatientFromSpeech(text);
+      if (pat) {
+        document.getElementById("mob-patient").value = pat.id;
+        updateSelectedInfo();
+        summary.push(`👤 Pacjent: <strong>${pat.name} (${pat.room})</strong>`);
+      }
+
+      // 2. Ciśnienie (np. "ciśnienie 125 na 80" lub "125/80")
+      const bpMatch = lower.match(/(?:ciśnienie\s*)?(\d{2,3})\s*(?:na|\/|-)\s*(\d{2,3})/);
+      if (bpMatch) {
+        let v1 = parseInt(bpMatch[1], 10);
+        let v2 = parseInt(bpMatch[2], 10);
+        if (v1 < v2) [v1, v2] = [v2, v1];
+        document.getElementById("in-sys").value = v1;
+        document.getElementById("in-dia").value = v2;
+        summary.push(`💓 RR: <strong>${v1}/${v2}</strong>`);
+      }
+
+      // 3. Puls (np. "puls 74" lub "tętno 82")
+      const pulseMatch = lower.match(/(?:puls|tętno)\s*(\d{2,3})/);
+      if (pulseMatch) {
+        document.getElementById("in-pulse").value = parseInt(pulseMatch[1], 10);
+        summary.push(`📈 Puls: <strong>${pulseMatch[1]}</strong>`);
+      }
+
+      // 4. Temperatura (np. "temperatura 37,8" lub "38.2 stopnia")
+      const tempMatch = lower.match(/(?:temperatura|temp\.?)\s*(\d{2})[.,](\d)/) || lower.match(/\b(3[5-9]|4[0-2])[.,](\d)\b/);
+      if (tempMatch) {
+        const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
+        document.getElementById("in-temp").value = tempVal;
+        summary.push(`🌡️ Temp: <strong>${tempVal}°C</strong>`);
+      }
+
+      // 5. Zabieg / podany lek (wszystko po słowach kluczowych lub cały komunikat jako notatka)
+      const actionMatch = text.match(/(?:podano|kroplówka|lek|zabieg|uwaga|komentarz)\s+(.+)/i);
+      const commentTxt = actionMatch ? `🎙️ Podano/Zabieg: ${actionMatch[1]}` : `🎙️ Wpis głosowy: "${text}"`;
+      document.getElementById("in-comment").value = commentTxt;
+      summary.push(`📝 Notatka: <strong>${commentTxt}</strong>`);
+
+      showSmartStatus(`<strong>🎙️ Rozpoznano mowę:</strong> „${text}”<br>${summary.join(" • ")}`, "#8b5cf6");
+    }
+
+    function startVoiceDictation() {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) return alert("Twoja przeglądarka nie obsługuje rozpoznawania mowy. Użyj Chrome na Androidzie lub Safari na iOS.");
+
+      const rec = new SpeechRec();
+      rec.lang = "pl-PL";
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+
+      const btn = document.getElementById("btn-voice-input");
+      btn.textContent = "🔴 Słucham... Mów teraz!";
+      showSmartStatus("🎙️ <strong>Słucham...</strong> Powiedz np.: <em>„Tomasz sala 405, ciśnienie 125 na 80, puls 74, podano Solu-Medrol 125 mg”</em>", "#ef4444");
+
+      rec.onresult = (ev) => {
+        const transcript = ev.results[0][0].transcript;
+        parseVoiceCommand(transcript);
+      };
+      rec.onerror = (ev) => {
+        showSmartStatus(`⚠️ Błąd mikrofonu: ${ev.error}. Sprawdź uprawnienia przeglądarki.`, "#ef4444");
+      };
+      rec.onend = () => {
+        btn.textContent = "🎙️ Dyktuj wpis";
+      };
+      rec.start();
+    }
+
+    
     window.addEventListener("DOMContentLoaded", initMobLogin);
     window.addEventListener("DOMContentLoaded", initMobLogin);
   </script>

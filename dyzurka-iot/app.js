@@ -651,8 +651,32 @@ function renderPatientTasksInModal(pat) {
 function openTasksModal() {
   const listBox = document.getElementById("tasks-board-list");
   listBox.innerHTML = wardState.patients.map(p => {
-    // Generowanie listy zadań dla pacjenta oraz obsługa interfejsu dodawania nowych zleceń
-    // (pełny kod funkcji dostępny w pliku źródłowym dyzurka-iot/app.js)
+    const tasks = ensureTasks(p);
+    const pills = tasks.map(t => {
+      const b = getTaskBadge(t.status);
+      return `
+        <div onclick="cycleTaskStatus('${p.id}', '${t.id}', true)" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:6px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:5px;">
+          <span style="font-size:0.84rem; color:#f8fafc;">${t.text}</span>
+          <span style="color:${b.color}; font-weight:800; font-size:0.75rem; white-space:nowrap;">${b.label}</span>
+        </div>`;
+    }).join("") || `<div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">Brak aktywnych zadań</div>`;
+
+    return `
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 200px 1fr; gap:12px; align-items:start;">
+        <div>
+          <strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br>
+          <span style="font-weight:700;">${p.name}</span><br>
+          <span style="font-size:0.74rem; color:var(--muted);">${p.alertNote || ""}</span>
+        </div>
+        <div>
+          ${pills}
+          ${buildProcedureSelectHtml("new-task-" + p.id)}
+          <div style="display:flex; gap:6px; margin-top:6px;">
+            <input id="new-task-${p.id}" placeholder="Dopisz dawkę lub nowe zadanie..." style="padding:6px 8px; font-size:0.82rem;">
+            <button class="btn btn-sm" onclick="addCustomTask('${p.id}', true)">➕ Dodaj</button>
+          </div>
+        </div>
+      </div>`;
   }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
 
   document.getElementById("tasks-modal").classList.remove("hidden");

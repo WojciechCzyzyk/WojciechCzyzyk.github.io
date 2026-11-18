@@ -20,6 +20,8 @@
   - `pomysly_na_lekcje.md` — bank autorskich scenariuszy warsztatowych APEX
   - `pomysly_na_quiz.md` — katalog formatów aplikacji edukacyjnych
   - `apex_copilot_biznes.md` — strategia wdrożeń B2B, przewagi i metodyka APEX AI Copilot (oddzielona od edukacji)
+  - `Architektura_Wzorce_Wdrozeniowe_APEX.md` — obowiązujące standardy architektoniczne (wzorzec uniwersalnego adaptera DB, chmura, UX Zero-Training, Poka-Yoke oraz ścieżka klonowania i wdrożeń B2B)
+
 
 * **Podkatalog `docs/` (Dokumenty ofertowe, CV, formalne i załączniki WWW):**
   - `docs/wojciech_czyzyk_CV.md` — modułowe CV inżynierskie

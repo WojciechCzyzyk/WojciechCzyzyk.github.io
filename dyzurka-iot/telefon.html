@@ -156,14 +156,39 @@
       document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
     }
 
-    function simulateQrScan() {
+    async function simulateQrScan() {
+      const box = document.getElementById("qr-camera-box");
+      const video = document.getElementById("qr-video");
       const sel = document.getElementById("mob-patient");
-      if (sel.options.length > 1) {
-        sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
-        updateSelectedInfo();
+
+      const finishDemoScan = (stream = null) => {
+        if (stream) stream.getTracks().forEach(t => t.stop());
+        if (box) box.classList.add("hidden");
+        if (sel && sel.options.length > 1) {
+          sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+          updateSelectedInfo();
+        }
+        const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
+        showSmartStatus(`ℹ️ <strong>Funkcja testowa (Skaner QR):</strong> Odczyt kodów QR z opasek pacjentów jest obecnie w fazie testowej i nie jest jeszcze w pełni wspierany produkcyjnie.<br><em>(Tryb demo: automatycznie przełączono na: <strong>${patName}</strong>)</em>`, "#f59e0b");
+      };
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia && box && video) {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+          video.srcObject = stream;
+          box.classList.remove("hidden");
+          showSmartStatus("📷 <strong>Skaner QR (wersja testowa):</strong> Trwa odczyt opaski pacjenta...", "#10b981");
+          setTimeout(() => finishDemoScan(stream), 2200);
+          return;
+        } catch (e) {
+          // Brak zgody lub brak kamery - przechodzimy do trybu symulacji
+        }
       }
-      alert("📷 Zeskanowano opaskę QR pacjenta! Przypisano stanowisko.");
+      finishDemoScan(null);
     }
+
+
+    
 
     function analyzeTrendWithAI(pat, sys, dia, pulse, temp) {
       const prevList = pat.history.filter(h => h.type === "pomiar");

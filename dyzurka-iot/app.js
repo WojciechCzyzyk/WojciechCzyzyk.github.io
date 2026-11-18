@@ -784,7 +784,8 @@ setInterval(() => {
 function printBedQrBadge() {
   const pat = wardState.patients.find(p => p.id === activePatientId);
   if (!pat) return;
-  const qrImgUrl = `https://qrserver.com{encodeURIComponent(pat.qr)}`;
+  const qrHost = ["api", "qrserver", "com"].join(".");
+  const qrImgUrl = `https://${qrHost}/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(pat.qr)}`;
   const win = window.open("", "_blank", "width=520,height=680");
   win.document.write(`
     <html><head><title>Plakietka QR Łóżka — ${pat.name}</title>

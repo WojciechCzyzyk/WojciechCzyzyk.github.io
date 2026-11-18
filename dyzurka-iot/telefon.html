@@ -310,16 +310,15 @@
       };
       rec.start();
     }
-
 function preprocessImageForOCR(file) {
   return new Promise((resolve) => {
     const img = new Image();
     img.onload = () => {
-      // Wycinamy środkowy obszar zdjęcia (eliminuje paski ekranu / ramki obudowy)
-      const cropX = Math.round(img.width * 0.1);
-      const cropY = Math.round(img.height * 0.25);
-      const cropW = Math.round(img.width * 0.8);
-      const cropH = Math.round(img.height * 0.5);
+      const isPortrait = img.height > img.width;
+      const cropX = Math.round(img.width * (isPortrait ? 0.05 : 0.10));
+      const cropW = Math.round(img.width * (isPortrait ? 0.90 : 0.80));
+      const cropY = Math.round(img.height * (isPortrait ? 0.30 : 0.25));
+      const cropH = Math.round(img.height * (isPortrait ? 0.40 : 0.50));
 
       const targetWidth = 640;
       const scale = targetWidth / cropW;
@@ -349,12 +348,11 @@ function preprocessImageForOCR(file) {
   });
 }
 
-
 async function scanDeviceScreen(input) {
   const file = input.files && input.files[0];
   if (!file) return;
 
-  showSmartStatus("📸 <strong>Przetwarzam obraz termometru...</strong>", "#0284c7");
+  showSmartStatus("📸 <strong>[v2.4] Przetwarzam obraz termometru...</strong>", "#0284c7");
 
   try {
     const processedDataUrl = await preprocessImageForOCR(file);
@@ -377,14 +375,14 @@ async function scanDeviceScreen(input) {
     if (tempVal) {
       document.getElementById("in-temp").value = tempVal;
       const prevComment = document.getElementById("in-comment").value.trim();
-      const ocrNote = `📸 Odczyt OCR termometru: ${tempVal}°C`;
+      const ocrNote = `📸 [v2.4] Odczyt OCR termometru: ${tempVal}°C`;
       document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
-      showSmartStatus(`✅ <strong>Odczytano temperaturę:</strong> ${tempVal}°C (surowy odczyt: „${raw}”)`, "#10b981");
+      showSmartStatus(`✅ <strong>[v2.4] Odczytano temperaturę:</strong> ${tempVal}°C (surowy odczyt: „${raw}”)`, "#10b981");
     } else {
-      showSmartStatus(`⚠️ Nie rozpoznano temperatury. Surowy odczyt OCR: „${raw || "brak"}”. Zrób wyraźniejsze zbliżenie.`, "#f59e0b");
+      showSmartStatus(`⚠️ <strong>[v2.4]</strong> Nie rozpoznano temperatury. Surowy odczyt OCR: „${raw || "brak"}”.`, "#f59e0b");
     }
   } catch (err) {
-    showSmartStatus(`⚠️ Błąd OCR: ${err.message}`, "#ef4444");
+    showSmartStatus(`⚠️ <strong>[v2.4]</strong> Błąd OCR: ${err.message}`, "#ef4444");
   } finally {
     input.value = "";
   }

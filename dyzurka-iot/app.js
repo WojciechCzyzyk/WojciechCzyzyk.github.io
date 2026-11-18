@@ -673,8 +673,81 @@ function openTasksModal() {
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
 
+const BASE_PROCEDURES = [
+  "💧 Kroplówka NaCl 0.9%",
+  "💧 Kroplówka PWE",
+  "💊 Paracetamol",
+  "💊 Pyralgina",
+  "💉 Założenie / wymiana wenflonu",
+  "🩹 Pielęgnacja portu / wkłucia",
+  "🩸 Pobranie krwi (morfologia / CRP)",
+  "🌡️ Kontrola temp. i RR",
+  "⚖️ Bilans płynów (dobowy)"
+];
+
+function getProceduresList() {
+  if (!Array.isArray(wardState.procedures) || wardState.procedures.length === 0) {
+    wardState.procedures = [...BASE_PROCEDURES];
+  }
+  return wardState.procedures;
+}
+
+function extractBaseProcedureName(rawText) {
+  let base = rawText
+    .replace(/^[\p{Emoji}\s]+/gu, "")
+    .replace(/\(.*?\)/g, "")
+    .replace(/\b\d+([.,]\d+)?\s*(mg|g|ml|mcg|ug|j\.m\.|jm|%|x\d+|raz|razy|h|godz|dni)\b/gi, "")
+    .replace(/\b(i\.v\.|iv|p\.o\.|po|s\.c\.|sc|i\.m\.|im|rano|wieczorem|w południe|doraźnie|na noc|co \d+h)\b/gi, "")
+    .replace(/[,;+\-/]+/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  const words = base.split(" ").filter(w => w.length > 1 && !/^\d+$/.test(w));
+  return words.slice(0, 3).join(" ").trim();
+}
+
+function learnNewProcedure(text) {
+  const clean = text.trim();
+  if (!clean || clean.length < 3 || clean.startsWith("Oczekuje")) return null;
+  const baseName = extractBaseProcedureName(clean);
+  if (!baseName || baseName.length < 3) return null;
+
+  const list = getProceduresList();
+  const exists = list.some(item => {
+    const existingBase = extractBaseProcedureName(item).toLowerCase();
+    return existingBase === baseName.toLowerCase() || existingBase.includes(baseName.toLowerCase());
+  });
+
+  if (!exists) {
+    const formattedEntry = `💊 ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}`;
+    list.unshift(formattedEntry);
+    return formattedEntry;
+  }
+  return null;
+}
+
+function insertProcedureToInput(selectEl, inputId) {
+  const val = selectEl.value;
+  if (!val) return;
+  const inp = document.getElementById(inputId);
+  if (!inp) return;
+  inp.value = inp.value.trim() ? `${inp.value.trim()}, ${val}` : `${val} `;
+  inp.focus();
+  selectEl.selectedIndex = 0;
+}
+
+function buildProcedureSelectHtml(inputId) {
+  const opts = getProceduresList().map(p => `<option value="${p.replace(/"/g, "&quot;")}">${p}</option>`).join("");
+  return `
+    <select onchange="insertProcedureToInput(this, '${inputId}')" style="margin-bottom:6px; border-color:var(--accent); font-size:0.82rem;">
+      <option value="">⚡ Wybierz gotowy zabieg / lek z listy...</option>
+      ${opts}
+    </select>`;
+}
+
+
 setInterval(() => {
   if (currentUser && !isDragging && Object.keys(taskTimers).length === 0) {
     refreshBoard();
   }
 }, 4000);
+

@@ -1428,3 +1428,13 @@ Status Pacjenta
        - `Opiekun medyczny` (`opiekun` / PIN `3333`): szybkie odznaczanie czynności opiekuńczych i pielęgnacyjnych (np. zmiana pozycji, spacer w gorsecie, posiłek) z automatycznym wpisem godziny i autora do historii pacjenta.
      * **Automatyczna Analiza Trendów AI:** Po każdym pomiarze system porównuje wynik z poprzednimi wpisami pacjenta i sam dopisuje komentarz ostrzegawczy (np. *„⚠️ Nagły wzrost ciśnienia skurczowego o +18 mmHg”*).
 
+## 📹 Zadanie domowe (po powrocie ze szpitala): Uruchomienie monitoringu Hikvision HiWatch
+* **Status:** Sprzęt kompletny na strychu (zakup 19.08.2021, Ivel.pl) — do uruchomienia po powrocie do domu (poprosić domowników o zniesienie pudełka, nie dźwigać!).
+* **Dokładne modele z faktury:**
+  * **Rejestrator hybrydowy XVR:** `Hikvision HiWatch HWD-7108MH-G2(S)` (8-kanałowy)
+  * **Kamery (5 szt.):** `Hikvision HiWatch HWT-T240-M` (4 MPx, 4-w-1: TVI/AHD/CVI/CVBS)
+  * **Zasilanie i nośnik:** Zasilacz `12V 5A` + rozgałęźnik 8-wyjściowy z bezpiecznikami + dysk `Toshiba 2TB S300` + wtyki BNC skręcane.
+* **Diagnoza problemu z 2021 r. i procedura uruchomienia:**
+  1. **Test na krótko na biurku:** Podłączyć 1 kamerę krótkim przewodem BNC bezpośrednio do **CH1** rejestratora oraz zasilanie `12V` bezpośrednio (z pominięciem rozgałęźnika) — zasłonić obiektyw i sprawdzić czerwone diody IR.
+  2. **Wywołanie menu kamery przez koncentryk (UTC / Hikvision-C):** Model `HWT-T240-M` nie ma zewnętrznego joysticka na kablu. W podglądzie **CH1** na rejestratorze kliknąć PPM ➔ **Sterowanie PTZ** ➔ przycisk **Iris +**, aby otworzyć menu OSD kamery i wymusić natywny tryb **TVI 4MP (25fps PAL)** zgodny z rejestratorem `HWD-7108MH-G2(S)` (lub sprawdzić ustawienie standardu wejścia w menu rejestratora oraz poprawić zarobienie wtyków BNC).
+  3. **Podgląd mobilny:** Włączyć usługę **Hik-Connect** (*Sieć ➔ Dostęp do platformy*) i zeskanować kod QR w aplikacji na smartfonie.

@@ -29,8 +29,10 @@ async function login() {
   const usersMap = wardState.users || USERS;
   const user = usersMap[uKey];
   if (!user || user.pin !== pin) return alert("Błędny kod PIN!");
-
+  
   currentUser = user;
+  WardDB.trackVisit("Logowanie na Tablicę", user.name ({user.label}));
+ 
   document.getElementById("login-screen").classList.add("hidden");
   document.getElementById("ward-screen").classList.remove("hidden");
   document.getElementById("current-user-badge").textContent = `${user.name} (${user.label})`;

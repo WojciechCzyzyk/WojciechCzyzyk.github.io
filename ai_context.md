@@ -1438,3 +1438,14 @@ Status Pacjenta
   1. **Test na krótko na biurku:** Podłączyć 1 kamerę krótkim przewodem BNC bezpośrednio do **CH1** rejestratora oraz zasilanie `12V` bezpośrednio (z pominięciem rozgałęźnika) — zasłonić obiektyw i sprawdzić czerwone diody IR.
   2. **Wywołanie menu kamery przez koncentryk (UTC / Hikvision-C):** Model `HWT-T240-M` nie ma zewnętrznego joysticka na kablu. W podglądzie **CH1** na rejestratorze kliknąć PPM ➔ **Sterowanie PTZ** ➔ przycisk **Iris +**, aby otworzyć menu OSD kamery i wymusić natywny tryb **TVI 4MP (25fps PAL)** zgodny z rejestratorem `HWD-7108MH-G2(S)` (lub sprawdzić ustawienie standardu wejścia w menu rejestratora oraz poprawić zarobienie wtyków BNC).
   3. **Podgląd mobilny:** Włączyć usługę **Hik-Connect** (*Sieć ➔ Dostęp do platformy*) i zeskanować kod QR w aplikacji na smartfonie.
+ 
+ ## 🏥 Postęp projektu: Smart Ward Board & Mobile QR (`dyzurka-iot/`) — 18.11.2026
+* **Status wdrożenia i prezentacji:**
+  * System w pełni wdrożony na GitHub Pages (`wojciechczyzyk.github.io/dyzurka-iot/`) z bazą w chmurze Firebase Realtime Database (`apex-dyzurka-demo-default-rtdb.europe-west1.firebasedatabase.app`).
+  * Wygenerowano i przekazano w sekretariacie oddziału w Wałbrzychu pakiet wydruków A4: ofertę pilotażową pod układ sal (`404–408`, `413–414`), krótką instrukcję pilotażową dla personelu (z PIN-ami `1111`, `2222`, `3333`) oraz ofertę dedykowaną pod kliniki weterynaryjne (trop polecony w Jeleniej Górze).
+* **Nowe moduły wdrożone podczas sprintu na oddziale:**
+  * **Tablica zadań Kanban z 5-sekundowym buforem (`taskTimers`):** Pozwala personelowi swobodnie poprawić przypadkowe kliknięcie statusu bez zaśmiecania historii pacjenta (natychmiastowy zapis przy zamknięciu okna).
+  * **Raport Zdania Dyżuru (Przekazanie Zmiany) z podglądem do druku A4:** Grupuje dane według pacjenta na sekcje *Co zrobiono* i *Do zrobienia* oraz udostępnia klikalne żetony zespołu kończącego dyżur pod głównym podpisem osoby zdającej.
+  * **Cicha telemetria wejść i logowań (`WardDB.trackVisit` ➔ `/auditLogins.json`):** Odporny na przycisk `🔄 Reset` rejestr w Firebase zapisujący czas, akcję, profil użytkownika oraz typ urządzenia (`Komputer` / `Telefon`).
+* **Dokumentacja architektoniczna:** Utworzono plik `Architektura_Wzorce_Wdrozeniowe_APEX.md` oraz zaktualizowano rejestr `mapa_projektow.md`.
+ 

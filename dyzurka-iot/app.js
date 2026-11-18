@@ -235,6 +235,7 @@ async function saveMedications() {
   pat.medications = document.getElementById("modal-meds-input").value.trim();
   pat.history.push({ date: nowStamp(), type: "zlecenie", author: currentUser.name, comment: `💊 Zlecenie leków: ${pat.medications}` });
   wardState.logs.unshift({ time: nowStamp(), text: `${currentUser.name} zmienił zlecenia dla ${pat.name}.`, alert: false });
+  addTaskToPatient(pat, pat.medications, currentUser.name);
   await WardDB.save(wardState);
   openPatientModal(pat.id);
   renderLogs();

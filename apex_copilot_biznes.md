@@ -63,3 +63,17 @@
  
   - * **Moduł „Wieża Kontroli” (Live Dashboard Zespołu):** Ten sam mechanizm nadzoru na żywo działa w firmach MŚP — menedżer lub sekretarka widzi na jednym ekranie kafelki wszystkich pracowników (etap zlecenia, czas realizacji oraz żółte/czerwone alerty AI o blokadach), dzięki czemu interweniuje wyłącznie tam, gdzie pojawia się zator, zamiast obdzwaniać całą załogę.
 
+---
+
+## Nowa Linia Usługowa: Spersonalizowane Ekosystemy WWW (*Human-Centered Brand Ecosystem*)
+
+### 1. Idea i Przewaga Rynkowa
+W erze przeładowanych reklamami mediów społecznościowych oraz identycznych, chłodnych stron korporacyjnych klienci szukają **autentyczności, spójności i ludzkiej twarzy marki**. Zamiast suchego katalogu usług budujemy dla firm (np. hoteli, pensjonatów, gabinetów medycznych, pracowni eksperckich) oraz liderów **spersonalizowane ekosystemy cyfrowe na własnej domenie**.
+
+### 2. Co wyróżnia to rozwiązanie?
+* **Ciepły *Storytelling* i Wizerunek:** Połączenie konkretnych kompetencji biznesowych z autentyczną historią ludzi stojących za marką (np. autorskie ilustracje zespołu, kulisy pracy, strefy wartości dla gości/pacjentów).
+* **Modułowa, lekka architektura (*1 Sekcja = 1 Plik*):** Szybka, bezawaryjna strona bez ciężkich wtyczek, łatwa do samodzielnej rozbudowy przez właściciela o nowe aktualności, oferty specjalne czy poradniki.
+* **Niezależność od algorytmów:** Własna przestrzeń w sieci, w której marka nie ginie w tłumie postów na Facebooku i ma pełną kontrolę nad wizerunkiem.
+
+### 3. Argument Sprzedażowy w Rozmowach B2B
+* **Efekt „Lodołamacza”:** Prezentacja własnego, żywego ekosystemu `wojciechczyzyk.github.io` podczas spotkań biznesowych natychmiast ociepla relację i stanowi gotowy dowód (*Live Proof*), jak unikalna oprawa potrafi wyróżnić markę na tle konkurencji.

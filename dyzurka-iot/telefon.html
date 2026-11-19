@@ -92,12 +92,14 @@
 
         <!-- 3. Pola odczytu i wysyłka -->
         <label>2. Parametry z ciśnieniomierza i termometru:</label>
+        
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
-          <div><label>Ciśnienie Górne (SYS)</label><input type="number" id="in-sys" value="125"></div>
-          <div><label>Ciśnienie Dolne (DIA)</label><input type="number" id="in-dia" value="80"></div>
-          <div><label>Puls (bpm)</label><input type="number" id="in-pulse" value="74"></div>
-          <div><label>Temperatura (°C)</label><input type="number" step="0.1" id="in-temp" value="36.7"></div>
+          <div><label>Ciśnienie Górne (SYS)</label><input type="number" id="in-sys" placeholder="0"></div>
+          <div><label>Ciśnienie Dolne (DIA)</label><input type="number" id="in-dia" placeholder="0"></div>
+          <div><label>Puls (bpm)</label><input type="number" id="in-pulse" placeholder="0"></div>
+          <div><label>Temperatura (°C)</label><input type="number" step="0.1" id="in-temp" placeholder="0.0"></div>
         </div>
+
 
         <div style="margin-bottom:12px;">
           <label>3. Dodatkowy komentarz pielęgniarski (opcjonalnie):</label>

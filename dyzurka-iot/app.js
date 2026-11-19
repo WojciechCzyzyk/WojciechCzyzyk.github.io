@@ -215,6 +215,17 @@ function openPatientModal(patId) {
   const medsInput = document.getElementById("modal-meds-input");
   medsInput.value = pat.medications || "";
   medsInput.disabled = currentUser.role !== "lekarz";
+
+  const noteArea = document.getElementById("modal-general-note");
+  if (noteArea) {
+    noteArea.value = pat.generalNote || "";
+    noteArea.disabled = currentUser.role === "opiekun";
+  }
+  const saveNoteBtn = document.getElementById("btn-save-general-note");
+  if (saveNoteBtn) saveNoteBtn.classList.toggle("hidden", currentUser.role === "opiekun");
+
+
+  
   document.getElementById("btn-save-meds").classList.toggle("hidden", currentUser.role !== "lekarz");
 
   document.getElementById("caregiver-actions").classList.toggle("hidden", currentUser.role !== "opiekun");

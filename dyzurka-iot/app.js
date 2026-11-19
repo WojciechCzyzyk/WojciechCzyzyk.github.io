@@ -541,28 +541,25 @@ function openRoundsModal() {
 
   document.getElementById("rounds-modal").classList.remove("hidden");
 }
-
 async function saveRoundNote(patId) {
-const pat = wardState.patients.find(p => p.id === patId);
-if (!pat) return;
-const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
-const newMeds = document.getElementById(round-meds-${patId}).value.trim();
-const newNote = document.getElementById(round-note-${patId})?.value.trim() || "";
-pat.generalNote = newNote;
-pat.medications = newMeds;
-pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: 🩺 Obchód lekarski (${docName}): ${newMeds} });
-wardState.logs.unshift({ time: nowStamp(), text: 🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room})., alert: false });
-addTaskToPatient(pat, newMeds, docName);
-learnNewProcedure(newMeds);
-await WardDB.save(wardState);
-renderLogs();
-alert(✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName}));
+  const pat = wardState.patients.find(p => p.id === patId);
+  if (!pat) return;
+  const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
+  const newMeds = document.getElementById(`round-meds-${patId}`).value.trim();
+  const newNote = document.getElementById(`round-note-${patId}`)?.value.trim() || "";
+  pat.generalNote = newNote;
+  pat.medications = newMeds;
+  pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
+  wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });
+
+  addTaskToPatient(pat, newMeds, docName);
+  learnNewProcedure(newMeds);
+
+  await WardDB.save(wardState);
+  renderLogs();
+  alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);
 }
----
 
-### CZĘŚĆ 5 / 5 — Wklej bezpośrednio pod częścią 4 (do samego końca pliku)
-
-```javascript
 function ensureTasks(pat) {
   if (!Array.isArray(pat.tasks)) {
     pat.tasks = pat.medications && !pat.medications.startsWith("Oczekuje")
@@ -583,7 +580,6 @@ function getTaskBadge(status) {
   if (status === "progress") return { label: "🟡 W przygotowaniu", bg: "rgba(245,158,11,0.2)", border: "#f59e0b", color: "#fbbf24" };
   return { label: "🔴 Do zrobienia", bg: "rgba(239,68,68,0.2)", border: "#ef4444", color: "#f87171" };
 }
-
 const taskTimers = {};
 
 async function flushTaskTimers() {
@@ -650,31 +646,16 @@ async function addCustomTask(patId, fromBoard = false) {
   if (fromBoard) openTasksModal();
   else openPatientModal(patId);
 }
-
 function renderPatientTasksInModal(pat) {
   const box = document.getElementById("modal-tasks-box");
   if (!box) return;
   const tasks = ensureTasks(pat);
   const itemsHtml = tasks.map(t => {
     const b = getTaskBadge(t.status);
-    return `
-      <div onclick="cycleTaskStatus('${pat.id}', '${t.id}', false)" title="Kliknij, aby zmienić status Kanban" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px;">
-        <div>
-          <strong style="color:#f8fafc; font-size:0.86rem;">${t.text}</strong>
-          <div style="font-size:0.72rem; color:var(--muted);">Zlecił: ${t.author}${t.updatedBy ? ` • Zmiana: ${t.updatedBy}` : ""}</div>
-        </div>
-        <span style="color:${b.color}; font-weight:800; font-size:0.78rem; white-space:nowrap;">${b.label}</span>
-      </div>`;
+    return `<div onclick="cycleTaskStatus('${pat.id}', '${t.id}', false)" title="Kliknij, aby zmienić status Kanban" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:8px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px;"><div><strong style="color:#f8fafc; font-size:0.86rem;">${t.text}</strong><div style="font-size:0.72rem; color:var(--muted);">Zlecił: ${t.author}${t.updatedBy ? ` • Zmiana: ${t.updatedBy}` : ""}</div></div><span style="color:${b.color}; font-weight:800; font-size:0.78rem; white-space:nowrap;">${b.label}</span></div>`;
   }).join("") || `<div style="font-size:0.8rem; color:var(--muted);">Brak przypisanych zadań.</div>`;
 
-  box.innerHTML = `
-    <label style="color:#fbbf24; font-weight:700; margin-bottom:8px;">📌 Zadania i Zlecenia Pacjenta (kliknij kafelek, aby przełączyć status):</label>
-    <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:8px;">${itemsHtml}</div>
-    ${buildProcedureSelectHtml("new-task-" + pat.id)}
-    <div style="display:flex; gap:6px;">
-      <input id="new-task-${pat.id}" placeholder="Dopisz dawkę lub nowe zadanie...">
-      <button class="btn btn-sm" onclick="addCustomTask('${pat.id}', false)">➕ Dodaj</button>
-    </div>`;
+  box.innerHTML = `<label style="color:#fbbf24; font-weight:700; margin-bottom:8px;">📌 Zadania i Zlecenia Pacjenta (kliknij kafelek, aby przełączyć status):</label><div style="display:flex; flex-direction:column; gap:6px; margin-bottom:8px;">${itemsHtml}</div>${buildProcedureSelectHtml("new-task-" + pat.id)}<div style="display:flex; gap:6px;"><input id="new-task-${pat.id}" placeholder="Dopisz dawkę lub nowe zadanie..."><button class="btn btn-sm" onclick="addCustomTask('${pat.id}', false)">➕ Dodaj</button></div>`;
 }
 
 let currentTasksFilter = "all";
@@ -699,44 +680,19 @@ function openTasksModal() {
     const tasks = ensureTasks(p).filter(t => currentTasksFilter === "all" || t.status === currentTasksFilter);
     const pills = tasks.map(t => {
       const b = getTaskBadge(t.status);
-      return `
-        <div onclick="cycleTaskStatus('${p.id}', '${t.id}', true)" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:6px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:5px;">
-          <span style="font-size:0.84rem; color:#f8fafc;">${t.text}</span>
-          <span style="color:${b.color}; font-weight:800; font-size:0.75rem; white-space:nowrap;">${b.label}</span>
-        </div>`;
+      return `<div onclick="cycleTaskStatus('${p.id}', '${t.id}', true)" style="cursor:pointer; background:${b.bg}; border:1px solid ${b.border}; border-radius:8px; padding:6px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:5px;"><span style="font-size:0.84rem; color:#f8fafc;">${t.text}</span><span style="color:${b.color}; font-weight:800; font-size:0.75rem; white-space:nowrap;">${b.label}</span></div>`;
     }).join("") || `<div style="font-size:0.78rem; color:var(--muted); margin-bottom:6px;">Brak aktywnych zadań</div>`;
 
-    return `
-      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 200px 1fr; gap:12px; align-items:start;">
-        <div>
-          <strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br>
-          <span style="font-weight:700;">${p.name}</span><br>
-          <span style="font-size:0.74rem; color:var(--muted);">${p.alertNote || ""}</span>
-        </div>
-        <div>
-          ${pills}
-          ${buildProcedureSelectHtml("new-task-" + p.id)}
-          <div style="display:flex; gap:6px; margin-top:6px;">
-            <input id="new-task-${p.id}" placeholder="Dopisz dawkę lub nowe zadanie..." style="padding:6px 8px; font-size:0.82rem;">
-            <button class="btn btn-sm" onclick="addCustomTask('${p.id}', true)">➕ Dodaj</button>
-          </div>
-        </div>
-      </div>`;
+    return `<div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 200px 1fr; gap:12px; align-items:start;"><div><strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br><span style="font-weight:700;">${p.name}</span><br><span style="font-size:0.74rem; color:var(--muted);">${p.alertNote || ""}</span></div><div>${pills}${buildProcedureSelectHtml("new-task-" + p.id)}<div style="display:flex; gap:6px; margin-top:6px;"><input id="new-task-${p.id}" placeholder="Dopisz dawkę lub nowe zadanie..." style="padding:6px 8px; font-size:0.82rem;"><button class="btn btn-sm" onclick="addCustomTask('${p.id}', true)">➕ Dodaj</button></div></div></div>`;
   }).join("") || `<div style="color:var(--muted); padding:10px;">Brak zadań spełniających wybrany filtr.</div>`;
 
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
 
 const BASE_PROCEDURES = [
-  "💧 Kroplówka NaCl 0.9%",
-  "💧 Kroplówka PWE",
-  "💊 Paracetamol",
-  "💊 Pyralgina",
-  "💉 Założenie / wymiana wenflonu",
-  "🩹 Pielęgnacja portu / wkłucia",
-  "🩸 Pobranie krwi (morfologia / CRP)",
-  "🌡️ Kontrola temp. i RR",
-  "⚖️ Bilans płynów (dobowy)"
+  "💧 Kroplówka NaCl 0.9%", "💧 Kroplówka PWE", "💊 Paracetamol", "💊 Pyralgina",
+  "💉 Założenie / wymiana wenflonu", "🩹 Pielęgnacja portu / wkłucia",
+  "🩸 Pobranie krwi (morfologia / CRP)", "🌡️ Kontrola temp. i RR", "⚖️ Bilans płynów (dobowy)"
 ];
 
 function getProceduresList() {
@@ -747,14 +703,10 @@ function getProceduresList() {
 }
 
 function extractBaseProcedureName(rawText) {
-  let base = rawText
-    .replace(/^[\p{Emoji}\s]+/gu, "")
-    .replace(/\(.*?\)/g, "")
+  let base = rawText.replace(/^[\p{Emoji}\s]+/gu, "").replace(/\(.*?\)/g, "")
     .replace(/\b\d+([.,]\d+)?\s*(mg|g|ml|mcg|ug|j\.m\.|jm|%|x\d+|raz|razy|h|godz|dni)\b/gi, "")
     .replace(/\b(i\.v\.|iv|p\.o\.|po|s\.c\.|sc|i\.m\.|im|rano|wieczorem|w południe|doraźnie|na noc|co \d+h)\b/gi, "")
-    .replace(/[,;+\-/]+/g, " ")
-    .replace(/\s{2,}/g, " ")
-    .trim();
+    .replace(/[,;+\-/]+/g, " ").replace(/\s{2,}/g, " ").trim();
   const words = base.split(" ").filter(w => w.length > 1 && !/^\d+$/.test(w));
   return words.slice(0, 3).join(" ").trim();
 }
@@ -764,13 +716,11 @@ function learnNewProcedure(text) {
   if (!clean || clean.length < 3 || clean.startsWith("Oczekuje")) return null;
   const baseName = extractBaseProcedureName(clean);
   if (!baseName || baseName.length < 3) return null;
-
   const list = getProceduresList();
   const exists = list.some(item => {
     const existingBase = extractBaseProcedureName(item).toLowerCase();
     return existingBase === baseName.toLowerCase() || existingBase.includes(baseName.toLowerCase());
   });
-
   if (!exists) {
     const formattedEntry = `💊 ${baseName.charAt(0).toUpperCase() + baseName.slice(1)}`;
     list.unshift(formattedEntry);
@@ -791,85 +741,94 @@ function insertProcedureToInput(selectEl, inputId) {
 
 function buildProcedureSelectHtml(inputId) {
   const opts = getProceduresList().map(p => `<option value="${p.replace(/"/g, "&quot;")}">${p}</option>`).join("");
-  return `
-    <select onchange="insertProcedureToInput(this, '${inputId}')" style="margin-bottom:6px; border-color:var(--accent); font-size:0.82rem;">
-⚡ Wybierz gotowy zabieg / lek z listy...
-${opts}
-`;
+  return `<select onchange="insertProcedureToInput(this, '${inputId}')" style="margin-bottom:6px; border-color:var(--accent); font-size:0.82rem;"><option value="">⚡ Wybierz gotowy zabieg / lek z listy...</option>${opts}</select>`;
 }
 setInterval(() => {
-const anyModalOpen = ["patient-modal", "report-modal", "staff-modal", "rounds-modal", "tasks-modal"]
-.some(id => !document.getElementById(id)?.classList.contains("hidden"));
-const admitOpen = !document.getElementById("admit-form")?.classList.contains("hidden");
-if (currentUser && !isDragging && !anyModalOpen && !admitOpen && Object.keys(taskTimers).length === 0) {
-refreshBoard();
-}
+  const anyModalOpen = ["patient-modal", "report-modal", "staff-modal", "rounds-modal", "tasks-modal"]
+    .some(id => !document.getElementById(id)?.classList.contains("hidden"));
+  const admitOpen = !document.getElementById("admit-form")?.classList.contains("hidden");
+  if (currentUser && !isDragging && !anyModalOpen && !admitOpen && Object.keys(taskTimers).length === 0) {
+    refreshBoard();
+  }
 }, 4000);
+
 function printBedQrBadge() {
-const pat = wardState.patients.find(p => p.id === activePatientId);
-if (!pat) return;
-const qrHost = ["api", "qrserver", "com"].join(".");
-const qrImgUrl = https://${qrHost}/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(pat.qr)};
-const win = window.open("", "_blank", "width=520,height=680");
-win.document.write(<html><head><title>Plakietka QR Łóżka — ${pat.name}</title> <style> body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 95vh; margin: 0; background: #fff; color: #0f172a; } .badge { border: 3px solid #0f172a; border-radius: 16px; padding: 28px 32px; text-align: center; width: 340px; } .loc { font-size: 22px; font-weight: 800; color: #0284c7; margin-bottom: 6px; } .name { font-size: 26px; font-weight: 900; margin-bottom: 16px; } .qr { margin: 12px auto; border: 1px solid #cbd5e1; padding: 10px; border-radius: 12px; display: inline-block; } .code { font-family: monospace; font-size: 15px; font-weight: 700; letter-spacing: 1px; margin-top: 8px; } .note { margin-top: 14px; padding: 8px 12px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; font-size: 13px; font-weight: 700; } .foot { margin-top: 16px; font-size: 11px; color: #64748b; } </style></head><body> <div class="badge"> <div class="loc">${pat.room} • ${pat.bed}</div> <div class="name">${pat.name}</div> <div class="qr"><img src="${qrImgUrl}" width="200" height="200" alt="QR"></div> <div class="code">${pat.qr}</div> ${pat.alertNote ?⚠️ ${pat.alertNote} : ""} <div class="foot">Smart Ward Board • APEX Edge-to-AI (RODO-safe)</div> </div> <script>window.onload = () => { setTimeout(() => window.print(), 350); };<\/script> </body></html>);
-win.document.close();
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+  const qrHost = ["api", "qrserver", "com"].join(".");
+  const qrImgUrl = `https://${qrHost}/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(pat.qr)}`;
+  const win = window.open("", "_blank", "width=520,height=680");
+  const alertHtml = pat.alertNote ? `<div class="note">⚠️ ${pat.alertNote}</div>` : "";
+  win.document.write(
+    `<html><head><title>Plakietka QR Łóżka — ${pat.name}</title>` +
+    `<style>body{font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;min-height:95vh;margin:0;background:#fff;color:#0f172a}.badge{border:3px solid #0f172a;border-radius:16px;padding:28px 32px;text-align:center;width:340px}.loc{font-size:22px;font-weight:800;color:#0284c7;margin-bottom:6px}.name{font-size:26px;font-weight:900;margin-bottom:16px}.qr{margin:12px auto;border:1px solid #cbd5e1;padding:10px;border-radius:12px;display:inline-block}.code{font-family:monospace;font-size:15px;font-weight:700;letter-spacing:1px;margin-top:8px}.note{margin-top:14px;padding:8px 12px;background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;font-size:13px;font-weight:700}.foot{margin-top:16px;font-size:11px;color:#64748b}</style></head>` +
+    `<body><div class="badge"><div class="loc">${pat.room} • ${pat.bed}</div><div class="name">${pat.name}</div><div class="qr"><img src="${qrImgUrl}" width="200" height="200" alt="QR"></div><div class="code">${pat.qr}</div>${alertHtml}<div class="foot">Smart Ward Board • APEX Edge-to-AI (RODO-safe)</div></div>` +
+    `<script>window.onload=()=>{setTimeout(()=>window.print(),350)};<\/script></body></html>`
+  );
+  win.document.close();
 }
+
 function generatePatientDayReport() {
-const pat = wardState.patients.find(p => p.id === activePatientId);
-if (!pat) return;
-document.getElementById("patient-modal").classList.add("hidden");
-const vitals = pat.history.filter(h => h.type === "pomiar");
-const events = pat.history.filter(h => h.type !== "pomiar");
-const tasks = ensureTasks(pat);
-const vitalsRows = vitals.map(v => <li><strong>${v.date}</strong> (${v.author}): ${formatVitalsLine(v)} ${v.comment ? — ${v.comment} : ""}</li>).join("")
-|| <li style="color:var(--muted);">Brak pomiarów parametrów życiowych w ciągu doby.</li>;
-const tasksRows = tasks.map(t => {
-const b = getTaskBadge(t.status);
-return <li><strong>${b.label}:</strong> ${t.text} <span style="color:var(--muted);">(zlecił: ${t.author}${t.updatedBy ? , zmiana: ${t.updatedBy} : ""})</span></li>;
-}).join("") || <li style="color:var(--muted);">Brak przypisanych zleceń.</li>;
-const eventsRows = events.map(e => <li><strong>${e.date}</strong> (${e.author}): ${e.comment}</li>).join("")
-|| <li style="color:var(--muted);">Brak dodatkowych zdarzeń pielęgniarskich.</li>;
-document.getElementById("report-content").innerHTML = <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;"> <strong style="font-size:1.05rem; color:var(--accent);">📄 INDYWIDUALNY RAPORT DNIA PACJENTA (${nowStamp()})</strong><br> <div style="margin-top:4px; font-size:0.86rem;"> Pacjent: <strong>${pat.name}</strong> • Lokalizacja: <strong>${pat.room} / ${pat.bed}</strong> • Opaska: <code>${pat.qr}</code><br> Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> ${pat.alertNote ?• ⚠️ ${pat.alertNote} : ""} </div> </div> <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;"> <strong style="color:#38bdf8;">💓 Chronologia pomiarów z doby:</strong> <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${vitalsRows}</ul> </div> <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;"> <strong style="color:#fbbf24;">📌 Realizacja zleceń i leków (Kanban):</strong> <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${tasksRows}</ul> </div> <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px;"> <strong style="color:var(--green);">🕒 Pozostałe zdarzenia, opieka i ruch pacjenta:</strong> <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${eventsRows}</ul> </div>;
-document.getElementById("report-modal").classList.remove("hidden");
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+  document.getElementById("patient-modal").classList.add("hidden");
+  const vitals = pat.history.filter(h => h.type === "pomiar");
+  const events = pat.history.filter(h => h.type !== "pomiar");
+  const tasks = ensureTasks(pat);
+
+  const vitalsRows = vitals.map(v => `<li><strong>${v.date}</strong> (${v.author}): ${formatVitalsLine(v)} ${v.comment ? `— <em>${v.comment}</em>` : ""}</li>`).join("")
+    || `<li style="color:var(--muted);">Brak pomiarów parametrów życiowych w ciągu doby.</li>`;
+  const tasksRows = tasks.map(t => `<li><strong>${getTaskBadge(t.status).label}:</strong> ${t.text} <span style="color:var(--muted);">(zlecił: ${t.author}${t.updatedBy ? `, zmiana: ${t.updatedBy}` : ""})</span></li>`).join("")
+    || `<li style="color:var(--muted);">Brak przypisanych zleceń.</li>`;
+  const eventsRows = events.map(e => `<li><strong>${e.date}</strong> (${e.author}): ${e.comment}</li>`).join("")
+    || `<li style="color:var(--muted);">Brak dodatkowych zdarzeń pielęgniarskich.</li>`;
+  const alertPart = pat.alertNote ? `• <span style="color:#fbbf24;">⚠️ ${pat.alertNote}</span>` : "";
+
+  document.getElementById("report-content").innerHTML =
+    `<div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;"><strong style="font-size:1.05rem; color:var(--accent);">📄 INDYWIDUALNY RAPORT DNIA PACJENTA (${nowStamp()})</strong><br><div style="margin-top:4px; font-size:0.86rem;">Pacjent: <strong>${pat.name}</strong> • Lokalizacja: <strong>${pat.room} / ${pat.bed}</strong> • Opaska: <code>${pat.qr}</code><br>Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> ${alertPart}</div></div>` +
+    `<div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;"><strong style="color:#38bdf8;">💓 Chronologia pomiarów z doby:</strong><ul style="margin:6px 0 0 18px; font-size:0.83rem;">${vitalsRows}</ul></div>` +
+    `<div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;"><strong style="color:#fbbf24;">📌 Realizacja zleceń i leków (Kanban):</strong><ul style="margin:6px 0 0 18px; font-size:0.83rem;">${tasksRows}</ul></div>` +
+    `<div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px;"><strong style="color:var(--green);">🕒 Pozostałe zdarzenia, opieka i ruch pacjenta:</strong><ul style="margin:6px 0 0 18px; font-size:0.83rem;">${eventsRows}</ul></div>`;
+
+  document.getElementById("report-modal").classList.remove("hidden");
 }
+
 function generateDailyWardReport() {
-renderReportTeamChips();
-const teamList = selectedShiftTeam.size ? [...selectedShiftTeam].join(", ") : currentUser.name;
-const aiHighlights = [];
-wardState.patients.forEach(p => {
-const lastV = getLatestNonZeroVitals(p.history);
-if (lastV) {
-if (lastV.temp >= 38.0) aiHighlights.push(🔥 <strong>Gorączka (${lastV.temp}°C):</strong> ${p.name} (${p.room}/${p.bed}).);
-if (lastV.sys >= 150 || lastV.dia >= 95) aiHighlights.push(💓 <strong>Podwyższone ciśnienie (${lastV.sys}/${lastV.dia} mmHg):</strong> ${p.name} (${p.room}/${p.bed}).);
-if (lastV.pulse >= 100) aiHighlights.push(⚡ <strong>Tachykardia (${lastV.pulse} bpm):</strong> ${p.name} (${p.room}/${p.bed}).);
+  renderReportTeamChips();
+  const teamList = selectedShiftTeam.size ? [...selectedShiftTeam].join(", ") : currentUser.name;
+  const aiHighlights = [];
+  wardState.patients.forEach(p => {
+    const lastV = getLatestNonZeroVitals(p.history);
+    if (lastV) {
+      if (lastV.temp >= 38.0) aiHighlights.push(`🔥 <strong>Gorączka (${lastV.temp}°C):</strong> ${p.name} (${p.room}/${p.bed}).`);
+      if (lastV.sys >= 150 || lastV.dia >= 95) aiHighlights.push(`💓 <strong>Podwyższone ciśnienie (${lastV.sys}/${lastV.dia} mmHg):</strong> ${p.name} (${p.room}/${p.bed}).`);
+      if (lastV.pulse >= 100) aiHighlights.push(`⚡ <strong>Tachykardia (${lastV.pulse} bpm):</strong> ${p.name} (${p.room}/${p.bed}).`);
+    }
+    const pendingTasks = ensureTasks(p).filter(t => t.status !== "done");
+    if (pendingTasks.length > 0) aiHighlights.push(`⏳ <strong>Niezakończone zlecenia (${pendingTasks.length}):</strong> ${p.name} (${p.room}) — ${pendingTasks.map(t => t.text).join(", ")}.`);
+    const transfers = p.history.filter(h => h.type === "ruch");
+    if (transfers.length > 0) aiHighlights.push(`🔄 <strong>Zmiana sali/łóżka:</strong> ${p.name} — ${transfers[transfers.length - 1].comment.replace(/^🔄\s*/, "")}`);
+  });
+
+  const aiListItems = aiHighlights.length ? aiHighlights.map(item => `<li>${item}</li>`).join("") : `<li>✅ Brak incydentów krytycznych — przebieg dnia stabilny u wszystkich pacjentów.</li>`;
+  const aiSummaryHtml = `<div style="background:rgba(139,92,246,0.12); border:1px solid #8b5cf6; border-radius:10px; padding:12px; margin-bottom:14px;"><strong style="color:#c4b5fd; font-size:0.92rem;">🤖 PODSUMOWANIE AI — WYJĄTKOWE SYTUACJE DO PRZEKAZANIA ZMIANIE:</strong><ul style="margin:6px 0 0 18px; font-size:0.82rem; line-height:1.45;">${aiListItems}</ul></div>`;
+
+  const patientsBreakdown = wardState.patients.map(p => {
+    const vitals = p.history.filter(h => h.type === "pomiar");
+    const tasks = ensureTasks(p);
+    const otherEvents = p.history.filter(h => h.type !== "pomiar");
+    const vitalsTxt = vitals.length ? vitals.map(v => `${v.date}: ${formatVitalsLine(v)}`).join(" &nbsp;|&nbsp; ") : "Brak pomiarów";
+    const tasksTxt = tasks.length ? tasks.map(t => `${getTaskBadge(t.status).label} ${t.text}`).join("<br>") : `<span style="color:var(--muted);">Brak zleceń</span>`;
+    const eventsTxt = otherEvents.length ? otherEvents.slice(-4).map(e => `• ${e.date} (${e.author}): ${e.comment}`).join("<br>") : `<span style="color:var(--muted);">Brak wpisów dodatkowych</span>`;
+    const patAlert = p.alertNote ? `⚠️ ${p.alertNote}` : "";
+
+    return `<div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px; margin-bottom:10px; page-break-inside:avoid;"><div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:5px; margin-bottom:6px;"><strong style="color:var(--accent);">${p.room} • ${p.bed} — ${p.name}</strong><span style="font-size:0.78rem; color:#fbbf24;">${patAlert}</span></div><div style="font-size:0.8rem; margin-bottom:6px;"><strong>💓 Pomiary dnia:</strong> ${vitalsTxt}</div><div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:0.79rem;"><div><strong>📌 Status zadań:</strong><br>${tasksTxt}</div><div><strong>🕒 Przebieg dnia / zdarzenia:</strong><br>${eventsTxt}</div></div></div>`;
+  }).join("");
+
+  document.getElementById("report-content").innerHTML =
+    `<div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:12px;"><strong style="font-size:1.05rem; color:var(--green);">📊 ZBIORCZY RAPORT DNIA ODDZIAŁU — PRZEKAZANIE DYŻURU (${nowStamp()})</strong><br><div style="margin-top:4px; font-size:0.84rem;">Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> • Zespół zmiany: <strong>${teamList}</strong> • Pacjentów: <strong>${wardState.patients.length}</strong></div></div>` +
+    aiSummaryHtml + patientsBreakdown;
+
+  document.getElementById("report-modal").classList.remove("hidden");
 }
-const pendingTasks = ensureTasks(p).filter(t => t.status !== "done");
-if (pendingTasks.length > 0) {
-aiHighlights.push(⏳ <strong>Niezakończone zlecenia (${pendingTasks.length}):</strong> ${p.name} (${p.room}) — ${pendingTasks.map(t => t.text).join(", ")}.);
-}
-const transfers = p.history.filter(h => h.type === "ruch");
-if (transfers.length > 0) {
-aiHighlights.push(🔄 <strong>Zmiana sali/łóżka:</strong> ${p.name} — ${transfers[transfers.length - 1].comment.replace(/^🔄\s*/, "")});
-}
-});
-const aiSummaryHtml = <div style="background:rgba(139,92,246,0.12); border:1px solid #8b5cf6; border-radius:10px; padding:12px; margin-bottom:14px;"> <strong style="color:#c4b5fd; font-size:0.92rem;">🤖 PODSUMOWANIE AI — WYJĄTKOWE SYTUACJE DO PRZEKAZANIA ZMIANIE:</strong> <ul style="margin:6px 0 0 18px; font-size:0.82rem; line-height:1.45;"> ${aiHighlights.length ? aiHighlights.map(item =>${item}).join("") : ✅ Brak incydentów krytycznych — przebieg dnia stabilny u wszystkich pacjentów.} </ul> </div>;
-const patientsBreakdown = wardState.patients.map(p => {
-const vitals = p.history.filter(h => h.type === "pomiar");
-const tasks = ensureTasks(p);
-const otherEvents = p.history.filter(h => h.type !== "pomiar");
-const vitalsTxt = vitals.length
-? vitals.map(v => ${v.date}: ${formatVitalsLine(v)}).join("  |  ")
-: "Brak pomiarów";
-const tasksTxt = tasks.length
-? tasks.map(t => ${getTaskBadge(t.status).label} ${t.text}).join("
-")
-: <span style="color:var(--muted);">Brak zleceń</span>;
-const eventsTxt = otherEvents.length
-? otherEvents.slice(-4).map(e => • ${e.date} (${e.author}): ${e.comment}).join("
-")
-: <span style="color:var(--muted);">Brak wpisów dodatkowych</span>;
-return <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px; margin-bottom:10px; page-break-inside:avoid;"> <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:5px; margin-bottom:6px;"> <strong style="color:var(--accent);">${p.room} • ${p.bed} — ${p.name}</strong> <span style="font-size:0.78rem; color:#fbbf24;">${p.alertNote ?⚠️ ${p.alertNote} : ""}</span> </div> <div style="font-size:0.8rem; margin-bottom:6px;"><strong>💓 Pomiary dnia:</strong> ${vitalsTxt}</div> <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:0.79rem;"> <div><strong>📌 Status zadań:</strong><br>${tasksTxt}</div> <div><strong>🕒 Przebieg dnia / zdarzenia:</strong><br>${eventsTxt}</div> </div> </div>;
-}).join("");
-document.getElementById("report-content").innerHTML =  <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:12px;"> <strong style="font-size:1.05rem; color:var(--green);">📊 ZBIORCZY RAPORT DNIA ODDZIAŁU — PRZEKAZANIE DYŻURU (${nowStamp()})</strong><br> <div style="margin-top:4px; font-size:0.84rem;"> Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> • Zespół zmiany: <strong>${teamList}</strong> • Pacjentów: <strong>${wardState.patients.length}</strong> </div> </div> ${aiSummaryHtml} ${patientsBreakdown};
-document.getElementById("report-modal").classList.remove("hidden");
-}
+

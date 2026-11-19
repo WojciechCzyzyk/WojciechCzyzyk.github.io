@@ -4,11 +4,38 @@ let activePatientId = null;
 let draggedPatientId = null;
 let isDragging = false;
 
+
+
 function nowStamp() {
   const d = new Date();
   const pad = n => String(n).padStart(2, "0");
   return `${pad(d.getDate())}.${pad(d.getMonth() + 1)} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
+
+
+function formatVitalsLine(v) {
+  if (!v) return "";
+  const parts = [];
+  if (Number(v.sys) > 0 && Number(v.dia) > 0) parts.push(`RR <strong>${v.sys}/${v.dia}</strong> mmHg`);
+  if (Number(v.pulse) > 0) parts.push(`Puls <strong>${v.pulse}</strong> bpm`);
+  if (Number(v.temp) > 0) parts.push(`Temp <strong>${v.temp}°C</strong>`);
+  return parts.join(", ");
+}
+
+function getLatestNonZeroVitals(historyList) {
+  const m = historyList.filter(h => h.type === "pomiar");
+  if (!m.length) return null;
+  const pick = (key) => {
+    for (let i = m.length - 1; i >= 0; i--) {
+      if (Number(m[i][key]) > 0) return m[i][key];
+    }
+    return 0;
+  };
+  const sys = pick("sys"), dia = pick("dia"), pulse = pick("pulse"), temp = pick("temp");
+  if (!sys && !dia && !pulse && !temp) return null;
+  return { sys, dia, pulse, temp, date: m[m.length - 1].date };
+}
+
 
 async function initLoginList() {
   WardDB.trackVisit("Otwarcie strony logowania (Tablica)");

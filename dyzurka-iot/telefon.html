@@ -268,7 +268,6 @@
         const matched = mobState.patients.find(p => p.qr.toLowerCase() === code.toLowerCase());
         if (matched) {
           sel.value = matched.id;
-          updateSelectedInfo();
           showSmartStatus(`✅ <strong>Zeskanowano kod QR:</strong> <code>${matched.qr}</code> ➔ Wybrano pacjenta: <strong>${matched.name} (${matched.room} / ${matched.bed})</strong>`, "#10b981");
         } else {
           showSmartStatus(`⚠️ <strong>Odczytano kod QR:</strong> <code>${code}</code>, ale nie przypisano go do żadnego pacjenta na tym oddziale.`, "#f59e0b");

@@ -403,20 +403,25 @@
         return;
       }
 
-      // TRYB B: Zapis parametrów życiowych (+ opcjonalny komentarz)
+            // TRYB B: Zapis parametrów życiowych (surowe wartości z dokładną godziną; 0 = brak danego pomiaru)
+      const measuredParts = [];
+      if (sys > 0 && dia > 0) measuredParts.push(`RR ${sys}/${dia} mmHg`);
+      if (pulse > 0) measuredParts.push(`Puls ${pulse} bpm`);
+      if (temp > 0) measuredParts.push(`Temp ${temp}°C`);
+
       const aiAnalysis = analyzeTrendWithAI(pat, sys, dia, pulse, temp);
       const fullComment = userComment ? `${userComment} | ${aiAnalysis.text}` : aiAnalysis.text;
 
       pat.history.push({ date: stamp, type: "pomiar", sys, dia, pulse, temp, author: mobUser.name, comment: fullComment });
       mobState.logs.unshift({
         time: stamp,
-        text: `${mobUser.name} zapisała pomiar dla ${pat.name} (${pat.room}/${pat.bed}): RR ${sys}/${dia}, Temp ${temp}°C. ${aiAnalysis.isAlert ? aiAnalysis.text : ""}`,
+        text: `${mobUser.name} zapisała pomiar dla ${pat.name} (${pat.room}/${pat.bed}): ${measuredParts.join(", ")}. ${aiAnalysis.isAlert ? aiAnalysis.text : ""}`,
         alert: aiAnalysis.isAlert
       });
 
       await WardDB.save(mobState);
       banner.style.borderLeftColor = aiAnalysis.isAlert ? "var(--red)" : "var(--green)";
-      banner.innerHTML = `<strong>📡 Wysłano pomiar na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
+      banner.innerHTML = `<strong>📡 Wysłano pomiar (${measuredParts.join(", ")}) na tablicę!</strong><br>${aiAnalysis.text}`;
       document.getElementById("in-comment").value = "";
       resetVitalsInputs();
     }

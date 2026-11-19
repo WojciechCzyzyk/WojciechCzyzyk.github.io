@@ -134,3 +134,16 @@
   - `auto-fallback mechanism` — mechanizm automatycznego przełączania na model zapasowy
   - `privacy by design` — ochrona prywatności wpisana w architekturę systemu
 
+---
+
+### Sesja #8 (19.11.2026) — Point-of-Care Execution & Multi-User Data Integrity (`dyzurka-iot/`)
+* **Wynik KPI słownictwa:** 5 / 5 pojęć (**100%** — zaliczone wszystkie: `point-of-care execution`, `race condition`, `read-modify-write`, `single source of truth`, `audit trail` + pełny szkielet `First of all`, `Moreover`, `As a result`, `In the end`, `Does that make sense?`).
+* **Pytanie rekrutacyjne / architektoniczne:** *"In your Smart Ward Board system, multiple nurses update patient tasks and vitals from their phones at the exact same time. How do you prevent race conditions and avoid overwriting each other's data in a lightweight REST database?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"I understand this problem deeply because I dealt with similar concurrency issues in the past when I built a high-traffic call center system with a MySQL database. **First of all**, we use a cloud database as our **single source of truth**. **Moreover**, we implemented **point-of-care execution** with a full **audit trail**, so the system logs who performed a medical procedure and the exact timestamp right when it is done. **As a result**, we apply the **read-modify-write** pattern on every phone update to avoid data conflicts when modifying the database. **In the end**, for larger hospital deployments, we also plan to add queuing patterns to completely eliminate **race conditions**. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `to perform a medical procedure` — wykonać procedurę medyczną / zabieg (zamiast *make procedure*)
+  - `to avoid data conflicts` — uniknąć konfliktów danych (zamiast *confilt data*)
+  - `when modifying the database` — podczas modyfikowania bazy danych (zamiast *during modify*)
+  - `for sure` / `In the end` — pisownia (zamiast *for shore* / *In the and*)
+  - `queuing patterns` — wzorce kolejkowania

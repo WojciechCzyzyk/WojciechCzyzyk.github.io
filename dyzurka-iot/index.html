@@ -72,8 +72,12 @@
       <div class="panel">
         <div class="panel-title">
           <span>📋 Ostatnia aktywność</span>
-          <button class="btn btn-sm btn-outline" onclick="resetDemoData()" title="Przywróć dane startowe">🔄 Reset</button>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-green" onclick="generateDailyWardReport()" title="Zbiorczy raport dnia z podsumowaniem AI">📊 Raport Dnia + AI</button>
+            <button class="btn btn-sm btn-outline" onclick="resetDemoData()" title="Przywróć dane startowe">🔄 Reset</button>
+          </div>
         </div>
+
         <div id="logs-container" class="log-list"></div>
       </div>
     </div>

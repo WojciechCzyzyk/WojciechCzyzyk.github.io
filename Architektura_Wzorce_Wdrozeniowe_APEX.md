@@ -38,3 +38,22 @@
 * **Współistnienie zamiast kosztownej wymiany:** W średnich i dużych organizacjach (szpitale z systemami HIS, firmy z systemami ERP) wymiana głównego oprogramowania bywa zablokowana przez wieloletnie umowy, rozliczenia lub działy IT. W takich miejscach wdrażamy aplikację jako **niezależną, lekką warstwę operacyjną** stojącą obok systemu głównego.
 * **Błyskawiczna rejestracja w biegu:** Pracownicy na pierwszej linii (przy łóżku pacjenta, na hali, na obchodzie) nie męczą się z przeklikiwaniem kilkunastu zakładek ciężkiego systemu — rejestrują powtarzalne czynności jednym kliknięciem na telefonie lub tablecie.
 * **Zbiorczy eksport do systemu głównego:** Na koniec zmiany lub etapu pracy nakładka generuje gotowe, czyste podsumowanie (wydruk A4, tekst gotowy do wklejenia przez `Ctrl + V` lub plik CSV/API), dzięki czemu przeniesienie danych do głównego systemu zajmuje kilkanaście sekund zamiast kilkudziesięciu minut.
+
+* # Standard Dydaktyczny Akademii — Architektura „1 Sekcja = 1 Mały Plik” (SOP)
+
+## 1. Założenie Pedagogiczne (Zero Przeładowania Poznawczego)
+Dziecko oraz początkujący kursant nie mogą zaczynać nauki od przeglądania kilkusetlinijkowego pliku HTML przeładowanego stylami i skryptami. Zamiast tego stosujemy **rozdzielenie odpowiedzialności** w najprostszej możliwej formie:
+* **Szkielet główny (`index.html`):** Krótki kontener (ok. 30 linijek), w którym każda kolejna treść to **jedna powtarzalna linijka** `<section class="card" data-plik="sekcje/nazwa.html"></section>`.
+* **Warstwa wyglądu (`style.css`):** Wydzielona całkowicie poza widok edytowanego tekstu, dzięki czemu uczeń nie zepsuje układu strony podczas pisania.
+* **Klocki treści (`sekcje/*.html`):** Każdy temat (np. opis ulubionej gry, zadanie z matematyki, rysunek) to osobny, 5–10 linijkowy plik zawierający wyłącznie nagłówek i treść.
+
+## 2. Powtarzalna Instrukcja Lekcyjna (3 Kroki dla Prowadzącego i Asystenta)
+1. **Utwórz nowy mały plik** w folderze `sekcje/` (np. `sekcje/moja_gra.html`) i wpisz w nim tytuł oraz krótki opis.
+2. **Skopiuj jedną linijkę** w pliku `index.html` i podaj w niej nazwę nowego pliku (`data-plik="sekcje/moja_gra.html"`).
+3. **Odśwież stronę** i zobacz swój nowy kafelek na żywo.
+
+## 3. Korzyści Operacyjne dla Akademii
+* **Standaryzacja zajęć:** Lekcje przebiegają według przewidywalnego schematu bez konieczności wymyślania zadań na bieżąco.
+* **Łatwe delegowanie i wsparcie asystentów:** Osoba wspierająca (np. Natalka lub starszy brat Bartek jako młodszy mentor) nie musi znać zaawansowanego programowania — pilnuje jedynie powtarzalnej, 3-krokowej instrukcji.
+* **Spójność z praktyką inżynierską:** Kursant od pierwszego dnia wyrabia nawyk porządkowania kodu i dzielenia projektu na małe, niezależne moduły.
+

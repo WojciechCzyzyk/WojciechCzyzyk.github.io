@@ -351,14 +351,17 @@
       if (sys >= 150 || dia >= 95) alerts.push(`Podwyższone ciśnienie ${sys}/${dia} mmHg`);
       if (pulse >= 100) alerts.push(`Tachykardia — puls ${pulse} bpm`);
 
-      if (prev) {
-        if (prev && sys > 0 && prev.sys > 0) const diffSys = sys - prev.sys;
-        if (prev && temp > 0 && prev.temp > 0) const diffTemp = +(temp - prev.temp).toFixed(1);
+    if (prev) {
+        let diffSys = 0;
+        let diffTemp = 0;
+        if (sys > 0 && prev.sys > 0) diffSys = sys - prev.sys;
+        if (temp > 0 && prev.temp > 0) diffTemp = +(temp - prev.temp).toFixed(1);
 
-        
         if (diffSys >= 15) alerts.push(`Nagły wzrost RR skurczowego o +${diffSys} mmHg względem poprzedniego pomiaru`);
         if (diffTemp >= 0.5) alerts.push(`Gwałtowny wzrost temperatury o +${diffTemp}°C`);
       }
+
+
 
       if (alerts.length > 0) {
         return { isAlert: true, text: `⚠️ AI Alert: ${alerts.join(" | ")} — zalecana konsultacja lekarska.` };

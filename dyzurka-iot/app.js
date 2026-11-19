@@ -261,6 +261,20 @@ async function saveMedications() {
   renderLogs();
 }
 
+async function saveGeneralNote() {
+  if (currentUser.role === "opiekun") return;
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+  pat.generalNote = document.getElementById("modal-general-note").value.trim();
+  pat.history.push({ date: nowStamp(), type: "notatka", author: currentUser.name, comment: `📝 Zaktualizowano opis ogólny pacjenta.` });
+  wardState.logs.unshift({ time: nowStamp(), text: `📝 ${currentUser.name} zaktualizował opis ogólny dla ${pat.name} (${pat.room}).`, alert: false });
+  await WardDB.save(wardState);
+  openPatientModal(pat.id);
+  renderLogs();
+}
+
+
+
 async function logCareAction(txt) {
   const pat = wardState.patients.find(p => p.id === activePatientId);
   pat.history.push({ date: nowStamp(), type: "opieka", author: currentUser.name, comment: `🤝 ${txt}` });

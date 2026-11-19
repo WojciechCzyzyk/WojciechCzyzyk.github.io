@@ -815,7 +815,8 @@ function printBedQrBadge() {
 function generatePatientDayReport() {
   const pat = wardState.patients.find(p => p.id === activePatientId);
   if (!pat) return;
-
+  document.getElementById("patient-modal").classList.add("hidden");
+  
   const vitals = pat.history.filter(h => h.type === "pomiar");
   const events = pat.history.filter(h => h.type !== "pomiar");
   const tasks = ensureTasks(pat);

@@ -697,10 +697,26 @@ function renderPatientTasksInModal(pat) {
     </div>`;
 }
 
+let currentTasksFilter = "all";
+
+function setTasksFilter(filterVal) {
+  currentTasksFilter = filterVal;
+  document.querySelectorAll("#tasks-filter-bar button").forEach(btn => {
+    const isActive = btn.dataset.filter === filterVal;
+    btn.classList.toggle("btn-outline", !isActive);
+  });
+  openTasksModal();
+}
+
 function openTasksModal() {
   const listBox = document.getElementById("tasks-board-list");
-  listBox.innerHTML = wardState.patients.map(p => {
-    const tasks = ensureTasks(p);
+  const filteredPatients = wardState.patients.filter(p => {
+    if (currentTasksFilter === "all") return true;
+    return ensureTasks(p).some(t => t.status === currentTasksFilter);
+  });
+
+  listBox.innerHTML = filteredPatients.map(p => {
+    const tasks = ensureTasks(p).filter(t => currentTasksFilter === "all" || t.status === currentTasksFilter);
     const pills = tasks.map(t => {
       const b = getTaskBadge(t.status);
       return `
@@ -726,10 +742,11 @@ function openTasksModal() {
           </div>
         </div>
       </div>`;
-  }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
+  }).join("") || `<div style="color:var(--muted); padding:10px;">Brak zadań spełniających wybrany filtr.</div>`;
 
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
+
 
 
 

@@ -235,6 +235,14 @@
         <button class="btn btn-sm btn-outline" onclick="closeTasksModal()">✖ Zamknij</button>
         
       </div>
+      <div id="tasks-filter-bar" style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+        <button type="button" class="btn btn-sm" data-filter="all" onclick="setTasksFilter('all')">📋 Wszyscy (Wszystkie)</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="todo" onclick="setTasksFilter('todo')">🔴 Do zrobienia</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="progress" onclick="setTasksFilter('progress')">🟡 W przygotowaniu</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="done" onclick="setTasksFilter('done')">🟢 Zrobione</button>
+      </div>
+
+      
       <div id="tasks-board-list" style="display:flex; flex-direction:column; gap:10px; max-height:70vh; overflow-y:auto;"></div>
     </div>
   </div>

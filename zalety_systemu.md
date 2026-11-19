@@ -46,3 +46,11 @@
 * **Bezkonkurencyjna wiarygodność w rozmowach z zarządami placówek:**
   > *„Zaprojektowałem ten system, obserwując z bliska realną pracę pielęgniarek, lekarzy i opiekunów na oddziale — dokładnie po to, aby zdjąć z nich nocną papierologię, obciążenie pamięci i ciągłe bieganie do dyżurki.”*
 * **Gotowość od pierwszego dnia (*Zero-Training UI*):** Ponieważ interfejs powstał z myślą o zmęczonym personelu pracującym pod presją czasu, obsługa ogranicza się do pojedynczych dotknięć, skanu QR, zdjęcia lub krótkiego komunikatu głosowego — bez wielogodzinnych szkoleń wdrożeniowych.
+
+
+---
+
+## 7. Potwierdzony Test Kliniczny na Żywo — Odczyt z Ekranu Miernika w 3–4 Sekundy (19.11.2026)
+* **Scenariusz testowy w warunkach realnych:** Podczas prawdziwego pomiaru ciśnienia na oddziale wykonano telefonem szybkie zdjęcie wyświetlacza ciśnieniomierza („z ręki, pod kątem, bez pozowania i ustawiania kadru”) i przesłano wynik na tablicę na oczach pielęgniarki wykonującej badanie.
+* **Rezultat i czas operacji:** Silnik **Gemini Vision AI** bezbłędnie rozpoznał wartości `SYS`, `DIA` oraz `Puls`, a pełny cykl od zrobienia zdjęcia do pojawienia się wpisu na tablicy w dyżurce zajął **3–4 sekundy**.
+* **Reakcja personelu medycznego:** Bezpośrednie, pozytywne zaskoczenie pielęgniarki szybkością i bezbłędnością odczytu w porównaniu z ręcznym notowaniem i przepisywaniem wyników w dyżurce — twardy dowód skuteczności koncepcji *Zero-Friction Data Entry* w realnym środowisku szpitalnym.

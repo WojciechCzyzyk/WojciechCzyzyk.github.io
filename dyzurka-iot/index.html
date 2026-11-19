@@ -102,6 +102,16 @@
       <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
       <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
         <label style="color:var(--accent); font-weight:700;">💊 Zlecenia Lekarskie / Ordynacja Leków (edycja wyłącznie dla Lekarza):</label>
+
+      <!-- Sekcja Opisu Ogólnego / Przebiegu Pobytu (Lekarz i Pielęgniarka) -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:#38bdf8; font-weight:700;">📝 Opis ogólny pacjenta / Przebieg pobytu i uwagi przyłóżkowe:</label>
+        <textarea id="modal-general-note" rows="3" placeholder="Brak opisu ogólnego pacjenta..." style="width:100%; margin-top:6px; background:#0b1120; color:#f8fafc; border:1px solid var(--border); border-radius:8px; padding:8px; font-family:inherit; font-size:0.84rem;"></textarea>
+        <div style="display:flex; justify-content:flex-end; margin-top:6px;">
+          <button id="btn-save-general-note" class="btn btn-sm" style="background:#0284c7; color:#fff;" onclick="saveGeneralNote()">💾 Zapisz opis ogólny</button>
+        </div>
+      </div>
+
         <div style="display:flex; gap:8px; margin-top:6px;">
           <input id="modal-meds-input" placeholder="Brak zleceń lekarskich...">
           <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>

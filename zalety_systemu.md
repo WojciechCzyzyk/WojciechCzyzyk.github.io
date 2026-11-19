@@ -39,3 +39,10 @@
 * **Nasze rozwiązanie:**
   * **Lekka nakładka operacyjna (*Front-end Overlay*):** Działa od pierwszego dnia na istniejących telefonach i komputerach bez ingerencji w infrastrukturę szpitala (`0 zł` kosztów wdrożenia sprzętowego).
   * **Pełne bezpieczeństwo RODO:** Brak przetwarzania numerów PESEL i danych wrażliwych (wyłącznie inicjały, numery łóżek i kody QR plakietek przyłóżkowych).
+---
+
+## 6. Geneza Projektu i Wiarygodność B2B — Oprogramowanie Zaprojektowane „z Łóżka Pacjenta”
+* **Prawdziwa empatia dla użytkownika (*User-Centric Design*):** System nie powstał przy biurku na podstawie teoretycznych założeń, lecz z bezpośredniej obserwacji codziennej pracy na oddziale. Każda funkcja odpowiada na realne wąskie gardło personelu — nocne przepisywanie raportów z pamięci, „głuchy telefon” między salami a dyżurką czy brak możliwości szybkiego odhaczenia zlecenia na stojąco przy łóżku chorego.
+* **Bezkonkurencyjna wiarygodność w rozmowach z zarządami placówek:**
+  > *„Zaprojektowałem ten system, obserwując z bliska realną pracę pielęgniarek, lekarzy i opiekunów na oddziale — dokładnie po to, aby zdjąć z nich nocną papierologię, obciążenie pamięci i ciągłe bieganie do dyżurki.”*
+* **Gotowość od pierwszego dnia (*Zero-Training UI*):** Ponieważ interfejs powstał z myślą o zmęczonym personelu pracującym pod presją czasu, obsługa ogranicza się do pojedynczych dotknięć, skanu QR, zdjęcia lub krótkiego komunikatu głosowego — bez wielogodzinnych szkoleń wdrożeniowych.

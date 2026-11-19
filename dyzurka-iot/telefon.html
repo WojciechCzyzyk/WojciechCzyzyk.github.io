@@ -273,6 +273,7 @@
         } else {
           showSmartStatus(`⚠️ <strong>Odczytano kod QR:</strong> <code>${code}</code>, ale nie przypisano go do żadnego pacjenta na tym oddziale.`, "#f59e0b");
         }
+        await updateSelectedInfo();
       };
 
       if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia && box && video) {

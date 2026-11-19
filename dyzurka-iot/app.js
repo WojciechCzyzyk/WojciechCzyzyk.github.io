@@ -562,6 +562,10 @@ async function saveRoundNote(patId) {
   const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
   const newMeds = document.getElementById(`round-meds-${patId}`).value.trim();
 
+  const newNote = document.getElementById(`round-note-${patId}`)?.value.trim() || "";
+  pat.generalNote = newNote;
+
+
   pat.medications = newMeds;
   pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
   wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });

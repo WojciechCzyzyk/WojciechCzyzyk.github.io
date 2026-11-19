@@ -119,3 +119,18 @@
   2. Which term describes an unchangeable, timestamped record showing who performed a specific action and when? *(Odp.: Audit Trail)*
   3. What is the industry term for excessive, unused menus and functions that slow down daily user workflows? *(Odp.: Feature Bloat)*
   4. How do you describe an interface that requires no formal staff training to use from day one? *(Odp.: Zero-Training UI)*
+ 
+  ---
+
+### Sesja #7 (18.11.2026) — Multimodal Vision AI, Auto-Fallback & Zero-Friction Data Entry (`dyzurka-iot/`)
+* **Wynik KPI słownictwa:** 3 / 3 pojęcia (**100%** — zaliczone wszystkie: `zero-friction data entry`, `auto-fallback mechanism`, `privacy by design`).
+* **Pytanie B2B (Rozmowa z dyrektorem placówki):** *"What happens if the nurse takes a blurry or angled photo of a handwritten notebook?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"First of all, we built a dedicated **Vision AI and auto-fallback mechanism** to handle that exact issue. Moreover, our terminal enables **zero-friction data entry** at the bedside—it uses the latest multimodal technology to read even angled photos or handwritten notes while maintaining full **privacy by design**. Therefore, if one AI model is temporarily busy, our software automatically switches between backup models to deliver an accurate result in seconds. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `to handle / solve that issue` — obsłużyć / rozwiązać ten problem (zamiast *to maintaince that problem*)
+  - `delivers an advanced capability` — dostarcza zaawansowaną funkcjonalność (zamiast *delivery complex feature*)
+  - `zero-friction data entry` — wprowadzanie danych bez oporu / zbędnego klikania
+  - `auto-fallback mechanism` — mechanizm automatycznego przełączania na model zapasowy
+  - `privacy by design` — ochrona prywatności wpisana w architekturę systemu
+

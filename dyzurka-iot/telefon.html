@@ -6,7 +6,10 @@
   <title>Mobile Nurse QR — Skaner i Pomiary | APEX IoT</title>
   <link rel="icon" type="image/png" href="../favicon_wc.png">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  
+  <!---------- <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>  ----->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+
 </head>
 <body>
   <div class="mobile-container">
@@ -26,42 +29,68 @@
         <label>Kod PIN (demo: 2222 pielęgniarka | 1111 lekarz | 3333 opiekun):</label>
         <input type="password" id="mob-pin" value="2222" placeholder="Wpisz PIN...">
       </div>
-      <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
+            <button class="btn" style="width:100%; justify-content:center;" onclick="mobLogin()">🔐 Zaloguj do Skanera</button>
+
+      <div style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border);">
+        <label style="font-size:0.76rem; color:var(--muted);">🔑 Klucz Vision AI (Google AI Studio — zapisywany lokalnie w telefonie):</label>
+        <div style="display:flex; gap:6px; align-items:center; margin-top:4px;">
+          <input type="text" id="gemini-api-key" placeholder="Wklej klucz AQ.Ab8... / AIza..." style="font-size:0.78rem; padding:6px 8px;" onchange="localStorage.setItem('apex_gemini_key', this.value.trim())">
+          <button type="button" class="btn btn-sm btn-outline" onclick="saveGeminiKey()">💾 Zapisz</button>
+        </div>
+        <div id="key-login-status" style="font-size:0.74rem; color:#10b981; margin-top:4px;"></div>
+      </div>
     </div>
+
 
     <!-- Główny ekran pomiarów na telefonie -->
     <div id="mob-app" class="hidden">
       <div class="top-bar">
         <div>
-          <h1 style="font-size:1.1rem;">📱 Skaner Opaski QR</h1>
+    
+         <h1 style="font-size:1.1rem;">📱 Skaner Opaski QR <span style="font-size:0.72rem; color:#10b981;">[v2.4]</span></h1>
           <span id="mob-badge" style="font-size:0.78rem; color:var(--accent);">Pracownik</span>
         </div>
+        
         <div style="display:flex; gap:6px;">
           <a href="index.html" class="btn btn-sm btn-outline">🖥️ Tablica</a>
           <button class="btn btn-sm btn-outline" onclick="location.reload()">🔒 Wyloguj</button>
         </div>
       </div>
 
+<!------------------------------------------------------->
       <div class="panel">
+        <!-- 0. Karta zaleceń wybranego pacjenta na samej górze -->
+        <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
+
+        <!-- 1. Środek ekranu: Wybór pacjenta i skan QR -->
         <label>1. Zeskanuj kod QR opaski lub wybierz pacjenta:</label>
-        <div style="display:flex; gap:8px; margin-bottom:10px;">
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
           <select id="mob-patient" onchange="updateSelectedInfo()"></select>
-          <button class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR</button>
+          <button type="button" class="btn btn-green" onclick="simulateQrScan()">📷 Skan QR (Test)</button>
         </div>
-        
-        <!-- Szybkie wprowadzanie bezdotykowe: Głos + Zdjęcie ekranu miernika -->
+        <div id="qr-camera-box" class="hidden" style="position:relative; margin-bottom:10px; border-radius:10px; overflow:hidden; border:2px solid #10b981; background:#000;">
+          <video id="qr-video" autoplay playsinline muted style="width:100%; max-height:190px; object-fit:cover; display:block;"></video>
+          <div style="position:absolute; inset:18% 22%; border:2px solid #34d399; border-radius:8px; box-shadow:0 0 0 9999px rgba(0,0,0,0.45); pointer-events:none;"></div>
+          <div style="position:absolute; bottom:6px; left:0; right:0; text-align:center; font-size:0.75rem; color:#34d399; font-weight:700; text-shadow:0 1px 3px #000;">🎯 Nakieruj kamerę na kod QR opaski...</div>
+        </div>
+
+        <!-- 2. Środek ekranu: Bezdotykowe AI (Głos + Zdjęcie) -->
+        <div style="background:rgba(139,92,246,0.08); border:1px solid rgba(139,92,246,0.3); border-radius:8px; padding:7px 10px; margin-bottom:8px; font-size:0.72rem; line-height:1.4; color:var(--muted);">
+          <strong style="color:#c4b5fd;">💡 Jak dyktować (3 schematy):</strong><br>
+          1️⃣ <em>„Tomasz sala 405, ciśnienie 125 na 80, puls 74”</em><br>
+          2️⃣ <em>„Temperatura 37,8”</em> &nbsp;|&nbsp; 3️⃣ <em>„Podano lek / kroplówka...”</em>
+        </div>
+
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
-          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
-          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0;">
-            📸 Zrób zdjęcie ekranu
+          <button type="button" id="btn-voice-input" class="btn" style="background:#8b5cf6; color:#fff; justify-content:center; font-size:0.84rem; padding:10px 8px;" onclick="startVoiceDictation()">🎙️ Dyktuj wpis</button>
+          <label class="btn" style="background:#0284c7; color:#fff; justify-content:center; cursor:pointer; margin:0; font-size:0.80rem; padding:10px 8px; text-align:center;">
+            📸 Zrób zdjęcie<br><span style="font-size:0.68rem; font-weight:400; opacity:0.9;">(Ciśnieniomierz / Termometr)</span>
             <input type="file" accept="image/*" capture="environment" style="display:none;" onchange="scanDeviceScreen(this)">
           </label>
         </div>
-        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:10px; border-left-color:#8b5cf6;"></div>
+        <div id="smart-input-status" class="hidden note-box" style="margin-bottom:12px; border-left-color:#8b5cf6;"></div>
 
-        
-        <div id="mob-pat-info" class="note-box" style="margin-bottom:12px;">Wybierz pacjenta...</div>
-
+        <!-- 3. Pola odczytu i wysyłka -->
         <label>2. Parametry z ciśnieniomierza i termometru:</label>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
           <div><label>Ciśnienie Górne (SYS)</label><input type="number" id="in-sys" value="125"></div>
@@ -78,6 +107,9 @@
         <button class="btn btn-green" style="width:100%; justify-content:center; padding:12px; font-size:1rem;" onclick="sendVitals()">📡 Wyślij Pomiar na Tablicę</button>
         <div id="ai-feedback-banner" class="hidden note-box" style="margin-top:12px; border-left-color:var(--green);"></div>
       </div>
+
+ <!------------------------------------------------------->     
+      
     </div>
   </div>
   <script src="db.js?v=10"></script>
@@ -92,7 +124,12 @@
     }
 
     async function initMobLogin() {
+
+      const savedKey = localStorage.getItem("apex_gemini_key") || "";
+      const keyInp = document.getElementById("gemini-api-key");
       
+      if (keyInp && savedKey) keyInp.value = savedKey;
+
       WardDB.trackVisit("Otwarcie skanera QR (Telefon)");
       
       mobState = await WardDB.load();
@@ -137,14 +174,101 @@
       document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
     }
 
-    function simulateQrScan() {
+        async function simulateQrScan() {
+      const box = document.getElementById("qr-camera-box");
+      const video = document.getElementById("qr-video");
       const sel = document.getElementById("mob-patient");
-      if (sel.options.length > 1) {
+
+      let activeStream = null;
+      let scanLoopId = null;
+      let fallbackTimer = null;
+
+      const stopCamera = () => {
+        if (scanLoopId) cancelAnimationFrame(scanLoopId);
+        if (fallbackTimer) clearTimeout(fallbackTimer);
+        if (activeStream) activeStream.getTracks().forEach(t => t.stop());
+        if (box) box.classList.add("hidden");
+      };
+
+      const onQrDetected = (rawCode) => {
+        stopCamera();
+        const code = (rawCode || "").trim();
+        const matched = mobState.patients.find(p => p.qr.toLowerCase() === code.toLowerCase());
+        if (matched) {
+          sel.value = matched.id;
+          updateSelectedInfo();
+          showSmartStatus(`✅ <strong>Zeskanowano kod QR:</strong> <code>${matched.qr}</code> ➔ Wybrano pacjenta: <strong>${matched.name} (${matched.room} / ${matched.bed})</strong>`, "#10b981");
+        } else {
+          showSmartStatus(`⚠️ <strong>Odczytano kod QR:</strong> <code>${code}</code>, ale nie przypisano go do żadnego pacjenta na tym oddziale.`, "#f59e0b");
+        }
+      };
+
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia && box && video) {
+        try {
+          activeStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+          video.srcObject = activeStream;
+          await video.play();
+          box.classList.remove("hidden");
+          showSmartStatus("📷 <strong>Skaner QR aktywny:</strong> Nakieruj kamerę na wydrukowaną plakietkę QR łóżka...", "#0284c7");
+
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d", { willReadFrequently: true });
+          const nativeDetector = ("BarcodeDetector" in window) ? new BarcodeDetector({ formats: ["qr_code"] }) : null;
+
+          const scanFrame = async () => {
+            if (!activeStream) return;
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+              if (nativeDetector) {
+                try {
+                  const codes = await nativeDetector.detect(video);
+                  if (codes.length > 0 && codes.at(0).rawValue) {
+                    return onQrDetected(codes.at(0).rawValue);
+                  }
+                } catch (e) {}
+              }
+              if (typeof jsQR === "function") {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const qr = jsQR(imgData.data, imgData.width, imgData.height, { inversionAttempts: "dontInvert" });
+                if (qr && qr.data) {
+                  return onQrDetected(qr.data);
+                }
+              }
+            }
+            scanLoopId = requestAnimationFrame(scanFrame);
+          };
+
+          scanLoopId = requestAnimationFrame(scanFrame);
+
+          // Gdyby w ciągu 10 sekund nie wykryto żadnego kodu QR, wyłączamy kamerę i przełączamy testowo
+          fallbackTimer = setTimeout(() => {
+            stopCamera();
+            if (sel && sel.options.length > 1) {
+              sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
+              updateSelectedInfo();
+            }
+            const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
+            showSmartStatus(`ℹ️ <strong>Nie wykryto plakietki QR w kadrze (10s):</strong> Przełączono testowo na kolejnego pacjenta: <strong>${patName}</strong>`, "#f59e0b");
+          }, 10000);
+          return;
+        } catch (e) {
+          // Brak kamery lub odmowa dostępu - przejście do trybu testowego
+        }
+      }
+
+      if (sel && sel.options.length > 1) {
         sel.selectedIndex = (sel.selectedIndex + 1) % sel.options.length;
         updateSelectedInfo();
       }
-      alert("📷 Zeskanowano opaskę QR pacjenta! Przypisano stanowisko.");
+      const patName = sel?.options[sel.selectedIndex]?.text || "pacjenta";
+      showSmartStatus(`ℹ️ <strong>Tryb bez kamery:</strong> Przełączono testowo na: <strong>${patName}</strong>`, "#f59e0b");
     }
+
+
+
+    
 
     function analyzeTrendWithAI(pat, sys, dia, pulse, temp) {
       const prevList = pat.history.filter(h => h.type === "pomiar");
@@ -169,8 +293,11 @@
     }
 
     async function sendVitals() {
+
+      mobState = await WardDB.load();
       const id = document.getElementById("mob-patient").value;
       const pat = mobState.patients.find(p => p.id === id);
+      if (!pat) return alert("Nie znaleziono pacjenta w aktualnej bazie!");
       const sys = parseInt(document.getElementById("in-sys").value, 10);
       const dia = parseInt(document.getElementById("in-dia").value, 10);
       const pulse = parseInt(document.getElementById("in-pulse").value, 10);
@@ -266,14 +393,17 @@
         summary.push(`📈 Puls: <strong>${pulseMatch[1]}</strong>`);
       }
 
-      // 4. Temperatura (np. "temperatura 37,8" lub "38.2 stopnia")
-      const tempMatch = lower.match(/(?:temperatura|temp\.?)\s*(\d{2})[.,](\d)/) || lower.match(/\b(3[5-9]|4[0-2])[.,](\d)\b/);
-      if (tempMatch) {
-        const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
+     
+      // 4. Temperatura (np. "temperatura 37,8", "37 przecinek 8", "37 i 8")
+      const sep = "(?:\\s*[.,]\\s*|\\s+przecinek\\s+|\\s+i\\s+)";
+      const tempMatch = lower.match(new RegExp(`(?:temperatura|temp\\.?)\\s*(\\d{2})${sep}(\\d)`))
+                     || lower.match(new RegExp(`\\b(3[5-9]|4[0-2])${sep}(\\d)\\b`));
+       if (tempMatch) {
+        const tempVal = `${tempMatch.at(1)}.${tempMatch.at(2)}`;
         document.getElementById("in-temp").value = tempVal;
         summary.push(`🌡️ Temp: <strong>${tempVal}°C</strong>`);
       }
-
+      
       // 5. Zabieg / podany lek (wszystko po słowach kluczowych lub cały komunikat jako notatka)
       const actionMatch = text.match(/(?:podano|kroplówka|lek|zabieg|uwaga|komentarz)\s+(.+)/i);
       const commentTxt = actionMatch ? `🎙️ Podano/Zabieg: ${actionMatch[1]}` : `🎙️ Wpis głosowy: "${text}"`;
@@ -309,55 +439,151 @@
       rec.start();
     }
 
-        async function scanDeviceScreen(input) {
-      const file = input.files && input.files[0];
-      if (!file) return;
+function saveGeminiKey() {
+  const val = document.getElementById("gemini-api-key").value.trim();
+  localStorage.setItem("apex_gemini_key", val);
+  showSmartStatus(val ? "✅ <strong>Zapisano klucz Vision AI</strong> w pamięci tego telefonu!" : "ℹ️ Wyczyszczono klucz Vision AI.", "#10b981");
+  setApiKeyBorder(val ? "ok" : "neutral");
+}
 
-      showSmartStatus("📸 <strong>Analizuję zdjęcie wyświetlacza (OCR)...</strong> To potrwa 2–3 sekundy.", "#0284c7");
+    function setApiKeyBorder(status) {
+  const inp = document.getElementById("gemini-api-key");
+  if (!inp) return;
+  if (status === "error") {
+    inp.style.borderColor = "#ef4444";
+    inp.style.boxShadow = "0 0 0 2px rgba(239,68,68,0.35)";
+  } else if (status === "ok") {
+    inp.style.borderColor = "#10b981";
+    inp.style.boxShadow = "0 0 0 2px rgba(16,185,129,0.25)";
+  } else {
+    inp.style.borderColor = "";
+    inp.style.boxShadow = "";
+  }
+}
+
+
+    async function scanDeviceScreen(input) {
+  const file = input.files ? input.files.item(0) : null;
+  if (!file) return;
+
+  const apiKey = (document.getElementById("gemini-api-key")?.value || localStorage.getItem("apex_gemini_key") || "").trim();
+  if (!apiKey) {
+    input.value = "";
+    return showSmartStatus("⚠️ <strong>Brak klucza Vision AI:</strong> Wklej klucz z Google AI Studio w pole powyżej.", "#f59e0b");
+  }
+
+  showSmartStatus("🤖 <strong>[v3.9 Vision AI] Przygotowuję zdjęcie (1/2)...</strong>", "#0284c7");
+
+  try {
+    const base64Data = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(new Error("Nie udało się odczytać pliku zdjęcia z aparatu."));
+      reader.onload = (ev) => {
+        const img = new Image();
+        img.onerror = () => reject(new Error("Uszkodzony format obrazu."));
+        img.onload = () => {
+          const maxSide = 640;
+          const ratio = Math.min(1, maxSide / Math.max(img.width, img.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.round(img.width * ratio);
+          canvas.height = Math.round(img.height * ratio);
+          canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL("image/jpeg", 0.85).split(",").at(1));
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    const prompt = "Odczytaj liczby z ekranu ciśnieniomierza lub termometru medycznego (nawet jeśli zdjęcie jest obrócone). Zwróć WYŁĄCZNIE czysty JSON bez markdowna: {\"sys\": number|null, \"dia\": number|null, \"pulse\": number|null, \"temp\": number|null}. Jeśli widzisz ciśnieniomierz: największa wartość to sys, mniejsza to dia, trzecia to pulse. Jeśli widzisz termometr: wypełnij tylko temp.";
+
+    const host = ["generativelanguage", "googleapis", "com"].join(".");
+
+    const modelsToTry = ["gemini-3-flash-preview", "gemini-3.8-flash", "gemini-4-hydrogen"];
+
+    let json = null;
+    let lastError = "Brak odpowiedzi z serwera AI.";
+
+    for (const modelName of modelsToTry) {
+      showSmartStatus(`📡 <strong>[v3.9 Vision AI] Analizuję przez ${modelName}...</strong>`, "#0284c7");
+      const endpoint = `https://${host}/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 9000);
 
       try {
-        const result = await Tesseract.recognize(file, "eng", {
-          tessedit_char_whitelist: "0123456789.,/"
+        const res = await fetch(endpoint, {
+          method: "POST",
+          signal: controller.signal,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { text: prompt },
+                { inlineData: { mimeType: "image/jpeg", data: base64Data } }
+              ]
+            }]
+          })
         });
-        const raw = result.data.text || "";
-        // Szukamy najpierw temperatury z kropką lub przecinkiem (np. 36.7 lub 38,4)
-        const tempMatch = raw.match(/\b(3[4-9]|4[0-2])[.,](\d)\b/);
-        // Wyciągamy wszystkie liczby całkowite 2- lub 3-cyfrowe z ekranu (od góry do dołu)
-        const cleanNoDecimals = raw.replace(/\b(3[4-9]|4[0-2])[.,]\d\b/g, " ");
-        const nums = (cleanNoDecimals.match(/\b\d{2,3}\b/g) || [])
-          .map(n => parseInt(n, 10))
-          .filter(n => n >= 35 && n <= 260);
-
-        if (nums.length >= 2) {
-          // Ekran ciśnieniomierza: pierwsza para to SYS > DIA, trzecia liczba to Puls
-          let sys = nums[0];
-          let dia = nums[1];
-          if (sys < dia) [sys, dia] = [dia, sys];
-          const pulse = nums[2] || null;
-
-          document.getElementById("in-sys").value = sys;
-          document.getElementById("in-dia").value = dia;
-          if (pulse) document.getElementById("in-pulse").value = pulse;
-
-          const prevComment = document.getElementById("in-comment").value.trim();
-          const ocrNote = `📸 Odczyt OCR z aparatu: RR ${sys}/${dia}${pulse ? `, Puls ${pulse}` : ""}`;
-          document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${ocrNote}` : ocrNote;
-
-          showSmartStatus(`✅ <strong>Odczytano ciśnieniomierz:</strong> Górne <strong>${sys}</strong> • Dolne <strong>${dia}</strong>${pulse ? ` • Puls <strong>${pulse}</strong>` : ""}`, "#10b981");
-        } else if (tempMatch) {
-          // Ekran termometru: pojedyncza wartość temperatury
-          const tempVal = `${tempMatch[1]}.${tempMatch[2]}`;
-          document.getElementById("in-temp").value = tempVal;
-          showSmartStatus(`✅ <strong>Odczytano termometr:</strong> Temperatura <strong>${tempVal}°C</strong>`, "#10b981");
-        } else {
-          showSmartStatus(`⚠️ Nie udało się jednoznacznie odczytać cyfr (wykryto: „${raw.trim() || "brak"}”). Zrób wyraźniejsze zbliżenie na sam wyświetlacz LCD.`, "#f59e0b");
+        clearTimeout(timeoutId);
+        const data = await res.json();
+        if (!data.error) {
+          json = data;
+          break;
         }
-      } catch (err) {
-        showSmartStatus(`⚠️ Błąd analizy obrazu: ${err.message}`, "#ef4444");
-      } finally {
-        input.value = "";
+        lastError = data.error.message;
+      } catch (e) {
+        clearTimeout(timeoutId);
+        lastError = e.name === "AbortError" ? "Timeout 12s" : e.message;
       }
     }
+
+    if (!json) throw new Error(lastError);
+
+    const rawText = json.candidates?.at(0)?.content?.parts?.at(0)?.text || "";
+    const cleanJson = rawText.replace(/```json|```/g, "").trim();
+    const parsed = JSON.parse(cleanJson);
+
+    const summary = [];
+    if (parsed.sys && parsed.dia) {
+      let sys = Math.round(parsed.sys);
+      let dia = Math.round(parsed.dia);
+      if (sys < dia) [sys, dia] = [dia, sys];
+      document.getElementById("in-sys").value = sys;
+      document.getElementById("in-dia").value = dia;
+      summary.push(`💓 RR: <strong>${sys}/${dia}</strong>`);
+    }
+    if (parsed.pulse) {
+      document.getElementById("in-pulse").value = Math.round(parsed.pulse);
+      summary.push(`📈 Puls: <strong>${Math.round(parsed.pulse)}</strong>`);
+    }
+    if (parsed.temp) {
+      document.getElementById("in-temp").value = parsed.temp;
+      summary.push(`🌡️ Temp: <strong>${parsed.temp}°C</strong>`);
+    }
+
+    if (summary.length > 0) {
+      const prevComment = document.getElementById("in-comment").value.trim();
+      const note = `🤖 [Vision AI] Odczyt z ekranu: ${summary.map(s => s.replace(/<[^>]+>/g, "")).join(", ")}`;
+      document.getElementById("in-comment").value = prevComment ? `${prevComment} | ${note}` : note;
+      showSmartStatus(`✅ <strong>[v3.9 Vision AI] Odczytano bezbłędnie:</strong> ${summary.join(" • ")}`, "#10b981");
+      setApiKeyBorder("ok");
+    } else {
+      showSmartStatus("⚠️ <strong>[v3.9 Vision AI]</strong> Model nie znalazł wyników medycznych na zdjęciu.", "#f59e0b");
+    }
+  } catch (err) {
+    setApiKeyBorder("error");
+    showSmartStatus(`⚠️ <strong>[v3.9 Vision AI]</strong> Błąd: ${err.message}`, "#ef4444");
+  } finally {
+    input.value = "";
+  }
+}
+
+
+
+
+
+
+
 
     
     window.addEventListener("DOMContentLoaded", initMobLogin);

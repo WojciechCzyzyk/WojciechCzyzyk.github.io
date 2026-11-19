@@ -522,44 +522,82 @@ function openRoundsModal() {
   listBox.innerHTML = wardState.patients.map(p => {
     const v = getLatestNonZeroVitals(p.history);
     const vitalsTxt = v ? formatVitalsLine(v).replace(/<[^>]+>/g, "") : "Brak pomiarów";
+    const lastNote = p.generalNote ? p.generalNote.split("\n").pop() : "Brak wpisów w opisie ogólnym";
     return `
-      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 220px 1fr auto; gap:10px; align-items:center;">
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; display:grid; grid-template-columns: 210px 1fr; gap:12px; align-items:start;">
         <div>
           <strong style="color:var(--accent);">${p.room} • ${p.bed}</strong><br>
           <span style="font-weight:700;">${p.name}</span><br>
-          <span style="font-size:0.75rem; color:var(--muted);">${vitalsTxt}</span>
+          <span style="font-size:0.75rem; color:var(--muted);">${vitalsTxt}</span><br>
+          <div style="font-size:0.71rem; color:#94a3b8; margin-top:6px; border-top:1px dashed var(--border); padding-top:4px;">
+            <strong>Ostatni wpis:</strong> <em>${lastNote}</em>
+          </div>
         </div>
-        <div>
-          <label style="font-size:0.75rem;">Leki, uwagi i zalecenia po obchodzie:</label>
-          ${buildProcedureSelectHtml("round-meds-" + p.id)}
-          <input id="round-meds-${p.id}" value="${(p.medications || "").replace(/"/g, "&quot;")}" placeholder="Wpisz ordynację leków i uwagi...">
-          <input id="round-note-${p.id}" value="${(p.generalNote || "").replace(/"/g, "&quot;")}" placeholder="Opis ogólny / rozpoznanie / stan z obchodu (nie trafia do leków)..." style="margin-top:6px; border-color:#38bdf8;">
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div>
+            <label style="font-size:0.75rem; color:#fbbf24;">💊 Nowe zlecenie / lek (trafia na listę zadań Kanban):</label>
+            ${buildProcedureSelectHtml("round-meds-" + p.id)}
+            <div style="display:flex; gap:6px;">
+              <input id="round-meds-${p.id}" placeholder="Wpisz lek, dawkę lub badanie do wykonania...">
+              <button class="btn btn-green btn-sm" style="white-space:nowrap;" onclick="addRoundTask('${p.id}')">➕ Dodaj</button>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.75rem; color:#38bdf8;">📝 Zalecenia / opis ogólny z obchodu (dopisywane jako log do karty):</label>
+            <div style="display:flex; gap:6px; margin-top:4px;">
+              <input id="round-note-${p.id}" placeholder="Wpisz zalecenie lub uwagę z obchodu (dopisze się z godziną)..." style="border-color:#38bdf8;">
+              <button class="btn btn-sm" style="background:#0284c7; color:#fff; white-space:nowrap;" onclick="addRoundGeneralLog('${p.id}')">➕ Dodaj</button>
+            </div>
+          </div>
         </div>
-        <button class="btn btn-green btn-sm" style="margin-top:16px;" onclick="saveRoundNote('${p.id}')">💾 Zapisz</button>
       </div>`;
   }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
 
   document.getElementById("rounds-modal").classList.remove("hidden");
 }
 
-async function saveRoundNote(patId) {
+async function addRoundTask(patId) {
   const pat = wardState.patients.find(p => p.id === patId);
   if (!pat) return;
   const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
-  const newMeds = document.getElementById(`round-meds-${patId}`).value.trim();
-  const newNote = document.getElementById(`round-note-${patId}`)?.value.trim() || "";
-  pat.generalNote = newNote;
+  const inp = document.getElementById(`round-meds-${patId}`);
+  const newMeds = inp ? inp.value.trim() : "";
+  if (!newMeds) return alert("Wpisz treść zlecenia lub wybierz zabieg z listy!");
+
   pat.medications = newMeds;
-  pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
-  wardState.logs.unshift({ time: nowStamp(), text: `🩺 ${docName} zapisał zalecenia po obchodzie dla ${pat.name} (${pat.room}).`, alert: false });
+  const stamp = nowStamp();
+  pat.history.push({ date: stamp, type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}) — Zlecenie: ${newMeds}` });
+  wardState.logs.unshift({ time: stamp, text: `🩺 ${docName} zlecił dla ${pat.name} (${pat.room}): ${newMeds}`, alert: false });
 
   addTaskToPatient(pat, newMeds, docName);
   learnNewProcedure(newMeds);
 
+  inp.value = "";
   await WardDB.save(wardState);
   renderLogs();
-  alert(`✅ Zapisano zalecenia dla ${pat.name} (podpis: ${docName})`);
+  openRoundsModal();
 }
+
+async function addRoundGeneralLog(patId) {
+  const pat = wardState.patients.find(p => p.id === patId);
+  if (!pat) return;
+  const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
+  const inp = document.getElementById(`round-note-${patId}`);
+  const noteTxt = inp ? inp.value.trim() : "";
+  if (!noteTxt) return alert("Wpisz treść zalecenia lub opisu z obchodu!");
+
+  const stamp = nowStamp();
+  const logEntry = `[${stamp} — ${docName}]: ${noteTxt}`;
+  pat.generalNote = pat.generalNote ? `${pat.generalNote}\n${logEntry}` : logEntry;
+  pat.history.push({ date: stamp, type: "notatka", author: docName, comment: `📝 Obchód (${docName}): ${noteTxt}` });
+  wardState.logs.unshift({ time: stamp, text: `📝 ${docName} dopisał zalecenie dla ${pat.name} (${pat.room}): ${noteTxt}`, alert: false });
+
+  inp.value = "";
+  await WardDB.save(wardState);
+  renderLogs();
+  openRoundsModal();
+}
+
 
 function ensureTasks(pat) {
   if (!Array.isArray(pat.tasks)) {

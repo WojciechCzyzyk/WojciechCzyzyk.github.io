@@ -352,8 +352,10 @@
       if (pulse >= 100) alerts.push(`Tachykardia — puls ${pulse} bpm`);
 
       if (prev) {
-        const diffSys = sys - prev.sys;
-        const diffTemp = +(temp - prev.temp).toFixed(1);
+        if (prev && sys > 0 && prev.sys > 0) const diffSys = sys - prev.sys;
+        if (prev && temp > 0 && prev.temp > 0) const diffTemp = +(temp - prev.temp).toFixed(1);
+
+        
         if (diffSys >= 15) alerts.push(`Nagły wzrost RR skurczowego o +${diffSys} mmHg względem poprzedniego pomiaru`);
         if (diffTemp >= 0.5) alerts.push(`Gwałtowny wzrost temperatury o +${diffTemp}°C`);
       }

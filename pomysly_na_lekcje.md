@@ -200,3 +200,20 @@ System opiera się na gotowych „klockach technologicznych”, które instrukto
   - Prowadzący (np. Natalka) nie musi na starcie być programistą — siedzi za pulpitem, dba o dobrą atmosferę, obserwuje „radar” postępów i uczy się kodu stopniowo poprzez nadzór.
   - Gdy na ekranie zapali się żółta lampka przy jednym ze stolików, instruktor kieruje tam **Młodego Asystenta (11-letniego Bartka)** lub drugiego trenera, eliminując bieganie po sali i stres przed pytaniami technicznymi.
 
+# Standard Dydaktyczny Akademii — Architektura „1 Sekcja = 1 Mały Plik” (SOP)
+
+## 1. Założenie Pedagogiczne (Zero Przeładowania Poznawczego)
+Dziecko oraz początkujący kursant nie mogą zaczynać nauki od przeglądania kilkusetlinijkowego pliku HTML przeładowanego stylami i skryptami. Zamiast tego stosujemy **rozdzielenie odpowiedzialności** w najprostszej możliwej formie:
+* **Szkielet główny (`index.html`):** Krótki kontener (ok. 30 linijek), w którym każda kolejna treść to **jedna powtarzalna linijka** `<section class="card" data-plik="sekcje/nazwa.html"></section>`.
+* **Warstwa wyglądu (`style.css`):** Wydzielona całkowicie poza widok edytowanego tekstu, dzięki czemu uczeń nie zepsuje układu strony podczas pisania.
+* **Klocki treści (`sekcje/*.html`):** Każdy temat (np. opis ulubionej gry, zadanie z matematyki, rysunek) to osobny, 5–10 linijkowy plik zawierający wyłącznie nagłówek i treść.
+
+## 2. Powtarzalna Instrukcja Lekcyjna (3 Kroki dla Prowadzącego i Asystenta)
+1. **Utwórz nowy mały plik** w folderze `sekcje/` (np. `sekcje/moja_gra.html`) i wpisz w nim tytuł oraz krótki opis.
+2. **Skopiuj jedną linijkę** w pliku `index.html` i podaj w niej nazwę nowego pliku (`data-plik="sekcje/moja_gra.html"`).
+3. **Odśwież stronę** i zobacz swój nowy kafelek na żywo.
+
+## 3. Korzyści Operacyjne dla Akademii
+* **Standaryzacja zajęć:** Lekcje przebiegają według przewidywalnego schematu bez konieczności wymyślania zadań na bieżąco.
+* **Łatwe delegowanie i wsparcie asystentów:** Osoba wspierająca (np. Natalka lub starszy brat Bartek jako młodszy mentor) nie musi znać zaawansowanego programowania — pilnuje jedynie powtarzalnej, 3-krokowej instrukcji.
+* **Spójność z praktyką inżynierską:** Kursant od pierwszego dnia wyrabia nawyk porządkowania kodu i dzielenia projektu na małe, niezależne moduły.

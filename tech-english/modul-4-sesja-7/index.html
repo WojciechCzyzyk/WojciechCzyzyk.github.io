@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech English — Moduł 4 (Sesja #7) | Wojciech Czyżyk</title>
+  <title>Moduł #4: B2B SaaS & Medical IT | Tech English</title>
   <link rel="icon" type="image/png" href="../../favicon_wc.png">
-  <link rel="stylesheet" href="../tstyle.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <div class="container">
-    <div style="margin-bottom: 1rem;">
-      <a href="../index.html" class="btn-link">← Powrót do Huba Tech English</a>
+  <div class="quiz-container-narrow">
+    <div class="top-bar">
+      <a href="../index.html" class="back-link">← Wróć do listy modułów Tech English</a>
     </div>
 
-    <header class="card">
-      <span class="tag">Moduł 4 • Sesja #7 • B2B SaaS & Medical IT</span>
-      <h1>🇬🇧 Tech English: Edge-to-AI & Clinical Workflow</h1>
-      <p>Sprawdź w praktyce słownictwo inżynierskie i produktowe z realnego wdrożenia Smart Ward Board: wprowadzanie danych bez oporu, mechanizmy awaryjne AI, ochronę prywatności w architekturze oraz ślad audytowy.</p>
-    </header>
+    <div class="quiz-box" id="quiz-container">
+      <div class="progress" id="progress-text">Pytanie 1 / 6</div>
+      <div class="question-text" id="question-text">Ładowanie pytania...</div>
+      <div class="options" id="options-container"></div>
+      <div class="feedback" id="feedback-box"></div>
+      <button class="next-btn" id="next-btn" onclick="nextQuestion()">Następne pytanie →</button>
+    </div>
 
-    <div id="quiz-container" class="card"></div>
+    <div class="quiz-box result-box" id="result-container">
+      <h2>Wynik Modułu #4 (Sesja #7)</h2>
+      <div class="result-score" id="final-score">0 / 6 (0%)</div>
+      <p id="final-comment"></p>
+      <div style="margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="next-btn" style="display:inline-block;" onclick="location.reload()">🔄 Powtórz Quiz</button>
+        <a href="../index.html" class="next-btn" style="display:inline-block; text-decoration:none; background:#10b981;">← Lista Modułów</a>
+      </div>
+    </div>
   </div>
 
   <script src="pytania.js"></script>

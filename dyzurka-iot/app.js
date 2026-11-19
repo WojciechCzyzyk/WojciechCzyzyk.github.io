@@ -541,6 +541,7 @@ function openRoundsModal() {
 
   document.getElementById("rounds-modal").classList.remove("hidden");
 }
+
 async function saveRoundNote(patId) {
   const pat = wardState.patients.find(p => p.id === patId);
   if (!pat) return;
@@ -743,6 +744,7 @@ function buildProcedureSelectHtml(inputId) {
   const opts = getProceduresList().map(p => `<option value="${p.replace(/"/g, "&quot;")}">${p}</option>`).join("");
   return `<select onchange="insertProcedureToInput(this, '${inputId}')" style="margin-bottom:6px; border-color:var(--accent); font-size:0.82rem;"><option value="">⚡ Wybierz gotowy zabieg / lek z listy...</option>${opts}</select>`;
 }
+
 setInterval(() => {
   const anyModalOpen = ["patient-modal", "report-modal", "staff-modal", "rounds-modal", "tasks-modal"]
     .some(id => !document.getElementById(id)?.classList.contains("hidden"));

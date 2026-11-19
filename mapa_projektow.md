@@ -22,6 +22,8 @@
   - `apex_copilot_biznes.md` — strategia wdrożeń B2B, przewagi i metodyka APEX AI Copilot (oddzielona od edukacji)
   - `Architektura_Wzorce_Wdrozeniowe_APEX.md` — obowiązujące standardy architektoniczne (wzorzec uniwersalnego adaptera DB, chmura, UX Zero-Training, Poka-Yoke oraz ścieżka klonowania i wdrożeń B2B)
   - `zalety_systemu.md` — rejestr przewag konkurencyjnych, metafor sprzedażowych („telewizor z pilotem”) i obserwacji z oddziału dla systemu Smart Ward Board
+  - `ekosystem_rodzinny.jpg` — zbiorcza ilustracja zespołu rodzinnego (Bartek, Krzyś, Olusia i dwa koty w akcji).
+  - `olusia_studio.jpg` — ilustracja Działu Kreatywnego & UX (Olusia rysująca na podłodze w towarzystwie dwóch kotów).
 
 
 
@@ -64,7 +66,12 @@
   - `db.js` — uniwersalny adapter warstwy danych (Firebase Realtime Database REST API z blokadą pustego zapisu, izolowany rejestr odwiedzin oraz fallback `localStorage`)
   - `style.css` — wysokokontrastowy arkusz stylów klinicznych (Dark Mode / RWD)
   - `README.md` — dokumentacja techniczna architektury, ról i wdrożenia katalogu
-
+* **Podkatalog `krzys/` (Strefa Junior Testera — architektura modułowa *1 sekcja = 1 plik*):**
+  * `krzys/index.html` — lekki szkielet kontenera ładujący dynamicznie sekcje z podkatalogu `sekcje/`.
+  * `krzys/style.css` — wydzielony arkusz stylów strefy Krzysia.
+  * `krzys/sekcje/powitanie.html` — blok powitalny i baner.
+  * `krzys/sekcje/minecraft.html` — pierwsza recenzja gry i werdykt testera.
+  * `krzys/sekcje/wyzwania.html` — interaktywna lista wyzwań (+100 XP).
 
 
 

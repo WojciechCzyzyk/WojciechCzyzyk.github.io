@@ -174,13 +174,24 @@
       updateSelectedInfo();
     }
 
-        function updateSelectedInfo() {
+         function resetVitalsInputs() {
+      ["in-sys", "in-dia", "in-pulse", "in-temp"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+    }
+
+    async function updateSelectedInfo() {
+      mobState = await WardDB.load();
       const id = document.getElementById("mob-patient").value;
       const pat = mobState.patients.find(p => p.id === id);
       if (!pat) return;
-      document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
+      resetVitalsInputs();
+      const notePreview = pat.generalNote ? `<br><strong>Opis:</strong> <em>${pat.generalNote.slice(-110)}</em>` : "";
+      document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}${notePreview}`;
       renderMobileTasks(pat);
     }
+
 
     function renderMobileTasks(pat) {
       const box = document.getElementById("mob-tasks-list");

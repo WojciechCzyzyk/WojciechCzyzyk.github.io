@@ -54,3 +54,23 @@
 * **Scenariusz testowy w warunkach realnych:** Podczas prawdziwego pomiaru ciśnienia na oddziale wykonano telefonem szybkie zdjęcie wyświetlacza ciśnieniomierza („z ręki, pod kątem, bez pozowania i ustawiania kadru”) i przesłano wynik na tablicę na oczach pielęgniarki wykonującej badanie.
 * **Rezultat i czas operacji:** Silnik **Gemini Vision AI** bezbłędnie rozpoznał wartości `SYS`, `DIA` oraz `Puls`, a pełny cykl od zrobienia zdjęcia do pojawienia się wpisu na tablicy w dyżurce zajął **3–4 sekundy**.
 * **Reakcja personelu medycznego:** Bezpośrednie, pozytywne zaskoczenie pielęgniarki szybkością i bezbłędnością odczytu w porównaniu z ręcznym notowaniem i przepisywaniem wyników w dyżurce — twardy dowód skuteczności koncepcji *Zero-Friction Data Entry* w realnym środowisku szpitalnym.
+
+* ---
+
+## 8. Elastyczna Strategia Wdrożeniowa — Od Pilotażu w 24h po Integrację HL7 / FHIR
+
+System zaprojektowano tak, aby uniknąć najczęstszego wąskiego gardła w informatyzacji ochrony zdrowia, czyli wielomiesięcznych i kosztownych integracji ze starymi systemami szpitalnymi (HIS). Placówka może wybrać jedną z trzech ścieżek wdrożenia:
+
+### Ścieżka 1: *Zero-Integration Sidecar App* (Pilotaż na oddziale w 24 godziny)
+* **Jak działa:** System działa jako całkowicie niezależna, lekka nakładka operacyjna obok głównego systemu szpitalnego (HIS) — **bez konieczności posiadania API** i bez ingerencji w infrastrukturę IT szpitala.
+* **Bezpieczeństwo RODO (*Privacy by Design*):** Na tablicy oraz plakietkach QR łóżek przetwarzane są wyłącznie **numer sali, numer łóżka oraz inicjały pacjenta** (zero numerów PESEL i danych wrażliwych).
+* **Przekazanie danych do HIS:** Na koniec dyżuru personel jednym kliknięciem (**`1-Click HIS`**) kopiuje gotowy, ustrukturyzowany raport zmiany lub dnia i wkleja go (`Ctrl + V`) do głównego systemu szpitalnego.
+* **Propozycja wartości (*No-Brainer Offer*):** Uruchomienie pilotażu na jednym oddziale w **1 dzień**, przy zerowym koszcie sprzętowym i bez zgody dostawcy starego HIS.
+
+### Ścieżka 2: Integracja Dwukierunkowa przez Standardy Medyczne (HL7 / FHIR / REST API)
+* **Jak działa:** W placówkach dysponujących nowoczesnymi systemami z otwartym interfejsem (np. HL7, FHIR, REST API) system w drugim etapie może automatycznie pobierać ruch chorych (przyjęcia, przeniesienia, wypisy ADT) oraz przesyłać zatwierdzone pomiary i karty obserwacji pielęgniarskich bezpośrednio do elektronicznej dokumentacji medycznej (EDM).
+* **Kiedy wdrażać:** Jako naturalny drugi krok po 2–4 tygodniach udanego pilotażu (Ścieżka 1), gdy zespół medyczny potwierdzi realną oszczędność czasu na dyżurach.
+
+### Ścieżka 3: *Standalone Clinic Cockpit* (Kompletny System dla Klinik Prywatnych i Stomatologii)
+* **Jak działa:** W mniejszych placówkach prywatnych, gabinetach zabiegowych, klinikach chirurgii jednego dnia czy gabinetach stomatologicznych system działa jako samodzielne centrum dowodzenia zespołem (komunikacja między rejestracją a gabinetami, karty zabiegowe, kolejka zadań Kanban i szybkie raporty).
+

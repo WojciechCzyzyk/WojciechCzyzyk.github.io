@@ -1,1 +1,37 @@
-fvsfs
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ys (Krzyś) — Junior Tester | Wojciech Czyżyk</title>
+  <link rel="icon" type="image/png" href="../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../index.html" class="btn-link">← Powrót do strony Taty</a>
+    </div>
+
+    <!-- LISTA SEKCJI (Aby dodać nową ramkę, skopiuj 1 linijkę <section...> poniżej!) -->
+    <section class="card" data-plik="sekcje/powitanie.html"></section>
+    <section class="card" data-plik="sekcje/minecraft.html"></section>
+    <section class="card" data-plik="sekcje/wyzwania.html"></section>
+  </div>
+
+  <script>
+    // Silnik ładujący każdą ramkę z osobnego pliku
+    document.querySelectorAll("[data-plik]").forEach(async (ramka) => {
+      const plik = ramka.getAttribute("data-plik");
+      const odp = await fetch(plik);
+      ramka.innerHTML = odp.ok ? await odp.text() : `<p>Brak pliku: ${plik}</p>`;
+    });
+
+    function toggleQuest(btn) {
+      btn.classList.toggle("done");
+      btn.textContent = btn.classList.contains("done") ? "✅ Zaliczono! (+100 XP)" : "⬜ Zaliczone? Kliknij!";
+    }
+  </script>
+</body>
+</html>
+

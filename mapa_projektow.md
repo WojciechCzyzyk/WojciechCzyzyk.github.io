@@ -55,11 +55,13 @@
   - `modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
 
 * **Podkatalog `dyzurka-iot/` (System Smart Ward Board & Mobile QR — Kokpit Oddziału):**
-  - `index.html` — główny kokpit dyżurki (tablica sal 404–408 i 413–414, obchód lekarski, tablica zadań Kanban, zarządzanie personelem i raport zmiany AI)
-  - `telefon.html` — lekki widok mobilny dla personelu (skaner opasek QR pacjentów + rejestracja pomiarów przy łóżku)
-  - `app.js` — logika biznesowa, Drag & Drop z blokadami Poka-Yoke, silnik Kanban z 5-sekundowym buforem zapisu i wykresy trendów SVG
-  - `db.js` — uniwersalny adapter warstwy danych (Firebase Realtime Database REST API + fallback `localStorage`)
+  - `index.html` — główny kokpit dyżurki (tablica sal 404–408 i 413–414, obchód lekarski, tablica zadań Kanban z filtrem statusów, opis ogólny pacjenta, zarządzanie personelem oraz raporty: Zmiany, Dnia Pacjenta i Dnia Oddziału + AI)
+  - `telefon.html` — mobilny terminal przyłóżkowy („pilot do systemu”: skaner plakietek QR na żywo przez `BarcodeDetector` + `jsQR`, odczyt ekranów mierników i odręcznych notatek przez Gemini Vision AI z Auto-Fallback, dyktowanie głosowe oraz odhaczanie zadań Kanban przy łóżku)
+  - `app.js` — logika biznesowa, Drag & Drop z blokadami Poka-Yoke, generator plakietek QR łóżka A6, silnik Kanban, wykresy trendów SVG oraz generatory raportów dobowych i zmiany AI (druk A4 + kopiowanie do HIS)
+  - `db.js` — uniwersalny adapter warstwy danych (Firebase Realtime Database REST API z blokadą pustego zapisu, izolowany rejestr odwiedzin oraz fallback `localStorage`)
   - `style.css` — wysokokontrastowy arkusz stylów klinicznych (Dark Mode / RWD)
+  - `README.md` — dokumentacja techniczna architektury, ról i wdrożenia katalogu
+
 
 
 

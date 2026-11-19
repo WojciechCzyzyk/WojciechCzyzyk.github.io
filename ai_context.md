@@ -1496,3 +1496,11 @@ Status Pacjenta
 ## 4. Rodzina i edukacja
 * **Bartek (Klasa 5):** Trening przed konkursem *Alfik Matematyczny* — wynik **17/20 (85%)** na zestawie konkursowym PDF; błędne zadania omówione.
 
+## 5. Rozbudowa nocna (19.11.2026) — Point-of-Care Kanban & Raporty Dobowe AI
+* **Kluczowy wniosek z obserwacji oddziału (rdzeń przewagi B2B):** Personel pielęgniarski traci czas na nocne przepisywanie zdarzeń dnia z pamięci po powrocie do dyżurki. Nasz system rozwiązuje ten problem przez **rejestrację i odhaczanie zdarzeń w locie przy łóżku pacjenta (*Point-of-Care Execution*)**.
+* **Nowe wdrożone funkcje (`v4.1`):**
+  * **Mobilny Kanban przy łóżku (`telefon.html` ➔ `renderMobileTasks` / `toggleMobileTask`):** Pod formularzem pomiarów wyświetlają się aktywne zlecenia wybranego pacjenta (`🔴 Do zrobienia` ➔ `🟡 W trakcie` ➔ `🟢 Zrobione`). Jedno dotknięcie przy łóżku aktualizuje status, zapisuje czas i podpis w chmurze (`Read-Modify-Write`) oraz zasila raporty dobowe.
+  * **Indywidualny Raport Dnia Pacjenta (`index.html` / `app.js` ➔ `generatePatientDayReport`):** Przycisk `📄 Raport Dnia` w karcie pacjenta generuje pełną chronologię dobową (pomiary, realizacja zleceń Kanban, opieka i ruch pacjenta) gotową do wydruku A4 lub skopiowania do HIS.
+  * **Zbiorczy Raport Dnia Oddziału + Podsumowanie AI (`index.html` / `app.js` ➔ `generateDailyWardReport`):** Przycisk `📊 Raport Dnia + AI` nad listą zdarzeń generuje zestawienie całego dnia rozbite na wszystkich pacjentów wraz z automatyczną sekcją AI wyłapującą incydenty krytyczne (gorączki, skoki ciśnienia, tachykardie, zmiany łóżek oraz niezakończone zlecenia) na przekazanie dyżuru.
+* **Eksport i druk:** Wszystkie raporty (Zmiany, Indywidualny Dnia, Zbiorczy Dnia + AI) korzystają z wspólnego modala `#report-modal` z bezpośrednim wydrukiem na kartę A4 (`🖨️ Drukuj kartę A4`) oraz kopiowaniem czystego tekstu do systemu HIS (`📋 Kopiuj tekst do HIS`).
+

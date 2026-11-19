@@ -106,8 +106,13 @@
 
         <button class="btn btn-green" style="width:100%; justify-content:center; padding:12px; font-size:1rem;" onclick="sendVitals()">📡 Wyślij Pomiar na Tablicę</button>
         <div id="ai-feedback-banner" class="hidden note-box" style="margin-top:12px; border-left-color:var(--green);"></div>
+             <!-- 4. Kafelki zadań przy łóżku (Point-of-Care Kanban) -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--border);">
+          <label style="color:#fbbf24; font-weight:700; margin-bottom:6px;">📌 Zadania przy łóżku (dotknij, aby odhaczyć na żywo):</label>
+          <div id="mob-tasks-list" style="display:flex; flex-direction:column; gap:6px;"></div>
+        </div>
+      
       </div>
-
  <!------------------------------------------------------->     
       
     </div>
@@ -167,12 +172,66 @@
       updateSelectedInfo();
     }
 
-    function updateSelectedInfo() {
+        function updateSelectedInfo() {
       const id = document.getElementById("mob-patient").value;
       const pat = mobState.patients.find(p => p.id === id);
       if (!pat) return;
       document.getElementById("mob-pat-info").innerHTML = `<strong>Opaska:</strong> ${pat.qr} • <strong>Zalecenie:</strong> ${pat.alertNote || "brak"}<br><strong>Leki:</strong> ${pat.medications || "brak"}`;
+      renderMobileTasks(pat);
     }
+
+    function renderMobileTasks(pat) {
+      const box = document.getElementById("mob-tasks-list");
+      if (!box) return;
+      if (!Array.isArray(pat.tasks)) {
+        pat.tasks = pat.medications && !pat.medications.startsWith("Oczekuje")
+          ? [{ id: `TSK-${pat.id}-0`, text: pat.medications, status: "todo", author: "Lekarz", updatedBy: "" }]
+          : [];
+      }
+      if (pat.tasks.length === 0) {
+        box.innerHTML = `<div style="font-size:0.78rem; color:var(--muted);">Brak aktywnych zleceń dla tego pacjenta.</div>`;
+        return;
+      }
+      const styles = {
+        todo: { label: "🔴 Do zrobienia", bg: "rgba(239,68,68,0.18)", border: "#ef4444", color: "#f87171" },
+        progress: { label: "🟡 W trakcie", bg: "rgba(245,158,11,0.18)", border: "#f59e0b", color: "#fbbf24" },
+        done: { label: "🟢 Zrobione", bg: "rgba(16,185,129,0.22)", border: "#10b981", color: "#34d399" }
+      };
+      box.innerHTML = pat.tasks.map(t => {
+        const s = styles[t.status] || styles.todo;
+        return `
+          <div onclick="toggleMobileTask('${pat.id}', '${t.id}')" style="cursor:pointer; background:${s.bg}; border:1px solid ${s.border}; border-radius:8px; padding:9px 10px; display:flex; justify-content:space-between; align-items:center; gap:8px;">
+            <div>
+              <strong style="color:#f8fafc; font-size:0.84rem;">${t.text}</strong>
+              <div style="font-size:0.70rem; color:var(--muted);">Zlecił: ${t.author}${t.updatedBy ? ` • ${t.updatedBy}` : ""}</div>
+            </div>
+            <span style="color:${s.color}; font-weight:800; font-size:0.76rem; white-space:nowrap;">${s.label}</span>
+          </div>`;
+      }).join("");
+    }
+
+    async function toggleMobileTask(patId, taskId) {
+      mobState = await WardDB.load();
+      const pat = mobState.patients.find(p => p.id === patId);
+      if (!pat || !Array.isArray(pat.tasks)) return;
+      const task = pat.tasks.find(t => t.id === taskId);
+      if (!task) return;
+
+      const nextMap = { todo: "progress", progress: "done", done: "todo" };
+      const labelMap = { todo: "🔴 Do zrobienia", progress: "🟡 W przygotowaniu", done: "🟢 Zrobione" };
+      task.status = nextMap[task.status] || "todo";
+      const stamp = nowStamp();
+      task.updatedBy = `${mobUser.name} (${stamp})`;
+
+      const msg = `📱 Przy łóżku [${task.text}] ➔ ${labelMap[task.status]}`;
+      pat.history.push({ date: stamp, type: "zlecenie", author: mobUser.name, comment: msg });
+      mobState.logs.unshift({ time: stamp, text: `${mobUser.name} (${pat.room}/${pat.bed} — ${pat.name}): ${msg}`, alert: false });
+
+      renderMobileTasks(pat);
+      await WardDB.save(mobState);
+      showSmartStatus(`✅ <strong>Zaktualizowano przy łóżku:</strong> ${task.text} ➔ <strong>${labelMap[task.status]}</strong>`, "#10b981");
+    }
+
 
         async function simulateQrScan() {
       const box = document.getElementById("qr-camera-box");

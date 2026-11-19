@@ -812,5 +812,127 @@ function printBedQrBadge() {
   win.document.close();
 }
 
+function generatePatientDayReport() {
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+
+  const vitals = pat.history.filter(h => h.type === "pomiar");
+  const events = pat.history.filter(h => h.type !== "pomiar");
+  const tasks = ensureTasks(pat);
+
+  const vitalsRows = vitals.map(v => `<li><strong>${v.date}</strong> (${v.author}): RR <strong>${v.sys}/${v.dia}</strong> mmHg, Puls <strong>${v.pulse}</strong> bpm, Temp <strong>${v.temp}°C</strong> ${v.comment ? `— <em>${v.comment}</em>` : ""}</li>`).join("")
+    || `<li style="color:var(--muted);">Brak pomiarów parametrów życiowych w ciągu doby.</li>`;
+
+  const tasksRows = tasks.map(t => {
+    const b = getTaskBadge(t.status);
+    return `<li><strong>${b.label}:</strong> ${t.text} <span style="color:var(--muted);">(zlecił: ${t.author}${t.updatedBy ? `, zmiana: ${t.updatedBy}` : ""})</span></li>`;
+  }).join("") || `<li style="color:var(--muted);">Brak przypisanych zleceń.</li>`;
+
+  const eventsRows = events.map(e => `<li><strong>${e.date}</strong> (${e.author}): ${e.comment}</li>`).join("")
+    || `<li style="color:var(--muted);">Brak dodatkowych zdarzeń pielęgniarskich.</li>`;
+
+  document.getElementById("report-content").innerHTML = `
+    <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:14px;">
+      <strong style="font-size:1.05rem; color:var(--accent);">📄 INDYWIDUALNY RAPORT DNIA PACJENTA (${nowStamp()})</strong><br>
+      <div style="margin-top:4px; font-size:0.86rem;">
+        Pacjent: <strong>${pat.name}</strong> • Lokalizacja: <strong>${pat.room} / ${pat.bed}</strong> • Opaska: <code>${pat.qr}</code><br>
+        Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> ${pat.alertNote ? `• <span style="color:#fbbf24;">⚠️ ${pat.alertNote}</span>` : ""}
+      </div>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;">
+      <strong style="color:#38bdf8;">💓 Chronologia pomiarów z doby:</strong>
+      <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${vitalsRows}</ul>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px;">
+      <strong style="color:#fbbf24;">📌 Realizacja zleceń i leków (Kanban):</strong>
+      <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${tasksRows}</ul>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px;">
+      <strong style="color:var(--green);">🕒 Pozostałe zdarzenia, opieka i ruch pacjenta:</strong>
+      <ul style="margin:6px 0 0 18px; font-size:0.83rem;">${eventsRows}</ul>
+    </div>`;
+
+  document.getElementById("report-modal").classList.remove("hidden");
+}
+
+function generateDailyWardReport() {
+  renderReportTeamChips();
+  const teamList = selectedShiftTeam.size ? [...selectedShiftTeam].join(", ") : currentUser.name;
+
+  // Automatyczna analiza AI wyjątkowych sytuacji z całego dnia na oddziale
+  const aiHighlights = [];
+  wardState.patients.forEach(p => {
+    const vitals = p.history.filter(h => h.type === "pomiar");
+    const lastV = vitals.length ? vitals[vitals.length - 1] : null;
+    if (lastV) {
+      if (lastV.temp >= 38.0) aiHighlights.push(`🔥 <strong>Gorączka (${lastV.temp}°C):</strong> ${p.name} (${p.room}/${p.bed}) o godz. ${lastV.date}.`);
+      if (lastV.sys >= 150 || lastV.dia >= 95) aiHighlights.push(`💓 <strong>Podwyższone ciśnienie (${lastV.sys}/${lastV.dia} mmHg):</strong> ${p.name} (${p.room}/${p.bed}) o godz. ${lastV.date}.`);
+      if (lastV.pulse >= 100) aiHighlights.push(`⚡ <strong>Tachykardia (${lastV.pulse} bpm):</strong> ${p.name} (${p.room}/${p.bed}).`);
+      if (vitals.length >= 2) {
+        const prevV = vitals[vitals.length - 2];
+        if (lastV.sys - prevV.sys >= 15) aiHighlights.push(`📈 <strong>Nagły skok RR (+${lastV.sys - prevV.sys} mmHg):</strong> ${p.name} (${p.room}/${p.bed}).`);
+      }
+    }
+    const pendingTasks = ensureTasks(p).filter(t => t.status !== "done");
+    if (pendingTasks.length > 0) {
+      aiHighlights.push(`⏳ <strong>Niezakończone zlecenia (${pendingTasks.length}):</strong> ${p.name} (${p.room}) — ${pendingTasks.map(t => t.text).join(", ")}.`);
+    }
+    const transfers = p.history.filter(h => h.type === "ruch");
+    if (transfers.length > 0) {
+      aiHighlights.push(`🔄 <strong>Zmiana sali/łóżka:</strong> ${p.name} — ${transfers[transfers.length - 1].comment.replace(/^🔄\s*/, "")}`);
+    }
+  });
+
+  const aiSummaryHtml = `
+    <div style="background:rgba(139,92,246,0.12); border:1px solid #8b5cf6; border-radius:10px; padding:12px; margin-bottom:14px;">
+      <strong style="color:#c4b5fd; font-size:0.92rem;">🤖 PODSUMOWANIE AI — WYJĄTKOWE SYTUACJE DO PRZEKAZANIA ZMIANIE:</strong>
+      <ul style="margin:6px 0 0 18px; font-size:0.82rem; line-height:1.45;">
+        ${aiHighlights.length ? aiHighlights.map(item => `<li>${item}</li>`).join("") : `<li>✅ Brak incydentów krytycznych — przebieg dnia stabilny u wszystkich pacjentów.</li>`}
+      </ul>
+    </div>`;
+
+  const patientsBreakdown = wardState.patients.map(p => {
+    const vitals = p.history.filter(h => h.type === "pomiar");
+    const tasks = ensureTasks(p);
+    const otherEvents = p.history.filter(h => h.type !== "pomiar");
+
+    const vitalsTxt = vitals.length
+      ? vitals.map(v => `${v.date}: <strong>${v.sys}/${v.dia}</strong>, P:${v.pulse}, T:${v.temp}°C`).join(" &nbsp;|&nbsp; ")
+      : "Brak pomiarów";
+
+    const tasksTxt = tasks.length
+      ? tasks.map(t => `${getTaskBadge(t.status).label} ${t.text}`).join("<br>")
+      : `<span style="color:var(--muted);">Brak zleceń</span>`;
+
+    const eventsTxt = otherEvents.length
+      ? otherEvents.slice(-4).map(e => `• ${e.date} (${e.author}): ${e.comment}`).join("<br>")
+      : `<span style="color:var(--muted);">Brak wpisów dodatkowych</span>`;
+
+    return `
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:11px; margin-bottom:10px; page-break-inside:avoid;">
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:5px; margin-bottom:6px;">
+          <strong style="color:var(--accent);">${p.room} • ${p.bed} — ${p.name}</strong>
+          <span style="font-size:0.78rem; color:#fbbf24;">${p.alertNote ? `⚠️ ${p.alertNote}` : ""}</span>
+        </div>
+        <div style="font-size:0.8rem; margin-bottom:6px;"><strong>💓 Pomiary dnia:</strong> ${vitalsTxt}</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:0.79rem;">
+          <div><strong>📌 Status zadań:</strong><br>${tasksTxt}</div>
+          <div><strong>🕒 Przebieg dnia / zdarzenia:</strong><br>${eventsTxt}</div>
+        </div>
+      </div>`;
+  }).join("");
+
+  document.getElementById("report-content").innerHTML = `
+    <div style="border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:12px;">
+      <strong style="font-size:1.05rem; color:var(--green);">📊 ZBIORCZY RAPORT DNIA ODDZIAŁU — PRZEKAZANIE DYŻURU (${nowStamp()})</strong><br>
+      <div style="margin-top:4px; font-size:0.84rem;">
+        Sporządził: <strong style="color:var(--green);">${currentUser.name}</strong> • Zespół zmiany: <strong>${teamList}</strong> • Pacjentów: <strong>${wardState.patients.length}</strong>
+      </div>
+    </div>
+    ${aiSummaryHtml}
+    ${patientsBreakdown}`;
+
+  document.getElementById("report-modal").classList.remove("hidden");
+}
 
 

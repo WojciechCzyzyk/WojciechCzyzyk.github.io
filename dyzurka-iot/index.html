@@ -99,9 +99,14 @@
         </div>
         
 </div>
-      <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
+           <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
       <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
         <label style="color:var(--accent); font-weight:700;">💊 Zlecenia Lekarskie / Ordynacja Leków (edycja wyłącznie dla Lekarza):</label>
+        <div style="display:flex; gap:8px; margin-top:6px;">
+          <input id="modal-meds-input" placeholder="Brak zleceń lekarskich...">
+          <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>
+        </div>
+      </div>
 
       <!-- Sekcja Opisu Ogólnego / Przebiegu Pobytu (Lekarz i Pielęgniarka) -->
       <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
@@ -112,11 +117,6 @@
         </div>
       </div>
 
-        <div style="display:flex; gap:8px; margin-top:6px;">
-          <input id="modal-meds-input" placeholder="Brak zleceń lekarskich...">
-          <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>
-        </div>
-      </div>
 
       <!-- Szybkie akcje dla Opiekuna Medycznego -->
       <div id="caregiver-actions" class="hidden" style="background:rgba(16,185,129,0.1); border:1px solid var(--green); border-radius:10px; padding:12px; margin-bottom:16px;">

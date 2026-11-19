@@ -1,1 +1,86 @@
-vsgsd
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olusia (4 l.) — Studio Kreatywne & UX | Wojciech Czyżyk</title>
+  <link rel="icon" type="image/png" href="../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../index.html" class="btn-link">← Powrót do strony Taty</a>
+    </div>
+
+    <!-- LISTA SEKCJI (Aby dodać nową galerię lub historyjkę, skopiuj 1 linijkę!) -->
+    <section class="card" data-plik="sekcje/powitanie.html"></section>
+    <section class="card" data-plik="sekcje/tablica.html"></section>
+    <section class="card" data-plik="sekcje/galeria.html"></section>
+  </div>
+
+  <script>
+    // Ładowanie sekcji z osobnych plików
+    document.querySelectorAll("[data-plik]").forEach(async (ramka) => {
+      const plik = ramka.getAttribute("data-plik");
+      const odp = await fetch(plik);
+      ramka.innerHTML = odp.ok ? await odp.text() : `<p>Brak pliku: ${plik}</p>`;
+      if (plik.includes("tablica.html")) initCanvas();
+    });
+
+    // Obsługa tablicy do rysowania palcem dla Olusi
+    let brushColor = "#ec4899";
+    let brushSize = 6;
+
+    function setColor(c, size = 6) {
+      brushColor = c;
+      brushSize = size;
+    }
+
+    function clearCanvas() {
+      const c = document.getElementById("ola-canvas");
+      if (!c) return;
+      const ctx = c.getContext("2d");
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, c.width, c.height);
+    }
+
+    function initCanvas() {
+      const canvas = document.getElementById("ola-canvas");
+      if (!canvas) return;
+      canvas.width = canvas.offsetWidth;
+      canvas.height = 360;
+      const ctx = canvas.getContext("2d");
+      clearCanvas();
+
+      let drawing = false;
+      const getPos = (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: clientX - rect.left, y: clientY - rect.top };
+      };
+
+      const start = (e) => { drawing = true; const p = getPos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); };
+      const draw = (e) => {
+        if (!drawing) return;
+        e.preventDefault();
+        const p = getPos(e);
+        ctx.lineWidth = brushSize;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = brushColor;
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+      };
+      const stop = () => { drawing = false; };
+
+      canvas.addEventListener("mousedown", start);
+      canvas.addEventListener("mousemove", draw);
+      window.addEventListener("mouseup", stop);
+      canvas.addEventListener("touchstart", start, { passive: false });
+      canvas.addEventListener("touchmove", draw, { passive: false });
+      canvas.addEventListener("touchend", stop);
+    }
+  </script>
+</body>
+</html>

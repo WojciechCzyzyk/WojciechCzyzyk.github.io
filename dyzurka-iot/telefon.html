@@ -365,21 +365,48 @@
       return { isAlert: false, text: `✅ AI: Parametry stabilne i zgodne z trendem pacjenta.` };
     }
 
-    async function sendVitals() {
-
+        async function sendVitals() {
       mobState = await WardDB.load();
       const id = document.getElementById("mob-patient").value;
       const pat = mobState.patients.find(p => p.id === id);
       if (!pat) return alert("Nie znaleziono pacjenta w aktualnej bazie!");
-      const sys = parseInt(document.getElementById("in-sys").value, 10);
-      const dia = parseInt(document.getElementById("in-dia").value, 10);
-      const pulse = parseInt(document.getElementById("in-pulse").value, 10);
-      const temp = parseFloat(document.getElementById("in-temp").value);
-      const userComment = document.getElementById("in-comment").value.trim();
 
+      const sys = parseInt(document.getElementById("in-sys").value, 10) || 0;
+      const dia = parseInt(document.getElementById("in-dia").value, 10) || 0;
+      const pulse = parseInt(document.getElementById("in-pulse").value, 10) || 0;
+      const temp = parseFloat(document.getElementById("in-temp").value) || 0;
+      const userComment = document.getElementById("in-comment").value.trim();
+      const hasVitals = sys > 0 || dia > 0 || pulse > 0 || temp > 0;
+      const stamp = nowStamp();
+
+      if (!hasVitals && !userComment) {
+        return alert("Wpisz parametry z miernika albo wpisz komentarz / obserwację przy łóżku!");
+      }
+
+      const banner = document.getElementById("ai-feedback-banner");
+      banner.classList.remove("hidden");
+
+      // TRYB A: Sam komentarz (pomiary puste / 0) -> doklejamy do Opisu Ogólnego pacjenta
+      if (!hasVitals && userComment) {
+        const logEntry = `[${stamp} — ${mobUser.name}]: ${userComment}`;
+        pat.generalNote = pat.generalNote ? `${pat.generalNote}\n${logEntry}` : logEntry;
+        pat.history.push({ date: stamp, type: "notatka", author: mobUser.name, comment: `📝 Notatka przy łóżku: ${userComment}` });
+        mobState.logs.unshift({
+          time: stamp,
+          text: `📝 ${mobUser.name} dopisał notatkę dla ${pat.name} (${pat.room}/${pat.bed}): ${userComment}`,
+          alert: false
+        });
+        await WardDB.save(mobState);
+        banner.style.borderLeftColor = "#0284c7";
+        banner.innerHTML = `<strong>📝 Dopisano do opisu ogólnego pacjenta!</strong><br>${logEntry}`;
+        document.getElementById("in-comment").value = "";
+        await updateSelectedInfo();
+        return;
+      }
+
+      // TRYB B: Zapis parametrów życiowych (+ opcjonalny komentarz)
       const aiAnalysis = analyzeTrendWithAI(pat, sys, dia, pulse, temp);
       const fullComment = userComment ? `${userComment} | ${aiAnalysis.text}` : aiAnalysis.text;
-      const stamp = nowStamp();
 
       pat.history.push({ date: stamp, type: "pomiar", sys, dia, pulse, temp, author: mobUser.name, comment: fullComment });
       mobState.logs.unshift({
@@ -389,12 +416,15 @@
       });
 
       await WardDB.save(mobState);
-      const banner = document.getElementById("ai-feedback-banner");
-      banner.classList.remove("hidden");
       banner.style.borderLeftColor = aiAnalysis.isAlert ? "var(--red)" : "var(--green)";
-      banner.innerHTML = `<strong>📡 Wysłano na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
+      banner.innerHTML = `<strong>📡 Wysłano pomiar na tablicę dyżurki!</strong><br>${aiAnalysis.text}`;
       document.getElementById("in-comment").value = "";
+      resetVitalsInputs();
     }
+
+
+
+    
     function showSmartStatus(html, color = "#8b5cf6") {
       const box = document.getElementById("smart-input-status");
       if (!box) return;

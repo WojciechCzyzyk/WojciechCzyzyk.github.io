@@ -539,15 +539,14 @@ function openRoundsModal() {
             ${buildProcedureSelectHtml("round-meds-" + p.id)}
             <div style="display:flex; gap:6px;">
               <input id="round-meds-${p.id}" placeholder="Wpisz lek, dawkę lub badanie do wykonania...">
-              <button class="btn btn-green btn-sm" style="white-space:nowrap;" onclick="addRoundTask('${p.id}')">➕ Dodaj</button>
+              <button class="btn btn-green btn-sm" style="white-space:nowrap;" onclick="addRoundTask('${p.id}')">➕ Dodaj zadanie</button>
             </div>
           </div>
           <div>
             <label style="font-size:0.75rem; color:#38bdf8;">📝 Zalecenia / opis ogólny z obchodu (dopisywane jako log do karty):</label>
             <div style="display:flex; gap:6px; margin-top:4px;">
               <input id="round-note-${p.id}" placeholder="Wpisz zalecenie lub uwagę z obchodu (dopisze się z godziną)..." style="border-color:#38bdf8;">
-              <button class="btn btn-sm" style="background:#0284c7; color:#fff; white-space:nowrap;" onclick="addRoundGeneralLog('${p.id}')">➕ Dodaj</button>
-            </div>
+              <button class="btn btn-sm" style="background:#0284c7; color:#fff; white-space:nowrap;" onclick="addRoundGeneralLog('${p.id}')">➕ Dodaj uwagę/opis</button>            </div>
           </div>
         </div>
       </div>`;

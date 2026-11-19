@@ -262,7 +262,7 @@
         if (box) box.classList.add("hidden");
       };
 
-      const onQrDetected = (rawCode) => {
+      const onQrDetected = async (rawCode) => {
         stopCamera();
         const code = (rawCode || "").trim();
         const matched = mobState.patients.find(p => p.qr.toLowerCase() === code.toLowerCase());

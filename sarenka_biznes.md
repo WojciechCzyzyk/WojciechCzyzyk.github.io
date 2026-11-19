@@ -120,3 +120,18 @@ Organizacja zajęć pokazowych oraz warsztatów z wykorzystaniem autorskiej meto
 
 3. Bezpośrednie doradztwo i wdrożenia AI dla lokalnych firm (B2B):
 Pozyskiwanie zleceń wśród małych i średnich przedsiębiorstw (MŚP) z regionu poprzez bezpłatne lub niskokosztowe warsztaty diagnostyczne i prezentacje na żywo (wdrażanie lekkich systemów kontekstowych AI Copilot usprawniających obieg zadań, raportowanie i automatyzację procesów biurowych oraz terenowych).
+
+---
+
+## Analiza Rynku Edukacji IT dla Dzieci i Pozycjonowanie Akademii APEX (11.2026)
+
+### 1. Główne Trendy Rynkowe
+* **Przesunięcie z prostego kodowania na AI i projektowanie systemów:** W obliczu rozwoju modeli językowych nacisk w edukacji przenosi się z przepisywania składni na rozwiązywanie problemów, architekturę systemów i świadome wykorzystywanie AI jako narzędzia wspierającego naukę.
+* **Polaryzacja rynku (Sieci franczyzowe vs. Kameralne pracownie praktyków):** Obok masowych franczyz (np. *Giganci Programowania* od 6. roku życia) rośnie popyt na lokalne, kameralne grupy prowadzone przez praktyków biznesu i inżynierii (model zbliżony do *KidsPRO*).
+* **Ścieżka narzędziowa:** Dla młodszych dzieci standardem pozostają środowiska wizualne (**Scratch**) oraz oparte na grach (**Minecraft**, **Roblox**), natomiast starsi uczniowie przechodzą w stronę technologii dominujących w branży (**Web/JS**, **Python pod AI**, **Unity/C#**).
+* **Nowa motywacja rodziców:** Kurs programowania przestaje być postrzegany jako „gwarancja etatu w IT”, a staje się fundamentem logicznego myślenia i kompetencji cyfrowych — traktowanym na równi z nauką języków obcych.
+
+### 2. Przewagi Konkurencyjne Akademii APEX (Nasza Odpowiedź na Rynek)
+* **Inżynieria Systemów i AI od Pierwszej Lekcji:** Uczymy myślenia architektonicznego (metoda *1 sekcja = 1 mały plik*, praca na tablicy Kanban, rola arbitra weryfikującego AI) zamiast bezrefleksyjnego kopiowania kodu.
+* **Lokalny Autorytet Praktyków (Jelenia Góra i okolice):** Kameralne zajęcia prowadzone przez aktywnego inżyniera Embedded/AI oraz doświadczonego pedagoga — brak masowej „taśmy franczyzowej”.
+* **Natychmiastowy Efekt Szkolny (*EdTech w Praktyce*):** Łączymy naukę technologii z budowaniem własnych narzędzi wspierających naukę przedmiotów szkolnych (quizy z matematyki, polskiego, geografii, historii i biologii), co daje rodzicom wymierną wartość od pierwszego miesiąca.

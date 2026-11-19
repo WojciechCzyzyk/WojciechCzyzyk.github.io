@@ -215,6 +215,17 @@ function openPatientModal(patId) {
   const medsInput = document.getElementById("modal-meds-input");
   medsInput.value = pat.medications || "";
   medsInput.disabled = currentUser.role !== "lekarz";
+
+  const noteArea = document.getElementById("modal-general-note");
+  if (noteArea) {
+    noteArea.value = pat.generalNote || "";
+    noteArea.disabled = currentUser.role === "opiekun";
+  }
+  const saveNoteBtn = document.getElementById("btn-save-general-note");
+  if (saveNoteBtn) saveNoteBtn.classList.toggle("hidden", currentUser.role === "opiekun");
+
+
+  
   document.getElementById("btn-save-meds").classList.toggle("hidden", currentUser.role !== "lekarz");
 
   document.getElementById("caregiver-actions").classList.toggle("hidden", currentUser.role !== "opiekun");
@@ -249,6 +260,20 @@ async function saveMedications() {
   openPatientModal(pat.id);
   renderLogs();
 }
+
+async function saveGeneralNote() {
+  if (currentUser.role === "opiekun") return;
+  const pat = wardState.patients.find(p => p.id === activePatientId);
+  if (!pat) return;
+  pat.generalNote = document.getElementById("modal-general-note").value.trim();
+  pat.history.push({ date: nowStamp(), type: "notatka", author: currentUser.name, comment: `📝 Zaktualizowano opis ogólny pacjenta.` });
+  wardState.logs.unshift({ time: nowStamp(), text: `📝 ${currentUser.name} zaktualizował opis ogólny dla ${pat.name} (${pat.room}).`, alert: false });
+  await WardDB.save(wardState);
+  openPatientModal(pat.id);
+  renderLogs();
+}
+
+
 
 async function logCareAction(txt) {
   const pat = wardState.patients.find(p => p.id === activePatientId);
@@ -517,8 +542,12 @@ function openRoundsModal() {
         </div>
         <div>
           <label style="font-size:0.75rem;">Leki, uwagi i zalecenia po obchodzie:</label>
+         
           ${buildProcedureSelectHtml("round-meds-" + p.id)}
           <input id="round-meds-${p.id}" value="${(p.medications || "").replace(/"/g, "&quot;")}" placeholder="Wpisz ordynację leków i uwagi...">
+          
+          <input id="round-note-${p.id}" value="${(p.generalNote || "").replace(/"/g, "&quot;")}" placeholder="Opis ogólny / rozpoznanie / stan z obchodu (nie trafia do leków)..." style="margin-top:6px; border-color:#38bdf8;">
+
         </div>
         <button class="btn btn-green btn-sm" style="margin-top:16px;" onclick="saveRoundNote('${p.id}')">💾 Zapisz</button>
       </div>`;
@@ -532,6 +561,10 @@ async function saveRoundNote(patId) {
   if (!pat) return;
   const docName = document.getElementById("rounds-doctor-select").value || currentUser.name;
   const newMeds = document.getElementById(`round-meds-${patId}`).value.trim();
+
+  const newNote = document.getElementById(`round-note-${patId}`)?.value.trim() || "";
+  pat.generalNote = newNote;
+
 
   pat.medications = newMeds;
   pat.history.push({ date: nowStamp(), type: "zlecenie", author: docName, comment: `🩺 Obchód lekarski (${docName}): ${newMeds}` });
@@ -664,10 +697,26 @@ function renderPatientTasksInModal(pat) {
     </div>`;
 }
 
+let currentTasksFilter = "all";
+
+function setTasksFilter(filterVal) {
+  currentTasksFilter = filterVal;
+  document.querySelectorAll("#tasks-filter-bar button").forEach(btn => {
+    const isActive = btn.dataset.filter === filterVal;
+    btn.classList.toggle("btn-outline", !isActive);
+  });
+  openTasksModal();
+}
+
 function openTasksModal() {
   const listBox = document.getElementById("tasks-board-list");
-  listBox.innerHTML = wardState.patients.map(p => {
-    const tasks = ensureTasks(p);
+  const filteredPatients = wardState.patients.filter(p => {
+    if (currentTasksFilter === "all") return true;
+    return ensureTasks(p).some(t => t.status === currentTasksFilter);
+  });
+
+  listBox.innerHTML = filteredPatients.map(p => {
+    const tasks = ensureTasks(p).filter(t => currentTasksFilter === "all" || t.status === currentTasksFilter);
     const pills = tasks.map(t => {
       const b = getTaskBadge(t.status);
       return `
@@ -693,10 +742,11 @@ function openTasksModal() {
           </div>
         </div>
       </div>`;
-  }).join("") || `<div style="color:var(--muted);">Brak pacjentów na oddziale.</div>`;
+  }).join("") || `<div style="color:var(--muted); padding:10px;">Brak zadań spełniających wybrany filtr.</div>`;
 
   document.getElementById("tasks-modal").classList.remove("hidden");
 }
+
 
 
 

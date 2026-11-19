@@ -99,7 +99,7 @@
         </div>
         
 </div>
-      <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
+           <!-- Sekcja Zleceń Lekarskich (Edycja TYLKO dla Lekarza!) -->
       <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
         <label style="color:var(--accent); font-weight:700;">💊 Zlecenia Lekarskie / Ordynacja Leków (edycja wyłącznie dla Lekarza):</label>
         <div style="display:flex; gap:8px; margin-top:6px;">
@@ -107,6 +107,16 @@
           <button id="btn-save-meds" class="btn btn-green" onclick="saveMedications()">Zapisz leki</button>
         </div>
       </div>
+
+      <!-- Sekcja Opisu Ogólnego / Przebiegu Pobytu (Lekarz i Pielęgniarka) -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:16px;">
+        <label style="color:#38bdf8; font-weight:700;">📝 Opis ogólny pacjenta / Przebieg pobytu i uwagi przyłóżkowe:</label>
+        <textarea id="modal-general-note" rows="3" placeholder="Brak opisu ogólnego pacjenta..." style="width:100%; margin-top:6px; background:#0b1120; color:#f8fafc; border:1px solid var(--border); border-radius:8px; padding:8px; font-family:inherit; font-size:0.84rem;"></textarea>
+        <div style="display:flex; justify-content:flex-end; margin-top:6px;">
+          <button id="btn-save-general-note" class="btn btn-sm" style="background:#0284c7; color:#fff;" onclick="saveGeneralNote()">💾 Zapisz opis ogólny</button>
+        </div>
+      </div>
+
 
       <!-- Szybkie akcje dla Opiekuna Medycznego -->
       <div id="caregiver-actions" class="hidden" style="background:rgba(16,185,129,0.1); border:1px solid var(--green); border-radius:10px; padding:12px; margin-bottom:16px;">
@@ -225,6 +235,14 @@
         <button class="btn btn-sm btn-outline" onclick="closeTasksModal()">✖ Zamknij</button>
         
       </div>
+      <div id="tasks-filter-bar" style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+        <button type="button" class="btn btn-sm" data-filter="all" onclick="setTasksFilter('all')">📋 Wszyscy (Wszystkie)</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="todo" onclick="setTasksFilter('todo')">🔴 Do zrobienia</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="progress" onclick="setTasksFilter('progress')">🟡 W przygotowaniu</button>
+        <button type="button" class="btn btn-sm btn-outline" data-filter="done" onclick="setTasksFilter('done')">🟢 Zrobione</button>
+      </div>
+
+      
       <div id="tasks-board-list" style="display:flex; flex-direction:column; gap:10px; max-height:70vh; overflow-y:auto;"></div>
     </div>
   </div>

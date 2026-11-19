@@ -54,6 +54,8 @@
   - `modul-3-sesja-6/index.html` — widok trzeciego quizu (Sesja #6: Modular Architecture & Separation of Concerns)
   - `modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
   - `modul-4-sesja-7/pytania.js — baza 6 pytań B2B SaaS & Medical IT Architecture
+  -  modul-4-sesja-7/index.html — widok czwartego quizu (Sesja #7: B2B SaaS & Medical IT)
+   - modul-4-sesja-7/pytania.js — baza 6 pytań z obszaru UX, Auto-Fallback AI, RODO i architektury Sidecar App
 
 * **Podkatalog `dyzurka-iot/` (System Smart Ward Board & Mobile QR — Kokpit Oddziału):**
   - `index.html` — główny kokpit dyżurki (tablica sal 404–408 i 413–414, obchód lekarski, tablica zadań Kanban z filtrem statusów, opis ogólny pacjenta, zarządzanie personelem oraz raporty: Zmiany, Dnia Pacjenta i Dnia Oddziału + AI)

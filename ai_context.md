@@ -1529,3 +1529,19 @@ Status Pacjenta
 
 4. **Strategia Partnerskiego Pilotażu R&D na Oddziale Hematologii:**
    * Zaplanowano przedstawienie Pani Profesor (po przeniesieniu na oddział hematologii) koncepcji partnerskiego projektu badawczo-rozwojowego (*Sidecar App / Point-of-Care AI*) — lekkiej nakładki obserwacyjnej (głos, Vision AI, raporty trendów, pełne *Privacy by Design* / RODO) jako materiału na wspólne *Case Study* kliniczno-inżynierskie, wykłady i konferencje naukowe.
+
+
+#### 📅 Wpis: 20.11.2026 (Poranek — Podstrona `living-ai/`, Karta PDF R&D Hematologia & Arsenał Argumentów na Rozmowy)
+
+1. **Wdrożenie Podstrony `living-ai/index.html` & Karty Koncepcyjnej R&D:**
+   * Utworzono dedykowaną podstronę **`living-ai/index.html`** (zaktualizowaną w `mapa_projektow.md` i podlinkowaną z `index.html`) opisującą 4-etapową pętlę samodoskonalenia (*Zero-Friction Capture* ➔ *Curated Memory* ➔ *Pattern Mining* ➔ *Human-in-the-Loop*), porównanie z systemami Enterprise oraz kierunek R&D w badaniach klinicznych (*In-Context & Continual Learning*, *Privacy by Design*).
+   * Wygenerowano jednostronicową ulotkę A4 **`Karta_Koncepcyjna_RD_Hematologia_Living_AI.pdf`** pod rozmowę z Panią Profesor na oddziale hematologii o partnerskim projekcie badawczo-rozwojowym (*Sidecar App / Point-of-Care AI*).
+
+2. **Walidacja Przemysłowa (Tier-1 Automotive — Dräxlmaier / Marek):**
+   * Analiza projektu *Asystenta Konstruktora Wiązek Elektrycznych* potwierdziła, że największe korporacje motoryzacyjne budują dziś dokładnie ten sam wzorzec nakładki operacyjnej (*Sidecar App* + Kanban zmian *ECR/AEM* + porównywarka *diff* dla list `WIRE/BOM`, `L0L/L0R`, `PrNr`, `CAN FD`).
+
+3. **🛡️ Arsenał Gotowych Argumentów na Rozmowy Rekrutacyjne i B2B (Ściągawka Architekta):**
+   * **Hybryda AI + Kod Deterministyczny (Zero Halucynacji):** *„Nigdy nie każę modelowi AI liczyć ani porównywać tysięcy wierszy danych 'w głowie', bo LLM zawsze zacznie gubić szczegóły. AI służy do rozumienia kontekstu, generowania reguł i raportowania, natomiast twarde parsowanie i porównywanie (`WIRE/BOM`, `git diff`, parametry) wykonuje zawsze deterministyczny kod.”*
+   * **Living AI Systems (*In-Context & Continual Learning*):** *„Zamiast kosztownego przetrenowywania modeli lub kupowania sztywnych kombajnów z Vendor Lock-in, projektuję lekkie systemy z żywą pamięcią kontekstową (`JSON/MD`), które uczą się słownictwa i nawyków użytkownika w trakcie codziennej pracy.”*
+   * **Edge-to-AI & Full-Cycle R&D:** *„Łączę 10 lat niskopoziomowego Embedded (ARM7, ESP32, C++20, UHF RFID, CAN/UART) z chmurą, automatyzacją CI/CD oraz multimodalnym AI (Vision AI, Głos, QR) — dowożę działające MVP w dni zamiast miesięcy.”*
+   * **Zero-Training UI & Poka-Yoke:** *„Projektuję interfejsy na podstawie obserwacji ludzi w realnych warunkach pracy (szpital, budowa, szkoła), z twardymi blokadami antybłędowymi i bez konieczności wielogodzinnych szkoleń.”*

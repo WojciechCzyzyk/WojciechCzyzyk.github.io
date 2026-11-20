@@ -73,6 +73,15 @@
   * `krzys/sekcje/minecraft.html` — pierwsza recenzja gry i werdykt testera.
   * `krzys/sekcje/wyzwania.html` — interaktywna lista wyzwań (+100 XP).
 
+* **Podkatalog `ola/` (Strefa CEO & UX Designer — architektura modułowa *1 sekcja = 1 plik*):**
+  - `ola/index.html` — główny szkielet kontenera ładujący dynamicznie sekcje z podkatalogu `sekcje/`
+  - `ola/style.css` — wydzielony arkusz stylów strefy kreatywnej Olusi
+  - `ola/sekcje/powitanie.html` — blok powitalny CEO & UX Designer
+  - `ola/sekcje/tablica.html` — interaktywna tablica do rysowania palcem (`<canvas>`)
+  - `ola/sekcje/galeria.html` — galeria ilustracji z ciepłymi opisami w stylu IT
+  - `ola/sekcje/ola_puzzle.jpg` — ilustracja układania puzzli z jednorożcem pod nadzorem kociego Działu QA
+  - `ola/sekcje/ola_most_klocki.jpg` — ilustracja testów wytrzymałościowych mostu z klocków (CEO & UX Designer)
+  - `ola/sekcje/ola_rolki.jpg` — panoramiczna ilustracja pętli `while(true)` na rolkach wokół komina ze sznurkiem i kotami
 
 
 

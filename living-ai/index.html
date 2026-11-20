@@ -1,1 +1,135 @@
-vffvfva
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living AI Systems — Samodoskonalące się Systemy AI | Wojciech Czyżyk</title>
+    <link rel="icon" type="image/png" href="../favicon_wc.png?v=2">
+    <link rel="apple-touch-icon" href="../favicon_wc.png?v=2">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="matrix-container">
+        <header>
+            <div style="margin-bottom: 0.8rem;">
+                <a href="../index.html" class="btn-link">← Powrót do Portfolio Głównego</a>
+            </div>
+            <h1>Living AI Systems</h1>
+            <p class="subtitle">_continual_learning // context_engineering // edge_to_ai</p>
+        </header>
+
+        <!-- Manifest Koncepcyjny -->
+        <section class="card">
+            <h2>Czym są Samodoskonalące się Systemy AI (Living AI Systems)?</h2>
+            <p>Większość tradycyjnego oprogramowania oraz gotowych „kombajnów AI” działa odwrotnie do ludzkiej natury — zmusza lekarza, pielęgniarkę, inżyniera na budowie czy ucznia do dopasowania się do sztywnych formularzy i setek zbędnych opcji (<em>Feature Bloat</em>).</p>
+            <p><strong>Living AI System</strong> odwraca ten schemat. To lekki, ewolucyjny ekosystem budowany od zera wokół konkretnego procesu w świecie fizycznym, który <strong>uczy się nawyków, języka i wąskich gardeł swojego użytkownika w trakcie codziennej pracy</strong> — bez kosztownego przetrenowywania sieci neuronowych i bez uzależnienia od jednego dostawcy (<em>Zero Vendor Lock-in</em>).</p>
+        </section>
+
+        <!-- 4-etapowa pętla samodoskonalenia -->
+        <section class="card">
+            <h2>🔄 4-Etapowa Pętla Samodoskonalenia (Jak to działa pod maską?)</h2>
+            
+            <div style="margin-bottom: 1.2rem;">
+                <h3>1. Zero-Friction Capture (Rejestracja bez oporu w terenie)</h3>
+                <p>System nie wymaga siedzenia przy biurku i wypełniania tabelek. Zbiera sygnały prosto z miejsca działania (<em>Point-of-Care / Point-of-Work</em>): przez jedno kliknięcie na telefonie, krótkie dyktowanie głosowe, skan kodu QR, zdjęcie ekranu miernika lub odręcznej notatki (<em>Multimodal Vision AI</em>) oraz odczyty z czujników sprzętowych (ESP32 / UHF RFID).</p>
+            </div>
+
+            <div style="margin-bottom: 1.2rem;">
+                <h3>2. Curated Memory (Czysta Pamięć Operacyjna jako Single Source of Truth)</h3>
+                <p>Zamiast zalewać model AI szumem informacyjnym (<em>Context Pollution</em>), zdarzenia trafiają do lekkiej, ustrukturyzowanej pamięci kontekstowej (<code>JSON</code> / <code>Markdown</code> / REST API). Każdy wpis posiada pełny ślad audytowy (<em>Audit Trail</em>: kto, co i kiedy) oraz zachowuje pełną ochronę prywatności (<em>Privacy by Design</em>).</p>
+            </div>
+
+            <div style="margin-bottom: 1.2rem;">
+                <h3>3. Pattern Mining &amp; Auto-Adaptation (Wykrywanie wzorców i adaptacja)</h3>
+                <p>System analizuje historię pracy i sam rozbudowuje swoje możliwości: wyłuskuje nowe pojęcia i leki do szybkiego słownika przycisków na kolejną zmianę, wykrywa powtarzające się zatory czasowe oraz generuje spersonalizowane briefy i raporty dokładnie wtedy, gdy są potrzebne.</p>
+            </div>
+
+            <div>
+                <h3>4. Human-in-the-Loop (Człowiek jako Architekt i Arbiter)</h3>
+                <p>AI nie podejmuje ryzykownych decyzji za człowieka — proponuje konkretne usprawnienia interfejsu, skrótów i procedur (SOP). Użytkownik zatwierdza je jednym kliknięciem, dzięki czemu system dojrzewa razem z zespołem lub firmą z tygodnia na tydzień.</p>
+            </div>
+        </section>
+
+        <!-- Porównanie Architektoniczne -->
+        <section class="card">
+            <h2>⚖️ Living AI System vs Tradycyjne Wdrożenia Enterprise</h2>
+            <div style="overflow-x: auto; margin-top: 0.8rem;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #30363d; color: #10b981;">
+                            <th style="padding: 10px 8px;">Kryterium</th>
+                            <th style="padding: 10px 8px;">Ciężkie Systemy Pudełkowe</th>
+                            <th style="padding: 10px 8px;">Living AI System (Moje Podejście)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 10px 8px;"><strong>Czas budowy MVP</strong></td>
+                            <td style="padding: 10px 8px;">Miesiące wdrożeń i konfiguracji</td>
+                            <td style="padding: 10px 8px;"><strong>Godziny / Dni</strong> (szybkie prototypowanie)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 10px 8px;"><strong>Adaptacja do zmian</strong></td>
+                            <td style="padding: 10px 8px;">Kosztowne zgłoszenia do producenta</td>
+                            <td style="padding: 10px 8px;"><strong>Samouczący się słownik i reguły</strong> w locie</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 10px 8px;"><strong>Próg wejścia (UX)</strong></td>
+                            <td style="padding: 10px 8px;">Wielogodzinne szkolenia personelu</td>
+                            <td style="padding: 10px 8px;"><strong>Zero-Training UI</strong> + blokady Poka-Yoke</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 8px;"><strong>Integracja ze sprzętem</strong></td>
+                            <td style="padding: 10px 8px;">Zamknięte ekosystemy chmurowe</td>
+                            <td style="padding: 10px 8px;"><strong>Edge-to-AI</strong> (ESP32, UHF RFID, QR, Głos, Kamera)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3 Żywe Wdrożenia w Ekosystemie -->
+        <section class="card">
+            <h2>🚀 Żywe Poligony i Wdrożenia Pilotażowe</h2>
+            
+            <div style="margin-bottom: 1.4rem;">
+                <h3>🏥 1. MedTech &amp; Point-of-Care: Smart Ward Board</h3>
+                <p>Lekka nakładka operacyjna (<em>Sidecar App</em>) dla oddziałów szpitalnych i klinik. Samouczący się słownik zabiegów i leków automatycznie wyłuskuje nowe procedury wpisane przez personel, a multimodalny terminal (QR + Gemini Vision AI + Głos) eliminuje nocne przepisywanie notatek z papieru do HIS.</p>
+                <a href="../dyzurka-iot/index.html" target="_blank" class="btn-link">🖥️ Zobacz Kokpit Oddziału (Live Demo)</a>
+            </div>
+
+            <div style="margin-bottom: 1.4rem;">
+                <h3>🧠 2. Edukacja &amp; CI/CD: APEX AI Code Mentor</h3>
+                <p>Autonomiczny mentor programowania w potoku GitHub Actions z pamięcią długoterminową postępów ucznia (<code>mentor_log.json</code>). Analizuje realne zmiany w kodzie (<code>git diff</code>), weryfikuje, czy uczeń wdrożył wcześniejsze wskazówki, i dopasowuje kolejne wyzwania do jego tempa nauki.</p>
+                <a href="https://github.io" target="_blank" class="btn-link">🛰️ Zobacz Poligon Ucznia (Live)</a>
+            </div>
+
+            <div>
+                <h3>🏢 3. Zarządzanie &amp; B2B: AI Executive Observer &amp; Smart School</h3>
+                <p>Połączenie lekkich tablic Kanban oraz strefowej identyfikacji radiowej (UHF RFID / NFC + ESP32) z codziennym raportowaniem AI. System monitoruje przepływ zadań w terenie lub bezpieczeństwo uczniów w szkole, wykrywając anomalie i generując zwięzłe briefy decyzyjne dla kadry zarządzającej.</p>
+                <a href="https://github.io" target="_blank" class="btn-link">🏫 Zobacz Kokpit Smart School (Live)</a>
+            </div>
+        </section>
+
+        <!-- Stopka z powrotem i kontaktem -->
+        <footer class="portfolio-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>🛰️ Wojciech Czyżyk — Systemy Wbudowane &amp; Living AI Systems</h3>
+                    <p class="location-tag">📍 Jeżów Sudecki / Jelenia Góra (Dolny Śląsk)</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="../index.html" class="btn-link">← Powrót do Portfolio Głównego</a>
+                    <a href="docs/Karta_Koncepcyjna_Apex_AI_Copilot.pdf" target="_blank" class="contact-link">📄 Karta Koncepcyjna (PDF)</a>
+                    <a href="https://linkedin.com" target="_blank" class="contact-link">💼 Profil LinkedIn</a>
+                    <a href="mailto:wojciechczyzyk@gmail.com" class="contact-link">✉️ wojciechczyzyk@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wojciech Czyżyk. Wszystkie prawa zastrzeżone. [Status: Steady State]</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

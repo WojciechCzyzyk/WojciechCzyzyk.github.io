@@ -77,3 +77,39 @@ W erze przeładowanych reklamami mediów społecznościowych oraz identycznych, 
 
 ### 3. Argument Sprzedażowy w Rozmowach B2B
 * **Efekt „Lodołamacza”:** Prezentacja własnego, żywego ekosystemu `wojciechczyzyk.github.io` podczas spotkań biznesowych natychmiast ociepla relację i stanowi gotowy dowód (*Live Proof*), jak unikalna oprawa potrafi wyróżnić markę na tle konkurencji.
+
+## 🧬 Moduł Flagowy B2B: Samodoskonalące się Systemy AI (*Living AI Systems / Sidecar App*)
+
+### 1. Problem Rynkowy: Dlaczego gotowe systemy zawodzą w codziennej pracy?
+Większość małych i średnich firm, placówek medycznych oraz szkół zderza się z dwoma skrajnościami:
+* **Ciężkie systemy pudełkowe (*Legacy / Enterprise*):** Przeładowane funkcjami (*Feature Bloat*), drogie w utrzymaniu i sztywne — zmuszają pracowników do dopasowania się do formularzy zamiast wspierać ich realny rytm pracy.
+* **Zwykłe chatboty AI bez pamięci:** Wymagają ciągłego tłumaczenia kontekstu od nowa, nie znają wewnętrznego słownictwa firmy i nie są połączone z realnymi zdarzeniami w terenie.
+
+---
+
+### 2. Nasze Rozwiązanie: *Living AI System* szyty od zera pod proces klienta
+Zamiast wymieniać istniejące oprogramowanie klienta (np. HIS, Vulcan/Librus, program magazynowo-księgowy), wdrażamy **lekką, samodoskonalącą się nakładkę operacyjną (*Fast Front-End Overlay / Sidecar App*)**, która rośnie razem z firmą w 4-etapowej pętli:
+
+1. **Zero-Friction Capture (Rejestracja bez oporu w miejscu pracy):**
+   * Pracownik rejestruje zdarzenie tam, gdzie ono zachodzi (*Point-of-Work / Point-of-Care*): jednym dotknięciem na telefonie, krótkim poleceniem głosowym, skanem kodu QR, zdjęciem miernika/notatki (*Multimodal Vision AI*) lub automatycznie z czujników sprzętowych (**Edge-to-AI**: ESP32, UHF RFID, NFC).
+2. **Curated Memory (*Single Source of Truth*):**
+   * Zdarzenia trafiają do czystej, uporządkowanej pamięci operacyjnej (`JSON` / `Markdown` / chmura REST) z pełnym śladem audytowym (*Audit Trail*: kto, co i kiedy wykonał) oraz pełną ochroną danych (*Privacy by Design* / RODO).
+3. **Pattern Mining & Auto-Adaptation (Samodoskonalenie w tle):**
+   * **Samouczący się słownik i skróty:** System wyłapuje powtarzalne czynności i terminy branżowe wpisywane przez zespół, automatycznie zamieniając je w gotowe przyciski szybkiego wyboru na kolejny dzień.
+   * **AI Executive Observer:** Agent AI analizuje rytm pracy firmy, wykrywa wąskie gardła oraz zadania po terminie i generuje zwięzłe briefy decyzyjne dla właściciela/dyrektora (np. raport zmiany, podsumowanie dnia lub eksport jednym kliknięciem do głównego systemu).
+4. **Human-in-the-Loop (Pełna kontrola właściciela):**
+   * System nie podejmuje ryzykownych decyzji sam — proponuje ulepszenia skrótów, reguł i procedur (SOP), które szef lub zespół zatwierdza jednym kliknięciem.
+
+---
+
+### 3. Przewagi Konkurencyjne (3 filary sprzedaży B2B)
+* **Szybkość wdrożenia (Godziny/Dni zamiast miesięcy):** Prezentacja działającego prototypu dopasowanego do branży klienta już na pierwszym spotkaniu (0 zł za pokaz na żywo).
+* **Zero Vendor Lock-in & Niski Koszt (TCO):** Oparcie na lekkich, otwartych standardach i niskokosztowych narzędziach chmurowych zamiast drogich licencji od stanowiska.
+* **Zero-Training UI + Poka-Yoke:** Interfejs tak prosty, że zespół korzysta z niego od pierwszej minuty bez wielogodzinnych szkoleń i bez ryzyka przypadkowego skasowania danych.
+
+---
+
+### 4. Kogo obsługujemy w pierwszej kolejności? (ICP — Ideal Customer Profile)
+* **Placówki medyczne, gabinety i kliniki weterynaryjne:** Szybka rejestracja zabiegów, parametrów i zleceń przy łóżku/stanowisku (głos + zdjęcie miernika + QR) oraz automatyczny raport zmiany do HIS.
+* **Szkoły i placówki edukacyjne:** Strefowa lokalizacja i bezpieczeństwo uczniów (UHF RFID / NFC + radiowęzeł TTS) oraz lekki Kanban organizacyjny z raportem dnia dla dyrekcji.
+* **Małe i średnie firmy (5–50 osób, np. budownictwo, serwis, produkcja):** Nadzór nad zadaniami w terenie bez systemu klasy Jira, raportowanie zdjęciowo-głosowe z budowy/hali oraz „Poranny Brief Szefa”.

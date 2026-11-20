@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🐛 Bug Hunter &amp; Hotfix Sprint — Strefa QA Ys</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="btn-back">← Powrót do Strefy Ys</a>
+    <span class="badge-it">QA_SPRINT // HOTFIX_MODE</span>
+  </div>
+
+  <div class="game-card">
+    <h1>🐛 Bug Hunter &amp; Hotfix Sprint</h1>
+    <p class="subtitle">Złap wszystkie błędy i robaki zanim trafią na produkcję, ale nie zepsuj zielonego kodu Baty!</p>
+
+    <div class="hud">
+      <div>🎯 Wynik: <span id="score">0</span></div>
+      <div>❤️ Życia: <span id="lives">3</span></div>
+      <div>⏱️ Czas: <span id="time">45</span>s</div>
+      <div>🏆 Rekord: <span id="best">0</span></div>
+    </div>
+
+    <div class="status-banner" id="statusBanner">Gotowy do audytu kodu, Junior QA Testerze?</div>
+
+    <div class="kanban-grid" id="grid">
+      <div class="slot" data-index="0"></div>
+      <div class="slot" data-index="1"></div>
+      <div class="slot" data-index="2"></div>
+      <div class="slot" data-index="3"></div>
+      <div class="slot" data-index="4"></div>
+      <div class="slot" data-index="5"></div>
+      <div class="slot" data-index="6"></div>
+      <div class="slot" data-index="7"></div>
+      <div class="slot" data-index="8"></div>
+    </div>
+
+    <button id="startBtn" class="btn-start">🚀 Uruchom Sprint QA (45s)</button>
+
+    <div class="legend">
+      🐛 <strong>Bug / Błąd 404:</strong> Kliknij szybko! (+10 pkt) &nbsp;|&nbsp;
+      ✅ <strong>Build Passed:</strong> NIE KLIKAJ! (-1 ❤️) &nbsp;|&nbsp;
+      🍪/🦄 <strong>Bonus Olusi:</strong> 2× punkty przez 5s!
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

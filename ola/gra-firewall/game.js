@@ -75,8 +75,13 @@ function drawPlateAndGuard() {
   ctx.stroke();
 
   // Pozostałe ciasteczka na talerzu
-  const positions = [, [-20, -14], [20, -14], [-18, 18], [18, 18]
+   const positions = [,
+    [-20, -14],
+    [20, -14],
+    [-18, 18],
+    [18, 18]
   ];
+
   for (let i = 0; i < cookies; i++) {
     const [dx, dy] = positions[i];
     ctx.fillStyle = "#d97706";

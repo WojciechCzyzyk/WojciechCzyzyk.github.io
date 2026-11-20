@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🛼 Olusia Infinite Loop — Slalom na Rolkach!</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="btn-back">← Powrót do Studia Olusi</a>
+    <span class="badge-it">while(true) // Zero-Latency QA</span>
+  </div>
+
+  <div class="game-card">
+    <h1>🛼 Olusia Infinite Loop: Slalom na Rolkach!</h1>
+    <p class="subtitle">Przeskakuj klocki i poduszki, zbieraj ciasteczka 🍪 i uciekaj z kocim asystentem na sznurku!</p>
+
+    <div class="hud">
+      <div>🏁 Okrążenia (Wynik): <span id="score">0</span></div>
+      <div>🍪 Ciasteczka: <span id="cookies">0</span></div>
+      <div>🏆 Rekord: <span id="best">0</span></div>
+    </div>
+
+    <canvas id="gameCanvas" width="720" height="270"></canvas>
+
+    <p class="controls-hint">📱 <strong>Dotknij ekranu</strong> lub naciśnij <strong>SPACJĘ / STRZAŁKĘ W GÓRĘ</strong>, aby przeskoczyć przeszkodę!</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

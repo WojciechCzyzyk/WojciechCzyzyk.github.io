@@ -84,6 +84,7 @@
   - `ola/sekcje/ola_puzzle.jpg` — ilustracja układania puzzli z jednorożcem pod nadzorem kociego Działu QA
   - `ola/sekcje/ola_most_klocki.jpg` — ilustracja testów wytrzymałościowych mostu z klocków (CEO & UX Designer)
   - `ola/sekcje/ola_rolki.jpg` — panoramiczna ilustracja pętli `while(true)` na rolkach wokół komina ze sznurkiem i kotami
+  - `ola/sekcje/komiks_sprint_404.jpg` — 4-kadrowy komiks z udziałem całej domowej ekipy R&D (Bata, Ys, Olusia i koty) o porannym stand-upie i błędzie 404
 
 
 

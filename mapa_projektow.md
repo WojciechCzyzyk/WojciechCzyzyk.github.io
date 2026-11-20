@@ -25,6 +25,8 @@
   - `ekosystem_rodzinny.jpg` — zbiorcza ilustracja zespołu rodzinnego (Bartek, Krzyś, Olusia i dwa koty w akcji).
   - `olusia_studio.jpg` — ilustracja Działu Kreatywnego & UX (Olusia rysująca na podłodze w towarzystwie dwóch kotów).
 
+* **Podkatalog `living-ai/` (Architektura Samodoskonalących się Systemów AI):**
+  - `living-ai/index.html` — dedykowana podstrona prezentująca koncepcję *Living AI Systems* (*Continual Learning & Context Engineering*), 4-etapową pętlę adaptacji, porównanie z systemami Enterprise oraz 3 żywe wdrożenia
 
 
 * **Podkatalog `docs/` (Dokumenty ofertowe, CV, formalne i załączniki WWW):**

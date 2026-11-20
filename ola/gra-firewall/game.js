@@ -47,7 +47,7 @@ function spawnCat() {
   else if (side === 2) { x = Math.random() * canvas.width; y = canvas.height + 25; }
   else { x = -25; y = Math.random() * canvas.height; }
 
-  const isBonus = Math.random() < 0.14; // Kubek kakao od Olusi (+1 ciasteczko!)
+  const isBonus = Math.random() < 0.14;
   const baseSpeed = isBonus ? 1.5 : Math.min(3.4, 1.35 + score * 0.03);
 
   cats.push({
@@ -65,7 +65,6 @@ function addEffect(x, y, text, color) {
 }
 
 function drawPlateAndGuard() {
-  // Talerz z ciasteczkami na środku
   ctx.fillStyle = "#ffffff";
   ctx.beginPath();
   ctx.arc(CX, CY, 56, 0, Math.PI * 2);
@@ -74,14 +73,12 @@ function drawPlateAndGuard() {
   ctx.lineWidth = 4;
   ctx.stroke();
 
-  // Pozostałe ciasteczka na talerzu
-   const positions = [,
+  const positions = [,
     [-20, -14],
     [20, -14],
     [-18, 18],
     [18, 18]
   ];
-
   for (let i = 0; i < cookies; i++) {
     const [dx, dy] = positions[i];
     ctx.fillStyle = "#d97706";
@@ -93,7 +90,6 @@ function drawPlateAndGuard() {
     ctx.fillRect(CX + dx + 3, CY + dy + 2, 3, 3);
   }
 
-  // Biały kot Firewall krążący wokół talerza
   guardAngle += 0.035;
   const gx = CX + Math.cos(guardAngle) * 72;
   const gy = CY + Math.sin(guardAngle) * 72;
@@ -106,7 +102,6 @@ function drawPlateAndGuard() {
   ctx.lineWidth = 2;
   ctx.stroke();
 
-  // Uszka białego kota
   ctx.fillStyle = "#cbd5e1";
   ctx.beginPath();
   ctx.moveTo(gx - 12, gy - 10);
@@ -117,7 +112,6 @@ function drawPlateAndGuard() {
   ctx.lineTo(gx + 12, gy - 10);
   ctx.fill();
 
-  // Oczy niebieskie Ragdolla
   ctx.fillStyle = "#0284c7";
   ctx.beginPath();
   ctx.arc(gx - 5, gy - 2, 2.5, 0, Math.PI * 2);
@@ -129,7 +123,6 @@ function drawCats() {
   cats.forEach(c => {
     c.wobble += 0.15;
     if (c.isBonus) {
-      // Bonusowy kubek kakao od Olusi
       ctx.fillStyle = "#ec4899";
       ctx.beginPath();
       ctx.roundRect(c.x - 16, c.y - 16, 32, 32, 8);
@@ -142,13 +135,11 @@ function drawCats() {
       return;
     }
 
-    // Pręgowany kociak-pentester
     ctx.fillStyle = "#78716c";
     ctx.beginPath();
     ctx.arc(c.x, c.y, 20, 0, Math.PI * 2);
     ctx.fill();
 
-    // Uszy
     ctx.beginPath();
     ctx.moveTo(c.x - 14, c.y - 10);
     ctx.lineTo(c.x - 10, c.y - 25);
@@ -158,7 +149,6 @@ function drawCats() {
     ctx.lineTo(c.x + 14, c.y - 10);
     ctx.fill();
 
-    // Oczy i nosek
     ctx.fillStyle = "#fef08a";
     ctx.beginPath();
     ctx.arc(c.x - 6, c.y - 3, 3.2, 0, Math.PI * 2);
@@ -240,7 +230,7 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-canvas.addEventListener("pointerdown", (e) => {
+function handleTap(e) {
   e.preventDefault();
   if (gameState === "START" || gameState === "GAMEOVER") {
     resetGame();
@@ -269,6 +259,8 @@ canvas.addEventListener("pointerdown", (e) => {
       break;
     }
   }
-});
+}
+
+canvas.addEventListener("pointerdown", handleTap);
 
 loop();

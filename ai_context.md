@@ -1504,3 +1504,11 @@ Status Pacjenta
   * **Zbiorczy Raport Dnia Oddziału + Podsumowanie AI (`index.html` / `app.js` ➔ `generateDailyWardReport`):** Przycisk `📊 Raport Dnia + AI` nad listą zdarzeń generuje zestawienie całego dnia rozbite na wszystkich pacjentów wraz z automatyczną sekcją AI wyłapującą incydenty krytyczne (gorączki, skoki ciśnienia, tachykardie, zmiany łóżek oraz niezakończone zlecenia) na przekazanie dyżuru.
 * **Eksport i druk:** Wszystkie raporty (Zmiany, Indywidualny Dnia, Zbiorczy Dnia + AI) korzystają z wspólnego modala `#report-modal` z bezpośrednim wydrukiem na kartę A4 (`🖨️ Drukuj kartę A4`) oraz kopiowaniem czystego tekstu do systemu HIS (`📋 Kopiuj tekst do HIS`).
 
+#### 📅 Wpis: 20.11.2026 (Nocna synteza koncepcyjna — „Living AI System”: Samodoskonalące się systemy AI od zera)
+* **Koncepcja Nadrzędna (Edukacja APEX + Usługa B2B):** Połączenie wszystkich dotychczasowych klocków (*Context Engineering*, *AI Code Mentor*, *Sidecar App*, samouczący się słownik w `dyzurka-iot/`) w jedną flagową architekturę — **budowę od zera lekkich, samodoskonalących się systemów AI wspierających realne zadania w świecie fizycznym**.
+* **Mechanizm Samodoskonalenia (4-etapowa pętla):**
+  1. *Zero-Friction Capture:* Zbieranie zdarzeń z realnego świata (głos, zdjęcie Vision AI, kliknięcie przy łóżku/w terenie) bez narzucania sztywnych formularzy.
+  2. *Curated Memory:* Zapis w czystym kontekście (`JSON` / `MD` / REST) jako *Single Source of Truth*.
+  3. *Pattern Mining & Auto-Adaptation:* System wyłapuje powtarzalne czynności, nowe pojęcia (auto-słownik przycisków) oraz wąskie gardła, proponując nowe skróty, reguły i raporty pod konkretnego użytkownika.
+  4. *Human-in-the-Loop:* Użytkownik jednym kliknięciem zatwierdza usprawnienia — system dojrzewa razem z firmą lub uczniem bez kosztownego przepisywania kodu.
+* **Zastosowanie Dwutorowe:** W **Akademii APEX** jako unikalna metodyka uczenia młodzieży projektowania ewolucyjnych asystentów; w **B2B** jako usługa wdrożeniowa szyta na miarę dla placówek medycznych, szkół i MŚP.

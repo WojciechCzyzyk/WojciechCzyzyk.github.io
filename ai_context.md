@@ -1512,3 +1512,20 @@ Status Pacjenta
   3. *Pattern Mining & Auto-Adaptation:* System wyłapuje powtarzalne czynności, nowe pojęcia (auto-słownik przycisków) oraz wąskie gardła, proponując nowe skróty, reguły i raporty pod konkretnego użytkownika.
   4. *Human-in-the-Loop:* Użytkownik jednym kliknięciem zatwierdza usprawnienia — system dojrzewa razem z firmą lub uczniem bez kosztownego przepisywania kodu.
 * **Zastosowanie Dwutorowe:** W **Akademii APEX** jako unikalna metodyka uczenia młodzieży projektowania ewolucyjnych asystentów; w **B2B** jako usługa wdrożeniowa szyta na miarę dla placówek medycznych, szkół i MŚP.
+
+#### 📅 Wpis: 20.11.2026 (Noc & Poranek — Tech English #8, Galeria CEO & UX Designer Olusi, „Living AI Systems” & Plan R&D na Hematologię)
+
+1. **Trening Tech English — Sesja #8 zaliczona na 100% KPI (`tech_english_log.md`):**
+   * Temat: *Point-of-Care Execution & Multi-User Data Integrity* (`dyzurka-iot/`).
+   * Użyto **5 / 5 pojęć** (`point-of-care execution`, `race condition`, `read-modify-write`, `single source of truth`, `audit trail`) wraz ze stałym szkieletem wypowiedzi oraz odwołaniem do doświadczenia z systemem Call Center (MySQL).
+
+2. **Rozbudowa Strefy Kreatywnej Olusi (`ola/`) & Walidacja Wizerunkowa (Ice-Breaker):**
+   * Wygenerowano i wdrożono w `ola/sekcje/galeria.html` 3 autorskie ilustracje z udziałem 4-letniej **CEO & UX Designer** oraz kociego działu QA (`ola_puzzle.jpg`, `ola_most_klocki.jpg` oraz panoramiczne `ola_rolki.jpg` na całą szerokość siatki) opatrzone ciepłymi opisami z humorem IT (`while(true)`, *Event-Driven*, *Zero Latency*, *Stress-Testing*).
+   * **Wniosek wizerunkowy (B2B / HR):** Sekcja rodzinna sprawdzona na żywo (entuzjastyczna reakcja pielęgniarek z oddziału) — pełni rolę naturalnego lodołamacza (*ice-breaker*), ociepla wizerunek techniczny i pokazuje swobodne obycie z architekturą systemów.
+
+3. **Koncepcja Flagowa: „Living AI Systems” (*Context Engineering & Continual Learning*):**
+   * Zsyntetyzowano nocną wizję architektoniczną: budowa od zera lekkich, **samodoskonalących się systemów AI** profilowanych pod realne zadania użytkownika w świecie fizycznym (4-etapowa pętla: *Zero-Friction Capture* ➔ *Curated Memory* ➔ *Pattern Mining & Auto-Adaptation* ➔ *Human-in-the-Loop*).
+   * Wdrożono zaktualizowany opis w sekcji *Full-Stack Product Engineering & Living AI Systems* oraz podkręcono opis *Cyfrowego Ekosystemu Rodzinnego* w **`index.html`**.
+
+4. **Strategia Partnerskiego Pilotażu R&D na Oddziale Hematologii:**
+   * Zaplanowano przedstawienie Pani Profesor (po przeniesieniu na oddział hematologii) koncepcji partnerskiego projektu badawczo-rozwojowego (*Sidecar App / Point-of-Care AI*) — lekkiej nakładki obserwacyjnej (głos, Vision AI, raporty trendów, pełne *Privacy by Design* / RODO) jako materiału na wspólne *Case Study* kliniczno-inżynierskie, wykłady i konferencje naukowe.

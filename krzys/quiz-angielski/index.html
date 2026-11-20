@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇬🇧 English Time &amp; Present Simple — Quiz Ys (Klasa 3)</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="btn-back">← Powrót do Strefy Ys</a>
+    <span class="badge-it">ENGLISH_QA // KLASA 3</span>
+  </div>
+
+  <div class="quiz-card">
+    <h1>🇬🇧 Mistrz Czasu: Present Simple (Klasa 3)</h1>
+    <p class="subtitle">Wybierz poprawne określenie czasu (<code>at 7 o'clock</code>, <code>in the morning</code>, <code>at night</code>)!</p>
+
+    <div class="hud">
+      <div>📋 Pytanie: <span id="qNum">1</span> / <span id="qTotal">10</span></div>
+      <div>⭐ Punkty: <span id="score">0</span></div>
+      <div>🏆 Rekord: <span id="best">0</span></div>
+    </div>
+
+    <div id="quizArea">
+      <div class="question-box">
+        <div class="pl-hint" id="plHint">Wstaję o godzinie siódmej.</div>
+        <div class="en-sentence" id="enSentence">I get up _______.</div>
+      </div>
+
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <div class="feedback" id="feedbackBox"></div>
+
+      <button id="nextBtn" class="btn-next">Następne pytanie →</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🛡️ Koci Firewall: Broń Ciasteczek! — Studio Olusi</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="btn-back">← Powrót do Studia Olusi</a>
+    <span class="badge-it">HTTP 403 // COOKIE_FIREWALL</span>
+  </div>
+
+  <div class="game-card">
+    <h1>🛡️ Koci Firewall: Broń Ciasteczek!</h1>
+    <p class="subtitle">Dotknij pręgowane kociaki-pentestery, zanim ukradną ciasteczka ze środka stołu!</p>
+
+    <div class="hud">
+      <div>🍪 Ciasteczka: <span id="cookies">5</span></div>
+      <div>🛡️ Zablokowane: <span id="score">0</span></div>
+      <div>🏆 Rekord: <span id="best">0</span></div>
+    </div>
+
+    <canvas id="firewallCanvas" width="640" height="420"></canvas>
+
+    <p class="controls-hint">📱 <strong>Dotknij kociaka</strong> na ekranie, aby uruchomić łapę białego kota Firewalla (<code>403 Forbidden</code>)!</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

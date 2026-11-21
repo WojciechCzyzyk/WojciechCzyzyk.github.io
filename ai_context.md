@@ -1552,3 +1552,16 @@ Status Pacjenta
 * **Banan (Syn Szczerbiego — mały, ciemny/pręgowany kotek):**
   * **Charakter:** Dusza towarzystwa i 100% bezczelnej odwagi (*Pentester*) — uwielbia wszystkich domowników, a zwłaszcza **Krzysia** i **Olusię**, na których uwielbia się kłaść (na plecach lub nogach). Nie boi się nikogo ani niczego (nawet obcych ludzi i psów — potrafi usiąść przy płocie u sąsiada i z pełnym spokojem drażnić szczekającego na niego psa).
 * **Wspólne misje nocne:** Oba koty regularnie wymieniają się przyjacielskimi pacnięciami łapą w domu, a nocą działają jako skuteczny zespół łowiecki (myszy, ptaki oraz ochrona ogrodu w Jeżowie Sudeckim przed kretami).
+
+
+### 🩺 Aktualny status medyczny i logistyka (Stan na 21.11.2026)
+* **Rozpoznanie różnicowe (oczekiwanie na ostateczny wynik IHC z Wrocławia):**
+  * Pierwotnie podejrzewany **chłoniak**; obecnie hematolodzy biorą równolegle pod uwagę **izolowany nawrót pozaszpikowy ostrej białaczki szpikowej (`AML`) poza układem szpiku — tzw. mięsak szpikowy (*myeloid sarcoma*)** w obrębie kanału kręgowego (`Th6–Th8`).
+* **Wywiad hematologiczny i odpornościowy (`allo-HSCT`):**
+  * Brak leczenia immunosupresyjnego od roku (`11.2025`); zeszłej zimy przejściowy wzrost `MRD+` (przez ~3 mies.) ustąpił samoistnie do `MRD-` dzięki efektowi przeszczep przeciw białaczce (*GvL*) bez konieczności podawania doszczepu limfocytów (`DLI`).
+  * Aktualna morfologia po operacjach kręgosłupa i wysokich dawkach sterydów: podwyższone `WBC` (~18 tys./µl) i `NEU` (~15 tys./µl) — klasyczny efekt posterydowy (*demarginacja neutrofili*) i pooperacyjny potwierdzający dobrą wydolność przeszczepionego szpiku.
+* **Przebieg dnia 20.11.2026 i plan na najbliższe dni:**
+  * Wypis z Oddziału Neurochirurgii i przeniesienie na Oddział Hematologii w Wałbrzychu: pobrano szpik kostny, wykonano punkcję lędźwiową z pobraniem płynu mózgowo-rdzeniowego oraz podano **chemioterapię dokanałową** (ochrona OUN). Planowana radioterapia odłożona technicznie z powodu awarii aparatu.
+  * **Podbite zaświadczenie lekarskie PZON** (przez lekarza hematologa z datą `20.11.2026`, ważne 30 dni do `20.12.2026`) — złożenie wniosku w PZON Jelenia Góra zaplanowane na **poniedziałek 23.11 lub wtorek 24.11.2026**.
+  * **Wypis na weekend do domu (Jeżów Sudecki):** Samopoczucie bardzo dobre, brak dolegliwości bólowych, utrzymujący się częściowy niedowład/paraliż od pasa w dół po ucisku `Th6–Th8`; ścisłe zalecenie odpoczynku **na płasko** (po punkcji i dla odciążenia `Th6–Th8`), nawadniania oraz używania **sztywnego gorsetu ortopedycznego** przy zmianie pozycji.
+  * **Kolejne kroki:** Badanie **PET-CT w środę 25.11.2026**, a bezpośrednio po nim powrót na Oddział Hematologii w Wałbrzychu (status pilnego pacjenta na liście rezerwowej pierwszego wyboru) w celu wdrożenia docelowej terapii (radioterapia miejscowa na `Th6–Th8` + terapia celowana / dokanałowa / ewentualne `DLI`).

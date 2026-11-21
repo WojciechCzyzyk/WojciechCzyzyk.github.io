@@ -1637,3 +1637,28 @@ Status Pacjenta
    * Przyjęto pragmatyczne podejście *Lean*: obecny zestaw 11 kart zostaje jako pełny materiał testowy na próbę bojową z Krzysiem, a decyzja o ewentualnym uproszczeniu zakładania plików zapadnie na podstawie realnych obserwacji z testu.
 4. **Status Pacjenta (Jeżów Sudecki):**
    * Przejście w tryb regeneracji i odpoczynku na płasko dla odbarczenia odcinka `Th6–Th8`.
+
+#### 📅 Wpis: 21.11.2026 (Popołudnie w Jeżowie Sudeckim — Stanowisko Druku, Tablica Wzorcowa Bartka & Komplet Skany ZUS 40 dni)
+
+1. **Infrastruktura Sprzętowa & Branding Junior Mentora:**
+   * Pomyślnie uruchomiono drukarkę **Canon i-SENSYS LBP6030** na nowym laptopie Dell Latitude 7430 (Windows 11) poprzez bezpośredni instalator `Setup.exe`.
+   * Wygenerowano awatar profilowy dla Bartka (`BARTEK — JUNIOR MENTOR`, `image_ygfAuP.png`).
+
+2. **Wdrożenie Tablicy Wzorcowej Kanban (`BartekCzyzyk`):**
+   * Bartek samodzielnie założył projekt `APEX — Lekcja Próbna: Moja Pierwsza Strona WWW` (widoczność `Public`) i zasilił kolumnę `Todo` kompletem **11 kart zadań** w kilka minut.
+   * Potwierdzono mechanizm dystrybucji na kontach osobistych GitHub: klonowanie wzorcowej tablicy przez uczniów odbywa się przez **`...` ➔ `Make a copy`** bez naruszania oryginału.
+   * Przyjęto podejście *Lean*: obecny zestaw 11 kart zostaje jako pełny materiał testowy na próbę bojową z Krzysiem.
+
+3. **Formalności ZUS Opiekuńczy dla JDG Natalki (Skompletowane 7 okresów = 40 dni):**
+   * Zweryfikowano i zeskanowano komplet **7 kart informacyjnych / zaświadczeń szpitalnych** za okres sierpień–listopad 2026 r. (z pominięciem czerwca i lipca ze względu na wyższy sezonowy obrót JDG):
+     1. `06.08.2026` (1 dzień — pobyt na oddziale / przesunięcie Vidazy)
+     2. `13.08.2026 – 17.08.2026` (5 dni — cykl Vidaza)
+     3. `10.09.2026 – 14.09.2026` (5 dni — cykl Vidaza)
+     4. `08.10.2026 – 12.10.2026` (5 dni — cykl Vidaza)
+     5. `19.10.2026` (1 dzień — pobyt jednodniowy na rezonans magnetyczny)
+     6. `20.10.2026 – 25.10.2026` (6 dni — hospitalizacja neurochirurgiczna `Th6–Th8`)
+     7. `04.11.2026 – 20.11.2026` (17 dni — reoperacja `Th6–Th8` + hematologia)
+   * **Łącznie:** **40 dni** opieki we wniosku `Z-15` (zostaje bezpieczna rezerwa **20 dni** z rocznej puli 60 dni na 2026 r. pod badanie PET-CT `25.11` i dalsze leczenie hematologiczne). Ustalono kolejność: najpierw wysłanie i opłacenie pełnej deklaracji `ZUS DRA` za październik w iFirmie, potem wysyłka `Z-15` na eZUS, a korekta `DRA` dopiero po wpływie środków z ZUS.
+
+4. **Status Pacjenta (Jeżów Sudecki):**
+   * Zakończenie prac przy komputerze po zeskanowaniu dokumentacji; przejście w tryb poziomej regeneracji na płasko (bez gorsetu) dla odciążenia odcinka `Th6–Th8`.

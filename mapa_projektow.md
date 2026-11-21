@@ -113,6 +113,22 @@
   - `szkola.html` — oferta warsztatów B2B dla szkół podstawowych
   - `odpowiedz.html` — ekran potwierdzenia zgłoszenia
   - `favicon_sarenka.png` — ikona sarenki z porożem `< >` (64×64 px)
+  - 
+### 📦 Pakiet Materiałów: Lekcja Próbna APEX (Karty Kanban + Przewodniki)
+* **Scenariusz zbiorczy (bez kodu):** `Scenariusz_Lekcji_Probnej_APEX_Bez_Kodu.pdf`
+* **Instrukcja konfiguracji tablicy Kanban dla Junior Mentora:** `Instrukcja_Kanban_Bartek_APEX.pdf` (`instrukcja_kanban_bartek.md`)
+* **11 atomowych kart zadań pod GitHub Projects (Kanban):**
+  * `etap_0_konto_i_pages.md` — Rejestracja konta GitHub i uruchomienie GitHub Pages
+  * `etap_1_architektura_i_style.md` — Utworzenie głównego arkusza stylów `style.css`
+  * `etap_1_architektura_i_index.md` — Utworzenie szkieletu `index.html` z 3 kontenerami `iframe`
+  * `etap_1_architektura_i_o_mnie.md` — Utworzenie folderu `sekcje/` i pliku `sekcje/o-mnie.html`
+  * `etap_1_architektura_i_pasje.md` — Utworzenie pliku `sekcje/pasje.html`
+  * `etap_1_architektura_i_cele.md` — Utworzenie pliku `sekcje/cele.html`
+  * `etap_2A_1_tekst_o_mnie.md` — Generowanie opisu „O mnie” z AI i wklejenie do kodu
+  * `etap_2A_2_obrazek_o_mnie.md` — Generowanie awatara z AI i osadzenie w `sekcje/o-mnie.html`
+  * `etap_2B_1_bonus_tekst_pasje.md` — Misja bonusowa: generowanie listy pasji z AI
+  * `etap_2B_2_bonus_obrazek_pasje.md` — Misja bonusowa: generowanie grafiki do sekcji pasji
+  * `etap_3_final.md` (`etap_3_final.pdf`) — Premiera na smartfonie i wyzwanie podsumowujące 80% KPI Tech English
 
 ---
 

@@ -1662,3 +1662,14 @@ Status Pacjenta
 
 4. **Status Pacjenta (Jeżów Sudecki):**
    * Zakończenie prac przy komputerze po zeskanowaniu dokumentacji; przejście w tryb poziomej regeneracji na płasko (bez gorsetu) dla odciążenia odcinka `Th6–Th8`.
+
+#### 📅 Wpis: 21.11.2026 (Wieczór w Jeżowie Sudeckim — Wysłane 2 wnioski Z-15 na 40 dni opieki & Audyt Formularzy eZUS)
+
+1. **Formalności ZUS Opiekuńczy (F.H. „SARENKA” — Natalia Gieczonis-Czyżyk) — ZAKOŃCZONE:**
+   * Z powodu reguły walidatora eZUS (błąd krytyczny `61000301` — maksymalnie 3 kolejne miesiące kalendarzowe w jednym formularzu), komplet **7 okresów (łącznie 40 dni)** podzielono i wysłano elektronicznie na dwóch osobnych wnioskach **`Z-15`** wraz ze skanami kart informacyjnych ze szpitala w Wałbrzychu:
+     * **Wniosek #1 (`Z-15` — 11 dni):** `06.08.2026` (1 dzień), `13.08.2026 – 17.08.2026` (5 dni) oraz `10.09.2026 – 14.09.2026` (5 dni).
+     * **Wniosek #2 (`Z-15` — 29 dni):** `08.10.2026 – 12.10.2026` (5 dni), `19.10.2026` (1 dzień), `20.10.2026 – 25.10.2026` (6 dni) oraz `04.11.2026 – 20.11.2026` (17 dni).
+   * **Rezerwa limitu i kolejne kroki księgowe:** Z rocznej puli 60 dni na 2026 r. pozostało **20 dni** rezerwy pod badanie PET-CT (`25.11.2026`) oraz dalsze leczenie na hematologii. Korektę deklaracji `ZUS DRA` w iFirmie (obniżenie składek społecznych za sierpień, wrzesień, październik i listopad) należy wykonać dopiero po otrzymaniu przelewu zasiłku z ZUS (termin wypłaty: do 30 dni).
+
+2. **Status Pacjenta (Jeżów Sudecki):**
+   * Sobotni blok formalno-administracyjny domknięty na 100%. Przejście w tryb wieczornego relaksu z rodziną i poziomego odciążenia kręgosłupa (`Th6–Th8`).

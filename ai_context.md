@@ -1572,3 +1572,22 @@ Status Pacjenta
 * **Mechanizm:** Rozbudowa systemu *APEX AI Code Mentor* o kontekst aktywnej karty z tablicy Kanban (`In Progress`). Zamiast ogólnej oceny kodu, AI porównuje bieżący stan projektu ucznia (`git diff`) bezpośrednio z kryterium ukończenia (*Definition of Done*) wpisanym na aktualnej karcie.
 * **Reakcja na żywo:** Gdy uczeń popełni błąd lub utknie na zadaniu, AI natychmiast podpowiada mu kierunek poprawki (bez dawania gotowca) i sygnalizuje instruktorowi zator na konkretnym stanowisku.
 * **Korzyść operacyjna i B2B:** Instruktor (Natalka) panuje nad grupą, energią i bezpieczeństwem dzieci zamiast ślęczeć nad analizą składni w 5 programach jednocześnie. Ten sam silnik stanowi poligon testowy dla usługi B2B *APEX AI Copilot* (automatyczna kontrola zgodności wykonania zadania ze zleceniem).
+
+
+#### 📅 Wpis: 21.11.2026 (Poranek przed świtem w Jeżowie Sudeckim — Dokumentacja ZUS, Tech English #9 & Architektura „Autopilot Kanban + AI”)
+
+1. **Formalności ZUS Opiekuńczy dla JDG Natalki (Gotowe do wysyłki):**
+   * Wygenerowano komplet dokumentów PDF (`Instrukcja_Zasilek_Opiekunczy_ZUS_JDG.pdf` oraz `Rozpiska_Dat_Zasilek_Opiekunczy_ZUS_2026.pdf`) uwzględniający aktualną procedurę PUE ZUS / eZUS (likwidacja zaświadczenia `Z-3b` dla przedsiębiorców — wysyłka wyłącznie wniosku `Z-15` wraz ze skanami obu zaświadczeń szpitalnych).
+   * Potwierdzono brak wystawionych faktur w dniach wysyłek JDG — wnioskowanie obejmuje pełne dwa okresy hospitalizacji: `22.10–27.10.2026` (6 dni) oraz `04.11–20.11.2026` (17 dni), łącznie **23 dni** (z uwzględnieniem w iFirmie do obniżenia składek społecznych).
+
+2. **Trening Tech English — Sesja #9 zaliczona na 100% KPI (`tech_english_log.md`):**
+   * Temat: *Edge-to-AI & Hardware Interrupts* (determinizm i nieblokująca obsługa sprzętu przy niestabilnej sieci/AI).
+   * Użyto **5 / 5 pojęć** (`decouple`, `non-blocking`, `latency`, `deterministic`, `fallback`) + bonusowe terminy (*queues*, *events*, *interrupts*, *separate*).
+
+3. **Przełom Dydaktyczno-Operacyjny APEX (`pomysly_na_lekcje.md` + Poligon pod B2B):**
+   * **Matryca 60-Minutowej Lekcji APEX:** Uniwersalny, powtarzalny schemat każdych zajęć (5 min *Iskra* ➔ 30 min *Instrukcja LEGO / Mikro-Sprinty* ➔ 10 min *Misja dla Bystrzaków / Zabawa* ➔ 10 min *Wyzwanie 80% KPI Tech English & Podsumowanie* ➔ 5 min *Finał & Demo Day*).
+   * **„Autopilot Lekcyjny” (Kanban + AI):** Rozpisanie całej lekcji bezpośrednio na kartach Kanban z gotowymi podpowiedziami AI — maksymalne uproszczenie onboardingu kadry (Natalka jako dyspozytor lotów, Bartek jako Junior Mentor wspierający dzieci).
+   * **Aktywny Strażnik Postępu (`Git Diff` vs Karta Kanban):** AI na żywo porównuje kod ucznia z wymaganiami aktywnej karty w kolumnie `In Progress`, natychmiast naprowadza dziecko przy zacięciu i alarmuje instruktora o zatorze na stanowisku (zarazem poligon testowy dla usługi B2B *APEX AI Copilot*).
+
+4. **Status Pacjenta (Jeżów Sudecki):**
+   * Poranna sesja w domu zrealizowana w pełnym komforcie w towarzystwie Szczerbiego i Bananka. Przejście pacjenta w tryb poziomej regeneracji i snu na płasko (odbarczanie odcinka `Th6–Th8` oraz odpoczynek po punkcji lędźwiowej).

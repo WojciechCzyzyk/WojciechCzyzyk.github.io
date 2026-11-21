@@ -1623,3 +1623,17 @@ Status Pacjenta
 
 3. **Status Pacjenta (Jeżów Sudecki):**
    * Praca na laptopie w domu; zachowany reżim ochrony odcinka `Th6–Th8` (odpoczynek na płasko bez gorsetu, sztywny gorset przy zmianie pozycji).
+
+
+#### 📅 Wpis: 21.11.2026 (Wczesne popołudnie w Jeżowie Sudeckim — Stanowisko Druku, Awatar Junior Mentora & Tablica Wzorcowa Bartka)
+
+1. **Uruchomienie Stanowiska Druku (Canon i-SENSYS LBP6030):**
+   * Pomyślnie zainstalowano sterownik wydruku na nowym laptopie Dell Latitude 7430 (Windows 11) bezpośrednio przez instalator `Setup.exe` — drukarka działa bez konieczności restartu systemu.
+2. **Branding Junior Mentora (Bartek):**
+   * Wygenerowano cyber-zielony awatar profilowy z logo GitHub i podpisem `BARTEK — JUNIOR MENTOR` (`image_ygfAuP.png`).
+3. **Wdrożenie Tablicy Wzorcowej Kanban (`BartekCzyzyk`):**
+   * Bartek samodzielnie założył projekt `APEX — Lekcja Próbna: Moja Pierwsza Strona WWW` (widoczność `Public`) i zasilił kolumnę `Todo` kompletem 11 kart zadań w kilka minut.
+   * Zweryfikowano mechanizm dystrybucji na kontach osobistych GitHub: zamiast `Make template` (zarezerwowanego dla GitHub Organizations), klonowanie wzorcowej tablicy przez uczniów odbywa się przez **`...` ➔ `Make a copy`** z zachowaniem oryginału w stanie nienaruszonym.
+   * Przyjęto pragmatyczne podejście *Lean*: obecny zestaw 11 kart zostaje jako pełny materiał testowy na próbę bojową z Krzysiem, a decyzja o ewentualnym uproszczeniu zakładania plików zapadnie na podstawie realnych obserwacji z testu.
+4. **Status Pacjenta (Jeżów Sudecki):**
+   * Przejście w tryb regeneracji i odpoczynku na płasko dla odbarczenia odcinka `Th6–Th8`.

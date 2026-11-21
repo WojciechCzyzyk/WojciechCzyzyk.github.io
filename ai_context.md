@@ -1608,3 +1608,18 @@ Status Pacjenta
 3. **Status Pacjenta (Jeżów Sudecki):**
    * Sesja przeprowadzona na laptopie po porannej regeneracji. Utrzymywany reżim ochrony odcinka `Th6–Th8` (odpoczynek na płasko bez gorsetu, sztywny gorset przy zmianie pozycji).
 
+#### 📅 Wpis: 21.11.2026 (Przedpołudnie w Jeżowie Sudeckim — Komplet Kart Lekcji Próbnej APEX & Instrukcja Kanban dla Bartka)
+
+1. **Modułowy Scenariusz Lekcji Próbnej APEX (11 Atomowych Kart Kanban):**
+   * Rozpisano kompletną ścieżkę pierwszych zajęć („Moja Pierwsza Strona WWW z 3 Sekcjami”) w architekturze *Separation of Concerns* (`index.html` z 3 kontenerami `iframe`, zewnętrzny `style.css` oraz osobne pliki w folderze `sekcje/`), wzbogaconą o wyraźne granice kopiowania (`================`) i ściągawkę `Ctrl + C` / `Ctrl + V` (*Poka-Yoke*).
+   * Podział operacyjny kart:
+     * **Baza startowa (przed lekcją):** `etap_0_konto_i_pages.md`, `etap_1_architektura_i_style.md`.
+     * **Rdzeń zajęć (każdy uczeń):** `etap_1_architektura_i_index.md`, `etap_1_architektura_i_o_mnie.md`, `etap_2A_1_tekst_o_mnie.md`, `etap_2A_2_obrazek_o_mnie.md`, `etap_3_final.md` (`etap_3_final.pdf`).
+     * **Radar na talenty / Misje bonusowe:** `etap_1_architektura_i_pasje.md`, `etap_1_architektura_i_cele.md`, `etap_2B_1_bonus_tekst_pasje.md`, `etap_2B_2_bonus_obrazek_pasje.md`.
+
+2. **Dokumentacja Organizacyjna i Onboarding Junior Mentora (Bartek):**
+   * Wygenerowano zbiorczą ściągawkę przebiegu zajęć bez kodu HTML/CSS (`Scenariusz_Lekcji_Probnej_APEX_Bez_Kodu.pdf`) oraz instrukcję konfiguracji tablicy Kanban dla Bartka (`Instrukcja_Kanban_Bartek_APEX.pdf`).
+   * Zatwierdzono 4-etapowy plan walidacji: założenie tablicy przez Bartka ➔ wspólne przerobienie kart ➔ test bojowy UAT na Krzysiu przy obserwacji Natalki oraz nagranie instruktażu wideo na YouTube / do kart Kanban.
+
+3. **Status Pacjenta (Jeżów Sudecki):**
+   * Praca na laptopie w domu; zachowany reżim ochrony odcinka `Th6–Th8` (odpoczynek na płasko bez gorsetu, sztywny gorset przy zmianie pozycji).

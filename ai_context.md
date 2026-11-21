@@ -1565,3 +1565,10 @@ Status Pacjenta
   * **Podbite zaświadczenie lekarskie PZON** (przez lekarza hematologa z datą `20.11.2026`, ważne 30 dni do `20.12.2026`) — złożenie wniosku w PZON Jelenia Góra zaplanowane na **poniedziałek 23.11 lub wtorek 24.11.2026**.
   * **Wypis na weekend do domu (Jeżów Sudecki):** Samopoczucie bardzo dobre, brak dolegliwości bólowych, utrzymujący się częściowy niedowład/paraliż od pasa w dół po ucisku `Th6–Th8`; ścisłe zalecenie odpoczynku **na płasko** (po punkcji i dla odciążenia `Th6–Th8`), nawadniania oraz używania **sztywnego gorsetu ortopedycznego** przy zmianie pozycji.
   * **Kolejne kroki:** Badanie **PET-CT w środę 25.11.2026**, a bezpośrednio po nim powrót na Oddział Hematologii w Wałbrzychu (status pilnego pacjenta na liście rezerwowej pierwszego wyboru) w celu wdrożenia docelowej terapii (radioterapia miejscowa na `Th6–Th8` + terapia celowana / dokanałowa / ewentualne `DLI`).
+
+
+### 🤖 Aktywny Strażnik Postępu: Porównanie `Git Diff` z Kartą Kanban w Czasie Rzeczywistym
+* **Data wypracowania:** 21.11.2026
+* **Mechanizm:** Rozbudowa systemu *APEX AI Code Mentor* o kontekst aktywnej karty z tablicy Kanban (`In Progress`). Zamiast ogólnej oceny kodu, AI porównuje bieżący stan projektu ucznia (`git diff`) bezpośrednio z kryterium ukończenia (*Definition of Done*) wpisanym na aktualnej karcie.
+* **Reakcja na żywo:** Gdy uczeń popełni błąd lub utknie na zadaniu, AI natychmiast podpowiada mu kierunek poprawki (bez dawania gotowca) i sygnalizuje instruktorowi zator na konkretnym stanowisku.
+* **Korzyść operacyjna i B2B:** Instruktor (Natalka) panuje nad grupą, energią i bezpieczeństwem dzieci zamiast ślęczeć nad analizą składni w 5 programach jednocześnie. Ten sam silnik stanowi poligon testowy dla usługi B2B *APEX AI Copilot* (automatyczna kontrola zgodności wykonania zadania ze zleceniem).

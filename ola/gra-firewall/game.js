@@ -73,14 +73,16 @@ function drawPlateAndGuard() {
   ctx.lineWidth = 4;
   ctx.stroke();
 
-  const positions = [,
-    [-20, -14],
-    [20, -14],
-    [-18, 18],
-    [18, 18]
+  const positions = [
+    { x: 0, y: 0 },
+    { x: -20, y: -14 },
+    { x: 20, y: -14 },
+    { x: -18, y: 18 },
+    { x: 18, y: 18 }
   ];
   for (let i = 0; i < cookies; i++) {
-    const [dx, dy] = positions[i];
+    const dx = positions[i].x;
+    const dy = positions[i].y;
     ctx.fillStyle = "#d97706";
     ctx.beginPath();
     ctx.arc(CX + dx, CY + dy, 12, 0, Math.PI * 2);
@@ -89,6 +91,9 @@ function drawPlateAndGuard() {
     ctx.fillRect(CX + dx - 4, CY + dy - 3, 3, 3);
     ctx.fillRect(CX + dx + 3, CY + dy + 2, 3, 3);
   }
+
+
+  
 
   guardAngle += 0.035;
   const gx = CX + Math.cos(guardAngle) * 72;

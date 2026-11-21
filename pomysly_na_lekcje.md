@@ -217,3 +217,10 @@ Dziecko oraz początkujący kursant nie mogą zaczynać nauki od przeglądania k
 * **Standaryzacja zajęć:** Lekcje przebiegają według przewidywalnego schematu bez konieczności wymyślania zadań na bieżąco.
 * **Łatwe delegowanie i wsparcie asystentów:** Osoba wspierająca (np. Natalka lub starszy brat Bartek jako młodszy mentor) nie musi znać zaawansowanego programowania — pilnuje jedynie powtarzalnej, 3-krokowej instrukcji.
 * **Spójność z praktyką inżynierską:** Kursant od pierwszego dnia wyrabia nawyk porządkowania kodu i dzielenia projektu na małe, niezależne moduły.
+
+
+### 🤖 Aktywny Strażnik Postępu: Porównanie `Git Diff` z Kartą Kanban w Czasie Rzeczywistym
+* **Data wypracowania:** 21.11.2026
+* **Mechanizm:** Rozbudowa systemu *APEX AI Code Mentor* o kontekst aktywnej karty z tablicy Kanban (`In Progress`). Zamiast ogólnej oceny kodu, AI porównuje bieżący stan projektu ucznia (`git diff`) bezpośrednio z kryterium ukończenia (*Definition of Done*) wpisanym na aktualnej karcie.
+* **Reakcja na żywo:** Gdy uczeń popełni błąd lub utknie na zadaniu, AI natychmiast podpowiada mu kierunek poprawki (bez dawania gotowca) i sygnalizuje instruktorowi zator na konkretnym stanowisku.
+* **Korzyść operacyjna i B2B:** Instruktor (Natalka) panuje nad grupą, energią i bezpieczeństwem dzieci zamiast ślęczeć nad analizą składni w 5 programach jednocześnie. Ten sam silnik stanowi poligon testowy dla usługi B2B *APEX AI Copilot* (automatyczna kontrola zgodności wykonania zadania ze zleceniem).

@@ -1545,3 +1545,10 @@ Status Pacjenta
    * **Living AI Systems (*In-Context & Continual Learning*):** *„Zamiast kosztownego przetrenowywania modeli lub kupowania sztywnych kombajnów z Vendor Lock-in, projektuję lekkie systemy z żywą pamięcią kontekstową (`JSON/MD`), które uczą się słownictwa i nawyków użytkownika w trakcie codziennej pracy.”*
    * **Edge-to-AI & Full-Cycle R&D:** *„Łączę 10 lat niskopoziomowego Embedded (ARM7, ESP32, C++20, UHF RFID, CAN/UART) z chmurą, automatyzacją CI/CD oraz multimodalnym AI (Vision AI, Głos, QR) — dowożę działające MVP w dni zamiast miesięcy.”*
    * **Zero-Training UI & Poka-Yoke:** *„Projektuję interfejsy na podstawie obserwacji ludzi w realnych warunkach pracy (szpital, budowa, szkoła), z twardymi blokadami antybłędowymi i bez konieczności wielogodzinnych szkoleń.”*
+
+#### 🐾 Koci Dział Bezpieczeństwa i QA (Szczerbi & Banan — charakterystyka do ilustracji, gier i komiksów):
+* **Szczerbi (Tata — puszysty biały kot w typie Ragdoll, imię z bajki *Jak wytresować smoka*):**
+  * **Charakter:** Wobec domowników bardzo towarzyski, ale przytula się dyskretnie, „gdy nikt nie patrzy” (jakby się tego wstydził); wobec obcych ostrożny i płochliwy. W relacji z synem zachowuje powagę starszego strażnika (*Firewall*), choć potrafi mu sprzedać kuksańca łapą, gdy nadarzy się okazja.
+* **Banan (Syn Szczerbiego — mały, ciemny/pręgowany kotek):**
+  * **Charakter:** Dusza towarzystwa i 100% bezczelnej odwagi (*Pentester*) — uwielbia wszystkich domowników, a zwłaszcza **Krzysia** i **Olusię**, na których uwielbia się kłaść (na plecach lub nogach). Nie boi się nikogo ani niczego (nawet obcych ludzi i psów — potrafi usiąść przy płocie u sąsiada i z pełnym spokojem drażnić szczekającego na niego psa).
+* **Wspólne misje nocne:** Oba koty regularnie wymieniają się przyjacielskimi pacnięciami łapą w domu, a nocą działają jako skuteczny zespół łowiecki (myszy, ptaki oraz ochrona ogrodu w Jeżowie Sudeckim przed kretami).

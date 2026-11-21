@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🧩 Przesuwanka QA: Ułóż Obrazek! — Strefa Ys</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../index.html" class="btn-back">← Powrót do Strefy Ys</a>
+    <span class="badge-it">SLIDING_PUZZLE // 5_SLOTS</span>
+  </div>
+
+  <div class="game-card">
+    <h1>🧩 Przesuwanka: Ułóż Obrazek!</h1>
+    <p class="subtitle">Przesuwaj kafelki na wolne pole, aby złożyć cały obrazek w jak najmniejszej liczbie ruchów!</p>
+
+    <div class="controls-row">
+      <select id="imageSelect" aria-label="Wybór obrazka">
+        <option value="obrazek1.jpg">🖼️ Obrazek 1 (QA Tester)</option>
+        <option value="obrazek2.jpg">🖼️ Obrazek 2 (Ekipa R&amp;D)</option>
+        <option value="obrazek3.jpg">🖼️ Obrazek 3 (Komiks 404)</option>
+        <option value="obrazek4.jpg">🖼️ Obrazek 4 (Rolki &amp; Koty)</option>
+        <option value="obrazek5.jpg">🖼️ Obrazek 5 (Ciasteczka)</option>
+      </select>
+
+      <select id="sizeSelect" aria-label="Rozmiar siatki">
+        <option value="3">Siatka 3×3 (Łatwy)</option>
+        <option value="4">Siatka 4×4 (Mistrz)</option>
+      </select>
+
+      <button id="shuffleBtn" class="btn-action">🔀 Wymieszaj</button>
+    </div>
+
+    <div class="hud">
+      <div>👣 Ruchy: <span id="moves">0</span></div>
+      <div>🏆 Rekord (3×3): <span id="best3">-</span></div>
+      <div>🏆 Rekord (4×4): <span id="best4">-</span></div>
+    </div>
+
+    <div class="puzzle-board" id="board"></div>
+
+    <div class="status-msg" id="statusMsg">Kliknij kafelek obok pustego pola, aby go przesunąć!</div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

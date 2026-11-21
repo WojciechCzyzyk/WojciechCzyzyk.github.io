@@ -231,7 +231,7 @@ function loop() {
 }
 
 function handleTap(e) {
-  e.preventDefault();
+  if (e && e.cancelable) e.preventDefault();
   if (gameState === "START" || gameState === "GAMEOVER") {
     resetGame();
     return;
@@ -240,8 +240,10 @@ function handleTap(e) {
   const rect = canvas.getBoundingClientRect();
   const scaleX = canvas.width / rect.width;
   const scaleY = canvas.height / rect.height;
-  const clickX = (e.clientX - rect.left) * scaleX;
-  const clickY = (e.clientY - rect.top) * scaleY;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  const clickX = (clientX - rect.left) * scaleX;
+  const clickY = (clientY - rect.top) * scaleY;
 
   for (let i = cats.length - 1; i >= 0; i--) {
     const c = cats[i];
@@ -262,5 +264,6 @@ function handleTap(e) {
 }
 
 canvas.addEventListener("pointerdown", handleTap);
+canvas.addEventListener("click", handleTap);
 
 loop();

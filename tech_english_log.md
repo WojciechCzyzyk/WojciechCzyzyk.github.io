@@ -147,3 +147,19 @@
   - `when modifying the database` — podczas modyfikowania bazy danych (zamiast *during modify*)
   - `for sure` / `In the end` — pisownia (zamiast *for shore* / *In the and*)
   - `queuing patterns` — wzorce kolejkowania
+ 
+### 📅 Sesja #9 — 21.11.2026 (Poranek w Jeżowie Sudeckim)
+* **Temat:** *Edge-to-AI & Hardware Interrupts* (Niezawodność sprzętu przy integracji z niestabilną chmurą/AI)
+* **Wynik KPI:** **5 / 5 pojęć (100% — ZALICZONE)** (`decouple`, `non-blocking`, `latency`, `deterministic`, `fallback`) + bonusowe terminy (*queues*, *events*, *interrupts*, *separate*).
+* **Pytanie rekrutacyjne:**
+  > *"You have experience with low-level embedded systems as well as cloud AI integrations. How do you ensure real-time reliability on the hardware side when connecting a microcontroller to an unreliable cloud or AI API?"*
+* **Wypolerowana odpowiedź wzorcowa (do utrwalenia):**
+  > *"First of all, in my projects, I always **decouple** the real-time hardware layer from the cloud to separate their responsibilities. Network **features** operate asynchronously using queues and events without **blocking** the main loop, whereas time-critical tasks are handled through hardware interrupts. This architecture keeps **latency** under control and ensures a **deterministic** response time. As a result, slow cloud or AI APIs can never freeze the device. Finally, I always implement a local **fallback** so the core system continues working safely even without a network connection. Does that make sense?"*
+* **Do utrwalenia (pisownia i gramatyka):**
+  * `decouple` (rozsprzęgać / oddzielać)
+  * `features` (funkcjonalności — nie *feathers*)
+  * `latency` (opóźnienie sieciowe)
+  * `without blocking` (bez blokowania — po *without* zawsze `-ing`)
+  * `critical tasks are handled` (strona bierna: *are + -ed*)
+  * `First of all, ...` / `Does that make sense?` (naturalne ramy wypowiedzi na rozmowie)
+

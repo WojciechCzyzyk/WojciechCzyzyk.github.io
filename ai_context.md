@@ -1673,3 +1673,20 @@ Status Pacjenta
 
 2. **Status Pacjenta (Jeżów Sudecki):**
    * Sobotni blok formalno-administracyjny domknięty na 100%. Przejście w tryb wieczornego relaksu z rodziną i poziomego odciążenia kręgosłupa (`Th6–Th8`).
+
+#### 📅 Wpis: 22.11.2026 (Noc i poranek w Jeżowie Sudeckim — Reanimacja Samsunga RF710, Migracja mMedica na Della, Polisa Cardif/T-Mobile, Komplet PZON & Szablon Kanban APEX)
+
+1. **Konserwacja i Odetkanie Starego Laptopa (Samsung RF710 z SSD 256 GB):**
+   * Zdiagnozowano przyczynę krytycznego zapełnienia i spowolnienia dysku `System_SSD (C:)` za pomocą narzędzia **WizTree**: błąd programu telemetrycznego **`HP Touchpoint Analytics Client`** wygenerował **21,8 GB** archiwów `.gz` w `C:\ProgramData\HP`.
+   * Odinstalowano `HP Touchpoint Analytics Client` oraz oba zewnętrzne, dublujące się antywirusy (**`AVG AntiVirus`** i **`Adaware Lavasoft`**, przechodząc na lekki wbudowany **Microsoft Defender**), a także wyczyszczono katalog `Temp` — odzyskano ponad **47 GB wolnego miejsca** na SSD i przywrócono pełną szybkość 8-wątkowego procesora oraz wyeliminowano komunikat aktywacji Windows.
+2. **Gabinet Stomatologiczny Mamy (`mMedica` / NFZ / eWUŚ):**
+   * Wygenerowano klucz tekstowy **MFA (Secret Base32)** w Portalu Świadczeniodawcy Dolnośląskiego OW NFZ i skonfigurowano go w profilu operatora.
+   * Ponieważ usługa `mmService` na starym systemie utknęła w pętli kolejkowania przez noc, zainstalowano najnowszą wersję **mMedica** (z włączonym SSL/TLS) na nowym **Dellu Latitude 7430** — do wykonania po śniadaniu pozostała wyłącznie archiwizacja bazy z Samsunga (`Zarządzanie -> Archiwizacja`), odtworzenie jej na Dellu (`Odtworzenie z archiwum`) oraz wyłączenie usługi `mmService` na starym laptopie.
+3. **Finanse, Ubezpieczenia & Dokumenty Socjalne (ZUS, Cardif, PZON):**
+   * **Zasiłek opiekuńczy ZUS (40 dni łącznie za VIII–XI 2026 r.):** Przy minimalnej podstawie Małego ZUS (`1 441,80 zł`) przelew netto dla Natalii wyniesie **`1 459,84 zł`**, a zwrot / obniżenie składek społecznych ZUS **`599,39 zł`** (łącznie **`2 059,23 zł`**). Przeanalizowano i odrzucono podnoszenie podstawy składek ZUS od 2027 r. pod zasiłek opiekuńczy (nieopłacalne ze względu na 12-miesięczną średnią i limit 60 dni opieki rocznie).
+   * **Polisa Cardif / T-Mobile (`TMNNW4/7586160`, wariant Premium z 04.05.2017 r., składka 25 zł/mies.):** Przeanalizowano pełne OWU (`T-Mobile/NNWTMK_3_1.3/2017`) — dzienny ryczałt `400 zł/dzień` dotyczy wyłącznie pobytu w szpitalu wskutek nieszczęśliwego wypadku (nie obejmuje pobytów chorobowych), jednak umowę warto bezwzględnie utrzymywać ze względu na brak ankiety medycznej, niską składkę i ochronę powypadkową do 70. roku życia.
+   * **PZON Jelenia Góra (ul. Podchorążych 15):** Ułożono komplet kserokopii medycznych (pełne wypisy z obu operacji `Th6–Th8` z X i XI 2026, opis TK/MRI guza, pełny wypis z ostatniego pobytu na Vidazie + pierwsze strony 4 poprzednich cykli, pełne ksero przeszczepu `allo-HSCT`, pierwsze zaświadczenie o rozpoznaniu białaczki) oraz sformułowano gotowy opis do wniosku uwzględniający **minimum 2-letni program leczenia Vidazą od badania MRD- z marca 2026 r. (co najmniej do wiosny 2028 r.)** i obecne ograniczenia po operacjach kręgosłupa (`05-R` + `08-T`/`11-I`). Zaświadczenie lekarskie PZON (ważne 30 dni) do podbicia przy wizycie `25.11.2026` w Wałbrzychu lub u POZ.
+4. **Akademia APEX — Złoty Standard Kart Kanban (`GitHub Projects v2`):**
+   * Sklonowano tablicę testową na konto `WojciechCzyzyk` (`Make a copy`) i przetestowano docelowy format kart lekcyjnych: bloki kodu z podświetlaniem składni (` ```css `, ` ```html `) i przyciskiem **kopiowania jednym kliknięciem** oraz konwersję zadań na pełne **Issues** z klikalnymi checkboxami i paskiem postępu.
+5. **Status Pacjenta (Jeżów Sudecki — 07:10):**
+   * Nocne pobudzenie i czkawka posterydowa (po deksametazonie) wyciszone nad ranem; pacjent po porannej pobudce przed śniadaniem, zachowujący higienę kręgosłupa `Th6–Th8` (pionizacja bokiem w gorsecie i regularne leżenie na płasko).

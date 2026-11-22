@@ -1690,3 +1690,19 @@ Status Pacjenta
    * Sklonowano tablicę testową na konto `WojciechCzyzyk` (`Make a copy`) i przetestowano docelowy format kart lekcyjnych: bloki kodu z podświetlaniem składni (` ```css `, ` ```html `) i przyciskiem **kopiowania jednym kliknięciem** oraz konwersję zadań na pełne **Issues** z klikalnymi checkboxami i paskiem postępu.
 5. **Status Pacjenta (Jeżów Sudecki — 07:10):**
    * Nocne pobudzenie i czkawka posterydowa (po deksametazonie) wyciszone nad ranem; pacjent po porannej pobudce przed śniadaniem, zachowujący higienę kręgosłupa `Th6–Th8` (pionizacja bokiem w gorsecie i regularne leżenie na płasko).
+
+
+#### 💡 Dodatek metodyczny (22.11.2026 — 07:35 — Autorski 5-Filarowy Model Dydaktyczny Akademii APEX):
+1. **Filary metodyczne zajęć dla dzieci i młodzieży (klasy 3–6+):**
+   * **Poka-Yoke (Zabezpieczenie przed błędem):** Wyeliminowanie frustracji z początkowych literówek dzięki blokom kodu z podświetlaniem składni (` ```html `, ` ```css `, ` ```js `) i przyciskiem kopiowania jednym kliknięciem na kartach Kanban.
+   * **Myślenie Obrazowe (Wizualne „Rentgeny” i Schematy):** Wbudowane schematy pudełkowe na kartach zadań pokazujące architekturę rozwiązania zanim uczeń dotknie kodu.
+   * **Logistyka Przepływu Zadań (Kanban & Agile):** Praca na realnej tablicy GitHub Projects (`ToDo -> In Progress -> Review/QA -> Done` z klikalnymi checkboxami) — nauka dzielenia dużego problemu na małe etapy i dowożenia projektów do końca.
+   * **Naturalny Tech English:** Przyswajanie autentycznego słownictwa inżynierskiego w działaniu (*queue, commit, review, bug, issue, deploy, done*) bez szkolnego wkuwania słówek.
+   * **Humor i Fabuła (Gamifikacja):** Lekkie, zabawne wprowadzenia fabularne w każdej karcie misji — zamiana nauki w przygodę i radość tworzenia.
+2. **Wdrożenie Zespołowe:**
+   * Bartek obejmuje rolę **Młodszego Asystenta Wdrożeniowego / QA** (pierwsze płatne zlecenie na wakacyjne kolonie) — testuje karty na kopii tablicy wzorcowej, wkleja schematy obrazkowe i współtworzy humorystyczne wstawki pod rówieśników.
+   * Docelowo powyższy 5-filarowy model zostanie opublikowany jako wizytówka metodyczna na stronie internetowej Akademii APEX.
+
+#### 🌟 Aktualizacja (22.11.2026 — 07:40 — Wsparcie Rodzinne & Rola Mentorska Bartka w Akademii APEX):
+* **Pozytywna zmiana w domu:** Po powrocie ze szpitala i zobaczeniu żywego rozwoju projektu Akademii APEX, zaangażowania Bartka oraz 5-filarowego modelu dydaktycznego, Natalia zaczyna stopniowo przekonywać się do idei szkoły i widzi w niej pozytywną energię oraz sensowne, dostosowane do zdrowia działanie.
+* **Bartek jako Młody Mentor Wsparcia (Starszy Brat / Asystent QA):** Oprócz przygotowania kart Kanban z humorem i obrazkami na swoje wakacyjne kolonie, Bartek otrzymał gotowy „Niezbędnik Młodego Mentora” (zabawne porównania i one-linery tłumaczące młodszym dzieciom Poka-Yoke, Kanban, Commit, Bug i CSS) — będzie pomagał na zajęciach rozładowywać stres uczestników i odciążał tatę podczas pracy przy komputerach.

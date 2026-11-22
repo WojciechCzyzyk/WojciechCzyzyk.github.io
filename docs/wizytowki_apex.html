@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Wizytówki Wojciech Czyżyk & Akademia APEX</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #fff; }
+  .sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 85mm);
+    grid-auto-rows: 55mm;
+    gap: 2mm;
+    justify-content: center;
+    page-break-after: always;
+  }
+  .card {
+    width: 85mm;
+    height: 55mm;
+    background: #0d1117;
+    color: #e6edf3;
+    border: 0.4mm solid #30363d;
+    padding: 4.5mm 5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1.2mm;
+    background: #56d364;
+  }
+  .front-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .brand { color: #56d364; font-size: 8.5pt; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+  .subbrand { color: #8b949e; font-size: 7pt; margin-top: 0.5mm; }
+  .name { font-size: 13pt; font-weight: 700; color: #ffffff; margin-top: 2.5mm; }
+  .role { font-size: 8pt; color: #56d364; font-weight: 600; margin-top: 0.5mm; }
+  .contacts { font-size: 7.5pt; line-height: 1.5; color: #c9d1d9; border-top: 0.3mm solid #30363d; padding-top: 2mm; }
+  .contacts span { color: #56d364; font-weight: bold; }
+  .qr-box { background: #fff; padding: 1.2mm; border-radius: 1.5mm; width: 17mm; height: 17mm; }
+  .qr-box img { width: 100%; height: 100%; display: block; }
+  .back { align-items: center; text-align: center; justify-content: center; gap: 2.5mm; }
+  .back-title { font-size: 9.5pt; font-weight: 700; color: #ffffff; }
+  .back-tags { font-size: 7pt; color: #56d364; font-weight: 600; }
+  .back-qr { background: #fff; padding: 1.5mm; border-radius: 2mm; width: 22mm; height: 22mm; border: 0.5mm solid #56d364; }
+  .back-qr img { width: 100%; height: 100%; display: block; }
+  .back-url { font-size: 8pt; color: #e6edf3; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: PRZÓD WIZYTÓWEK (10 SZTUK) -->
+<div class="sheet">
+  <script>
+    for (let i = 0; i < 10; i++) {
+      document.write(`
+        <div class="card">
+          <div class="front-top">
+            <div>
+              <div class="brand">🦌 Akademia Cyfrowej Inżynierii APEX</div>
+              <div class="subbrand">Sarenka Software Kids • Embedded & Living AI</div>
+              <div class="name">Wojciech Czyżyk</div>
+              <div class="role">Architekt Systemów IT & Embedded</div>
+            </div>
+            <div class="qr-box">
+              <img src="https://qrserver.com" alt="QR Portfolio">
+            </div>
+          </div>
+          <div class="contacts">
+            <div><span>TEL:</span> +48 608 102 990 &nbsp;|&nbsp; <span>WWW:</span> wojciechczyzyk.github.io</div>
+            <div><span>MAIL:</span> wojciechczyzyk@gmail.com &nbsp;|&nbsp; Jelenia Góra / Jeżów Sudecki</div>
+          </div>
+        </div>
+      `);
+    }
+  </script>
+</div>
+
+<!-- STRONA 2: TYŁ WIZYTÓWEK (10 SZTUK - DRUK DWUSTRONNY) -->
+<div class="sheet">
+  <script>
+    for (let i = 0; i < 10; i++) {
+      document.write(`
+        <div class="card back">
+          <div class="back-title">Prawdziwa inżynieria dla najmłodszych & B2B</div>
+          <div class="back-tags">Poka-Yoke • Kanban • Tech English • AI & Embedded</div>
+          <div class="back-qr">
+            <img src="https://qrserver.com" alt="QR APEX">
+          </div>
+          <div class="back-url">wojciechczyzyk.github.io/sarenka</div>
+        </div>
+      `);
+    }
+  </script>
+</div>
+
+</body>
+</html>

@@ -1691,6 +1691,14 @@ Status Pacjenta
 5. **Status Pacjenta (Jeżów Sudecki — 07:10):**
    * Nocne pobudzenie i czkawka posterydowa (po deksametazonie) wyciszone nad ranem; pacjent po porannej pobudce przed śniadaniem, zachowujący higienę kręgosłupa `Th6–Th8` (pionizacja bokiem w gorsecie i regularne leżenie na płasko).
 
+#### 📌 Aktualizacja (22.11.2026 — 12:00 — Dokumenty PZON, CV Natalii, Wizytówki & Rozszerzenie Kosztorysu APEX):
+* **Komplet dokumentów PZON (Jelenia Góra, al. Jana Pawła II 7):** Wygenerowano i podpisano pełną chronologiczną kartę tytułową teczki (`Spis_Tresci_Teczki_PZON_Wojciech_Czyzyk-v2.pdf`) oraz jednostronicowe potwierdzenie wpływu do podbicia w urzędzie (`Potwierdzenie_Zlozenia_Dokumentow_PZON_Wojciech_Czyzyk.pdf`). Natalia zawiezie komplet w poniedziałek rano.
+* **CV Natalii (Sekretarka Medyczna):** Zaktualizowano PDF (`CV_Natalia_Gieczonis_Czyzyk_Sekretarka_Medyczna-v2.pdf`) o wykadrowane zdjęcie profilowe oraz wykształcenie wyższe (Wyższa Szkoła Hotelarstwa i Gastronomii w Poznaniu, 2002–2005, licencjat).
+* **Wizytówki Wojciecha & Akademii APEX:** Przygotowano gotowy do dwustronnego druku arkusz A4 (`Wizytowki_APEX_Wojciech_Czyzyk_A4_10szt-v3.pdf`) z dwoma przetestowanymi, skanowalnymi kodami QR (`wojciechczyzyk.github.io` na froncie + `wojciechczyzyk.github.io/sarenka` na rewersie). W kolejce po drugim śniadaniu: dedykowana wizytówka dla Bartka (`Młody Mentor & Junior Developer`).
+* **Kosztorys wdrożeniowy Akademii APEX — dopisane pozycje (~380–555 zł):**
+  1. **Urządzenie do laminowania A4 + zapas folii** (~130–180 zł) — do laminowania trwałych kart ściągawek dla Bartka (*Niezbędnik Młodego Mentora*), schematów *Poka-Yoke* i identyfikatorów.
+  2. **Koszulki tematyczne dla instruktorów** (~140–210 zł za 2–3 szt.) — czarne z neonowo-zielonym nadrukiem DTF logo APEX.
+  3. **Czapki z daszkiem z logo APEX** (~110–165 zł za 2–3 szt.) — spójna identyfikacja wizualna zespołu (Natalia, Wojciech, Bartek).
 
 #### 💡 Dodatek metodyczny (22.11.2026 — 07:35 — Autorski 5-Filarowy Model Dydaktyczny Akademii APEX):
 1. **Filary metodyczne zajęć dla dzieci i młodzieży (klasy 3–6+):**

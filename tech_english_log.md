@@ -163,3 +163,16 @@
   * `critical tasks are handled` (strona bierna: *are + -ed*)
   * `First of all, ...` / `Does that make sense?` (naturalne ramy wypowiedzi na rozmowie)
 
+---
+
+### Sesja #10 (23.11.2026) — FOTA (Firmware Over-The-Air) & HIL Testing (Knowit IoT Benchmark)
+* **Wynik KPI słownictwa:** 5 / 5 pojęć (**100%** — zaliczone wszystkie: `bootloader`, `checksum / integrity`, `rollback`, `HIL (Hardware-in-the-Loop)`, `fault injection` + bonusowe terminy: `watchdog`, `read-back verification`, `SD card`).
+* **Pytanie rekrutacyjne:** *"In our IoT gateway project, reliable FOTA (Firmware Over-The-Air) updates and HIL (Hardware-in-the-Loop) testing are critical. Based on your embedded experience, how do you ensure a firmware update doesn't brick a device in the field, and how would you automate testing it?"*
+* **Wersja „Pro” (Do utrwalenia):**
+  > *"First of all, this challenge is very familiar to me from my previous **ARM7** project. I built a custom **bootloader** that read the firmware image from an **SD card**—and the exact same architecture works over-the-air via Wi-Fi or cellular. Moreover, to guarantee file **integrity**, the bootloader verifies a **checksum** before flashing, and performs a **read-back verification** afterward to confirm Flash memory matches the binary. We also use a hardware **watchdog** to monitor stability; if the new firmware hangs or fails, the system triggers a safe **rollback** to the previous stable version. In the end, before releasing any update, we run automated **fault injection** tests on a **HIL (Hardware-in-the-Loop)** bench—such as cutting power mid-update—to make sure the device never bricks. Does that make sense?"*
+* **Słownictwo i zwroty do utrwalenia (Feedback Loop):**
+  - `features` — funkcjonalności / funkcje (zamiast *feathers* = pióra)
+  - `perform a read-back verification` — wykonać weryfikację przez odczyt zwrotny pamięci Flash
+  - `runs stably` / `monitor system stability` — działa stabilnie / monitorować stabilność systemu
+  - `In the end, ...` — na koniec / w rezultacie (pisownia, zamiast *In the and*)
+  - `Does that sound clear?` / `Does that make sense?` — naturalne zamknięcie wypowiedzi (zamiast *is it sound cleat*)

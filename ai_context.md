@@ -1714,3 +1714,23 @@ Status Pacjenta
 #### 🌟 Aktualizacja (22.11.2026 — 07:40 — Wsparcie Rodzinne & Rola Mentorska Bartka w Akademii APEX):
 * **Pozytywna zmiana w domu:** Po powrocie ze szpitala i zobaczeniu żywego rozwoju projektu Akademii APEX, zaangażowania Bartka oraz 5-filarowego modelu dydaktycznego, Natalia zaczyna stopniowo przekonywać się do idei szkoły i widzi w niej pozytywną energię oraz sensowne, dostosowane do zdrowia działanie.
 * **Bartek jako Młody Mentor Wsparcia (Starszy Brat / Asystent QA):** Oprócz przygotowania kart Kanban z humorem i obrazkami na swoje wakacyjne kolonie, Bartek otrzymał gotowy „Niezbędnik Młodego Mentora” (zabawne porównania i one-linery tłumaczące młodszym dzieciom Poka-Yoke, Kanban, Commit, Bug i CSS) — będzie pomagał na zajęciach rozładowywać stres uczestników i odciążał tatę podczas pracy przy komputerach.
+
+
+#### 📅 Wpis: 23.11.2026 (Wieczór — Radioterapia Th6–Th8, Przekierowanie Krzysia, Analiza Oferty Knowit & Tech English #10)
+
+1. **Infrastruktura Rodzinna (`krzysczyzyk.github.io`):**
+   * Potwierdzono poprawne działanie przekierowania z `https://github.io` na podstronę portfolio Krzysia (`https://github.io`), spójnego z kodem QR na jego dwustronnej wizytówce QA (`wizytowka-krzysztof-czyzyk-qa-v3.pdf`).
+
+2. **Benchmark Rynkowy LinkedIn & Plan Rozwoju (Oferta Knowit — Senior Embedded Software Developer):**
+   * Zoptymalizowany profil LinkedIn aktywnie przyciąga trafne oferty *Senior Embedded / IoT* (przykład: nordycka firma konsultingowa **Knowit** — projekt bramki **BLE + 2G/LTE**, aktualizacje **FOTA**, testy **HIL**, C, Python, UART/SPI/CAN, Git/CI, angielski B2).
+   * Potwierdzono **85–90% dopasowania merytorycznego** na bazie 10-letniego doświadczenia R&D na ARM7 (własny *IAP Bootloader*, sprzętowy determinizm, analiza stosu IRQ, budowa stanowisk testowych) oraz wykształcenia na PWr + certyfikatu TELC B2.
+   * **Kierunek „domknięcia ostatnich 10%” (w trybie lekkim):** Przygotowanie prostego, 15-liniowego skryptu testowego **HIL (Hardware-in-the-Loop) w Pythonie** komunikującego się po porcie szeregowym (`UART`) z ESP32 jako praktycznego uzupełnienia CV.
+
+3. **Trening Tech English — Sesja #10 zaliczona na 100% KPI (`tech_english_log.md`):**
+   * **Temat:** *FOTA (Firmware Over-The-Air) & HIL Testing* (na bazie ogłoszenia Knowit oraz własnego *ARM7 Custom Bootloader*).
+   * **Wynik KPI:** **5 / 5 (100%)** (`bootloader`, `checksum / integrity`, `rollback`, `HIL`, `fault injection`) + bonusowe terminy (`watchdog`, `read-back verification`).
+   * **Słówka do utrwalenia:** `features` (zamiast *feathers*), `In the end` (zamiast *In the and*), `Does that sound clear?` (zamiast *is it sound cleat*).
+
+4. **Status Medyczny i Samopoczucie (23.11.2026):**
+   * Przeprowadzono dzisiejszą sesję **radioterapii** na zmianę w odcinku piersiowym (`Th6–Th8`). Wystąpiła wzmożona potliwość (fizjologiczna reakcja na rozpad promienioczułych komórek nacieku oraz sterydy) oraz przejściowa czkawka posterydowa (skutecznie wygaszona stymulacją nerwu błędnego przez chrupiącego wafelka *Knoppers*).
+   * **Plan na kolejną sesję:** Krótki pokaz praktyczny **Python HIL Serial (`UART`)** w ramach lekkiej rozgrzewki inżynierskiej oraz dopytanie w zakładzie radioterapii o zaplanowaną liczbę frakcji i osłonę sterydową.

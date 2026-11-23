@@ -5,8 +5,8 @@ Natalia Gieczonis-Czyżyk
 Prowadząca działalność gospodarczą pod firmą: „Sarenka”
 ul. Gajowa 9A
 58-521 Jeżów Sudecki
-NIP: …………………………
-PESEL: 830306……………
+NIP: 6112472641
+PESEL: 83030600480
 Tel. kontaktowy: 609 851 879
 E-mail: nataliag2@wp.pl
 
@@ -16,15 +16,15 @@ E-mail: nataliag2@wp.pl
                                         58-500 Jelenia Góra
 
 Dotyczy: Wezwania / czynności sprawdzających w zakresie danych z raportu DAC7
-Znak sprawy: ……………………………………… (wpisać sygnaturę z pisma US)
+Znak sprawy: 0207-SKA-2.4031.1230.2026.3 (wpisać sygnaturę z pisma US)
 
 
                         WYJAŚNIENIA PODATNIKA
          W ZAKRESIE TRANSAKCJI ZARAPORTOWANYCH W RAMACH DAC7
 
-W odpowiedzi na pismo / wezwanie z dnia ………………… 2026 r. (znak sprawy: 
-………………………………………) dotyczące weryfikacji sprzedaży za pośrednictwem 
-platform internetowych (raport DAC7 za rok …………), niniejszym składam 
+W odpowiedzi na pismo / wezwanie z dnia 28.09.2026 r. (znak sprawy: 
+0207-SKA-2.4031.1230.2026.3) dotyczące weryfikacji sprzedaży za pośrednictwem 
+platform internetowych (raport DAC7 za rok 2023), niniejszym składam 
 szczegółowe wyjaśnienia:
 
 1. Prowadzenie zarejestrowanej działalności gospodarczej („Sarenka”):

@@ -31,10 +31,9 @@ szczegółowe wyjaśnienia:
    Od grudnia 2011 r. nieprzerwanie prowadzę zarejestrowaną działalność 
    gospodarczą pod firmą „Sarenka”, której przedmiotem jest m.in. sprzedaż 
    internetowa. Wszystkie transakcje handlowe dokonywane w ramach działalności 
-   gospodarczej za pośrednictwem platform sprzedażowych (……………………………… — 
-   wpisać nazwę platformy, np. Allegro / OLX / Vinted) były na bieżąco ujmowane 
+   gospodarczej za pośrednictwem platform sprzedażowych  ( Allegro ) były na bieżąco ujmowane 
    w prowadzonej ewidencji podatkowej (KPiR / Ewidencji przychodów) oraz 
-   prawidłowo wykazane w złożonym zeznaniu rocznym PIT za rok ………….
+   wykazane w złożonym zeznaniu rocznym PIT za rok 2023.
 
 2. Przyczyny różnic kwotowych między raportem DAC7 a przychodem w zeznaniu PIT:
    Ewentualna różnica pomiędzy łączną kwotą zaraportowaną przez operatora 
@@ -49,7 +48,7 @@ szczegółowe wyjaśnienia:
       zwroty konsumenckie, które pomniejszyły faktyczny przychód w ewidencji 
       podatkowej (dokumentowane korektami / zestawieniami zwrotów), podczas gdy 
       zestawienia platform często wykazują pierwotną wartość sprzedaży;
-   c) [OPCJA – usunąć, jeśli nie dotyczy]: Część pojedynczych ogłoszeń na 
+   c) Część pojedynczych ogłoszeń na 
       koncie prywatnym dotyczyła sprzedaży używanych przedmiotów osobistych 
       (np. odzieży i akcesoriów dziecięcych/domowych), które znajdowały się 
       w moim posiadaniu przez okres dłuższy niż 6 miesięcy licząc od końca 

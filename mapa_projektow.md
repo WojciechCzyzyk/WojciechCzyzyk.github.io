@@ -57,9 +57,9 @@
   - `modul-2-sesja-5/pytania.js` — baza 6 pytań z obszaru architektury zdarzeniowej i pamięci JSON
   - `modul-3-sesja-6/index.html` — widok trzeciego quizu (Sesja #6: Modular Architecture & Separation of Concerns)
   - `modul-3-sesja-6/pytania.js` — baza 6 pytań z obszaru modularności, eliminacji duplikacji i Single Source of Truth
-  - `modul-4-sesja-7/pytania.js — baza 6 pytań B2B SaaS & Medical IT Architecture
-  - `modul-4-sesja-7/index.html — widok czwartego quizu (Sesja #7: B2B SaaS & Medical IT)
-  - `modul-4-sesja-7/pytania.js — baza 6 pytań z obszaru UX, Auto-Fallback AI, RODO i architektury Sidecar App
+  - `modul-4-sesja-7/pytania.js` — baza 6 pytań B2B SaaS & Medical IT Architecture
+  - `modul-4-sesja-7/index.html` — widok czwartego quizu (Sesja #7: B2B SaaS & Medical IT)
+  - `modul-4-sesja-7/pytania.js` — baza 6 pytań z obszaru UX, Auto-Fallback AI, RODO i architektury Sidecar App
   - `modul-5-pulapki-pisowni/index.html` + `pytania.js` — Moduł #5 (12 pytań: pułapki pisowni, gramatyka i naturalne zwroty rekrutacyjne)
   - `modul-6-jezyk-fachowy/index.html` + `pytania.js` — Moduł #6 (12 pytań: zamiana języka potocznego na język Architekta IT)
   - `modul-7-pojecia-embedded-ai/index.html` + `pytania.js` — Moduł #7 (12 pytań: kluczowe pojęcia branżowe Embedded, RTOS, RF i Edge-to-AI)

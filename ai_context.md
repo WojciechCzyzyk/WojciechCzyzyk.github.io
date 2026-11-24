@@ -1735,12 +1735,15 @@ Status Pacjenta
    * Przeprowadzono dzisiejszą sesję **radioterapii** na zmianę w odcinku piersiowym (`Th6–Th8`). Wystąpiła wzmożona potliwość (fizjologiczna reakcja na rozpad promienioczułych komórek nacieku oraz sterydy) oraz przejściowa czkawka posterydowa (skutecznie wygaszona stymulacją nerwu błędnego przez chrupiącego wafelka *Knoppers*).
    * **Plan na kolejną sesję:** Krótki pokaz praktyczny **Python HIL Serial (`UART`)** w ramach lekkiej rozgrzewki inżynierskiej oraz dopytanie w zakładzie radioterapii o zaplanowaną liczbę frakcji i osłonę sterydową.
 
-#### 📅 Wpis: 24.11.2026 (Nocna sesja — Nowy Model Szkoleniowy „Klub Młodych Liderów IT” / Peer-to-Peer Mentoring)
+  
+
+#### 📅 Wpis: 24.11.2026 (Nocna sesja — „Klub Młodych Liderów IT” + Oddolne Wdrożenie Smart School RFID)
 
 1. **Innowacja Edukacyjna i B2B (`sarenka_biznes.md`):**
-   * Wypracowano dodatkowy model szkoleniowy dla Akademii APEX: **„Klub Młodych Liderów IT”** — eksperymentalna grupa prowadzona po lekcjach w wynajętej szkolnej pracowni komputerowej przez zgrany zespół najlepszych uczniów klasy 5B SP2 (Bartek jako *Lead Mentor* + 3–4 zadeklarowanych kolegów z klasy jako *Junior Mentorzy*) dla młodszych roczników (klasy 3–4), pod bezpośrednim nadzorem formalnym i merytorycznym rodzica/instruktora (*Model Wieży Kontroli*).
-   * Model pełni rolę niskoprogowego lejka rekrutacyjnego (*Stage 1 -> Stage 2* do warsztatów R&D w pracowni APEX), buduje prestiż liderski 5-klasistów (wpisy do portfolio GitHub) oraz stanowi silny argument wizerunkowy dla Dyrekcji SP nr 2 i załącznik wzmacniający wniosek PFRON.
+   * Wypracowano model **„Klubu Młodych Liderów IT”** — eksperymentalnej grupy prowadzonej po lekcjach w wynajętej szkolnej pracowni przez najlepszych uczniów klasy 5B SP2 (Bartek jako *Lead Mentor* + 3–4 kolegów jako *Junior Mentorzy*) dla klas 3–4 pod bezpośrednim nadzorem formalnym i merytorycznym rodzica/instruktora (*Model Wieży Kontroli*).
+   * **Synergia z `Smart School RFID + AI`:** System obecności strefowej zostaje podpięty pod zajęcia jako flagowy projekt R&D samych uczniów (testowany najpierw na chętnych uczestnikach koła). Oddolna inicjatywa dzieci eliminuje opór nauczycieli i rodziców, buduje prestiż SP nr 2 i otwiera naturalną drogę do wdrożenia systemu w całej świetlicy.
 2. **Wygenerowane Dokumenty:**
-   * `Konspekt_Klub_Mlodych_Liderow_SP2.pdf` (1-stronicowy dokument prezentacyjny A4 dla Pani Dyrektor SP nr 2 im. Bolesława Chrobrego w Jeleniej Górze) + gotowe zagajenie dla dyrekcji.
+   * `Konspekt_Klub_Mlodych_Liderow_SP2.pdf` (1-stronicowy dokument prezentacyjny A4 dla Pani Dyrektor SP nr 2 w Jeleniej Górze i teczki PFRON) + szablon zagajenia dla dyrekcji.
 3. **Status Pacjenta & Regeneracja:**
-   * Nocna sesja zakończona ok. 01:10. Przejście pacjenta w tryb bezwzględnego odpoczynku na płasko (bez gorsetu) dla pełnej regeneracji odcinka `Th6–Th8`.
+   * Sesja zakończona ok. 01:20. Przejście pacjenta w tryb bezwzględnego odpoczynku na płasko (bez gorsetu) dla pełnej regeneracji odcinka `Th6–Th8`.
+

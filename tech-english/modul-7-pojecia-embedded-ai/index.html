@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moduł #7: Pojęcia Embedded, RTOS & Edge-to-AI | Tech English</title>
+  <link rel="icon" type="image/png" href="../../favicon_wc.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="quiz-container-narrow">
+    <div class="top-bar">
+      <a href="../index.html" class="back-link">← Powrót do listy modułów</a>
+      <span class="kpi-pill">🎯 Cel KPI: min. 80%</span>
+    </div>
+
+    <div id="quiz-container" class="quiz-box">
+      <div id="progress-text" class="progress">Pytanie 1 / 12</div>
+      <div id="question-text" class="question-text">Ładowanie pytania...</div>
+      <div id="options-container" class="options"></div>
+      <div id="feedback-box" class="feedback"></div>
+      <button id="next-btn" class="next-btn" onclick="nextQuestion()">Następne pytanie →</button>
+    </div>
+
+    <div id="result-container" class="quiz-box result-box">
+      <h2>🏁 Podsumowanie Modułu #7</h2>
+      <div id="final-score" class="result-score">0 / 12 (0%)</div>
+      <p id="final-comment"></p>
+      <div style="margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn" style="border: none; cursor: pointer;" onclick="location.reload()">🔄 Powtórz quiz</button>
+        <a href="../index.html" class="btn" style="background: var(--accent);">📋 Wszystkie moduły</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="pytania.js"></script>
+  <script src="../silnik.js"></script>
+</body>
+</html>

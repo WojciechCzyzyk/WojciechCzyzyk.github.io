@@ -68,10 +68,11 @@ function showResult() {
   const commentEl = document.getElementById('final-comment');
 
   if (pct >= 80) {
-    commentEl.textContent = '🎯 Cel KPI (min. 80%) osiągnięty! Słownictwo techniczne z Sesji #1–#4 opanowane na poziomie produkcyjnym.';
+    commentEl.textContent = '🎯 Cel KPI (min. 80%) osiągnięty! Słownictwo techniczne z tego modułu opanowane na poziomie produkcyjnym.';
   } else {
     commentEl.textContent = '⚠️ Wynik poniżej progu 80% KPI. Przeczytaj wyjaśnienia inżynierskie i powtórz moduł dla utrwalenia słownictwa.';
   }
+
 }
 
 loadQuestion();

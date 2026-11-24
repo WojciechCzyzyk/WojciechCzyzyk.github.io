@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Titanic: Kurs przez Górę Lodową | Krzyś Czyżyk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="top-bar">
+      <a href="../index.html" class="back-btn">← Powrót</a>
+      <div class="stats">
+        <span>🌊 Dystans: <strong id="score">0</strong> m</span>
+        <span>🏆 Rekord: <strong id="best-score">0</strong> m</span>
+      </div>
+    </div>
+
+    <h1>🚢 Titanic: Omijaj Góry Lodowe!</h1>
+
+    <div class="canvas-box">
+      <canvas id="gameCanvas" width="360" height="520"></canvas>
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">Gotowy do rejsu, Kapitanie?</h2>
+        <p id="overlay-desc">Steruj strzałkami ⬅️ ➡️ na klawiaturze lub przyciskami na dole ekranu.</p>
+        <button id="start-btn" class="action-btn">⚓ Wypłyń w rejs!</button>
+      </div>
+    </div>
+
+    <div class="touch-controls">
+      <button id="btn-left" class="ctrl-btn" aria-label="W lewo">⬅️ LEWO</button>
+      <button id="btn-right" class="ctrl-btn" aria-label="W prawo">PRAWO ➡️</button>
+    </div>
+  </div>
+
+  <script src="gra.js"></script>
+</body>
+</html>

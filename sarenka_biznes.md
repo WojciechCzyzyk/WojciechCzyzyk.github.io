@@ -135,3 +135,16 @@ Pozyskiwanie zleceń wśród małych i średnich przedsiębiorstw (MŚP) z regio
 * **Inżynieria Systemów i AI od Pierwszej Lekcji:** Uczymy myślenia architektonicznego (metoda *1 sekcja = 1 mały plik*, praca na tablicy Kanban, rola arbitra weryfikującego AI) zamiast bezrefleksyjnego kopiowania kodu.
 * **Lokalny Autorytet Praktyków (Jelenia Góra i okolice):** Kameralne zajęcia prowadzone przez aktywnego inżyniera Embedded/AI oraz doświadczonego pedagoga — brak masowej „taśmy franczyzowej”.
 * **Natychmiastowy Efekt Szkolny (*EdTech w Praktyce*):** Łączymy naukę technologii z budowaniem własnych narzędzi wspierających naukę przedmiotów szkolnych (quizy z matematyki, polskiego, geografii, historii i biologii), co daje rodzicom wymierną wartość od pierwszego miesiąca.
+
+---
+
+## 🤝 Model Wejścia B2B / Edukacyjnego: „Klub Młodych Liderów IT” (Peer-to-Peer Mentoring)
+* **Data dodania:** 24.11.2026
+* **Koncepcja operacyjna:** Eksperymentalna grupa szkoleniowa prowadzona po lekcjach w wynajętej szkolnej pracowni komputerowej przez zgrany zespół najlepszych uczniów klasy 5 (Bartek jako *Lead Mentor* + 3–4 zadeklarowanych kolegów z klasy jako *Junior Mentorzy*) dla młodszych roczników (klasy 3–4), pod bezpośrednim nadzorem formalnym i merytorycznym rodzica/instruktora Akademii APEX (*Model Wieży Kontroli*).
+* **Przewaga sprzedażowa i psychologiczna (Dźwignia B2B w szkołach):**
+  1. **Efekt autorytetu rówieśniczego:** Młodsze dzieci znacznie chętniej i bez stresu uczą się od starszych kolegów ze swojej szkoły, a 5-klasiści zyskują gigantyczny zastrzyk prestiżu, odpowiedzialności i realne wpisy do portfolio na GitHubie.
+  2. **Argument nie do odrzucenia dla Dyrekcji szkoły:** Placówka zyskuje unikalną w skali regionu innowację pedagogiczną (rozwój kompetencji liderskich + wsparcie młodszych klas), zero obciążenia dla kadry nauczycielskiej oraz gotowy materiał promocyjny (*Demo Day* z udziałem rodziców i dyrekcji).
+  3. **Lejek rekrutacyjny (Stage 1 -> Stage 2):** Klub szkolny stanowi niskoprogowy punkt wejścia do ekosystemu APEX — najbardziej zaangażowani uczniowie przechodzą następnie na zaawansowane, wysokomarżowe warsztaty R&D (drony UAV, druk 3D, elektronika/ESP32) w głównej pracowni Akademii.
+  4. **Wzmocnienie wniosku PFRON:** Kolejny udokumentowany, innowacyjny filar działalności edukacyjnej (PKD 85.59.D) i gotowy załącznik do rozmów o listach intencyjnych z dyrektorami szkół.
+* **Powiązany dokument prezentacyjny:** `Konspekt_Klub_Mlodych_Liderow_SP2.pdf`
+

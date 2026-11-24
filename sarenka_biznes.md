@@ -152,3 +152,7 @@ Pozyskiwanie zleceń wśród małych i średnich przedsiębiorstw (MŚP) z regio
   * **Strategia wdrożenia:** System lokalizacji strefowej (`Smart School RFID + AI`) zostaje włączony do programu **Klubu Młodych Liderów IT** jako flagowy projekt badawczo-konstrukcyjny uczniów (projektowanie obudów breloków w 3D, konfiguracja węzłów ESP32/RFID, testy dashboardu na chętnych uczestnikach koła).
   * **Efekt biznesowy:** Projekt wchodzi do szkoły oddolnie jako powód do dumy rodziców i dyrekcji zamiast „zewnętrznego systemu nadzoru”. Udany test na grupie klubowej naturalnie otwiera drogę do wdrożenia systemu w całej świetlicy szkolnej.
 
+
+* **Wizja Długofalowa — „Karkonoski Inkubator Młodych Wynalazców”:**
+  * Przekształcenie pracowni Akademii APEX (Sarenka Software Kids) w lokalną mikro-Dolinę Krzemową dla dzieci i młodzieży z Kotliny Jeleniogórskiej — miejsce, w którym uczniowie po opanowaniu podstaw (Web, Git, Kanban, AI, mikrokontrolery, druk 3D) zgłaszają własne pomysły na usprawnienia ze szkoły i domu, budują działające prototypy w zespołach *Peer-to-Peer* i prezentują je podczas półrocznych pokazów *Demo Day*.
+

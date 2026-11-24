@@ -1758,3 +1758,21 @@ Status Pacjenta
    * `Konspekt_Klub_Mlodych_Liderow_SP2-v2.pdf` (1-stronicowy dokument prezentacyjny A4 dla Pani Dyrektor SP nr 2 w Jeleniej Górze i teczki PFRON) + gotowe zagajenie dla dyrekcji.
 4. **Status Pacjenta & Regeneracja:**
    * Nocna sesja zakończona ok. 02:15 (po szybkiej przekąsce białkowej i odkryciu pojemnościowych właściwości kabanosa jako rysika do smartfona). Przejście pacjenta w tryb bezwzględnego odpoczynku na płasko (bez gorsetu) dla pełnej regeneracji odcinka `Th6–Th8`.
+
+#### 📅 Wpis: 24.11.2026 (Poranek w Wałbrzychu — 3 Nowe Moduły Tech English #5–#7 & Wizytówka QR w Stopce Portfolio)
+
+1. **Rozbudowa Poligonu `tech-english/` (Łącznie 7 aktywnych modułów / 58 pytań):**
+   * Zaprojektowano, podzielono na atomowe sprinty i wdrożono na produkcji 3 nowe moduły treningowe oparte na silniku `silnik.js` (cel KPI: min. 80%):
+     * **Moduł #5 (`tech-english/modul-5-pulapki-pisowni/`):** 12 pytań — pułapki pisowni, gramatyka i naturalne zwroty rekrutacyjne (*features vs. feathers*, *in parallel*, *In the end*, *without blocking*, *each file*, *Does that make sense?*).
+     * **Moduł #6 (`tech-english/modul-6-jezyk-fachowy/`):** 12 pytań — zamiana języka potocznego na język Architekta IT (*read-back verification*, *foreign tags*, *bloated features*, *stagger the startup*, *hysteresis*, *curated up-to-date context*).
+     * **Moduł #7 (`tech-english/modul-7-pojecia-embedded-ai/`):** 12 pytań — kluczowe pojęcia branżowe Embedded, RTOS, RF i Edge-to-AI (*race condition*, *read-modify-write*, *inrush current*, *fault injection*, *HIL*, *decoupling*, *Sidecar App*).
+   * Ujednolicono komunikat końcowy w `tech-english/silnik.js` dla wszystkich modułów oraz zaktualizowano licznik w `tech-english/index.html` (`Aktywne moduły: 7`).
+
+2. **Optymalizacja Wizytówki QR & Szybkie Udostępnianie w Stopce (`index.html`):**
+   * Wygenerowano dwustronną kartę wizytówki `wizytowka-wojciech-czyzyk-apex-v5.pdf` z dwoma deterministycznymi, czarno-białymi kodami QR (`wojciechczyzyk.github.io` + `wojciechczyzyk.github.io/sarenka`).
+   * Wdrożono responsywną grafikę `docs/Wojciech_Czyzyk-QR-www.jpg` w stopce strony głównej `index.html` (wyrównaną do lewej, bez przycinania), umożliwiającą błyskawiczne udostępnianie portfolio z ekranu smartfona jednym skanem (*Zero-Friction Networking*).
+
+3. **Walidacja Terenowa `dyzurka-iot/` & Status Medyczny (Wałbrzych):**
+   * Pozytywny feedback od personelu pielęgniarskiego na oddziale (pytania o możliwość wdrożenia przez dyrekcję — przyjęta strategia oddolnego zbierania potrzeb *Bottom-Up Adoption* przed prezentacją).
+   * Zaplanowane dołożenie do rejestru `mapa_projektow.md` 3 nowych folderów modułów (`modul-5-pulapki-pisowni/`, `modul-6-jezyk-fachowy/`, `modul-7-pojecia-embedded-ai/`).
+

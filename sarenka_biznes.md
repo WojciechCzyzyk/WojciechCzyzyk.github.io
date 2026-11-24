@@ -148,3 +148,7 @@ Pozyskiwanie zleceń wśród małych i średnich przedsiębiorstw (MŚP) z regio
   4. **Wzmocnienie wniosku PFRON:** Kolejny udokumentowany, innowacyjny filar działalności edukacyjnej (PKD 85.59.D) i gotowy załącznik do rozmów o listach intencyjnych z dyrektorami szkół.
 * **Powiązany dokument prezentacyjny:** `Konspekt_Klub_Mlodych_Liderow_SP2.pdf`
 
+* **Synergia Produktowa („Trojan Horse” dla Smart School RFID + AI):**
+  * **Strategia wdrożenia:** System lokalizacji strefowej (`Smart School RFID + AI`) zostaje włączony do programu **Klubu Młodych Liderów IT** jako flagowy projekt badawczo-konstrukcyjny uczniów (projektowanie obudów breloków w 3D, konfiguracja węzłów ESP32/RFID, testy dashboardu na chętnych uczestnikach koła).
+  * **Efekt biznesowy:** Projekt wchodzi do szkoły oddolnie jako powód do dumy rodziców i dyrekcji zamiast „zewnętrznego systemu nadzoru”. Udany test na grupie klubowej naturalnie otwiera drogę do wdrożenia systemu w całej świetlicy szkolnej.
+

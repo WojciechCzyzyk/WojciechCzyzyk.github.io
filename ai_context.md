@@ -1776,3 +1776,18 @@ Status Pacjenta
    * Pozytywny feedback od personelu pielęgniarskiego na oddziale (pytania o możliwość wdrożenia przez dyrekcję — przyjęta strategia oddolnego zbierania potrzeb *Bottom-Up Adoption* przed prezentacją).
    * Zaplanowane dołożenie do rejestru `mapa_projektow.md` 3 nowych folderów modułów (`modul-5-pulapki-pisowni/`, `modul-6-jezyk-fachowy/`, `modul-7-pojecia-embedded-ai/`).
 
+#### 📅 Wpis: 25.11.2026 (Noc i poranek w Jeżowie Sudeckim — Jednoznaczne Rozpoznanie C92.3, Radioterapia 1x, Gra Titanic Krzysia & Zamówienie Wizytówek Rodzinnych)
+
+1. **Przełom Diagnostyczny & Status Medyczny (`ICD-10: C92.3` — Mięsak Mieloidalny):**
+   * Otrzymano pełny, jednoznaczny wynik patomorfologiczny (Wersja nr 2 z dnia `22.11.2026 r.`): **mięsak mieloidalny (*myeloid sarcoma*, `ICD-10: C92.3`)** — izolowana, pozaszpikowa postać wznowy `AML` z translokacją `t(8;21) RUNX1::RUNX1T1` i `del(7q)` w kanale kręgowym (`Th6–Th8`).
+   * **Profil molekularny i cel terapeutyczny:** `CD34+`, `MPO+`, **silna ekspresja `BCL2+`** (bezpośredni punkt uchwytu dla doustnego leku celowanego **wenetoklaks** w połączeniu z **azacytydyną / Vidazą**) oraz wysoki indeks podziałowy **`Ki67` do 80%** (tłumaczy szybki odrost między 22.10 a 04.11 oraz oznacza bardzo wysoką wrażliwość na radioterapię i leczenie celowane). Wstępne markery `CD19 / PAX5` wynikały z klasycznego fenotypu translokacji `t(8;21)`.
+   * **Radioterapia & Harmonogram Kliniczny:** Zastosowano od razu **maksymalną, jednodawkową radioterapię** na odcinek `Th6–Th8` (brak kolejnych dojazdów na naświetlania w tym tygodniu). Odwołano dzisiejsze badanie `PET-CT` we Wrocławiu (niepotrzebne na tym etapie po operacji i radioterapii). Pacjent przyjmuje osłonowo sterydy przeciwobrzękowe (stąd przejściowa czkawka i nocne wybudzenia; przejściowe wrażenie ucisku przez pierwsze 24–72h to typowy odczyn popromienny przed właściwym obkurczeniem zmiany). Powrót na Oddział Hematologii w Wałbrzychu zaplanowany na **wtorek `01.12.2026`** (już z wynikami badań molekularnych szpiku z Poznania).
+
+2. **Formalności PZON & Strategia Ubezpieczenia Kredytu Cardif:**
+   * **PZON Jelenia Góra:** Dołączono kserokopię wyniku patomorfologicznego z `22.11.2026` (`C92.3`) na sam wierzch teczki — Natalia składa komplet dokumentów dzisiaj rano.
+   * **Ubezpieczenie kredytu BNP Paribas Cardif (`Sprawa nr 11054060`):** Z uwagi na potwierdzenie, że zmiana `C92.3` jest wznową `AML` z lutego 2025 r., zrezygnowano ze składania osobnego wniosku „na teraz” (uniknięcie odmowy z tytułu wznowy pierwotnej choroby). Utrzymano pełną koncentrację na głównym roszczeniu z lutego 2025 r. (odpowiedź Cardif na reklamację do `14.12.2026` ➔ eskalacja do Rzecznika Finansowego z wykorzystaniem dokumentu z `22.11.2026` jako dowodu powagi choroby).
+
+3. **Ekosystem Rodzinny, Wizytówki & Projekty IT:**
+   * **Wizytówki całej rodziny:** Zamówiono druk dwustronnych wizytówek z deterministycznymi, czarno-białymi kodami QR (Wojciech + APEX `v5`, Krzysztof QA `v3`, Aleksandra CEO & UX Designer ze Szczerbim i Banankiem `v1`).
+   * **Gra Krzysia (`krzys/titanic/`):** Zbudowano i wdrożono grę zręcznościową HTML5 Canvas *„Titanic: Omijaj Góry Lodowe!”* (`index.html`, `style.css`, `gra.js` z 4 kominami, kilwaterem, sterowaniem dotykowym i rekordem `localStorage`).
+   * **Stanowisko Sprzętowe:** Zweryfikowano pamięć w Dell Latitude 7430 2w1 (`32 GB DDR4-3200 Dual-Channel` wlutowane na płycie — maksymalna obsługiwana pojemność modelu).

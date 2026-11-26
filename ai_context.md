@@ -1791,3 +1791,34 @@ Status Pacjenta
    * **Wizytówki całej rodziny:** Zamówiono druk dwustronnych wizytówek z deterministycznymi, czarno-białymi kodami QR (Wojciech + APEX `v5`, Krzysztof QA `v3`, Aleksandra CEO & UX Designer ze Szczerbim i Banankiem `v1`).
    * **Gra Krzysia (`krzys/titanic/`):** Zbudowano i wdrożono grę zręcznościową HTML5 Canvas *„Titanic: Omijaj Góry Lodowe!”* (`index.html`, `style.css`, `gra.js` z 4 kominami, kilwaterem, sterowaniem dotykowym i rekordem `localStorage`).
    * **Stanowisko Sprzętowe:** Zweryfikowano pamięć w Dell Latitude 7430 2w1 (`32 GB DDR4-3200 Dual-Channel` wlutowane na płycie — maksymalna obsługiwana pojemność modelu).
+
+
+#### 📅 Wpis: 25–26.11.2026 (Wygrana Cardif 22 537,76 zł, e-Doręczenia, PZON v2/v3, GOPS dla 5-osobowej rodziny, US/KSeF, Wynik Bartka, Kosztorys PFRON v23 & Konsultacja Sterydowa)
+
+1. **Przełom Finansowy — Wygrana Reklamacji BNP Paribas Cardif (`Sprawa nr 11054060`):**
+   * Decyzją z dnia `24.11.2026` (doręczoną `25.11.2026`) Cardif Polska S.A. w pełni zaakceptowało wypłatę świadczenia z tytułu poważnego zachorowania (`AML`) w kwocie **`22 537,76 zł`** (4,5 raty kredytu) w ramach procedury kulancji.
+   * Środki trafiają bezpośrednio na nadpłatę kapitału kredytu hipotecznego w BNP Paribas; ochrona na wypadek Zgonu dla obojga kredytobiorców działa nieprzerwanie dalej.
+
+2. **Ekosystem Rodzinny (5-osobowa rodzina: Wojciech, Natalia, Bartek 11 l., Krzyś 9 l., Olusia 4 l.):**
+   * **Mistrzowski wynik Bartka w konkursie historycznym:** Drużyna Bartka z klasy 5B zajęła **4. miejsce w całej szkole SP nr 2 (na 21 drużyn ze starszymi rocznikami) oraz 1. miejsce wśród wszystkich klas piątych**, ucząc się z dedykowanych aplikacji/quizów webowych (`Case Study #1` dla Akademii APEX).
+   * **Wsparcie GOPS/MOPS Jeżów Sudecki:** `26.11.2026` odbyła się wizyta domowa pracownika socjalnego; uruchomiono procedurę wsparcia dla 5-osobowej rodziny w związku z ciężką chorobą onkologiczną. Wysłano w e-Urzędzie Skarbowym wniosek o bezpłatne zaświadczenie o dochodach z działalności gospodarczej Natalki za 2025 r. (`ZAS-DFU`, cel: pomoc społeczna).
+   * **Stanowiska chłopaków na poddaszu:** Ustawiono biurka Bartka i Krzysia (monitory, mikrofony, gadżety).
+
+3. **Sprawy Urzędowe & Podatkowe (`PZON`, `e-Doręczenia`, `US / wFirma / KSeF`):**
+   * **e-Doręczenia & PZON Jelenia Góra:** Odnowiono Profil Zaufany i aktywowano oficjalny Adres do e-Doręczeń Wojtka: **`AE:PL-98151-80968-CAHJA-36`**. Wypełniono oryginalny 4-stronicowy formularz PZON Jelenia Góra (`Wniosek_PZON_Jelenia_Gora_Wypelniony-v2.pdf`), zaktualizowano chronologiczny spis dokumentów (`v3`, 15 pozycji z wynikiem patomorfologicznym `C92.3` z `22.11.2026` i pobytem na radioterapii `23–24.11.2026`) oraz potwierdzenie wpływu (`v2`). Złożenie w PZON przez Natalkę zaplanowane na **piątek `27.11.2026`** (omijając czwartkowe kolejki przy wydawaniu orzeczeń).
+   * **Podatki Natalki (`wFirma.pl`, KSeF, US Jelenia Góra — sprawa `0207-SKA-2.4031.1230.2026.3`):** Podpięto integrację KSeF w `wFirma.pl`. Ustalono strategię odpowiedzi na wezwanie DAC7 za 2023 r.: najpierw złożenie spójnych korekt `JPK_V7` i `PIT-36` za 2023 r. (z uwzględnieniem faktur kosztowych Allegro oraz obniżonych odsetek 50% z art. 56a OP), a następnie wystąpienie z wnioskiem o rozłożenie powstałej zaległości VAT na raty i umorzenie odsetek z uwagi na ciężką chorobę w rodzinie (art. 67a OP).
+
+4. **Status Medyczny (`Th6–Th8`, Sterydy, Leki Osłonowe, Morfologia) — stan na wieczór `26.11.2026`:**
+   * **Neurologia & Radioterapia (`23.11.2026` ok. `16:00`):** Utrzymuje się częściowe odpuszczanie paraliżu po rozruszaniu w sztywnym gorsecie; zachowana pełna kontrola zwieraczy.
+   * **Odstawienie `Dexamethasone` & Czkawka:** Po uzgodnieniu z hematologią odłożono wieczorną dawkę deksametazonu z `25.11` (powodował silną czkawkę posterydową i nocne epizody 3–4 sek. skurczu głośni, potęgowane przez kofeinę). Po odstawieniu leku oraz całkowitym wykluczeniu kawy/teiny (wprowadzona melisa i woda) przerwy bez czkawki systematycznie się wydłużają.
+   * **Wzorowa morfologia krwi:** Płytki krwi `PLT ~200 tys.`, neutrofile `NEU 12`, hemoglobina `HGB 14 g/dl`.
+   * **Aktualne leki osłonowe:** `Biseptol` (co 2. dzień), `Milurit 300 mg` (1× dz.), `Heviran` (1× dz.), `IPP 20 mg` (1× dz. rano na czczo) oraz `Lactulosum` na jelita.
+   * **Priorytety na poranną rozmowę z lekarzem prowadzącym (`piątek 27.11.2026`, `Karta_Konsultacji_Sterydy_Radioterapia_26_11_2026-v3.pdf`):**
+     1) Decyzja o dalszym schemacie sterydu (wygaśnięcie vs łagodniejszy doustny metyloprednizolon/`Metypred` rano, lepiej tolerowany niż deksametazon),
+     2) Bezpieczne wsparcie wypróżnienia po 4 dniach zastoju (zwiększenie płynów do laktulozy / makrogole przy odrętwieniu powłok brzusznych `Th6–Th8`),
+     3) Ocena podrażnienia dziąseł w jamie ustnej (po 3 tygodniach sterydów i przesuszeniu śluzówki).
+
+5. **Aktualizacja Kosztorysu PFRON (`Kompletna_Teczka_Kosztorys_i_Oferty_PFRON_APEX-v23.pdf` — `100 000,00 zł` / opcja `110 000,00 zł`):**
+   * Zachowano nowy projektor wysokiej klasy (BenQ MH560C, `1 800 zł`) dla zapewnienia ostrego obrazu na zajęciach.
+   * Zoptymalizowano Pozycję nr 6 (`6 500,00 zł`): wprowadzono **poleasingowe kolorowe laserowe urządzenie wielofunkcyjne A4** (`850 zł` z dupleksem i podajnikiem ADF/DADF zamiast `1 400 zł`) oraz zdefiniowano konkretne modele do **2× kompletnych zestawów nagraniowych YouTube (`2 × 1 300 zł = 2 600 zł`)**: **2× kamera 4K Insta360 Link 2C** (z trybem widoku na blat *DeskView*), **2× mikrofon dynamiczny z ramieniem Fifine TAM8** oraz **2× biurkowy panel LED key-light**.
+   * Uwolnione **+550,00 zł** powiększyło budżet na samochód osobowy (Pozycja nr 1) do **`47 701,00 zł`** (lub **`57 701,00 zł`** przy wniosku na `110 000,00 zł`).

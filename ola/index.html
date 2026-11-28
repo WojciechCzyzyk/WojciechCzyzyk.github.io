@@ -90,12 +90,16 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-bottom: 16px;">
     
     <!-- Czysty czarno-biały kod QR do strony szkoły -->
-    <div style="background: #ffffff; padding: 10px; border-radius: 12px; border: 2px solid var(--pink);">
-     <img src="sekcje/qr_sarenka.jpg" alt="Kod QR — Akademia Cyfrowej Inżynierii APEX | Sarenka Software Kids" width="150" height="150" style="display: block;">
+    <!-- <img src="sekcje/qr_sarenka.jpg" alt="Kod QR — Akademia Cyfrowej Inżynierii APEX | Sarenka Software Kids" width="150" height="150" style="display: block;"> -->
    
-      
+<!-- Czysty czarno-biały kod QR do strony szkoły (generowany matematycznie) -->
+    <div style="background: #ffffff; padding: 10px; border-radius: 12px; border: 2px solid var(--pink);">
+      <div id="qr-sarenka" style="width: 150px; height: 150px; margin: 0 auto;"></div>
       <span style="display: block; color: #000000; font-size: 0.72rem; font-weight: 700; margin-top: 6px;">Zeskanuj aparatem 📲</span>
     </div>
+
+      
+      
 
     <!-- Opis i bezpośredni link do strony szkoły -->
     <div style="max-width: 520px; text-align: left;">
@@ -119,6 +123,16 @@
 </footer>
 
 
-
+<script src="https://cloudflare.com"></script>
+<script>
+  new QRCode(document.getElementById("qr-sarenka"), {
+    text: "https://wojciechczyzyk.github.io/sarenka/index.html",
+    width: 150,
+    height: 150,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
   </body>
 </html>
